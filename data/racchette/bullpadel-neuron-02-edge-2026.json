@@ -1,0 +1,62 @@
+{
+  "slug": "bullpadel-neuron-02-edge-2026",
+  "marca": "Bullpadel",
+  "modello": "Neuron 02 Edge",
+  "anno": 2026,
+  "linea": "Pro Line",
+  "giocatore": "Federico Chingotto",
+  "categoria": "adulto",
+  "peso_g": [365, 375],
+  "forma": "diamante",
+  "forma_nota": "Geo Shape (geometrica), testa più larga alle ore 2 e 10",
+  "bilanciamento": "alto",
+  "bilanciamento_cm": 26,
+  "nucleo": "MultiEVA (tre strati di EVA)",
+  "superficie": "X-Tend Carbon 3K",
+  "telaio": "PrismLock, Carbon Tube (carbonio 100% bidirezionale)",
+  "spessore_mm": 38,
+  "superficie_gioco_cm2": 535,
+  "finitura": "ruvida, 3D Grain",
+  "sensazione": "dura",
+  "livello": "avanzato",
+  "livello_produttore": "Professionale",
+  "stile": "offensivo",
+  "tecnologie": ["PrismLock", "Neuron Core", "Air Power", "Geo Shape", "Ease Vibe", "CustomWeight", "Smart Holes", "3D Grain", "Hesacore", "Vibradrive", "Carbon Tube", "MultiEVA", "X-Tend Carbon 3K"],
+  "personalizzazione": "CustomWeight: pesi da 3, 6 o 9 g in punta; 4 smorzatori Ease Vibe",
+  "prezzo_listino_eur": 319.99,
+  "prezzo_listino_data": "2026-10-18",
+  "valutazioni_produttore_su5": {
+    "potenza": 3.5,
+    "controllo": 4,
+    "stabilita": 4,
+    "maneggevolezza": 3.5,
+    "sweet_spot": 3,
+    "rigidita": 5
+  },
+  "recensioni": [
+    {
+      "fonte": "Padelful",
+      "url": "https://www.padelful.com/en/rackets/bullpadel-neuron-02-edge-2026",
+      "voto": "8,6/10 (community 9,1/10, 7 recensioni)",
+      "dettaglio": "Potenza 8,6 · Controllo 9,6 · Uscita di palla 7,2 · Maneggevolezza 8,6 · Sweet spot 9,1"
+    },
+    {
+      "fonte": "Zona de Padel",
+      "url": "https://www.zonadepadel.com/blog/2025/11/bullpadel-neuron-02-2026-or-neuron-02-edge-2026-the-definitive-comparison-of-the-most-advanced-padel-rackets-of-2026/",
+      "voto": "Potenza 4,7/5 · Comfort 4,0/5 · Difesa 3,9/5",
+      "dettaglio": "Confronto con la Neuron 02 2026"
+    },
+    {
+      "fonte": "PadelSpeed",
+      "url": "https://padelspeed.com/blogs/news/spotlight-on-bullpadel-neuron-02-edge-padel-racket-26",
+      "voto": "Senza voto numerico",
+      "dettaglio": "Ibrido controllo-potenza di fascia alta, orientato alla precisione"
+    }
+  ],
+  "simili": ["bullpadel-neuron-02-2026"],
+  "fonti_dati": [
+    "https://www.bullpadel.com/gb/5685-racket-bullpadel-neuron-02-edge.html",
+    "https://www.tennisnuts.com/bullpadel-neuron-edge-02-padel-racket-2026-1746344.html"
+  ],
+  "aggiornato": "2026-10-18"
+}
