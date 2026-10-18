@@ -1,0 +1,100 @@
+{
+  "slug": "babolat-viper-soft-juan-lebron-3-1-2027",
+  "marca": "Babolat",
+  "modello": "Viper Soft Juan Lebrón 3.1",
+  "anno": 2027,
+  "linea": "Juan Lebrón",
+  "giocatore": "Juan Lebrón",
+  "categoria": "adulto",
+  "peso_g": [355, 375],
+  "peso_nominale_g": 365,
+  "forma": "diamante",
+  "bilanciamento": "alto",
+  "bilanciamento_cm": 27,
+  "nucleo": "Black EVA (durezza intermedia)",
+  "superficie": "Carbonio morbido (Soft Carbon 3K) con comfort power layer",
+  "telaio": "Carbonio",
+  "spessore_mm": 38,
+  "finitura": "ruvida, 3D Spin",
+  "sensazione": "media",
+  "livello": "avanzato",
+  "livello_produttore": "Agonisti offensivi",
+  "stile": "offensivo",
+  "tecnologie": ["Dynamic Stability System", "Holes Pattern System", "3D Spin"],
+  "prezzo_listino_eur": 300.0,
+  "prezzo_listino_data": "2026-10-18",
+  "modello_precedente": "babolat-technical-viper-soft-3-0-2026",
+  "recensioni": [
+    {"fonte": "PadelVerdict", "url": "https://padelverdict.com/?p=3371", "voto": "8,2/10"}
+  ],
+  "simili": ["babolat-viper-juan-lebron-3-1-2027", "bullpadel-neuron-02-edge-2027"],
+  "fonti_dati": [
+    "https://www.babolat.com/gb/padel/racquets/adults.html",
+    "https://padelproshop.com/it/pages/babolat-2027",
+    "https://www.babolat.com/it/padel/racchette/adulti.html"
+  ],
+  "aggiornato": "2026-10-18",
+  "pagina": {
+    "titolo": "Babolat Viper Soft Juan Lebrón 3.1",
+    "title_tag": "Babolat Viper Soft Juan Lebrón 3.1 (2027): scheda tecnica e recensioni",
+    "meta_description": "Babolat Viper Soft Juan Lebrón 3.1 2027: 365 g, forma diamante, carbonio morbido, Black EVA. La Viper di Lebrón più confortevole: dati tecnici, recensioni e alternative.",
+    "breadcrumb": "Viper Soft Juan Lebrón 3.1",
+    "eyebrow": "Babolat · Collezione 2027 · Juan Lebrón",
+    "chips": ["Diamante", "365 g", "Bilanciamento alto", "Carbonio morbido", "Black EVA", "Linea Juan Lebrón"],
+    "lead": "La Viper di Lebrón per chi vuole attaccare senza affaticare il braccio. Stessa forma e stesso bilanciamento della Viper 3.1, ma superficie e nucleo più morbidi: meno potenza, molto più comfort e tolleranza.",
+    "avviso_html": "<h2>Cosa cambia rispetto alla 3.0</h2><p>Secondo PadelVerdict stampo, superficie e nucleo sono gli stessi della Technical Viper Soft 3.0 del 2026; cambia la grafica. Sul sito Babolat la 3.1 è a listino a 300 €.</p>",
+    "valutazioni": {
+      "titolo": "Valutazioni PadelVerdict",
+      "scala": 10,
+      "voci": [
+        {"nome": "Potenza", "valore": 8.4},
+        {"nome": "Giocabilità", "valore": 8.0},
+        {"nome": "Comfort", "valore": 7.9},
+        {"nome": "Stabilità", "valore": 7.9},
+        {"nome": "Effetto", "valore": 7.9},
+        {"nome": "Controllo", "valore": 7.8},
+        {"nome": "Maneggevolezza", "valore": 7.5},
+        {"nome": "Sweet spot", "valore": 7.2}
+      ],
+      "nota_html": "Punteggi su 10 pubblicati da <a href=\"https://padelverdict.com/?p=3371\" rel=\"nofollow noopener\" target=\"_blank\">PadelVerdict</a>. Babolat non pubblica valutazioni numeriche. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    },
+    "negozi": [
+      {"nome": "Amazon", "nota": "Spedizione e resi Amazon", "url": "https://www.amazon.it/s?k=Babolat+Viper+Soft+Juan+Lebron+3.1", "pulsante": "Vedi su Amazon", "amazon": true},
+      {"nome": "Babolat", "nota": "Sito ufficiale · listino 300 €", "url": "https://www.babolat.com/it/padel/racchette/adulti.html", "pulsante": "Vedi sul sito"}
+    ],
+    "nota_prezzi": "Prezzo di listino rilevato sul sito Babolat il 18 ottobre 2026.",
+    "confronta": {"url": "/confronta/?r=babolat-viper-soft-juan-lebron-3-1-2027,babolat-viper-juan-lebron-3-1-2027", "testo": "Confronta con la Viper 3.1"},
+    "specifiche": [
+      ["Marca", "Babolat"],
+      ["Modello", "Viper Soft Juan Lebrón 3.1 (2027)"],
+      ["Linea", "Juan Lebrón"],
+      ["Peso", "365 g (± 10 g)"],
+      ["Forma", "Diamante"],
+      ["Bilanciamento", "Alto, 270 mm"],
+      ["Nucleo", "Black EVA (durezza intermedia)"],
+      ["Superficie", "Carbonio morbido con comfort power layer"],
+      ["Telaio", "Carbonio"],
+      ["Spessore", "38 mm"],
+      ["Finitura", "Ruvida (3D Spin)"],
+      ["Rigidità", "Media (60/100 per PadelVerdict)"],
+      ["Livello", "Avanzato"],
+      ["Stile di gioco", "Offensivo"]
+    ],
+    "nota_specifiche_html": "Dati dal <a href=\"https://www.babolat.com/gb/padel/racquets/adults.html\" rel=\"nofollow noopener\" target=\"_blank\">sito ufficiale Babolat</a>; bilanciamento in millimetri da <a href=\"https://padelproshop.com/it/pages/babolat-2027\" rel=\"nofollow noopener\" target=\"_blank\">Padel Pro Shop</a>. Tecnologie: Dynamic Stability System, Holes Pattern System, 3D Spin.",
+    "sintesi": "PadelVerdict la definisce «la porta d'ingresso amichevole nella famiglia Lebrón»: 8,2/10, con giocabilità tra le migliori delle racchette a diamante (6ª su 91) e un comfort alto per la categoria. Rispetto alla Viper 3.1 perde potenza e un po' di stabilità sugli swing più veloci, dove la faccia flette di più. Padel Pro Shop la indica come la più tollerante della famiglia e la consiglia a chi ha fastidi al gomito.",
+    "pro": ["Comfort alto per una racchetta a diamante", "Giocabilità e tolleranza ai colpi fuori centro", "Potenza ancora buona in attacco", "Costa 90 € meno della Viper 3.1"],
+    "contro": ["Meno potenza della Viper 3.1 nello smash", "Meno stabile sugli swing più veloci", "Il bordo superiore del telaio si segna presto (difetto estetico)"],
+    "adatta": ["Attacchi, ma vuoi proteggere gomito e braccio", "Hai un livello avanzato o intermedio alto", "Cerchi una diamante più tollerante"],
+    "non_adatta": ["Vuoi la massima potenza: meglio la Viper 3.1", "Cerchi una racchetta di controllo puro", "Sei principiante"],
+    "recensioni": [
+      {"fonte": "PadelVerdict", "url": "https://padelverdict.com/?p=3371", "voto": "8,2/10", "voto_dettaglio": "giocabilità 8,0 · comfort 7,9", "sintesi": "Attacco vero con modi più tolleranti; meno potente e meno stabile della Viper 3.1, ma più giocabile e confortevole."},
+      {"fonte": "Padel Pro Shop", "url": "https://padelproshop.com/it/pages/babolat-2027", "voto": "Tolleranza 8/10", "voto_dettaglio": "potenza 7 · precisione 7", "sintesi": "Valutazioni del rivenditore: la più tollerante della famiglia, con il carbonio morbido che affatica meno il braccio."}
+    ],
+    "simili": [
+      {"url": "/racchette/babolat-viper-juan-lebron-3-1-2027/", "sopra": "Babolat · 2027", "nome": "Viper Juan Lebrón 3.1", "testo": "Stesso stampo con carbonio 3K e Hard EVA: più potenza, meno comfort."},
+      {"url": "https://www.babolat.com/gb/juan-lebron-collection-2026.html", "sopra": "Babolat · 2027", "nome": "Veron Juan Lebrón 3.1", "testo": "La più leggera (360 g) e accessibile della famiglia, superficie Carbonflex: per agonisti versatili."},
+      {"url": "/racchette/bullpadel-neuron-02-edge-2027/", "sopra": "Bullpadel · 2027", "nome": "Neuron 02 Edge 2027", "testo": "Diamante rigida e molto stabile, adatta solo a chi ha un braccio in salute."}
+    ],
+    "aggiornata": "18 ottobre 2026"
+  }
+}

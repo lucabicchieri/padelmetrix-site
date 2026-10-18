@@ -1,0 +1,80 @@
+{
+  "slug": "babolat-air-viper-2-6-2026",
+  "marca": "Babolat",
+  "modello": "Air Viper 2.6",
+  "anno": 2026,
+  "linea": "Air",
+  "categoria": "adulto",
+  "peso_g": [345, 365],
+  "peso_nominale_g": 355,
+  "forma": "goccia",
+  "bilanciamento": "medio",
+  "bilanciamento_cm": 26.5,
+  "nucleo": "X-EVA (tre strati di EVA)",
+  "superficie": "Carbonio 16K",
+  "telaio": "Carbonio",
+  "spessore_mm": 38,
+  "finitura": "ruvida, 3D Spin+",
+  "livello": "avanzato",
+  "livello_produttore": "Agonisti esperti",
+  "stile": "offensivo, gioco a rete",
+  "tecnologie": ["Vibrabsorb System² (SMAC)", "Smart Buttcap", "3D Spin+"],
+  "prezzo_listino_eur": 320.0,
+  "prezzo_listino_data": "2026-10-18",
+  "simili": ["babolat-counter-viper-2-6-2026", "babolat-viper-juan-lebron-3-1-2027"],
+  "fonti_dati": [
+    "https://www.babolat.com/us/air-viper-2.6/150176.html",
+    "https://www.babolat.com/gb/padel/racquets/adults.html",
+    "https://www.babolat.com/it/padel/racchette/adulti.html"
+  ],
+  "aggiornato": "2026-10-18",
+  "pagina": {
+    "titolo": "Babolat Air Viper 2.6",
+    "title_tag": "Babolat Air Viper 2.6 (2026): scheda tecnica e opinioni",
+    "meta_description": "Babolat Air Viper 2.6: 355 g, forma a goccia, carbonio 16K, nucleo X-EVA, bilanciamento medio. La Viper più maneggevole, per chi attacca a rete.",
+    "breadcrumb": "Air Viper 2.6",
+    "eyebrow": "Babolat · Collezione 2026 · Linea Air",
+    "chips": ["Goccia", "355 g", "Bilanciamento medio", "Carbonio 16K", "X-EVA", "Gioco a rete"],
+    "lead": "La Viper più leggera e maneggevole: forma a goccia e bilanciamento medio, per giocatori dinamici che attaccano a rete e vivono di volée e reazioni rapide.",
+    "tratti": {
+      "titolo": "Punti chiave secondo Babolat",
+      "voci": ["Maneggevolezza", "Alta reattività", "Comfort", "Profilo Air Striker"],
+      "nota_html": "Babolat non pubblica valutazioni numeriche e non abbiamo ancora trovato test indipendenti completi. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    },
+    "negozi": [
+      {"nome": "Amazon", "nota": "Spedizione e resi Amazon", "url": "https://www.amazon.it/s?k=Babolat+Air+Viper+2.6", "pulsante": "Vedi su Amazon", "amazon": true},
+      {"nome": "Babolat", "nota": "Sito ufficiale · listino 320 €", "url": "https://www.babolat.com/it/padel/racchette/adulti.html", "pulsante": "Vedi sul sito"}
+    ],
+    "nota_prezzi": "Prezzo di listino rilevato sul sito Babolat il 18 ottobre 2026; presso diversi rivenditori è già scontata.",
+    "confronta": {"url": "/confronta/?r=babolat-air-viper-2-6-2026,babolat-counter-viper-2-6-2026", "testo": "Confronta con la Counter Viper 2.6"},
+    "specifiche": [
+      ["Marca", "Babolat"],
+      ["Modello", "Air Viper 2.6 (2026)"],
+      ["Linea", "Air (Air Striker)"],
+      ["Peso", "355 g (± 10 g)"],
+      ["Forma", "Goccia"],
+      ["Bilanciamento", "Medio, 265 mm"],
+      ["Nucleo", "X-EVA (tre strati di EVA)"],
+      ["Superficie", "Carbonio 16K"],
+      ["Telaio", "Carbonio"],
+      ["Spessore", "38 mm"],
+      ["Finitura", "Ruvida (3D Spin+)"],
+      ["Livello", "Agonisti esperti"],
+      ["Stile di gioco", "Offensivo, a rete"],
+      ["Personalizzazione", "Smart Buttcap: laccio da polso regolabile o rimovibile"]
+    ],
+    "nota_specifiche_html": "Dati dal <a href=\"https://www.babolat.com/us/air-viper-2.6/150176.html\" rel=\"nofollow noopener\" target=\"_blank\">sito ufficiale Babolat</a>. Tecnologie: Vibrabsorb System² (SMAC), Smart Buttcap, 3D Spin+.",
+    "sintesi": "Non abbiamo ancora trovato recensioni indipendenti complete di questa racchetta: le aggiungeremo appena disponibili. Babolat la presenta come la Viper della velocità, con la nuova forma a goccia che allarga la zona d'impatto. Le poche opinioni di giocatori pubblicate dai rivenditori lodano la reattività e una potenza «secca e veloce». Rispetto alle Viper a diamante è più facile da maneggiare, ma resta una racchetta di fascia alta per giocatori esperti.",
+    "pro": ["La più maneggevole della famiglia Viper", "Bilanciamento medio: rapida in volée e nelle reazioni", "Superficie in carbonio 16K e sistema antivibrazioni", "Spesso già scontata presso i rivenditori"],
+    "contro": ["Meno potenza nello smash rispetto alle Viper a diamante", "Pochi test indipendenti disponibili", "Per giocatori esperti, non per principianti"],
+    "adatta": ["Giochi molto a rete e ami le volée", "Vuoi una racchetta veloce da muovere", "Cerchi un compromesso tra potenza e maneggevolezza"],
+    "non_adatta": ["Cerchi la massima potenza: meglio la Viper 3.1", "Vuoi controllo e tolleranza: guarda la Counter Viper 2.6", "Sei principiante"],
+    "recensioni": [],
+    "simili": [
+      {"url": "/racchette/babolat-counter-viper-2-6-2026/", "sopra": "Babolat · 2026", "nome": "Counter Viper 2.6", "testo": "Forma rotonda e 10 g in più: più controllo e precisione, meno velocità."},
+      {"url": "/racchette/babolat-viper-juan-lebron-3-1-2027/", "sopra": "Babolat · 2027", "nome": "Viper Juan Lebrón 3.1", "testo": "La Viper a diamante di Lebrón: molta più potenza, molto meno comfort."},
+      {"url": "https://www.babolat.com/it/padel/racchette/adulti.html", "sopra": "Babolat · 2026", "nome": "Air Veron 2.6", "testo": "Stessa forma a goccia con superficie Carbonflex più morbida: più giocabile, listino più basso."}
+    ],
+    "aggiornata": "18 ottobre 2026"
+  }
+}

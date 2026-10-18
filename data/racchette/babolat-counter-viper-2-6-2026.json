@@ -1,0 +1,83 @@
+{
+  "slug": "babolat-counter-viper-2-6-2026",
+  "marca": "Babolat",
+  "modello": "Counter Viper 2.6",
+  "anno": 2026,
+  "linea": "Counter",
+  "categoria": "adulto",
+  "peso_g": [355, 375],
+  "peso_nominale_g": 365,
+  "forma": "rotonda",
+  "bilanciamento": "alto",
+  "bilanciamento_cm": 27,
+  "nucleo": "X-EVA (tre strati di EVA)",
+  "superficie": "Carbonio 3K",
+  "telaio": "Carbonio",
+  "spessore_mm": 38,
+  "finitura": "ruvida, 3D Spin+",
+  "livello": "avanzato",
+  "livello_produttore": "Agonisti esperti",
+  "stile": "controllo e contrattacco",
+  "tecnologie": ["Holes Pattern System", "Vibrabsorb System² (SMAC)", "Smart Buttcap", "3D Spin+"],
+  "prezzo_listino_eur": 320.0,
+  "prezzo_listino_data": "2026-10-18",
+  "simili": ["babolat-air-viper-2-6-2026", "babolat-viper-soft-juan-lebron-3-1-2027"],
+  "fonti_dati": [
+    "https://www.babolat.com/us/counter-viper-2.6/150177.html",
+    "https://www.babolat.com/gb/padel/racquets/adults.html",
+    "https://www.tennis-warehouse.com/Babolat_Counter_Viper_26_Padel_Racket/descpageRCBAB-BPRCTRVI26.html",
+    "https://www.babolat.com/it/padel/racchette/adulti.html"
+  ],
+  "aggiornato": "2026-10-18",
+  "pagina": {
+    "titolo": "Babolat Counter Viper 2.6",
+    "title_tag": "Babolat Counter Viper 2.6 (2026): scheda tecnica e opinioni",
+    "meta_description": "Babolat Counter Viper 2.6: 365 g, forma rotonda, carbonio 3K, nucleo X-EVA, bilanciamento 270 mm. La Viper del controllo e della precisione.",
+    "breadcrumb": "Counter Viper 2.6",
+    "eyebrow": "Babolat · Collezione 2026 · Linea Counter",
+    "chips": ["Rotonda", "365 g", "Bilanciamento alto", "Carbonio 3K", "X-EVA", "Controllo"],
+    "lead": "La Viper del controllo: forma rotonda e superficie in carbonio 3K, per chi costruisce il punto con precisione e contrattacca. Il bilanciamento piuttosto alto per una rotonda le dà peso in uscita quando serve chiudere.",
+    "tratti": {
+      "titolo": "Punti chiave secondo Babolat",
+      "voci": ["Precisione", "Alta reattività", "Comfort", "Profilo Counter Striker"],
+      "nota_html": "Babolat non pubblica valutazioni numeriche e non abbiamo ancora trovato test indipendenti completi. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    },
+    "negozi": [
+      {"nome": "Amazon", "nota": "Spedizione e resi Amazon", "url": "https://www.amazon.it/s?k=Babolat+Counter+Viper+2.6", "pulsante": "Vedi su Amazon", "amazon": true},
+      {"nome": "Babolat", "nota": "Sito ufficiale · listino 320 €", "url": "https://www.babolat.com/it/padel/racchette/adulti.html", "pulsante": "Vedi sul sito"}
+    ],
+    "nota_prezzi": "Prezzo di listino rilevato sul sito Babolat il 18 ottobre 2026; presso diversi rivenditori è già scontata.",
+    "confronta": {"url": "/confronta/?r=babolat-counter-viper-2-6-2026,babolat-air-viper-2-6-2026", "testo": "Confronta con la Air Viper 2.6"},
+    "specifiche": [
+      ["Marca", "Babolat"],
+      ["Modello", "Counter Viper 2.6 (2026)"],
+      ["Linea", "Counter (Counter Striker)"],
+      ["Peso", "365 g (± 10 g)"],
+      ["Forma", "Rotonda"],
+      ["Bilanciamento", "Alto per una rotonda, 270 mm"],
+      ["Nucleo", "X-EVA (tre strati di EVA)"],
+      ["Superficie", "Carbonio 3K"],
+      ["Telaio", "Carbonio"],
+      ["Spessore", "38 mm"],
+      ["Finitura", "Ruvida (3D Spin+)"],
+      ["Foratura", "Holes Pattern System: fori piccoli al centro, più grandi sui bordi"],
+      ["Livello", "Agonisti esperti"],
+      ["Stile di gioco", "Controllo e contrattacco"]
+    ],
+    "nota_specifiche_html": "Dati dal <a href=\"https://www.babolat.com/us/counter-viper-2.6/150177.html\" rel=\"nofollow noopener\" target=\"_blank\">sito ufficiale Babolat</a>. Tecnologie: Holes Pattern System, Vibrabsorb System² (SMAC), Smart Buttcap, 3D Spin+.",
+    "sintesi": "Non abbiamo ancora trovato recensioni indipendenti complete di questa racchetta: le aggiungeremo appena disponibili. Babolat la descrive come la Viper della precisione. Il rivenditore Tennis Warehouse la indica come la linea più tollerante tra Counter, Air e Technical, con uno sweet spot ampio e una buona maneggevolezza nonostante i 270 mm di bilanciamento; per i suoi tester è facile da gestire anche per chi arriva dal tennis.",
+    "pro": ["Controllo e precisione: è la Viper più tollerante", "Sweet spot ampio grazie a forma rotonda e foratura dedicata", "Peso in testa sufficiente per chiudere il punto", "Spesso già scontata presso i rivenditori"],
+    "contro": ["365 g e bilanciamento alto: non è leggera", "Meno potenza nello smash rispetto alle Viper a diamante", "Pochi test indipendenti disponibili"],
+    "adatta": ["Costruisci il punto con pazienza e precisione", "Giochi spesso da fondo e in difesa", "Arrivi dal tennis e cerchi una racchetta prevedibile"],
+    "non_adatta": ["Cerchi una racchetta leggera e veloce: guarda la Air Viper 2.6", "Vuoi potenza da smash: meglio la Viper 3.1", "Sei principiante"],
+    "recensioni": [
+      {"fonte": "Tennis Warehouse", "url": "https://www.tennis-warehouse.com/Babolat_Counter_Viper_26_Padel_Racket/descpageRCBAB-BPRCTRVI26.html", "voto": "Senza voto", "voto_dettaglio": "commento del rivenditore", "sintesi": "Linea orientata al controllo e più tollerante delle altre Viper; sweet spot ampio e maneggevole nonostante il bilanciamento a 270 mm. Tra le preferite dello staff."}
+    ],
+    "simili": [
+      {"url": "/racchette/babolat-air-viper-2-6-2026/", "sopra": "Babolat · 2026", "nome": "Air Viper 2.6", "testo": "Forma a goccia e 10 g in meno: più veloce e offensiva a rete."},
+      {"url": "/racchette/babolat-viper-soft-juan-lebron-3-1-2027/", "sopra": "Babolat · 2027", "nome": "Viper Soft Juan Lebrón 3.1", "testo": "Diamante confortevole per chi vuole più attacco senza rinunciare alla tolleranza."},
+      {"url": "https://www.babolat.com/it/padel/racchette/adulti.html", "sopra": "Babolat · 2026", "nome": "Counter Veron 2.6", "testo": "Stessa forma rotonda con superficie Carbonflex più morbida: più giocabile, listino più basso."}
+    ],
+    "aggiornata": "18 ottobre 2026"
+  }
+}
