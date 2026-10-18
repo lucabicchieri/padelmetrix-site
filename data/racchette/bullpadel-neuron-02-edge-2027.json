@@ -1,0 +1,52 @@
+{
+  "slug": "bullpadel-neuron-02-edge-2027",
+  "marca": "Bullpadel",
+  "modello": "Neuron 02 Edge",
+  "anno": 2027,
+  "linea": "Pro Line",
+  "giocatore": "Federico Chingotto",
+  "categoria": "adulto",
+  "peso_g": [365, 375],
+  "forma": "diamante",
+  "forma_nota": "Geo Shape (geometrica)",
+  "bilanciamento": "alto",
+  "bilanciamento_cm": 26,
+  "nucleo": "MultiEVA / HardEVA (tre strati di EVA)",
+  "superficie": "X-Tend Carbon 3K",
+  "telaio": "PrismLock con ponte Neuron",
+  "spessore_mm": 38,
+  "superficie_gioco_cm2": 535,
+  "finitura": "ruvida, 3D Grain",
+  "sensazione": "dura",
+  "livello": "avanzato",
+  "livello_produttore": "Professionale",
+  "stile": "offensivo",
+  "tecnologie": ["PrismLock", "Neuron Core", "Air Power (seconda generazione)", "Geo Shape", "Ease Vibe", "Custom Weight", "Smart Holes", "3D Grain", "Hesacore", "Vibradrive", "MultiEVA", "X-Tend Carbon 3K"],
+  "personalizzazione": "Custom Weight: placchette in carbonio da 3 g; 4 smorzatori Ease Vibe",
+  "prezzo_listino_eur": 339.99,
+  "prezzo_listino_data": "2026-10-18",
+  "valutazioni_produttore_su5": {
+    "potenza": 3.5,
+    "controllo": 4,
+    "stabilita": 4,
+    "maneggevolezza": 3.5,
+    "sweet_spot": 3,
+    "rigidita": 5
+  },
+  "differenze_modello_precedente": "Caratteristiche dichiarate quasi identiche al 2026; nucleo indicato come HardEVA, canale Air Power descritto da un rivenditore come ingrandito del 50%. Nessun confronto ufficiale Bullpadel.",
+  "recensioni": [
+    {
+      "fonte": "PadelVerdict",
+      "url": "https://padelverdict.com/it/racchette/bullpadel-neuron-02-edge-27/",
+      "voto": "8,3/10",
+      "dettaglio": "Potenza 8,7 · Stabilità 8,6 · Controllo 7,9 · Sweet spot 7,5 · Effetto 7,2 · Maneggevolezza 7,0 · Giocabilità 6,4 · Comfort 6,2"
+    }
+  ],
+  "simili": ["bullpadel-neuron-02-edge-2026", "bullpadel-neuron-02-edge-comfort-2027", "bullpadel-neuron-02-2027"],
+  "modello_precedente": "bullpadel-neuron-02-edge-2026",
+  "fonti_dati": [
+    "https://www.bullpadel.com/gb/6837-pala-bullpadel-neuron-02-edge-27.html",
+    "https://tennisshopen.se/en/padel/bullpadel-neuron-02-edge-2027/"
+  ],
+  "aggiornato": "2026-10-18"
+}
