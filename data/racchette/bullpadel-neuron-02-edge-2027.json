@@ -6,7 +6,10 @@
   "linea": "Pro Line",
   "giocatore": "Federico Chingotto",
   "categoria": "adulto",
-  "peso_g": [365, 375],
+  "peso_g": [
+    365,
+    375
+  ],
   "forma": "diamante",
   "forma_nota": "Geo Shape (geometrica)",
   "bilanciamento": "alto",
@@ -21,7 +24,20 @@
   "livello": "avanzato",
   "livello_produttore": "Professionale",
   "stile": "offensivo",
-  "tecnologie": ["PrismLock", "Neuron Core", "Air Power (seconda generazione)", "Geo Shape", "Ease Vibe", "Custom Weight", "Smart Holes", "3D Grain", "Hesacore", "Vibradrive", "MultiEVA", "X-Tend Carbon 3K"],
+  "tecnologie": [
+    "PrismLock",
+    "Neuron Core",
+    "Air Power (seconda generazione)",
+    "Geo Shape",
+    "Ease Vibe",
+    "Custom Weight",
+    "Smart Holes",
+    "3D Grain",
+    "Hesacore",
+    "Vibradrive",
+    "MultiEVA",
+    "X-Tend Carbon 3K"
+  ],
   "personalizzazione": "Custom Weight: placchette in carbonio da 3 g; 4 smorzatori Ease Vibe",
   "prezzo_listino_eur": 339.99,
   "prezzo_listino_data": "2026-10-18",
@@ -42,11 +58,203 @@
       "dettaglio": "Potenza 8,7 · Stabilità 8,6 · Controllo 7,9 · Sweet spot 7,5 · Effetto 7,2 · Maneggevolezza 7,0 · Giocabilità 6,4 · Comfort 6,2"
     }
   ],
-  "simili": ["bullpadel-neuron-02-edge-2026", "bullpadel-neuron-02-edge-comfort-2027", "bullpadel-neuron-02-2027"],
+  "simili": [
+    "bullpadel-neuron-02-edge-2026",
+    "bullpadel-neuron-02-edge-comfort-2027",
+    "bullpadel-neuron-02-2027"
+  ],
   "modello_precedente": "bullpadel-neuron-02-edge-2026",
   "fonti_dati": [
     "https://www.bullpadel.com/gb/6837-pala-bullpadel-neuron-02-edge-27.html",
     "https://tennisshopen.se/en/padel/bullpadel-neuron-02-edge-2027/"
   ],
-  "aggiornato": "2026-10-18"
+  "aggiornato": "2026-10-18",
+  "pagina": {
+    "titolo": "Bullpadel Neuron 02 Edge 2027",
+    "title_tag": "Bullpadel Neuron 02 Edge 2027: scheda tecnica, recensioni e differenze con il 2026",
+    "meta_description": "Bullpadel Neuron 02 Edge 2027 (Fede Chingotto): peso 365–375 g, forma diamante, carbonio 3K, nucleo HardEVA. Dati tecnici, recensioni e cosa cambia rispetto al modello 2026.",
+    "breadcrumb": "Neuron 02 Edge 2027",
+    "eyebrow": "Bullpadel · Collezione 2027 · Pro Line",
+    "chips": [
+      "Diamante",
+      "365–375 g",
+      "Bilanciamento alto",
+      "Carbonio 3K",
+      "Avanzato",
+      "Racchetta di Fede Chingotto"
+    ],
+    "lead": "La nuova versione della racchetta di Fede Chingotto, che Bullpadel definisce «la più precisa che abbiamo mai creato». Rigida, stabile e potente in attacco, per giocatori avanzati con una tecnica solida e un braccio in salute.",
+    "avviso_html": "<h2>Cosa cambia rispetto al 2026</h2><p>Sulla carta quasi nulla: peso, forma, bilanciamento, materiali e valutazioni del produttore sono gli stessi. Le differenze dichiarate sono il nucleo indicato come HardEVA e il canale Air Power, che un rivenditore descrive ingrandito del 50%; Bullpadel non pubblica un confronto ufficiale.</p><p>Il <a href=\"/it/racchette/bullpadel-neuron-02-edge-2026/\">modello 2026</a> oggi è scontato sul sito Bullpadel (239,99 € contro i 339,99 € del 2027): se non ti serve l'ultima versione, è l'acquisto più conveniente.</p>",
+    "valutazioni": {
+      "titolo": "Valutazioni del produttore",
+      "scala": 5,
+      "voci": [
+        {
+          "nome": "Potenza",
+          "valore": 3.5
+        },
+        {
+          "nome": "Controllo",
+          "valore": 4
+        },
+        {
+          "nome": "Stabilità",
+          "valore": 4
+        },
+        {
+          "nome": "Maneggevolezza",
+          "valore": 3.5
+        },
+        {
+          "nome": "Sweet spot",
+          "valore": 3
+        },
+        {
+          "nome": "Rigidità",
+          "valore": 5
+        }
+      ],
+      "nota_html": "Punteggi su 5 dichiarati da Bullpadel sul sito ufficiale. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    },
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=Bullpadel+Neuron+02+Edge+2027",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      },
+      {
+        "nome": "Bullpadel",
+        "nota": "Sito ufficiale · listino 339,99 €",
+        "url": "https://www.bullpadel.com/gb/6837-pala-bullpadel-neuron-02-edge-27.html",
+        "pulsante": "Vedi sul sito"
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino rilevato sul sito Bullpadel il 18 ottobre 2026.",
+    "confronta": {
+      "url": "/confronta/?r=bullpadel-neuron-02-edge-2027,bullpadel-neuron-02-edge-2026",
+      "testo": "Confronta con il modello 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "Bullpadel"
+      ],
+      [
+        "Modello",
+        "Neuron 02 Edge 27 (2027)"
+      ],
+      [
+        "Giocatore",
+        "Federico Chingotto"
+      ],
+      [
+        "Peso",
+        "365–375 g"
+      ],
+      [
+        "Forma",
+        "Diamante (Geo Shape)"
+      ],
+      [
+        "Bilanciamento",
+        "Alto, circa 26 cm"
+      ],
+      [
+        "Nucleo",
+        "MultiEVA / HardEVA (tre strati)"
+      ],
+      [
+        "Superficie",
+        "X-Tend Carbon 3K"
+      ],
+      [
+        "Telaio",
+        "PrismLock con ponte Neuron"
+      ],
+      [
+        "Spessore",
+        "38 mm"
+      ],
+      [
+        "Superficie di gioco",
+        "535 cm²"
+      ],
+      [
+        "Finitura",
+        "Ruvida (3D Grain)"
+      ],
+      [
+        "Sensazione",
+        "Dura"
+      ],
+      [
+        "Livello",
+        "Avanzato / professionale"
+      ],
+      [
+        "Stile di gioco",
+        "Offensivo"
+      ],
+      [
+        "Personalizzazione",
+        "Placchette in carbonio da 3 g; 4 smorzatori"
+      ]
+    ],
+    "nota_specifiche_html": "Dati dal <a href=\"https://www.bullpadel.com/gb/6837-pala-bullpadel-neuron-02-edge-27.html\" rel=\"nofollow noopener\" target=\"_blank\">sito ufficiale Bullpadel</a>. Tecnologie dichiarate: PrismLock, Neuron Core, Air Power (seconda generazione), Geo Shape, Ease Vibe, Custom Weight, Smart Holes, 3D Grain, Hesacore, Vibradrive.",
+    "sintesi": "Le recensioni del 2027 sono ancora poche. PadelVerdict la valuta 8,3/10 e la mette tra le racchette più stabili che ha provato (10ª su 184), con una potenza alta e uno smash piatto e veloce. In cambio è poco confortevole e poco indulgente: comfort e giocabilità sono tra i valori più bassi del suo database. Rispetto al 2026 la trova più esigente, ma avverte che parte della differenza dipende da un cambio nel suo metodo di valutazione.",
+    "pro": [
+      "Stabilità ai vertici della categoria",
+      "Potenza in attacco, smash piatti e veloci",
+      "Personalizzabile: pesi in punta e smorzatori",
+      "Materiali di fascia alta (carbonio 3K, telaio PrismLock)"
+    ],
+    "contro": [
+      "Molto rigida e poco confortevole per il braccio",
+      "Sweet spot compatto: serve una tecnica rifinita",
+      "Poco indulgente sui colpi in ritardo",
+      "Costa 100 € in più del modello 2026, oggi scontato"
+    ],
+    "adatta": [
+      "Hai un livello avanzato e una buona tecnica",
+      "Cerchi precisione e stabilità",
+      "Ti piace una racchetta dura e reattiva"
+    ],
+    "non_adatta": [
+      "Sei intermedio: guarda la versione Comfort",
+      "Hai fastidi a gomito o spalla",
+      "Vuoi spendere meno: il modello 2026 è quasi identico"
+    ],
+    "recensioni": [
+      {
+        "fonte": "PadelVerdict",
+        "url": "https://padelverdict.com/it/racchette/bullpadel-neuron-02-edge-27/",
+        "voto": "8,3/10",
+        "voto_dettaglio": "potenza 8,7 · stabilità 8,6",
+        "sintesi": "Racchetta d'attacco molto stabile; controllo 7,9, sweet spot 7,5, comfort 6,2, giocabilità 6,4. Consigliata a giocatori avanzati con tecnica solida."
+      }
+    ],
+    "simili": [
+      {
+        "url": "/racchette/bullpadel-neuron-02-edge-2026/",
+        "sopra": "Bullpadel · 2026",
+        "nome": "Neuron 02 Edge 2026",
+        "testo": "La versione precedente: stesse caratteristiche dichiarate, oggi scontata."
+      },
+      {
+        "url": "https://www.padelgear.co.za/products/2027-bullpadel-neuron-02-edge-comfort",
+        "sopra": "Bullpadel · 2027",
+        "nome": "Neuron 02 Edge Comfort",
+        "testo": "Più leggera (360–370 g) e con superficie Fibrix, fibra di vetro e carbonio: più tollerante, adatta anche agli intermedi."
+      },
+      {
+        "url": "https://www.bullpadel.com/gb/6836-pala-bullpadel-neuron-27.html",
+        "sopra": "Bullpadel · 2027",
+        "nome": "Neuron 02",
+        "testo": "La sorella più orientata al controllo e alla maneggevolezza."
+      }
+    ],
+    "aggiornata": "18 ottobre 2026"
+  }
 }

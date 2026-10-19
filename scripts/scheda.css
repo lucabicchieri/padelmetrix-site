@@ -62,3 +62,6 @@ footer a{color:#C9D6CF}
 .avviso h2{font-size:20px;margin-bottom:10px}
 .avviso p{margin:0 0 10px;font-size:15px}
 .avviso p:last-child{margin-bottom:0}
+.langs{margin-left:auto;font-size:14px;font-weight:600;color:#8A968F}
+.langs a{text-decoration:none;color:#5B6B63}.langs a.on{color:#0F3D2E}
+.photo{background:radial-gradient(circle at 50% 40%,#EAF0E6,#DDE6D8)}

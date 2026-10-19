@@ -6,7 +6,10 @@
   "linea": "Pro Line",
   "giocatore": "Federico Chingotto",
   "categoria": "adulto",
-  "peso_g": [365, 375],
+  "peso_g": [
+    365,
+    375
+  ],
   "forma": "diamante",
   "forma_nota": "Geo Shape (geometrica), testa più larga alle ore 2 e 10",
   "bilanciamento": "alto",
@@ -21,7 +24,21 @@
   "livello": "avanzato",
   "livello_produttore": "Professionale",
   "stile": "offensivo",
-  "tecnologie": ["PrismLock", "Neuron Core", "Air Power", "Geo Shape", "Ease Vibe", "CustomWeight", "Smart Holes", "3D Grain", "Hesacore", "Vibradrive", "Carbon Tube", "MultiEVA", "X-Tend Carbon 3K"],
+  "tecnologie": [
+    "PrismLock",
+    "Neuron Core",
+    "Air Power",
+    "Geo Shape",
+    "Ease Vibe",
+    "CustomWeight",
+    "Smart Holes",
+    "3D Grain",
+    "Hesacore",
+    "Vibradrive",
+    "Carbon Tube",
+    "MultiEVA",
+    "X-Tend Carbon 3K"
+  ],
   "personalizzazione": "CustomWeight: pesi da 3, 6 o 9 g in punta; 4 smorzatori Ease Vibe",
   "prezzo_listino_eur": 319.99,
   "prezzo_listino_data": "2026-10-18",
@@ -55,10 +72,215 @@
       "dettaglio": "Ibrido controllo-potenza di fascia alta, orientato alla precisione"
     }
   ],
-  "simili": ["bullpadel-neuron-02-edge-2027", "bullpadel-neuron-02-2026"],
+  "simili": [
+    "bullpadel-neuron-02-edge-2027",
+    "bullpadel-neuron-02-2026"
+  ],
   "fonti_dati": [
     "https://www.bullpadel.com/gb/5685-racket-bullpadel-neuron-02-edge.html",
     "https://www.tennisnuts.com/bullpadel-neuron-edge-02-padel-racket-2026-1746344.html"
   ],
-  "aggiornato": "2026-10-18"
+  "aggiornato": "2026-10-18",
+  "pagina": {
+    "titolo": "Bullpadel Neuron 02 Edge 2026",
+    "title_tag": "Bullpadel Neuron 02 Edge 2026: scheda tecnica e recensioni",
+    "meta_description": "Bullpadel Neuron 02 Edge 2026 (Fede Chingotto): peso 365–375 g, forma diamante, carbonio 3K, nucleo MultiEVA. Dati tecnici, sintesi delle recensioni e alternative.",
+    "breadcrumb": "Neuron 02 Edge 2026",
+    "eyebrow": "Bullpadel · Collezione 2026 · Pro Line",
+    "chips": [
+      "Diamante",
+      "365–375 g",
+      "Bilanciamento alto",
+      "Carbonio 3K",
+      "Avanzato",
+      "Racchetta di Fede Chingotto"
+    ],
+    "lead": "Una racchetta rigida e precisa per giocatori avanzati con buona tecnica. Dà il meglio in controllo e piazzamento; la potenza c'è, ma va cercata con un gesto pulito.",
+    "avviso_html": "<p>È uscita la <a href=\"/it/racchette/bullpadel-neuron-02-edge-2027/\">Neuron 02 Edge 2027</a>: caratteristiche dichiarate quasi identiche, ma prezzo di listino più alto. Il modello 2026 resta l'acquisto più conveniente.</p>",
+    "valutazioni": {
+      "titolo": "Valutazioni del produttore",
+      "scala": 5,
+      "voci": [
+        {
+          "nome": "Potenza",
+          "valore": 3.5
+        },
+        {
+          "nome": "Controllo",
+          "valore": 4
+        },
+        {
+          "nome": "Stabilità",
+          "valore": 4
+        },
+        {
+          "nome": "Maneggevolezza",
+          "valore": 3.5
+        },
+        {
+          "nome": "Sweet spot",
+          "valore": 3
+        },
+        {
+          "nome": "Rigidità",
+          "valore": 5
+        }
+      ],
+      "nota_html": "Punteggi su 5 dichiarati da Bullpadel sul sito ufficiale. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    },
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=Bullpadel+Neuron+02+Edge+2026",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      },
+      {
+        "nome": "Bullpadel",
+        "nota": "Sito ufficiale · 239,99 € (listino 319,99 €)",
+        "url": "https://www.bullpadel.com/gb/5685-racket-bullpadel-neuron-02-edge.html",
+        "pulsante": "Vedi sul sito"
+      }
+    ],
+    "nota_prezzi": "Prezzi rilevati sul sito Bullpadel il 18 ottobre 2026.",
+    "confronta": {
+      "url": "/confronta/?r=bullpadel-neuron-02-edge-2026,bullpadel-neuron-02-edge-2027",
+      "testo": "Confronta con il modello 2027"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "Bullpadel"
+      ],
+      [
+        "Modello",
+        "Neuron 02 Edge (2026)"
+      ],
+      [
+        "Giocatore",
+        "Federico Chingotto"
+      ],
+      [
+        "Peso",
+        "365–375 g"
+      ],
+      [
+        "Forma",
+        "Diamante (Geo Shape)"
+      ],
+      [
+        "Bilanciamento",
+        "Alto, circa 26 cm"
+      ],
+      [
+        "Nucleo",
+        "MultiEVA (tre strati di EVA)"
+      ],
+      [
+        "Superficie",
+        "X-Tend Carbon 3K"
+      ],
+      [
+        "Telaio",
+        "PrismLock, Carbon Tube"
+      ],
+      [
+        "Spessore",
+        "38 mm"
+      ],
+      [
+        "Superficie di gioco",
+        "535 cm²"
+      ],
+      [
+        "Finitura",
+        "Ruvida (3D Grain)"
+      ],
+      [
+        "Sensazione",
+        "Dura"
+      ],
+      [
+        "Livello",
+        "Avanzato / professionale"
+      ],
+      [
+        "Stile di gioco",
+        "Offensivo"
+      ],
+      [
+        "Personalizzazione",
+        "Pesi da 3, 6 o 9 g in punta; 4 smorzatori"
+      ]
+    ],
+    "nota_specifiche_html": "Dati dal <a href=\"https://www.bullpadel.com/gb/5685-racket-bullpadel-neuron-02-edge.html\" rel=\"nofollow noopener\" target=\"_blank\">sito ufficiale Bullpadel</a>. Tecnologie dichiarate: PrismLock, Neuron Core, Air Power, Geo Shape, Ease Vibe, CustomWeight, Smart Holes, 3D Grain, Hesacore, Vibradrive, Carbon Tube.",
+    "sintesi": "Le recensioni concordano su tre punti: è precisa, è stabile sia a rete sia da fondo campo e ha una sensazione secca e rigida. Divergono sulla potenza. Zona de Padel la considera la più potente delle due Neuron 2026; Padelful e PadelSpeed la descrivono come una racchetta di controllo, che non regala potenza e la restituisce solo a chi ha un gesto pulito. Per tutte è una racchetta da giocatori esperti, non da principianti.",
+    "pro": [
+      "Controllo e piazzamento della palla",
+      "Stabilità in volée, bandeja e difesa",
+      "Personalizzabile: pesi in punta e smorzatori",
+      "Materiali di fascia alta (carbonio 3K, telaio in carbonio)"
+    ],
+    "contro": [
+      "Molto rigida: impegnativa per il braccio se la tecnica non è solida",
+      "Sweet spot meno indulgente di una racchetta rotonda",
+      "Non regala potenza nello smash",
+      "Prezzo di listino alto"
+    ],
+    "adatta": [
+      "Hai un livello avanzato e una buona tecnica",
+      "Cerchi precisione più che potenza facile",
+      "Ti piace una racchetta dura e reattiva"
+    ],
+    "non_adatta": [
+      "Sei principiante o intermedio",
+      "Hai fastidi a gomito o spalla",
+      "Vuoi potenza senza dover forzare il colpo"
+    ],
+    "recensioni": [
+      {
+        "fonte": "Padelful",
+        "url": "https://www.padelful.com/en/rackets/bullpadel-neuron-02-edge-2026",
+        "voto": "8,6/10",
+        "voto_dettaglio": "community 9,1/10 (7 recensioni)",
+        "sintesi": "Racchetta di controllo: ottimo piazzamento e stabilità, poca potenza \"gratuita\". Controllo 9,6 · Potenza 8,6 · Sweet spot 9,1."
+      },
+      {
+        "fonte": "Zona de Padel",
+        "url": "https://www.zonadepadel.com/blog/2025/11/bullpadel-neuron-02-2026-or-neuron-02-edge-2026-the-definitive-comparison-of-the-most-advanced-padel-rackets-of-2026/",
+        "voto": "Potenza 4,7/5",
+        "voto_dettaglio": "comfort 4,0 · difesa 3,9",
+        "sintesi": "Più potente e offensiva della Neuron 02; può essere esigente per chi non ha una buona tecnica."
+      },
+      {
+        "fonte": "PadelSpeed",
+        "url": "https://padelspeed.com/blogs/news/spotlight-on-bullpadel-neuron-02-edge-padel-racket-26",
+        "voto": "Senza voto",
+        "voto_dettaglio": "",
+        "sintesi": "Ibrido controllo-potenza di fascia alta, orientato alla precisione; non per principianti."
+      }
+    ],
+    "simili": [
+      {
+        "url": "/racchette/bullpadel-neuron-02-edge-2027/",
+        "sopra": "Bullpadel · 2027",
+        "nome": "Neuron 02 Edge 2027",
+        "testo": "La nuova versione: caratteristiche dichiarate quasi identiche, listino 339,99 €."
+      },
+      {
+        "url": "https://www.bullpadel.com/gb/proline/5684-racket-bullpadel-neuron-02.html",
+        "sopra": "Bullpadel · 2026",
+        "nome": "Neuron 02",
+        "testo": "Stessa famiglia e stesso peso, superficie in carbonio 12K e bilanciamento un po' più basso: più controllo e difesa."
+      },
+      {
+        "url": "/racchette/babolat-viper-juan-lebron-3-1-2027/",
+        "sopra": "Babolat · 2027",
+        "nome": "Viper Juan Lebrón 3.1",
+        "testo": "Altra diamante rigida da professionisti, più orientata alla potenza."
+      }
+    ],
+    "aggiornata": "18 ottobre 2026"
+  }
 }

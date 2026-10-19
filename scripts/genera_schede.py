@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera le schede racchetta da data/racchette/*.json in racchette/<slug>/index.html.
+"""Genera le schede racchetta da data/racchette/*.json in it/racchette/<slug>/index.html.
 
 Uso:  python3 scripts/genera_schede.py
 Ogni JSON contiene i dati tecnici e un blocco "pagina" con i testi editoriali.
@@ -7,10 +7,14 @@ Ogni JSON contiene i dati tecnici e un blocco "pagina" con i testi editoriali.
 import html
 import json
 import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from comune import racket_svg  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "racchette"
-OUT = ROOT / "racchette"
+OUT = ROOT / "it" / "racchette"
 
 e = html.escape
 
@@ -71,9 +75,16 @@ def rev_rows(items):
     return "\n".join(out)
 
 
+def loc(u):
+    if u.startswith("/racchette/") or u.startswith("/confronta/"):
+        return "/it" + u
+    return u
+
+
 def sim_cards(items):
     out = []
     for s in items:
+        s = dict(s, url=loc(s["url"]))
         ext = s["url"].startswith("http")
         attrs = ' rel="nofollow noopener" target="_blank"' if ext else ""
         out.append(
@@ -84,8 +95,8 @@ def sim_cards(items):
 
 CSS = open(ROOT / "scripts" / "scheda.css", encoding="utf-8").read()
 
-NAV = [("Racchette", "/racchette/"), ("Abbigliamento", "/abbigliamento/"), ("Bambini", "/bambini/"),
-       ("Confronta", "/confronta/"), ("Trova la tua racchetta", "/trova-la-tua-racchetta/")]
+NAV = [("Racchette", "/it/racchette/"), ("Abbigliamento", "/it/abbigliamento/"), ("Bambini", "/it/bambini/"),
+       ("Confronta", "/it/confronta/"), ("Trova la tua racchetta", "/it/trova-la-tua-racchetta/")]
 
 LOGO = '<svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="14" width="52" height="36" rx="4" fill="none" stroke="#0F3D2E" stroke-width="4"/><line x1="19" y1="14" x2="19" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="45" y1="14" x2="45" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="19" y1="32" x2="45" y2="32" stroke="#0F3D2E" stroke-width="2"/><line x1="32" y1="9" x2="32" y2="55" stroke="#0F3D2E" stroke-width="4" stroke-linecap="round"/><circle cx="45" cy="23" r="6.5" fill="#C6F432" stroke="#0F3D2E" stroke-width="2"/></svg>'
 
@@ -123,7 +134,7 @@ def render(d):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(p["title_tag"])} | PadelMetrix</title>
 <meta name="description" content="{e(p["meta_description"])}">
-<link rel="canonical" href="https://www.padelmetrix.com/racchette/{slug}/">
+<link rel="canonical" href="https://www.padelmetrix.com/it/racchette/{slug}/">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -137,17 +148,18 @@ def render(d):
 <body>
 
 <header class="site"><div class="wrap">
-<a class="brand" href="/">{LOGO}<b>padel</b><span>metrix</span></a>
+<a class="brand" href="/it/">{LOGO}<b>padel</b><span>metrix</span></a>
 <nav class="main" aria-label="Principale">
 {nav}
 </nav>
+<div class="langs" aria-label="Lingua"><a class="on" href="/it/">IT</a> · <a href="/en/">EN</a> · <a href="/es/">ES</a></div>
 </div></header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Percorso"><a href="/">Home</a><span>›</span><a href="/racchette/">Racchette</a><span>›</span><a href="/racchette/?marca={marca_slug}">{e(d["marca"])}</a><span>›</span><span>{e(p["breadcrumb"])}</span></nav>
+<nav class="crumbs" aria-label="Percorso"><a href="/it/">Home</a><span>›</span><a href="/it/racchette/">Racchette</a><span>›</span><a href="/it/racchette/?marca={marca_slug}">{e(d["marca"])}</a><span>›</span><span>{e(p["breadcrumb"])}</span></nav>
 
 <div class="top">
-<div class="photo">Foto della racchetta<br>(in arrivo dal programma di affiliazione)</div>
+<div class="photo">{racket_svg(d.get("forma", "goccia"), 220, nome_completo)}</div>
 <div class="info">
 <div>
 <div class="eyebrow">{e(p["eyebrow"])}</div>
@@ -167,7 +179,7 @@ def render(d):
 </div>
 
 <div style="display:flex;flex-wrap:wrap;gap:12px">
-<a class="btn out" href="{e(p["confronta"]["url"])}">{e(p["confronta"]["testo"])}</a>
+<a class="btn out" href="{e(loc(p["confronta"]["url"]))}">{e(p["confronta"]["testo"])}</a>
 </div>
 </div>
 </div>
