@@ -12,6 +12,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from comune import racket_svg  # noqa: E402
+from sito import carica, coppie, confronto_url, crumbs, pagina, SITO, FORMA_IT, LIV_IT, STILE_IT  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "racchette"
@@ -94,70 +95,94 @@ def sim_cards(items):
     return "\n".join(out)
 
 
-CSS = open(ROOT / "scripts" / "scheda.css", encoding="utf-8").read()
-
-NAV = [("Racchette", "/it/racchette/"), ("Abbigliamento", "/it/abbigliamento/"), ("Bambini", "/it/bambini/"),
-       ("Confronta", "/it/confronta/"), ("Trova la tua racchetta", "/it/trova-la-tua-racchetta/")]
-
-LOGO = '<svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="14" width="52" height="36" rx="4" fill="none" stroke="#0F3D2E" stroke-width="4"/><line x1="19" y1="14" x2="19" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="45" y1="14" x2="45" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="19" y1="32" x2="45" y2="32" stroke="#0F3D2E" stroke-width="2"/><line x1="32" y1="9" x2="32" y2="55" stroke="#0F3D2E" stroke-width="4" stroke-linecap="round"/><circle cx="45" cy="23" r="6.5" fill="#C6F432" stroke="#0F3D2E" stroke-width="2"/></svg>'
-
-FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F3D2E'/%3E%3Crect x='8' y='16' width='48' height='32' rx='3' fill='none' stroke='%23EAF5EC' stroke-width='4'/%3E%3Cline x1='32' y1='11' x2='32' y2='53' stroke='%23EAF5EC' stroke-width='4'/%3E%3Ccircle cx='45' cy='25' r='7' fill='%23C6F432'/%3E%3C/svg%3E"
 
 
-def render(d):
+def short_of(d):
+    return f"{d['modello']} {d['anno']}"
+
+
+def faq(d, n, db):
+    """Domande frequenti costruite solo dai dati della scheda."""
+    sh = short_of(d)
+    qa = []
+    if n["peso"]:
+        bil = f" con bilanciamento {n['bilanciamento'].split(' (')[0]}" if isinstance(n.get("bilanciamento"), str) else ""
+        qa.append((f"Quanto pesa la {sh}?", f"La {d['marca']} {sh} pesa {n['peso']}{bil}, secondo i dati dichiarati."))
+    if n["livello"]:
+        qa.append((f"Per che livello è la {sh}?", f"È pensata per un livello {LIV_IT[n['livello']].lower()}."
+                   + (f" Stile di gioco: {STILE_IT[n['stile']].lower()}." if n["stile"] else "")))
+    if n["forma"]:
+        qa.append((f"Che forma ha la {sh}?", f"Ha forma {FORMA_IT[n['forma']].lower()}. "
+                   + {"diamante": "Le racchette a diamante concentrano il peso in testa: più potenza nello smash, meno tolleranza in difesa.",
+                      "rotonda": "Le racchette rotonde hanno lo sweet spot al centro e il peso verso il manico: più controllo e maneggevolezza.",
+                      "goccia": "La forma a goccia sta a metà tra rotonda e diamante: un compromesso tra controllo e potenza.",
+                      "ibrida": "La forma ibrida combina caratteristiche di goccia e diamante, per un gioco versatile."}[n["forma"]]))
+    altre = [o for o in db if o["marca"] == n["marca"] and o["modello"] == n["modello"] and o["anno"] != n["anno"]]
+    if altre:
+        o = altre[0]
+        diffs = []
+        for k, lab in (("peso", "peso"), ("forma", "forma"), ("superficie", "superficie"), ("nucleo", "nucleo")):
+            a, b = n.get(k), o.get(k)
+            if a and b and str(a).lower() != str(b).lower():
+                diffs.append(f"{lab} {b} nella {o['anno']} contro {a} nella {n['anno']}")
+        txt = ("Differenze dichiarate: " + "; ".join(diffs) + ".") if diffs else \
+              "Sulla carta i dati che abbiamo coincidono; le differenze sono nei dettagli costruttivi e nel design."
+        qa.append((f"Che differenza c'è tra la {sh} e la {o['modello']} {o['anno']}?", txt + f" Confronto completo nella pagina dedicata."))
+    if n["prezzo"]:
+        pr = f"{n['prezzo']:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".").replace(",00", "")
+        qa.append((f"Quanto costa la {sh}?", f"Il prezzo di listino indicativo è {pr} €; nei negozi online si trova spesso scontata."))
+    return qa[:5]
+
+
+def render(d, n, db, pair_set):
     p = d["pagina"]
     slug = d["slug"]
     nome_completo = p["titolo"]
-    ld = {
-        "@context": "https://schema.org", "@type": "Product", "name": nome_completo,
-        "brand": {"@type": "Brand", "name": d["marca"]}, "category": "Racchetta da padel",
-        "description": p["meta_description"],
-    }
-    nav = "\n".join(
-        f'<a{" class=\"on\"" if lbl == "Racchette" else ""} href="{href}">{lbl}</a>' for lbl, href in NAV)
-    marca_slug = re.sub(r"[^a-z0-9]+", "-", d["marca"].lower()).strip("-")
+    sh = short_of(d)
+    title = f"{nome_completo}: scheda tecnica, opinioni e prezzo"
+    if len(title) > 68:
+        title = f"{nome_completo}: scheda e opinioni"
+    qa = faq(d, n, db)
+    cr_html, cr_ld = crumbs([("Home", "/it/"), ("Racchette", "/it/racchette/"), (d["marca"], f"/it/marche/{n['marca_slug']}/"), (p["breadcrumb"], None)])
+    prod = {"@context": "https://schema.org", "@type": "Product", "name": nome_completo, "model": d["modello"],
+            "brand": {"@type": "Brand", "name": d["marca"]}, "category": "Racchetta da padel", "description": p["meta_description"],
+            "url": f"{SITO}/it/racchette/{slug}/"}
+    props = [{"@type": "PropertyValue", "name": k, "value": v} for k, v in
+             (("Peso", n["peso"]), ("Forma", FORMA_IT.get(n["forma"])), ("Collezione", str(d["anno"]))) if v]
+    if props:
+        prod["additionalProperty"] = props
+    ld = [prod, cr_ld]
+    if qa:
+        ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]})
     avviso = f'<div class="card avviso">{p["avviso_html"]}</div>' if p.get("avviso_html") else ""
     blocco_val = bars(p["valutazioni"]) if p.get("valutazioni") else tratti(p["tratti"])
     recensioni = ""
     if p.get("recensioni"):
-        recensioni = f'''<div class="tablebox">
+        recensioni = f"""<div class="tablebox">
 <table class="rev">
 <thead><tr><th>Fonte</th><th>Valutazione</th><th>In sintesi</th></tr></thead>
 <tbody>
 {rev_rows(p["recensioni"])}
 </tbody>
 </table>
-</div>'''
-    return f'''<!doctype html>
-<html lang="it">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{e(p["title_tag"])} | PadelMetrix</title>
-<meta name="description" content="{e(p["meta_description"])}">
-<link rel="canonical" href="https://www.padelmetrix.com/it/racchette/{slug}/">
-<link rel="icon" href="{FAVICON}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<script type="application/ld+json">
-{json.dumps(ld, ensure_ascii=False)}
-</script>
-<style>
-{CSS}
-</style>
-</head>
-<body>
-
-<header class="site"><div class="wrap">
-<a class="brand" href="/it/">{LOGO}<b>padel</b><span>metrix</span></a>
-<nav class="main" aria-label="Principale">
-{nav}
-</nav>
-<div class="langs" aria-label="Lingua"><a class="on" href="/it/">IT</a> · <a href="/en/">EN</a> · <a href="/es/">ES</a></div>
-</div></header>
-
-<main class="wrap">
-<nav class="crumbs" aria-label="Percorso"><a href="/it/">Home</a><span>›</span><a href="/it/racchette/">Racchette</a><span>›</span><a href="/it/racchette/?marca={marca_slug}">{e(d["marca"])}</a><span>›</span><span>{e(p["breadcrumb"])}</span></nav>
+</div>"""
+    # confronti pubblicati che coinvolgono questa racchetta
+    per = {x["slug"]: x for x in db}
+    mie = [(a if b == slug else b) for a, b in pair_set if slug in (a, b)]
+    if mie:
+        primo = mie[0]
+        conf_btn = f'<a class="btn out" href="{confronto_url(slug, primo)}">Confronta con {e(per[primo]["nome"])}</a>'
+        conf_list = "".join(f'<li><a href="{confronto_url(slug, o)}">{e(sh)} vs {e(per[o]["nome"])}</a></li>' for o in mie)
+        conf_sec = f'<div class="card"><h3 style="font-size:17px">Confronti con la {e(sh)}</h3><ul class="clean">{conf_list}</ul></div>'
+    else:
+        conf_btn = f'<a class="btn out" href="/it/confronta/">Confronta con un\'altra racchetta</a>'
+        conf_sec = ""
+    faq_html = ""
+    if qa:
+        faq_html = '<section class="block faq"><h2>Domande frequenti sulla ' + e(sh) + "</h2>" + "".join(
+            f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa) + "</section>"
+    corpo = f"""{cr_html}
 
 <div class="top">
 <div class="photo">{racket_svg(d.get("forma", "goccia"), 220, nome_completo)}</div>
@@ -172,7 +197,7 @@ def render(d):
 {blocco_val}
 
 <div class="card">
-<h2>Dove comprarla</h2>
+<h2>Dove comprare la {e(sh)}</h2>
 <div class="stores">
 {chr(10).join(store(s) for s in p["negozi"])}
 </div>
@@ -180,13 +205,14 @@ def render(d):
 </div>
 
 <div style="display:flex;flex-wrap:wrap;gap:12px">
-<a class="btn out" href="{e(loc(p["confronta"]["url"]))}">{e(p["confronta"]["testo"])}</a>
+{conf_btn}
+<a class="btn out" href="/it/marche/{n['marca_slug']}/">Tutte le racchette {e(d["marca"])}</a>
 </div>
 </div>
 </div>
 
 <section class="block">
-<h2>Dati tecnici</h2>
+<h2>Dati tecnici della {e(sh)}</h2>
 <dl class="specs">
 {specs(p["specifiche"])}
 </dl>
@@ -194,7 +220,7 @@ def render(d):
 </section>
 
 <section class="block">
-<h2>Cosa dicono le recensioni</h2>
+<h2>{e(sh)}: recensioni e opinioni</h2>
 <div class="card">
 <p style="margin:0;font-size:16px">{e(p["sintesi"])}</p>
 </div>
@@ -203,8 +229,8 @@ def render(d):
 <div class="card cons"><h3>Limiti</h3><ul class="clean">{li(p["contro"])}</ul></div>
 </div>
 <div class="two">
-<div class="card"><h3 style="font-size:17px">È adatta se</h3><ul class="clean">{li(p["adatta"])}</ul></div>
-<div class="card"><h3 style="font-size:17px">Meglio un'altra se</h3><ul class="clean">{li(p["non_adatta"])}</ul></div>
+<div class="card"><h3 style="font-size:17px">La {e(sh)} è adatta se</h3><ul class="clean">{li(p["adatta"])}</ul></div>
+<div class="card"><h3 style="font-size:17px">Meglio un'altra racchetta se</h3><ul class="clean">{li(p["non_adatta"])}</ul></div>
 </div>
 {recensioni}
 </section>
@@ -212,37 +238,26 @@ def render(d):
 <div class="ad">Pubblicità</div>
 
 <section class="block">
-<h2>Racchette simili</h2>
+<h2>Racchette simili alla {e(sh)}</h2>
 <div class="sim">
 {sim_cards(p["simili"])}
 </div>
-<p class="note">Altre alternative compariranno qui man mano che aggiungiamo racchette al database.</p>
+{conf_sec}
 </section>
-</main>
 
-<footer><div class="wrap">
-<span style="max-width:760px">In qualità di Affiliato Amazon, PadelMetrix riceve un guadagno dagli acquisti idonei. Alcuni link verso altri negozi sono link di affiliazione. Scheda aggiornata il {e(p["aggiornata"])}.</span>
-<span>© 2026 PadelMetrix</span>
-</div></footer>
-
-</body>
-</html>
-'''
+{faq_html}
+<p class="note" style="padding-bottom:24px">Scheda aggiornata il {e(p["aggiornata"])}.</p>"""
+    return pagina(f"{title} | PadelMetrix", p["meta_description"], f"/it/racchette/{slug}/", corpo, on="racchette", ld=ld)
 
 
 def main():
-    n = 0
-    for f in sorted(DATA.glob("*.json")):
-        d = json.loads(f.read_text(encoding="utf-8"))
-        if "pagina" not in d:
-            print("salto (manca blocco pagina):", f.name)
-            continue
-        dest = OUT / d["slug"] / "index.html"
+    db = carica()
+    pair_set = coppie(db)
+    for n in db:
+        dest = OUT / n["slug"] / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(render(d), encoding="utf-8")
-        n += 1
-        print("ok", d["slug"])
-    print(n, "schede generate")
+        dest.write_text(render(n["d"], n, db, pair_set), encoding="utf-8")
+    print(len(db), "schede generate,", len(pair_set), "coppie di confronto")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,34 @@
+
+.intro{max-width:780px;padding:4px 0 24px}
+.intro h1{margin-bottom:12px}
+.intro p{font-size:17px;color:var(--ink2);margin:0 0 10px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding-bottom:32px}
+.rcard{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.rcard:hover{border-color:var(--green)}
+.rcard .ill{flex:0 0 56px;display:flex;justify-content:center}
+.rcard b{display:block;font-family:'Space Grotesk',sans-serif;font-size:16px;line-height:1.25;margin:2px 0}
+.rcard small{display:block;color:var(--muted);font-size:13px}
+.filtri{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.filtri label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);font-weight:600}
+.filtri select,.filtri input{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);min-width:150px}
+.conta{font-size:14px;color:var(--muted);margin:0 0 12px}
+.prose{max-width:780px}
+.prose h2{font-size:26px;margin:32px 0 12px}
+.prose h3{font-size:19px;margin:22px 0 8px}
+.prose p,.prose li{font-size:16px}
+.tab{width:100%;border-collapse:collapse;font-size:15px;background:var(--white)}
+.tab th,.tab td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--soft);vertical-align:top}
+.tab th{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.vs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:24px}
+.vs .card h2{font-size:20px}
+.lista-link{columns:2 280px;padding-left:20px}
+.lista-link li{margin:6px 0;break-inside:avoid}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+.faq summary{font-weight:600;cursor:pointer;font-size:16px}
+.faq p{margin:10px 0 0}
+.marche{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.marche a{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:6px 12px;text-decoration:none;color:var(--ink);font-size:14px}
+.cmp-tool{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:24px}
+.cmp-tool select{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:8px;min-width:240px;max-width:100%}
+.tablebox .tab{min-width:560px}
+.vs .card h2{margin:0 0 10px}

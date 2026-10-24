@@ -29,7 +29,7 @@ T = {
         "html_lang": "it", "title": "PadelMetrix · La guida indipendente all'attrezzatura da padel",
         "desc": "Schede tecniche, confronti e consigli su racchette da padel, abbigliamento e attrezzatura per bambini. Trova la racchetta giusta per il tuo gioco.",
         "claim": "Il Padel, Analizzato.",
-        "nav": ["Racchette", "Abbigliamento", "Bambini", "Confronta", "Trova la tua racchetta"],
+        "nav": ["Racchette", "Abbigliamento", "Bambini", "Confronta", "Guide"],
         "h1": "La guida indipendente per scegliere l'attrezzatura da padel.",
         "intro": "PadelMetrix raccoglie in un solo posto schede tecniche, confronti e consigli su racchette, abbigliamento e attrezzatura per bambini. Ti aiutiamo a capire cosa fa per te; poi compri dove preferisci.",
         "cta1": "Trova la tua racchetta in 2 minuti", "cta2": "Esplora le racchette",
@@ -210,6 +210,10 @@ SEC_ICON = {"racchette": "diamante", "abbigliamento": None, "bambini": "rotonda"
 SHOE = '<svg viewBox="0 0 240 140" width="190" aria-hidden="true"><path d="M20 96 C20 70 40 58 62 56 L104 50 C118 48 128 38 134 26 L150 30 C152 52 168 62 190 66 C212 70 222 82 222 96 Z" fill="#0F3D2E"/><path d="M14 96 H226 V108 C226 114 222 118 216 118 H24 C18 118 14 114 14 108 Z" fill="#C6F432"/><path d="M112 58 L124 70 M124 52 L136 64 M100 62 L110 72" stroke="#FAFAF7" stroke-opacity="0.6" stroke-width="5" stroke-linecap="round"/></svg>'
 
 
+GUIDE_IT = """<div class="head" style="margin-top:40px"><h2>Guide alla scelta</h2><a href="/it/guide/"><b>Tutte le guide →</b></a></div>
+<div class="marche"><a href="/it/guide/racchetta-padel-principianti/"><b>Principianti</b><span>la prima racchetta</span></a><a href="/it/guide/racchetta-padel-epicondilite/"><b>Gomito</b><span>racchette confortevoli</span></a><a href="/it/guide/forme-racchetta-padel/"><b>Forme</b><span>rotonda, goccia o diamante</span></a><a href="/it/bambini/"><b>Bambini</b><span>misure per età</span></a><a href="/it/guide/racchette-padel-economiche/"><b>Economiche</b><span>fino a 130 €</span></a><a href="/it/confronta/"><b>Confronti</b><span>modello contro modello</span></a><a href="/it/guide/racchette-giocatori-professionisti/"><b>Professionisti</b><span>con che racchetta giocano</span></a></div>"""
+
+
 def carica():
     out = {}
     for f in DATA.glob("*.json"):
@@ -245,7 +249,7 @@ def head(lang, t):
 def pagina(lang, db):
     t = T[lang]
     keys = ["racchette", "abbigliamento", "bambini", "confronta", "selettore"]
-    nav = "".join(f'<a href="{url(lang, k)}">{e(n)}</a>' for k, n in zip(keys, t["nav"]))
+    nav = "".join(f'<a href="{"/it/guide/" if (lang == "it" and k == "selettore") else url(lang, k)}">{e(n)}</a>' for k, n in zip(keys, t["nav"]))
     langs = " · ".join(f'<a{" class=\"on\"" if l == lang else ""} href="/{l}/" hreflang="{l}">{l.upper()}</a>' for l in LINGUE)
     marche = {}
     for d in db.values():
@@ -268,7 +272,7 @@ def pagina(lang, db):
         href = f"/it/racchette/{slug}/"
         evid.append(f'<a class="card rk" href="{href}"{" hreflang=\"it\"" if lang != "it" else ""}><div class="ill">{racket_svg(d["forma"], 92, d["pagina"]["titolo"])}</div><div class="body"><span class="meta">{e(d["marca"])} · {d["anno"]}</span><span class="nm">{e(nome)}</span><span class="sp">{e(t["forme"][d["forma"]])} · {e(peso)}</span></div></a>')
 
-    mk = "".join(f'<a href="{url(lang, "racchette")}?marca={re.sub(r"[^a-z0-9]+", "-", m.lower()).strip("-")}"><b>{e(m)}</b><span>{e(t["racchetta_1"] if n == 1 else t["racchette_n"].format(n=n))}</span></a>' for m, n in sorted(marche.items(), key=lambda kv: -kv[1]))
+    mk = "".join(f'<a href="/it/marche/{re.sub(r"[^a-z0-9]+", "-", m.lower()).strip("-")}"><b>{e(m)}</b><span>{e(t["racchetta_1"] if n == 1 else t["racchette_n"].format(n=n))}</span></a>' for m, n in sorted(marche.items(), key=lambda kv: -kv[1]))
     nota = f'<p class="nota">{e(t["evid_nota"])}</p>' if t["evid_nota"] else ""
     come = "".join(f'<div><div class="n">{i}</div><h3>{e(a)}</h3><p>{e(b)}</p></div>' for i, (a, b) in enumerate(t["come"], 1))
     t1, t2 = t["t1"], t["t2"]
@@ -324,6 +328,7 @@ def pagina(lang, db):
 <section class="block"><div class="wrap">
 <div class="head"><h2>{e(t["marche_titolo"])}</h2></div>
 <div class="marche">{mk}</div>
+{GUIDE_IT if lang == "it" else ""}
 </div></section>
 </main>
 
@@ -331,7 +336,7 @@ def pagina(lang, db):
 <div class="cols">
 <div style="flex:1 1 240px"><span class="wm"><b>padel</b><i>metrix</i></span><span>{e(t["claim"])}</span></div>
 <div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{url(lang, "abbigliamento")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
-<div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{url(lang, "selettore")}">{e(t["nav"][4])}</a></div>
+<div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{"/it/guide/" if lang == "it" else url(lang, "selettore")}">{e(t["nav"][4])}</a></div>
 <div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a></div>
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
