@@ -1,0 +1,149 @@
+{
+  "slug": "head-vibe-2026",
+  "marca": "Head",
+  "modello": "Vibe",
+  "anno": 2026,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "350 g",
+  "forma": "goccia",
+  "superficie": "Fibra di vetro",
+  "livello": "principiante",
+  "stile": "polivalente",
+  "prezzo_listino_eur": 89.95,
+  "simili": [
+    "siux-beat-hybrid-3-2026",
+    "head-bolt-2026",
+    "wilson-optix-v2-power-2026"
+  ],
+  "fonti_dati": [
+    "https://www.padelbrowser.com/blog/best-head-padel-rackets-2026",
+    "https://padelmarket.com/es-eu/collections/palas-head"
+  ],
+  "aggiornato": "2026-10-24",
+  "pagina": {
+    "titolo": "Head Vibe 2026",
+    "title_tag": "Head Vibe 2026: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "Head Vibe 2026: forma goccia, peso 350 g, fibra di vetro. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Vibe 2026",
+    "eyebrow": "Head · Collezione 2026",
+    "chips": [
+      "Goccia",
+      "350 g",
+      "Fibra di vetro",
+      "Principiante"
+    ],
+    "lead": "Racchetta d'ingresso tollerante, con superficie di gioco di 525 cm² e poco stress per il braccio. Indicata per chi inizia.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=Head+Vibe+2026",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      },
+      {
+        "nome": "PadelMarket",
+        "nota": "Scheda prodotto del rivenditore",
+        "url": "https://padelmarket.com/es-eu/collections/palas-head",
+        "pulsante": "Vedi sul sito"
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 89,95 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=head-vibe-2026,siux-beat-hybrid-3-2026",
+      "testo": "Confronta con Beat Hybrid 3 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "Head"
+      ],
+      [
+        "Modello",
+        "Vibe"
+      ],
+      [
+        "Collezione",
+        "2026"
+      ],
+      [
+        "Forma",
+        "Goccia"
+      ],
+      [
+        "Peso",
+        "350 g"
+      ],
+      [
+        "Bilanciamento",
+        "Non dichiarato"
+      ],
+      [
+        "Superficie",
+        "Fibra di vetro"
+      ],
+      [
+        "Livello",
+        "Principiante"
+      ],
+      [
+        "Stile di gioco",
+        "Polivalente"
+      ],
+      [
+        "Prezzo di listino",
+        "89,95 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.padelbrowser.com/blog/best-head-padel-rackets-2026\" rel=\"nofollow noopener\" target=\"_blank\">PadelBrowser</a>, <a href=\"https://padelmarket.com/es-eu/collections/palas-head\" rel=\"nofollow noopener\" target=\"_blank\">PadelMarket</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. PadelBrowser la descrive così: racchetta d'ingresso tollerante, con superficie di gioco di 525 cm² e poco stress per il braccio. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Versatile tra difesa e attacco",
+      "Fibra di vetro: tatto morbido e uscita di palla facile"
+    ],
+    "contro": [
+      "Si rischia di superarla presto crescendo di livello",
+      "Recensioni indipendenti ancora poche"
+    ],
+    "adatta": [
+      "Sei un principiante",
+      "Vuoi una racchetta sola per difesa e attacco"
+    ],
+    "non_adatta": [
+      "Sei avanzato e cerchi il massimo delle prestazioni",
+      "Cerchi una racchetta specializzata in attacco o in difesa"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/siux-beat-hybrid-3-2026/",
+        "sopra": "Siux · 2026",
+        "nome": "Beat Hybrid 3 2026",
+        "testo": "Goccia polivalente, livello principiante."
+      },
+      {
+        "url": "/racchette/head-bolt-2026/",
+        "sopra": "Head · 2026",
+        "nome": "Bolt 2026",
+        "testo": "Goccia polivalente, 350 g, fibra di vetro, livello principiante / intermedio."
+      },
+      {
+        "url": "/racchette/wilson-optix-v2-power-2026/",
+        "sopra": "Wilson · 2026",
+        "nome": "Optix V2 Power 2026",
+        "testo": "Goccia polivalente, 360 g, livello principiante / intermedio."
+      }
+    ],
+    "aggiornata": "24 ottobre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Polivalente",
+        "Livello principiante",
+        "Forma goccia"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

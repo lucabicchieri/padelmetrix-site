@@ -1,0 +1,151 @@
+{
+  "slug": "dunlop-fx-lite-2026",
+  "marca": "Dunlop",
+  "modello": "FX Lite",
+  "anno": 2026,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "355 g",
+  "bilanciamento": "medio",
+  "nucleo": "Soft EVA",
+  "telaio": "Carbonio 12K",
+  "livello": "intermedio-avanzato",
+  "stile": "offensivo",
+  "prezzo_listino_eur": 250,
+  "simili": [
+    "dunlop-fx-team-2026",
+    "bullpadel-hack-05-comfort-2027",
+    "bullpadel-xplo-02-comfort-2027"
+  ],
+  "fonti_dati": [
+    "https://www.ipontennis.com/en/padel-rackets/dunlop-fx-lite-2026-racket"
+  ],
+  "aggiornato": "2026-10-24",
+  "pagina": {
+    "titolo": "Dunlop FX Lite 2026",
+    "title_tag": "Dunlop FX Lite 2026: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "Dunlop FX Lite 2026: peso 355 g, bilanciamento medio. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "FX Lite 2026",
+    "eyebrow": "Dunlop · Collezione 2026",
+    "chips": [
+      "355 g",
+      "Bilanciamento medio",
+      "Intermedio / avanzato"
+    ],
+    "lead": "Racchetta d'attacco da 355 g con sweet spot alto, per chi vuole potenza con meno fatica per il braccio. Indicata per intermedi alti e avanzati.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=Dunlop+FX+Lite+2026",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      },
+      {
+        "nome": "Ipontennis",
+        "nota": "Scheda prodotto del rivenditore",
+        "url": "https://www.ipontennis.com/en/padel-rackets/dunlop-fx-lite-2026-racket",
+        "pulsante": "Vedi sul sito"
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 250 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=dunlop-fx-lite-2026,dunlop-fx-team-2026",
+      "testo": "Confronta con FX Team 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "Dunlop"
+      ],
+      [
+        "Modello",
+        "FX Lite"
+      ],
+      [
+        "Collezione",
+        "2026"
+      ],
+      [
+        "Forma",
+        "Non dichiarata"
+      ],
+      [
+        "Peso",
+        "355 g"
+      ],
+      [
+        "Bilanciamento",
+        "Medio"
+      ],
+      [
+        "Nucleo",
+        "Soft EVA"
+      ],
+      [
+        "Telaio",
+        "Carbonio 12K"
+      ],
+      [
+        "Livello",
+        "Intermedio / avanzato"
+      ],
+      [
+        "Stile di gioco",
+        "Offensivo"
+      ],
+      [
+        "Prezzo di listino",
+        "250 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.ipontennis.com/en/padel-rackets/dunlop-fx-lite-2026-racket\" rel=\"nofollow noopener\" target=\"_blank\">Ipontennis</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. Ipontennis la descrive così: racchetta d'attacco da 355 g con sweet spot alto, per chi vuole potenza con meno fatica per il braccio. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Impronta offensiva con buona spinta",
+      "Collezione 2026 di Dunlop"
+    ],
+    "contro": [
+      "Recensioni indipendenti ancora poche",
+      "Alcuni dati tecnici non sono dichiarati dal produttore"
+    ],
+    "adatta": [
+      "Sei di livello intermedio / avanzato",
+      "Ti piace attaccare e chiudere i punti a rete"
+    ],
+    "non_adatta": [
+      "Sei principiante: meglio una racchetta più tollerante",
+      "Giochi soprattutto in difesa da fondo campo"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/dunlop-fx-team-2026/",
+        "sopra": "Dunlop · 2026",
+        "nome": "FX Team 2026",
+        "testo": "Diamante d'attacco, livello intermedio / avanzato."
+      },
+      {
+        "url": "/racchette/bullpadel-hack-05-comfort-2027/",
+        "sopra": "Bullpadel · 2027",
+        "nome": "Hack 05 Comfort 2027",
+        "testo": "Diamante d'attacco, 360–370 g, livello intermedio / avanzato."
+      },
+      {
+        "url": "/racchette/bullpadel-xplo-02-comfort-2027/",
+        "sopra": "Bullpadel · 2027",
+        "nome": "XPLO 02 Comfort 2027",
+        "testo": "Diamante d'attacco, 365–375 g, livello intermedio / avanzato."
+      }
+    ],
+    "aggiornata": "24 ottobre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Racchetta d'attacco",
+        "Livello intermedio / avanzato"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

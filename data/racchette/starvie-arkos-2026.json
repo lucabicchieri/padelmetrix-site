@@ -1,0 +1,200 @@
+{
+  "slug": "starvie-arkos-2026",
+  "marca": "StarVie",
+  "modello": "Arkos",
+  "anno": 2026,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "350–365 g",
+  "forma": "rotonda",
+  "bilanciamento": "basso",
+  "nucleo": "S-EVA Flex",
+  "superficie": "Fibra di vetro (X-Glass Tech)",
+  "telaio": "Carbonio",
+  "sensazione": "morbido",
+  "livello": "principiante",
+  "stile": "controllo",
+  "prezzo_listino_eur": 70,
+  "valutazioni_esterne": {
+    "fonte": "Padelful",
+    "url": "https://www.padelful.com/en/rackets/star-vie-arkos-2026",
+    "tot": 6.7,
+    "v": [
+      5.6,
+      7,
+      7.1,
+      7,
+      6.9
+    ]
+  },
+  "simili": [
+    "starvie-nyra-2026",
+    "wilson-optix-v2-lite-2026",
+    "black-crown-viva-2026"
+  ],
+  "fonti_dati": [
+    "https://www.padelful.com/en/rackets/star-vie-arkos-2026"
+  ],
+  "aggiornato": "2026-10-24",
+  "pagina": {
+    "titolo": "StarVie Arkos 2026",
+    "title_tag": "StarVie Arkos 2026: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "StarVie Arkos 2026: forma rotonda, peso 350–365 g, bilanciamento basso, fibra di vetro. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Arkos 2026",
+    "eyebrow": "StarVie · Collezione 2026",
+    "chips": [
+      "Rotonda",
+      "350–365 g",
+      "Bilanciamento basso",
+      "Fibra di vetro",
+      "Principiante"
+    ],
+    "lead": "Morbida, tollerante e facile da gestire per chi inizia; poca potenza nei colpi di chiusura.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=StarVie+Arkos+2026",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 70 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=starvie-arkos-2026,starvie-nyra-2026",
+      "testo": "Confronta con Nyra 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "StarVie"
+      ],
+      [
+        "Modello",
+        "Arkos"
+      ],
+      [
+        "Collezione",
+        "2026"
+      ],
+      [
+        "Forma",
+        "Rotonda"
+      ],
+      [
+        "Peso",
+        "350–365 g"
+      ],
+      [
+        "Bilanciamento",
+        "Basso"
+      ],
+      [
+        "Nucleo",
+        "S-EVA Flex"
+      ],
+      [
+        "Superficie",
+        "Fibra di vetro (X-Glass Tech)"
+      ],
+      [
+        "Telaio",
+        "Carbonio"
+      ],
+      [
+        "Tatto",
+        "Morbido"
+      ],
+      [
+        "Livello",
+        "Principiante"
+      ],
+      [
+        "Stile di gioco",
+        "Controllo"
+      ],
+      [
+        "Prezzo di listino",
+        "70 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.padelful.com/en/rackets/star-vie-arkos-2026\" rel=\"nofollow noopener\" target=\"_blank\">Padelful</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Per Padelful ottiene 6,7/10. In sintesi: morbida, tollerante e facile da gestire per chi inizia; poca potenza nei colpi di chiusura. Il valore più alto è uscita di palla (7,1/10), il più basso potenza (5,6/10). Le altre recensioni indipendenti sono ancora poche: aggiorneremo la scheda appena ne usciranno.",
+    "pro": [
+      "Controllo e regolarità negli scambi",
+      "Tatto morbido, più comfort per il braccio",
+      "Fibra di vetro: tatto morbido e uscita di palla facile"
+    ],
+    "contro": [
+      "Potenza limitata nello smash",
+      "Sweet spot ridotto: serve un impatto pulito",
+      "Si rischia di superarla presto crescendo di livello"
+    ],
+    "adatta": [
+      "Sei un principiante",
+      "Costruisci il punto con pazienza e piazzamento",
+      "Vuoi proteggere gomito e spalla"
+    ],
+    "non_adatta": [
+      "Sei avanzato e cerchi il massimo delle prestazioni",
+      "Cerchi tanta potenza nello smash"
+    ],
+    "recensioni": [
+      {
+        "fonte": "Padelful",
+        "url": "https://www.padelful.com/en/rackets/star-vie-arkos-2026",
+        "voto": "6,7/10",
+        "voto_dettaglio": "potenza 5,6 · controllo 7",
+        "sintesi": "Morbida, tollerante e facile da gestire per chi inizia; poca potenza nei colpi di chiusura."
+      }
+    ],
+    "simili": [
+      {
+        "url": "/racchette/starvie-nyra-2026/",
+        "sopra": "StarVie · 2026",
+        "nome": "Nyra 2026",
+        "testo": "Rotonda di controllo, 355–365 g, livello principiante."
+      },
+      {
+        "url": "/racchette/wilson-optix-v2-lite-2026/",
+        "sopra": "Wilson · 2026",
+        "nome": "Optix V2 Lite 2026",
+        "testo": "Rotonda di controllo, 355 g, livello principiante."
+      },
+      {
+        "url": "/racchette/black-crown-viva-2026/",
+        "sopra": "Black Crown · 2026",
+        "nome": "Viva 2026",
+        "testo": "Rotonda di controllo, fibra di vetro, livello principiante."
+      }
+    ],
+    "aggiornata": "24 ottobre 2026",
+    "valutazioni": {
+      "titolo": "Valutazioni di Padelful",
+      "scala": 10,
+      "voci": [
+        {
+          "nome": "Potenza",
+          "valore": 5.6
+        },
+        {
+          "nome": "Controllo",
+          "valore": 7
+        },
+        {
+          "nome": "Uscita di palla",
+          "valore": 7.1
+        },
+        {
+          "nome": "Maneggevolezza",
+          "valore": 7
+        },
+        {
+          "nome": "Sweet spot",
+          "valore": 6.9
+        }
+      ],
+      "nota_html": "Punteggi su 10 pubblicati da <a href=\"https://www.padelful.com/en/rackets/star-vie-arkos-2026\" rel=\"nofollow noopener\" target=\"_blank\">Padelful</a>, voto complessivo 6,7/10. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

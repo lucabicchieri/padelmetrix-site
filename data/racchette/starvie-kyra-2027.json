@@ -1,0 +1,164 @@
+{
+  "slug": "starvie-kyra-2027",
+  "marca": "StarVie",
+  "modello": "Kyra",
+  "anno": 2027,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "340–360 g",
+  "forma": "rotonda",
+  "bilanciamento": "basso",
+  "nucleo": "S-EVA Flex",
+  "superficie": "Fibra di vetro (X-Glass Tech)",
+  "sensazione": "morbido",
+  "livello": "principiante",
+  "stile": "controllo",
+  "prezzo_listino_eur": 98.9,
+  "simili": [
+    "starvie-nyra-2026",
+    "wilson-optix-v2-lite-2026",
+    "siux-beat-control-3-2026"
+  ],
+  "fonti_dati": [
+    "https://padelproshop.com/pages/starvie-2027"
+  ],
+  "aggiornato": "2026-10-24",
+  "pagina": {
+    "titolo": "StarVie Kyra 2027",
+    "title_tag": "StarVie Kyra 2027: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "StarVie Kyra 2027: forma rotonda, peso 340–360 g, bilanciamento basso, fibra di vetro. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Kyra 2027",
+    "eyebrow": "StarVie · Collezione 2027",
+    "chips": [
+      "Rotonda",
+      "340–360 g",
+      "Bilanciamento basso",
+      "Fibra di vetro",
+      "Principiante"
+    ],
+    "lead": "La più leggera della collezione e la porta d'ingresso al marchio. Indicata per chi inizia.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=StarVie+Kyra+2027",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      },
+      {
+        "nome": "PadelPROShop",
+        "nota": "Scheda prodotto del rivenditore",
+        "url": "https://padelproshop.com/pages/starvie-2027",
+        "pulsante": "Vedi sul sito"
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 98,90 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=starvie-kyra-2027,starvie-nyra-2026",
+      "testo": "Confronta con Nyra 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "StarVie"
+      ],
+      [
+        "Modello",
+        "Kyra"
+      ],
+      [
+        "Collezione",
+        "2027"
+      ],
+      [
+        "Forma",
+        "Rotonda"
+      ],
+      [
+        "Peso",
+        "340–360 g"
+      ],
+      [
+        "Bilanciamento",
+        "Basso"
+      ],
+      [
+        "Nucleo",
+        "S-EVA Flex"
+      ],
+      [
+        "Superficie",
+        "Fibra di vetro (X-Glass Tech)"
+      ],
+      [
+        "Tatto",
+        "Morbido"
+      ],
+      [
+        "Livello",
+        "Principiante"
+      ],
+      [
+        "Stile di gioco",
+        "Controllo"
+      ],
+      [
+        "Prezzo di listino",
+        "98,90 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://padelproshop.com/pages/starvie-2027\" rel=\"nofollow noopener\" target=\"_blank\">PadelPROShop</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. PadelPROShop la descrive così: la più leggera della collezione e la porta d'ingresso al marchio. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Controllo e regolarità negli scambi",
+      "Tatto morbido, più comfort per il braccio",
+      "Fibra di vetro: tatto morbido e uscita di palla facile",
+      "Leggera e facile da muovere"
+    ],
+    "contro": [
+      "Poca potenza facile nello smash",
+      "Si rischia di superarla presto crescendo di livello"
+    ],
+    "adatta": [
+      "Sei un principiante",
+      "Costruisci il punto con pazienza e piazzamento",
+      "Vuoi proteggere gomito e spalla"
+    ],
+    "non_adatta": [
+      "Sei avanzato e cerchi il massimo delle prestazioni",
+      "Cerchi tanta potenza nello smash"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/starvie-nyra-2026/",
+        "sopra": "StarVie · 2026",
+        "nome": "Nyra 2026",
+        "testo": "Rotonda di controllo, 355–365 g, livello principiante."
+      },
+      {
+        "url": "/racchette/wilson-optix-v2-lite-2026/",
+        "sopra": "Wilson · 2026",
+        "nome": "Optix V2 Lite 2026",
+        "testo": "Rotonda di controllo, 355 g, livello principiante."
+      },
+      {
+        "url": "/racchette/siux-beat-control-3-2026/",
+        "sopra": "Siux · 2026",
+        "nome": "Beat Control 3 2026",
+        "testo": "Rotonda di controllo, livello principiante."
+      }
+    ],
+    "aggiornata": "24 ottobre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Racchetta di controllo",
+        "Livello principiante",
+        "Tatto morbido",
+        "Forma rotonda"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

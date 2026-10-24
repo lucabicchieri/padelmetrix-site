@@ -5,6 +5,7 @@ Uso:  python3 scripts/genera_home.py
 """
 import html
 import json
+import re
 import pathlib
 import sys
 
@@ -19,8 +20,8 @@ SITO = "https://www.padelmetrix.com"
 IN_EVIDENZA = [
     "adidas-metalbone-hrd-plus-2026",
     "nox-at10-genius-12k-xtrem-2027",
-    "bullpadel-neuron-02-edge-2027",
-    "adidas-cross-it-light-2026",
+    "bullpadel-hack-05-2027",
+    "starvie-raptor-plus-2027",
 ]
 
 T = {
@@ -267,7 +268,7 @@ def pagina(lang, db):
         href = f"/it/racchette/{slug}/"
         evid.append(f'<a class="card rk" href="{href}"{" hreflang=\"it\"" if lang != "it" else ""}><div class="ill">{racket_svg(d["forma"], 92, d["pagina"]["titolo"])}</div><div class="body"><span class="meta">{e(d["marca"])} · {d["anno"]}</span><span class="nm">{e(nome)}</span><span class="sp">{e(t["forme"][d["forma"]])} · {e(peso)}</span></div></a>')
 
-    mk = "".join(f'<a href="{url(lang, "racchette")}?marca={m.lower()}"><b>{e(m)}</b><span>{e(t["racchetta_1"] if n == 1 else t["racchette_n"].format(n=n))}</span></a>' for m, n in sorted(marche.items(), key=lambda kv: -kv[1]))
+    mk = "".join(f'<a href="{url(lang, "racchette")}?marca={re.sub(r"[^a-z0-9]+", "-", m.lower()).strip("-")}"><b>{e(m)}</b><span>{e(t["racchetta_1"] if n == 1 else t["racchette_n"].format(n=n))}</span></a>' for m, n in sorted(marche.items(), key=lambda kv: -kv[1]))
     nota = f'<p class="nota">{e(t["evid_nota"])}</p>' if t["evid_nota"] else ""
     come = "".join(f'<div><div class="n">{i}</div><h3>{e(a)}</h3><p>{e(b)}</p></div>' for i, (a, b) in enumerate(t["come"], 1))
     t1, t2 = t["t1"], t["t2"]

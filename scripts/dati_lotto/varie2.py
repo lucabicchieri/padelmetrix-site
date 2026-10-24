@@ -1,0 +1,42 @@
+def PF(slug, lang="en"):
+    return ("Padelful", f"https://www.padelful.com/{lang}/{'rackets' if lang=='en' else 'palas'}/{slug}")
+def SC(slug, tot, v, lang="en"):
+    return dict(fonte="Padelful", url=PF(slug, lang)[1], tot=tot, v=v)
+DB = ("PadelBrowser", "https://www.padelbrowser.com/blog/best-dunlop-padel-rackets-2026")
+R = [
+ dict(m="Drop Shot", n="Axion Attack 2.0", a=2026, g="Jon Sanz", f="goccia", p="350–370 g", nu="EVA Pro High Density", c="Carbonio 24K", t="Carbonio", ta="medio-duro", l="avanzato", st="offensivo", pr=359.95,
+      d="Racchetta d'attacco dalla risposta ferma, forte nello smash e a rete; sweet spot compatto e poco tollerante in difesa.",
+      src=[PF("drop-shot-axion-attack-2-0-2026-jon-sanz")], sc=SC("drop-shot-axion-attack-2-0-2026-jon-sanz", 8.5, [9.2, 8.5, 8, 9.1, 7.9])),
+ dict(m="Drop Shot", n="Canyon Pro Attack 2.0", a=2026, f="diamante", p="350–370 g", b="alto", nu="EVA Pro High Density", c="Carbonio 24K", t="Carbonio", ta="medio-duro", l="avanzato", st="offensivo", pr=339.95,
+      d="Diamante d'attacco ferma che eccelle in smash, víbora e gioco a rete; chiede tecnica e offre poco comfort in difesa.",
+      src=[PF("drop-shot-canyon-pro-attack-2-0-2026")], sc=SC("drop-shot-canyon-pro-attack-2-0-2026", 8.5, [9.5, 8.9, 8.5, 7.3, 8.2])),
+ dict(m="Drop Shot", n="Explorer Pro Attack 2.0", a=2026, g="Lucas Campagnolo", f="goccia", p="350–370 g", nu="EVA Pro High Density", c="Carbonio 24K", t="Carbonio", ta="medio-duro", l="avanzato", st="offensivo", pr=339.95,
+      d="Racchetta d'attacco ferma con uscita di palla rapida e ottimo controllo, per avanzati che accettano meno tolleranza.",
+      src=[PF("drop-shot-explorer-pro-attack-2-0-2026-lucas-campagnolo")], sc=SC("drop-shot-explorer-pro-attack-2-0-2026-lucas-campagnolo", 8.4, [8.3, 9.4, 8.6, 7.9, 8])),
+ dict(m="Oxdog", n="Ultimate Pro", a=2026, f="diamante", p="365 g", b="alto", nu="EVA Medium+", c="Carbonio HES", t="Carbonio", ta="medio-duro", l="intermedio-avanzato", st="offensivo", pr=329,
+      d="Diamante d'attacco potente con sweet spot alto che resta controllabile; difesa e pallonetti bassi richiedono più lavoro.",
+      src=[PF("oxdog-ultimate-pro-2026")], sc=SC("oxdog-ultimate-pro-2026", 8.6, [9.2, 9, 8.3, 8, 8.6])),
+ dict(m="Oxdog", n="Ultimate Pro+", a=2026, f="diamante", p="370 g", b="alto", nu="EVA Hard", c="Carbonio HES", t="Carbonio", ta="duro", l="avanzato", st="offensivo", pr=339,
+      d="Diamante dura e pesante in testa per giocatori aggressivi a rete che schiacciano forte; poco aiuto negli scambi lenti in difesa.",
+      src=[PF("oxdog-ultimate-pro-plus-2026")], sc=SC("oxdog-ultimate-pro-plus-2026", 8.7, [9.8, 9.4, 8, 7.7, 8.4])),
+ dict(m="Oxdog", n="Ultimate Pro Light", a=2026, f="diamante", p="350 g", nu="EVA Medium+", c="Carbonio HES 8K", t="Carbonio", ta="medio-duro", l="intermedio-avanzato", st="offensivo", pr=319,
+      d="Diamante leggera e veloce che brilla a rete e nello smash, ma chiede impatti puliti.",
+      src=[PF("oxdog-ultimate-pro-light-2026")], sc=SC("oxdog-ultimate-pro-light-2026", 8.5, [8.6, 8.8, 8, 8.5, 8.5])),
+ dict(m="Oxdog", n="Ultimate Pro Smash", a=2026, f="diamante", p="370 g", nu="EVA Medium+", c="Carbonio HES", t="Carbonio", ta="medio-duro", l="avanzato", st="offensivo", pr=329,
+      d="Racchetta d'attacco con grande resa nello smash e gioco a rete fermo; meno tollerante in difesa e sulle palle lente.",
+      src=[PF("oxdog-ultimate-pro-smash-2026")], sc=SC("oxdog-ultimate-pro-smash-2026", 8.6, [9.7, 8.8, 8.5, 7.4, 8.7])),
+ dict(m="Babolat", n="Counter Veron 2.6", a=2026, f="rotonda", p="355–375 g", nu="Black EVA", c="Carbon Flex", t="Carbonio 100%", ta="medio", l="intermedio", st="controllo",
+      d="Rotonda votata al controllo con sweet spot ampio e facile da fondo campo; poca potenza nello smash.",
+      src=[PF("babolat-counter-veron-2026")], sc=SC("babolat-counter-veron-2026", 8.6, [7.5, 9.1, 8.3, 9, 9])),
+ dict(m="Babolat", n="Air Veron 2.6", a=2026, f="goccia", p="355 g (±10)", b="medio (265 mm)", nu="Black EVA", c="Carbon Flex", l="intermedio-avanzato", st="polivalente",
+      d="Goccia con piatto flessibile che offre comfort e versatilità a intermedi e avanzati.",
+      src=[("Tennis Warehouse", "https://www.tennis-warehouse.com/Babolat_Air_Veron_26_Padel_Racket/descpageRCBAB-BPRAIRVR26.html")]),
+ dict(m="Dunlop", n="FX Pro", a=2026, f="diamante", p="circa 370 g", b="alto", c="Carbonio 12K", t="Metal", l="avanzato", st="offensivo",
+      d="Diamante di potenza con smash esplosivo e sweet spot più piccolo e meno tollerante.", src=[DB, ("Total Padel", "https://www.totalpadel.com/Pala_de_p_xE1_del_Dunlop_FX_Pro_2026/descpageRCDUNPD-DPRFXPR26-ES.html")]),
+ dict(m="Dunlop", n="Nanomax Pro", a=2026, f="ibrida", p="circa 365 g", b="medio", nu="Pro EVA", c="Fibra di vetro", t="Grafite", ta="morbido", l="principiante-intermedio", st="polivalente",
+      d="Racchetta comfort-first e amica del braccio, con sweet spot ampio per nuovi giocatori o chi ha problemi al gomito.", src=[DB]),
+ dict(m="Nox", n="Nerbo+ 12K", a=2026, f="diamante", p="360–375 g", b="alto", nu="HR3 Black EVA", c="Carbonio 12K", t="Carbonio", ta="fermo", l="avanzato", st="offensivo",
+      d="Diamante a bilanciamento alto per avanzati che cercano potenza e uno sweet spot ampio.", src=[("PadelMarket", "https://padelmarket.com/products/nox-nerbo-12k-2026-pala")]),
+ dict(m="Nox", n="X-Aura", a=2026, f="rotonda", p="360–375 g", b="basso", nu="HR3 EVA", c="Fibra di vetro", t="Carbonio", ta="morbido", l="principiante-intermedio", st="controllo", pr=120,
+      d="Rotonda di controllo a bilanciamento basso per principianti e intermedi: facile da gestire e tollerante.", src=[("PadelMarket", "https://padelmarket.com/es-eu/products/nox-x-aura-2026-pala")]),
+]

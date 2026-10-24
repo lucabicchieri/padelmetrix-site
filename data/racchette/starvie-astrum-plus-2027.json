@@ -1,0 +1,155 @@
+{
+  "slug": "starvie-astrum-plus-2027",
+  "marca": "StarVie",
+  "modello": "Astrum+",
+  "anno": 2027,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "350–370 g",
+  "forma": "goccia",
+  "bilanciamento": "medio",
+  "nucleo": "M-EVA Balance",
+  "superficie": "Carbonio 12K Hyper",
+  "livello": "intermedio",
+  "stile": "polivalente",
+  "prezzo_listino_eur": 249.9,
+  "simili": [
+    "starvie-astrum-2026",
+    "head-speed-team-2026",
+    "siux-tsunami-go-hybrid-2027"
+  ],
+  "fonti_dati": [
+    "https://padelproshop.com/pages/starvie-2027"
+  ],
+  "aggiornato": "2026-10-24",
+  "pagina": {
+    "titolo": "StarVie Astrum+ 2027",
+    "title_tag": "StarVie Astrum+ 2027: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "StarVie Astrum+ 2027: forma goccia, peso 350–370 g, bilanciamento medio, carbonio 12K Hyper. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Astrum+ 2027",
+    "eyebrow": "StarVie · Collezione 2027",
+    "chips": [
+      "Goccia",
+      "350–370 g",
+      "Bilanciamento medio",
+      "Carbonio 12K",
+      "Intermedio"
+    ],
+    "lead": "Goccia a bilanciamento medio con Air Booster, per salire di livello senza perdere comodità. Indicata per giocatori intermedi.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=StarVie+Astrum++2027",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      },
+      {
+        "nome": "PadelPROShop",
+        "nota": "Scheda prodotto del rivenditore",
+        "url": "https://padelproshop.com/pages/starvie-2027",
+        "pulsante": "Vedi sul sito"
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 249,90 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=starvie-astrum-plus-2027,starvie-astrum-2026",
+      "testo": "Confronta con Astrum 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "StarVie"
+      ],
+      [
+        "Modello",
+        "Astrum+"
+      ],
+      [
+        "Collezione",
+        "2027"
+      ],
+      [
+        "Forma",
+        "Goccia"
+      ],
+      [
+        "Peso",
+        "350–370 g"
+      ],
+      [
+        "Bilanciamento",
+        "Medio"
+      ],
+      [
+        "Nucleo",
+        "M-EVA Balance"
+      ],
+      [
+        "Superficie",
+        "Carbonio 12K Hyper"
+      ],
+      [
+        "Livello",
+        "Intermedio"
+      ],
+      [
+        "Stile di gioco",
+        "Polivalente"
+      ],
+      [
+        "Prezzo di listino",
+        "249,90 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://padelproshop.com/pages/starvie-2027\" rel=\"nofollow noopener\" target=\"_blank\">PadelPROShop</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. PadelPROShop la descrive così: goccia a bilanciamento medio con Air Booster, per salire di livello senza perdere comodità. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Versatile tra difesa e attacco",
+      "Superficie in carbonio 12K"
+    ],
+    "contro": [
+      "Recensioni indipendenti ancora poche",
+      "Alcuni dati tecnici non sono dichiarati dal produttore"
+    ],
+    "adatta": [
+      "Sei di livello intermedio",
+      "Vuoi una racchetta sola per difesa e attacco"
+    ],
+    "non_adatta": [
+      "Sei avanzato e cerchi il massimo delle prestazioni",
+      "Cerchi una racchetta specializzata in attacco o in difesa"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/starvie-astrum-2026/",
+        "sopra": "StarVie · 2026",
+        "nome": "Astrum 2026",
+        "testo": "Goccia polivalente, 350–365 g, carbonio 12K, livello intermedio."
+      },
+      {
+        "url": "/racchette/head-speed-team-2026/",
+        "sopra": "Head · 2026",
+        "nome": "Speed Team 2026",
+        "testo": "Goccia polivalente, fibra di vetro, livello intermedio."
+      },
+      {
+        "url": "/racchette/siux-tsunami-go-hybrid-2027/",
+        "sopra": "Siux · 2027",
+        "nome": "Tsunami Go Hybrid 2027",
+        "testo": "Goccia polivalente, 355–375 g, fibra di vetro, livello intermedio."
+      }
+    ],
+    "aggiornata": "24 ottobre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Polivalente",
+        "Livello intermedio",
+        "Forma goccia"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "slug": "siux-electra-pro-2026",
+  "marca": "Siux",
+  "modello": "Electra Pro",
+  "anno": 2026,
+  "giocatore": "Franco Stupaczuk",
+  "categoria": "adulto",
+  "donna": false,
+  "forma": "goccia",
+  "bilanciamento": "medio-alto",
+  "nucleo": "EVA medio-dura",
+  "superficie": "Carbonio",
+  "livello": "intermedio-avanzato",
+  "stile": "offensivo",
+  "prezzo_listino_eur": 349.99,
+  "simili": [
+    "siux-electra-pro-2027",
+    "drop-shot-axion-attack-soft-2026",
+    "bullpadel-vertex-05-geo-2026"
+  ],
+  "fonti_dati": [
+    "https://padelspeed.com/blogs/news/siux-2026-padel-rackets-in-depth-review"
+  ],
+  "aggiornato": "2026-10-24",
+  "pagina": {
+    "titolo": "Siux Electra Pro 2026",
+    "title_tag": "Siux Electra Pro 2026: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "Siux Electra Pro 2026 (Franco Stupaczuk): forma goccia, bilanciamento medio-alto, carbonio. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Electra Pro 2026",
+    "eyebrow": "Siux · Collezione 2026",
+    "chips": [
+      "Goccia",
+      "Bilanciamento medio-alto",
+      "Intermedio / avanzato",
+      "Racchetta di Franco Stupaczuk"
+    ],
+    "lead": "Goccia dinamica per tutto il campo che aggiunge spinta mantenendo il piazzamento. Indicata per intermedi alti e avanzati.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=Siux+Electra+Pro+2026",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 349,99 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=siux-electra-pro-2026,siux-electra-pro-2027",
+      "testo": "Confronta con Electra Pro 2027"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "Siux"
+      ],
+      [
+        "Modello",
+        "Electra Pro"
+      ],
+      [
+        "Collezione",
+        "2026"
+      ],
+      [
+        "Giocatore",
+        "Franco Stupaczuk"
+      ],
+      [
+        "Forma",
+        "Goccia"
+      ],
+      [
+        "Peso",
+        "Non dichiarato"
+      ],
+      [
+        "Bilanciamento",
+        "Medio-alto"
+      ],
+      [
+        "Nucleo",
+        "EVA medio-dura"
+      ],
+      [
+        "Superficie",
+        "Carbonio"
+      ],
+      [
+        "Livello",
+        "Intermedio / avanzato"
+      ],
+      [
+        "Stile di gioco",
+        "Offensivo"
+      ],
+      [
+        "Prezzo di listino",
+        "349,99 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://padelspeed.com/blogs/news/siux-2026-padel-rackets-in-depth-review\" rel=\"nofollow noopener\" target=\"_blank\">PadelSpeed</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. PadelSpeed la descrive così: goccia dinamica per tutto il campo che aggiunge spinta mantenendo il piazzamento. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Impronta offensiva con buona spinta",
+      "Il modello di Franco Stupaczuk"
+    ],
+    "contro": [
+      "Prezzo di listino alto",
+      "Recensioni indipendenti ancora poche"
+    ],
+    "adatta": [
+      "Sei di livello intermedio / avanzato",
+      "Ti piace attaccare e chiudere i punti a rete"
+    ],
+    "non_adatta": [
+      "Sei principiante: meglio una racchetta più tollerante",
+      "Giochi soprattutto in difesa da fondo campo"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/siux-electra-pro-2027/",
+        "sopra": "Siux · 2027",
+        "nome": "Electra Pro 2027",
+        "testo": "La versione 2027 dello stesso modello."
+      },
+      {
+        "url": "/racchette/drop-shot-axion-attack-soft-2026/",
+        "sopra": "Drop Shot · 2026",
+        "nome": "Axion Attack Soft 2026",
+        "testo": "Goccia d'attacco, 350–370 g, carbonio 12K, livello intermedio / avanzato, listino più basso."
+      },
+      {
+        "url": "/racchette/bullpadel-vertex-05-geo-2026/",
+        "sopra": "Bullpadel · 2026",
+        "nome": "Vertex 05 Geo 2026",
+        "testo": "Goccia d'attacco, 365–375 g, carbonio 3K, livello avanzato."
+      }
+    ],
+    "aggiornata": "24 ottobre 2026",
+    "avviso_html": "<p>È uscita la versione 2027: <a href=\"/it/racchette/siux-electra-pro-2027/\">Siux Electra Pro 2027</a>. Il modello 2026 resta in vendita e spesso si trova scontato.</p>",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Racchetta d'attacco",
+        "Livello intermedio / avanzato",
+        "Forma goccia"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

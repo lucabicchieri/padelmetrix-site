@@ -5,6 +5,7 @@ Uso:  python3 scripts/genera_schede.py
 Ogni JSON contiene i dati tecnici e un blocco "pagina" con i testi editoriali.
 """
 import html
+import re
 import json
 import pathlib
 import sys
@@ -114,7 +115,7 @@ def render(d):
     }
     nav = "\n".join(
         f'<a{" class=\"on\"" if lbl == "Racchette" else ""} href="{href}">{lbl}</a>' for lbl, href in NAV)
-    marca_slug = d["marca"].lower()
+    marca_slug = re.sub(r"[^a-z0-9]+", "-", d["marca"].lower()).strip("-")
     avviso = f'<div class="card avviso">{p["avviso_html"]}</div>' if p.get("avviso_html") else ""
     blocco_val = bars(p["valutazioni"]) if p.get("valutazioni") else tratti(p["tratti"])
     recensioni = ""
