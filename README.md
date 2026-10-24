@@ -30,3 +30,18 @@ I dati grezzi di 251 racchette sono in `scripts/dati_lotto/*.py` (con le fonti d
     python3 scripts/genera_geo.py        # chi siamo, report, dati aperti, glossario, domande, llms.txt
     python3 scripts/genera_home.py
     python3 scripts/genera_sitemap.py
+
+Ogni generatore scrive le pagine in tre lingue (`/it/`, `/en/`, `/es/`) con i tag hreflang.
+Percorsi e slug tradotti sono in `scripts/sito.py` (`SEZ` e `SLUG`); i testi fissi sono nei generatori con `L(it, en, es)`.
+
+## Traduzioni delle schede
+
+I testi delle schede sono scritti in italiano nei JSON. Inglese e spagnolo vengono da `scripts/traduci.py`:
+memoria di traduzione in `data/traduzioni/tm_pair_*.json` (formato `{"testo italiano": ["inglese", "spagnolo"]}`)
+più modelli per le frasi generate automaticamente.
+
+Dopo aver aggiunto o modificato schede:
+
+    python3 scripts/raccogli_testi.py en   # elenca i testi senza traduzione (anche: es)
+
+e aggiungi le frasi mancanti in un nuovo file `tm_pair_NN.json`. Un testo non tradotto resta in italiano.

@@ -1,8 +1,9 @@
 # PadelMetrix
 
-> Database indipendente di racchette da padel: 286 schede delle collezioni 2026 e 2027 di 19 marche, con dati tecnici, fonti citate, confronti e guide. Sito in italiano (inglese e spagnolo in arrivo). Aggiornato il 2026-10-24.
+> Independent padel racket database / Database indipendente di racchette da padel / Base de datos independiente de palas de pádel: 286 racket pages from the 2026 and 2027 collections of 19 brands, with specs, cited sources, comparisons and guides. Available in Italian, English and Spanish. Updated 2026-10-24.
 
-## Sezioni principali
+
+## Italiano
 - [Racchette](https://www.padelmetrix.com/it/racchette/): tutte le schede con filtri per marca, forma, livello, stile e prezzo
 - [Marche](https://www.padelmetrix.com/it/marche/): i modelli di ogni marca
 - [Confronti](https://www.padelmetrix.com/it/confronta/): confronti modello contro modello
@@ -10,10 +11,30 @@
 - [Bambini](https://www.padelmetrix.com/it/bambini/): misure per età e racchette junior
 - [Domande frequenti](https://www.padelmetrix.com/it/domande/): risposte brevi con dati
 - [Glossario](https://www.padelmetrix.com/it/glossario/): termini tecnici
-
-## Dati originali
 - [Report Racchette da padel 2026–2027 in numeri](https://www.padelmetrix.com/it/report/racchette-padel-2026-2027-in-numeri/)
 - [Dataset aperto CSV/JSON, licenza CC BY 4.0](https://www.padelmetrix.com/it/dati/)
-
-## Metodo
 - [Chi siamo e metodo](https://www.padelmetrix.com/it/chi-siamo/): fonti dei dati, indipendenza, aggiornamenti
+
+## English
+- [Rackets](https://www.padelmetrix.com/en/rackets/): all racket pages with filters by brand, shape, level, style and price
+- [Brands](https://www.padelmetrix.com/en/brands/): each brand's models
+- [Comparisons](https://www.padelmetrix.com/en/compare/): model-versus-model comparisons
+- [Guides](https://www.padelmetrix.com/en/guides/): how to choose a racket by level, physical issue, budget
+- [Kids](https://www.padelmetrix.com/en/kids/): sizes by age and junior rackets
+- [FAQ](https://www.padelmetrix.com/en/questions/): short answers with data
+- [Glossary](https://www.padelmetrix.com/en/glossary/): technical terms
+- [Report: Padel rackets 2026–2027 in numbers](https://www.padelmetrix.com/en/report/padel-rackets-2026-2027-in-numbers/)
+- [Open dataset CSV/JSON, CC BY 4.0 licence](https://www.padelmetrix.com/en/data/)
+- [About and method](https://www.padelmetrix.com/en/about/): data sources, independence, updates
+
+## Español
+- [Palas](https://www.padelmetrix.com/es/palas/): todas las fichas con filtros por marca, forma, nivel, estilo y precio
+- [Marcas](https://www.padelmetrix.com/es/marcas/): los modelos de cada marca
+- [Comparativas](https://www.padelmetrix.com/es/comparar/): comparativas modelo contra modelo
+- [Guías](https://www.padelmetrix.com/es/guias/): cómo elegir la pala según nivel, problema físico, presupuesto
+- [Niños](https://www.padelmetrix.com/es/ninos/): medidas por edad y palas junior
+- [Preguntas frecuentes](https://www.padelmetrix.com/es/preguntas/): respuestas breves con datos
+- [Glosario](https://www.padelmetrix.com/es/glosario/): términos técnicos
+- [Informe Palas de pádel 2026–2027 en cifras](https://www.padelmetrix.com/es/informe/palas-padel-2026-2027-en-cifras/)
+- [Dataset abierto CSV/JSON, licencia CC BY 4.0](https://www.padelmetrix.com/es/datos/)
+- [Quiénes somos y método](https://www.padelmetrix.com/es/quienes-somos/): fuentes de los datos, independencia, actualizaciones

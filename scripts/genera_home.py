@@ -11,6 +11,8 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from comune import LINGUE, racket_svg, url  # noqa: E402
+import sito as S  # noqa: E402
+from sito import L, P  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "racchette"
@@ -64,7 +66,7 @@ T = {
         "html_lang": "en", "title": "PadelMetrix · The independent guide to padel gear",
         "desc": "Specs, comparisons and advice on padel rackets, clothing and kids' gear. Find the right racket for your game.",
         "claim": "Padel, Analyzed.",
-        "nav": ["Rackets", "Clothing", "Kids", "Compare", "Racket finder"],
+        "nav": ["Rackets", "Clothing", "Kids", "Compare", "Guides"],
         "h1": "The independent guide to choosing your padel gear.",
         "intro": "PadelMetrix brings together specs, comparisons and advice on rackets, clothing and kids' gear in one place. We help you work out what suits you; then you buy wherever you like.",
         "cta1": "Find your racket in 2 minutes", "cta2": "Browse rackets",
@@ -86,7 +88,7 @@ T = {
             ("Transparency", "We don't sell anything. Some links go to partner shops: if you buy, we may earn a small commission at no extra cost to you."),
         ],
         "evid_titolo": "Featured rackets", "evid_tutte": "See all rackets",
-        "evid_nota": "Our racket reviews are currently available in Italian; English versions are coming soon.",
+        "evid_nota": "",
         "marche_titolo": "Brands in our database",
         "racchette_n": "{n} rackets", "racchetta_1": "1 racket",
         "footer_sez": "Sections", "footer_str": "Tools", "footer_info": "PadelMetrix",
@@ -99,7 +101,7 @@ T = {
         "html_lang": "es", "title": "PadelMetrix · La guía independiente del material de pádel",
         "desc": "Fichas técnicas, comparativas y consejos sobre palas de pádel, ropa y material para niños. Encuentra la pala ideal para tu juego.",
         "claim": "El Pádel, Analizado.",
-        "nav": ["Palas", "Ropa", "Niños", "Comparar", "Encuentra tu pala"],
+        "nav": ["Palas", "Ropa", "Niños", "Comparar", "Guías"],
         "h1": "La guía independiente para elegir tu material de pádel.",
         "intro": "PadelMetrix reúne en un solo lugar fichas técnicas, comparativas y consejos sobre palas, ropa y material para niños. Te ayudamos a saber qué te conviene; después compras donde prefieras.",
         "cta1": "Encuentra tu pala en 2 minutos", "cta2": "Ver las palas",
@@ -121,7 +123,7 @@ T = {
             ("Transparencia", "No vendemos nada. Algunos enlaces llevan a tiendas asociadas: si compras, podemos recibir una pequeña comisión sin coste para ti."),
         ],
         "evid_titolo": "Palas destacadas", "evid_tutte": "Ver todas las palas",
-        "evid_nota": "Por ahora nuestras fichas están en italiano; muy pronto estarán disponibles en español.",
+        "evid_nota": "",
         "marche_titolo": "Marcas en nuestra base de datos",
         "racchette_n": "{n} palas", "racchetta_1": "1 pala",
         "footer_sez": "Secciones", "footer_str": "Herramientas", "footer_info": "PadelMetrix",
@@ -210,8 +212,19 @@ SEC_ICON = {"racchette": "diamante", "abbigliamento": None, "bambini": "rotonda"
 SHOE = '<svg viewBox="0 0 240 140" width="190" aria-hidden="true"><path d="M20 96 C20 70 40 58 62 56 L104 50 C118 48 128 38 134 26 L150 30 C152 52 168 62 190 66 C212 70 222 82 222 96 Z" fill="#0F3D2E"/><path d="M14 96 H226 V108 C226 114 222 118 216 118 H24 C18 118 14 114 14 108 Z" fill="#C6F432"/><path d="M112 58 L124 70 M124 52 L136 64 M100 62 L110 72" stroke="#FAFAF7" stroke-opacity="0.6" stroke-width="5" stroke-linecap="round"/></svg>'
 
 
-GUIDE_IT = """<div class="head" style="margin-top:40px"><h2>Guide alla scelta</h2><a href="/it/guide/"><b>Tutte le guide →</b></a></div>
-<div class="marche"><a href="/it/guide/racchetta-padel-principianti/"><b>Principianti</b><span>la prima racchetta</span></a><a href="/it/guide/racchetta-padel-epicondilite/"><b>Gomito</b><span>racchette confortevoli</span></a><a href="/it/guide/forme-racchetta-padel/"><b>Forme</b><span>rotonda, goccia o diamante</span></a><a href="/it/bambini/"><b>Bambini</b><span>misure per età</span></a><a href="/it/guide/racchette-padel-economiche/"><b>Economiche</b><span>fino a 130 €</span></a><a href="/it/confronta/"><b>Confronti</b><span>modello contro modello</span></a><a href="/it/guide/racchette-giocatori-professionisti/"><b>Professionisti</b><span>con che racchetta giocano</span></a><a href="/it/report/racchette-padel-2026-2027-in-numeri/"><b>Report 2026–2027</b><span>il mercato in numeri</span></a><a href="/it/dati/"><b>Dati aperti</b><span>scarica il database</span></a></div>"""
+def guide_box():
+    g = lambda x: P("guide", x)  # noqa: E731
+    voci = [(g("racchetta-padel-principianti"), L("Principianti", "Beginners", "Principiantes"), L("la prima racchetta", "your first racket", "la primera pala")),
+            (g("racchetta-padel-epicondilite"), L("Gomito", "Tennis elbow", "Codo"), L("racchette confortevoli", "comfortable rackets", "palas cómodas")),
+            (g("forme-racchetta-padel"), L("Forme", "Shapes", "Formas"), L("rotonda, goccia o diamante", "round, teardrop or diamond", "redonda, lágrima o diamante")),
+            (P("bambini"), L("Bambini", "Kids", "Niños"), L("misure per età", "sizes by age", "medidas por edad")),
+            (g("racchette-padel-economiche"), L("Economiche", "Cheap", "Baratas"), L("fino a 130 €", "up to €130", "hasta 130 €")),
+            (P("confronta"), L("Confronti", "Comparisons", "Comparativas"), L("modello contro modello", "model versus model", "modelo contra modelo")),
+            (g("racchette-giocatori-professionisti"), L("Professionisti", "Pro players", "Profesionales"), L("con che racchetta giocano", "which rackets they use", "con qué pala juegan")),
+            (P("report", "racchette-padel-2026-2027-in-numeri"), L("Report 2026–2027", "2026–2027 report", "Informe 2026–2027"), L("il mercato in numeri", "the market in numbers", "el mercado en cifras")),
+            (P("dati"), L("Dati aperti", "Open data", "Datos abiertos"), L("scarica il database", "download the database", "descarga la base de datos"))]
+    return (f'<div class="head" style="margin-top:40px"><h2>{L("Guide alla scelta", "Buying guides", "Guías de compra")}</h2><a href="{P("guide")}"><b>{L("Tutte le guide", "All guides", "Todas las guías")} →</b></a></div>\n'
+            + '<div class="marche">' + "".join(f'<a href="{u}"><b>{b}</b><span>{sp}</span></a>' for u, b, sp in voci) + "</div>")
 
 
 def carica():
@@ -224,7 +237,7 @@ def carica():
 
 def head(lang, t):
     alts = "".join(f'<link rel="alternate" hreflang="{l}" href="{SITO}/{l}/">' for l in LINGUE)
-    alts += f'<link rel="alternate" hreflang="x-default" href="{SITO}/it/">'
+    alts += f'<link rel="alternate" hreflang="x-default" href="{SITO}/en/">'
     return f'''<!doctype html>
 <html lang="{t["html_lang"]}">
 <head>
@@ -238,6 +251,7 @@ def head(lang, t):
 <meta property="og:description" content="{e(t["desc"])}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{SITO}/{lang}/">
+<meta property="og:locale" content="{S.OG_LOCALE[lang]}">
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -249,7 +263,8 @@ def head(lang, t):
 def pagina(lang, db):
     t = T[lang]
     keys = ["racchette", "abbigliamento", "bambini", "confronta", "selettore"]
-    nav = "".join(f'<a href="{"/it/guide/" if (lang == "it" and k == "selettore") else url(lang, k)}">{e(n)}</a>' for k, n in zip(keys, t["nav"]))
+    S.set_lang(lang)
+    nav = "".join(f'<a href="{P("guide") if k == "selettore" else url(lang, k)}">{e(n)}</a>' for k, n in zip(keys, t["nav"]))
     langs = " · ".join(f'<a{" class=\"on\"" if l == lang else ""} href="/{l}/" hreflang="{l}">{l.upper()}</a>' for l in LINGUE)
     marche = {}
     for d in db.values():
@@ -269,10 +284,10 @@ def pagina(lang, db):
         peso = d.get("peso") or (f'{d["peso_g"][0]}–{d["peso_g"][1]} g' if d.get("peso_g") else "")
         peso = peso.split(" (")[0]
         nome = d["pagina"]["titolo"].replace(d["marca"] + " ", "")
-        href = f"/it/racchette/{slug}/"
-        evid.append(f'<a class="card rk" href="{href}"{" hreflang=\"it\"" if lang != "it" else ""}><div class="ill">{racket_svg(d["forma"], 92, d["pagina"]["titolo"])}</div><div class="body"><span class="meta">{e(d["marca"])} · {d["anno"]}</span><span class="nm">{e(nome)}</span><span class="sp">{e(t["forme"][d["forma"]])} · {e(peso)}</span></div></a>')
+        href = P("racchette", slug)
+        evid.append(f'<a class="card rk" href="{href}"><div class="ill">{racket_svg(d["forma"], 92, d["pagina"]["titolo"])}</div><div class="body"><span class="meta">{e(d["marca"])} · {d["anno"]}</span><span class="nm">{e(nome)}</span><span class="sp">{e(t["forme"][d["forma"]])} · {e(peso)}</span></div></a>')
 
-    mk = "".join(f'<a href="/it/marche/{re.sub(r"[^a-z0-9]+", "-", m.lower()).strip("-")}"><b>{e(m)}</b><span>{e(t["racchetta_1"] if n == 1 else t["racchette_n"].format(n=n))}</span></a>' for m, n in sorted(marche.items(), key=lambda kv: -kv[1]))
+    mk = "".join(f'<a href="{P("marche", re.sub(r"[^a-z0-9]+", "-", m.lower()).strip("-"))}"><b>{e(m)}</b><span>{e(t["racchetta_1"] if n == 1 else t["racchette_n"].format(n=n))}</span></a>' for m, n in sorted(marche.items(), key=lambda kv: -kv[1]))
     nota = f'<p class="nota">{e(t["evid_nota"])}</p>' if t["evid_nota"] else ""
     come = "".join(f'<div><div class="n">{i}</div><h3>{e(a)}</h3><p>{e(b)}</p></div>' for i, (a, b) in enumerate(t["come"], 1))
     t1, t2 = t["t1"], t["t2"]
@@ -328,7 +343,7 @@ def pagina(lang, db):
 <section class="block"><div class="wrap">
 <div class="head"><h2>{e(t["marche_titolo"])}</h2></div>
 <div class="marche">{mk}</div>
-{GUIDE_IT if lang == "it" else ""}
+{guide_box()}
 </div></section>
 </main>
 
@@ -336,7 +351,7 @@ def pagina(lang, db):
 <div class="cols">
 <div style="flex:1 1 240px"><span class="wm"><b>padel</b><i>metrix</i></span><span>{e(t["claim"])}</span></div>
 <div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{url(lang, "abbigliamento")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
-<div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{"/it/guide/" if lang == "it" else url(lang, "selettore")}">{e(t["nav"][4])}</a></div>
+<div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a></div>
 <div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a></div>
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
@@ -357,7 +372,7 @@ ROOT_INDEX = """<!doctype html>
 <link rel="alternate" hreflang="it" href="https://www.padelmetrix.com/it/">
 <link rel="alternate" hreflang="en" href="https://www.padelmetrix.com/en/">
 <link rel="alternate" hreflang="es" href="https://www.padelmetrix.com/es/">
-<link rel="alternate" hreflang="x-default" href="https://www.padelmetrix.com/it/">
+<link rel="alternate" hreflang="x-default" href="https://www.padelmetrix.com/en/">
 <script>
 (function(){var l=(navigator.language||"it").slice(0,2).toLowerCase();var m={it:"/it/",en:"/en/",es:"/es/"};location.replace(m[l]||"/en/");})();
 </script>

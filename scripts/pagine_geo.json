@@ -1,58 +1,1346 @@
 [
-"/it/chi-siamo/",
-"/it/report/racchette-padel-2026-2027-in-numeri/",
-"/it/dati/",
-"/it/glossario/bilanciamento/",
-"/it/glossario/swingweight/",
-"/it/glossario/sweet-spot/",
-"/it/glossario/eva/",
-"/it/glossario/foam/",
-"/it/glossario/carbonio-3k-12k-18k/",
-"/it/glossario/fibra-di-vetro/",
-"/it/glossario/racchetta-diamante/",
-"/it/glossario/racchetta-rotonda/",
-"/it/glossario/racchetta-goccia/",
-"/it/glossario/superficie-ruvida/",
-"/it/glossario/misure-regolamentari/",
-"/it/glossario/",
-"/it/domande/racchetta-agustin-tapia/",
-"/it/domande/racchetta-aimar-goni/",
-"/it/domande/racchetta-ale-galan/",
-"/it/domande/racchetta-alejandra-salazar/",
-"/it/domande/racchetta-alex-chozas/",
-"/it/domande/racchetta-aranzazu-osoro/",
-"/it/domande/racchetta-ari-sanchez/",
-"/it/domande/racchetta-arturo-coello/",
-"/it/domande/racchetta-bea-gonzalez/",
-"/it/domande/racchetta-claudia-fernandez/",
-"/it/domande/racchetta-coki-nieto/",
-"/it/domande/racchetta-delfi-brea/",
-"/it/domande/racchetta-edu-alonso/",
-"/it/domande/racchetta-federico-chingotto/",
-"/it/domande/racchetta-franco-stupaczuk/",
-"/it/domande/racchetta-gemma-triay/",
-"/it/domande/racchetta-jon-sanz/",
-"/it/domande/racchetta-juan-lebron/",
-"/it/domande/racchetta-juan-tello/",
-"/it/domande/racchetta-ksenia-sharifova/",
-"/it/domande/racchetta-leo-augsburger/",
-"/it/domande/racchetta-lucas-campagnolo/",
-"/it/domande/racchetta-marina-guinart/",
-"/it/domande/racchetta-martita-ortega/",
-"/it/domande/racchetta-martin-di-nenno/",
-"/it/domande/racchetta-miguel-lamperti/",
-"/it/domande/racchetta-mike-yanguas/",
-"/it/domande/racchetta-momo-gonzalez/",
-"/it/domande/racchetta-pablo-cardona/",
-"/it/domande/racchetta-pablo-lima/",
-"/it/domande/racchetta-paquito-navarro/",
-"/it/domande/racchetta-paula-josemaria/",
-"/it/domande/racchetta-sanyo-gutierrez/",
-"/it/domande/racchetta-sofia-araujo/",
-"/it/domande/racchetta-tamara-icardo/",
-"/it/domande/racchetta-tino-libaak/",
-"/it/domande/quanto-pesa-una-racchetta-da-padel/",
-"/it/domande/quanto-costa-una-racchetta-da-padel/",
-"/it/domande/forma-racchetta-padel-piu-diffusa/",
-"/it/domande/"
+{
+"path": "/it/chi-siamo/",
+"alt": {
+"it": "/it/chi-siamo/",
+"en": "/en/about/",
+"es": "/es/quienes-somos/"
+}
+},
+{
+"path": "/it/report/racchette-padel-2026-2027-in-numeri/",
+"alt": {
+"it": "/it/report/racchette-padel-2026-2027-in-numeri/",
+"en": "/en/report/padel-rackets-2026-2027-in-numbers/",
+"es": "/es/informe/palas-padel-2026-2027-en-cifras/"
+}
+},
+{
+"path": "/it/dati/",
+"alt": {
+"it": "/it/dati/",
+"en": "/en/data/",
+"es": "/es/datos/"
+}
+},
+{
+"path": "/it/glossario/bilanciamento/",
+"alt": {
+"it": "/it/glossario/bilanciamento/",
+"en": "/en/glossary/balance/",
+"es": "/es/glosario/balance/"
+}
+},
+{
+"path": "/it/glossario/swingweight/",
+"alt": {
+"it": "/it/glossario/swingweight/",
+"en": "/en/glossary/swingweight/",
+"es": "/es/glosario/swingweight/"
+}
+},
+{
+"path": "/it/glossario/sweet-spot/",
+"alt": {
+"it": "/it/glossario/sweet-spot/",
+"en": "/en/glossary/sweet-spot/",
+"es": "/es/glosario/punto-dulce/"
+}
+},
+{
+"path": "/it/glossario/eva/",
+"alt": {
+"it": "/it/glossario/eva/",
+"en": "/en/glossary/eva-rubber/",
+"es": "/es/glosario/goma-eva/"
+}
+},
+{
+"path": "/it/glossario/foam/",
+"alt": {
+"it": "/it/glossario/foam/",
+"en": "/en/glossary/foam/",
+"es": "/es/glosario/foam/"
+}
+},
+{
+"path": "/it/glossario/carbonio-3k-12k-18k/",
+"alt": {
+"it": "/it/glossario/carbonio-3k-12k-18k/",
+"en": "/en/glossary/carbon-3k-12k-18k/",
+"es": "/es/glosario/carbono-3k-12k-18k/"
+}
+},
+{
+"path": "/it/glossario/fibra-di-vetro/",
+"alt": {
+"it": "/it/glossario/fibra-di-vetro/",
+"en": "/en/glossary/fiberglass/",
+"es": "/es/glosario/fibra-de-vidrio/"
+}
+},
+{
+"path": "/it/glossario/racchetta-diamante/",
+"alt": {
+"it": "/it/glossario/racchetta-diamante/",
+"en": "/en/glossary/diamond-racket/",
+"es": "/es/glosario/pala-diamante/"
+}
+},
+{
+"path": "/it/glossario/racchetta-rotonda/",
+"alt": {
+"it": "/it/glossario/racchetta-rotonda/",
+"en": "/en/glossary/round-racket/",
+"es": "/es/glosario/pala-redonda/"
+}
+},
+{
+"path": "/it/glossario/racchetta-goccia/",
+"alt": {
+"it": "/it/glossario/racchetta-goccia/",
+"en": "/en/glossary/teardrop-racket/",
+"es": "/es/glosario/pala-lagrima/"
+}
+},
+{
+"path": "/it/glossario/superficie-ruvida/",
+"alt": {
+"it": "/it/glossario/superficie-ruvida/",
+"en": "/en/glossary/rough-face/",
+"es": "/es/glosario/superficie-rugosa/"
+}
+},
+{
+"path": "/it/glossario/misure-regolamentari/",
+"alt": {
+"it": "/it/glossario/misure-regolamentari/",
+"en": "/en/glossary/official-dimensions/",
+"es": "/es/glosario/medidas-reglamentarias/"
+}
+},
+{
+"path": "/it/glossario/",
+"alt": {
+"it": "/it/glossario/",
+"en": "/en/glossary/",
+"es": "/es/glosario/"
+}
+},
+{
+"path": "/it/domande/racchetta-agustin-tapia/",
+"alt": {
+"it": "/it/domande/racchetta-agustin-tapia/",
+"en": "/en/questions/agustin-tapia-padel-racket/",
+"es": "/es/preguntas/pala-agustin-tapia/"
+}
+},
+{
+"path": "/it/domande/racchetta-aimar-goni/",
+"alt": {
+"it": "/it/domande/racchetta-aimar-goni/",
+"en": "/en/questions/aimar-goni-padel-racket/",
+"es": "/es/preguntas/pala-aimar-goni/"
+}
+},
+{
+"path": "/it/domande/racchetta-ale-galan/",
+"alt": {
+"it": "/it/domande/racchetta-ale-galan/",
+"en": "/en/questions/ale-galan-padel-racket/",
+"es": "/es/preguntas/pala-ale-galan/"
+}
+},
+{
+"path": "/it/domande/racchetta-alejandra-salazar/",
+"alt": {
+"it": "/it/domande/racchetta-alejandra-salazar/",
+"en": "/en/questions/alejandra-salazar-padel-racket/",
+"es": "/es/preguntas/pala-alejandra-salazar/"
+}
+},
+{
+"path": "/it/domande/racchetta-alex-chozas/",
+"alt": {
+"it": "/it/domande/racchetta-alex-chozas/",
+"en": "/en/questions/alex-chozas-padel-racket/",
+"es": "/es/preguntas/pala-alex-chozas/"
+}
+},
+{
+"path": "/it/domande/racchetta-aranzazu-osoro/",
+"alt": {
+"it": "/it/domande/racchetta-aranzazu-osoro/",
+"en": "/en/questions/aranzazu-osoro-padel-racket/",
+"es": "/es/preguntas/pala-aranzazu-osoro/"
+}
+},
+{
+"path": "/it/domande/racchetta-ari-sanchez/",
+"alt": {
+"it": "/it/domande/racchetta-ari-sanchez/",
+"en": "/en/questions/ari-sanchez-padel-racket/",
+"es": "/es/preguntas/pala-ari-sanchez/"
+}
+},
+{
+"path": "/it/domande/racchetta-arturo-coello/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello/",
+"en": "/en/questions/arturo-coello-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello/"
+}
+},
+{
+"path": "/it/domande/racchetta-bea-gonzalez/",
+"alt": {
+"it": "/it/domande/racchetta-bea-gonzalez/",
+"en": "/en/questions/bea-gonzalez-padel-racket/",
+"es": "/es/preguntas/pala-bea-gonzalez/"
+}
+},
+{
+"path": "/it/domande/racchetta-claudia-fernandez/",
+"alt": {
+"it": "/it/domande/racchetta-claudia-fernandez/",
+"en": "/en/questions/claudia-fernandez-padel-racket/",
+"es": "/es/preguntas/pala-claudia-fernandez/"
+}
+},
+{
+"path": "/it/domande/racchetta-coki-nieto/",
+"alt": {
+"it": "/it/domande/racchetta-coki-nieto/",
+"en": "/en/questions/coki-nieto-padel-racket/",
+"es": "/es/preguntas/pala-coki-nieto/"
+}
+},
+{
+"path": "/it/domande/racchetta-delfi-brea/",
+"alt": {
+"it": "/it/domande/racchetta-delfi-brea/",
+"en": "/en/questions/delfi-brea-padel-racket/",
+"es": "/es/preguntas/pala-delfi-brea/"
+}
+},
+{
+"path": "/it/domande/racchetta-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-edu-alonso/",
+"en": "/en/questions/edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-edu-alonso/"
+}
+},
+{
+"path": "/it/domande/racchetta-federico-chingotto/",
+"alt": {
+"it": "/it/domande/racchetta-federico-chingotto/",
+"en": "/en/questions/federico-chingotto-padel-racket/",
+"es": "/es/preguntas/pala-federico-chingotto/"
+}
+},
+{
+"path": "/it/domande/racchetta-franco-stupaczuk/",
+"alt": {
+"it": "/it/domande/racchetta-franco-stupaczuk/",
+"en": "/en/questions/franco-stupaczuk-padel-racket/",
+"es": "/es/preguntas/pala-franco-stupaczuk/"
+}
+},
+{
+"path": "/it/domande/racchetta-gemma-triay/",
+"alt": {
+"it": "/it/domande/racchetta-gemma-triay/",
+"en": "/en/questions/gemma-triay-padel-racket/",
+"es": "/es/preguntas/pala-gemma-triay/"
+}
+},
+{
+"path": "/it/domande/racchetta-jon-sanz/",
+"alt": {
+"it": "/it/domande/racchetta-jon-sanz/",
+"en": "/en/questions/jon-sanz-padel-racket/",
+"es": "/es/preguntas/pala-jon-sanz/"
+}
+},
+{
+"path": "/it/domande/racchetta-juan-lebron/",
+"alt": {
+"it": "/it/domande/racchetta-juan-lebron/",
+"en": "/en/questions/juan-lebron-padel-racket/",
+"es": "/es/preguntas/pala-juan-lebron/"
+}
+},
+{
+"path": "/it/domande/racchetta-juan-tello/",
+"alt": {
+"it": "/it/domande/racchetta-juan-tello/",
+"en": "/en/questions/juan-tello-padel-racket/",
+"es": "/es/preguntas/pala-juan-tello/"
+}
+},
+{
+"path": "/it/domande/racchetta-ksenia-sharifova/",
+"alt": {
+"it": "/it/domande/racchetta-ksenia-sharifova/",
+"en": "/en/questions/ksenia-sharifova-padel-racket/",
+"es": "/es/preguntas/pala-ksenia-sharifova/"
+}
+},
+{
+"path": "/it/domande/racchetta-leo-augsburger/",
+"alt": {
+"it": "/it/domande/racchetta-leo-augsburger/",
+"en": "/en/questions/leo-augsburger-padel-racket/",
+"es": "/es/preguntas/pala-leo-augsburger/"
+}
+},
+{
+"path": "/it/domande/racchetta-lucas-campagnolo/",
+"alt": {
+"it": "/it/domande/racchetta-lucas-campagnolo/",
+"en": "/en/questions/lucas-campagnolo-padel-racket/",
+"es": "/es/preguntas/pala-lucas-campagnolo/"
+}
+},
+{
+"path": "/it/domande/racchetta-marina-guinart/",
+"alt": {
+"it": "/it/domande/racchetta-marina-guinart/",
+"en": "/en/questions/marina-guinart-padel-racket/",
+"es": "/es/preguntas/pala-marina-guinart/"
+}
+},
+{
+"path": "/it/domande/racchetta-martita-ortega/",
+"alt": {
+"it": "/it/domande/racchetta-martita-ortega/",
+"en": "/en/questions/martita-ortega-padel-racket/",
+"es": "/es/preguntas/pala-martita-ortega/"
+}
+},
+{
+"path": "/it/domande/racchetta-martin-di-nenno/",
+"alt": {
+"it": "/it/domande/racchetta-martin-di-nenno/",
+"en": "/en/questions/martin-di-nenno-padel-racket/",
+"es": "/es/preguntas/pala-martin-di-nenno/"
+}
+},
+{
+"path": "/it/domande/racchetta-miguel-lamperti/",
+"alt": {
+"it": "/it/domande/racchetta-miguel-lamperti/",
+"en": "/en/questions/miguel-lamperti-padel-racket/",
+"es": "/es/preguntas/pala-miguel-lamperti/"
+}
+},
+{
+"path": "/it/domande/racchetta-mike-yanguas/",
+"alt": {
+"it": "/it/domande/racchetta-mike-yanguas/",
+"en": "/en/questions/mike-yanguas-padel-racket/",
+"es": "/es/preguntas/pala-mike-yanguas/"
+}
+},
+{
+"path": "/it/domande/racchetta-momo-gonzalez/",
+"alt": {
+"it": "/it/domande/racchetta-momo-gonzalez/",
+"en": "/en/questions/momo-gonzalez-padel-racket/",
+"es": "/es/preguntas/pala-momo-gonzalez/"
+}
+},
+{
+"path": "/it/domande/racchetta-pablo-cardona/",
+"alt": {
+"it": "/it/domande/racchetta-pablo-cardona/",
+"en": "/en/questions/pablo-cardona-padel-racket/",
+"es": "/es/preguntas/pala-pablo-cardona/"
+}
+},
+{
+"path": "/it/domande/racchetta-pablo-lima/",
+"alt": {
+"it": "/it/domande/racchetta-pablo-lima/",
+"en": "/en/questions/pablo-lima-padel-racket/",
+"es": "/es/preguntas/pala-pablo-lima/"
+}
+},
+{
+"path": "/it/domande/racchetta-paquito-navarro/",
+"alt": {
+"it": "/it/domande/racchetta-paquito-navarro/",
+"en": "/en/questions/paquito-navarro-padel-racket/",
+"es": "/es/preguntas/pala-paquito-navarro/"
+}
+},
+{
+"path": "/it/domande/racchetta-paula-josemaria/",
+"alt": {
+"it": "/it/domande/racchetta-paula-josemaria/",
+"en": "/en/questions/paula-josemaria-padel-racket/",
+"es": "/es/preguntas/pala-paula-josemaria/"
+}
+},
+{
+"path": "/it/domande/racchetta-sanyo-gutierrez/",
+"alt": {
+"it": "/it/domande/racchetta-sanyo-gutierrez/",
+"en": "/en/questions/sanyo-gutierrez-padel-racket/",
+"es": "/es/preguntas/pala-sanyo-gutierrez/"
+}
+},
+{
+"path": "/it/domande/racchetta-sofia-araujo/",
+"alt": {
+"it": "/it/domande/racchetta-sofia-araujo/",
+"en": "/en/questions/sofia-araujo-padel-racket/",
+"es": "/es/preguntas/pala-sofia-araujo/"
+}
+},
+{
+"path": "/it/domande/racchetta-tamara-icardo/",
+"alt": {
+"it": "/it/domande/racchetta-tamara-icardo/",
+"en": "/en/questions/tamara-icardo-padel-racket/",
+"es": "/es/preguntas/pala-tamara-icardo/"
+}
+},
+{
+"path": "/it/domande/racchetta-tino-libaak/",
+"alt": {
+"it": "/it/domande/racchetta-tino-libaak/",
+"en": "/en/questions/tino-libaak-padel-racket/",
+"es": "/es/preguntas/pala-tino-libaak/"
+}
+},
+{
+"path": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
+"alt": {
+"it": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
+"en": "/en/questions/how-much-does-a-padel-racket-weigh/",
+"es": "/es/preguntas/cuanto-pesa-una-pala-de-padel/"
+}
+},
+{
+"path": "/it/domande/quanto-costa-una-racchetta-da-padel/",
+"alt": {
+"it": "/it/domande/quanto-costa-una-racchetta-da-padel/",
+"en": "/en/questions/how-much-does-a-padel-racket-cost/",
+"es": "/es/preguntas/cuanto-cuesta-una-pala-de-padel/"
+}
+},
+{
+"path": "/it/domande/forma-racchetta-padel-piu-diffusa/",
+"alt": {
+"it": "/it/domande/forma-racchetta-padel-piu-diffusa/",
+"en": "/en/questions/most-common-padel-racket-shape/",
+"es": "/es/preguntas/forma-de-pala-de-padel-mas-comun/"
+}
+},
+{
+"path": "/it/domande/",
+"alt": {
+"it": "/it/domande/",
+"en": "/en/questions/",
+"es": "/es/preguntas/"
+}
+},
+{
+"path": "/en/about/",
+"alt": {
+"it": "/it/chi-siamo/",
+"en": "/en/about/",
+"es": "/es/quienes-somos/"
+}
+},
+{
+"path": "/en/report/padel-rackets-2026-2027-in-numbers/",
+"alt": {
+"it": "/it/report/racchette-padel-2026-2027-in-numeri/",
+"en": "/en/report/padel-rackets-2026-2027-in-numbers/",
+"es": "/es/informe/palas-padel-2026-2027-en-cifras/"
+}
+},
+{
+"path": "/en/data/",
+"alt": {
+"it": "/it/dati/",
+"en": "/en/data/",
+"es": "/es/datos/"
+}
+},
+{
+"path": "/en/glossary/balance/",
+"alt": {
+"it": "/it/glossario/bilanciamento/",
+"en": "/en/glossary/balance/",
+"es": "/es/glosario/balance/"
+}
+},
+{
+"path": "/en/glossary/swingweight/",
+"alt": {
+"it": "/it/glossario/swingweight/",
+"en": "/en/glossary/swingweight/",
+"es": "/es/glosario/swingweight/"
+}
+},
+{
+"path": "/en/glossary/sweet-spot/",
+"alt": {
+"it": "/it/glossario/sweet-spot/",
+"en": "/en/glossary/sweet-spot/",
+"es": "/es/glosario/punto-dulce/"
+}
+},
+{
+"path": "/en/glossary/eva-rubber/",
+"alt": {
+"it": "/it/glossario/eva/",
+"en": "/en/glossary/eva-rubber/",
+"es": "/es/glosario/goma-eva/"
+}
+},
+{
+"path": "/en/glossary/foam/",
+"alt": {
+"it": "/it/glossario/foam/",
+"en": "/en/glossary/foam/",
+"es": "/es/glosario/foam/"
+}
+},
+{
+"path": "/en/glossary/carbon-3k-12k-18k/",
+"alt": {
+"it": "/it/glossario/carbonio-3k-12k-18k/",
+"en": "/en/glossary/carbon-3k-12k-18k/",
+"es": "/es/glosario/carbono-3k-12k-18k/"
+}
+},
+{
+"path": "/en/glossary/fiberglass/",
+"alt": {
+"it": "/it/glossario/fibra-di-vetro/",
+"en": "/en/glossary/fiberglass/",
+"es": "/es/glosario/fibra-de-vidrio/"
+}
+},
+{
+"path": "/en/glossary/diamond-racket/",
+"alt": {
+"it": "/it/glossario/racchetta-diamante/",
+"en": "/en/glossary/diamond-racket/",
+"es": "/es/glosario/pala-diamante/"
+}
+},
+{
+"path": "/en/glossary/round-racket/",
+"alt": {
+"it": "/it/glossario/racchetta-rotonda/",
+"en": "/en/glossary/round-racket/",
+"es": "/es/glosario/pala-redonda/"
+}
+},
+{
+"path": "/en/glossary/teardrop-racket/",
+"alt": {
+"it": "/it/glossario/racchetta-goccia/",
+"en": "/en/glossary/teardrop-racket/",
+"es": "/es/glosario/pala-lagrima/"
+}
+},
+{
+"path": "/en/glossary/rough-face/",
+"alt": {
+"it": "/it/glossario/superficie-ruvida/",
+"en": "/en/glossary/rough-face/",
+"es": "/es/glosario/superficie-rugosa/"
+}
+},
+{
+"path": "/en/glossary/official-dimensions/",
+"alt": {
+"it": "/it/glossario/misure-regolamentari/",
+"en": "/en/glossary/official-dimensions/",
+"es": "/es/glosario/medidas-reglamentarias/"
+}
+},
+{
+"path": "/en/glossary/",
+"alt": {
+"it": "/it/glossario/",
+"en": "/en/glossary/",
+"es": "/es/glosario/"
+}
+},
+{
+"path": "/en/questions/agustin-tapia-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-agustin-tapia/",
+"en": "/en/questions/agustin-tapia-padel-racket/",
+"es": "/es/preguntas/pala-agustin-tapia/"
+}
+},
+{
+"path": "/en/questions/aimar-goni-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-aimar-goni/",
+"en": "/en/questions/aimar-goni-padel-racket/",
+"es": "/es/preguntas/pala-aimar-goni/"
+}
+},
+{
+"path": "/en/questions/ale-galan-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-ale-galan/",
+"en": "/en/questions/ale-galan-padel-racket/",
+"es": "/es/preguntas/pala-ale-galan/"
+}
+},
+{
+"path": "/en/questions/alejandra-salazar-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-alejandra-salazar/",
+"en": "/en/questions/alejandra-salazar-padel-racket/",
+"es": "/es/preguntas/pala-alejandra-salazar/"
+}
+},
+{
+"path": "/en/questions/alex-chozas-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-alex-chozas/",
+"en": "/en/questions/alex-chozas-padel-racket/",
+"es": "/es/preguntas/pala-alex-chozas/"
+}
+},
+{
+"path": "/en/questions/aranzazu-osoro-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-aranzazu-osoro/",
+"en": "/en/questions/aranzazu-osoro-padel-racket/",
+"es": "/es/preguntas/pala-aranzazu-osoro/"
+}
+},
+{
+"path": "/en/questions/ari-sanchez-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-ari-sanchez/",
+"en": "/en/questions/ari-sanchez-padel-racket/",
+"es": "/es/preguntas/pala-ari-sanchez/"
+}
+},
+{
+"path": "/en/questions/arturo-coello-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello/",
+"en": "/en/questions/arturo-coello-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello/"
+}
+},
+{
+"path": "/en/questions/bea-gonzalez-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-bea-gonzalez/",
+"en": "/en/questions/bea-gonzalez-padel-racket/",
+"es": "/es/preguntas/pala-bea-gonzalez/"
+}
+},
+{
+"path": "/en/questions/claudia-fernandez-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-claudia-fernandez/",
+"en": "/en/questions/claudia-fernandez-padel-racket/",
+"es": "/es/preguntas/pala-claudia-fernandez/"
+}
+},
+{
+"path": "/en/questions/coki-nieto-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-coki-nieto/",
+"en": "/en/questions/coki-nieto-padel-racket/",
+"es": "/es/preguntas/pala-coki-nieto/"
+}
+},
+{
+"path": "/en/questions/delfi-brea-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-delfi-brea/",
+"en": "/en/questions/delfi-brea-padel-racket/",
+"es": "/es/preguntas/pala-delfi-brea/"
+}
+},
+{
+"path": "/en/questions/edu-alonso-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-edu-alonso/",
+"en": "/en/questions/edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-edu-alonso/"
+}
+},
+{
+"path": "/en/questions/federico-chingotto-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-federico-chingotto/",
+"en": "/en/questions/federico-chingotto-padel-racket/",
+"es": "/es/preguntas/pala-federico-chingotto/"
+}
+},
+{
+"path": "/en/questions/franco-stupaczuk-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-franco-stupaczuk/",
+"en": "/en/questions/franco-stupaczuk-padel-racket/",
+"es": "/es/preguntas/pala-franco-stupaczuk/"
+}
+},
+{
+"path": "/en/questions/gemma-triay-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-gemma-triay/",
+"en": "/en/questions/gemma-triay-padel-racket/",
+"es": "/es/preguntas/pala-gemma-triay/"
+}
+},
+{
+"path": "/en/questions/jon-sanz-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-jon-sanz/",
+"en": "/en/questions/jon-sanz-padel-racket/",
+"es": "/es/preguntas/pala-jon-sanz/"
+}
+},
+{
+"path": "/en/questions/juan-lebron-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-juan-lebron/",
+"en": "/en/questions/juan-lebron-padel-racket/",
+"es": "/es/preguntas/pala-juan-lebron/"
+}
+},
+{
+"path": "/en/questions/juan-tello-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-juan-tello/",
+"en": "/en/questions/juan-tello-padel-racket/",
+"es": "/es/preguntas/pala-juan-tello/"
+}
+},
+{
+"path": "/en/questions/ksenia-sharifova-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-ksenia-sharifova/",
+"en": "/en/questions/ksenia-sharifova-padel-racket/",
+"es": "/es/preguntas/pala-ksenia-sharifova/"
+}
+},
+{
+"path": "/en/questions/leo-augsburger-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-leo-augsburger/",
+"en": "/en/questions/leo-augsburger-padel-racket/",
+"es": "/es/preguntas/pala-leo-augsburger/"
+}
+},
+{
+"path": "/en/questions/lucas-campagnolo-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-lucas-campagnolo/",
+"en": "/en/questions/lucas-campagnolo-padel-racket/",
+"es": "/es/preguntas/pala-lucas-campagnolo/"
+}
+},
+{
+"path": "/en/questions/marina-guinart-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-marina-guinart/",
+"en": "/en/questions/marina-guinart-padel-racket/",
+"es": "/es/preguntas/pala-marina-guinart/"
+}
+},
+{
+"path": "/en/questions/martita-ortega-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-martita-ortega/",
+"en": "/en/questions/martita-ortega-padel-racket/",
+"es": "/es/preguntas/pala-martita-ortega/"
+}
+},
+{
+"path": "/en/questions/martin-di-nenno-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-martin-di-nenno/",
+"en": "/en/questions/martin-di-nenno-padel-racket/",
+"es": "/es/preguntas/pala-martin-di-nenno/"
+}
+},
+{
+"path": "/en/questions/miguel-lamperti-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-miguel-lamperti/",
+"en": "/en/questions/miguel-lamperti-padel-racket/",
+"es": "/es/preguntas/pala-miguel-lamperti/"
+}
+},
+{
+"path": "/en/questions/mike-yanguas-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-mike-yanguas/",
+"en": "/en/questions/mike-yanguas-padel-racket/",
+"es": "/es/preguntas/pala-mike-yanguas/"
+}
+},
+{
+"path": "/en/questions/momo-gonzalez-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-momo-gonzalez/",
+"en": "/en/questions/momo-gonzalez-padel-racket/",
+"es": "/es/preguntas/pala-momo-gonzalez/"
+}
+},
+{
+"path": "/en/questions/pablo-cardona-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-pablo-cardona/",
+"en": "/en/questions/pablo-cardona-padel-racket/",
+"es": "/es/preguntas/pala-pablo-cardona/"
+}
+},
+{
+"path": "/en/questions/pablo-lima-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-pablo-lima/",
+"en": "/en/questions/pablo-lima-padel-racket/",
+"es": "/es/preguntas/pala-pablo-lima/"
+}
+},
+{
+"path": "/en/questions/paquito-navarro-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-paquito-navarro/",
+"en": "/en/questions/paquito-navarro-padel-racket/",
+"es": "/es/preguntas/pala-paquito-navarro/"
+}
+},
+{
+"path": "/en/questions/paula-josemaria-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-paula-josemaria/",
+"en": "/en/questions/paula-josemaria-padel-racket/",
+"es": "/es/preguntas/pala-paula-josemaria/"
+}
+},
+{
+"path": "/en/questions/sanyo-gutierrez-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-sanyo-gutierrez/",
+"en": "/en/questions/sanyo-gutierrez-padel-racket/",
+"es": "/es/preguntas/pala-sanyo-gutierrez/"
+}
+},
+{
+"path": "/en/questions/sofia-araujo-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-sofia-araujo/",
+"en": "/en/questions/sofia-araujo-padel-racket/",
+"es": "/es/preguntas/pala-sofia-araujo/"
+}
+},
+{
+"path": "/en/questions/tamara-icardo-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-tamara-icardo/",
+"en": "/en/questions/tamara-icardo-padel-racket/",
+"es": "/es/preguntas/pala-tamara-icardo/"
+}
+},
+{
+"path": "/en/questions/tino-libaak-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-tino-libaak/",
+"en": "/en/questions/tino-libaak-padel-racket/",
+"es": "/es/preguntas/pala-tino-libaak/"
+}
+},
+{
+"path": "/en/questions/how-much-does-a-padel-racket-weigh/",
+"alt": {
+"it": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
+"en": "/en/questions/how-much-does-a-padel-racket-weigh/",
+"es": "/es/preguntas/cuanto-pesa-una-pala-de-padel/"
+}
+},
+{
+"path": "/en/questions/how-much-does-a-padel-racket-cost/",
+"alt": {
+"it": "/it/domande/quanto-costa-una-racchetta-da-padel/",
+"en": "/en/questions/how-much-does-a-padel-racket-cost/",
+"es": "/es/preguntas/cuanto-cuesta-una-pala-de-padel/"
+}
+},
+{
+"path": "/en/questions/most-common-padel-racket-shape/",
+"alt": {
+"it": "/it/domande/forma-racchetta-padel-piu-diffusa/",
+"en": "/en/questions/most-common-padel-racket-shape/",
+"es": "/es/preguntas/forma-de-pala-de-padel-mas-comun/"
+}
+},
+{
+"path": "/en/questions/",
+"alt": {
+"it": "/it/domande/",
+"en": "/en/questions/",
+"es": "/es/preguntas/"
+}
+},
+{
+"path": "/es/quienes-somos/",
+"alt": {
+"it": "/it/chi-siamo/",
+"en": "/en/about/",
+"es": "/es/quienes-somos/"
+}
+},
+{
+"path": "/es/informe/palas-padel-2026-2027-en-cifras/",
+"alt": {
+"it": "/it/report/racchette-padel-2026-2027-in-numeri/",
+"en": "/en/report/padel-rackets-2026-2027-in-numbers/",
+"es": "/es/informe/palas-padel-2026-2027-en-cifras/"
+}
+},
+{
+"path": "/es/datos/",
+"alt": {
+"it": "/it/dati/",
+"en": "/en/data/",
+"es": "/es/datos/"
+}
+},
+{
+"path": "/es/glosario/balance/",
+"alt": {
+"it": "/it/glossario/bilanciamento/",
+"en": "/en/glossary/balance/",
+"es": "/es/glosario/balance/"
+}
+},
+{
+"path": "/es/glosario/swingweight/",
+"alt": {
+"it": "/it/glossario/swingweight/",
+"en": "/en/glossary/swingweight/",
+"es": "/es/glosario/swingweight/"
+}
+},
+{
+"path": "/es/glosario/punto-dulce/",
+"alt": {
+"it": "/it/glossario/sweet-spot/",
+"en": "/en/glossary/sweet-spot/",
+"es": "/es/glosario/punto-dulce/"
+}
+},
+{
+"path": "/es/glosario/goma-eva/",
+"alt": {
+"it": "/it/glossario/eva/",
+"en": "/en/glossary/eva-rubber/",
+"es": "/es/glosario/goma-eva/"
+}
+},
+{
+"path": "/es/glosario/foam/",
+"alt": {
+"it": "/it/glossario/foam/",
+"en": "/en/glossary/foam/",
+"es": "/es/glosario/foam/"
+}
+},
+{
+"path": "/es/glosario/carbono-3k-12k-18k/",
+"alt": {
+"it": "/it/glossario/carbonio-3k-12k-18k/",
+"en": "/en/glossary/carbon-3k-12k-18k/",
+"es": "/es/glosario/carbono-3k-12k-18k/"
+}
+},
+{
+"path": "/es/glosario/fibra-de-vidrio/",
+"alt": {
+"it": "/it/glossario/fibra-di-vetro/",
+"en": "/en/glossary/fiberglass/",
+"es": "/es/glosario/fibra-de-vidrio/"
+}
+},
+{
+"path": "/es/glosario/pala-diamante/",
+"alt": {
+"it": "/it/glossario/racchetta-diamante/",
+"en": "/en/glossary/diamond-racket/",
+"es": "/es/glosario/pala-diamante/"
+}
+},
+{
+"path": "/es/glosario/pala-redonda/",
+"alt": {
+"it": "/it/glossario/racchetta-rotonda/",
+"en": "/en/glossary/round-racket/",
+"es": "/es/glosario/pala-redonda/"
+}
+},
+{
+"path": "/es/glosario/pala-lagrima/",
+"alt": {
+"it": "/it/glossario/racchetta-goccia/",
+"en": "/en/glossary/teardrop-racket/",
+"es": "/es/glosario/pala-lagrima/"
+}
+},
+{
+"path": "/es/glosario/superficie-rugosa/",
+"alt": {
+"it": "/it/glossario/superficie-ruvida/",
+"en": "/en/glossary/rough-face/",
+"es": "/es/glosario/superficie-rugosa/"
+}
+},
+{
+"path": "/es/glosario/medidas-reglamentarias/",
+"alt": {
+"it": "/it/glossario/misure-regolamentari/",
+"en": "/en/glossary/official-dimensions/",
+"es": "/es/glosario/medidas-reglamentarias/"
+}
+},
+{
+"path": "/es/glosario/",
+"alt": {
+"it": "/it/glossario/",
+"en": "/en/glossary/",
+"es": "/es/glosario/"
+}
+},
+{
+"path": "/es/preguntas/pala-agustin-tapia/",
+"alt": {
+"it": "/it/domande/racchetta-agustin-tapia/",
+"en": "/en/questions/agustin-tapia-padel-racket/",
+"es": "/es/preguntas/pala-agustin-tapia/"
+}
+},
+{
+"path": "/es/preguntas/pala-aimar-goni/",
+"alt": {
+"it": "/it/domande/racchetta-aimar-goni/",
+"en": "/en/questions/aimar-goni-padel-racket/",
+"es": "/es/preguntas/pala-aimar-goni/"
+}
+},
+{
+"path": "/es/preguntas/pala-ale-galan/",
+"alt": {
+"it": "/it/domande/racchetta-ale-galan/",
+"en": "/en/questions/ale-galan-padel-racket/",
+"es": "/es/preguntas/pala-ale-galan/"
+}
+},
+{
+"path": "/es/preguntas/pala-alejandra-salazar/",
+"alt": {
+"it": "/it/domande/racchetta-alejandra-salazar/",
+"en": "/en/questions/alejandra-salazar-padel-racket/",
+"es": "/es/preguntas/pala-alejandra-salazar/"
+}
+},
+{
+"path": "/es/preguntas/pala-alex-chozas/",
+"alt": {
+"it": "/it/domande/racchetta-alex-chozas/",
+"en": "/en/questions/alex-chozas-padel-racket/",
+"es": "/es/preguntas/pala-alex-chozas/"
+}
+},
+{
+"path": "/es/preguntas/pala-aranzazu-osoro/",
+"alt": {
+"it": "/it/domande/racchetta-aranzazu-osoro/",
+"en": "/en/questions/aranzazu-osoro-padel-racket/",
+"es": "/es/preguntas/pala-aranzazu-osoro/"
+}
+},
+{
+"path": "/es/preguntas/pala-ari-sanchez/",
+"alt": {
+"it": "/it/domande/racchetta-ari-sanchez/",
+"en": "/en/questions/ari-sanchez-padel-racket/",
+"es": "/es/preguntas/pala-ari-sanchez/"
+}
+},
+{
+"path": "/es/preguntas/pala-arturo-coello/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello/",
+"en": "/en/questions/arturo-coello-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello/"
+}
+},
+{
+"path": "/es/preguntas/pala-bea-gonzalez/",
+"alt": {
+"it": "/it/domande/racchetta-bea-gonzalez/",
+"en": "/en/questions/bea-gonzalez-padel-racket/",
+"es": "/es/preguntas/pala-bea-gonzalez/"
+}
+},
+{
+"path": "/es/preguntas/pala-claudia-fernandez/",
+"alt": {
+"it": "/it/domande/racchetta-claudia-fernandez/",
+"en": "/en/questions/claudia-fernandez-padel-racket/",
+"es": "/es/preguntas/pala-claudia-fernandez/"
+}
+},
+{
+"path": "/es/preguntas/pala-coki-nieto/",
+"alt": {
+"it": "/it/domande/racchetta-coki-nieto/",
+"en": "/en/questions/coki-nieto-padel-racket/",
+"es": "/es/preguntas/pala-coki-nieto/"
+}
+},
+{
+"path": "/es/preguntas/pala-delfi-brea/",
+"alt": {
+"it": "/it/domande/racchetta-delfi-brea/",
+"en": "/en/questions/delfi-brea-padel-racket/",
+"es": "/es/preguntas/pala-delfi-brea/"
+}
+},
+{
+"path": "/es/preguntas/pala-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-edu-alonso/",
+"en": "/en/questions/edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-edu-alonso/"
+}
+},
+{
+"path": "/es/preguntas/pala-federico-chingotto/",
+"alt": {
+"it": "/it/domande/racchetta-federico-chingotto/",
+"en": "/en/questions/federico-chingotto-padel-racket/",
+"es": "/es/preguntas/pala-federico-chingotto/"
+}
+},
+{
+"path": "/es/preguntas/pala-franco-stupaczuk/",
+"alt": {
+"it": "/it/domande/racchetta-franco-stupaczuk/",
+"en": "/en/questions/franco-stupaczuk-padel-racket/",
+"es": "/es/preguntas/pala-franco-stupaczuk/"
+}
+},
+{
+"path": "/es/preguntas/pala-gemma-triay/",
+"alt": {
+"it": "/it/domande/racchetta-gemma-triay/",
+"en": "/en/questions/gemma-triay-padel-racket/",
+"es": "/es/preguntas/pala-gemma-triay/"
+}
+},
+{
+"path": "/es/preguntas/pala-jon-sanz/",
+"alt": {
+"it": "/it/domande/racchetta-jon-sanz/",
+"en": "/en/questions/jon-sanz-padel-racket/",
+"es": "/es/preguntas/pala-jon-sanz/"
+}
+},
+{
+"path": "/es/preguntas/pala-juan-lebron/",
+"alt": {
+"it": "/it/domande/racchetta-juan-lebron/",
+"en": "/en/questions/juan-lebron-padel-racket/",
+"es": "/es/preguntas/pala-juan-lebron/"
+}
+},
+{
+"path": "/es/preguntas/pala-juan-tello/",
+"alt": {
+"it": "/it/domande/racchetta-juan-tello/",
+"en": "/en/questions/juan-tello-padel-racket/",
+"es": "/es/preguntas/pala-juan-tello/"
+}
+},
+{
+"path": "/es/preguntas/pala-ksenia-sharifova/",
+"alt": {
+"it": "/it/domande/racchetta-ksenia-sharifova/",
+"en": "/en/questions/ksenia-sharifova-padel-racket/",
+"es": "/es/preguntas/pala-ksenia-sharifova/"
+}
+},
+{
+"path": "/es/preguntas/pala-leo-augsburger/",
+"alt": {
+"it": "/it/domande/racchetta-leo-augsburger/",
+"en": "/en/questions/leo-augsburger-padel-racket/",
+"es": "/es/preguntas/pala-leo-augsburger/"
+}
+},
+{
+"path": "/es/preguntas/pala-lucas-campagnolo/",
+"alt": {
+"it": "/it/domande/racchetta-lucas-campagnolo/",
+"en": "/en/questions/lucas-campagnolo-padel-racket/",
+"es": "/es/preguntas/pala-lucas-campagnolo/"
+}
+},
+{
+"path": "/es/preguntas/pala-marina-guinart/",
+"alt": {
+"it": "/it/domande/racchetta-marina-guinart/",
+"en": "/en/questions/marina-guinart-padel-racket/",
+"es": "/es/preguntas/pala-marina-guinart/"
+}
+},
+{
+"path": "/es/preguntas/pala-martita-ortega/",
+"alt": {
+"it": "/it/domande/racchetta-martita-ortega/",
+"en": "/en/questions/martita-ortega-padel-racket/",
+"es": "/es/preguntas/pala-martita-ortega/"
+}
+},
+{
+"path": "/es/preguntas/pala-martin-di-nenno/",
+"alt": {
+"it": "/it/domande/racchetta-martin-di-nenno/",
+"en": "/en/questions/martin-di-nenno-padel-racket/",
+"es": "/es/preguntas/pala-martin-di-nenno/"
+}
+},
+{
+"path": "/es/preguntas/pala-miguel-lamperti/",
+"alt": {
+"it": "/it/domande/racchetta-miguel-lamperti/",
+"en": "/en/questions/miguel-lamperti-padel-racket/",
+"es": "/es/preguntas/pala-miguel-lamperti/"
+}
+},
+{
+"path": "/es/preguntas/pala-mike-yanguas/",
+"alt": {
+"it": "/it/domande/racchetta-mike-yanguas/",
+"en": "/en/questions/mike-yanguas-padel-racket/",
+"es": "/es/preguntas/pala-mike-yanguas/"
+}
+},
+{
+"path": "/es/preguntas/pala-momo-gonzalez/",
+"alt": {
+"it": "/it/domande/racchetta-momo-gonzalez/",
+"en": "/en/questions/momo-gonzalez-padel-racket/",
+"es": "/es/preguntas/pala-momo-gonzalez/"
+}
+},
+{
+"path": "/es/preguntas/pala-pablo-cardona/",
+"alt": {
+"it": "/it/domande/racchetta-pablo-cardona/",
+"en": "/en/questions/pablo-cardona-padel-racket/",
+"es": "/es/preguntas/pala-pablo-cardona/"
+}
+},
+{
+"path": "/es/preguntas/pala-pablo-lima/",
+"alt": {
+"it": "/it/domande/racchetta-pablo-lima/",
+"en": "/en/questions/pablo-lima-padel-racket/",
+"es": "/es/preguntas/pala-pablo-lima/"
+}
+},
+{
+"path": "/es/preguntas/pala-paquito-navarro/",
+"alt": {
+"it": "/it/domande/racchetta-paquito-navarro/",
+"en": "/en/questions/paquito-navarro-padel-racket/",
+"es": "/es/preguntas/pala-paquito-navarro/"
+}
+},
+{
+"path": "/es/preguntas/pala-paula-josemaria/",
+"alt": {
+"it": "/it/domande/racchetta-paula-josemaria/",
+"en": "/en/questions/paula-josemaria-padel-racket/",
+"es": "/es/preguntas/pala-paula-josemaria/"
+}
+},
+{
+"path": "/es/preguntas/pala-sanyo-gutierrez/",
+"alt": {
+"it": "/it/domande/racchetta-sanyo-gutierrez/",
+"en": "/en/questions/sanyo-gutierrez-padel-racket/",
+"es": "/es/preguntas/pala-sanyo-gutierrez/"
+}
+},
+{
+"path": "/es/preguntas/pala-sofia-araujo/",
+"alt": {
+"it": "/it/domande/racchetta-sofia-araujo/",
+"en": "/en/questions/sofia-araujo-padel-racket/",
+"es": "/es/preguntas/pala-sofia-araujo/"
+}
+},
+{
+"path": "/es/preguntas/pala-tamara-icardo/",
+"alt": {
+"it": "/it/domande/racchetta-tamara-icardo/",
+"en": "/en/questions/tamara-icardo-padel-racket/",
+"es": "/es/preguntas/pala-tamara-icardo/"
+}
+},
+{
+"path": "/es/preguntas/pala-tino-libaak/",
+"alt": {
+"it": "/it/domande/racchetta-tino-libaak/",
+"en": "/en/questions/tino-libaak-padel-racket/",
+"es": "/es/preguntas/pala-tino-libaak/"
+}
+},
+{
+"path": "/es/preguntas/cuanto-pesa-una-pala-de-padel/",
+"alt": {
+"it": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
+"en": "/en/questions/how-much-does-a-padel-racket-weigh/",
+"es": "/es/preguntas/cuanto-pesa-una-pala-de-padel/"
+}
+},
+{
+"path": "/es/preguntas/cuanto-cuesta-una-pala-de-padel/",
+"alt": {
+"it": "/it/domande/quanto-costa-una-racchetta-da-padel/",
+"en": "/en/questions/how-much-does-a-padel-racket-cost/",
+"es": "/es/preguntas/cuanto-cuesta-una-pala-de-padel/"
+}
+},
+{
+"path": "/es/preguntas/forma-de-pala-de-padel-mas-comun/",
+"alt": {
+"it": "/it/domande/forma-racchetta-padel-piu-diffusa/",
+"en": "/en/questions/most-common-padel-racket-shape/",
+"es": "/es/preguntas/forma-de-pala-de-padel-mas-comun/"
+}
+},
+{
+"path": "/es/preguntas/",
+"alt": {
+"it": "/it/domande/",
+"en": "/en/questions/",
+"es": "/es/preguntas/"
+}
+}
 ]
