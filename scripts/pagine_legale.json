@@ -1,0 +1,50 @@
+[
+{
+"path": "/it/privacy/",
+"alt": {
+"it": "/it/privacy/",
+"en": "/en/privacy/",
+"es": "/es/privacidad/"
+}
+},
+{
+"path": "/it/cookie/",
+"alt": {
+"it": "/it/cookie/",
+"en": "/en/cookies/",
+"es": "/es/cookies/"
+}
+},
+{
+"path": "/en/privacy/",
+"alt": {
+"it": "/it/privacy/",
+"en": "/en/privacy/",
+"es": "/es/privacidad/"
+}
+},
+{
+"path": "/en/cookies/",
+"alt": {
+"it": "/it/cookie/",
+"en": "/en/cookies/",
+"es": "/es/cookies/"
+}
+},
+{
+"path": "/es/privacidad/",
+"alt": {
+"it": "/it/privacy/",
+"en": "/en/privacy/",
+"es": "/es/privacidad/"
+}
+},
+{
+"path": "/es/cookies/",
+"alt": {
+"it": "/it/cookie/",
+"en": "/en/cookies/",
+"es": "/es/cookies/"
+}
+}
+]
