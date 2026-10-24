@@ -1,0 +1,11 @@
+{
+  // Configurazione per Cloudflare Workers (sito statico)
+  "name": "padelmetrix-site",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true,
+  "preview_urls": true
+}
