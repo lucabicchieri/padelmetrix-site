@@ -11,10 +11,11 @@ def main():
     urls = []
     for l in ("it", "en", "es"):
         urls.append((f"{SITO}/{l}/", "2026-10-24"))
-    sez = ROOT / "scripts" / "pagine_sezioni.json"
-    if sez.exists():
-        for pth in json.loads(sez.read_text(encoding="utf-8")):
-            urls.append((f"{SITO}{pth}", "2026-10-24"))
+    for nome in ("pagine_sezioni.json", "pagine_geo.json"):
+        sez = ROOT / "scripts" / nome
+        if sez.exists():
+            for pth in json.loads(sez.read_text(encoding="utf-8")):
+                urls.append((f"{SITO}{pth}", "2026-10-24"))
     for f in sorted((ROOT / "data" / "racchette").glob("*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
         if "pagina" in d:

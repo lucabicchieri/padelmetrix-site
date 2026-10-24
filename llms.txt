@@ -1,0 +1,19 @@
+# PadelMetrix
+
+> Database indipendente di racchette da padel: 286 schede delle collezioni 2026 e 2027 di 19 marche, con dati tecnici, fonti citate, confronti e guide. Sito in italiano (inglese e spagnolo in arrivo). Aggiornato il 2026-10-24.
+
+## Sezioni principali
+- [Racchette](https://www.padelmetrix.com/it/racchette/): tutte le schede con filtri per marca, forma, livello, stile e prezzo
+- [Marche](https://www.padelmetrix.com/it/marche/): i modelli di ogni marca
+- [Confronti](https://www.padelmetrix.com/it/confronta/): confronti modello contro modello
+- [Guide](https://www.padelmetrix.com/it/guide/): come scegliere la racchetta per livello, problema fisico, budget
+- [Bambini](https://www.padelmetrix.com/it/bambini/): misure per età e racchette junior
+- [Domande frequenti](https://www.padelmetrix.com/it/domande/): risposte brevi con dati
+- [Glossario](https://www.padelmetrix.com/it/glossario/): termini tecnici
+
+## Dati originali
+- [Report Racchette da padel 2026–2027 in numeri](https://www.padelmetrix.com/it/report/racchette-padel-2026-2027-in-numeri/)
+- [Dataset aperto CSV/JSON, licenza CC BY 4.0](https://www.padelmetrix.com/it/dati/)
+
+## Metodo
+- [Chi siamo e metodo](https://www.padelmetrix.com/it/chi-siamo/): fonti dei dati, indipendenza, aggiornamenti

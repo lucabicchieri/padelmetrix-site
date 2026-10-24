@@ -112,7 +112,7 @@ def header(on):
 
 FOOTER = '''<footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix è un sito indipendente di Luca Bicchieri. In qualità di Affiliato Amazon, PadelMetrix riceve un guadagno dagli acquisti idonei. Alcuni link verso altri negozi sono link di affiliazione.</span>
-<span><a href="/it/racchette/">Racchette</a> · <a href="/it/guide/">Guide</a> · <a href="/it/confronta/">Confronta</a> · © 2026 PadelMetrix</span>
+<span><a href="/it/racchette/">Racchette</a> · <a href="/it/guide/">Guide</a> · <a href="/it/domande/">Domande</a> · <a href="/it/glossario/">Glossario</a> · <a href="/it/dati/">Dati aperti</a> · <a href="/it/chi-siamo/">Chi siamo e metodo</a> · © 2026 PadelMetrix</span>
 </div></footer>'''
 
 

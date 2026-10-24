@@ -261,7 +261,7 @@ def guida(path, title, desc, h1, crumb, intro_html, corpo_html, items, on="guide
     cr, ld = crumbs([("Home", "/it/"), ("Guide", "/it/guide/"), (crumb, None)])
     lista = f'<section class="block"><h2>Le racchette del database adatte ({len(items)})</h2>{griglia(ordina(items))}</section>' if items else ""
     corpo = f'''{cr}
-<div class="intro"><h1>{e(h1)}</h1>{intro_html}</div>
+<div class="intro"><h1>{e(h1)}</h1>{intro_html}<p class="note">Aggiornata il 24 ottobre 2026 · a cura di <a href="/it/chi-siamo/">Luca Bicchieri, PadelMetrix</a></p></div>
 <div class="prose">{corpo_html}</div>
 {lista}'''
     scrivi(path, pagina(title, desc, path, corpo, on=on, ld=[ld, *ld_extra]))
@@ -288,7 +288,7 @@ def guide(db):
     guida("/it/guide/racchetta-padel-principianti/", "Racchetta da padel per principianti: come sceglierla e i modelli 2026 | PadelMetrix",
           "Come scegliere la prima racchetta da padel: forma, peso, materiali e prezzo. Più l'elenco dei modelli 2026 e 2027 adatti a chi inizia.",
           "Racchetta da padel per principianti", "Principianti",
-          "<p>Chi inizia ha bisogno di una racchetta che perdoni gli errori: forma rotonda o a goccia, peso contenuto, superficie morbida. Le racchette da professionisti, rigide e pesanti in testa, rendono l'apprendimento più faticoso.</p>",
+          "<p><b>La racchetta giusta per un principiante è rotonda o a goccia, pesa 350–365 g, ha bilanciamento basso o medio e una superficie morbida in fibra di vetro o carbonio leggero; costa in genere 70–150 €.</b> Le racchette da professionisti, rigide e pesanti in testa, rendono l'apprendimento più faticoso.</p>",
           """<h2>I quattro criteri</h2><ol><li><b>Forma rotonda o a goccia.</b> Lo sweet spot è al centro e più ampio.</li><li><b>Peso 350–365 g.</b> Abbastanza stabile, non affatica il braccio.</li><li><b>Bilanciamento basso o medio.</b> Più maneggevole nelle volée e in difesa.</li><li><b>Fibra di vetro o carbonio morbido.</b> Tatto più confortevole e uscita di palla facile.</li></ol>
 <p>Sul prezzo: per iniziare non serve spendere più di 100–150 €. Vedi anche le <a href="/it/guide/racchette-padel-economiche/">racchette economiche</a> e le <a href="/it/guide/forme-racchetta-padel/">differenze tra le forme</a>.</p>""" + faq_html(qa),
           items, ld_extra=[faq_ld(qa)])
@@ -303,7 +303,7 @@ def guide(db):
     guida("/it/guide/racchetta-padel-epicondilite/", "Racchetta da padel per epicondilite e gomito del tennista: come sceglierla | PadelMetrix",
           "Racchette da padel per chi soffre di epicondilite: tatto morbido, peso e bilanciamento giusti, e i modelli 2026 e 2027 più confortevoli per il braccio.",
           "Racchetta da padel per epicondilite e gomito", "Epicondilite e gomito",
-          "<p>La racchetta non cura il gomito, ma può evitare di peggiorarlo. Contano tre cose: tatto morbido, peso nella fascia media e bilanciamento non troppo in testa. Questa pagina non sostituisce il parere di un medico o di un fisioterapista.</p>",
+          "<p><b>Con l'epicondilite conviene una racchetta dal tatto morbido, di 350–365 g, rotonda o a goccia e con bilanciamento basso o medio, che trasmette meno vibrazioni al braccio.</b> La racchetta non cura il gomito, ma può evitare di peggiorarlo. Questa pagina non sostituisce il parere di un medico o di un fisioterapista.</p>",
           """<h2>Cosa guardare nella scheda</h2><ul><li><b>Tatto:</b> morbido o medio-morbido. Le gomme EVA soft e le superfici in fibra di vetro assorbono più vibrazioni.</li><li><b>Forma:</b> rotonda o a goccia; le diamante concentrano il peso in testa.</li><li><b>Peso e bilanciamento:</b> 350–365 g, bilanciamento basso o medio.</li><li><b>Versioni Comfort e Soft:</b> molti marchi le propongono accanto al modello rigido, con gli stessi stampi ma materiali più morbidi.</li></ul>
 <p>Nell'elenco sotto trovi le racchette del database con tatto dichiarato morbido o medio-morbido.</p>""" + faq_html(qa),
           items, ld_extra=[faq_ld(qa)])
@@ -324,7 +324,7 @@ def guide(db):
     guida("/it/guide/forme-racchetta-padel/", "Racchetta da padel rotonda, a goccia o a diamante: differenze e come scegliere | PadelMetrix",
           "Differenze tra racchetta da padel rotonda, a goccia, a diamante e ibrida: controllo, potenza, sweet spot e quale scegliere per il tuo livello.",
           "Racchetta rotonda, a goccia o a diamante?", "Forme delle racchette",
-          "<p>La forma decide dove sta lo sweet spot e come è distribuito il peso, e quindi il carattere della racchetta: controllo, equilibrio o potenza.</p>",
+          "<p><b>La racchetta rotonda dà controllo e tolleranza, quella a diamante potenza nello smash, quella a goccia sta in mezzo ed è la più versatile.</b> La forma decide dove sta lo sweet spot e come è distribuito il peso, e quindi il carattere della racchetta.</p>",
           sez + faq_html(qa), [], ld_extra=[faq_ld(qa)])
     G.append(("/it/guide/forme-racchetta-padel/", "Racchetta rotonda, a goccia o a diamante?", None))
 

@@ -134,6 +134,32 @@ def faq(d, n, db):
     return qa[:5]
 
 
+FRASE_LIV = {"principiante": "per chi inizia", "principiante-intermedio": "per principianti e intermedi", "intermedio": "per giocatori intermedi",
+             "intermedio-avanzato": "per intermedi e avanzati", "avanzato": "per giocatori avanzati", "professionale": "per giocatori avanzati e agonisti"}
+FRASE_FORMA = {"diamante": "a diamante", "rotonda": "rotonda", "goccia": "a goccia", "ibrida": "ibrida"}
+
+
+def in_breve(d, n):
+    """Risposta in una frase: cosa è questa racchetta, con i dati che abbiamo."""
+    tipo = "racchetta junior" if n["categoria"] == "junior" else "racchetta"
+    if n["forma"]:
+        tipo += " " + FRASE_FORMA[n["forma"]]
+    if n["stile"] == "offensivo":
+        tipo += " d'attacco"
+    elif n["stile"] == "controllo":
+        tipo += " di controllo"
+    elif n["stile"] == "polivalente":
+        tipo += " polivalente"
+    t = f"La {d['pagina']['titolo']} è una {tipo}"
+    if n["peso"]:
+        t += f" da {n['peso']}"
+    if n["livello"]:
+        t += f" {FRASE_LIV[n['livello']]}"
+    if n["giocatore"] and "ispirata" not in n["giocatore"]:
+        t += f", firmata da {n['giocatore']}"
+    return t + "."
+
+
 def render(d, n, db, pair_set):
     p = d["pagina"]
     slug = d["slug"]
@@ -151,7 +177,13 @@ def render(d, n, db, pair_set):
              (("Peso", n["peso"]), ("Forma", FORMA_IT.get(n["forma"])), ("Collezione", str(d["anno"]))) if v]
     if props:
         prod["additionalProperty"] = props
-    ld = [prod, cr_ld]
+    breve = in_breve(d, n)
+    iso = d.get("aggiornato", "2026-10-24")
+    webpage = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": f"{SITO}/it/racchette/{slug}/",
+               "dateModified": iso, "inLanguage": "it", "about": {"@type": "Product", "name": nome_completo},
+               "author": {"@type": "Person", "name": "Luca Bicchieri", "url": f"{SITO}/it/chi-siamo/"},
+               "publisher": {"@type": "Organization", "name": "PadelMetrix", "url": f"{SITO}/it/"}}
+    ld = [webpage, prod, cr_ld]
     if qa:
         ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]})
@@ -190,7 +222,9 @@ def render(d, n, db, pair_set):
 <div>
 <div class="eyebrow">{e(p["eyebrow"])}</div>
 <h1>{e(nome_completo)}</h1>
+<p class="note" style="margin-top:6px">Aggiornata il {e(p["aggiornata"])} · dati con fonti citate · <a href="/it/chi-siamo/">metodo</a></p>
 </div>
+<p class="lead" style="font-weight:600;color:var(--ink)">{e(breve)}</p>
 <div class="chips">{chips(p["chips"])}</div>
 <p class="lead">{e(p["lead"])}</p>
 {avviso}
@@ -247,7 +281,10 @@ def render(d, n, db, pair_set):
 
 {faq_html}
 <p class="note" style="padding-bottom:24px">Scheda aggiornata il {e(p["aggiornata"])}.</p>"""
-    return pagina(f"{title} | PadelMetrix", p["meta_description"], f"/it/racchette/{slug}/", corpo, on="racchette", ld=ld)
+    meta = breve + " Dati tecnici, opinioni e confronti."
+    if len(meta) > 165:
+        meta = breve
+    return pagina(f"{title} | PadelMetrix", meta, f"/it/racchette/{slug}/", corpo, on="racchette", ld=ld)
 
 
 def main():
