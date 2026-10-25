@@ -10,7 +10,7 @@ OGGI = "2026-10-24"
 
 def main():
     voci = [{"path": f"/{l}/", "alt": {x: f"/{x}/" for x in ("it", "en", "es")}} for l in ("it", "en", "es")]
-    for nome in ("pagine_schede.json", "pagine_sezioni.json", "pagine_geo.json", "pagine_legale.json", "pagine_pickleball.json"):
+    for nome in ("pagine_schede.json", "pagine_sezioni.json", "pagine_geo.json", "pagine_legale.json", "pagine_pickleball.json", "pagine_selettore.json"):
         f = ROOT / "scripts" / nome
         if f.exists():
             voci += json.loads(f.read_text(encoding="utf-8"))

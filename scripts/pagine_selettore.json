@@ -1,0 +1,26 @@
+[
+{
+"path": "/it/trova-la-tua-racchetta/",
+"alt": {
+"it": "/it/trova-la-tua-racchetta/",
+"en": "/en/racket-finder/",
+"es": "/es/encuentra-tu-pala/"
+}
+},
+{
+"path": "/en/racket-finder/",
+"alt": {
+"it": "/it/trova-la-tua-racchetta/",
+"en": "/en/racket-finder/",
+"es": "/es/encuentra-tu-pala/"
+}
+},
+{
+"path": "/es/encuentra-tu-pala/",
+"alt": {
+"it": "/it/trova-la-tua-racchetta/",
+"en": "/en/racket-finder/",
+"es": "/es/encuentra-tu-pala/"
+}
+}
+]

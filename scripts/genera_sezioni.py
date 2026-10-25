@@ -59,9 +59,9 @@ def elenco(db):
     nm = len(marche)
     corpo = f'''{cr}
 <div class="intro"><h1>{L("Racchette da padel 2026 e 2027", "Padel rackets 2026 and 2027", "Palas de pádel 2026 y 2027")}</h1>
-<p>{L(f"{len(db)} racchette di {nm} marche con dati tecnici, sintesi delle recensioni e modelli simili. Filtra per marca, forma, livello, stile e prezzo, oppure leggi le <a href=\"{P('guide')}\">guide alla scelta</a>.",
-      f"{len(db)} rackets from {nm} brands with specs, review summaries and similar models. Filter by brand, shape, level, style and price, or read the <a href=\"{P('guide')}\">buying guides</a>.",
-      f"{len(db)} palas de {nm} marcas con datos técnicos, resumen de reseñas y modelos similares. Filtra por marca, forma, nivel, estilo y precio, o lee las <a href=\"{P('guide')}\">guías de compra</a>.")}</p></div>
+<p>{L(f"{len(db)} racchette di {nm} marche con dati tecnici, sintesi delle recensioni e modelli simili. Filtra per marca, forma, livello, stile e prezzo, oppure fai il <a href=\"{P('selettore')}\">test in 2 minuti</a> o leggi le <a href=\"{P('guide')}\">guide alla scelta</a>.",
+      f"{len(db)} rackets from {nm} brands with specs, review summaries and similar models. Filter by brand, shape, level, style and price, or take the <a href=\"{P('selettore')}\">2-minute quiz</a> or read the <a href=\"{P('guide')}\">buying guides</a>.",
+      f"{len(db)} palas de {nm} marcas con datos técnicos, resumen de reseñas y modelos similares. Filtra por marca, forma, nivel, estilo y precio, o haz el <a href=\"{P('selettore')}\">test de 2 minutos</a> o lee las <a href=\"{P('guide')}\">guías de compra</a>.")}</p></div>
 <div class="marche">{"".join(f'<a href="{P("marche", s)}">{e(m)}</a>' for s, m in marche)}</div>
 {form}
 <p class="conta" id="conta">{len(db)} {L("racchette", "rackets", "palas")}</p>

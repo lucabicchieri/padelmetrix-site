@@ -95,6 +95,7 @@ SEZ = {
     "glossario": ("glossario", "glossary", "glosario"),
     "domande": ("domande", "questions", "preguntas"),
     "pickleball": ("pickleball", "pickleball", "pickleball"),
+    "selettore": ("trova-la-tua-racchetta", "racket-finder", "encuentra-tu-pala"),
     "privacy": ("privacy", "privacy", "privacidad"),
     "cookie": ("cookie", "cookies", "cookies"),
 }
@@ -319,8 +320,8 @@ CSS = (ROOT / "scripts" / "scheda.css").read_text(encoding="utf-8") + (ROOT / "s
 
 def nav():
     return [("racchette", L("Racchette", "Rackets", "Palas"), P("racchette")),
-            ("bambini", L("Bambini", "Kids", "Niños"), P("bambini")),
             ("pickleball", "Pickleball", P("pickleball")),
+            ("bambini", L("Bambini", "Kids", "Niños"), P("bambini")),
             ("confronta", L("Confronta", "Compare", "Comparar"), P("confronta")),
             ("guide", L("Guide", "Guides", "Guías"), P("guide"))]
 
