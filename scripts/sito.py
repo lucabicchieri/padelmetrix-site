@@ -9,6 +9,7 @@ import re
 
 from comune import racket_svg
 import traduci as T
+import consenso as C
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "racchette"
@@ -347,7 +348,7 @@ def footer():
              (P("privacy"), L("Privacy", "Privacy", "Privacidad")), (P("cookie"), L("Cookie", "Cookies", "Cookies"))]
     return f'''<footer><div class="wrap">
 <span style="max-width:760px">{testo}</span>
-<span>{" · ".join(f'<a href="{u}">{t}</a>' for u, t in links)} · © 2026 PadelMetrix</span>
+<span>{" · ".join([f'<a href="{u}">{t}</a>' for u, t in links] + ([C.link_footer(_LANG[0])] if C.attivo() else []))} · © 2026 PadelMetrix</span>
 </div></footer>'''
 
 
@@ -383,6 +384,7 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None):
 <html lang="{l}">
 <head>
 <meta charset="utf-8">
+{C.head(l)}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(titolo)}</title>
 <meta name="description" content="{e(desc)}">
@@ -408,6 +410,7 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None):
 </main>
 {footer()}
 {extra_js}
+{C.body(l, P("cookie"))}
 </body>
 </html>
 '''

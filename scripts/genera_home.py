@@ -12,6 +12,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from comune import LINGUE, racket_svg, url  # noqa: E402
 import sito as S  # noqa: E402
+import consenso as C  # noqa: E402
 from sito import L, P  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -242,6 +243,7 @@ def head(lang, t):
 <html lang="{t["html_lang"]}">
 <head>
 <meta charset="utf-8">
+{C.head(lang)}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(t["title"])}</title>
 <meta name="description" content="{e(t["desc"])}">
@@ -352,10 +354,11 @@ def pagina(lang, db):
 <div style="flex:1 1 240px"><span class="wm"><b>padel</b><i>metrix</i></span><span>{e(t["claim"])}</span></div>
 <div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{url(lang, "abbigliamento")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
 <div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a></div>
-<div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a></div>
+<div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a>{C.link_footer(lang)}</div>
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
 </div></footer>
+{C.body(lang, url(lang, "cookie"))}
 </body>
 </html>
 '''

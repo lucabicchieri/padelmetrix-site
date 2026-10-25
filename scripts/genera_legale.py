@@ -12,6 +12,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import sito as S  # noqa: E402
 from sito import ROOT, L, P, ALT, crumbs, pagina, data_txt, LINGUE, set_lang  # noqa: E402
+import consenso as C  # noqa: E402
 
 EMAIL = "info@padelmetrix.com"
 MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
@@ -108,6 +109,8 @@ def privacy():
 <h2>Cambios</h2>
 <p>Si la web cambia (por ejemplo, si se añaden estadísticas o una newsletter), esta página se actualizará antes, y la fecha de arriba lo indicará.</p>
 </div>''')
+    if C.attivo():
+        corpo = ga_privacy(corpo)
     path, alt = P("privacy"), ALT("privacy")
     S.scrivi(path, pagina(L("Informativa sulla privacy | PadelMetrix", "Privacy policy | PadelMetrix", "Política de privacidad | PadelMetrix"),
                           L("Come PadelMetrix tratta i dati personali: nessun cookie proprio, nessun analytics; dati di navigazione, servizi di terze parti e diritti GDPR.",
@@ -192,12 +195,70 @@ def cookie():
 <h2>Contacto</h2>
 <p>Para cualquier duda: {MAIL}. Si en el futuro añadimos estadísticas o publicidad, actualizaremos esta página y pediremos el consentimiento cuando sea necesario.</p>
 </div>''')
+    if C.attivo():
+        corpo = ga_cookie(corpo)
     path, alt = P("cookie"), ALT("cookie")
     S.scrivi(path, pagina(L("Cookie policy | PadelMetrix", "Cookie policy | PadelMetrix", "Política de cookies | PadelMetrix"),
                           L("PadelMetrix non usa cookie propri, di analisi o pubblicitari: quali cookie tecnici possono essere impostati e come gestirli.",
                             "PadelMetrix uses no own, analytics or advertising cookies: which technical cookies may be set and how to manage them.",
                             "PadelMetrix no usa cookies propias, de análisis ni publicitarias: qué cookies técnicas pueden instalarse y cómo gestionarlas."),
                           path, corpo, ld=[ld], alt=alt), alt)
+
+
+GA_PRIV = {
+    "it": ("non usa cookie propri, non usa strumenti di analisi né pubblicità profilata.</b>",
+           "non usa pubblicità profilata e usa Google Analytics solo se lo accetti.</b>",
+           "<li><b>Google Analytics 4</b> (Google Ireland Ltd / Google LLC), gestito tramite Google Tag Manager: <b>solo se accetti i cookie</b> nel banner, raccoglie in forma statistica le pagine visitate, la provenienza delle visite, il tipo di dispositivo e la posizione approssimativa. Google dichiara che GA4 non registra né conserva gli indirizzi IP. Usiamo questi dati solo per capire quali contenuti sono utili; non li usiamo per pubblicità e non li incrociamo con altri dati. Base giuridica: il tuo consenso (art. 6.1.a GDPR), che puoi revocare in qualsiasi momento dal link «Preferenze cookie» in fondo a ogni pagina. Conservazione dei dati in Analytics: 14 mesi.</li>"),
+    "en": ("does not set its own cookies and uses no analytics or targeted advertising.</b>",
+           "uses no targeted advertising and uses Google Analytics only if you accept it.</b>",
+           "<li><b>Google Analytics 4</b> (Google Ireland Ltd / Google LLC), managed through Google Tag Manager: <b>only if you accept cookies</b> in the banner, it collects statistical data on the pages visited, where visits come from, device type and approximate location. Google states that GA4 does not log or store IP addresses. We use this data only to understand which content is useful; we do not use it for advertising or combine it with other data. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time via the \"Cookie preferences\" link at the bottom of every page. Data retention in Analytics: 14 months.</li>"),
+    "es": ("no usa cookies propias ni herramientas de análisis ni publicidad personalizada.</b>",
+           "no usa publicidad personalizada y usa Google Analytics solo si lo aceptas.</b>",
+           "<li><b>Google Analytics 4</b> (Google Ireland Ltd / Google LLC), gestionado mediante Google Tag Manager: <b>solo si aceptas las cookies</b> en el banner, recoge de forma estadística las páginas visitadas, la procedencia de las visitas, el tipo de dispositivo y la ubicación aproximada. Google declara que GA4 no registra ni almacena las direcciones IP. Usamos estos datos solo para saber qué contenidos son útiles; no los usamos para publicidad ni los cruzamos con otros datos. Base jurídica: tu consentimiento (art. 6.1.a RGPD), que puedes retirar en cualquier momento desde el enlace «Preferencias de cookies» al pie de cada página. Conservación de los datos en Analytics: 14 meses.</li>"),
+}
+
+
+def ga_privacy(corpo):
+    vecchio, nuovo, voce = GA_PRIV[S.lang()]
+    corpo = corpo.replace(vecchio, nuovo)
+    corpo = corpo.replace(L("non usa cookie propri, ", "", "no usa cookies propias, "), "")
+    return corpo.replace("</ul>\n<p>Cloudflare", voce + "</ul>\n<p>Cloudflare", 1).replace("</ul>\n<p>Cloudflare and Google", voce + "</ul>\n<p>Cloudflare and Google", 1).replace("</ul>\n<p>Cloudflare y Google", voce + "</ul>\n<p>Cloudflare y Google", 1)
+
+
+GA_COOKIE = {
+    "it": ("non installa cookie propri e non usa cookie di analisi, di profilazione o pubblicitari.</b> Per questo il sito non mostra un banner per il consenso.",
+           "usa cookie di analisi (Google Analytics) solo se li accetti dal banner, e non usa mai cookie di profilazione o pubblicitari.</b>",
+           "<tr><td>Cookie di analisi (statistiche)</td><td>No</td></tr>",
+           "<tr><td>Cookie di analisi (Google Analytics: <code>_ga</code>, <code>_ga_*</code>)</td><td>Sì, solo con il tuo consenso; durata fino a 2 anni</td></tr>",
+           "<h2>Caratteri tipografici di Google</h2>",
+           "<h2>Google Analytics e consenso</h2><p>Google Analytics 4, caricato tramite Google Tag Manager, si attiva solo dopo che clicchi «Accetta» nel banner. Se rifiuti, Tag Manager non viene nemmeno caricato. La tua scelta viene salvata nel browser (voce tecnica <code>pm_consenso</code>, senza dati personali) e puoi cambiarla in ogni momento dal link «Preferenze cookie» in fondo alla pagina. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Come Google usa i cookie</a>.</p>\n<h2>Caratteri tipografici di Google</h2>",
+           "<p>Il sito non usa nemmeno altre forme di memorizzazione nel browser (come localStorage).</p>", "",
+           "Se in futuro aggiungeremo statistiche o pubblicità", "Se in futuro aggiungeremo pubblicità"),
+    "en": ("does not set its own cookies and uses no analytics, profiling or advertising cookies.</b> That is why the site shows no consent banner.",
+           "uses analytics cookies (Google Analytics) only if you accept them in the banner, and never uses profiling or advertising cookies.</b>",
+           "<tr><td>Analytics cookies (statistics)</td><td>No</td></tr>",
+           "<tr><td>Analytics cookies (Google Analytics: <code>_ga</code>, <code>_ga_*</code>)</td><td>Yes, only with your consent; lasting up to 2 years</td></tr>",
+           "<h2>Google typefaces</h2>",
+           "<h2>Google Analytics and consent</h2><p>Google Analytics 4, loaded through Google Tag Manager, is only activated after you click \"Accept\" in the banner. If you reject, Tag Manager is not even loaded. Your choice is saved in your browser (a technical entry, <code>pm_consenso</code>, with no personal data) and you can change it at any time via the \"Cookie preferences\" link at the bottom of the page. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">How Google uses cookies</a>.</p>\n<h2>Google typefaces</h2>",
+           "<p>The site does not use other forms of browser storage either (such as localStorage).</p>", "",
+           "If we add statistics or advertising in the future", "If we add advertising in the future"),
+    "es": ("no instala cookies propias ni usa cookies de análisis, de perfilado ni publicitarias.</b> Por eso la web no muestra un banner de consentimiento.",
+           "usa cookies de análisis (Google Analytics) solo si las aceptas en el banner, y nunca usa cookies de perfilado ni publicitarias.</b>",
+           "<tr><td>Cookies de análisis (estadísticas)</td><td>No</td></tr>",
+           "<tr><td>Cookies de análisis (Google Analytics: <code>_ga</code>, <code>_ga_*</code>)</td><td>Sí, solo con tu consentimiento; duración de hasta 2 años</td></tr>",
+           "<h2>Tipografías de Google</h2>",
+           "<h2>Google Analytics y consentimiento</h2><p>Google Analytics 4, cargado mediante Google Tag Manager, solo se activa después de que hagas clic en «Aceptar» en el banner. Si rechazas, Tag Manager ni siquiera se carga. Tu elección se guarda en el navegador (una entrada técnica, <code>pm_consenso</code>, sin datos personales) y puedes cambiarla en cualquier momento desde el enlace «Preferencias de cookies» al pie de la página. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Cómo usa Google las cookies</a>.</p>\n<h2>Tipografías de Google</h2>",
+           "<p>La web tampoco usa otras formas de almacenamiento en el navegador (como localStorage).</p>", "",
+           "Si en el futuro añadimos estadísticas o publicidad", "Si en el futuro añadimos publicidad"),
+}
+
+
+def ga_cookie(corpo):
+    t = GA_COOKIE[S.lang()]
+    for a, b in zip(t[0::2], t[1::2]):
+        assert a in corpo, a[:50]
+        corpo = corpo.replace(a, b)
+    return corpo
 
 
 def main():
