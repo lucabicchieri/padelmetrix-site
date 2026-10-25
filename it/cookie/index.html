@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});window.pmGTM=function(){if(window.pmGTMok)return;window.pmGTMok=1;gtag('consent','update',{analytics_storage:'granted'});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TGBVDSQM');};try{if(localStorage.getItem('pm_consenso')==='si')window.pmGTM();}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cookie policy | PadelMetrix</title>
 <meta name="description" content="PadelMetrix non usa cookie propri, di analisi o pubblicitari: quali cookie tecnici possono essere impostati e come gestirli.">
@@ -139,7 +139,7 @@ footer a{color:#C9D6CF}
 <main class="wrap">
 <nav class="crumbs" aria-label="Percorso"><a href="/it/">Home</a><span>›</span><span>Cookie</span></nav>
 <div class="intro"><h1>Cookie policy</h1>
-<p><b>PadelMetrix non installa cookie propri e non usa cookie di analisi, di profilazione o pubblicitari.</b> Per questo il sito non mostra un banner per il consenso.</p>
+<p><b>PadelMetrix usa cookie di analisi (Google Analytics) solo se li accetti dal banner, e non usa mai cookie di profilazione o pubblicitari.</b></p>
 <p class="note">Ultimo aggiornamento: 24 ottobre 2026</p></div>
 <div class="prose">
 <h2>Cosa sono i cookie</h2>
@@ -147,12 +147,13 @@ footer a{color:#C9D6CF}
 <h2>Cookie usati da questo sito</h2>
 <table class="tab"><thead><tr><th>Tipo</th><th>Usati?</th></tr></thead><tbody>
 <tr><td>Cookie tecnici propri</td><td>No</td></tr>
-<tr><td>Cookie di analisi (statistiche)</td><td>No</td></tr>
+<tr><td>Cookie di analisi (Google Analytics: <code>_ga</code>, <code>_ga_*</code>)</td><td>Sì, solo con il tuo consenso; durata fino a 2 anni</td></tr>
 <tr><td>Cookie di profilazione o pubblicitari</td><td>No</td></tr>
 <tr><td>Cookie tecnici del fornitore di hosting (Cloudflare)</td><td>Solo se necessari alla sicurezza</td></tr>
 </tbody></table>
 <p>Cloudflare, che ospita il sito, può impostare cookie tecnici di sicurezza (per esempio <code>__cf_bm</code>) per distinguere i visitatori reali dai bot. Sono necessari al funzionamento sicuro del sito e non richiedono consenso. <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" rel="noopener" target="_blank">Elenco dei cookie di Cloudflare</a>.</p>
-<p>Il sito non usa nemmeno altre forme di memorizzazione nel browser (come localStorage).</p>
+
+<h2>Google Analytics e consenso</h2><p>Google Analytics 4, caricato tramite Google Tag Manager, si attiva solo dopo che clicchi «Accetta» nel banner. Se rifiuti, Tag Manager non viene nemmeno caricato. La tua scelta viene salvata nel browser (voce tecnica <code>pm_consenso</code>, senza dati personali) e puoi cambiarla in ogni momento dal link «Preferenze cookie» in fondo alla pagina. <a href="https://policies.google.com/technologies/cookies" rel="noopener" target="_blank">Come Google usa i cookie</a>.</p>
 <h2>Caratteri tipografici di Google</h2>
 <p>I caratteri del sito sono caricati da Google Fonts. Google Fonts non imposta cookie, ma il tuo browser contatta i server di Google, che ricevono il tuo indirizzo IP. Dettagli nell'<a href="/it/privacy/">informativa sulla privacy</a>.</p>
 <h2>Siti esterni</h2>
@@ -160,14 +161,19 @@ footer a{color:#C9D6CF}
 <h2>Come gestire i cookie</h2>
 <p>Puoi vedere e cancellare i cookie dalle impostazioni del browser, e bloccarli tutti o solo quelli di terze parti. Su questo sito bloccarli non cambia nulla nel funzionamento delle pagine.</p>
 <h2>Contatti</h2>
-<p>Per domande: <a href="mailto:info@padelmetrix.com">info@padelmetrix.com</a>. Se in futuro aggiungeremo statistiche o pubblicità, aggiorneremo questa pagina e chiederemo il consenso dove serve.</p>
+<p>Per domande: <a href="mailto:info@padelmetrix.com">info@padelmetrix.com</a>. Se in futuro aggiungeremo pubblicità, aggiorneremo questa pagina e chiederemo il consenso dove serve.</p>
 </div>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix è un sito indipendente di Luca Bicchieri. In qualità di Affiliato Amazon, PadelMetrix riceve un guadagno dagli acquisti idonei. Alcuni link verso altri negozi sono link di affiliazione.</span>
-<span><a href="/it/racchette/">Racchette</a> · <a href="/it/guide/">Guide</a> · <a href="/it/domande/">Domande</a> · <a href="/it/glossario/">Glossario</a> · <a href="/it/dati/">Dati aperti</a> · <a href="/it/chi-siamo/">Chi siamo e metodo</a> · <a href="/it/privacy/">Privacy</a> · <a href="/it/cookie/">Cookie</a> · © 2026 PadelMetrix</span>
+<span><a href="/it/racchette/">Racchette</a> · <a href="/it/guide/">Guide</a> · <a href="/it/domande/">Domande</a> · <a href="/it/glossario/">Glossario</a> · <a href="/it/dati/">Dati aperti</a> · <a href="/it/chi-siamo/">Chi siamo e metodo</a> · <a href="/it/privacy/">Privacy</a> · <a href="/it/cookie/">Cookie</a> · <a href="#" onclick="return pmApriCookie()">Preferenze cookie</a> · © 2026 PadelMetrix</span>
 </div></footer>
 
-
+<style>
+#pm-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;background:#fff;color:#1F2D27;border:1px solid #E1E5DF;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.15);padding:16px 18px;display:none;font:15px/1.5 'IBM Plex Sans',system-ui,sans-serif}
+#pm-cc p{margin:0 0 12px}#pm-cc .b{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#pm-cc button{flex:1 1 140px;font:600 15px 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:10px;cursor:pointer;border:1.5px solid #0F3D2E;background:#fff;color:#0F3D2E}
+#pm-cc button.ok{background:#0F3D2E;color:#fff}#pm-cc a{color:#0F3D2E;font-size:14px}
+</style><div id="pm-cc" role="dialog" aria-live="polite" aria-label="Cookie"><p>Usiamo cookie di Google Analytics per contare le visite e capire quali pagine sono utili. Li attiviamo solo se accetti.</p><div class="b"><button type="button" id="pm-no">Rifiuta</button><button type="button" class="ok" id="pm-ok">Accetta</button><a href="/it/cookie/">Cookie policy</a></div></div><script>(function(){var b=document.getElementById('pm-cc');function set(v){try{localStorage.setItem('pm_consenso',v)}catch(e){}b.style.display='none';if(v==='si')window.pmGTM();else{document.cookie.split(';').forEach(function(x){var n=x.split('=')[0].trim();if(n.indexOf('_ga')===0){document.cookie=n+'=;Max-Age=0;path=/';document.cookie=n+'=;Max-Age=0;path=/;domain=.'+location.hostname.replace(/^www\./,'');}});if(window.pmGTMok)location.reload();}}document.getElementById('pm-ok').onclick=function(){set('si')};document.getElementById('pm-no').onclick=function(){set('no')};window.pmApriCookie=function(){b.style.display='block';return false};var c=null;try{c=localStorage.getItem('pm_consenso')}catch(e){}if(!c)b.style.display='block';})();</script>
 </body>
 </html>

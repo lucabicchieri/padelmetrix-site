@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});window.pmGTM=function(){if(window.pmGTMok)return;window.pmGTMok=1;gtag('consent','update',{analytics_storage:'granted'});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TGBVDSQM');};try{if(localStorage.getItem('pm_consenso')==='si')window.pmGTM();}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy | PadelMetrix</title>
 <meta name="description" content="How PadelMetrix handles personal data: no own cookies, no analytics; browsing data, third-party services and your GDPR rights.">
@@ -139,7 +139,7 @@ footer a{color:#C9D6CF}
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a><span>›</span><span>Privacy</span></nav>
 <div class="intro"><h1>Privacy policy</h1>
-<p><b>PadelMetrix does not ask for personal data, does not set its own cookies and uses no analytics or targeted advertising.</b> This page explains which technical data are still processed when you visit the site and what your rights are under EU Regulation 2016/679 (GDPR).</p>
+<p><b>PadelMetrix does not ask for personal data, uses no targeted advertising and uses Google Analytics only if you accept it.</b> This page explains which technical data are still processed when you visit the site and what your rights are under EU Regulation 2016/679 (GDPR).</p>
 <p class="note">Last updated: 24 October 2026</p></div>
 <div class="prose">
 <h2>Data controller</h2>
@@ -154,7 +154,7 @@ footer a{color:#C9D6CF}
 <ul>
 <li><b>Cloudflare</b> (Cloudflare, Inc.) hosts the site and protects its security, processing browsing data on behalf of the controller. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Cloudflare privacy policy</a>.</li>
 <li><b>Google Fonts</b> (Google Ireland Ltd / Google LLC) provides the typefaces: when you open a page, your browser downloads them from Google's servers, which receive your IP address. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google privacy policy</a>.</li>
-</ul>
+<li><b>Google Analytics 4</b> (Google Ireland Ltd / Google LLC), managed through Google Tag Manager: <b>only if you accept cookies</b> in the banner, it collects statistical data on the pages visited, where visits come from, device type and approximate location. Google states that GA4 does not log or store IP addresses. We use this data only to understand which content is useful; we do not use it for advertising or combine it with other data. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time via the "Cookie preferences" link at the bottom of every page. Data retention in Analytics: 14 months.</li><li><b>Google Analytics 4</b> (Google Ireland Ltd / Google LLC), managed through Google Tag Manager: <b>only if you accept cookies</b> in the banner, it collects statistical data on the pages visited, where visits come from, device type and approximate location. Google states that GA4 does not log or store IP addresses. We use this data only to understand which content is useful; we do not use it for advertising or combine it with other data. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time via the "Cookie preferences" link at the bottom of every page. Data retention in Analytics: 14 months.</li></ul>
 <p>Cloudflare and Google may also process data in the United States; both participate in the EU-U.S. Data Privacy Framework.</p>
 <h2>Shop links and affiliate links</h2>
 <p>Racket pages contain links to external shops, including Amazon. Some are affiliate links: if you buy, PadelMetrix may receive a commission. No data passes from PadelMetrix to the shop: when you click you leave the site, and from then on the shop's privacy and cookie policies apply. As an Amazon Associate, PadelMetrix earns from qualifying purchases.</p>
@@ -170,9 +170,14 @@ footer a{color:#C9D6CF}
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix is an independent website by Luca Bicchieri. As an Amazon Associate, PadelMetrix earns from qualifying purchases. Some links to other shops are affiliate links.</span>
-<span><a href="/en/rackets/">Rackets</a> · <a href="/en/guides/">Guides</a> · <a href="/en/questions/">Questions</a> · <a href="/en/glossary/">Glossary</a> · <a href="/en/data/">Open data</a> · <a href="/en/about/">About and method</a> · <a href="/en/privacy/">Privacy</a> · <a href="/en/cookies/">Cookies</a> · © 2026 PadelMetrix</span>
+<span><a href="/en/rackets/">Rackets</a> · <a href="/en/guides/">Guides</a> · <a href="/en/questions/">Questions</a> · <a href="/en/glossary/">Glossary</a> · <a href="/en/data/">Open data</a> · <a href="/en/about/">About and method</a> · <a href="/en/privacy/">Privacy</a> · <a href="/en/cookies/">Cookies</a> · <a href="#" onclick="return pmApriCookie()">Cookie preferences</a> · © 2026 PadelMetrix</span>
 </div></footer>
 
-
+<style>
+#pm-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;background:#fff;color:#1F2D27;border:1px solid #E1E5DF;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.15);padding:16px 18px;display:none;font:15px/1.5 'IBM Plex Sans',system-ui,sans-serif}
+#pm-cc p{margin:0 0 12px}#pm-cc .b{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+#pm-cc button{flex:1 1 140px;font:600 15px 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:10px;cursor:pointer;border:1.5px solid #0F3D2E;background:#fff;color:#0F3D2E}
+#pm-cc button.ok{background:#0F3D2E;color:#fff}#pm-cc a{color:#0F3D2E;font-size:14px}
+</style><div id="pm-cc" role="dialog" aria-live="polite" aria-label="Cookie"><p>We use Google Analytics cookies to count visits and see which pages are useful. We only turn them on if you accept.</p><div class="b"><button type="button" id="pm-no">Reject</button><button type="button" class="ok" id="pm-ok">Accept</button><a href="/en/cookies/">Cookie policy</a></div></div><script>(function(){var b=document.getElementById('pm-cc');function set(v){try{localStorage.setItem('pm_consenso',v)}catch(e){}b.style.display='none';if(v==='si')window.pmGTM();else{document.cookie.split(';').forEach(function(x){var n=x.split('=')[0].trim();if(n.indexOf('_ga')===0){document.cookie=n+'=;Max-Age=0;path=/';document.cookie=n+'=;Max-Age=0;path=/;domain=.'+location.hostname.replace(/^www\./,'');}});if(window.pmGTMok)location.reload();}}document.getElementById('pm-ok').onclick=function(){set('si')};document.getElementById('pm-no').onclick=function(){set('no')};window.pmApriCookie=function(){b.style.display='block';return false};var c=null;try{c=localStorage.getItem('pm_consenso')}catch(e){}if(!c)b.style.display='block';})();</script>
 </body>
 </html>

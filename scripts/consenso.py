@@ -11,7 +11,7 @@ Funzionamento (Consent Mode di Google in modalità "base"):
 - nessun cookie pubblicitario: ad_storage resta sempre negato.
 """
 
-GTM_ID = None   # es. "GTM-ABC1234"
+GTM_ID = "GTM-TGBVDSQM"
 GA4_ID = "G-GMK0SLHCDG"  # configurato dentro Tag Manager
 
 
