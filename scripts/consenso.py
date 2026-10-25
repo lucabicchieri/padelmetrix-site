@@ -12,7 +12,7 @@ Funzionamento (Consent Mode di Google in modalità "base"):
 """
 
 GTM_ID = None   # es. "GTM-ABC1234"
-GA4_ID = None   # es. "G-ABCDEF1234" (configurato dentro Tag Manager)
+GA4_ID = "G-GMK0SLHCDG"  # configurato dentro Tag Manager
 
 
 def attivo():
