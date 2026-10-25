@@ -94,6 +94,7 @@ SEZ = {
     "dati": ("dati", "data", "datos"),
     "glossario": ("glossario", "glossary", "glosario"),
     "domande": ("domande", "questions", "preguntas"),
+    "pickleball": ("pickleball", "pickleball", "pickleball"),
     "privacy": ("privacy", "privacy", "privacidad"),
     "cookie": ("cookie", "cookies", "cookies"),
 }
@@ -320,6 +321,7 @@ def nav():
     return [("racchette", L("Racchette", "Rackets", "Palas"), P("racchette")),
             ("abbigliamento", L("Abbigliamento", "Clothing", "Ropa"), P("abbigliamento")),
             ("bambini", L("Bambini", "Kids", "Niños"), P("bambini")),
+            ("pickleball", "Pickleball", P("pickleball")),
             ("confronta", L("Confronta", "Compare", "Comparar"), P("confronta")),
             ("guide", L("Guide", "Guides", "Guías"), P("guide"))]
 

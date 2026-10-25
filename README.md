@@ -29,6 +29,7 @@ I dati grezzi di 251 racchette sono in `scripts/dati_lotto/*.py` (con le fonti d
     python3 scripts/genera_sezioni.py    # Racchette, marche, confronti, guide, Bambini
     python3 scripts/genera_geo.py        # chi siamo, report, dati aperti, glossario, domande, llms.txt
     python3 scripts/genera_legale.py     # privacy e cookie
+    python3 scripts/genera_pickleball.py # sezione Pickleball (dati in scripts/dati_pickleball.py)
     python3 scripts/genera_home.py
     python3 scripts/genera_sitemap.py
 

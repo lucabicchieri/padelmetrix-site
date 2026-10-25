@@ -266,7 +266,9 @@ def pagina(lang, db):
     t = T[lang]
     keys = ["racchette", "abbigliamento", "bambini", "confronta", "selettore"]
     S.set_lang(lang)
-    nav = "".join(f'<a href="{P("guide") if k == "selettore" else url(lang, k)}">{e(n)}</a>' for k, n in zip(keys, t["nav"]))
+    voci_nav = [(P("guide") if k == "selettore" else url(lang, k), n) for k, n in zip(keys, t["nav"])]
+    voci_nav.insert(3, (P("pickleball"), "Pickleball"))
+    nav = "".join(f'<a href="{u}">{e(n)}</a>' for u, n in voci_nav)
     langs = " · ".join(f'<a{" class=\"on\"" if l == lang else ""} href="/{l}/" hreflang="{l}">{l.upper()}</a>' for l in LINGUE)
     marche = {}
     for d in db.values():

@@ -1,0 +1,362 @@
+[
+{
+"path": "/it/pickleball/",
+"alt": {
+"it": "/it/pickleball/",
+"en": "/en/pickleball/",
+"es": "/es/pickleball/"
+}
+},
+{
+"path": "/it/pickleball/joola-perseus-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-pro-v-16mm/",
+"en": "/en/pickleball/joola-perseus-pro-v-16mm/",
+"es": "/es/pickleball/joola-perseus-pro-v-16mm/"
+}
+},
+{
+"path": "/it/pickleball/joola-perseus-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-pro-v-14mm/",
+"en": "/en/pickleball/joola-perseus-pro-v-14mm/",
+"es": "/es/pickleball/joola-perseus-pro-v-14mm/"
+}
+},
+{
+"path": "/it/pickleball/joola-hyperion-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-pro-v-14mm/",
+"en": "/en/pickleball/joola-hyperion-pro-v-14mm/",
+"es": "/es/pickleball/joola-hyperion-pro-v-14mm/"
+}
+},
+{
+"path": "/it/pickleball/joola-hyperion-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-pro-v-16mm/",
+"en": "/en/pickleball/joola-hyperion-pro-v-16mm/",
+"es": "/es/pickleball/joola-hyperion-pro-v-16mm/"
+}
+},
+{
+"path": "/it/pickleball/joola-scorpeus-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-scorpeus-pro-v-16mm/",
+"en": "/en/pickleball/joola-scorpeus-pro-v-16mm/",
+"es": "/es/pickleball/joola-scorpeus-pro-v-16mm/"
+}
+},
+{
+"path": "/it/pickleball/joola-scorpeus-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-scorpeus-pro-v-14mm/",
+"en": "/en/pickleball/joola-scorpeus-pro-v-14mm/",
+"es": "/es/pickleball/joola-scorpeus-pro-v-14mm/"
+}
+},
+{
+"path": "/it/pickleball/joola-hyperion-cfs-16/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-cfs-16/",
+"en": "/en/pickleball/joola-hyperion-cfs-16/",
+"es": "/es/pickleball/joola-hyperion-cfs-16/"
+}
+},
+{
+"path": "/it/pickleball/joola-perseus-cfs-14/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-cfs-14/",
+"en": "/en/pickleball/joola-perseus-cfs-14/",
+"es": "/es/pickleball/joola-perseus-cfs-14/"
+}
+},
+{
+"path": "/it/pickleball/joola-hyperion-cas-16/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-cas-16/",
+"en": "/en/pickleball/joola-hyperion-cas-16/",
+"es": "/es/pickleball/joola-hyperion-cas-16/"
+}
+},
+{
+"path": "/it/pickleball/joola-solaire-cfs-14/",
+"alt": {
+"it": "/it/pickleball/joola-solaire-cfs-14/",
+"en": "/en/pickleball/joola-solaire-cfs-14/",
+"es": "/es/pickleball/joola-solaire-cfs-14/"
+}
+},
+{
+"path": "/it/pickleball/joola-agassi-champion-12mm/",
+"alt": {
+"it": "/it/pickleball/joola-agassi-champion-12mm/",
+"en": "/en/pickleball/joola-agassi-champion-12mm/",
+"es": "/es/pickleball/joola-agassi-champion-12mm/"
+}
+},
+{
+"path": "/it/pickleball/joola-essentials/",
+"alt": {
+"it": "/it/pickleball/joola-essentials/",
+"en": "/en/pickleball/joola-essentials/",
+"es": "/es/pickleball/joola-essentials/"
+}
+},
+{
+"path": "/it/pickleball/viclion-set-2-racchette-carbonio/",
+"alt": {
+"it": "/it/pickleball/viclion-set-2-racchette-carbonio/",
+"en": "/en/pickleball/viclion-set-2-racchette-carbonio/",
+"es": "/es/pickleball/viclion-set-2-racchette-carbonio/"
+}
+},
+{
+"path": "/it/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"alt": {
+"it": "/it/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"en": "/en/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"es": "/es/pickleball/viclion-set-2-racchette-fibra-di-vetro/"
+}
+},
+{
+"path": "/en/pickleball/",
+"alt": {
+"it": "/it/pickleball/",
+"en": "/en/pickleball/",
+"es": "/es/pickleball/"
+}
+},
+{
+"path": "/en/pickleball/joola-perseus-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-pro-v-16mm/",
+"en": "/en/pickleball/joola-perseus-pro-v-16mm/",
+"es": "/es/pickleball/joola-perseus-pro-v-16mm/"
+}
+},
+{
+"path": "/en/pickleball/joola-perseus-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-pro-v-14mm/",
+"en": "/en/pickleball/joola-perseus-pro-v-14mm/",
+"es": "/es/pickleball/joola-perseus-pro-v-14mm/"
+}
+},
+{
+"path": "/en/pickleball/joola-hyperion-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-pro-v-14mm/",
+"en": "/en/pickleball/joola-hyperion-pro-v-14mm/",
+"es": "/es/pickleball/joola-hyperion-pro-v-14mm/"
+}
+},
+{
+"path": "/en/pickleball/joola-hyperion-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-pro-v-16mm/",
+"en": "/en/pickleball/joola-hyperion-pro-v-16mm/",
+"es": "/es/pickleball/joola-hyperion-pro-v-16mm/"
+}
+},
+{
+"path": "/en/pickleball/joola-scorpeus-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-scorpeus-pro-v-16mm/",
+"en": "/en/pickleball/joola-scorpeus-pro-v-16mm/",
+"es": "/es/pickleball/joola-scorpeus-pro-v-16mm/"
+}
+},
+{
+"path": "/en/pickleball/joola-scorpeus-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-scorpeus-pro-v-14mm/",
+"en": "/en/pickleball/joola-scorpeus-pro-v-14mm/",
+"es": "/es/pickleball/joola-scorpeus-pro-v-14mm/"
+}
+},
+{
+"path": "/en/pickleball/joola-hyperion-cfs-16/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-cfs-16/",
+"en": "/en/pickleball/joola-hyperion-cfs-16/",
+"es": "/es/pickleball/joola-hyperion-cfs-16/"
+}
+},
+{
+"path": "/en/pickleball/joola-perseus-cfs-14/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-cfs-14/",
+"en": "/en/pickleball/joola-perseus-cfs-14/",
+"es": "/es/pickleball/joola-perseus-cfs-14/"
+}
+},
+{
+"path": "/en/pickleball/joola-hyperion-cas-16/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-cas-16/",
+"en": "/en/pickleball/joola-hyperion-cas-16/",
+"es": "/es/pickleball/joola-hyperion-cas-16/"
+}
+},
+{
+"path": "/en/pickleball/joola-solaire-cfs-14/",
+"alt": {
+"it": "/it/pickleball/joola-solaire-cfs-14/",
+"en": "/en/pickleball/joola-solaire-cfs-14/",
+"es": "/es/pickleball/joola-solaire-cfs-14/"
+}
+},
+{
+"path": "/en/pickleball/joola-agassi-champion-12mm/",
+"alt": {
+"it": "/it/pickleball/joola-agassi-champion-12mm/",
+"en": "/en/pickleball/joola-agassi-champion-12mm/",
+"es": "/es/pickleball/joola-agassi-champion-12mm/"
+}
+},
+{
+"path": "/en/pickleball/joola-essentials/",
+"alt": {
+"it": "/it/pickleball/joola-essentials/",
+"en": "/en/pickleball/joola-essentials/",
+"es": "/es/pickleball/joola-essentials/"
+}
+},
+{
+"path": "/en/pickleball/viclion-set-2-racchette-carbonio/",
+"alt": {
+"it": "/it/pickleball/viclion-set-2-racchette-carbonio/",
+"en": "/en/pickleball/viclion-set-2-racchette-carbonio/",
+"es": "/es/pickleball/viclion-set-2-racchette-carbonio/"
+}
+},
+{
+"path": "/en/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"alt": {
+"it": "/it/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"en": "/en/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"es": "/es/pickleball/viclion-set-2-racchette-fibra-di-vetro/"
+}
+},
+{
+"path": "/es/pickleball/",
+"alt": {
+"it": "/it/pickleball/",
+"en": "/en/pickleball/",
+"es": "/es/pickleball/"
+}
+},
+{
+"path": "/es/pickleball/joola-perseus-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-pro-v-16mm/",
+"en": "/en/pickleball/joola-perseus-pro-v-16mm/",
+"es": "/es/pickleball/joola-perseus-pro-v-16mm/"
+}
+},
+{
+"path": "/es/pickleball/joola-perseus-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-pro-v-14mm/",
+"en": "/en/pickleball/joola-perseus-pro-v-14mm/",
+"es": "/es/pickleball/joola-perseus-pro-v-14mm/"
+}
+},
+{
+"path": "/es/pickleball/joola-hyperion-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-pro-v-14mm/",
+"en": "/en/pickleball/joola-hyperion-pro-v-14mm/",
+"es": "/es/pickleball/joola-hyperion-pro-v-14mm/"
+}
+},
+{
+"path": "/es/pickleball/joola-hyperion-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-pro-v-16mm/",
+"en": "/en/pickleball/joola-hyperion-pro-v-16mm/",
+"es": "/es/pickleball/joola-hyperion-pro-v-16mm/"
+}
+},
+{
+"path": "/es/pickleball/joola-scorpeus-pro-v-16mm/",
+"alt": {
+"it": "/it/pickleball/joola-scorpeus-pro-v-16mm/",
+"en": "/en/pickleball/joola-scorpeus-pro-v-16mm/",
+"es": "/es/pickleball/joola-scorpeus-pro-v-16mm/"
+}
+},
+{
+"path": "/es/pickleball/joola-scorpeus-pro-v-14mm/",
+"alt": {
+"it": "/it/pickleball/joola-scorpeus-pro-v-14mm/",
+"en": "/en/pickleball/joola-scorpeus-pro-v-14mm/",
+"es": "/es/pickleball/joola-scorpeus-pro-v-14mm/"
+}
+},
+{
+"path": "/es/pickleball/joola-hyperion-cfs-16/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-cfs-16/",
+"en": "/en/pickleball/joola-hyperion-cfs-16/",
+"es": "/es/pickleball/joola-hyperion-cfs-16/"
+}
+},
+{
+"path": "/es/pickleball/joola-perseus-cfs-14/",
+"alt": {
+"it": "/it/pickleball/joola-perseus-cfs-14/",
+"en": "/en/pickleball/joola-perseus-cfs-14/",
+"es": "/es/pickleball/joola-perseus-cfs-14/"
+}
+},
+{
+"path": "/es/pickleball/joola-hyperion-cas-16/",
+"alt": {
+"it": "/it/pickleball/joola-hyperion-cas-16/",
+"en": "/en/pickleball/joola-hyperion-cas-16/",
+"es": "/es/pickleball/joola-hyperion-cas-16/"
+}
+},
+{
+"path": "/es/pickleball/joola-solaire-cfs-14/",
+"alt": {
+"it": "/it/pickleball/joola-solaire-cfs-14/",
+"en": "/en/pickleball/joola-solaire-cfs-14/",
+"es": "/es/pickleball/joola-solaire-cfs-14/"
+}
+},
+{
+"path": "/es/pickleball/joola-agassi-champion-12mm/",
+"alt": {
+"it": "/it/pickleball/joola-agassi-champion-12mm/",
+"en": "/en/pickleball/joola-agassi-champion-12mm/",
+"es": "/es/pickleball/joola-agassi-champion-12mm/"
+}
+},
+{
+"path": "/es/pickleball/joola-essentials/",
+"alt": {
+"it": "/it/pickleball/joola-essentials/",
+"en": "/en/pickleball/joola-essentials/",
+"es": "/es/pickleball/joola-essentials/"
+}
+},
+{
+"path": "/es/pickleball/viclion-set-2-racchette-carbonio/",
+"alt": {
+"it": "/it/pickleball/viclion-set-2-racchette-carbonio/",
+"en": "/en/pickleball/viclion-set-2-racchette-carbonio/",
+"es": "/es/pickleball/viclion-set-2-racchette-carbonio/"
+}
+},
+{
+"path": "/es/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"alt": {
+"it": "/it/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"en": "/en/pickleball/viclion-set-2-racchette-fibra-di-vetro/",
+"es": "/es/pickleball/viclion-set-2-racchette-fibra-di-vetro/"
+}
+}
+]
