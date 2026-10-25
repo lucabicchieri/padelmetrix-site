@@ -19,6 +19,8 @@ import traduci as T  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 AMAZON = {"it": "www.amazon.it", "en": "www.amazon.co.uk", "es": "www.amazon.es"}
+# Tracking ID del Programma Affiliazione Amazon per paese (None = programma non ancora attivo)
+AMAZON_TAG = {"it": "padelmetrix-21", "en": None, "es": None}
 
 
 def chips(items):
@@ -59,6 +61,9 @@ def store(s):
     u = s["url"]
     if s.get("amazon"):
         u = u.replace("www.amazon.it", AMAZON[S.lang()])
+        tag = AMAZON_TAG[S.lang()]
+        if tag and "tag=" not in u:
+            u += ("&" if "?" in u else "?") + "tag=" + tag
     return f'<div class="store"><div><strong>{e(s["nome"])}</strong><small>{e(tr(s["nota"]))}</small></div><a class="{cls}" href="{e(u)}" rel="{rel}" target="_blank">{e(tr(s["pulsante"]))}</a></div>'
 
 
