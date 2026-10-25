@@ -93,7 +93,7 @@ def nome(p):
 
 def paddle_svg(f, width=150, label=""):
     """Illustrazione di una racchetta da pickleball: allungata, larga o standard."""
-    w, h = {"allungata": (96, 150), "larga": (110, 140), "standard": (104, 140)}[f]
+    w, h = {"allungata": (96, 150), "larga": (110, 140), "standard": (104, 140), "diamante": (104, 142), "ibrida": (100, 146)}[f]
     x = (200 - w) / 2
     y = 14
     fori = "".join(f'<circle cx="{cx}" cy="{cy}" r="3" fill="#FAFAF7" fill-opacity="0.18"/>' for cx in (80, 100, 120) for cy in (60, 85, 110))
@@ -326,6 +326,8 @@ f.addEventListener('change',run);run();})();</script>"""
 
 def elenco():
     path, alt = P("pickleball"), ALT("pickleball")
+    mm = sorted({p["marca"] for p in PADDLE})
+    mtxt = L(", ".join(mm[:-1]) + " e " + mm[-1], ", ".join(mm[:-1]) + " and " + mm[-1], ", ".join(mm[:-1]) + " y " + mm[-1])
     cr, cr_ld = crumbs([S.home_crumb(), ("Pickleball", None)])
     marche = sorted({p["marca"] for p in PADDLE})
     livs = [k for k in S.LIV if any(p["livello"] == k for p in PADDLE)]
@@ -352,19 +354,19 @@ def elenco():
              "That the paddle meets the rules of the two main US bodies (USA Pickleball and the United Pickleball Association) and is allowed in their tournaments. It is not needed for recreational play.",
              "Que la pala cumple las reglas de las dos principales federaciones estadounidenses (USA Pickleball y United Pickleball Association) y está admitida en sus torneos. Para jugar por diversión no hace falta.")),
           (L("Quanto deve pesare una racchetta da pickleball?", "How much should a pickleball paddle weigh?", "¿Cuánto debe pesar una pala de pickleball?"),
-           L("Tra le racchette in questa pagina il peso va da circa 220 a 245 grammi (7,6–8,6 oz). Le più pesanti sono più stabili e potenti, le più leggere più rapide a rete e meno faticose per il braccio.",
-             "Among the paddles on this page, weight ranges from about 220 to 245 grams (7.6–8.6 oz). Heavier paddles are more stable and powerful, lighter ones quicker at the net and easier on the arm.",
-             "Entre las palas de esta página el peso va de unos 220 a 245 gramos (7,6–8,6 oz). Las más pesadas son más estables y potentes, las más ligeras más rápidas en la red y menos cansadas para el brazo."))]
+           L("Tra le racchette in questa pagina il peso va da circa 200 a 245 grammi (7,1–8,6 oz). Le più pesanti sono più stabili e potenti, le più leggere più rapide a rete e meno faticose per il braccio.",
+             "Among the paddles on this page, weight ranges from about 200 to 245 grams (7.1–8.6 oz). Heavier paddles are more stable and powerful, lighter ones quicker at the net and easier on the arm.",
+             "Entre las palas de esta página el peso va de unos 200 a 245 gramos (7,1–8,6 oz). Las más pesadas son más estables y potentes, las más ligeras más rápidas en la red y menos cansadas para el brazo."))]
     corpo = f"""{cr}
 <div class="intro"><h1>{L("Racchette da pickleball: schede e opinioni", "Pickleball paddles: specs and reviews", "Palas de pickleball: fichas y opiniones")}</h1>
-<p><b>{L(f"{len(PADDLE)} racchette da pickleball (paddle) di JOOLA e VICLION, tutte acquistabili su Amazon, con dati tecnici, misure di laboratorio dove esistono e sintesi delle recensioni indipendenti.", f"{len(PADDLE)} pickleball paddles from JOOLA and VICLION, all available on Amazon, with specs, lab measurements where available and summaries of independent reviews.", f"{len(PADDLE)} palas de pickleball (paddle) de JOOLA y VICLION, todas disponibles en Amazon, con datos técnicos, medidas de laboratorio cuando existen y resumen de las reseñas independientes.")}</b> {L("Per chi inizia vanno bene le racchette in fibra di vetro da 12–14 mm o i set da due; chi gioca già con regolarità guarda al carbonio e allo spessore del nucleo.", "Beginners do well with 12–14 mm fiberglass paddles or two-paddle sets; regular players should look at carbon faces and core thickness.", "Para quien empieza van bien las palas de fibra de vidrio de 12–14 mm o los sets de dos; quien ya juega con regularidad debe fijarse en el carbono y el grosor del núcleo.")}</p>{S.data_riga()}</div>
+<p><b>{L(f"{len(PADDLE)} racchette da pickleball (paddle) di {mtxt}, con dati tecnici, misure di laboratorio dove esistono, sintesi delle recensioni indipendenti e link per l'acquisto su Amazon.", f"{len(PADDLE)} pickleball paddles from {mtxt}, with specs, lab measurements where available, summaries of independent reviews and links to buy on Amazon.", f"{len(PADDLE)} palas de pickleball (paddle) de {mtxt}, con datos técnicos, medidas de laboratorio cuando existen, resumen de las reseñas independientes y enlaces de compra en Amazon.")}</b> {L("Per chi inizia vanno bene le racchette in fibra di vetro da 12–14 mm o i set da due; chi gioca già con regolarità guarda al carbonio e allo spessore del nucleo.", "Beginners do well with 12–14 mm fiberglass paddles or two-paddle sets; regular players should look at carbon faces and core thickness.", "Para quien empieza van bien las palas de fibra de vidrio de 12–14 mm o los sets de dos; quien ya juega con regularidad debe fijarse en el carbono y el grosor del núcleo.")}</p>{S.data_riga()}</div>
 {form}
 <p class="conta" id="conta">{len(PADDLE)} {L("racchette", "paddles", "palas")}</p>
 <div class="rgrid">{cards}</div>
 <div class="prose">
 <h2>{L("Come scegliere la racchetta da pickleball", "How to choose a pickleball paddle", "Cómo elegir la pala de pickleball")}</h2>
 <ul>
-<li><b>{L("Forma", "Shape", "Forma")}:</b> {L("allungata (circa 42 × 19 cm) per portata e potenza; larga (circa 41 × 20 cm) per stabilità e uno sweet spot più ampio.", "elongated (about 16.5 × 7.5 in) for reach and power; widebody (about 16 × 8 in) for stability and a larger sweet spot.", "alargada (unos 42 × 19 cm) para alcance y potencia; ancha (unos 41 × 20 cm) para estabilidad y un punto dulce más amplio.")}</li>
+<li><b>{L("Forma", "Shape", "Forma")}:</b> {L("allungata (circa 42 × 19 cm) per portata e potenza; larga o standard (circa 41 × 20 cm) per stabilità e uno sweet spot più ampio; a diamante o ibrida per un compromesso tra potenza e maneggevolezza.", "elongated (about 16.5 × 7.5 in) for reach and power; widebody or standard (about 16 × 8 in) for stability and a larger sweet spot; diamond or hybrid for a compromise between power and maneuverability.", "alargada (unos 42 × 19 cm) para alcance y potencia; ancha o estándar (unos 41 × 20 cm) para estabilidad y un punto dulce más amplio; diamante o híbrida para un compromiso entre potencia y manejabilidad.")}</li>
 <li><b>{L("Spessore", "Thickness", "Grosor")}:</b> {L("16 mm per controllo, 14 mm per reattività, 12 mm nelle racchette d'ingresso.", "16 mm for control, 14 mm for responsiveness, 12 mm on entry paddles.", "16 mm para control, 14 mm para reactividad, 12 mm en las palas de iniciación.")}</li>
 <li><b>{L("Faccia", "Face", "Cara")}:</b> {L("la fibra di vetro è più morbida ed economica; il carbonio testurizzato dà più controllo ed effetto.", "fiberglass is softer and cheaper; textured carbon gives more control and spin.", "la fibra de vidrio es más blanda y económica; el carbono texturizado da más control y efecto.")}</li>
 <li><b>{L("Manico", "Handle", "Mango")}:</b> {L("un manico lungo (circa 14 cm) aiuta chi gioca il rovescio a due mani.", "a long handle (about 5.5 in) helps two-handed backhands.", "un mango largo (unos 14 cm) ayuda a quien juega el revés a dos manos.")}</li>
@@ -374,11 +376,11 @@ def elenco():
     il = {"@context": "https://schema.org", "@type": "ItemList", "numberOfItems": len(PADDLE),
           "itemListElement": [{"@type": "ListItem", "position": i, "url": SITO + url_p(p), "name": titolo(p)} for i, p in enumerate(PADDLE, 1)]}
     faqld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
-    S.scrivi(path, pagina(L("Racchette da pickleball JOOLA e VICLION: schede, opinioni e prezzi | PadelMetrix", "JOOLA and VICLION pickleball paddles: specs, reviews and prices | PadelMetrix",
-                            "Palas de pickleball JOOLA y VICLION: fichas, opiniones y precios | PadelMetrix"),
-                          L("Racchette da pickleball JOOLA e VICLION su Amazon: peso, spessore, forma, dati di laboratorio e opinioni, e come scegliere quella giusta.",
-                            "JOOLA and VICLION pickleball paddles on Amazon: weight, thickness, shape, lab data and reviews, and how to choose the right one.",
-                            "Palas de pickleball JOOLA y VICLION en Amazon: peso, grosor, forma, datos de laboratorio y opiniones, y cómo elegir la adecuada."),
+    S.scrivi(path, pagina(L(f"Racchette da pickleball {mtxt}: schede, opinioni e prezzi | PadelMetrix", f"{mtxt} pickleball paddles: specs, reviews and prices | PadelMetrix",
+                            f"Palas de pickleball {mtxt}: fichas, opiniones y precios | PadelMetrix"),
+                          L(f"{len(PADDLE)} racchette da pickleball {mtxt}: peso, spessore, forma, dati di laboratorio e opinioni, e come scegliere quella giusta.",
+                            f"{len(PADDLE)} {mtxt} pickleball paddles: weight, thickness, shape, lab data and reviews, and how to choose the right one.",
+                            f"{len(PADDLE)} palas de pickleball {mtxt}: peso, grosor, forma, datos de laboratorio y opiniones, y cómo elegir la adecuada."),
                           path, corpo, on="pickleball", ld=[cr_ld, il, faqld], extra_js=FILTRI_JS % L("racchette", "paddles", "palas"), alt=alt), alt)
 
 
