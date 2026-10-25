@@ -13,6 +13,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from comune import LINGUE, racket_svg, url  # noqa: E402
 import sito as S  # noqa: E402
 import consenso as C  # noqa: E402
+from genera_pickleball import paddle_svg  # noqa: E402
 from sito import L, P  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -30,19 +31,19 @@ IN_EVIDENZA = [
 T = {
     "it": {
         "html_lang": "it", "title": "PadelMetrix · La guida indipendente all'attrezzatura da padel",
-        "desc": "Schede tecniche, confronti e consigli su racchette da padel, abbigliamento e attrezzatura per bambini. Trova la racchetta giusta per il tuo gioco.",
+        "desc": "Schede tecniche, confronti e consigli su racchette da padel e pickleball e attrezzatura per bambini. Trova la racchetta giusta per il tuo gioco.",
         "claim": "Il Padel, Analizzato.",
-        "nav": ["Racchette", "Abbigliamento", "Bambini", "Confronta", "Guide"],
+        "nav": ["Racchette", "Pickleball", "Bambini", "Confronta", "Guide"],
         "h1": "La guida indipendente per scegliere l'attrezzatura da padel.",
-        "intro": "PadelMetrix raccoglie in un solo posto schede tecniche, confronti e consigli su racchette, abbigliamento e attrezzatura per bambini. Ti aiutiamo a capire cosa fa per te; poi compri dove preferisci.",
+        "intro": "PadelMetrix raccoglie in un solo posto schede tecniche, confronti e consigli su racchette da padel e da pickleball e attrezzatura per bambini. Ti aiutiamo a capire cosa fa per te; poi compri dove preferisci.",
         "cta1": "Trova la tua racchetta in 2 minuti", "cta2": "Esplora le racchette",
         "cerca_label": "Cerca un modello o una marca", "cerca_ph": "Es. Metalbone, AT10, Viper", "cerca_btn": "Cerca",
         "conta": "{n} racchette di {m} marche nel database, aggiornate ogni settimana",
         "sez_titolo": "Cosa trovi su PadelMetrix", "sez_sub": "Tre sezioni, per tutto quello che serve in campo.",
         "sezioni": [
             ("racchette", "Racchette", "Schede con tutti i dati tecnici, sintesi delle recensioni e modelli simili. Filtra per livello, forma, peso e marca.", "Vai alle racchette"),
-            ("abbigliamento", "Abbigliamento", "Scarpe da padel, abbigliamento uomo e donna, borse porta-racchette e accessori: palline, overgrip e protezioni.", "Vai all'abbigliamento"),
-            ("bambini", "Bambini", "Racchette junior divise per età, con una guida per scegliere quella giusta, più scarpe e abbigliamento per i più piccoli.", "Vai alla sezione bambini"),
+            ("pickleball", "Pickleball", "Le racchette da pickleball di HEAD, JOOLA e VICLION con dati tecnici, misure di laboratorio e opinioni, più una guida rapida alla scelta.", "Vai al pickleball"),
+            ("bambini", "Bambini", "Racchette junior divise per età, con una guida per scegliere la misura giusta in base a età e altezza.", "Vai alla sezione bambini"),
         ],
         "tool": "Strumento",
         "t1": ("Trova la tua racchetta", "7 domande su livello, stile e budget: ti proponiamo le 3 racchette più adatte.", "Fai il test"),
@@ -65,19 +66,19 @@ T = {
     },
     "en": {
         "html_lang": "en", "title": "PadelMetrix · The independent guide to padel gear",
-        "desc": "Specs, comparisons and advice on padel rackets, clothing and kids' gear. Find the right racket for your game.",
+        "desc": "Specs, comparisons and advice on padel and pickleball rackets and kids' gear. Find the right racket for your game.",
         "claim": "Padel, Analyzed.",
-        "nav": ["Rackets", "Clothing", "Kids", "Compare", "Guides"],
+        "nav": ["Rackets", "Pickleball", "Kids", "Compare", "Guides"],
         "h1": "The independent guide to choosing your padel gear.",
-        "intro": "PadelMetrix brings together specs, comparisons and advice on rackets, clothing and kids' gear in one place. We help you work out what suits you; then you buy wherever you like.",
+        "intro": "PadelMetrix brings together specs, comparisons and advice on padel and pickleball rackets and kids' gear in one place. We help you work out what suits you; then you buy wherever you like.",
         "cta1": "Find your racket in 2 minutes", "cta2": "Browse rackets",
         "cerca_label": "Search for a model or brand", "cerca_ph": "E.g. Metalbone, AT10, Viper", "cerca_btn": "Search",
         "conta": "{n} rackets from {m} brands in our database, updated every week",
         "sez_titolo": "What you'll find on PadelMetrix", "sez_sub": "Three sections covering everything you need on court.",
         "sezioni": [
             ("racchette", "Rackets", "Full specs, review summaries and similar models for every racket. Filter by level, shape, weight and brand.", "Go to rackets"),
-            ("abbigliamento", "Clothing", "Padel shoes, men's and women's clothing, racket bags and accessories: balls, overgrips and protection.", "Go to clothing"),
-            ("bambini", "Kids", "Junior rackets grouped by age, with a guide to choosing the right one, plus shoes and clothing for young players.", "Go to kids"),
+            ("pickleball", "Pickleball", "Pickleball paddles from HEAD, JOOLA and VICLION with specs, lab measurements and reviews, plus a quick buying guide.", "Go to pickleball"),
+            ("bambini", "Kids", "Junior rackets grouped by age, with a guide to choosing the right size by age and height.", "Go to kids"),
         ],
         "tool": "Tool",
         "t1": ("Racket finder", "7 questions about your level, style and budget: we suggest the 3 rackets that suit you best.", "Take the quiz"),
@@ -100,19 +101,19 @@ T = {
     },
     "es": {
         "html_lang": "es", "title": "PadelMetrix · La guía independiente del material de pádel",
-        "desc": "Fichas técnicas, comparativas y consejos sobre palas de pádel, ropa y material para niños. Encuentra la pala ideal para tu juego.",
+        "desc": "Fichas técnicas, comparativas y consejos sobre palas de pádel y pickleball y material para niños. Encuentra la pala ideal para tu juego.",
         "claim": "El Pádel, Analizado.",
-        "nav": ["Palas", "Ropa", "Niños", "Comparar", "Guías"],
+        "nav": ["Palas", "Pickleball", "Niños", "Comparar", "Guías"],
         "h1": "La guía independiente para elegir tu material de pádel.",
-        "intro": "PadelMetrix reúne en un solo lugar fichas técnicas, comparativas y consejos sobre palas, ropa y material para niños. Te ayudamos a saber qué te conviene; después compras donde prefieras.",
+        "intro": "PadelMetrix reúne en un solo lugar fichas técnicas, comparativas y consejos sobre palas de pádel y de pickleball y material para niños. Te ayudamos a saber qué te conviene; después compras donde prefieras.",
         "cta1": "Encuentra tu pala en 2 minutos", "cta2": "Ver las palas",
         "cerca_label": "Busca un modelo o una marca", "cerca_ph": "Ej. Metalbone, AT10, Viper", "cerca_btn": "Buscar",
         "conta": "{n} palas de {m} marcas en nuestra base de datos, actualizada cada semana",
         "sez_titolo": "Qué encontrarás en PadelMetrix", "sez_sub": "Tres secciones con todo lo que necesitas en la pista.",
         "sezioni": [
             ("racchette", "Palas", "Fichas con todos los datos técnicos, resumen de las reseñas y modelos similares. Filtra por nivel, forma, peso y marca.", "Ir a las palas"),
-            ("abbigliamento", "Ropa", "Zapatillas de pádel, ropa de hombre y mujer, paleteros y accesorios: pelotas, overgrips y protecciones.", "Ir a la ropa"),
-            ("bambini", "Niños", "Palas junior por edades, con una guía para elegir la adecuada, además de zapatillas y ropa para los más pequeños.", "Ir a niños"),
+            ("pickleball", "Pickleball", "Las palas de pickleball de HEAD, JOOLA y VICLION con datos técnicos, medidas de laboratorio y opiniones, más una guía rápida de compra.", "Ir al pickleball"),
+            ("bambini", "Niños", "Palas junior por edades, con una guía para elegir la medida adecuada según edad y altura.", "Ir a niños"),
         ],
         "tool": "Herramienta",
         "t1": ("Encuentra tu pala", "7 preguntas sobre tu nivel, estilo y presupuesto: te proponemos las 3 palas que mejor te encajan.", "Hacer el test"),
@@ -209,7 +210,7 @@ footer .bottom{border-top:1px solid #24503F;padding-top:20px;display:flex;flex-w
 LOGO = '<svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="14" width="52" height="36" rx="4" fill="none" stroke="#0F3D2E" stroke-width="4"/><line x1="19" y1="14" x2="19" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="45" y1="14" x2="45" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="19" y1="32" x2="45" y2="32" stroke="#0F3D2E" stroke-width="2"/><line x1="32" y1="9" x2="32" y2="55" stroke="#0F3D2E" stroke-width="4" stroke-linecap="round"/><circle cx="45" cy="23" r="6.5" fill="#C6F432" stroke="#0F3D2E" stroke-width="2"/></svg>'
 FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F3D2E'/%3E%3Crect x='8' y='16' width='48' height='32' rx='3' fill='none' stroke='%23EAF5EC' stroke-width='4'/%3E%3Cline x1='32' y1='11' x2='32' y2='53' stroke='%23EAF5EC' stroke-width='4'/%3E%3Ccircle cx='45' cy='25' r='7' fill='%23C6F432'/%3E%3C/svg%3E"
 COURT = '<svg viewBox="0 0 420 280" style="width:100%;max-width:440px;height:auto" aria-hidden="true"><rect x="10" y="10" width="400" height="260" rx="10" fill="#134A38" stroke="#C6F432" stroke-opacity="0.5" stroke-width="3"/><line x1="110" y1="10" x2="110" y2="270" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/><line x1="310" y1="10" x2="310" y2="270" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/><line x1="110" y1="140" x2="310" y2="140" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/><line x1="210" y1="0" x2="210" y2="280" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M60 230 Q 150 30 250 190 Q 290 110 320 120" fill="none" stroke="#C6F432" stroke-width="3" stroke-linecap="round" stroke-dasharray="0 12"/><circle cx="336" cy="118" r="14" fill="#C6F432"/></svg>'
-SEC_ICON = {"racchette": "diamante", "abbigliamento": None, "bambini": "rotonda"}
+SEC_ICON = {"racchette": "diamante", "pickleball": None, "bambini": "rotonda"}
 SHOE = '<svg viewBox="0 0 240 140" width="190" aria-hidden="true"><path d="M20 96 C20 70 40 58 62 56 L104 50 C118 48 128 38 134 26 L150 30 C152 52 168 62 190 66 C212 70 222 82 222 96 Z" fill="#0F3D2E"/><path d="M14 96 H226 V108 C226 114 222 118 216 118 H24 C18 118 14 114 14 108 Z" fill="#C6F432"/><path d="M112 58 L124 70 M124 52 L136 64 M100 62 L110 72" stroke="#FAFAF7" stroke-opacity="0.6" stroke-width="5" stroke-linecap="round"/></svg>'
 
 
@@ -264,10 +265,9 @@ def head(lang, t):
 
 def pagina(lang, db):
     t = T[lang]
-    keys = ["racchette", "abbigliamento", "bambini", "confronta", "selettore"]
+    keys = ["racchette", "pickleball", "bambini", "confronta", "selettore"]
     S.set_lang(lang)
-    voci_nav = [(P("guide") if k == "selettore" else url(lang, k), n) for k, n in zip(keys, t["nav"])]
-    voci_nav.insert(3, (P("pickleball"), "Pickleball"))
+    voci_nav = [(P("guide") if k == "selettore" else (P("pickleball") if k == "pickleball" else url(lang, k)), n) for k, n in zip(keys, t["nav"])]
     nav = "".join(f'<a href="{u}">{e(n)}</a>' for u, n in voci_nav)
     langs = " · ".join(f'<a{" class=\"on\"" if l == lang else ""} href="/{l}/" hreflang="{l}">{l.upper()}</a>' for l in LINGUE)
     marche = {}
@@ -277,8 +277,8 @@ def pagina(lang, db):
 
     sez = []
     for k, tit, txt, go in t["sezioni"]:
-        art = SHOE if SEC_ICON[k] is None else racket_svg(SEC_ICON[k], 110 if k == "racchette" else 90, tit)
-        sez.append(f'<a class="card" href="{url(lang, k)}"><div class="ill">{art}</div><div class="body"><h3>{e(tit)}</h3><p>{e(txt)}</p><span class="go">{e(go)} →</span></div></a>')
+        art = paddle_svg("allungata", 80, tit) if SEC_ICON[k] is None else racket_svg(SEC_ICON[k], 110 if k == "racchette" else 90, tit)
+        sez.append(f'<a class="card" href="{P(k) if k == "pickleball" else url(lang, k)}"><div class="ill">{art}</div><div class="body"><h3>{e(tit)}</h3><p>{e(txt)}</p><span class="go">{e(go)} →</span></div></a>')
 
     evid = []
     for slug in IN_EVIDENZA:
@@ -354,7 +354,7 @@ def pagina(lang, db):
 <footer><div class="wrap">
 <div class="cols">
 <div style="flex:1 1 240px"><span class="wm"><b>padel</b><i>metrix</i></span><span>{e(t["claim"])}</span></div>
-<div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{url(lang, "abbigliamento")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
+<div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{P("pickleball")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
 <div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a></div>
 <div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a>{C.link_footer(lang)}</div>
 </div>

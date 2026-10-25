@@ -319,7 +319,6 @@ CSS = (ROOT / "scripts" / "scheda.css").read_text(encoding="utf-8") + (ROOT / "s
 
 def nav():
     return [("racchette", L("Racchette", "Rackets", "Palas"), P("racchette")),
-            ("abbigliamento", L("Abbigliamento", "Clothing", "Ropa"), P("abbigliamento")),
             ("bambini", L("Bambini", "Kids", "Niños"), P("bambini")),
             ("pickleball", "Pickleball", P("pickleball")),
             ("confronta", L("Confronta", "Compare", "Comparar"), P("confronta")),
