@@ -330,7 +330,7 @@ def header(on, alt=None):
     items = "\n".join(f'<a{" class=\"on\"" if k == on else ""} href="{h}">{t}</a>' for k, t, h in nav())
     langs = " · ".join(f'<a{" class=\"on\"" if x == l else ""} href="{alt.get(x, P("home", l=x))}" hreflang="{x}">{x.upper()}</a>' for x in LINGUE)
     return f'''<header class="site"><div class="wrap">
-<a class="brand" href="{P("home")}">{LOGO}<b>padel</b><span>metrix</span></a>
+<a class="brand" href="{P("home")}">{LOGO}<span><b>padel</b>metrix</span></a>
 <nav class="main" aria-label="{L("Principale", "Main", "Principal")}">
 {items}
 </nav>

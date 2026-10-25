@@ -297,7 +297,7 @@ def pagina(lang, db):
     return head(lang, t) + f'''
 <body>
 <header class="site"><div class="wrap">
-<a class="brand" href="/{lang}/">{LOGO}<b>padel</b><span>metrix</span></a>
+<a class="brand" href="/{lang}/">{LOGO}<span><b>padel</b>metrix</span></a>
 <nav class="main" aria-label="Menu">{nav}</nav>
 <div class="langs" aria-label="{e(t["lingua"])}">{langs}</div>
 </div></header>
