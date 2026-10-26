@@ -109,6 +109,23 @@ def url_p(p):
     return P("pickleball", p["slug"])
 
 
+def negozio(p, nota_aff):
+    """Box acquisto: pulsante Amazon, oppure avviso se la racchetta non è in vendita su Amazon.it."""
+    if not p.get("amazon"):
+        d = g(p.get("amazon_verifica", ""))
+        return ('<div class="stores"><div class="store"><div><strong>Amazon</strong><small>'
+                + L(f"Non in vendita su Amazon.it alla nostra ultima verifica ({d}).",
+                    f"Not listed on Amazon.it when we last checked ({d}).",
+                    f"No está a la venta en Amazon.it en nuestra última comprobación ({d}).")
+                + '</small></div></div></div><p class="note">'
+                + L("La scheda resta come riferimento tecnico: il listino indicato è quello della fonte.",
+                    "The page stays as a technical reference: the list price shown is the source's.",
+                    "La ficha sigue como referencia técnica: el precio de lista indicado es el de la fuente.") + '</p>')
+    return (f'<div class="stores"><div class="store"><div><strong>Amazon</strong><small>{L("Spedizione e resi Amazon", "Amazon shipping and returns", "Envío y devoluciones de Amazon")}</small></div>'
+            f'<a class="btn lime" href="{e(amazon_url(p))}" rel="sponsored nofollow noopener" target="_blank">{L("Vedi su Amazon", "View on Amazon", "Ver en Amazon")}</a></div></div>\n'
+            f'<p class="note">{L("I prezzi su Amazon cambiano spesso: quello in scheda è il listino indicato dalla fonte.", "Amazon prices change often: the one on this page is the list price given by the source.", "Los precios en Amazon cambian a menudo: el de la ficha es el precio de lista indicado por la fuente.")} {nota_aff}</p>')
+
+
 def amazon_url(p):
     q = p["amazon"].replace(" ", "+")
     u = f"https://{AMAZON[S.lang()]}/s?k={q}"
@@ -278,8 +295,7 @@ def scheda(p):
 {blocco}
 <div class="card">
 <h2>{L("Dove comprare la", "Where to buy the", "Dónde comprar la")} {e(nome(p))}</h2>
-<div class="stores"><div class="store"><div><strong>Amazon</strong><small>{L("Spedizione e resi Amazon", "Amazon shipping and returns", "Envío y devoluciones de Amazon")}</small></div><a class="btn lime" href="{e(amazon_url(p))}" rel="sponsored nofollow noopener" target="_blank">{L("Vedi su Amazon", "View on Amazon", "Ver en Amazon")}</a></div></div>
-<p class="note">{L("I prezzi su Amazon cambiano spesso: quello in scheda è il listino indicato dalla fonte.", "Amazon prices change often: the one on this page is the list price given by the source.", "Los precios en Amazon cambian a menudo: el de la ficha es el precio de lista indicado por la fuente.")} {nota_aff}</p>
+{negozio(p, nota_aff)}
 </div>
 </div>
 </div>

@@ -813,3 +813,84 @@ P += [
         [T("Vuoi una tuttofare tollerante a prezzo medio", "You want a forgiving mid-priced all-rounder", "Quieres una todoterreno tolerante a precio medio"), T("Giochi molto a rete", "You play a lot at the net", "Juegas mucho en la red")],
         [T("Cerchi portata: guarda la versione allungata", "You want reach: look at the elongated version", "Buscas alcance: mira la versión alargada"), T("Vuoi dati completi prima di comprare", "You want full data before buying", "Quieres datos completos antes de comprar")]),
 ]
+
+# ---------------------------------------------------------------------- Selkirk in vendita su Amazon.it (verifica 26/10/2026)
+F.update({
+    "pc_sel_haloxl": ("Pickleball Central", "https://pickleballcentral.com/selkirk-slk-halo-xl-pickleball-paddle/"),
+    "pc_sel_geoe": ("Pickleball Central", "https://pickleballcentral.com/slk-geo-elongated-pickleball-paddle/"),
+    "pg_sel_geo": ("The Pickleball Gang", "https://thepickleballgang.com/slk-geo/"),
+    "bp_sel_evomax": ("Be Pickleballer", "https://bepickleballer.com/slk-evo-power-max-review/"),
+})
+T700 = T("Carbonio grezzo T700", "T700 raw carbon fiber", "Carbono crudo T700")
+
+P += [
+    _pe("slk-halo-control-xl", "Selkirk", "SLK Halo Control XL", None, "allungata", None, 16.4, 7.4, 5.75, 4.25, 16,
+        T("Polimero Rev-Core", "Rev-Core polymer", "Polímero Rev-Core"), T700, None, 149.99, "intermedio", "controllo", ["pc_sel_haloxl"], [],
+        T("La Halo allungata nella versione Control: faccia in carbonio grezzo T700, nucleo in polimero da 16 mm e manico lungo, a un prezzo medio.",
+          "The elongated Halo in its Control version: T700 raw carbon face, 16 mm polymer core and long handle, at a mid price.",
+          "La Halo alargada en su versión Control: cara de carbono crudo T700, núcleo de polímero de 16 mm y mango largo, a un precio medio."),
+        {k: v + NO_TEST[k] for k, v in T(
+            "Secondo la scheda di Pickleball Central ha una faccia più stretta e un manico più lungo (5,75\") rispetto alle Halo standard, un peso medio di 7,9 oz (7,6–8,2) e una superficie ruvida per l'effetto. Esiste anche una versione Power con nucleo da 13 mm, un po' più leggera. Il listino è di 149,99 $, spesso scontato.",
+            "According to Pickleball Central's listing it has a narrower face and a longer handle (5.75\") than the standard Halo, an average weight of 7.9 oz (7.6–8.2) and a gritty surface for spin. There is also a Power version with a 13 mm core, slightly lighter. The list price is $149.99, often discounted.",
+            "Según la ficha de Pickleball Central tiene una cara más estrecha y un mango más largo (5,75\") que las Halo estándar, un peso medio de 7,9 oz (7,6–8,2) y una superficie rugosa para el efecto. También existe una versión Power con núcleo de 13 mm, algo más ligera. El precio de lista es de 149,99 $, a menudo rebajado.").items()},
+        [T("Carbonio grezzo per lo spin", "Raw carbon for spin", "Carbono crudo para el efecto"), T("Manico lungo per il rovescio a due mani", "Long handle for two-handed backhands", "Mango largo para el revés a dos manos"), T("Disponibile su Amazon.it", "Available on Amazon.it", "Disponible en Amazon.it")],
+        [T("Faccia stretta: sweet spot meno largo", "Narrow face: smaller sweet spot", "Cara estrecha: punto dulce menos ancho"), T("Omologazione non indicata dalla fonte", "Approval not stated by the source", "Homologación no indicada por la fuente")],
+        [T("Vuoi una allungata di controllo senza spendere troppo", "You want an elongated control paddle without spending too much", "Quieres una alargada de control sin gastar demasiado"), T("Giochi il rovescio a due mani", "You hit two-handed backhands", "Juegas el revés a dos manos")],
+        [T("Cerchi potenza: guarda la versione Power da 13 mm", "You want power: look at the 13 mm Power version", "Buscas potencia: mira la versión Power de 13 mm"), T("Vuoi la massima tolleranza", "You want maximum forgiveness", "Buscas la máxima tolerancia")]),
+    _pe("slk-geo-elongated", "Selkirk", "SLK Geo Elongated", None, "allungata", None, 16.5, 7.45, 5.8, 4.25, 14,
+        T("Nido d'ape in polimero Rev-Pro", "Rev-Pro polymer honeycomb", "Nido de abeja de polímero Rev-Pro"), T700, "USAP", 99.99, "principiante-intermedio", "polivalente", ["pc_sel_geoe", "pg_sel_geo"], [],
+        T("Una Selkirk in carbonio grezzo T700 a meno di 100 $: forma allungata, nucleo da 14 mm e pesi perimetrali per allargare lo sweet spot.",
+          "A Selkirk in T700 raw carbon for under $100: elongated shape, 14 mm core and perimeter weighting to widen the sweet spot.",
+          "Una Selkirk de carbono crudo T700 por menos de 100 $: forma alargada, núcleo de 14 mm y pesos perimetrales para ampliar el punto dulce."),
+        {k: v + NO_TEST[k] for k, v in T(
+            "Pickleball Central la indica per chi vuole portata e leva, anche per il rovescio a due mani, senza una racchetta di potenza troppo dura, e per giocatori da principianti a intermedi che vogliono crescere. Pesa in media 8,15 oz (7,9–8,4) ed è omologata USAP. La recensione di The Pickleball Gang (sulla versione larga) segnala un impatto più rigido delle termoformate: i dink possono alzarsi se si stringe troppo il manico, e i pesi perimetrali non si possono togliere.",
+            "Pickleball Central aims it at players who want reach and leverage, including for two-handed backhands, without a harsh power paddle, and at beginner to intermediate players looking to progress. It averages 8.15 oz (7.9–8.4) and is USAP approved. The Pickleball Gang's review (of the widebody) notes a stiffer feel than thermoformed paddles: dinks can pop up if you grip too hard, and the perimeter weights cannot be removed.",
+            "Pickleball Central la indica para quien quiere alcance y palanca, también para el revés a dos manos, sin una pala de potencia demasiado dura, y para jugadores de principiantes a intermedios que quieren progresar. Pesa de media 8,15 oz (7,9–8,4) y está homologada USAP. La reseña de The Pickleball Gang (de la versión ancha) señala un impacto más rígido que las termoformadas: los dinks pueden subir si se aprieta demasiado el mango, y los pesos perimetrales no se pueden quitar.").items()},
+        [T("Carbonio grezzo T700 a prezzo basso", "T700 raw carbon at a low price", "Carbono crudo T700 a precio bajo"), T("Portata e leva", "Reach and leverage", "Alcance y palanca"), T("Disponibile su Amazon.it", "Available on Amazon.it", "Disponible en Amazon.it")],
+        [T("Impatto rigido nei dink", "Stiff feel on dinks", "Impacto rígido en los dinks"), T("Pesi perimetrali non rimovibili", "Perimeter weights cannot be removed", "Pesos perimetrales no extraíbles")],
+        [T("Vuoi passare al carbonio spendendo poco", "You want to move up to carbon on a budget", "Quieres pasar al carbono gastando poco"), T("Giochi il rovescio a due mani", "You hit two-handed backhands", "Juegas el revés a dos manos")],
+        [T("Cerchi un impatto morbido", "You want a soft feel", "Buscas un impacto blando"), T("Vuoi regolare i pesi", "You want to adjust the weights", "Quieres ajustar los pesos")]),
+    _pe("slk-geo-widebody", "Selkirk", "SLK Geo Widebody", None, "larga", None, 15.95, 8.0, 5.6, 4.25, 14,
+        T("Nido d'ape in polipropilene Rev-Pro", "Rev-Pro polypropylene honeycomb", "Nido de abeja de polipropileno Rev-Pro"), T700, None, 100, "intermedio", "polivalente", ["pg_sel_geo"], [("twist", "7,5")],
+        T("La Geo in forma larga: carbonio grezzo T700, nucleo da 14 mm e uno sweet spot stabile, pensata per il doppio.",
+          "The Geo in a widebody shape: T700 raw carbon, 14 mm core and a stable sweet spot, built for doubles.",
+          "La Geo en forma ancha: carbono crudo T700, núcleo de 14 mm y un punto dulce estable, pensada para el dobles."),
+        T("The Pickleball Gang la consiglia ai giocatori intermedi di doppio che vogliono il carbonio T700 a circa 100 $: sweet spot tollerante (twist weight 7,5), buon effetto e impatto reattivo, con buona spinta da fondo. Contro: il nucleo da 14 mm è più rigido e trasmette più vibrazioni sui colpi decentrati, il carbonio grezzo si consuma prima delle superfici InfiniGrit e i pesi perimetrali non si possono togliere. Non la indica per chi soffre di epicondilite. La misura dello spin citata non ha un metodo di prova dichiarato, quindi non la riportiamo.",
+          "The Pickleball Gang recommends it to intermediate doubles players who want T700 carbon for about $100: forgiving sweet spot (twist weight 7.5), good spin and a responsive feel, with solid baseline pop. Downsides: the 14 mm core is stiffer and transmits more vibration on off-center hits, raw carbon wears faster than InfiniGrit surfaces and the perimeter weights cannot be removed. It does not recommend it for players with tennis elbow. The spin figure quoted has no stated test method, so we do not report it.",
+          "The Pickleball Gang la recomienda a jugadores intermedios de dobles que quieren carbono T700 por unos 100 $: punto dulce tolerante (twist weight 7,5), buen efecto e impacto reactivo, con buen empuje desde el fondo. En contra: el núcleo de 14 mm es más rígido y transmite más vibraciones en los golpes descentrados, el carbono crudo se desgasta antes que las superficies InfiniGrit y los pesos perimetrales no se pueden quitar. No la indica para quien sufre epicondilitis. La cifra de efecto citada no tiene un método de prueba declarado, así que no la incluimos."),
+        [T("Sweet spot tollerante", "Forgiving sweet spot", "Punto dulce tolerante"), T("Carbonio T700 a prezzo basso", "T700 carbon at a low price", "Carbono T700 a precio bajo"), T("Disponibile su Amazon.it", "Available on Amazon.it", "Disponible en Amazon.it")],
+        [T("Più vibrazioni sui colpi decentrati", "More vibration on off-center hits", "Más vibraciones en golpes descentrados"), T("Superficie che si consuma prima", "Surface wears faster", "Superficie que se desgasta antes")],
+        [T("Giochi soprattutto in doppio", "You mainly play doubles", "Juegas sobre todo dobles"), T("Vuoi stabilità a rete spendendo poco", "You want net stability on a budget", "Quieres estabilidad en la red gastando poco")],
+        [T("Hai problemi al gomito", "You have elbow problems", "Tienes problemas de codo"), T("Giochi singolare molto aggressivo", "You play very aggressive singles", "Juegas individuales muy agresivos")]),
+    _pe("slk-evo-power-max", "Selkirk", "SLK Evo Power Max", None, "standard", None, 16.0, 7.85, 5.25, 4.25, 13,
+        T("Polimero Rev-Core", "Rev-Core polymer", "Polímero Rev-Core"), T("Fibra di carbonio G8-Flex", "G8-Flex carbon fiber", "Fibra de carbono G8-Flex"), "USAP", 100, "intermedio", "offensivo", ["bp_sel_evomax"],
+        [("swing", "112"), ("twist", "7"), ("peso", "8,1 oz")],
+        T("Una Selkirk economica orientata alla potenza: nucleo sottile da 13 mm, faccia in carbonio G8-Flex e uno sweet spot ampio.",
+          "An affordable power-oriented Selkirk: thin 13 mm core, G8-Flex carbon face and a large sweet spot.",
+          "Una Selkirk económica orientada a la potencia: núcleo fino de 13 mm, cara de carbono G8-Flex y un punto dulce amplio."),
+        T("Il recensore di Be Pickleballer la descrive come una racchetta di potenza con un controllo affidabile a un buon prezzo: spinge bene da fondo e negli approcci, lo sweet spot è ampio (twist weight 7) e lo swing weight di 112 la rende maneggevole. Lo spin è limitato, soprattutto nei colpi a rete, e non è la scelta migliore per chi gioca di tocco. Peso medio 8,1 oz.",
+          "The Be Pickleballer reviewer describes it as a power paddle with reliable control at a good price: it drives well from the baseline and on approaches, the sweet spot is large (twist weight 7) and a swing weight of 112 keeps it maneuverable. Spin is limited, especially at the net, and it is not the best choice for touch players. Average weight 8.1 oz.",
+          "El revisor de Be Pickleballer la describe como una pala de potencia con un control fiable a buen precio: empuja bien desde el fondo y en las aproximaciones, el punto dulce es amplio (twist weight 7) y un swing weight de 112 la hace manejable. El efecto es limitado, sobre todo en la red, y no es la mejor opción para quien juega de toque. Peso medio 8,1 oz."),
+        [T("Buona potenza da fondo", "Good baseline power", "Buena potencia desde el fondo"), T("Sweet spot ampio", "Large sweet spot", "Punto dulce amplio"), T("Disponibile su Amazon.it", "Available on Amazon.it", "Disponible en Amazon.it")],
+        [T("Spin limitato", "Limited spin", "Efecto limitado"), T("Poco adatta al gioco di tocco", "Not suited to a touch game", "Poco adecuada para el juego de toque")],
+        [T("Giochi d'attacco da fondo", "You attack from the baseline", "Atacas desde el fondo"), T("Vieni dal tennis", "You come from tennis", "Vienes del tenis")],
+        [T("Cerchi spin", "You want spin", "Buscas efecto"), T("Giochi molto di tocco a rete", "You play a lot of touch at the net", "Juegas mucho de toque en la red")]),
+]
+
+# Disponibilità su Amazon.it (verifica del 26 ottobre 2026 con ricerca diretta sul sito):
+# le racchette non trovate restano come schede informative, senza pulsante Amazon.
+VERIFICA_AMZ = T("26 ottobre 2026", "26 October 2026", "26 de octubre de 2026")
+NON_SU_AMAZON = {"six-zero-black-opal", "six-zero-boulder-opal", "six-zero-coral-pro-elongated", "six-zero-coral-pro-hybrid",
+                 "six-zero-coral-pro-widebody", "six-zero-double-black-diamond-control-16mm", "six-zero-ruby-14mm",
+                 "selkirk-boomstik-elongated", "selkirk-boomstik-widebody", "selkirk-omni-elongated", "selkirk-omni-widebody",
+                 "selkirk-luxx-control-air-invikta"}
+RICERCA_AMZ = {"slk-dauntless-elongated": "Selkirk SLK Dauntless pickleball", "slk-dauntless-widebody": "Selkirk SLK Dauntless pickleball",
+               "slk-era-power-elongated": "SLK Selkirk ERA Power pickleball", "slk-era-power-widebody": "SLK Selkirk ERA Power pickleball",
+               "slk-halo-control-xl": "Selkirk SLK Halo Control XL", "slk-geo-elongated": "Selkirk SLK Geo pickleball",
+               "slk-geo-widebody": "Selkirk SLK Geo pickleball", "slk-evo-power-max": "Selkirk SLK Evo Power Max"}
+for _p in P:
+    if _p["slug"] in NON_SU_AMAZON:
+        _p["amazon"] = None
+        _p["amazon_verifica"] = VERIFICA_AMZ
+    elif _p["slug"] in RICERCA_AMZ:
+        _p["amazon"] = RICERCA_AMZ[_p["slug"]]

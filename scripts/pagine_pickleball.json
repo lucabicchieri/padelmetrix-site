@@ -336,6 +336,38 @@
 }
 },
 {
+"path": "/it/pickleball/slk-halo-control-xl/",
+"alt": {
+"it": "/it/pickleball/slk-halo-control-xl/",
+"en": "/en/pickleball/slk-halo-control-xl/",
+"es": "/es/pickleball/slk-halo-control-xl/"
+}
+},
+{
+"path": "/it/pickleball/slk-geo-elongated/",
+"alt": {
+"it": "/it/pickleball/slk-geo-elongated/",
+"en": "/en/pickleball/slk-geo-elongated/",
+"es": "/es/pickleball/slk-geo-elongated/"
+}
+},
+{
+"path": "/it/pickleball/slk-geo-widebody/",
+"alt": {
+"it": "/it/pickleball/slk-geo-widebody/",
+"en": "/en/pickleball/slk-geo-widebody/",
+"es": "/es/pickleball/slk-geo-widebody/"
+}
+},
+{
+"path": "/it/pickleball/slk-evo-power-max/",
+"alt": {
+"it": "/it/pickleball/slk-evo-power-max/",
+"en": "/en/pickleball/slk-evo-power-max/",
+"es": "/es/pickleball/slk-evo-power-max/"
+}
+},
+{
 "path": "/en/pickleball/",
 "alt": {
 "it": "/it/pickleball/",
@@ -672,6 +704,38 @@
 }
 },
 {
+"path": "/en/pickleball/slk-halo-control-xl/",
+"alt": {
+"it": "/it/pickleball/slk-halo-control-xl/",
+"en": "/en/pickleball/slk-halo-control-xl/",
+"es": "/es/pickleball/slk-halo-control-xl/"
+}
+},
+{
+"path": "/en/pickleball/slk-geo-elongated/",
+"alt": {
+"it": "/it/pickleball/slk-geo-elongated/",
+"en": "/en/pickleball/slk-geo-elongated/",
+"es": "/es/pickleball/slk-geo-elongated/"
+}
+},
+{
+"path": "/en/pickleball/slk-geo-widebody/",
+"alt": {
+"it": "/it/pickleball/slk-geo-widebody/",
+"en": "/en/pickleball/slk-geo-widebody/",
+"es": "/es/pickleball/slk-geo-widebody/"
+}
+},
+{
+"path": "/en/pickleball/slk-evo-power-max/",
+"alt": {
+"it": "/it/pickleball/slk-evo-power-max/",
+"en": "/en/pickleball/slk-evo-power-max/",
+"es": "/es/pickleball/slk-evo-power-max/"
+}
+},
+{
 "path": "/es/pickleball/",
 "alt": {
 "it": "/it/pickleball/",
@@ -1005,6 +1069,38 @@
 "it": "/it/pickleball/slk-era-power-widebody/",
 "en": "/en/pickleball/slk-era-power-widebody/",
 "es": "/es/pickleball/slk-era-power-widebody/"
+}
+},
+{
+"path": "/es/pickleball/slk-halo-control-xl/",
+"alt": {
+"it": "/it/pickleball/slk-halo-control-xl/",
+"en": "/en/pickleball/slk-halo-control-xl/",
+"es": "/es/pickleball/slk-halo-control-xl/"
+}
+},
+{
+"path": "/es/pickleball/slk-geo-elongated/",
+"alt": {
+"it": "/it/pickleball/slk-geo-elongated/",
+"en": "/en/pickleball/slk-geo-elongated/",
+"es": "/es/pickleball/slk-geo-elongated/"
+}
+},
+{
+"path": "/es/pickleball/slk-geo-widebody/",
+"alt": {
+"it": "/it/pickleball/slk-geo-widebody/",
+"en": "/en/pickleball/slk-geo-widebody/",
+"es": "/es/pickleball/slk-geo-widebody/"
+}
+},
+{
+"path": "/es/pickleball/slk-evo-power-max/",
+"alt": {
+"it": "/it/pickleball/slk-evo-power-max/",
+"en": "/en/pickleball/slk-evo-power-max/",
+"es": "/es/pickleball/slk-evo-power-max/"
 }
 }
 ]
