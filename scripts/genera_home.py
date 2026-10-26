@@ -42,7 +42,7 @@ T = {
         "sez_titolo": "Cosa trovi su PadelMetrix", "sez_sub": "Tre sezioni, per tutto quello che serve in campo.",
         "sezioni": [
             ("racchette", "Racchette", "Schede con tutti i dati tecnici, sintesi delle recensioni e modelli simili. Filtra per livello, forma, peso e marca.", "Vai alle racchette"),
-            ("pickleball", "Pickleball", "Le racchette da pickleball di HEAD, JOOLA e VICLION con dati tecnici, misure di laboratorio e opinioni, più una guida rapida alla scelta.", "Vai al pickleball"),
+            ("pickleball", "Pickleball", "Le racchette da pickleball di HEAD, JOOLA, Selkirk, Six Zero e VICLION con dati tecnici, misure di laboratorio e opinioni, più una guida rapida alla scelta.", "Vai al pickleball"),
             ("bambini", "Bambini", "Racchette junior divise per età, con una guida per scegliere la misura giusta in base a età e altezza.", "Vai alla sezione bambini"),
         ],
         "tool": "Strumento",
@@ -77,7 +77,7 @@ T = {
         "sez_titolo": "What you'll find on PadelMetrix", "sez_sub": "Three sections covering everything you need on court.",
         "sezioni": [
             ("racchette", "Rackets", "Full specs, review summaries and similar models for every racket. Filter by level, shape, weight and brand.", "Go to rackets"),
-            ("pickleball", "Pickleball", "Pickleball paddles from HEAD, JOOLA and VICLION with specs, lab measurements and reviews, plus a quick buying guide.", "Go to pickleball"),
+            ("pickleball", "Pickleball", "Pickleball paddles from HEAD, JOOLA, Selkirk, Six Zero and VICLION with specs, lab measurements and reviews, plus a quick buying guide.", "Go to pickleball"),
             ("bambini", "Kids", "Junior rackets grouped by age, with a guide to choosing the right size by age and height.", "Go to kids"),
         ],
         "tool": "Tool",
@@ -112,7 +112,7 @@ T = {
         "sez_titolo": "Qué encontrarás en PadelMetrix", "sez_sub": "Tres secciones con todo lo que necesitas en la pista.",
         "sezioni": [
             ("racchette", "Palas", "Fichas con todos los datos técnicos, resumen de las reseñas y modelos similares. Filtra por nivel, forma, peso y marca.", "Ir a las palas"),
-            ("pickleball", "Pickleball", "Las palas de pickleball de HEAD, JOOLA y VICLION con datos técnicos, medidas de laboratorio y opiniones, más una guía rápida de compra.", "Ir al pickleball"),
+            ("pickleball", "Pickleball", "Las palas de pickleball de HEAD, JOOLA, Selkirk, Six Zero y VICLION con datos técnicos, medidas de laboratorio y opiniones, más una guía rápida de compra.", "Ir al pickleball"),
             ("bambini", "Niños", "Palas junior por edades, con una guía para elegir la medida adecuada según edad y altura.", "Ir a niños"),
         ],
         "tool": "Herramienta",

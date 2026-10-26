@@ -11,7 +11,7 @@
 - [Bambini](https://www.padelmetrix.com/it/bambini/): misure per età e racchette junior
 - [Domande frequenti](https://www.padelmetrix.com/it/domande/): risposte brevi con dati
 - [Glossario](https://www.padelmetrix.com/it/glossario/): termini tecnici
-- [Pickleball](https://www.padelmetrix.com/it/pickleball/): schede delle racchette da pickleball HEAD, JOOLA e VICLION
+- [Pickleball](https://www.padelmetrix.com/it/pickleball/): schede delle racchette da pickleball HEAD, JOOLA, Selkirk, Six Zero e VICLION
 - [Report Racchette da padel 2026–2027 in numeri](https://www.padelmetrix.com/it/report/racchette-padel-2026-2027-in-numeri/)
 - [Dataset aperto CSV/JSON, licenza CC BY 4.0](https://www.padelmetrix.com/it/dati/)
 - [Chi siamo e metodo](https://www.padelmetrix.com/it/chi-siamo/): fonti dei dati, indipendenza, aggiornamenti
@@ -24,7 +24,7 @@
 - [Kids](https://www.padelmetrix.com/en/kids/): sizes by age and junior rackets
 - [FAQ](https://www.padelmetrix.com/en/questions/): short answers with data
 - [Glossary](https://www.padelmetrix.com/en/glossary/): technical terms
-- [Pickleball](https://www.padelmetrix.com/en/pickleball/): HEAD, JOOLA and VICLION pickleball paddle pages
+- [Pickleball](https://www.padelmetrix.com/en/pickleball/): HEAD, JOOLA, Selkirk, Six Zero and VICLION pickleball paddle pages
 - [Report: Padel rackets 2026–2027 in numbers](https://www.padelmetrix.com/en/report/padel-rackets-2026-2027-in-numbers/)
 - [Open dataset CSV/JSON, CC BY 4.0 licence](https://www.padelmetrix.com/en/data/)
 - [About and method](https://www.padelmetrix.com/en/about/): data sources, independence, updates
@@ -37,7 +37,7 @@
 - [Niños](https://www.padelmetrix.com/es/ninos/): medidas por edad y palas junior
 - [Preguntas frecuentes](https://www.padelmetrix.com/es/preguntas/): respuestas breves con datos
 - [Glosario](https://www.padelmetrix.com/es/glosario/): términos técnicos
-- [Pickleball](https://www.padelmetrix.com/es/pickleball/): fichas de las palas de pickleball HEAD, JOOLA y VICLION
+- [Pickleball](https://www.padelmetrix.com/es/pickleball/): fichas de las palas de pickleball HEAD, JOOLA, Selkirk, Six Zero y VICLION
 - [Informe Palas de pádel 2026–2027 en cifras](https://www.padelmetrix.com/es/informe/palas-padel-2026-2027-en-cifras/)
 - [Dataset abierto CSV/JSON, licencia CC BY 4.0](https://www.padelmetrix.com/es/datos/)
 - [Quiénes somos y método](https://www.padelmetrix.com/es/quienes-somos/): fuentes de los datos, independencia, actualizaciones

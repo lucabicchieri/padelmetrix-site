@@ -126,7 +126,8 @@ LAB = {"swing": ("Swing weight", "Swing weight", "Swing weight"), "twist": ("Twi
        "potenza": ("Velocità al servizio/drive", "Serve/drive speed", "Velocidad de saque/drive"),
        "pop": ("Velocità in volée (pop)", "Punch volley speed (pop)", "Velocidad en volea (pop)"),
        "spin": ("Spin", "Spin", "Efecto (spin)"), "peso": ("Peso misurato", "Measured weight", "Peso medido"),
-       "controllo": ("Controllo", "Control", "Control"), "tolleranza": ("Tolleranza", "Forgiveness", "Tolerancia")}
+       "controllo": ("Controllo", "Control", "Control"), "tolleranza": ("Tolleranza", "Forgiveness", "Tolerancia"),
+       "firepower": ("Firepower (indice di potenza 0-100)", "Firepower (0-100 power score)", "Firepower (índice de potencia 0-100)")}
 
 
 def lab_lab(k):

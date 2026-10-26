@@ -527,7 +527,7 @@ def llms(db):
 - [{L("Bambini", "Kids", "Niños")}]({SITO}{P("bambini")}): {L("misure per età e racchette junior", "sizes by age and junior rackets", "medidas por edad y palas junior")}
 - [{L("Domande frequenti", "FAQ", "Preguntas frecuentes")}]({SITO}{P("domande")}): {L("risposte brevi con dati", "short answers with data", "respuestas breves con datos")}
 - [{L("Glossario", "Glossary", "Glosario")}]({SITO}{P("glossario")}): {L("termini tecnici", "technical terms", "términos técnicos")}
-- [Pickleball]({SITO}{P("pickleball")}): {L("schede delle racchette da pickleball HEAD, JOOLA e VICLION", "HEAD, JOOLA and VICLION pickleball paddle pages", "fichas de las palas de pickleball HEAD, JOOLA y VICLION")}
+- [Pickleball]({SITO}{P("pickleball")}): {L("schede delle racchette da pickleball HEAD, JOOLA, Selkirk, Six Zero e VICLION", "HEAD, JOOLA, Selkirk, Six Zero and VICLION pickleball paddle pages", "fichas de las palas de pickleball HEAD, JOOLA, Selkirk, Six Zero y VICLION")}
 - [{L("Report Racchette da padel 2026–2027 in numeri", "Report: Padel rackets 2026–2027 in numbers", "Informe Palas de pádel 2026–2027 en cifras")}]({SITO}{P("report", REPORT)})
 - [{L("Dataset aperto CSV/JSON, licenza CC BY 4.0", "Open dataset CSV/JSON, CC BY 4.0 licence", "Dataset abierto CSV/JSON, licencia CC BY 4.0")}]({SITO}{P("dati")})
 - [{L("Chi siamo e metodo", "About and method", "Quiénes somos y método")}]({SITO}{P("chi-siamo")}): {L("fonti dei dati, indipendenza, aggiornamenti", "data sources, independence, updates", "fuentes de los datos, independencia, actualizaciones")}""")
