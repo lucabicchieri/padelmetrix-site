@@ -15,6 +15,8 @@ import sito as S  # noqa: E402
 from sito import (L, P, ALT, tr, e, carica, coppie, confronto_url, crumbs, pagina, SITO, FORMA, LIVN, STILEN,  # noqa: E402
                   loc, loc_html, numero, euro, data_txt, data_it_to_iso, LINGUE, set_lang)
 import traduci as T  # noqa: E402
+_AF = pathlib.Path(__file__).resolve().parent.parent / "data" / "articoli.json"
+ARTICOLI = json.loads(_AF.read_text(encoding="utf-8")) if _AF.exists() else []
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -252,6 +254,10 @@ def render(d, n, db, pair_set):
         ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]})
     avviso = f'<div class="card avviso">{loc_html(tr(p["avviso_html"]))}</div>' if p.get("avviso_html") else ""
+    for a in ARTICOLI:
+        if d["slug"] in a["racchette"] and S.lang() in a["url"]:
+            avviso += (f'<div class="card avviso"><p>{L("Approfondimento", "In depth", "En profundidad")}: '
+                       f'<a href="{a["url"][S.lang()]}"><b>{e(a["titolo"][S.lang()])}</b></a></p></div>')
     blocco_val = bars(p["valutazioni"]) if p.get("valutazioni") else tratti(p["tratti"])
     recensioni = ""
     if p.get("recensioni"):

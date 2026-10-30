@@ -281,12 +281,20 @@ def indice(arts):
                           path, corpo, on="articoli", ld=[ld], alt=alt), alt)
 
 
+RACCHETTE_ARTICOLO = {"siux-diablo-pro-2026-vs-2027-cosa-cambia": ["siux-diablo-pro-2026", "siux-diablo-pro-2027"]}
+
+
 def main():
     db = carica()
+    elenco = {}
     for l in LINGUE:
         set_lang(l)
         arts = [diablo(db)]  # novita_2027(db) pronto ma non ancora pubblicato
         indice(arts)
+        for slug, titolo, desc in arts:
+            x = elenco.setdefault(slug, {"slug": slug, "data": OGGI_ISO, "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
+            x["titolo"][l], x["desc"][l], x["url"][l] = titolo, desc, P("articoli", slug)
+    (ROOT / "data" / "articoli.json").write_text(json.dumps(list(elenco.values()), ensure_ascii=False, indent=1), encoding="utf-8")
     set_lang("it")
     (ROOT / "scripts" / "pagine_articoli.json").write_text(json.dumps(S.PAGINE, indent=0), encoding="utf-8")
     print(len(S.PAGINE), "pagine articoli generate")

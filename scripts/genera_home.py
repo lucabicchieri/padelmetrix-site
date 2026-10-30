@@ -15,6 +15,7 @@ import sito as S  # noqa: E402
 import consenso as C  # noqa: E402
 from genera_pickleball import paddle_svg  # noqa: E402
 from sito import L, P  # noqa: E402
+ROOT_A = pathlib.Path(__file__).resolve().parent.parent
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "racchette"
@@ -33,7 +34,7 @@ T = {
         "html_lang": "it", "title": "PadelMetrix · La guida indipendente all'attrezzatura da padel",
         "desc": "Schede tecniche, confronti e consigli su racchette da padel e pickleball e attrezzatura per bambini. Trova la racchetta giusta per il tuo gioco.",
         "claim": "Il Padel, Analizzato.",
-        "nav": ["Racchette", "Pickleball", "Bambini", "Confronta", "Guide"],
+        "nav": ["Racchette", "Pickleball", "Bambini", "Confronta", "Guide", "Articoli"],
         "h1": "La guida indipendente per scegliere l'attrezzatura da padel.",
         "intro": "PadelMetrix raccoglie in un solo posto schede tecniche, confronti e consigli su racchette da padel e da pickleball e attrezzatura per bambini. Ti aiutiamo a capire cosa fa per te; poi compri dove preferisci.",
         "cta1": "Trova la tua racchetta in 2 minuti", "cta2": "Esplora le racchette",
@@ -68,7 +69,7 @@ T = {
         "html_lang": "en", "title": "PadelMetrix · The independent guide to padel gear",
         "desc": "Specs, comparisons and advice on padel and pickleball rackets and kids' gear. Find the right racket for your game.",
         "claim": "Padel, Analyzed.",
-        "nav": ["Rackets", "Pickleball", "Kids", "Compare", "Guides"],
+        "nav": ["Rackets", "Pickleball", "Kids", "Compare", "Guides", "Articles"],
         "h1": "The independent guide to choosing your padel gear.",
         "intro": "PadelMetrix brings together specs, comparisons and advice on padel and pickleball rackets and kids' gear in one place. We help you work out what suits you; then you buy wherever you like.",
         "cta1": "Find your racket in 2 minutes", "cta2": "Browse rackets",
@@ -103,7 +104,7 @@ T = {
         "html_lang": "es", "title": "PadelMetrix · La guía independiente del material de pádel",
         "desc": "Fichas técnicas, comparativas y consejos sobre palas de pádel y pickleball y material para niños. Encuentra la pala ideal para tu juego.",
         "claim": "El Pádel, Analizado.",
-        "nav": ["Palas", "Pickleball", "Niños", "Comparar", "Guías"],
+        "nav": ["Palas", "Pickleball", "Niños", "Comparar", "Guías", "Artículos"],
         "h1": "La guía independiente para elegir tu material de pádel.",
         "intro": "PadelMetrix reúne en un solo lugar fichas técnicas, comparativas y consejos sobre palas de pádel y de pickleball y material para niños. Te ayudamos a saber qué te conviene; después compras donde prefieras.",
         "cta1": "Encuentra tu pala en 2 minutos", "cta2": "Ver las palas",
@@ -229,6 +230,20 @@ def guide_box():
             + '<div class="marche">' + "".join(f'<a href="{u}"><b>{b}</b><span>{sp}</span></a>' for u, b, sp in voci) + "</div>")
 
 
+def articoli_box():
+    """Ultimi articoli (da data/articoli.json, scritto da genera_articoli.py)."""
+    f = ROOT_A / "data" / "articoli.json"
+    if not f.exists():
+        return ""
+    arts = sorted(json.loads(f.read_text(encoding="utf-8")), key=lambda a: a["data"], reverse=True)[:3]
+    l = S.lang()
+    voci = "".join(f'<a href="{a["url"][l]}"><b>{html.escape(a["titolo"][l])}</b><span>{html.escape(a["desc"][l])}</span></a>' for a in arts if l in a["url"])
+    if not voci:
+        return ""
+    return (f'<div class="head" style="margin-top:40px"><h2>{L("Ultimi articoli", "Latest articles", "Últimos artículos")}</h2><a href="{P("articoli")}"><b>{L("Tutti gli articoli", "All articles", "Todos los artículos")} →</b></a></div>\n'
+            f'<div class="marche">{voci}</div>')
+
+
 def carica():
     out = {}
     for f in DATA.glob("*.json"):
@@ -266,9 +281,9 @@ def head(lang, t):
 
 def pagina(lang, db):
     t = T[lang]
-    keys = ["racchette", "pickleball", "bambini", "confronta", "selettore"]
+    keys = ["racchette", "pickleball", "bambini", "confronta", "selettore", "articoli"]
     S.set_lang(lang)
-    voci_nav = [(P("guide") if k == "selettore" else (P("pickleball") if k == "pickleball" else url(lang, k)), n) for k, n in zip(keys, t["nav"])]
+    voci_nav = [(P("guide") if k == "selettore" else (P(k) if k in ("pickleball", "articoli") else url(lang, k)), n) for k, n in zip(keys, t["nav"])]
     nav = "".join(f'<a href="{u}">{e(n)}</a>' for u, n in voci_nav)
     langs = " · ".join(f'<a{" class=\"on\"" if l == lang else ""} href="/{l}/" hreflang="{l}">{l.upper()}</a>' for l in LINGUE)
     marche = {}
@@ -349,6 +364,7 @@ def pagina(lang, db):
 <div class="head"><h2>{e(t["marche_titolo"])}</h2></div>
 <div class="marche">{mk}</div>
 {guide_box()}
+{articoli_box()}
 </div></section>
 </main>
 
@@ -356,7 +372,7 @@ def pagina(lang, db):
 <div class="cols">
 <div style="flex:1 1 240px"><span class="wm"><b>padel</b><i>metrix</i></span><span>{e(t["claim"])}</span></div>
 <div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{P("pickleball")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
-<div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a></div>
+<div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a><a href="{P("articoli")}">{e(t["nav"][5])}</a></div>
 <div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a>{C.link_footer(lang)}</div>
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
