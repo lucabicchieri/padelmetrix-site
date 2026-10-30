@@ -1,13 +1,5 @@
 [
 {
-"path": "/it/articoli/racchette-padel-2027-novita-per-marca/",
-"alt": {
-"it": "/it/articoli/racchette-padel-2027-novita-per-marca/",
-"en": "/en/articles/padel-rackets-2027-whats-new-by-brand/",
-"es": "/es/articulos/palas-padel-2027-novedades-por-marca/"
-}
-},
-{
 "path": "/it/articoli/siux-diablo-pro-2026-vs-2027-cosa-cambia/",
 "alt": {
 "it": "/it/articoli/siux-diablo-pro-2026-vs-2027-cosa-cambia/",
@@ -24,14 +16,6 @@
 }
 },
 {
-"path": "/en/articles/padel-rackets-2027-whats-new-by-brand/",
-"alt": {
-"it": "/it/articoli/racchette-padel-2027-novita-per-marca/",
-"en": "/en/articles/padel-rackets-2027-whats-new-by-brand/",
-"es": "/es/articulos/palas-padel-2027-novedades-por-marca/"
-}
-},
-{
 "path": "/en/articles/siux-diablo-pro-2026-vs-2027-whats-changed/",
 "alt": {
 "it": "/it/articoli/siux-diablo-pro-2026-vs-2027-cosa-cambia/",
@@ -45,14 +29,6 @@
 "it": "/it/articoli/",
 "en": "/en/articles/",
 "es": "/es/articulos/"
-}
-},
-{
-"path": "/es/articulos/palas-padel-2027-novedades-por-marca/",
-"alt": {
-"it": "/it/articoli/racchette-padel-2027-novita-per-marca/",
-"en": "/en/articles/padel-rackets-2027-whats-new-by-brand/",
-"es": "/es/articulos/palas-padel-2027-novedades-por-marca/"
 }
 },
 {

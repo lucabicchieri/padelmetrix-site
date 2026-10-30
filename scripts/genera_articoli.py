@@ -285,7 +285,7 @@ def main():
     db = carica()
     for l in LINGUE:
         set_lang(l)
-        arts = [novita_2027(db), diablo(db)]
+        arts = [diablo(db)]  # novita_2027(db) pronto ma non ancora pubblicato
         indice(arts)
     set_lang("it")
     (ROOT / "scripts" / "pagine_articoli.json").write_text(json.dumps(S.PAGINE, indent=0), encoding="utf-8")
