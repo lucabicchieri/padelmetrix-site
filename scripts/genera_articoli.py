@@ -371,6 +371,76 @@ def galan(db):
                            "El campeón madrileño, sus títulos con Lebrón y Chingotto y su Adidas Metalbone HRD+.")
 
 
+# ---------------------------------------------------------------- 4. Giocatori (Chingotto, Coello, Tapia, Lebrón)
+
+import re as _re  # noqa: E402
+from dati_giocatori import GIOCATORI, F as FG, TITOLI_TC, TITOLI_GC  # noqa: E402
+
+for _g in GIOCATORI:
+    S.SLUG[_g["slug"]] = (_g["slug_en"], _g["slug_es"])
+
+
+def _link_r(txt, per):
+    def rep(m):
+        n = per.get(m.group(1))
+        return f'<a href="{url_r(n)}">{e(n["titolo"])}</a>' if n else e(m.group(1))
+    return _re.sub(r"\{r:([a-z0-9-]+)\}", rep, txt)
+
+
+def _fonti(keys):
+    return ", ".join(fonte(FG[k][1], FG[k][0]) for k in keys)
+
+
+def giocatore(db, G):
+    per = {n["slug"]: n for n in db}
+    nd = L("n.d.", "n/a", "n.d.")
+    tab_r = [per[s] for s in G["tabella"] if s in per]
+    righe_def = [(L("Forma", "Shape", "Forma"), lambda n: FORMA(n["forma"])), (L("Peso", "Weight", "Peso"), lambda n: n["peso"]),
+                 (L("Bilanciamento", "Balance", "Balance"), lambda n: S.tr(n["bilanciamento"]) if isinstance(n["bilanciamento"], str) else None),
+                 (L("Gomma", "Core", "Goma"), lambda n: S.tr(n["nucleo"]) if isinstance(n["nucleo"], str) else None),
+                 (L("Faccia", "Face", "Cara"), lambda n: S.tr(n["superficie"]) if isinstance(n["superficie"], str) else None),
+                 (L("Tatto", "Feel", "Tacto"), lambda n: S.tr(n["sensazione"]) if isinstance(n["sensazione"], str) else None),
+                 (L("Livello", "Level", "Nivel"), lambda n: LIVN(n["livello"])),
+                 (L("Prezzo di listino", "List price", "Precio de lista"), lambda n: euro(n["prezzo"]) if n["prezzo"] else None)]
+    righe = "".join("<tr><td>" + e(lab) + "</td>" + "".join(f"<td>{e(f(n) or nd)}</td>" for n in tab_r) + "</tr>" for lab, f in righe_def)
+    tab = ('<div class="tablebox"><table class="tab"><thead><tr><th></th>' + "".join(f'<th><a href="{url_r(n)}">{e(n["titolo"])}</a></th>' for n in tab_r)
+           + f"</tr></thead><tbody>{righe}</tbody></table></div>")
+    fonti_tab = []
+    for n in tab_r:
+        for u in n["d"].get("fonti_dati", []):
+            if u not in fonti_tab:
+                fonti_tab.append(u)
+    note_tab = (f'<p class="note">{L("Dati tecnici dalle schede PadelMetrix; fonti", "Specs from the PadelMetrix spec pages; sources", "Datos técnicos de las fichas de PadelMetrix; fuentes")}: '
+                + ", ".join(fonte(u) for u in fonti_tab) + f'. {L("n.d. = non dichiarato dalle fonti.", "n/a = not stated by the sources.", "n.d. = no declarado por las fuentes.")}</p>')
+    bio = "".join(f"<li><b>{e(g(k))}:</b> {e(g(v))}</li>" for k, v in G["bio"])
+    stagione = g(G["stagione"]).format(tc=g(TITOLI_TC), gc=g(TITOLI_GC))
+    nome, breve = G["nome"], G["breve"]
+    pro_url = P("guide", "racchette-giocatori-professionisti")
+    corpo = f"""<p><b>{e(g(G["lead"]))}</b></p>
+<h2>{L(f"Chi è {nome}", f"Who is {nome}", f"Quién es {nome}")}</h2>
+<ul>{bio}</ul>
+<p class="note">{L("Fonte", "Source", "Fuente")}: {_fonti(G["fonti_bio"])}.</p>
+<h2>{L(f"{breve} nel 2026", f"{breve} in 2026", f"{breve} en 2026")}</h2>
+<p>{e(stagione)}</p>
+<p class="note">{L("Fonti", "Sources", "Fuentes")}: {_fonti(G["fonti_stagione"])}. {L("Classifiche e titoli cambiano di settimana in settimana.", "Rankings and titles change week by week.", "Los rankings y los títulos cambian cada semana.")}</p>
+<h2>{L(f"Che racchetta usa {breve}", f"Which racket does {breve} use", f"Qué pala usa {breve}")}</h2>
+<p>{_link_r(e(g(G["racchetta"])), per)}</p>
+<p class="note">{L("Fonti sul modello usato", "Sources on the model used", "Fuentes sobre el modelo usado")}: {_fonti(G["fonti_racchetta"])}.</p>
+{tab}{note_tab}
+<h2>{L(f"La racchetta di {breve} fa per te?", f"Is {breve}'s racket right for you?", f"¿La pala de {breve} es para ti?")}</h2>
+<ul>{"".join(f"<li>{g(x)}</li>" for x in G["adatta"])}<li>{L(f'<b>Nessuna delle sue racchette da torneo</b> se sei principiante o hai fastidi al gomito: guarda le <a href="{P("guide", "racchetta-padel-principianti")}">racchette per principianti</a> o quelle <a href="{P("guide", "racchetta-padel-epicondilite")}">per l\'epicondilite</a>.',
+        f'<b>None of his tournament rackets</b> if you are a beginner or have elbow problems: look at <a href="{P("guide", "racchetta-padel-principianti")}">rackets for beginners</a> or those <a href="{P("guide", "racchetta-padel-epicondilite")}">for tennis elbow</a>.',
+        f'<b>Ninguna de sus palas de torneo</b> si eres principiante o tienes molestias en el codo: mira las <a href="{P("guide", "racchetta-padel-principianti")}">palas para principiantes</a> o las <a href="{P("guide", "racchetta-padel-epicondilite")}">palas para la epicondilitis</a>.')}</li></ul>
+<p>{L(f'Le racchette degli altri professionisti sono nella guida <a href="{pro_url}">con che racchetta giocano i professionisti</a>.', f'The rackets of the other pros are in the guide <a href="{pro_url}">which rackets the pros use</a>.', f'Las palas de los demás profesionales están en la guía <a href="{pro_url}">con qué pala juegan los profesionales</a>.')}</p>"""
+    qa = [(g(q), g(a)) for q, a in G["faq"]]
+    faq_htm, faq_ld = faq(qa)
+    persona = {"@context": "https://schema.org", "@type": "Person", **G["persona"]}
+    titolo = g(G["titolo"])
+    items = [per[s] for s in G["racchette"] if s in per]
+    scrivi_articolo(G["slug"], titolo + " | PadelMetrix", g(G["desc"]), titolo, nome, corpo + faq_htm, items=items, ld_extra=[faq_ld, persona])
+    return G["slug"], titolo, g(G["sommario"])
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -391,7 +461,8 @@ def indice(arts):
 
 
 RACCHETTE_ARTICOLO = {"siux-diablo-pro-2026-vs-2027-cosa-cambia": ["siux-diablo-pro-2026", "siux-diablo-pro-2027"],
-                      "ale-galan-chi-e-e-che-racchetta-usa": ["adidas-metalbone-hrd-plus-2026", "adidas-metalbone-2026"]}
+                      "ale-galan-chi-e-e-che-racchetta-usa": ["adidas-metalbone-hrd-plus-2026", "adidas-metalbone-2026"],
+                      **{_g["slug"]: _g["racchette"] for _g in GIOCATORI}}
 
 
 def main():
@@ -399,7 +470,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [galan(db), diablo(db)]  # novita_2027(db) pronto ma non ancora pubblicato
+        arts = [*(giocatore(db, G) for G in GIOCATORI), galan(db), diablo(db)]  # novita_2027(db) pronto ma non ancora pubblicato
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": OGGI_ISO, "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
