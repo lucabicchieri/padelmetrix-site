@@ -1,18 +1,18 @@
 [
 {
-"path": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"path": "/it/articoli/leandro-augsburger-chi-e-e-che-racchetta-usa/",
 "alt": {
-"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/leandro-augsburger-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/leandro-augsburger-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/leandro-augsburger-quien-es-y-que-pala-usa/"
 }
 },
 {
-"path": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"path": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
 "alt": {
-"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
 }
 },
 {
@@ -24,11 +24,19 @@
 }
 },
 {
-"path": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"path": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
 "alt": {
-"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"alt": {
+"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
 }
 },
 {
@@ -56,19 +64,19 @@
 }
 },
 {
-"path": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"path": "/en/articles/leandro-augsburger-who-he-is-and-which-racket-he-uses/",
 "alt": {
-"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/leandro-augsburger-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/leandro-augsburger-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/leandro-augsburger-quien-es-y-que-pala-usa/"
 }
 },
 {
-"path": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"path": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
 "alt": {
-"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
 }
 },
 {
@@ -80,11 +88,19 @@
 }
 },
 {
-"path": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"path": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
 "alt": {
-"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"alt": {
+"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
 }
 },
 {
@@ -112,19 +128,19 @@
 }
 },
 {
-"path": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/",
+"path": "/es/articulos/leandro-augsburger-quien-es-y-que-pala-usa/",
 "alt": {
-"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/leandro-augsburger-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/leandro-augsburger-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/leandro-augsburger-quien-es-y-que-pala-usa/"
 }
 },
 {
-"path": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/",
+"path": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/",
 "alt": {
-"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
 }
 },
 {
@@ -136,11 +152,19 @@
 }
 },
 {
-"path": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/",
+"path": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/",
 "alt": {
-"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
-"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
-"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
+"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/",
+"alt": {
+"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
 }
 },
 {
