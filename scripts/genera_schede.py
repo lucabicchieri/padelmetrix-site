@@ -341,8 +341,6 @@ def render(d, n, db, pair_set):
 {recensioni}
 </section>
 
-<div class="ad">{L("Pubblicità", "Advertisement", "Publicidad")}</div>
-
 <section class="block">
 <h2>{L("Racchette simili alla", "Rackets similar to the", "Palas similares a la")} {e(sh)}</h2>
 <div class="sim">
