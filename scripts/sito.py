@@ -96,6 +96,7 @@ SEZ = {
     "domande": ("domande", "questions", "preguntas"),
     "pickleball": ("pickleball", "pickleball", "pickleball"),
     "selettore": ("trova-la-tua-racchetta", "racket-finder", "encuentra-tu-pala"),
+    "articoli": ("articoli", "articles", "articulos"),
     "privacy": ("privacy", "privacy", "privacidad"),
     "cookie": ("cookie", "cookies", "cookies"),
 }
@@ -111,6 +112,8 @@ SLUG = {
     "racchette-padel-potenza": ("power-padel-rackets", "palas-padel-potencia"),
     "racchette-giocatori-professionisti": ("pro-players-padel-rackets", "palas-jugadores-profesionales"),
     "racchette-padel-2026-2027-in-numeri": ("padel-rackets-2026-2027-in-numbers", "palas-padel-2026-2027-en-cifras"),
+    "racchette-padel-2027-novita-per-marca": ("padel-rackets-2027-whats-new-by-brand", "palas-padel-2027-novedades-por-marca"),
+    "siux-diablo-pro-2026-vs-2027-cosa-cambia": ("siux-diablo-pro-2026-vs-2027-whats-changed", "siux-diablo-pro-2026-vs-2027-que-cambia"),
     "bilanciamento": ("balance", "balance"),
     "swingweight": ("swingweight", "swingweight"),
     "sweet-spot": ("sweet-spot", "punto-dulce"),
@@ -323,7 +326,8 @@ def nav():
             ("pickleball", "Pickleball", P("pickleball")),
             ("bambini", L("Bambini", "Kids", "Niños"), P("bambini")),
             ("confronta", L("Confronta", "Compare", "Comparar"), P("confronta")),
-            ("guide", L("Guide", "Guides", "Guías"), P("guide"))]
+            ("guide", L("Guide", "Guides", "Guías"), P("guide")),
+            ("articoli", L("Articoli", "Articles", "Artículos"), P("articoli"))]
 
 
 def header(on, alt=None):
@@ -345,7 +349,7 @@ def footer():
               "PadelMetrix is an independent website by Luca Bicchieri. As an Amazon Associate, PadelMetrix earns from qualifying purchases. Some links to other shops are affiliate links.",
               "PadelMetrix es una web independiente de Luca Bicchieri. Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.")
     links = [(P("racchette"), L("Racchette", "Rackets", "Palas")), (P("guide"), L("Guide", "Guides", "Guías")),
-             (P("domande"), L("Domande", "Questions", "Preguntas")), (P("glossario"), L("Glossario", "Glossary", "Glosario")),
+             (P("articoli"), L("Articoli", "Articles", "Artículos")), (P("domande"), L("Domande", "Questions", "Preguntas")), (P("glossario"), L("Glossario", "Glossary", "Glosario")),
              (P("dati"), L("Dati aperti", "Open data", "Datos abiertos")), (P("chi-siamo"), L("Chi siamo e metodo", "About and method", "Quiénes somos y método")),
              (P("privacy"), L("Privacy", "Privacy", "Privacidad")), (P("cookie"), L("Cookie", "Cookies", "Cookies"))]
     return f'''<footer><div class="wrap">
