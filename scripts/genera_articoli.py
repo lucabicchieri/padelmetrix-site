@@ -470,7 +470,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [*(giocatore(db, G) for G in GIOCATORI), galan(db), diablo(db)]  # novita_2027(db) pronto ma non ancora pubblicato
+        arts = [*(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto  # novita_2027(db) pronto ma non ancora pubblicato
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": OGGI_ISO, "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
