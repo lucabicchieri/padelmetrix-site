@@ -1,5 +1,28 @@
 [
  {
+  "slug": "ale-galan-chi-e-e-che-racchetta-usa",
+  "data": "2026-10-30",
+  "racchette": [
+   "adidas-metalbone-hrd-plus-2026",
+   "adidas-metalbone-2026"
+  ],
+  "titolo": {
+   "it": "Ale Galán: chi è e che racchetta usa nel 2026",
+   "en": "Ale Galán: who he is and which racket he uses in 2026",
+   "es": "Ale Galán: quién es y qué pala usa en 2026"
+  },
+  "desc": {
+   "it": "Il campione madrileno, i titoli con Lebrón e Chingotto e la sua Adidas Metalbone HRD+.",
+   "en": "The Madrid champion, his titles with Lebrón and Chingotto and his Adidas Metalbone HRD+.",
+   "es": "El campeón madrileño, sus títulos con Lebrón y Chingotto y su Adidas Metalbone HRD+."
+  },
+  "url": {
+   "it": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
+   "en": "/en/articles/ale-galan-who-he-is-and-which-racket-he-uses/",
+   "es": "/es/articulos/ale-galan-quien-es-y-que-pala-usa/"
+  }
+ },
+ {
   "slug": "siux-diablo-pro-2026-vs-2027-cosa-cambia",
   "data": "2026-10-30",
   "racchette": [

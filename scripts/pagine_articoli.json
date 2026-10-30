@@ -1,5 +1,13 @@
 [
 {
+"path": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
+"alt": {
+"it": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/ale-galan-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/ale-galan-quien-es-y-que-pala-usa/"
+}
+},
+{
 "path": "/it/articoli/siux-diablo-pro-2026-vs-2027-cosa-cambia/",
 "alt": {
 "it": "/it/articoli/siux-diablo-pro-2026-vs-2027-cosa-cambia/",
@@ -16,6 +24,14 @@
 }
 },
 {
+"path": "/en/articles/ale-galan-who-he-is-and-which-racket-he-uses/",
+"alt": {
+"it": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/ale-galan-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/ale-galan-quien-es-y-que-pala-usa/"
+}
+},
+{
 "path": "/en/articles/siux-diablo-pro-2026-vs-2027-whats-changed/",
 "alt": {
 "it": "/it/articoli/siux-diablo-pro-2026-vs-2027-cosa-cambia/",
@@ -29,6 +45,14 @@
 "it": "/it/articoli/",
 "en": "/en/articles/",
 "es": "/es/articulos/"
+}
+},
+{
+"path": "/es/articulos/ale-galan-quien-es-y-que-pala-usa/",
+"alt": {
+"it": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/ale-galan-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/ale-galan-quien-es-y-que-pala-usa/"
 }
 },
 {

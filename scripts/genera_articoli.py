@@ -262,6 +262,115 @@ def diablo(db):
                            "La 2027 cambia la cara y el acabado; el resto de la ficha es igual.")
 
 
+# ---------------------------------------------------------------- 3. Ale Galán: chi è e che racchetta usa
+
+G_WIKI = "https://en.wikipedia.org/wiki/Alejandro_Gal%C3%A1n_Romo"
+G_WIKI26 = "https://en.wikipedia.org/wiki/Premier_Padel_2026"
+G_STUDY = "https://www.studypadel.com/players/alejandro-galan"
+G_CHINGO = "https://chingoland.es/premier-padel/top-10-ranking-premier-padel-2026/"
+G_IBER = "https://www.padeliberico.es/blog-padeliberico/en/the-rackets-used-by-premier-padel-players-in-2026/"
+G_RES = "https://allforpadel.com/en/blog/metalbone-reserve-edt-la-pala-exclusiva-de-ale-galan-para-dominar-el-reserve-n563"
+G_PZ_HRD = "https://padelzoom.es/adidas-metalbone-hrd-2026-ale-galan/"
+G_PZ = "https://padelzoom.es/adidas-metalbone-2026-ale-galan/"
+
+
+def galan(db):
+    slug = "ale-galan-chi-e-e-che-racchetta-usa"
+    per = {n["slug"]: n for n in db}
+    hrd, mb = per.get("adidas-metalbone-hrd-plus-2026"), per.get("adidas-metalbone-2026")
+    righe_dati = [
+        (T("Peso", "Weight", "Peso"), "345–360 g (+11,2 g)", "345–360 g (+11,2 g)"),
+        (T("Forma", "Shape", "Forma"), T("Diamante", "Diamond", "Diamante"), T("Diamante", "Diamond", "Diamante")),
+        (T("Gomma", "Core", "Goma"), "EVA High Memory", "EVA Soft Performance"),
+        (T("Faccia", "Face", "Cara"), T("Carbonio alluminizzato 16K", "16K aluminised carbon", "Carbono aluminizado 16K"),
+         T("Carbonio alluminizzato 16K", "16K aluminised carbon", "Carbono aluminizado 16K")),
+        (T("Tatto", "Feel", "Tacto"), T("Medio-duro", "Medium-hard", "Medio-duro"), T("Medio", "Medium", "Medio")),
+        (T("Potenza (PadelZoom)", "Power (PadelZoom)", "Potencia (PadelZoom)"), "10/10", "9/10"),
+        (T("Controllo (PadelZoom)", "Control (PadelZoom)", "Control (PadelZoom)"), "9,5/10", "8,5/10"),
+        (T("Uscita di palla (PadelZoom)", "Ball output (PadelZoom)", "Salida de bola (PadelZoom)"), "8/10", "9,5/10"),
+        (T("Voto complessivo (PadelZoom)", "Overall score (PadelZoom)", "Nota global (PadelZoom)"), "8,7/10", "8,6/10"),
+        (T("Prezzo di listino", "List price", "Precio de lista"), "390 €", "390 €"),
+    ]
+    num = lambda x: x.replace(",", ".") if S.lang() == "en" else x  # noqa: E731
+    righe = "".join(f"<tr><td>{e(g(v))}</td><td>{e(num(g(a)))}</td><td>{e(num(g(b)))}</td></tr>" for v, a, b in righe_dati)
+    tab = (f'<div class="tablebox"><table class="tab"><thead><tr><th></th><th><a href="{url_r(hrd)}">Metalbone HRD+ 2026</a></th>'
+           f'<th><a href="{url_r(mb)}">Metalbone 2026</a></th></tr></thead><tbody>{righe}</tbody></table></div>')
+    note_tab = L(f'<p class="note">Dati e punteggi: {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. Il peso si può aumentare fino a 11,2 g con il sistema Weight &amp; Balance.</p>',
+                 f'<p class="note">Data and scores: {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. Weight can be increased by up to 11.2 g with the Weight &amp; Balance system.</p>',
+                 f'<p class="note">Datos y puntuaciones: {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. El peso se puede aumentar hasta 11,2 g con el sistema Weight &amp; Balance.</p>')
+    pro_url = P("guide", "racchette-giocatori-professionisti")
+    corpo = L(
+        f"""<p><b>Alejandro "Ale" Galán Romo è un giocatore di padel spagnolo, nato a Madrid il 15 maggio 1996, che gioca sul lato sinistro (revés). È stato numero 1 del mondo con Juan Lebrón e dal marzo 2024 fa coppia con l'argentino Federico Chingotto. In partita usa la Adidas Metalbone HRD+ 2026, la versione più rigida della sua linea firmata.</b></p>
+<h2>Chi è Ale Galán</h2>
+<ul><li><b>Nato:</b> 15 maggio 1996 a Madrid; alto 1,86 m.</li><li><b>Lato:</b> sinistro (revés), il lato che di solito chiude il punto con lo smash.</li><li><b>Compagni principali:</b> Juan Lebrón dal 2020 al marzo 2024, poi Federico Chingotto.</li><li><b>Numero 1 del mondo:</b> con Lebrón nel 2020, 2021 e 2022; hanno perso la vetta nel maggio 2023 a favore di Tapia e Coello.</li><li><b>Titoli importanti:</b> tre Master Final del World Padel Tour (2019 con Pablo Lima, 2021 e 2022 con Lebrón) e il Mondiale 2021 con la Spagna.</li></ul>
+<p class="note">Fonte: {fonte(G_WIKI, "Wikipedia")}.</p>
+<h2>Il 2026 con Chingotto</h2>
+<p>Nel 2026 Galán e Chingotto hanno vinto sette tornei Premier Padel: Gijón P2, Miami P1, Giza P2, Asunción P2, Buenos Aires P1 (in finale contro Tapia e Coello), Pretoria P1 e Madrid P1. A fine ottobre Galán è numero 3 del ranking FIP secondo StudyPadel, che gli attribuisce 56 titoli professionali in carriera.</p>
+<p class="note">Fonti: {fonte(G_WIKI26, "Wikipedia – Premier Padel 2026")}, {fonte(G_STUDY, "StudyPadel")}, {fonte(G_CHINGO, "Chingoland")}. Classifiche e titoli cambiano di settimana in settimana.</p>
+<h2>Che racchetta usa Ale Galán</h2>
+<p>Galán è un giocatore Adidas e la linea <b>Metalbone</b> è la sua racchetta firmata. Secondo Chingoland e Padel Ibérico, nel 2026 in partita usa la <b><a href="{url_r(hrd)}">Metalbone HRD+ 2026</a></b>: una diamante con gomma EVA High Memory e faccia in carbonio alluminizzato 16K, la più dura del catalogo Adidas. Accanto c'è la <a href="{url_r(mb)}">Metalbone 2026</a>, stessa forma e stessi materiali della faccia ma con una gomma più morbida.</p>
+{tab}{note_tab}
+<p>Per PadelZoom la HRD+ è la Metalbone più potente (10/10) e con più controllo nei colpi d'attacco, ma con un'uscita di palla moderata: in difesa bisogna accompagnare il colpo e lo sweet spot è più piccolo. La Metalbone "normale" perdona di più e ha un'uscita di palla molto alta per una diamante.</p>
+<p>A gennaio 2026 Adidas ha annunciato anche la <b>Metalbone Reserve</b>, un'edizione limitata con la firma di Galán per la Reserve Cup ({fonte(G_RES, "All for Padel")}). La fonte non dice che la usi in torneo.</p>
+<h2>La racchetta di Galán fa per te?</h2>
+<ul><li><b>Sì, la HRD+</b>, se sei un giocatore avanzato, giochi a sinistra, chiudi molto il punto di smash e hai un braccio allenato: è rigida ed esigente.</li><li><b>Meglio la Metalbone</b> se vuoi lo stesso stile di gioco con più tolleranza e più aiuto in difesa.</li><li><b>Nessuna delle due</b> se sei principiante o hai fastidi al gomito: guarda le <a href="{P("guide", "racchetta-padel-principianti")}">racchette per principianti</a> o quelle <a href="{P("guide", "racchetta-padel-epicondilite")}">per l'epicondilite</a>.</li></ul>
+<p>Le racchette degli altri professionisti sono nella guida <a href="{pro_url}">con che racchetta giocano i professionisti</a>.</p>""",
+        f"""<p><b>Alejandro "Ale" Galán Romo is a Spanish padel player, born in Madrid on 15 May 1996, who plays on the left side (backhand). He was world number 1 with Juan Lebrón and since March 2024 has partnered Argentina's Federico Chingotto. In matches he uses the Adidas Metalbone HRD+ 2026, the stiffest version of his signature line.</b></p>
+<h2>Who is Ale Galán</h2>
+<ul><li><b>Born:</b> 15 May 1996 in Madrid; 1.86 m tall.</li><li><b>Side:</b> left (backhand), the side that usually finishes points with the smash.</li><li><b>Main partners:</b> Juan Lebrón from 2020 to March 2024, then Federico Chingotto.</li><li><b>World number 1:</b> with Lebrón in 2020, 2021 and 2022; they lost the top spot in May 2023 to Tapia and Coello.</li><li><b>Major titles:</b> three World Padel Tour Master Finals (2019 with Pablo Lima, 2021 and 2022 with Lebrón) and the 2021 World Championship with Spain.</li></ul>
+<p class="note">Source: {fonte(G_WIKI, "Wikipedia")}.</p>
+<h2>2026 with Chingotto</h2>
+<p>In 2026 Galán and Chingotto won seven Premier Padel tournaments: Gijón P2, Miami P1, Giza P2, Asunción P2, Buenos Aires P1 (beating Tapia and Coello in the final), Pretoria P1 and Madrid P1. At the end of October Galán is number 3 in the FIP ranking according to StudyPadel, which credits him with 56 professional titles.</p>
+<p class="note">Sources: {fonte(G_WIKI26, "Wikipedia – Premier Padel 2026")}, {fonte(G_STUDY, "StudyPadel")}, {fonte(G_CHINGO, "Chingoland")}. Rankings and titles change week by week.</p>
+<h2>Which racket does Ale Galán use</h2>
+<p>Galán is an Adidas player and the <b>Metalbone</b> line is his signature racket. According to Chingoland and Padel Ibérico, in 2026 he plays matches with the <b><a href="{url_r(hrd)}">Metalbone HRD+ 2026</a></b>: a diamond with an EVA High Memory core and a 16K aluminised carbon face, the hardest racket in the Adidas range. Alongside it is the <a href="{url_r(mb)}">Metalbone 2026</a>, with the same shape and face materials but a softer core.</p>
+{tab}{note_tab}
+<p>According to PadelZoom, the HRD+ is the most powerful Metalbone (10/10) and the one with the most control on attacking shots, but with moderate ball output: in defence you have to follow through more and the sweet spot is smaller. The standard Metalbone is more forgiving and has very high ball output for a diamond.</p>
+<p>In January 2026 Adidas also announced the <b>Metalbone Reserve</b>, a limited edition signed by Galán for the Reserve Cup ({fonte(G_RES, "All for Padel")}). The source does not say he uses it in tournaments.</p>
+<h2>Is Galán's racket right for you?</h2>
+<ul><li><b>Yes, the HRD+</b>, if you are an advanced player, play on the left, finish many points with the smash and have a trained arm: it is stiff and demanding.</li><li><b>The Metalbone is better</b> if you want the same style of play with more forgiveness and more help in defence.</li><li><b>Neither</b> if you are a beginner or have elbow problems: look at <a href="{P("guide", "racchetta-padel-principianti")}">rackets for beginners</a> or those <a href="{P("guide", "racchetta-padel-epicondilite")}">for tennis elbow</a>.</li></ul>
+<p>The rackets of the other pros are in the guide <a href="{pro_url}">which rackets the pros use</a>.</p>""",
+        f"""<p><b>Alejandro "Ale" Galán Romo es un jugador de pádel español, nacido en Madrid el 15 de mayo de 1996, que juega en el lado izquierdo (revés). Fue número 1 del mundo con Juan Lebrón y desde marzo de 2024 forma pareja con el argentino Federico Chingotto. En partido usa la Adidas Metalbone HRD+ 2026, la versión más rígida de su línea firmada.</b></p>
+<h2>Quién es Ale Galán</h2>
+<ul><li><b>Nacido:</b> el 15 de mayo de 1996 en Madrid; mide 1,86 m.</li><li><b>Lado:</b> izquierdo (revés), el lado que suele cerrar el punto con el remate.</li><li><b>Compañeros principales:</b> Juan Lebrón de 2020 a marzo de 2024, después Federico Chingotto.</li><li><b>Número 1 del mundo:</b> con Lebrón en 2020, 2021 y 2022; perdieron el primer puesto en mayo de 2023 frente a Tapia y Coello.</li><li><b>Títulos importantes:</b> tres Master Final del World Padel Tour (2019 con Pablo Lima, 2021 y 2022 con Lebrón) y el Mundial 2021 con España.</li></ul>
+<p class="note">Fuente: {fonte(G_WIKI, "Wikipedia")}.</p>
+<h2>El 2026 con Chingotto</h2>
+<p>En 2026 Galán y Chingotto ganaron siete torneos de Premier Padel: Gijón P2, Miami P1, Giza P2, Asunción P2, Buenos Aires P1 (en la final contra Tapia y Coello), Pretoria P1 y Madrid P1. A finales de octubre Galán es número 3 del ranking FIP según StudyPadel, que le atribuye 56 títulos profesionales.</p>
+<p class="note">Fuentes: {fonte(G_WIKI26, "Wikipedia – Premier Padel 2026")}, {fonte(G_STUDY, "StudyPadel")}, {fonte(G_CHINGO, "Chingoland")}. Los rankings y los títulos cambian cada semana.</p>
+<h2>Qué pala usa Ale Galán</h2>
+<p>Galán es jugador de Adidas y la línea <b>Metalbone</b> es su pala firmada. Según Chingoland y Padel Ibérico, en 2026 juega los partidos con la <b><a href="{url_r(hrd)}">Metalbone HRD+ 2026</a></b>: una diamante con goma EVA High Memory y cara de carbono aluminizado 16K, la más dura del catálogo de Adidas. A su lado está la <a href="{url_r(mb)}">Metalbone 2026</a>, con la misma forma y los mismos materiales en la cara pero una goma más blanda.</p>
+{tab}{note_tab}
+<p>Para PadelZoom la HRD+ es la Metalbone más potente (10/10) y la de más control en los golpes de ataque, pero con una salida de bola moderada: en defensa hay que acompañar más el golpe y el punto dulce es más pequeño. La Metalbone "normal" perdona más y tiene una salida de bola muy alta para una diamante.</p>
+<p>En enero de 2026 Adidas anunció también la <b>Metalbone Reserve</b>, una edición limitada con la firma de Galán para la Reserve Cup ({fonte(G_RES, "All for Padel")}). La fuente no dice que la use en torneo.</p>
+<h2>¿La pala de Galán es para ti?</h2>
+<ul><li><b>Sí, la HRD+</b>, si eres un jugador avanzado, juegas en el lado izquierdo, cierras muchos puntos de remate y tienes el brazo entrenado: es rígida y exigente.</li><li><b>Mejor la Metalbone</b> si quieres el mismo estilo de juego con más tolerancia y más ayuda en defensa.</li><li><b>Ninguna de las dos</b> si eres principiante o tienes molestias en el codo: mira las <a href="{P("guide", "racchetta-padel-principianti")}">palas para principiantes</a> o las <a href="{P("guide", "racchetta-padel-epicondilite")}">palas para la epicondilitis</a>.</li></ul>
+<p>Las palas de los demás profesionales están en la guía <a href="{pro_url}">con qué pala juegan los profesionales</a>.</p>""")
+    qa = [(L("Che racchetta usa Ale Galán?", "Which racket does Ale Galán use?", "¿Qué pala usa Ale Galán?"),
+           L("Nel 2026 usa la Adidas Metalbone HRD+ 2026, una diamante rigida con gomma EVA High Memory e faccia in carbonio alluminizzato 16K.",
+             "In 2026 he uses the Adidas Metalbone HRD+ 2026, a stiff diamond with an EVA High Memory core and a 16K aluminised carbon face.",
+             "En 2026 usa la Adidas Metalbone HRD+ 2026, una diamante rígida con goma EVA High Memory y cara de carbono aluminizado 16K.")),
+          (L("Con chi gioca Ale Galán?", "Who does Ale Galán play with?", "¿Con quién juega Ale Galán?"),
+           L("Dal marzo 2024 gioca con l'argentino Federico Chingotto; prima, dal 2020, con Juan Lebrón.",
+             "Since March 2024 he has played with Argentina's Federico Chingotto; before that, from 2020, with Juan Lebrón.",
+             "Desde marzo de 2024 juega con el argentino Federico Chingotto; antes, desde 2020, con Juan Lebrón.")),
+          (L("Quanto costa la racchetta di Galán?", "How much does Galán's racket cost?", "¿Cuánto cuesta la pala de Galán?"),
+           L("Il prezzo di listino della Metalbone HRD+ 2026 è 390 €; nei negozi si trova spesso scontata.",
+             "The list price of the Metalbone HRD+ 2026 is €390; shops often sell it at a discount.",
+             "El precio de lista de la Metalbone HRD+ 2026 es de 390 €; en las tiendas suele encontrarse rebajada."))]
+    faq_htm, faq_ld = faq(qa)
+    persona = {"@context": "https://schema.org", "@type": "Person", "name": "Alejandro Galán Romo", "alternateName": "Ale Galán",
+               "birthDate": "1996-05-15", "birthPlace": "Madrid", "nationality": "Spain", "sameAs": [G_WIKI]}
+    titolo = L("Ale Galán: chi è e che racchetta usa nel 2026", "Ale Galán: who he is and which racket he uses in 2026", "Ale Galán: quién es y qué pala usa en 2026")
+    scrivi_articolo(slug, titolo + " | PadelMetrix",
+                    L("Chi è Ale Galán (Madrid, 1996), con chi gioca, i suoi titoli e la racchetta che usa nel 2026: Adidas Metalbone HRD+, con dati tecnici e alternative.",
+                      "Who Ale Galán is (Madrid, 1996), who he plays with, his titles and the racket he uses in 2026: Adidas Metalbone HRD+, with specs and alternatives.",
+                      "Quién es Ale Galán (Madrid, 1996), con quién juega, sus títulos y la pala que usa en 2026: Adidas Metalbone HRD+, con datos técnicos y alternativas."),
+                    titolo, "Ale Galán", corpo + faq_htm, items=[hrd, mb], ld_extra=[faq_ld, persona])
+    return slug, titolo, L("Il campione madrileno, i titoli con Lebrón e Chingotto e la sua Adidas Metalbone HRD+.",
+                           "The Madrid champion, his titles with Lebrón and Chingotto and his Adidas Metalbone HRD+.",
+                           "El campeón madrileño, sus títulos con Lebrón y Chingotto y su Adidas Metalbone HRD+.")
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -281,7 +390,8 @@ def indice(arts):
                           path, corpo, on="articoli", ld=[ld], alt=alt), alt)
 
 
-RACCHETTE_ARTICOLO = {"siux-diablo-pro-2026-vs-2027-cosa-cambia": ["siux-diablo-pro-2026", "siux-diablo-pro-2027"]}
+RACCHETTE_ARTICOLO = {"siux-diablo-pro-2026-vs-2027-cosa-cambia": ["siux-diablo-pro-2026", "siux-diablo-pro-2027"],
+                      "ale-galan-chi-e-e-che-racchetta-usa": ["adidas-metalbone-hrd-plus-2026", "adidas-metalbone-2026"]}
 
 
 def main():
@@ -289,7 +399,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [diablo(db)]  # novita_2027(db) pronto ma non ancora pubblicato
+        arts = [galan(db), diablo(db)]  # novita_2027(db) pronto ma non ancora pubblicato
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": OGGI_ISO, "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
