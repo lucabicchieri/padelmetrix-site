@@ -1,5 +1,37 @@
 [
 {
+"path": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"alt": {
+"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"alt": {
+"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/it/articoli/agustin-tapia-chi-e-e-che-racchetta-usa/",
+"alt": {
+"it": "/it/articoli/agustin-tapia-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/agustin-tapia-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/agustin-tapia-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"alt": {
+"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
+}
+},
+{
 "path": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
 "alt": {
 "it": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
@@ -24,6 +56,38 @@
 }
 },
 {
+"path": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"alt": {
+"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"alt": {
+"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/en/articles/agustin-tapia-who-he-is-and-which-racket-he-uses/",
+"alt": {
+"it": "/it/articoli/agustin-tapia-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/agustin-tapia-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/agustin-tapia-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"alt": {
+"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
+}
+},
+{
 "path": "/en/articles/ale-galan-who-he-is-and-which-racket-he-uses/",
 "alt": {
 "it": "/it/articoli/ale-galan-chi-e-e-che-racchetta-usa/",
@@ -45,6 +109,38 @@
 "it": "/it/articoli/",
 "en": "/en/articles/",
 "es": "/es/articulos/"
+}
+},
+{
+"path": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/",
+"alt": {
+"it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/",
+"alt": {
+"it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/es/articulos/agustin-tapia-quien-es-y-que-pala-usa/",
+"alt": {
+"it": "/it/articoli/agustin-tapia-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/agustin-tapia-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/agustin-tapia-quien-es-y-que-pala-usa/"
+}
+},
+{
+"path": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/",
+"alt": {
+"it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
 }
 },
 {

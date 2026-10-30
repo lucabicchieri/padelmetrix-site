@@ -1,5 +1,104 @@
 [
  {
+  "slug": "federico-chingotto-chi-e-e-che-racchetta-usa",
+  "data": "2026-10-30",
+  "racchette": [
+   "bullpadel-neuron-02-edge-2026",
+   "bullpadel-neuron-02-2026",
+   "bullpadel-neuron-02-edge-2027",
+   "bullpadel-neuron-02-2027"
+  ],
+  "titolo": {
+   "it": "Federico Chingotto: chi è e che racchetta usa nel 2026",
+   "en": "Federico Chingotto: who he is and which racket he uses in 2026",
+   "es": "Federico Chingotto: quién es y qué pala usa en 2026"
+  },
+  "desc": {
+   "it": "Il drive argentino compagno di Galán e la sua linea Bullpadel Neuron.",
+   "en": "Galán's Argentine drive partner and his Bullpadel Neuron line.",
+   "es": "El drive argentino compañero de Galán y su línea Bullpadel Neuron."
+  },
+  "url": {
+   "it": "/it/articoli/federico-chingotto-chi-e-e-che-racchetta-usa/",
+   "en": "/en/articles/federico-chingotto-who-he-is-and-which-racket-he-uses/",
+   "es": "/es/articulos/federico-chingotto-quien-es-y-que-pala-usa/"
+  }
+ },
+ {
+  "slug": "arturo-coello-chi-e-e-che-racchetta-usa",
+  "data": "2026-10-30",
+  "racchette": [
+   "head-coello-pro-2026",
+   "head-coello-junior-2026"
+  ],
+  "titolo": {
+   "it": "Arturo Coello: chi è e che racchetta usa nel 2026",
+   "en": "Arturo Coello: who he is and which racket he uses in 2026",
+   "es": "Arturo Coello: quién es y qué pala usa en 2026"
+  },
+  "desc": {
+   "it": "Il numero 1 spagnolo e la sua Head Coello Pro.",
+   "en": "The Spanish number 1 and his Head Coello Pro.",
+   "es": "El número 1 español y su Head Coello Pro."
+  },
+  "url": {
+   "it": "/it/articoli/arturo-coello-chi-e-e-che-racchetta-usa/",
+   "en": "/en/articles/arturo-coello-who-he-is-and-which-racket-he-uses/",
+   "es": "/es/articulos/arturo-coello-quien-es-y-que-pala-usa/"
+  }
+ },
+ {
+  "slug": "agustin-tapia-chi-e-e-che-racchetta-usa",
+  "data": "2026-10-30",
+  "racchette": [
+   "nox-at10-luxury-genius-12k-alum-xtrem-2026",
+   "nox-at10-genius-18k-alum-2026",
+   "nox-at10-genius-12k-xtrem-2027",
+   "nox-genius-18k-alum-2027",
+   "nox-at10-genius-junior-2026"
+  ],
+  "titolo": {
+   "it": "Agustín Tapia: chi è e che racchetta usa nel 2026",
+   "en": "Agustín Tapia: who he is and which racket he uses in 2026",
+   "es": "Agustín Tapia: quién es y qué pala usa en 2026"
+  },
+  "desc": {
+   "it": "Il numero 1 argentino e la sua Nox AT10 Genius.",
+   "en": "The Argentine number 1 and his Nox AT10 Genius.",
+   "es": "El número 1 argentino y su Nox AT10 Genius."
+  },
+  "url": {
+   "it": "/it/articoli/agustin-tapia-chi-e-e-che-racchetta-usa/",
+   "en": "/en/articles/agustin-tapia-who-he-is-and-which-racket-he-uses/",
+   "es": "/es/articulos/agustin-tapia-quien-es-y-que-pala-usa/"
+  }
+ },
+ {
+  "slug": "juan-lebron-chi-e-e-che-racchetta-usa",
+  "data": "2026-10-30",
+  "racchette": [
+   "babolat-viper-juan-lebron-3-0-2026",
+   "babolat-viper-juan-lebron-3-1-2027",
+   "babolat-viper-soft-juan-lebron-3-1-2027",
+   "babolat-veron-juan-lebron-3-0-2026"
+  ],
+  "titolo": {
+   "it": "Juan Lebrón: chi è e che racchetta usa nel 2026",
+   "en": "Juan Lebrón: who he is and which racket he uses in 2026",
+   "es": "Juan Lebrón: quién es y qué pala usa en 2026"
+  },
+  "desc": {
+   "it": "\"El Lobo\", ex numero 1, e la sua Babolat Viper.",
+   "en": "\"El Lobo\", former number 1, and his Babolat Viper.",
+   "es": "\"El Lobo\", ex número 1, y su Babolat Viper."
+  },
+  "url": {
+   "it": "/it/articoli/juan-lebron-chi-e-e-che-racchetta-usa/",
+   "en": "/en/articles/juan-lebron-who-he-is-and-which-racket-he-uses/",
+   "es": "/es/articulos/juan-lebron-quien-es-y-que-pala-usa/"
+  }
+ },
+ {
   "slug": "ale-galan-chi-e-e-che-racchetta-usa",
   "data": "2026-10-30",
   "racchette": [
