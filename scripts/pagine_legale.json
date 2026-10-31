@@ -16,6 +16,14 @@
 }
 },
 {
+"path": "/it/contatti/",
+"alt": {
+"it": "/it/contatti/",
+"en": "/en/contact/",
+"es": "/es/contacto/"
+}
+},
+{
 "path": "/en/privacy/",
 "alt": {
 "it": "/it/privacy/",
@@ -32,6 +40,14 @@
 }
 },
 {
+"path": "/en/contact/",
+"alt": {
+"it": "/it/contatti/",
+"en": "/en/contact/",
+"es": "/es/contacto/"
+}
+},
+{
 "path": "/es/privacidad/",
 "alt": {
 "it": "/it/privacy/",
@@ -45,6 +61,14 @@
 "it": "/it/cookie/",
 "en": "/en/cookies/",
 "es": "/es/cookies/"
+}
+},
+{
+"path": "/es/contacto/",
+"alt": {
+"it": "/it/contatti/",
+"en": "/en/contact/",
+"es": "/es/contacto/"
 }
 }
 ]

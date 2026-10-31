@@ -60,7 +60,7 @@ T = {
         "marche_titolo": "Le marche nel database",
         "racchette_n": "{n} racchette", "racchetta_1": "1 racchetta",
         "footer_sez": "Sezioni", "footer_str": "Strumenti", "footer_info": "PadelMetrix",
-        "chi": "Chi siamo", "privacy": "Privacy", "cookie": "Cookie",
+        "chi": "Chi siamo", "contatti": "Contatti", "privacy": "Privacy", "cookie": "Cookie",
         "disclosure": "In qualità di Affiliato Amazon, PadelMetrix riceve un guadagno dagli acquisti idonei. Alcuni link verso altri negozi sono link di affiliazione.",
         "forme": {"diamante": "Diamante", "rotonda": "Rotonda", "goccia": "Goccia"},
         "lingua": "Lingua",
@@ -95,7 +95,7 @@ T = {
         "marche_titolo": "Brands in our database",
         "racchette_n": "{n} rackets", "racchetta_1": "1 racket",
         "footer_sez": "Sections", "footer_str": "Tools", "footer_info": "PadelMetrix",
-        "chi": "About us", "privacy": "Privacy", "cookie": "Cookies",
+        "chi": "About us", "contatti": "Contact", "privacy": "Privacy", "cookie": "Cookies",
         "disclosure": "As an Amazon Associate, PadelMetrix earns from qualifying purchases. Some links to other shops are affiliate links.",
         "forme": {"diamante": "Diamond", "rotonda": "Round", "goccia": "Teardrop"},
         "lingua": "Language",
@@ -130,7 +130,7 @@ T = {
         "marche_titolo": "Marcas en nuestra base de datos",
         "racchette_n": "{n} palas", "racchetta_1": "1 pala",
         "footer_sez": "Secciones", "footer_str": "Herramientas", "footer_info": "PadelMetrix",
-        "chi": "Quiénes somos", "privacy": "Privacidad", "cookie": "Cookies",
+        "chi": "Quiénes somos", "contatti": "Contacto", "privacy": "Privacidad", "cookie": "Cookies",
         "disclosure": "Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.",
         "forme": {"diamante": "Diamante", "rotonda": "Redonda", "goccia": "Lágrima"},
         "lingua": "Idioma",
@@ -373,7 +373,7 @@ def pagina(lang, db):
 <div style="flex:1 1 240px"><span class="wm"><b>padel</b><i>metrix</i></span><span>{e(t["claim"])}</span></div>
 <div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{P("pickleball")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
 <div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a><a href="{P("articoli")}">{e(t["nav"][5])}</a></div>
-<div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a>{C.link_footer(lang)}</div>
+<div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "contatti")}">{e(t["contatti"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a>{C.link_footer(lang)}</div>
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
 </div></footer>

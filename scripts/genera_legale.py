@@ -261,11 +261,83 @@ def ga_cookie(corpo):
     return corpo
 
 
+def contatti():
+    cr, ld = crumbs([S.home_crumb(), (L("Contatti", "Contact", "Contacto"), None)])
+    corpo = L(f'''{cr}
+<div class="intro"><h1>Contatti</h1>
+<p><b>Per qualsiasi richiesta scrivi a {MAIL}.</b> Rispondo personalmente, di solito entro pochi giorni.</p></div>
+<div class="prose">
+<h2>Per i giocatori</h2>
+<ul>
+<li><b>Hai trovato un dato sbagliato o mancante?</b> Indicami la racchetta e, se puoi, la fonte (sito del produttore, scheda del negozio). Correggo la scheda e cito la fonte.</li>
+<li><b>Vorresti una racchetta che non trovi?</b> Scrivimi marca, modello e anno: la aggiungo quando trovo dati verificabili.</li>
+</ul>
+<h2>Per negozi e marchi</h2>
+<p>PadelMetrix confronta le racchette con dati dichiarati e fonti citate. Se gestisci un negozio di padel o un marchio, puoi scrivermi per:</p>
+<ul>
+<li><b>programmi di affiliazione</b>: aggiungere il tuo negozio tra quelli indicati nelle schede, accanto ad Amazon;</li>
+<li><b>schede tecniche e dati ufficiali</b> dei tuoi modelli, per completare quelli che oggi risultano "non dichiarati";</li>
+<li><b>nuove collezioni</b>, per inserirle nel database appena escono.</li>
+</ul>
+<p>Le regole restano le stesse per tutti: i confronti, i voti e le classifiche non si comprano e non dipendono dagli accordi di affiliazione. I link di affiliazione sono sempre indicati come tali. Il metodo è spiegato nella pagina <a href="{P("chi-siamo")}">Chi siamo e metodo</a>.</p>
+<h2>Privacy</h2>
+<p>Uso il tuo indirizzo e il contenuto del messaggio solo per risponderti. Dettagli nell'<a href="{P("privacy")}">informativa sulla privacy</a>.</p>
+</div>''', f'''{cr}
+<div class="intro"><h1>Contact</h1>
+<p><b>For any request, write to {MAIL}.</b> I reply personally, usually within a few days.</p></div>
+<div class="prose">
+<h2>For players</h2>
+<ul>
+<li><b>Found a wrong or missing figure?</b> Tell me the racket and, if you can, the source (manufacturer's site, shop listing). I'll fix the page and cite the source.</li>
+<li><b>Looking for a racket that isn't here?</b> Send me brand, model and year: I'll add it once I find verifiable data.</li>
+</ul>
+<h2>For shops and brands</h2>
+<p>PadelMetrix compares rackets using declared data and cited sources. If you run a padel shop or a brand, you can write to me about:</p>
+<ul>
+<li><b>affiliate programmes</b>: adding your shop to those listed on the racket pages, next to Amazon;</li>
+<li><b>official spec sheets and data</b> for your models, to fill in what is currently "not stated";</li>
+<li><b>new collections</b>, so they can be added to the database as soon as they launch.</li>
+</ul>
+<p>The rules are the same for everyone: comparisons, scores and rankings cannot be bought and do not depend on affiliate agreements. Affiliate links are always labelled as such. The method is explained on the <a href="{P("chi-siamo")}">About and method</a> page.</p>
+<h2>Privacy</h2>
+<p>I use your address and the content of your message only to reply to you. Details in the <a href="{P("privacy")}">privacy policy</a>.</p>
+</div>''', f'''{cr}
+<div class="intro"><h1>Contacto</h1>
+<p><b>Para cualquier consulta escribe a {MAIL}.</b> Respondo personalmente, normalmente en pocos días.</p></div>
+<div class="prose">
+<h2>Para jugadores</h2>
+<ul>
+<li><b>¿Has encontrado un dato erróneo o que falta?</b> Indícame la pala y, si puedes, la fuente (web del fabricante, ficha de la tienda). Corrijo la ficha y cito la fuente.</li>
+<li><b>¿Buscas una pala que no está?</b> Escríbeme marca, modelo y año: la añado cuando encuentre datos verificables.</li>
+</ul>
+<h2>Para tiendas y marcas</h2>
+<p>PadelMetrix compara palas con datos declarados y fuentes citadas. Si gestionas una tienda de pádel o una marca, puedes escribirme para:</p>
+<ul>
+<li><b>programas de afiliación</b>: añadir tu tienda a las indicadas en las fichas, junto a Amazon;</li>
+<li><b>fichas técnicas y datos oficiales</b> de tus modelos, para completar los que hoy figuran como "no declarados";</li>
+<li><b>nuevas colecciones</b>, para incluirlas en la base de datos en cuanto salgan.</li>
+</ul>
+<p>Las reglas son las mismas para todos: las comparativas, las notas y los rankings no se compran y no dependen de los acuerdos de afiliación. Los enlaces de afiliado siempre se indican como tales. El método se explica en la página <a href="{P("chi-siamo")}">Quiénes somos y método</a>.</p>
+<h2>Privacidad</h2>
+<p>Uso tu dirección y el contenido del mensaje solo para responderte. Detalles en la <a href="{P("privacy")}">política de privacidad</a>.</p>
+</div>''')
+    org = {"@context": "https://schema.org", "@type": "ContactPage", "name": L("Contatti", "Contact", "Contacto"), "url": S.SITO + P("contatti"),
+           "mainEntity": {"@type": "Organization", "name": "PadelMetrix", "url": S.SITO, "email": EMAIL,
+                          "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "customer support", "availableLanguage": ["it", "en", "es"]}}}
+    path, alt = P("contatti"), ALT("contatti")
+    S.scrivi(path, pagina(L("Contatti | PadelMetrix", "Contact | PadelMetrix", "Contacto | PadelMetrix"),
+                          L("Scrivi a PadelMetrix: segnalazioni sui dati delle racchette, richieste di nuovi modelli, affiliazioni per negozi e schede tecniche per i marchi.",
+                            "Write to PadelMetrix: corrections to racket data, requests for new models, affiliate partnerships for shops and spec sheets from brands.",
+                            "Escribe a PadelMetrix: correcciones de datos de palas, peticiones de nuevos modelos, afiliaciones para tiendas y fichas técnicas para marcas."),
+                          path, corpo, ld=[ld, org], alt=alt), alt)
+
+
 def main():
     for l in LINGUE:
         set_lang(l)
         privacy()
         cookie()
+        contatti()
     set_lang("it")
     (ROOT / "scripts" / "pagine_legale.json").write_text(json.dumps(S.PAGINE, indent=0), encoding="utf-8")
     print(len(S.PAGINE), "pagine legali generate")

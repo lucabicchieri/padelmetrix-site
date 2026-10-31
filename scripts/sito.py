@@ -90,6 +90,7 @@ SEZ = {
     "bambini": ("bambini", "kids", "ninos"),
     "abbigliamento": ("abbigliamento", "clothing", "ropa"),
     "chi-siamo": ("chi-siamo", "about", "quienes-somos"),
+    "contatti": ("contatti", "contact", "contacto"),
     "report": ("report", "report", "informe"),
     "dati": ("dati", "data", "datos"),
     "glossario": ("glossario", "glossary", "glosario"),
@@ -351,7 +352,7 @@ def footer():
               "PadelMetrix es una web independiente de Luca Bicchieri. Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.")
     links = [(P("racchette"), L("Racchette", "Rackets", "Palas")), (P("guide"), L("Guide", "Guides", "Guías")),
              (P("articoli"), L("Articoli", "Articles", "Artículos")), (P("domande"), L("Domande", "Questions", "Preguntas")), (P("glossario"), L("Glossario", "Glossary", "Glosario")),
-             (P("dati"), L("Dati aperti", "Open data", "Datos abiertos")), (P("chi-siamo"), L("Chi siamo e metodo", "About and method", "Quiénes somos y método")),
+             (P("dati"), L("Dati aperti", "Open data", "Datos abiertos")), (P("chi-siamo"), L("Chi siamo e metodo", "About and method", "Quiénes somos y método")), (P("contatti"), L("Contatti", "Contact", "Contacto")),
              (P("privacy"), L("Privacy", "Privacy", "Privacidad")), (P("cookie"), L("Cookie", "Cookies", "Cookies"))]
     return f'''<footer><div class="wrap">
 <span style="max-width:760px">{testo}</span>

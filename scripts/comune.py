@@ -4,9 +4,9 @@ LINGUE = ["it", "en", "es"]
 
 # Percorsi delle sezioni per lingua
 SEZIONI = {
-    "it": {"racchette": "racchette", "abbigliamento": "abbigliamento", "bambini": "bambini", "confronta": "confronta", "selettore": "trova-la-tua-racchetta", "chi": "chi-siamo", "privacy": "privacy", "cookie": "cookie"},
-    "en": {"racchette": "rackets", "abbigliamento": "clothing", "bambini": "kids", "confronta": "compare", "selettore": "racket-finder", "chi": "about", "privacy": "privacy", "cookie": "cookies"},
-    "es": {"racchette": "palas", "abbigliamento": "ropa", "bambini": "ninos", "confronta": "comparar", "selettore": "encuentra-tu-pala", "chi": "quienes-somos", "privacy": "privacidad", "cookie": "cookies"},
+    "it": {"racchette": "racchette", "abbigliamento": "abbigliamento", "bambini": "bambini", "confronta": "confronta", "selettore": "trova-la-tua-racchetta", "chi": "chi-siamo", "contatti": "contatti", "privacy": "privacy", "cookie": "cookie"},
+    "en": {"racchette": "rackets", "abbigliamento": "clothing", "bambini": "kids", "confronta": "compare", "selettore": "racket-finder", "chi": "about", "contatti": "contact", "privacy": "privacy", "cookie": "cookies"},
+    "es": {"racchette": "palas", "abbigliamento": "ropa", "bambini": "ninos", "confronta": "comparar", "selettore": "encuentra-tu-pala", "chi": "quienes-somos", "contatti": "contacto", "privacy": "privacidad", "cookie": "cookies"},
 }
 
 
