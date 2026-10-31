@@ -22,7 +22,7 @@ jobs:
         run: |
           git diff --name-only HEAD~1 HEAD -- '*index.html' | grep -v '^\.' > changed.txt || true
           python3 - <<'PY'
-          import json, os, urllib.request
+          import json, os, urllib.request, urllib.error
           host = "www.padelmetrix.com"
           import re
           if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
@@ -33,8 +33,18 @@ jobs:
           print(len(urls), "URL da segnalare")
           if not urls:
               raise SystemExit(0)
-          body = json.dumps({"host": host, "key": os.environ["KEY"], "keyLocation": f"https://{host}/{os.environ['KEY']}.txt", "urlList": urls}).encode()
-          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
-          with urllib.request.urlopen(req) as r:
-              print("IndexNow:", r.status)
+          try:
+              key_url = f"https://{host}/{os.environ['KEY']}.txt"
+              print("Chiave:", urllib.request.urlopen(key_url).read().decode())
+          except Exception as ex:
+              print("Chiave non raggiungibile:", ex)
+          for i in range(0, len(urls), 1000):
+              body = json.dumps({"host": host, "key": os.environ["KEY"], "keyLocation": f"https://{host}/{os.environ['KEY']}.txt", "urlList": urls[i:i + 1000]}).encode()
+              req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+              try:
+                  with urllib.request.urlopen(req) as r:
+                      print("IndexNow:", r.status, "per", len(urls[i:i + 1000]), "URL")
+              except urllib.error.HTTPError as ex:
+                  print("IndexNow errore:", ex.code, ex.read().decode()[:500])
+                  raise
           PY
