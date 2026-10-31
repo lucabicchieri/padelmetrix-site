@@ -16,6 +16,7 @@ from sito import (ROOT, SITO, e, L, P, ALT, carica, crumbs, pagina, griglia, ord
                   url_r, LINGUE, set_lang, data_riga, confronto_url, coppie)
 
 OGGI_ISO = "2026-10-30"
+DATE_ART = {"racchette-padel-2027-vs-2026-cosa-cambia": "2026-10-31", "migliori-racchette-padel-2026-classifiche-indipendenti": "2026-10-31"}
 
 
 def T(it, en, es):
@@ -35,9 +36,9 @@ def fonte(u, nome=None):
     return f'<a href="{e(u)}" rel="nofollow noopener" target="_blank">{e(nome)}</a>'
 
 
-def articolo_ld(titolo, desc, path):
+def articolo_ld(titolo, desc, path, data=OGGI_ISO):
     return {"@context": "https://schema.org", "@type": "Article", "headline": titolo, "description": desc,
-            "inLanguage": S.lang(), "datePublished": OGGI_ISO, "dateModified": OGGI_ISO,
+            "inLanguage": S.lang(), "datePublished": data, "dateModified": data,
             "author": S.autore(), "publisher": S.editore(), "mainEntityOfPage": SITO + path}
 
 
@@ -47,10 +48,10 @@ def scrivi_articolo(slug, title, desc, h1, crumb, corpo_html, items=None, ld_ext
     lista = (f'<section class="block"><h2>{L("Le racchette citate", "Rackets mentioned", "Las palas citadas")} ({len(items)})</h2>{griglia(ordina(items))}</section>'
              if items else "")
     corpo = f'''{cr}
-<div class="intro"><div class="eyebrow">{L("Articolo", "Article", "Artículo")}</div><h1>{e(h1)}</h1><p class="note">{L("Pubblicato il ", "Published on ", "Publicado el ")}{S.data_txt(OGGI_ISO)} · {L("a cura di", "by", "por")} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p></div>
+<div class="intro"><div class="eyebrow">{L("Articolo", "Article", "Artículo")}</div><h1>{e(h1)}</h1><p class="note">{L("Pubblicato il ", "Published on ", "Publicado el ")}{S.data_txt(DATE_ART.get(slug, OGGI_ISO))} · {L("a cura di", "by", "por")} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p></div>
 <div class="prose">{corpo_html}</div>
 {lista}'''
-    S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, articolo_ld(h1, desc, path), *ld_extra], alt=alt), alt)
+    S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, articolo_ld(h1, desc, path, DATE_ART.get(slug, OGGI_ISO)), *ld_extra], alt=alt), alt)
 
 
 def faq(qa):
@@ -441,6 +442,261 @@ def giocatore(db, G):
     return G["slug"], titolo, g(G["sommario"])
 
 
+# ---------------------------------------------------------------- 9. 2027 vs 2026, modello per modello
+
+S.SLUG["racchette-padel-2027-vs-2026-cosa-cambia"] = ("padel-rackets-2027-vs-2026-what-changes", "palas-padel-2027-vs-2026-que-cambia")
+S.SLUG["migliori-racchette-padel-2026-classifiche-indipendenti"] = ("best-padel-rackets-2026-independent-rankings", "mejores-palas-padel-2026-rankings-independientes")
+
+VOCI = [("giocatore", T("Giocatore", "Player", "Jugador")), ("forma", T("Forma", "Shape", "Forma")), ("peso", T("Peso", "Weight", "Peso")),
+        ("bilanciamento", T("Bilanciamento", "Balance", "Balance")), ("superficie", T("Faccia", "Face", "Cara")), ("telaio", T("Telaio", "Frame", "Marco")),
+        ("sensazione", T("Sensazione", "Feel", "Tacto")), ("livello", T("Livello", "Level", "Nivel")), ("prezzo_listino_eur", T("Listino", "List price", "Precio de lista"))]
+
+
+def _val(k, v):
+    if v in (None, ""):
+        return None
+    if k == "forma":
+        return FORMA(v)
+    if k == "livello":
+        return LIVN(v)
+    if k == "prezzo_listino_eur":
+        return euro(v)
+    return S.tr(v)
+
+
+def _norm(v):
+    """Confronta il valore senza i dettagli tra parentesi: "alto" e "alto (26,3 cm)" sono lo stesso dato."""
+    return str(v).split("(")[0].strip().lower().replace("dura", "duro") if v is not None else None
+
+
+def confronti_2027(db):
+    slug = "racchette-padel-2027-vs-2026-cosa-cambia"
+    gruppi = {}
+    for n in db:
+        if n["categoria"] != "junior":
+            gruppi.setdefault((n["marca"], n["modello"]), {})[n["anno"]] = n
+    coppie_ok = set(coppie(db))
+    pairs = sorted(((k, v[2026], v[2027]) for k, v in gruppi.items() if 2026 in v and 2027 in v), key=lambda x: x[0])
+    sezioni, cambi_forma, cambi_prezzo, tot_diff = [], [], [], 0
+    nd = L("non dichiarato", "not stated", "no declarado")
+    for (marca, modello), a, b in pairs:
+        da, dbb = a["d"], b["d"]
+        righe, n_diff, n_ug, n_manca = [], 0, 0, 0
+        for k, nome in VOCI:
+            va, vb = da.get(k), dbb.get(k)
+            if va in (None, "") and vb in (None, ""):
+                continue
+            if va in (None, "") or vb in (None, ""):
+                stato, n_manca = L("non confrontabile", "not comparable", "no comparable"), n_manca + 1
+                cls = "nd"
+            elif _norm(va) == _norm(vb):
+                stato, n_ug, cls = L("uguale", "same", "igual"), n_ug + 1, "ok"
+            else:
+                stato, n_diff, cls = f"<b>{L('cambia', 'changes', 'cambia')}</b>", n_diff + 1, "diff"
+                if k == "forma":
+                    cambi_forma.append((marca, modello + (L(", fonti 2026 discordanti", ", 2026 sources disagree", ", fuentes 2026 discrepantes") if (marca, modello) == ("Siux", "Diablo Pro") else ""), FORMA(va), FORMA(vb)))
+                if k == "prezzo_listino_eur":
+                    cambi_prezzo.append((marca, modello, va, vb))
+            righe.append(f'<tr class="{cls}"><td>{g(nome)}</td><td>{e(_val(k, va) or nd)}</td><td>{e(_val(k, vb) or nd)}</td><td>{stato}</td></tr>')
+        tot_diff += n_diff
+        if slug_art := ("siux-diablo-pro-2026-vs-2027-cosa-cambia" if (marca, modello) == ("Siux", "Diablo Pro") else None):
+            extra = f'<a href="{P("articoli", slug_art)}">{L("Articolo dedicato", "Dedicated article", "Artículo dedicado")}</a>'
+        elif tuple(sorted((a["slug"], b["slug"]))) in coppie_ok:
+            extra = f'<a href="{confronto_url(a["slug"], b["slug"])}">{L("Confronto completo", "Full comparison", "Comparativa completa")}</a>'
+        else:
+            extra = ""
+        sint = L(f"Cambiano: {n_diff} · uguali: {n_ug} · non confrontabili (manca il dato di una delle due versioni): {n_manca}.",
+                 f"Changed: {n_diff} · same: {n_ug} · not comparable (one version does not state the figure): {n_manca}.",
+                 f"Cambian: {n_diff} · iguales: {n_ug} · no comparables (falta el dato de una de las dos versiones): {n_manca}.")
+        ancora = S.slugify(f"{marca} {modello}")
+        sezioni.append(f'''<h3 id="{ancora}">{e(marca)} {e(modello)}: 2026 vs 2027</h3>
+<p>{sint} <a href="{url_r(a)}">{L("Scheda 2026", "2026 page", "Ficha 2026")}</a> · <a href="{url_r(b)}">{L("Scheda 2027", "2027 page", "Ficha 2027")}</a>{" · " + extra if extra else ""}</p>
+<div class="tablebox"><table class="tab"><thead><tr><th>{L("Voce", "Item", "Dato")}</th><th>2026</th><th>2027</th><th>{L("Esito", "Result", "Resultado")}</th></tr></thead><tbody>{"".join(righe)}</tbody></table></div>''')
+    indice_htm = '<div class="marche">' + "".join(f'<a href="#{S.slugify(m + " " + mo)}">{e(m)} {e(mo)}</a>' for (m, mo), _, _ in pairs) + "</div>"
+    forma_txt = "; ".join(f"{e(m)} {e(mo)} ({e(x)} → {e(y)})" for m, mo, x, y in cambi_forma)
+    aum = [x for x in cambi_prezzo if x[3] > x[2]]
+    prezzo_txt = "; ".join(f"{e(m)} {e(mo)} ({euro(x)} → {euro(y)})" for m, mo, x, y in cambi_prezzo)
+    marche = sorted({m for (m, _), _, _ in pairs})
+    intro = L(
+        f"<p><b>Abbiamo messo a confronto, voce per voce, le {len(pairs)} racchette che nel database PadelMetrix esistono sia in versione 2026 sia in versione 2027</b> ({', '.join(marche)}). Per ogni modello trovi cosa cambia, cosa resta uguale e cosa non si può confrontare perché il produttore o i rivenditori non lo dichiarano.</p>"
+        f"<p>In sintesi: la forma cambia in {len(cambi_forma)} modelli ({forma_txt}). Il listino è dichiarato per entrambe le versioni solo in {len(cambi_prezzo)} casi ({prezzo_txt}){', sempre in aumento' if cambi_prezzo and len(aum) == len(cambi_prezzo) else ''}. Molte voci delle versioni 2026 non sono mai state pubblicate, quindi per diversi modelli non si può dire se il 2027 sia davvero diverso.</p>",
+        f"<p><b>We compared, item by item, the {len(pairs)} rackets that exist in the PadelMetrix database in both a 2026 and a 2027 version</b> ({', '.join(marche)}). For each model you can see what changes, what stays the same and what cannot be compared because the manufacturer or retailers do not state it.</p>"
+        f"<p>In short: the shape changes in {len(cambi_forma)} models ({forma_txt}). The list price is stated for both versions in only {len(cambi_prezzo)} cases ({prezzo_txt}){', always going up' if cambi_prezzo and len(aum) == len(cambi_prezzo) else ''}. Many 2026 figures were never published, so for several models it is impossible to say whether the 2027 is really different.</p>",
+        f"<p><b>Hemos comparado, dato por dato, las {len(pairs)} palas que en la base de datos de PadelMetrix existen tanto en versión 2026 como en versión 2027</b> ({', '.join(marche)}). Para cada modelo verás qué cambia, qué se mantiene y qué no se puede comparar porque el fabricante o las tiendas no lo declaran.</p>"
+        f"<p>En resumen: la forma cambia en {len(cambi_forma)} modelos ({forma_txt}). El precio de lista está declarado para ambas versiones solo en {len(cambi_prezzo)} casos ({prezzo_txt}){', siempre al alza' if cambi_prezzo and len(aum) == len(cambi_prezzo) else ''}. Muchos datos de las versiones 2026 nunca se publicaron, así que en varios modelos no se puede decir si la 2027 es realmente distinta.</p>")
+    metodo = L(
+        '<p class="note">Come leggere le tabelle: "cambia" significa che le fonti dichiarano valori diversi per le due versioni. A volte la differenza dipende anche da come rivenditori diversi descrivono la stessa racchetta (per esempio il livello di gioco): prima di decidere guarda le fonti nelle schede. "Non confrontabile" significa che una delle due versioni non dichiara il dato.</p>',
+        '<p class="note">How to read the tables: "changes" means the sources state different values for the two versions. Sometimes the difference also depends on how different retailers describe the same racket (for example the playing level): check the sources on each spec page before deciding. "Not comparable" means one of the two versions does not state the figure.</p>',
+        '<p class="note">Cómo leer las tablas: "cambia" significa que las fuentes declaran valores distintos para las dos versiones. A veces la diferencia depende también de cómo tiendas distintas describen la misma pala (por ejemplo el nivel de juego): antes de decidir mira las fuentes en cada ficha. "No comparable" significa que una de las dos versiones no declara el dato.</p>')
+    qa = [(L("Le racchette 2027 sono molto diverse dalle 2026?", "Are 2027 rackets very different from the 2026 ones?", "¿Las palas 2027 son muy distintas de las 2026?"),
+           L(f"Dipende dal modello. Su {len(pairs)} rinnovi confrontati la forma cambia in {len(cambi_forma)} casi; negli altri le differenze dichiarate riguardano soprattutto materiali della faccia, finitura e prezzo.",
+             f"It depends on the model. Across {len(pairs)} updates compared, the shape changes in {len(cambi_forma)} cases; in the others the stated differences are mostly about face materials, finish and price.",
+             f"Depende del modelo. En {len(pairs)} renovaciones comparadas la forma cambia en {len(cambi_forma)} casos; en las demás las diferencias declaradas son sobre todo de materiales de la cara, acabado y precio.")),
+          (L("Conviene comprare la 2026 scontata?", "Is the discounted 2026 worth buying?", "¿Conviene comprar la 2026 rebajada?"),
+           L("Se forma, peso e bilanciamento restano uguali e la 2026 si trova scontata, spesso sì. Se cambia la forma, la racchetta si comporta in modo diverso e conviene provarle entrambe.",
+             "If shape, weight and balance stay the same and the 2026 is discounted, often yes. If the shape changes, the racket behaves differently and it is worth trying both.",
+             "Si forma, peso y balance se mantienen y la 2026 está rebajada, muchas veces sí. Si cambia la forma, la pala se comporta distinto y conviene probar las dos."))]
+    faq_htm, faq_ld = faq(qa)
+    corpo = intro + indice_htm + metodo + "".join(sezioni) + faq_htm
+    titolo = L("Racchette padel 2027 vs 2026: cosa cambia modello per modello", "Padel rackets 2027 vs 2026: what changes, model by model",
+               "Palas de pádel 2027 vs 2026: qué cambia modelo por modelo")
+    items = [x for _, a, b in pairs for x in (b,)]
+    scrivi_articolo(slug, titolo + " | PadelMetrix",
+                    L(f"{len(pairs)} racchette da padel confrontate voce per voce tra versione 2026 e 2027: forma, peso, bilanciamento, faccia, livello e prezzo.",
+                      f"{len(pairs)} padel rackets compared item by item between the 2026 and 2027 versions: shape, weight, balance, face, level and price.",
+                      f"{len(pairs)} palas de pádel comparadas dato por dato entre la versión 2026 y la 2027: forma, peso, balance, cara, nivel y precio."),
+                    titolo, L("2027 vs 2026", "2027 vs 2026", "2027 vs 2026"), corpo, items=items, ld_extra=[faq_ld])
+    RACCHETTE_ARTICOLO[slug] = [x["slug"] for _, a, b in pairs for x in (a, b)]
+    return slug, titolo, L(f"{len(pairs)} rinnovi confrontati voce per voce: cosa cambia davvero.", f"{len(pairs)} updates compared item by item: what really changes.",
+                           f"{len(pairs)} renovaciones comparadas dato por dato: qué cambia de verdad.")
+
+
+# ---------------------------------------------------------------- 10. Migliori racchette 2026 secondo le classifiche indipendenti
+
+PF = "https://www.padelful.com/es/mejores-palas-padel"
+PF_M = "https://www.padelful.com/es/como-puntuamos"
+PV = "https://padelverdict.com/es/guias/mejores-palas-padel-2026/"
+
+# (nome come lo pubblica la fonte, slug nel database se è lo stesso modello, voto, potenza, controllo, rebote, manejo, punto dulce)
+PADELFUL = [
+    ("Nox AT10 Luxury Genius 18K 2026 (Agustín Tapia)", None, 87, 79, 87, 85, 96, 90),
+    ("Bullpadel Vertex 05 2026 (Juan Tello)", "bullpadel-vertex-05-2026", 87, 85, 88, 85, 83, 92),
+    ("Bullpadel Hack 04 2026 (Paquito Navarro)", "bullpadel-hack-04-2026", 87, 100, 90, 80, 83, 82),
+    ("Head Extreme Pro 2026", "head-extreme-pro-2026", 87, 100, 96, 80, 81, 80),
+    ("StarVie Raptor 2026 Plus", None, 86, 80, 89, 89, 80, 90),
+    ("Bullpadel Neuron 02 2026 (Fede Chingotto)", "bullpadel-neuron-02-2026", 86, 80, 94, 78, 85, 92),
+    ("Nox AT10 Genius Attack 18K 2026", "nox-at10-genius-attack-18k-alum-2026", 87, 96, 91, 85, 81, 82),
+    ("StarVie Black Titan 2026", "starvie-black-titan-2026", 86, 94, 97, 81, 78, 81),
+    ("Babolat Viper 3.0 2026 (Juan Lebrón)", "babolat-viper-juan-lebron-3-0-2026", 87, 98, 94, 82, 76, 86),
+    ("Adidas Metalbone HRD+ 2026 (Ale Galán)", "adidas-metalbone-hrd-plus-2026", 87, 99, 94, 80, 80, 81),
+]
+# (sezione, nome della fonte, slug, verdict, punteggio di profilo)
+VERDICT = [
+    ("gen", "NOX EA10 Ventus Attack 12K Xtrem 2026", "nox-ea10-ventus-attack-12k-xtrem-2026", 9.0, 8.72),
+    ("gen", "StarVie BlackTitan 2026", "starvie-black-titan-2026", 9.0, 8.73),
+    ("gen", "Adidas Metalbone HRD 2026", None, 8.8, 8.52),
+    ("gen", "Babolat Technical Viper 3.0 2026", "babolat-technical-viper-3-0-2026", 8.8, 8.55),
+    ("gen", "HEAD Coello Pro 2026", "head-coello-pro-2026", 8.8, 8.48),
+    ("hyb", "NOX Ventus Hybrid 12K Lite 2026", "nox-ventus-hybrid-12k-lite-2026", 8.7, 8.39),
+    ("hyb", "StarVie Astrum+ 2026", None, 8.6, 8.39),
+    ("hyb", "Babolat Air Viper 2026", None, 8.6, 8.39),
+    ("hyb", "NOX AT10 12K Lite 2026", None, 8.6, 8.35),
+    ("hyb", "Siux Diablo Pro 2026", "siux-diablo-pro-2026", 8.5, 8.33),
+    ("def", "NOX ML10 Ventus Control 3K 2026", "nox-ml10-ventus-control-3k-2026", 8.8, 8.59),
+    ("def", "NOX VK10 Ventus Control 12K 2026", "nox-vk10-ventus-control-12k-2026", 8.7, 8.49),
+    ("def", "Adidas Arrow Hit Carbon CTRL 2026", "adidas-arrow-hit-carbon-ctrl-2026", 8.6, 8.41),
+    ("def", "Adidas Metalbone Carbon CTRL 2026", "adidas-metalbone-carbon-ctrl-2026", 8.6, 8.37),
+    ("def", "Oxdog Pure Pro Plus 2026", "oxdog-pure-pro-plus-2026", 8.6, 8.37),
+]
+
+
+def migliori_2026(db):
+    slug = "migliori-racchette-padel-2026-classifiche-indipendenti"
+    per = {n["slug"]: n for n in db}
+
+    def nome(txt, s):
+        return f'<a href="{url_r(per[s])}">{e(txt)}</a>' if s in per else e(txt)
+
+    th_pf = [L("#", "#", "#"), L("Racchetta (come la chiama la fonte)", "Racket (as named by the source)", "Pala (como la llama la fuente)"), L("Voto", "Score", "Nota"),
+             L("Potenza", "Power", "Potencia"), L("Controllo", "Control", "Control"), L("Uscita palla", "Ball exit", "Salida de bola"),
+             L("Maneggevolezza", "Handling", "Manejabilidad"), L("Punto dolce", "Sweet spot", "Punto dulce")]
+    pf_rows = "".join("<tr>" + "".join(f"<td>{c}</td>" for c in (i, nome(n, s), f"<b>{v}</b>", *sub)) + "</tr>" for i, (n, s, v, *sub) in enumerate(PADELFUL, 1))
+    tab_pf = f'<div class="tablebox"><table class="tab"><thead><tr>{"".join(f"<th>{t}</th>" for t in th_pf)}</tr></thead><tbody>{pf_rows}</tbody></table></div>'
+
+    sez = {"gen": L("Classifica generale", "Overall ranking", "Ranking general"), "hyb": L("Migliori polivalenti", "Best all-round", "Mejores polivalentes"),
+           "def": L("Migliori per il controllo", "Best for control", "Mejores para control")}
+    prof = {"gen": L("Attacco", "Attack", "Ataque"), "hyb": L("Polivalente", "All-round", "Polivalente"), "def": L("Controllo", "Control", "Control")}
+    blocchi = []
+    for k in ("gen", "hyb", "def"):
+        rr = "".join(f"<tr><td>{i}</td><td>{nome(n, s)}</td><td><b>{v:.1f}</b></td><td>{p:.2f}</td></tr>"
+                     for i, (_, n, s, v, p) in enumerate([x for x in VERDICT if x[0] == k], 1))
+        blocchi.append(f'<h3>{sez[k]}</h3><div class="tablebox"><table class="tab"><thead><tr><th>#</th><th>{L("Racchetta (come la chiama la fonte)", "Racket (as named by the source)", "Pala (como la llama la fuente)")}</th><th>Verdict Score</th><th>{L("Punteggio", "Profile score", "Puntuación")} {prof[k]}</th></tr></thead><tbody>{rr}</tbody></table></div>')
+
+    pz = sorted([n for n in db if n["d"].get("valutazioni_padelzoom") and n["anno"] == 2026], key=lambda n: -n["d"]["valutazioni_padelzoom"]["globale"])[:5]
+    pz_rows = "".join(f'<tr><td><a href="{url_r(n)}">{e(n["nome"])}</a></td><td><b>{n["d"]["valutazioni_padelzoom"]["globale"]}</b></td><td>{n["d"]["valutazioni_padelzoom"]["potenza"]}</td><td>{n["d"]["valutazioni_padelzoom"]["controllo"]}</td></tr>' for n in pz)
+
+    entrambe = sorted({s for _, _, s, _, _ in VERDICT if s} & {s for _, s, *_ in PADELFUL if s})
+    ent_txt = ", ".join(nome(per[s]["nome"], s) for s in entrambe)
+    corpo = L(
+        f"""<p><b>Quali sono le migliori racchette da padel del 2026? Invece di stilare l'ennesima classifica abbiamo messo insieme quelle di due siti di recensioni che non vendono racchette: Padelful e PadelVerdict.</b> L'unica racchetta presente in tutte e due le classifiche è {ent_txt}: 8ª su Padelful con 86/100 e 2ª su PadelVerdict con 9,0 (1ª tra le racchette d'attacco). Le altre posizioni cambiano molto da una fonte all'altra, quindi una classifica unica sarebbe un'invenzione.</p>
+<p>Attenzione ai nomi: le marche fanno più versioni dello stesso modello (per esempio la Metalbone HRD e la HRD+, o la Viper Juan Lebrón e la Technical Viper). Le abbiamo tenute separate e abbiamo messo il link alla scheda PadelMetrix solo quando il modello è esattamente lo stesso.</p>
+<h2>La classifica di Padelful</h2>
+<p>Padelful dà un voto da 0 a 100 su cinque aspetti: potenza, controllo, uscita palla, maneggevolezza e punto dolce. Il voto viene da dati del produttore, recensioni di analisti e opinioni di giocatori verificati; il sito dichiara di non provare ogni racchetta in laboratorio ({fonte(PF_M, "metodo Padelful")}). Classifica aggiornata a luglio 2026.</p>
+{tab_pf}
+<p class="note">Fonte: {fonte(PF, "Padelful, Mejores palas de pádel")}. Nel testo dell'articolo Padelful riporta anche voti da 1 a 10 che non sempre coincidono con quelli dei badge: qui usiamo i badge.</p>
+<h2>La classifica di PadelVerdict</h2>
+<p>PadelVerdict valuta otto parametri (potenza, effetto, controllo, stabilità, comfort, maneggevolezza, punto dolce, giocabilità) e li combina nel Verdict Score, con penalità se comfort o punto dolce sono sotto soglia e un correttivo basato sul confronto tra più fonti. Pubblica anche un punteggio per profilo di gioco. Non spiega se le prove sono in laboratorio o in campo. Classifica aggiornata ad aprile 2026.</p>
+{"".join(blocchi)}
+<p class="note">Fonte: {fonte(PV, "PadelVerdict, Mejores palas de pádel 2026")}.</p>
+<h2>E le Adidas? I voti di PadelZoom</h2>
+<p>Per le Adidas 2026 il nostro database contiene anche i voti di PadelZoom (scala da 1 a 10). Queste sono le cinque con il voto globale più alto:</p>
+<div class="tablebox"><table class="tab"><thead><tr><th>Racchetta</th><th>Globale</th><th>Potenza</th><th>Controllo</th></tr></thead><tbody>{pz_rows}</tbody></table></div>
+<p class="note">Fonte: padelzoom.es, voti riportati in ciascuna scheda.</p>
+<h2>Come usare queste classifiche</h2>
+<p>Quasi tutte le racchette in cima sono modelli per giocatori avanzati, con forma a diamante o goccia e voti di potenza alti. Se sei agli inizi o giochi soprattutto in difesa, guarda la sezione "controllo" di PadelVerdict o usa il nostro <a href="{P("selettore")}">selettore Trova la tua racchetta</a>.</p>
+<p class="note">Entrambi i siti dichiarano di non accettare posizionamenti a pagamento e di usare link di affiliazione. PadelMetrix non ha rapporti con nessuno dei due.</p>""",
+        f"""<p><b>Which are the best padel rackets of 2026? Instead of making yet another ranking, we combined those of two review sites that don't sell rackets: Padelful and PadelVerdict.</b> The only racket in both rankings is {ent_txt}: 8th on Padelful with 86/100 and 2nd on PadelVerdict with 9.0 (1st among attacking rackets). The other positions vary a lot from one source to the other, so a single ranking would be made up.</p>
+<p>Watch the names: brands make several versions of the same model (for example the Metalbone HRD and HRD+, or the Viper Juan Lebrón and the Technical Viper). We kept them separate and linked to the PadelMetrix page only when the model is exactly the same.</p>
+<h2>Padelful's ranking</h2>
+<p>Padelful scores rackets from 0 to 100 on five aspects: power, control, ball exit, handling and sweet spot. Scores come from manufacturer data, analyst reviews and verified player opinions; the site says it does not test every racket in a lab ({fonte(PF_M, "Padelful method")}). Ranking updated July 2026.</p>
+{tab_pf}
+<p class="note">Source: {fonte(PF, "Padelful, Mejores palas de pádel")}. In the article text Padelful also gives 1–10 scores that don't always match the badges: we use the badges.</p>
+<h2>PadelVerdict's ranking</h2>
+<p>PadelVerdict rates eight parameters (power, spin, control, stability, comfort, handling, sweet spot, playability) and combines them into the Verdict Score, with penalties when comfort or sweet spot fall below a threshold and a correction based on cross-checking several sources. It also publishes a score per playing profile. It does not say whether tests are done in a lab or on court. Ranking updated April 2026.</p>
+{"".join(blocchi)}
+<p class="note">Source: {fonte(PV, "PadelVerdict, Mejores palas de pádel 2026")}.</p>
+<h2>What about Adidas? PadelZoom's scores</h2>
+<p>For 2026 Adidas rackets our database also holds PadelZoom's scores (1–10 scale). These are the five with the highest overall score:</p>
+<div class="tablebox"><table class="tab"><thead><tr><th>Racket</th><th>Overall</th><th>Power</th><th>Control</th></tr></thead><tbody>{pz_rows}</tbody></table></div>
+<p class="note">Source: padelzoom.es, scores listed on each spec page.</p>
+<h2>How to use these rankings</h2>
+<p>Almost all the top rackets are models for advanced players, diamond or teardrop shaped, with high power scores. If you are a beginner or mostly play defence, look at PadelVerdict's "control" section or use our <a href="{P("selettore")}">Find your racket selector</a>.</p>
+<p class="note">Both sites state that they accept no paid placements and that they use affiliate links. PadelMetrix has no relationship with either.</p>""",
+        f"""<p><b>¿Cuáles son las mejores palas de pádel de 2026? En vez de hacer otro ranking más, hemos juntado los de dos webs de análisis que no venden palas: Padelful y PadelVerdict.</b> La única pala presente en los dos rankings es {ent_txt}: 8ª en Padelful con 86/100 y 2ª en PadelVerdict con 9,0 (1ª entre las palas de ataque). Las demás posiciones cambian mucho de una fuente a otra, así que un ranking único sería inventado.</p>
+<p>Ojo con los nombres: las marcas sacan varias versiones del mismo modelo (por ejemplo la Metalbone HRD y la HRD+, o la Viper Juan Lebrón y la Technical Viper). Las hemos mantenido separadas y enlazamos la ficha de PadelMetrix solo cuando el modelo es exactamente el mismo.</p>
+<h2>El ranking de Padelful</h2>
+<p>Padelful puntúa de 0 a 100 cinco aspectos: potencia, control, salida de bola, manejabilidad y punto dulce. La nota sale de datos del fabricante, análisis de expertos y opiniones de jugadores verificados; la web declara que no prueba cada pala en laboratorio ({fonte(PF_M, "método Padelful")}). Ranking actualizado en julio de 2026.</p>
+{tab_pf}
+<p class="note">Fuente: {fonte(PF, "Padelful, Mejores palas de pádel")}. En el texto del artículo Padelful da también notas de 1 a 10 que no siempre coinciden con las de las insignias: aquí usamos las insignias.</p>
+<h2>El ranking de PadelVerdict</h2>
+<p>PadelVerdict valora ocho parámetros (potencia, efecto, control, estabilidad, comodidad, manejabilidad, punto dulce, jugabilidad) y los combina en el Verdict Score, con penalizaciones si la comodidad o el punto dulce quedan por debajo de un umbral y un ajuste basado en el cruce de varias fuentes. También publica una puntuación por perfil de juego. No explica si las pruebas son en laboratorio o en pista. Ranking actualizado en abril de 2026.</p>
+{"".join(blocchi)}
+<p class="note">Fuente: {fonte(PV, "PadelVerdict, Mejores palas de pádel 2026")}.</p>
+<h2>¿Y las Adidas? Las notas de PadelZoom</h2>
+<p>Para las Adidas 2026 nuestra base de datos incluye también las notas de PadelZoom (escala de 1 a 10). Estas son las cinco con la nota global más alta:</p>
+<div class="tablebox"><table class="tab"><thead><tr><th>Pala</th><th>Global</th><th>Potencia</th><th>Control</th></tr></thead><tbody>{pz_rows}</tbody></table></div>
+<p class="note">Fuente: padelzoom.es, notas indicadas en cada ficha.</p>
+<h2>Cómo usar estos rankings</h2>
+<p>Casi todas las palas de arriba son modelos para jugadores avanzados, con forma diamante o lágrima y notas altas de potencia. Si estás empezando o juegas sobre todo en defensa, mira la sección "control" de PadelVerdict o usa nuestro <a href="{P("selettore")}">selector Encuentra tu pala</a>.</p>
+<p class="note">Las dos webs declaran que no aceptan posiciones pagadas y que usan enlaces de afiliación. PadelMetrix no tiene relación con ninguna de ellas.</p>""")
+    qa = [(L("Qual è la migliore racchetta da padel del 2026?", "What is the best padel racket of 2026?", "¿Cuál es la mejor pala de pádel de 2026?"),
+           L("Non esiste una risposta unica: le classifiche indipendenti non concordano. L'unica racchetta presente sia nella top 10 di Padelful sia nella classifica generale di PadelVerdict è la StarVie Black Titan 2026, una racchetta d'attacco per giocatori avanzati.",
+             "There is no single answer: independent rankings disagree. The only racket in both Padelful's top 10 and PadelVerdict's overall ranking is the StarVie Black Titan 2026, an attacking racket for advanced players.",
+             "No hay una única respuesta: los rankings independientes no coinciden. La única pala presente tanto en el top 10 de Padelful como en el ranking general de PadelVerdict es la StarVie Black Titan 2026, una pala de ataque para jugadores avanzados.")),
+          (L("Queste classifiche si basano su test di laboratorio?", "Are these rankings based on lab tests?", "¿Estos rankings se basan en pruebas de laboratorio?"),
+           L("No. Padelful dichiara di combinare dati dei produttori, recensioni di esperti e opinioni di giocatori, senza prove di laboratorio; PadelVerdict non specifica come vengono fatte le prove.",
+             "No. Padelful says it combines manufacturer data, expert reviews and player opinions, without lab tests; PadelVerdict does not specify how tests are done.",
+             "No. Padelful declara que combina datos de fabricantes, análisis de expertos y opiniones de jugadores, sin pruebas de laboratorio; PadelVerdict no especifica cómo se hacen las pruebas.")),
+          (L("Qual è la migliore racchetta 2026 per il controllo?", "What is the best 2026 racket for control?", "¿Cuál es la mejor pala 2026 para control?"),
+           L("Nella classifica per giocatori difensivi di PadelVerdict il primo posto va alla Nox ML10 Ventus Control 3K 2026 (8,8), seguita dalla Nox VK10 Ventus Control 12K 2026.",
+             "In PadelVerdict's ranking for defensive players first place goes to the Nox ML10 Ventus Control 3K 2026 (8.8), followed by the Nox VK10 Ventus Control 12K 2026.",
+             "En el ranking de PadelVerdict para jugadores defensivos el primer puesto es para la Nox ML10 Ventus Control 3K 2026 (8,8), seguida de la Nox VK10 Ventus Control 12K 2026."))]
+    faq_htm, faq_ld = faq(qa)
+    corpo += faq_htm
+    titolo = L("Le migliori racchette da padel 2026 secondo le classifiche indipendenti", "The best padel rackets of 2026 according to independent rankings",
+               "Las mejores palas de pádel 2026 según los rankings independientes")
+    slugs = list(dict.fromkeys([s for _, s, *_ in PADELFUL if s] + [s for _, _, s, _, _ in VERDICT if s]))
+    scrivi_articolo(slug, titolo + " | PadelMetrix",
+                    L("Le classifiche 2026 di Padelful e PadelVerdict a confronto, con voti, metodo e l'unica racchetta presente in entrambe.",
+                      "Padelful's and PadelVerdict's 2026 rankings side by side, with scores, method and the only racket that appears in both.",
+                      "Los rankings 2026 de Padelful y PadelVerdict comparados, con notas, método y la única pala presente en los dos."),
+                    titolo, L("Migliori 2026", "Best of 2026", "Mejores 2026"), corpo, items=[per[s] for s in slugs if s in per], ld_extra=[faq_ld])
+    RACCHETTE_ARTICOLO[slug] = slugs
+    return slug, titolo, L("Padelful e PadelVerdict a confronto: voti, metodo e l'unica racchetta in entrambe.", "Padelful and PadelVerdict side by side: scores, method and the one racket in both.",
+                           "Padelful y PadelVerdict comparados: notas, método y la única pala en los dos.")
+
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -470,10 +726,10 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
-            x = elenco.setdefault(slug, {"slug": slug, "data": OGGI_ISO, "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
+            x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
             x["titolo"][l], x["desc"][l], x["url"][l] = titolo, desc, P("articoli", slug)
     (ROOT / "data" / "articoli.json").write_text(json.dumps(list(elenco.values()), ensure_ascii=False, indent=1), encoding="utf-8")
     set_lang("it")
