@@ -1,5 +1,21 @@
 [
 {
+"path": "/it/articoli/migliori-racchette-padel-2026-classifiche-indipendenti/",
+"alt": {
+"it": "/it/articoli/migliori-racchette-padel-2026-classifiche-indipendenti/",
+"en": "/en/articles/best-padel-rackets-2026-independent-rankings/",
+"es": "/es/articulos/mejores-palas-padel-2026-rankings-independientes/"
+}
+},
+{
+"path": "/it/articoli/racchette-padel-2027-vs-2026-cosa-cambia/",
+"alt": {
+"it": "/it/articoli/racchette-padel-2027-vs-2026-cosa-cambia/",
+"en": "/en/articles/padel-rackets-2027-vs-2026-what-changes/",
+"es": "/es/articulos/palas-padel-2027-vs-2026-que-cambia/"
+}
+},
+{
 "path": "/it/articoli/racchette-padel-2027-novita-per-marca/",
 "alt": {
 "it": "/it/articoli/racchette-padel-2027-novita-per-marca/",
@@ -72,6 +88,22 @@
 }
 },
 {
+"path": "/en/articles/best-padel-rackets-2026-independent-rankings/",
+"alt": {
+"it": "/it/articoli/migliori-racchette-padel-2026-classifiche-indipendenti/",
+"en": "/en/articles/best-padel-rackets-2026-independent-rankings/",
+"es": "/es/articulos/mejores-palas-padel-2026-rankings-independientes/"
+}
+},
+{
+"path": "/en/articles/padel-rackets-2027-vs-2026-what-changes/",
+"alt": {
+"it": "/it/articoli/racchette-padel-2027-vs-2026-cosa-cambia/",
+"en": "/en/articles/padel-rackets-2027-vs-2026-what-changes/",
+"es": "/es/articulos/palas-padel-2027-vs-2026-que-cambia/"
+}
+},
+{
 "path": "/en/articles/padel-rackets-2027-whats-new-by-brand/",
 "alt": {
 "it": "/it/articoli/racchette-padel-2027-novita-per-marca/",
@@ -141,6 +173,22 @@
 "it": "/it/articoli/",
 "en": "/en/articles/",
 "es": "/es/articulos/"
+}
+},
+{
+"path": "/es/articulos/mejores-palas-padel-2026-rankings-independientes/",
+"alt": {
+"it": "/it/articoli/migliori-racchette-padel-2026-classifiche-indipendenti/",
+"en": "/en/articles/best-padel-rackets-2026-independent-rankings/",
+"es": "/es/articulos/mejores-palas-padel-2026-rankings-independientes/"
+}
+},
+{
+"path": "/es/articulos/palas-padel-2027-vs-2026-que-cambia/",
+"alt": {
+"it": "/it/articoli/racchette-padel-2027-vs-2026-cosa-cambia/",
+"en": "/en/articles/padel-rackets-2027-vs-2026-what-changes/",
+"es": "/es/articulos/palas-padel-2027-vs-2026-que-cambia/"
 }
 },
 {
