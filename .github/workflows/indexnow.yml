@@ -1,0 +1,40 @@
+# Segnala a Bing (e agli altri motori IndexNow) le pagine cambiate a ogni push su main.
+# Aspetta qualche minuto che Cloudflare pubblichi la nuova versione prima di inviare gli URL.
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: ["**/index.html"]
+  workflow_dispatch: {}   # avvio manuale: invia tutti gli URL della sitemap
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Attendi la pubblicazione su Cloudflare
+        if: github.event_name == 'push'
+        run: sleep 240
+      - name: Invia gli URL cambiati a IndexNow
+        env:
+          KEY: 79d435cdf50f2a87a7e0ea10bff78649
+        run: |
+          git diff --name-only HEAD~1 HEAD -- '*index.html' | grep -v '^\.' > changed.txt || true
+          python3 - <<'PY'
+          import json, os, urllib.request
+          host = "www.padelmetrix.com"
+          import re
+          if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
+              urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml").read())
+          else:
+              urls = [f"https://{host}/" + p[:-len("index.html")] for p in open("changed.txt").read().split()]
+          urls = urls[:10000]
+          print(len(urls), "URL da segnalare")
+          if not urls:
+              raise SystemExit(0)
+          body = json.dumps({"host": host, "key": os.environ["KEY"], "keyLocation": f"https://{host}/{os.environ['KEY']}.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req) as r:
+              print("IndexNow:", r.status)
+          PY
