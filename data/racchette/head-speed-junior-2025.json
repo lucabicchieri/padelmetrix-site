@@ -1,0 +1,149 @@
+{
+  "slug": "head-speed-junior-2025",
+  "marca": "Head",
+  "modello": "Speed Junior",
+  "anno": 2025,
+  "categoria": "junior",
+  "donna": false,
+  "peso": "310 g",
+  "forma": "goccia",
+  "bilanciamento": "medio (265 mm)",
+  "nucleo": "Power Foam",
+  "superficie": "Fibra di vetro",
+  "livello": "intermedio",
+  "stile": "polivalente",
+  "simili": [
+    "head-coello-junior-2025",
+    "babolat-alioth-pro-junior-2025",
+    "dunlop-galactica-junior-2026"
+  ],
+  "fonti_dati": [
+    "https://www.head.com/en_GB/product/speed-junior-2025-226715"
+  ],
+  "aggiornato": "2026-11-01",
+  "pagina": {
+    "titolo": "Head Speed Junior 2025",
+    "title_tag": "Head Speed Junior 2025: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "Head Speed Junior 2025: forma goccia, peso 310 g, bilanciamento medio, fibra di vetro. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Speed Junior 2025",
+    "eyebrow": "Head · Collezione 2025 · Junior",
+    "chips": [
+      "Goccia",
+      "310 g",
+      "Bilanciamento medio",
+      "Fibra di vetro",
+      "Intermedio",
+      "Junior"
+    ],
+    "lead": "Racchetta junior per ragazzi che giocano già le prime gare e cercano tocco, precisione e velocità in attacco; la faccia in fibra di vetro dà un tatto morbido. Pensata per ragazzi.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=Head+Speed+Junior+2025",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      }
+    ],
+    "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",
+    "confronta": {
+      "url": "/confronta/?r=head-speed-junior-2025,head-coello-junior-2025",
+      "testo": "Confronta con Coello Junior 2025"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "Head"
+      ],
+      [
+        "Modello",
+        "Speed Junior"
+      ],
+      [
+        "Collezione",
+        "2025"
+      ],
+      [
+        "Categoria",
+        "Junior"
+      ],
+      [
+        "Forma",
+        "Goccia"
+      ],
+      [
+        "Peso",
+        "310 g"
+      ],
+      [
+        "Bilanciamento",
+        "Medio (265 mm)"
+      ],
+      [
+        "Nucleo",
+        "Power Foam"
+      ],
+      [
+        "Superficie",
+        "Fibra di vetro"
+      ],
+      [
+        "Livello",
+        "Intermedio"
+      ],
+      [
+        "Stile di gioco",
+        "Polivalente"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.head.com/en_GB/product/speed-junior-2025-226715\" rel=\"nofollow noopener\" target=\"_blank\">Head</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. Head la descrive così: racchetta junior per ragazzi che giocano già le prime gare e cercano tocco, precisione e velocità in attacco; la faccia in fibra di vetro dà un tatto morbido. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Versatile tra difesa e attacco",
+      "Fibra di vetro: tatto morbido e uscita di palla facile"
+    ],
+    "contro": [
+      "Da sostituire quando il ragazzo passa al peso adulto",
+      "Recensioni indipendenti ancora poche"
+    ],
+    "adatta": [
+      "Cerchi una racchetta più leggera e corta per un ragazzo",
+      "Il ragazzo gioca già con regolarità"
+    ],
+    "non_adatta": [
+      "Il ragazzo ha già il fisico per una racchetta da adulto",
+      "Cerchi una racchetta da adulto leggera: guarda i modelli Light"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/head-coello-junior-2025/",
+        "sopra": "Head · 2025",
+        "nome": "Coello Junior 2025",
+        "testo": "Goccia polivalente, 310 g, fibra di vetro, livello intermedio."
+      },
+      {
+        "url": "/racchette/babolat-alioth-pro-junior-2025/",
+        "sopra": "Babolat · 2025",
+        "nome": "Alioth Pro Junior 2025",
+        "testo": "Goccia polivalente, 330 g (±10 g), livello intermedio."
+      },
+      {
+        "url": "/racchette/dunlop-galactica-junior-2026/",
+        "sopra": "Dunlop · 2026",
+        "nome": "Galactica Junior 2026",
+        "testo": "Goccia polivalente, 320 g (±10 g), fibra di vetro, livello intermedio."
+      }
+    ],
+    "aggiornata": "1 novembre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Polivalente",
+        "Livello intermedio",
+        "Forma goccia"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

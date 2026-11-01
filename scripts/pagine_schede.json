@@ -306,6 +306,33 @@
 }
 },
 {
+"path": "/it/racchette/babolat-alioth-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-junior-2025/",
+"en": "/en/rackets/babolat-alioth-junior-2025/",
+"es": "/es/palas/babolat-alioth-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-junior-2025/"
+}
+},
+{
+"path": "/it/racchette/babolat-alioth-mini-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-mini-junior-2025/",
+"en": "/en/rackets/babolat-alioth-mini-junior-2025/",
+"es": "/es/palas/babolat-alioth-mini-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-mini-junior-2025/"
+}
+},
+{
+"path": "/it/racchette/babolat-alioth-pro-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-pro-junior-2025/",
+"en": "/en/rackets/babolat-alioth-pro-junior-2025/",
+"es": "/es/palas/babolat-alioth-pro-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-pro-junior-2025/"
+}
+},
+{
 "path": "/it/racchette/babolat-counter-veron-2-6-2026/",
 "alt": {
 "it": "/it/racchette/babolat-counter-veron-2-6-2026/",
@@ -576,6 +603,24 @@
 }
 },
 {
+"path": "/it/racchette/bullpadel-hack-junior-2025/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2025/",
+"en": "/en/rackets/bullpadel-hack-junior-2025/",
+"es": "/es/palas/bullpadel-hack-junior-2025/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2025/"
+}
+},
+{
+"path": "/it/racchette/bullpadel-hack-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2026/",
+"en": "/en/rackets/bullpadel-hack-junior-2026/",
+"es": "/es/palas/bullpadel-hack-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2026/"
+}
+},
+{
 "path": "/it/racchette/bullpadel-icon-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-icon-2026/",
@@ -594,12 +639,30 @@
 }
 },
 {
+"path": "/it/racchette/bullpadel-indiga-boy-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2026/",
+"en": "/en/rackets/bullpadel-indiga-boy-2026/",
+"es": "/es/palas/bullpadel-indiga-boy-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2026/"
+}
+},
+{
 "path": "/it/racchette/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
 "en": "/en/rackets/bullpadel-indiga-control-2026/",
 "es": "/es/palas/bullpadel-indiga-control-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-control-2026/"
+}
+},
+{
+"path": "/it/racchette/bullpadel-indiga-girl-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2026/",
+"en": "/en/rackets/bullpadel-indiga-girl-2026/",
+"es": "/es/palas/bullpadel-indiga-girl-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
 }
 },
 {
@@ -801,6 +864,15 @@
 }
 },
 {
+"path": "/it/racchette/bullpadel-vertex-w-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-vertex-w-junior-2026/",
+"en": "/en/rackets/bullpadel-vertex-w-junior-2026/",
+"es": "/es/palas/bullpadel-vertex-w-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-vertex-w-junior-2026/"
+}
+},
+{
 "path": "/it/racchette/bullpadel-wonder-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-wonder-2026/",
@@ -861,6 +933,15 @@
 "en": "/en/rackets/drop-shot-axion-attack-2-0-2026/",
 "es": "/es/palas/drop-shot-axion-attack-2-0-2026/",
 "fr": "/fr/raquettes/drop-shot-axion-attack-2-0-2026/"
+}
+},
+{
+"path": "/it/racchette/drop-shot-axion-attack-junior-2026/",
+"alt": {
+"it": "/it/racchette/drop-shot-axion-attack-junior-2026/",
+"en": "/en/rackets/drop-shot-axion-attack-junior-2026/",
+"es": "/es/palas/drop-shot-axion-attack-junior-2026/",
+"fr": "/fr/raquettes/drop-shot-axion-attack-junior-2026/"
 }
 },
 {
@@ -1062,6 +1143,15 @@
 }
 },
 {
+"path": "/it/racchette/dunlop-galactica-junior-2026/",
+"alt": {
+"it": "/it/racchette/dunlop-galactica-junior-2026/",
+"en": "/en/rackets/dunlop-galactica-junior-2026/",
+"es": "/es/palas/dunlop-galactica-junior-2026/",
+"fr": "/fr/raquettes/dunlop-galactica-junior-2026/"
+}
+},
+{
 "path": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
 "alt": {
 "it": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
@@ -1086,6 +1176,15 @@
 "en": "/en/rackets/head-bolt-2026/",
 "es": "/es/palas/head-bolt-2026/",
 "fr": "/fr/raquettes/head-bolt-2026/"
+}
+},
+{
+"path": "/it/racchette/head-coello-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-coello-junior-2025/",
+"en": "/en/rackets/head-coello-junior-2025/",
+"es": "/es/palas/head-coello-junior-2025/",
+"fr": "/fr/raquettes/head-coello-junior-2025/"
 }
 },
 {
@@ -1134,6 +1233,15 @@
 }
 },
 {
+"path": "/it/racchette/head-extreme-junior-2023/",
+"alt": {
+"it": "/it/racchette/head-extreme-junior-2023/",
+"en": "/en/rackets/head-extreme-junior-2023/",
+"es": "/es/palas/head-extreme-junior-2023/",
+"fr": "/fr/raquettes/head-extreme-junior-2023/"
+}
+},
+{
 "path": "/it/racchette/head-extreme-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-extreme-motion-2026/",
@@ -1170,6 +1278,15 @@
 }
 },
 {
+"path": "/it/racchette/head-monster-kids-2022/",
+"alt": {
+"it": "/it/racchette/head-monster-kids-2022/",
+"en": "/en/rackets/head-monster-kids-2022/",
+"es": "/es/palas/head-monster-kids-2022/",
+"fr": "/fr/raquettes/head-monster-kids-2022/"
+}
+},
+{
 "path": "/it/racchette/head-radical-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-radical-motion-2026/",
@@ -1203,6 +1320,15 @@
 "en": "/en/rackets/head-radical-team-light-2026/",
 "es": "/es/palas/head-radical-team-light-2026/",
 "fr": "/fr/raquettes/head-radical-team-light-2026/"
+}
+},
+{
+"path": "/it/racchette/head-speed-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-junior-2025/",
+"en": "/en/rackets/head-speed-junior-2025/",
+"es": "/es/palas/head-speed-junior-2025/",
+"fr": "/fr/raquettes/head-speed-junior-2025/"
 }
 },
 {
@@ -1266,6 +1392,15 @@
 "en": "/en/rackets/joma-blast-pro-sft-2026/",
 "es": "/es/palas/joma-blast-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/it/racchette/joma-game-junior-2025/",
+"alt": {
+"it": "/it/racchette/joma-game-junior-2025/",
+"en": "/en/rackets/joma-game-junior-2025/",
+"es": "/es/palas/joma-game-junior-2025/",
+"fr": "/fr/raquettes/joma-game-junior-2025/"
 }
 },
 {
@@ -1485,6 +1620,15 @@
 }
 },
 {
+"path": "/it/racchette/nox-at10-genius-ultralight-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-at10-genius-ultralight-junior-2023/",
+"en": "/en/rackets/nox-at10-genius-ultralight-junior-2023/",
+"es": "/es/palas/nox-at10-genius-ultralight-junior-2023/",
+"fr": "/fr/raquettes/nox-at10-genius-ultralight-junior-2023/"
+}
+},
+{
 "path": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
@@ -1626,6 +1770,15 @@
 "en": "/en/rackets/nox-ml10-pro-cup-silver-2027/",
 "es": "/es/palas/nox-ml10-pro-cup-silver-2027/",
 "fr": "/fr/raquettes/nox-ml10-pro-cup-silver-2027/"
+}
+},
+{
+"path": "/it/racchette/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"en": "/en/rackets/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"es": "/es/palas/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"fr": "/fr/raquettes/nox-ml10-pro-cup-ultra-light-junior-2023/"
 }
 },
 {
@@ -1881,6 +2034,15 @@
 }
 },
 {
+"path": "/it/racchette/puma-nova-padel-smash-junior-2024/",
+"alt": {
+"it": "/it/racchette/puma-nova-padel-smash-junior-2024/",
+"en": "/en/rackets/puma-nova-padel-smash-junior-2024/",
+"es": "/es/palas/puma-nova-padel-smash-junior-2024/",
+"fr": "/fr/raquettes/puma-nova-padel-smash-junior-2024/"
+}
+},
+{
 "path": "/it/racchette/royal-padel-130-factor-2026/",
 "alt": {
 "it": "/it/racchette/royal-padel-130-factor-2026/",
@@ -2034,6 +2196,15 @@
 }
 },
 {
+"path": "/it/racchette/siux-diablo-revolution-3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-diablo-revolution-3-junior-2024/",
+"en": "/en/rackets/siux-diablo-revolution-3-junior-2024/",
+"es": "/es/palas/siux-diablo-revolution-3-junior-2024/",
+"fr": "/fr/raquettes/siux-diablo-revolution-3-junior-2024/"
+}
+},
+{
 "path": "/it/racchette/siux-electra-elite-2026/",
 "alt": {
 "it": "/it/racchette/siux-electra-elite-2026/",
@@ -2067,6 +2238,15 @@
 "en": "/en/rackets/siux-electra-pro-2027/",
 "es": "/es/palas/siux-electra-pro-2027/",
 "fr": "/fr/raquettes/siux-electra-pro-2027/"
+}
+},
+{
+"path": "/it/racchette/siux-electra-st3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-electra-st3-junior-2024/",
+"en": "/en/rackets/siux-electra-st3-junior-2024/",
+"es": "/es/palas/siux-electra-st3-junior-2024/",
+"fr": "/fr/raquettes/siux-electra-st3-junior-2024/"
 }
 },
 {
@@ -2313,6 +2493,15 @@
 }
 },
 {
+"path": "/it/racchette/starvie-junior-2025/",
+"alt": {
+"it": "/it/racchette/starvie-junior-2025/",
+"en": "/en/rackets/starvie-junior-2025/",
+"es": "/es/palas/starvie-junior-2025/",
+"fr": "/fr/raquettes/starvie-junior-2025/"
+}
+},
+{
 "path": "/it/racchette/starvie-kenta-2026/",
 "alt": {
 "it": "/it/racchette/starvie-kenta-2026/",
@@ -2520,6 +2709,15 @@
 }
 },
 {
+"path": "/it/racchette/varlion-maxima-junior-2023/",
+"alt": {
+"it": "/it/racchette/varlion-maxima-junior-2023/",
+"en": "/en/rackets/varlion-maxima-junior-2023/",
+"es": "/es/palas/varlion-maxima-junior-2023/",
+"fr": "/fr/raquettes/varlion-maxima-junior-2023/"
+}
+},
+{
 "path": "/it/racchette/vibor-a-3k-black-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-3k-black-2026/",
@@ -2556,12 +2754,30 @@
 }
 },
 {
+"path": "/it/racchette/vibor-a-titan-junior-classic-2026/",
+"alt": {
+"it": "/it/racchette/vibor-a-titan-junior-classic-2026/",
+"en": "/en/rackets/vibor-a-titan-junior-classic-2026/",
+"es": "/es/palas/vibor-a-titan-junior-classic-2026/",
+"fr": "/fr/raquettes/vibor-a-titan-junior-classic-2026/"
+}
+},
+{
 "path": "/it/racchette/vibor-a-yarara-pro-white-2-0-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-yarara-pro-white-2-0-2026/",
 "en": "/en/rackets/vibor-a-yarara-pro-white-2-0-2026/",
 "es": "/es/palas/vibor-a-yarara-pro-white-2-0-2026/",
 "fr": "/fr/raquettes/vibor-a-yarara-pro-white-2-0-2026/"
+}
+},
+{
+"path": "/it/racchette/wilson-bela-junior-v2-2023/",
+"alt": {
+"it": "/it/racchette/wilson-bela-junior-v2-2023/",
+"en": "/en/rackets/wilson-bela-junior-v2-2023/",
+"es": "/es/palas/wilson-bela-junior-v2-2023/",
+"fr": "/fr/raquettes/wilson-bela-junior-v2-2023/"
 }
 },
 {
@@ -2988,6 +3204,33 @@
 }
 },
 {
+"path": "/en/rackets/babolat-alioth-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-junior-2025/",
+"en": "/en/rackets/babolat-alioth-junior-2025/",
+"es": "/es/palas/babolat-alioth-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-junior-2025/"
+}
+},
+{
+"path": "/en/rackets/babolat-alioth-mini-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-mini-junior-2025/",
+"en": "/en/rackets/babolat-alioth-mini-junior-2025/",
+"es": "/es/palas/babolat-alioth-mini-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-mini-junior-2025/"
+}
+},
+{
+"path": "/en/rackets/babolat-alioth-pro-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-pro-junior-2025/",
+"en": "/en/rackets/babolat-alioth-pro-junior-2025/",
+"es": "/es/palas/babolat-alioth-pro-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-pro-junior-2025/"
+}
+},
+{
 "path": "/en/rackets/babolat-counter-veron-2-6-2026/",
 "alt": {
 "it": "/it/racchette/babolat-counter-veron-2-6-2026/",
@@ -3258,6 +3501,24 @@
 }
 },
 {
+"path": "/en/rackets/bullpadel-hack-junior-2025/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2025/",
+"en": "/en/rackets/bullpadel-hack-junior-2025/",
+"es": "/es/palas/bullpadel-hack-junior-2025/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2025/"
+}
+},
+{
+"path": "/en/rackets/bullpadel-hack-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2026/",
+"en": "/en/rackets/bullpadel-hack-junior-2026/",
+"es": "/es/palas/bullpadel-hack-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2026/"
+}
+},
+{
 "path": "/en/rackets/bullpadel-icon-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-icon-2026/",
@@ -3276,12 +3537,30 @@
 }
 },
 {
+"path": "/en/rackets/bullpadel-indiga-boy-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2026/",
+"en": "/en/rackets/bullpadel-indiga-boy-2026/",
+"es": "/es/palas/bullpadel-indiga-boy-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2026/"
+}
+},
+{
 "path": "/en/rackets/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
 "en": "/en/rackets/bullpadel-indiga-control-2026/",
 "es": "/es/palas/bullpadel-indiga-control-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-control-2026/"
+}
+},
+{
+"path": "/en/rackets/bullpadel-indiga-girl-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2026/",
+"en": "/en/rackets/bullpadel-indiga-girl-2026/",
+"es": "/es/palas/bullpadel-indiga-girl-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
 }
 },
 {
@@ -3483,6 +3762,15 @@
 }
 },
 {
+"path": "/en/rackets/bullpadel-vertex-w-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-vertex-w-junior-2026/",
+"en": "/en/rackets/bullpadel-vertex-w-junior-2026/",
+"es": "/es/palas/bullpadel-vertex-w-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-vertex-w-junior-2026/"
+}
+},
+{
 "path": "/en/rackets/bullpadel-wonder-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-wonder-2026/",
@@ -3543,6 +3831,15 @@
 "en": "/en/rackets/drop-shot-axion-attack-2-0-2026/",
 "es": "/es/palas/drop-shot-axion-attack-2-0-2026/",
 "fr": "/fr/raquettes/drop-shot-axion-attack-2-0-2026/"
+}
+},
+{
+"path": "/en/rackets/drop-shot-axion-attack-junior-2026/",
+"alt": {
+"it": "/it/racchette/drop-shot-axion-attack-junior-2026/",
+"en": "/en/rackets/drop-shot-axion-attack-junior-2026/",
+"es": "/es/palas/drop-shot-axion-attack-junior-2026/",
+"fr": "/fr/raquettes/drop-shot-axion-attack-junior-2026/"
 }
 },
 {
@@ -3744,6 +4041,15 @@
 }
 },
 {
+"path": "/en/rackets/dunlop-galactica-junior-2026/",
+"alt": {
+"it": "/it/racchette/dunlop-galactica-junior-2026/",
+"en": "/en/rackets/dunlop-galactica-junior-2026/",
+"es": "/es/palas/dunlop-galactica-junior-2026/",
+"fr": "/fr/raquettes/dunlop-galactica-junior-2026/"
+}
+},
+{
 "path": "/en/rackets/dunlop-galactica-pro-nisse-2026/",
 "alt": {
 "it": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
@@ -3768,6 +4074,15 @@
 "en": "/en/rackets/head-bolt-2026/",
 "es": "/es/palas/head-bolt-2026/",
 "fr": "/fr/raquettes/head-bolt-2026/"
+}
+},
+{
+"path": "/en/rackets/head-coello-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-coello-junior-2025/",
+"en": "/en/rackets/head-coello-junior-2025/",
+"es": "/es/palas/head-coello-junior-2025/",
+"fr": "/fr/raquettes/head-coello-junior-2025/"
 }
 },
 {
@@ -3816,6 +4131,15 @@
 }
 },
 {
+"path": "/en/rackets/head-extreme-junior-2023/",
+"alt": {
+"it": "/it/racchette/head-extreme-junior-2023/",
+"en": "/en/rackets/head-extreme-junior-2023/",
+"es": "/es/palas/head-extreme-junior-2023/",
+"fr": "/fr/raquettes/head-extreme-junior-2023/"
+}
+},
+{
 "path": "/en/rackets/head-extreme-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-extreme-motion-2026/",
@@ -3852,6 +4176,15 @@
 }
 },
 {
+"path": "/en/rackets/head-monster-kids-2022/",
+"alt": {
+"it": "/it/racchette/head-monster-kids-2022/",
+"en": "/en/rackets/head-monster-kids-2022/",
+"es": "/es/palas/head-monster-kids-2022/",
+"fr": "/fr/raquettes/head-monster-kids-2022/"
+}
+},
+{
 "path": "/en/rackets/head-radical-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-radical-motion-2026/",
@@ -3885,6 +4218,15 @@
 "en": "/en/rackets/head-radical-team-light-2026/",
 "es": "/es/palas/head-radical-team-light-2026/",
 "fr": "/fr/raquettes/head-radical-team-light-2026/"
+}
+},
+{
+"path": "/en/rackets/head-speed-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-junior-2025/",
+"en": "/en/rackets/head-speed-junior-2025/",
+"es": "/es/palas/head-speed-junior-2025/",
+"fr": "/fr/raquettes/head-speed-junior-2025/"
 }
 },
 {
@@ -3948,6 +4290,15 @@
 "en": "/en/rackets/joma-blast-pro-sft-2026/",
 "es": "/es/palas/joma-blast-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/en/rackets/joma-game-junior-2025/",
+"alt": {
+"it": "/it/racchette/joma-game-junior-2025/",
+"en": "/en/rackets/joma-game-junior-2025/",
+"es": "/es/palas/joma-game-junior-2025/",
+"fr": "/fr/raquettes/joma-game-junior-2025/"
 }
 },
 {
@@ -4167,6 +4518,15 @@
 }
 },
 {
+"path": "/en/rackets/nox-at10-genius-ultralight-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-at10-genius-ultralight-junior-2023/",
+"en": "/en/rackets/nox-at10-genius-ultralight-junior-2023/",
+"es": "/es/palas/nox-at10-genius-ultralight-junior-2023/",
+"fr": "/fr/raquettes/nox-at10-genius-ultralight-junior-2023/"
+}
+},
+{
 "path": "/en/rackets/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
@@ -4308,6 +4668,15 @@
 "en": "/en/rackets/nox-ml10-pro-cup-silver-2027/",
 "es": "/es/palas/nox-ml10-pro-cup-silver-2027/",
 "fr": "/fr/raquettes/nox-ml10-pro-cup-silver-2027/"
+}
+},
+{
+"path": "/en/rackets/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"en": "/en/rackets/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"es": "/es/palas/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"fr": "/fr/raquettes/nox-ml10-pro-cup-ultra-light-junior-2023/"
 }
 },
 {
@@ -4563,6 +4932,15 @@
 }
 },
 {
+"path": "/en/rackets/puma-nova-padel-smash-junior-2024/",
+"alt": {
+"it": "/it/racchette/puma-nova-padel-smash-junior-2024/",
+"en": "/en/rackets/puma-nova-padel-smash-junior-2024/",
+"es": "/es/palas/puma-nova-padel-smash-junior-2024/",
+"fr": "/fr/raquettes/puma-nova-padel-smash-junior-2024/"
+}
+},
+{
 "path": "/en/rackets/royal-padel-130-factor-2026/",
 "alt": {
 "it": "/it/racchette/royal-padel-130-factor-2026/",
@@ -4716,6 +5094,15 @@
 }
 },
 {
+"path": "/en/rackets/siux-diablo-revolution-3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-diablo-revolution-3-junior-2024/",
+"en": "/en/rackets/siux-diablo-revolution-3-junior-2024/",
+"es": "/es/palas/siux-diablo-revolution-3-junior-2024/",
+"fr": "/fr/raquettes/siux-diablo-revolution-3-junior-2024/"
+}
+},
+{
 "path": "/en/rackets/siux-electra-elite-2026/",
 "alt": {
 "it": "/it/racchette/siux-electra-elite-2026/",
@@ -4749,6 +5136,15 @@
 "en": "/en/rackets/siux-electra-pro-2027/",
 "es": "/es/palas/siux-electra-pro-2027/",
 "fr": "/fr/raquettes/siux-electra-pro-2027/"
+}
+},
+{
+"path": "/en/rackets/siux-electra-st3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-electra-st3-junior-2024/",
+"en": "/en/rackets/siux-electra-st3-junior-2024/",
+"es": "/es/palas/siux-electra-st3-junior-2024/",
+"fr": "/fr/raquettes/siux-electra-st3-junior-2024/"
 }
 },
 {
@@ -4995,6 +5391,15 @@
 }
 },
 {
+"path": "/en/rackets/starvie-junior-2025/",
+"alt": {
+"it": "/it/racchette/starvie-junior-2025/",
+"en": "/en/rackets/starvie-junior-2025/",
+"es": "/es/palas/starvie-junior-2025/",
+"fr": "/fr/raquettes/starvie-junior-2025/"
+}
+},
+{
 "path": "/en/rackets/starvie-kenta-2026/",
 "alt": {
 "it": "/it/racchette/starvie-kenta-2026/",
@@ -5202,6 +5607,15 @@
 }
 },
 {
+"path": "/en/rackets/varlion-maxima-junior-2023/",
+"alt": {
+"it": "/it/racchette/varlion-maxima-junior-2023/",
+"en": "/en/rackets/varlion-maxima-junior-2023/",
+"es": "/es/palas/varlion-maxima-junior-2023/",
+"fr": "/fr/raquettes/varlion-maxima-junior-2023/"
+}
+},
+{
 "path": "/en/rackets/vibor-a-3k-black-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-3k-black-2026/",
@@ -5238,12 +5652,30 @@
 }
 },
 {
+"path": "/en/rackets/vibor-a-titan-junior-classic-2026/",
+"alt": {
+"it": "/it/racchette/vibor-a-titan-junior-classic-2026/",
+"en": "/en/rackets/vibor-a-titan-junior-classic-2026/",
+"es": "/es/palas/vibor-a-titan-junior-classic-2026/",
+"fr": "/fr/raquettes/vibor-a-titan-junior-classic-2026/"
+}
+},
+{
 "path": "/en/rackets/vibor-a-yarara-pro-white-2-0-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-yarara-pro-white-2-0-2026/",
 "en": "/en/rackets/vibor-a-yarara-pro-white-2-0-2026/",
 "es": "/es/palas/vibor-a-yarara-pro-white-2-0-2026/",
 "fr": "/fr/raquettes/vibor-a-yarara-pro-white-2-0-2026/"
+}
+},
+{
+"path": "/en/rackets/wilson-bela-junior-v2-2023/",
+"alt": {
+"it": "/it/racchette/wilson-bela-junior-v2-2023/",
+"en": "/en/rackets/wilson-bela-junior-v2-2023/",
+"es": "/es/palas/wilson-bela-junior-v2-2023/",
+"fr": "/fr/raquettes/wilson-bela-junior-v2-2023/"
 }
 },
 {
@@ -5670,6 +6102,33 @@
 }
 },
 {
+"path": "/es/palas/babolat-alioth-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-junior-2025/",
+"en": "/en/rackets/babolat-alioth-junior-2025/",
+"es": "/es/palas/babolat-alioth-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-junior-2025/"
+}
+},
+{
+"path": "/es/palas/babolat-alioth-mini-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-mini-junior-2025/",
+"en": "/en/rackets/babolat-alioth-mini-junior-2025/",
+"es": "/es/palas/babolat-alioth-mini-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-mini-junior-2025/"
+}
+},
+{
+"path": "/es/palas/babolat-alioth-pro-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-pro-junior-2025/",
+"en": "/en/rackets/babolat-alioth-pro-junior-2025/",
+"es": "/es/palas/babolat-alioth-pro-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-pro-junior-2025/"
+}
+},
+{
 "path": "/es/palas/babolat-counter-veron-2-6-2026/",
 "alt": {
 "it": "/it/racchette/babolat-counter-veron-2-6-2026/",
@@ -5940,6 +6399,24 @@
 }
 },
 {
+"path": "/es/palas/bullpadel-hack-junior-2025/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2025/",
+"en": "/en/rackets/bullpadel-hack-junior-2025/",
+"es": "/es/palas/bullpadel-hack-junior-2025/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2025/"
+}
+},
+{
+"path": "/es/palas/bullpadel-hack-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2026/",
+"en": "/en/rackets/bullpadel-hack-junior-2026/",
+"es": "/es/palas/bullpadel-hack-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2026/"
+}
+},
+{
 "path": "/es/palas/bullpadel-icon-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-icon-2026/",
@@ -5958,12 +6435,30 @@
 }
 },
 {
+"path": "/es/palas/bullpadel-indiga-boy-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2026/",
+"en": "/en/rackets/bullpadel-indiga-boy-2026/",
+"es": "/es/palas/bullpadel-indiga-boy-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2026/"
+}
+},
+{
 "path": "/es/palas/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
 "en": "/en/rackets/bullpadel-indiga-control-2026/",
 "es": "/es/palas/bullpadel-indiga-control-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-control-2026/"
+}
+},
+{
+"path": "/es/palas/bullpadel-indiga-girl-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2026/",
+"en": "/en/rackets/bullpadel-indiga-girl-2026/",
+"es": "/es/palas/bullpadel-indiga-girl-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
 }
 },
 {
@@ -6165,6 +6660,15 @@
 }
 },
 {
+"path": "/es/palas/bullpadel-vertex-w-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-vertex-w-junior-2026/",
+"en": "/en/rackets/bullpadel-vertex-w-junior-2026/",
+"es": "/es/palas/bullpadel-vertex-w-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-vertex-w-junior-2026/"
+}
+},
+{
 "path": "/es/palas/bullpadel-wonder-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-wonder-2026/",
@@ -6225,6 +6729,15 @@
 "en": "/en/rackets/drop-shot-axion-attack-2-0-2026/",
 "es": "/es/palas/drop-shot-axion-attack-2-0-2026/",
 "fr": "/fr/raquettes/drop-shot-axion-attack-2-0-2026/"
+}
+},
+{
+"path": "/es/palas/drop-shot-axion-attack-junior-2026/",
+"alt": {
+"it": "/it/racchette/drop-shot-axion-attack-junior-2026/",
+"en": "/en/rackets/drop-shot-axion-attack-junior-2026/",
+"es": "/es/palas/drop-shot-axion-attack-junior-2026/",
+"fr": "/fr/raquettes/drop-shot-axion-attack-junior-2026/"
 }
 },
 {
@@ -6426,6 +6939,15 @@
 }
 },
 {
+"path": "/es/palas/dunlop-galactica-junior-2026/",
+"alt": {
+"it": "/it/racchette/dunlop-galactica-junior-2026/",
+"en": "/en/rackets/dunlop-galactica-junior-2026/",
+"es": "/es/palas/dunlop-galactica-junior-2026/",
+"fr": "/fr/raquettes/dunlop-galactica-junior-2026/"
+}
+},
+{
 "path": "/es/palas/dunlop-galactica-pro-nisse-2026/",
 "alt": {
 "it": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
@@ -6450,6 +6972,15 @@
 "en": "/en/rackets/head-bolt-2026/",
 "es": "/es/palas/head-bolt-2026/",
 "fr": "/fr/raquettes/head-bolt-2026/"
+}
+},
+{
+"path": "/es/palas/head-coello-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-coello-junior-2025/",
+"en": "/en/rackets/head-coello-junior-2025/",
+"es": "/es/palas/head-coello-junior-2025/",
+"fr": "/fr/raquettes/head-coello-junior-2025/"
 }
 },
 {
@@ -6498,6 +7029,15 @@
 }
 },
 {
+"path": "/es/palas/head-extreme-junior-2023/",
+"alt": {
+"it": "/it/racchette/head-extreme-junior-2023/",
+"en": "/en/rackets/head-extreme-junior-2023/",
+"es": "/es/palas/head-extreme-junior-2023/",
+"fr": "/fr/raquettes/head-extreme-junior-2023/"
+}
+},
+{
 "path": "/es/palas/head-extreme-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-extreme-motion-2026/",
@@ -6534,6 +7074,15 @@
 }
 },
 {
+"path": "/es/palas/head-monster-kids-2022/",
+"alt": {
+"it": "/it/racchette/head-monster-kids-2022/",
+"en": "/en/rackets/head-monster-kids-2022/",
+"es": "/es/palas/head-monster-kids-2022/",
+"fr": "/fr/raquettes/head-monster-kids-2022/"
+}
+},
+{
 "path": "/es/palas/head-radical-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-radical-motion-2026/",
@@ -6567,6 +7116,15 @@
 "en": "/en/rackets/head-radical-team-light-2026/",
 "es": "/es/palas/head-radical-team-light-2026/",
 "fr": "/fr/raquettes/head-radical-team-light-2026/"
+}
+},
+{
+"path": "/es/palas/head-speed-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-junior-2025/",
+"en": "/en/rackets/head-speed-junior-2025/",
+"es": "/es/palas/head-speed-junior-2025/",
+"fr": "/fr/raquettes/head-speed-junior-2025/"
 }
 },
 {
@@ -6630,6 +7188,15 @@
 "en": "/en/rackets/joma-blast-pro-sft-2026/",
 "es": "/es/palas/joma-blast-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/es/palas/joma-game-junior-2025/",
+"alt": {
+"it": "/it/racchette/joma-game-junior-2025/",
+"en": "/en/rackets/joma-game-junior-2025/",
+"es": "/es/palas/joma-game-junior-2025/",
+"fr": "/fr/raquettes/joma-game-junior-2025/"
 }
 },
 {
@@ -6849,6 +7416,15 @@
 }
 },
 {
+"path": "/es/palas/nox-at10-genius-ultralight-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-at10-genius-ultralight-junior-2023/",
+"en": "/en/rackets/nox-at10-genius-ultralight-junior-2023/",
+"es": "/es/palas/nox-at10-genius-ultralight-junior-2023/",
+"fr": "/fr/raquettes/nox-at10-genius-ultralight-junior-2023/"
+}
+},
+{
 "path": "/es/palas/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
@@ -6990,6 +7566,15 @@
 "en": "/en/rackets/nox-ml10-pro-cup-silver-2027/",
 "es": "/es/palas/nox-ml10-pro-cup-silver-2027/",
 "fr": "/fr/raquettes/nox-ml10-pro-cup-silver-2027/"
+}
+},
+{
+"path": "/es/palas/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"en": "/en/rackets/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"es": "/es/palas/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"fr": "/fr/raquettes/nox-ml10-pro-cup-ultra-light-junior-2023/"
 }
 },
 {
@@ -7245,6 +7830,15 @@
 }
 },
 {
+"path": "/es/palas/puma-nova-padel-smash-junior-2024/",
+"alt": {
+"it": "/it/racchette/puma-nova-padel-smash-junior-2024/",
+"en": "/en/rackets/puma-nova-padel-smash-junior-2024/",
+"es": "/es/palas/puma-nova-padel-smash-junior-2024/",
+"fr": "/fr/raquettes/puma-nova-padel-smash-junior-2024/"
+}
+},
+{
 "path": "/es/palas/royal-padel-130-factor-2026/",
 "alt": {
 "it": "/it/racchette/royal-padel-130-factor-2026/",
@@ -7398,6 +7992,15 @@
 }
 },
 {
+"path": "/es/palas/siux-diablo-revolution-3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-diablo-revolution-3-junior-2024/",
+"en": "/en/rackets/siux-diablo-revolution-3-junior-2024/",
+"es": "/es/palas/siux-diablo-revolution-3-junior-2024/",
+"fr": "/fr/raquettes/siux-diablo-revolution-3-junior-2024/"
+}
+},
+{
 "path": "/es/palas/siux-electra-elite-2026/",
 "alt": {
 "it": "/it/racchette/siux-electra-elite-2026/",
@@ -7431,6 +8034,15 @@
 "en": "/en/rackets/siux-electra-pro-2027/",
 "es": "/es/palas/siux-electra-pro-2027/",
 "fr": "/fr/raquettes/siux-electra-pro-2027/"
+}
+},
+{
+"path": "/es/palas/siux-electra-st3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-electra-st3-junior-2024/",
+"en": "/en/rackets/siux-electra-st3-junior-2024/",
+"es": "/es/palas/siux-electra-st3-junior-2024/",
+"fr": "/fr/raquettes/siux-electra-st3-junior-2024/"
 }
 },
 {
@@ -7677,6 +8289,15 @@
 }
 },
 {
+"path": "/es/palas/starvie-junior-2025/",
+"alt": {
+"it": "/it/racchette/starvie-junior-2025/",
+"en": "/en/rackets/starvie-junior-2025/",
+"es": "/es/palas/starvie-junior-2025/",
+"fr": "/fr/raquettes/starvie-junior-2025/"
+}
+},
+{
 "path": "/es/palas/starvie-kenta-2026/",
 "alt": {
 "it": "/it/racchette/starvie-kenta-2026/",
@@ -7884,6 +8505,15 @@
 }
 },
 {
+"path": "/es/palas/varlion-maxima-junior-2023/",
+"alt": {
+"it": "/it/racchette/varlion-maxima-junior-2023/",
+"en": "/en/rackets/varlion-maxima-junior-2023/",
+"es": "/es/palas/varlion-maxima-junior-2023/",
+"fr": "/fr/raquettes/varlion-maxima-junior-2023/"
+}
+},
+{
 "path": "/es/palas/vibor-a-3k-black-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-3k-black-2026/",
@@ -7920,12 +8550,30 @@
 }
 },
 {
+"path": "/es/palas/vibor-a-titan-junior-classic-2026/",
+"alt": {
+"it": "/it/racchette/vibor-a-titan-junior-classic-2026/",
+"en": "/en/rackets/vibor-a-titan-junior-classic-2026/",
+"es": "/es/palas/vibor-a-titan-junior-classic-2026/",
+"fr": "/fr/raquettes/vibor-a-titan-junior-classic-2026/"
+}
+},
+{
 "path": "/es/palas/vibor-a-yarara-pro-white-2-0-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-yarara-pro-white-2-0-2026/",
 "en": "/en/rackets/vibor-a-yarara-pro-white-2-0-2026/",
 "es": "/es/palas/vibor-a-yarara-pro-white-2-0-2026/",
 "fr": "/fr/raquettes/vibor-a-yarara-pro-white-2-0-2026/"
+}
+},
+{
+"path": "/es/palas/wilson-bela-junior-v2-2023/",
+"alt": {
+"it": "/it/racchette/wilson-bela-junior-v2-2023/",
+"en": "/en/rackets/wilson-bela-junior-v2-2023/",
+"es": "/es/palas/wilson-bela-junior-v2-2023/",
+"fr": "/fr/raquettes/wilson-bela-junior-v2-2023/"
 }
 },
 {
@@ -8352,6 +9000,33 @@
 }
 },
 {
+"path": "/fr/raquettes/babolat-alioth-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-junior-2025/",
+"en": "/en/rackets/babolat-alioth-junior-2025/",
+"es": "/es/palas/babolat-alioth-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-junior-2025/"
+}
+},
+{
+"path": "/fr/raquettes/babolat-alioth-mini-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-mini-junior-2025/",
+"en": "/en/rackets/babolat-alioth-mini-junior-2025/",
+"es": "/es/palas/babolat-alioth-mini-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-mini-junior-2025/"
+}
+},
+{
+"path": "/fr/raquettes/babolat-alioth-pro-junior-2025/",
+"alt": {
+"it": "/it/racchette/babolat-alioth-pro-junior-2025/",
+"en": "/en/rackets/babolat-alioth-pro-junior-2025/",
+"es": "/es/palas/babolat-alioth-pro-junior-2025/",
+"fr": "/fr/raquettes/babolat-alioth-pro-junior-2025/"
+}
+},
+{
 "path": "/fr/raquettes/babolat-counter-veron-2-6-2026/",
 "alt": {
 "it": "/it/racchette/babolat-counter-veron-2-6-2026/",
@@ -8622,6 +9297,24 @@
 }
 },
 {
+"path": "/fr/raquettes/bullpadel-hack-junior-2025/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2025/",
+"en": "/en/rackets/bullpadel-hack-junior-2025/",
+"es": "/es/palas/bullpadel-hack-junior-2025/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2025/"
+}
+},
+{
+"path": "/fr/raquettes/bullpadel-hack-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-hack-junior-2026/",
+"en": "/en/rackets/bullpadel-hack-junior-2026/",
+"es": "/es/palas/bullpadel-hack-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-hack-junior-2026/"
+}
+},
+{
 "path": "/fr/raquettes/bullpadel-icon-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-icon-2026/",
@@ -8640,12 +9333,30 @@
 }
 },
 {
+"path": "/fr/raquettes/bullpadel-indiga-boy-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2026/",
+"en": "/en/rackets/bullpadel-indiga-boy-2026/",
+"es": "/es/palas/bullpadel-indiga-boy-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2026/"
+}
+},
+{
 "path": "/fr/raquettes/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
 "en": "/en/rackets/bullpadel-indiga-control-2026/",
 "es": "/es/palas/bullpadel-indiga-control-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-control-2026/"
+}
+},
+{
+"path": "/fr/raquettes/bullpadel-indiga-girl-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2026/",
+"en": "/en/rackets/bullpadel-indiga-girl-2026/",
+"es": "/es/palas/bullpadel-indiga-girl-2026/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
 }
 },
 {
@@ -8847,6 +9558,15 @@
 }
 },
 {
+"path": "/fr/raquettes/bullpadel-vertex-w-junior-2026/",
+"alt": {
+"it": "/it/racchette/bullpadel-vertex-w-junior-2026/",
+"en": "/en/rackets/bullpadel-vertex-w-junior-2026/",
+"es": "/es/palas/bullpadel-vertex-w-junior-2026/",
+"fr": "/fr/raquettes/bullpadel-vertex-w-junior-2026/"
+}
+},
+{
 "path": "/fr/raquettes/bullpadel-wonder-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-wonder-2026/",
@@ -8907,6 +9627,15 @@
 "en": "/en/rackets/drop-shot-axion-attack-2-0-2026/",
 "es": "/es/palas/drop-shot-axion-attack-2-0-2026/",
 "fr": "/fr/raquettes/drop-shot-axion-attack-2-0-2026/"
+}
+},
+{
+"path": "/fr/raquettes/drop-shot-axion-attack-junior-2026/",
+"alt": {
+"it": "/it/racchette/drop-shot-axion-attack-junior-2026/",
+"en": "/en/rackets/drop-shot-axion-attack-junior-2026/",
+"es": "/es/palas/drop-shot-axion-attack-junior-2026/",
+"fr": "/fr/raquettes/drop-shot-axion-attack-junior-2026/"
 }
 },
 {
@@ -9108,6 +9837,15 @@
 }
 },
 {
+"path": "/fr/raquettes/dunlop-galactica-junior-2026/",
+"alt": {
+"it": "/it/racchette/dunlop-galactica-junior-2026/",
+"en": "/en/rackets/dunlop-galactica-junior-2026/",
+"es": "/es/palas/dunlop-galactica-junior-2026/",
+"fr": "/fr/raquettes/dunlop-galactica-junior-2026/"
+}
+},
+{
 "path": "/fr/raquettes/dunlop-galactica-pro-nisse-2026/",
 "alt": {
 "it": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
@@ -9132,6 +9870,15 @@
 "en": "/en/rackets/head-bolt-2026/",
 "es": "/es/palas/head-bolt-2026/",
 "fr": "/fr/raquettes/head-bolt-2026/"
+}
+},
+{
+"path": "/fr/raquettes/head-coello-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-coello-junior-2025/",
+"en": "/en/rackets/head-coello-junior-2025/",
+"es": "/es/palas/head-coello-junior-2025/",
+"fr": "/fr/raquettes/head-coello-junior-2025/"
 }
 },
 {
@@ -9180,6 +9927,15 @@
 }
 },
 {
+"path": "/fr/raquettes/head-extreme-junior-2023/",
+"alt": {
+"it": "/it/racchette/head-extreme-junior-2023/",
+"en": "/en/rackets/head-extreme-junior-2023/",
+"es": "/es/palas/head-extreme-junior-2023/",
+"fr": "/fr/raquettes/head-extreme-junior-2023/"
+}
+},
+{
 "path": "/fr/raquettes/head-extreme-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-extreme-motion-2026/",
@@ -9216,6 +9972,15 @@
 }
 },
 {
+"path": "/fr/raquettes/head-monster-kids-2022/",
+"alt": {
+"it": "/it/racchette/head-monster-kids-2022/",
+"en": "/en/rackets/head-monster-kids-2022/",
+"es": "/es/palas/head-monster-kids-2022/",
+"fr": "/fr/raquettes/head-monster-kids-2022/"
+}
+},
+{
 "path": "/fr/raquettes/head-radical-motion-2026/",
 "alt": {
 "it": "/it/racchette/head-radical-motion-2026/",
@@ -9249,6 +10014,15 @@
 "en": "/en/rackets/head-radical-team-light-2026/",
 "es": "/es/palas/head-radical-team-light-2026/",
 "fr": "/fr/raquettes/head-radical-team-light-2026/"
+}
+},
+{
+"path": "/fr/raquettes/head-speed-junior-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-junior-2025/",
+"en": "/en/rackets/head-speed-junior-2025/",
+"es": "/es/palas/head-speed-junior-2025/",
+"fr": "/fr/raquettes/head-speed-junior-2025/"
 }
 },
 {
@@ -9312,6 +10086,15 @@
 "en": "/en/rackets/joma-blast-pro-sft-2026/",
 "es": "/es/palas/joma-blast-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/fr/raquettes/joma-game-junior-2025/",
+"alt": {
+"it": "/it/racchette/joma-game-junior-2025/",
+"en": "/en/rackets/joma-game-junior-2025/",
+"es": "/es/palas/joma-game-junior-2025/",
+"fr": "/fr/raquettes/joma-game-junior-2025/"
 }
 },
 {
@@ -9531,6 +10314,15 @@
 }
 },
 {
+"path": "/fr/raquettes/nox-at10-genius-ultralight-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-at10-genius-ultralight-junior-2023/",
+"en": "/en/rackets/nox-at10-genius-ultralight-junior-2023/",
+"es": "/es/palas/nox-at10-genius-ultralight-junior-2023/",
+"fr": "/fr/raquettes/nox-at10-genius-ultralight-junior-2023/"
+}
+},
+{
 "path": "/fr/raquettes/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2026/",
@@ -9672,6 +10464,15 @@
 "en": "/en/rackets/nox-ml10-pro-cup-silver-2027/",
 "es": "/es/palas/nox-ml10-pro-cup-silver-2027/",
 "fr": "/fr/raquettes/nox-ml10-pro-cup-silver-2027/"
+}
+},
+{
+"path": "/fr/raquettes/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"alt": {
+"it": "/it/racchette/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"en": "/en/rackets/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"es": "/es/palas/nox-ml10-pro-cup-ultra-light-junior-2023/",
+"fr": "/fr/raquettes/nox-ml10-pro-cup-ultra-light-junior-2023/"
 }
 },
 {
@@ -9927,6 +10728,15 @@
 }
 },
 {
+"path": "/fr/raquettes/puma-nova-padel-smash-junior-2024/",
+"alt": {
+"it": "/it/racchette/puma-nova-padel-smash-junior-2024/",
+"en": "/en/rackets/puma-nova-padel-smash-junior-2024/",
+"es": "/es/palas/puma-nova-padel-smash-junior-2024/",
+"fr": "/fr/raquettes/puma-nova-padel-smash-junior-2024/"
+}
+},
+{
 "path": "/fr/raquettes/royal-padel-130-factor-2026/",
 "alt": {
 "it": "/it/racchette/royal-padel-130-factor-2026/",
@@ -10080,6 +10890,15 @@
 }
 },
 {
+"path": "/fr/raquettes/siux-diablo-revolution-3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-diablo-revolution-3-junior-2024/",
+"en": "/en/rackets/siux-diablo-revolution-3-junior-2024/",
+"es": "/es/palas/siux-diablo-revolution-3-junior-2024/",
+"fr": "/fr/raquettes/siux-diablo-revolution-3-junior-2024/"
+}
+},
+{
 "path": "/fr/raquettes/siux-electra-elite-2026/",
 "alt": {
 "it": "/it/racchette/siux-electra-elite-2026/",
@@ -10113,6 +10932,15 @@
 "en": "/en/rackets/siux-electra-pro-2027/",
 "es": "/es/palas/siux-electra-pro-2027/",
 "fr": "/fr/raquettes/siux-electra-pro-2027/"
+}
+},
+{
+"path": "/fr/raquettes/siux-electra-st3-junior-2024/",
+"alt": {
+"it": "/it/racchette/siux-electra-st3-junior-2024/",
+"en": "/en/rackets/siux-electra-st3-junior-2024/",
+"es": "/es/palas/siux-electra-st3-junior-2024/",
+"fr": "/fr/raquettes/siux-electra-st3-junior-2024/"
 }
 },
 {
@@ -10359,6 +11187,15 @@
 }
 },
 {
+"path": "/fr/raquettes/starvie-junior-2025/",
+"alt": {
+"it": "/it/racchette/starvie-junior-2025/",
+"en": "/en/rackets/starvie-junior-2025/",
+"es": "/es/palas/starvie-junior-2025/",
+"fr": "/fr/raquettes/starvie-junior-2025/"
+}
+},
+{
 "path": "/fr/raquettes/starvie-kenta-2026/",
 "alt": {
 "it": "/it/racchette/starvie-kenta-2026/",
@@ -10566,6 +11403,15 @@
 }
 },
 {
+"path": "/fr/raquettes/varlion-maxima-junior-2023/",
+"alt": {
+"it": "/it/racchette/varlion-maxima-junior-2023/",
+"en": "/en/rackets/varlion-maxima-junior-2023/",
+"es": "/es/palas/varlion-maxima-junior-2023/",
+"fr": "/fr/raquettes/varlion-maxima-junior-2023/"
+}
+},
+{
 "path": "/fr/raquettes/vibor-a-3k-black-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-3k-black-2026/",
@@ -10602,12 +11448,30 @@
 }
 },
 {
+"path": "/fr/raquettes/vibor-a-titan-junior-classic-2026/",
+"alt": {
+"it": "/it/racchette/vibor-a-titan-junior-classic-2026/",
+"en": "/en/rackets/vibor-a-titan-junior-classic-2026/",
+"es": "/es/palas/vibor-a-titan-junior-classic-2026/",
+"fr": "/fr/raquettes/vibor-a-titan-junior-classic-2026/"
+}
+},
+{
 "path": "/fr/raquettes/vibor-a-yarara-pro-white-2-0-2026/",
 "alt": {
 "it": "/it/racchette/vibor-a-yarara-pro-white-2-0-2026/",
 "en": "/en/rackets/vibor-a-yarara-pro-white-2-0-2026/",
 "es": "/es/palas/vibor-a-yarara-pro-white-2-0-2026/",
 "fr": "/fr/raquettes/vibor-a-yarara-pro-white-2-0-2026/"
+}
+},
+{
+"path": "/fr/raquettes/wilson-bela-junior-v2-2023/",
+"alt": {
+"it": "/it/racchette/wilson-bela-junior-v2-2023/",
+"en": "/en/rackets/wilson-bela-junior-v2-2023/",
+"es": "/es/palas/wilson-bela-junior-v2-2023/",
+"fr": "/fr/raquettes/wilson-bela-junior-v2-2023/"
 }
 },
 {
