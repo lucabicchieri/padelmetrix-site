@@ -4,7 +4,8 @@
 "alt": {
 "it": "/it/trova-la-tua-racchetta/",
 "en": "/en/racket-finder/",
-"es": "/es/encuentra-tu-pala/"
+"es": "/es/encuentra-tu-pala/",
+"fr": "/fr/trouve-ta-raquette/"
 }
 },
 {
@@ -12,7 +13,8 @@
 "alt": {
 "it": "/it/trova-la-tua-racchetta/",
 "en": "/en/racket-finder/",
-"es": "/es/encuentra-tu-pala/"
+"es": "/es/encuentra-tu-pala/",
+"fr": "/fr/trouve-ta-raquette/"
 }
 },
 {
@@ -20,7 +22,17 @@
 "alt": {
 "it": "/it/trova-la-tua-racchetta/",
 "en": "/en/racket-finder/",
-"es": "/es/encuentra-tu-pala/"
+"es": "/es/encuentra-tu-pala/",
+"fr": "/fr/trouve-ta-raquette/"
+}
+},
+{
+"path": "/fr/trouve-ta-raquette/",
+"alt": {
+"it": "/it/trova-la-tua-racchetta/",
+"en": "/en/racket-finder/",
+"es": "/es/encuentra-tu-pala/",
+"fr": "/fr/trouve-ta-raquette/"
 }
 }
 ]

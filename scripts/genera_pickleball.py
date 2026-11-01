@@ -11,8 +11,8 @@ import sito as S  # noqa: E402
 from sito import ROOT, SITO, e, L, P, ALT, crumbs, pagina, LINGUE, set_lang, LIVN, STILEN, euro, data_txt, OGGI  # noqa: E402
 from dati_pickleball import P as PADDLE, F, FORME  # noqa: E402
 
-AMAZON = {"it": "www.amazon.it", "en": "www.amazon.co.uk", "es": "www.amazon.es"}
-AMAZON_TAG = {"it": "padelmetrix-21", "en": None, "es": None}
+AMAZON = {"it": "www.amazon.it", "en": "www.amazon.co.uk", "es": "www.amazon.es", "fr": "www.amazon.fr"}
+AMAZON_TAG = {"it": "padelmetrix-21", "en": None, "es": None, "fr": None}
 OZ, IN = 28.3495, 2.54
 
 
@@ -40,7 +40,7 @@ def peso(p):
     if p.get("peso_g"):
         return f"{p['peso_g']} g ({num(p['peso_g'] / OZ)} oz)"
     if p.get("peso_test_oz"):
-        return f"{num(p['peso_test_oz'], 2)} oz ({round(p['peso_test_oz'] * OZ)} g) " + L("misurati", "measured", "medidos")
+        return f"{num(p['peso_test_oz'], 2)} oz ({round(p['peso_test_oz'] * OZ)} g) " + L("misurati", "measured", "medidos", "mesurés")
     return None
 
 
@@ -70,7 +70,7 @@ def prezzo(p):
         return euro(p["prezzo_eur"])
     if p.get("prezzo_usd"):
         s = f"${p['prezzo_usd']:.2f}"
-        return s + L(" (listino USA)", " (US list price)", " (precio de lista EE. UU.)")
+        return s + L(" (listino USA)", " (US list price)", " (precio de lista EE. UU.)", " (prix catalogue USA)")
     return None
 
 
@@ -83,8 +83,8 @@ def titolo(p):
 
 
 def nome_set(p):
-    return {"viclion-set-2-racchette-carbonio": {"it": "Set 2 racchette in carbonio (V2)", "en": "Set of 2 carbon fiber paddles (V2)", "es": "Set de 2 palas de carbono (V2)"},
-            "viclion-set-2-racchette-fibra-di-vetro": {"it": "Set 2 racchette in fibra di vetro", "en": "Set of 2 fiberglass paddles", "es": "Set de 2 palas de fibra de vidrio"}}.get(p["slug"], p["modello"])
+    return {"viclion-set-2-racchette-carbonio": {"it": "Set 2 racchette in carbonio (V2)", "en": "Set of 2 carbon fiber paddles (V2)", "es": "Set de 2 palas de carbono (V2)", "fr": "Set de 2 raquettes en carbone (V2)"},
+            "viclion-set-2-racchette-fibra-di-vetro": {"it": "Set 2 racchette in fibra di vetro", "en": "Set of 2 fiberglass paddles", "es": "Set de 2 palas de fibra de vidrio", "fr": "Set de 2 raquettes en fibre de verre"}}.get(p["slug"], p["modello"])
 
 
 def nome(p):
@@ -116,14 +116,14 @@ def negozio(p, nota_aff):
         return ('<div class="stores"><div class="store"><div><strong>Amazon</strong><small>'
                 + L(f"Non in vendita su Amazon.it alla nostra ultima verifica ({d}).",
                     f"Not listed on Amazon.it when we last checked ({d}).",
-                    f"No está a la venta en Amazon.it en nuestra última comprobación ({d}).")
+                    f"No está a la venta en Amazon.it en nuestra última comprobación ({d}).", f"Non disponible sur Amazon lors de notre dernière vérification ({d}).")
                 + '</small></div></div></div><p class="note">'
                 + L("La scheda resta come riferimento tecnico: il listino indicato è quello della fonte.",
                     "The page stays as a technical reference: the list price shown is the source's.",
-                    "La ficha sigue como referencia técnica: el precio de lista indicado es el de la fuente.") + '</p>')
-    return (f'<div class="stores"><div class="store"><div><strong>Amazon</strong><small>{L("Spedizione e resi Amazon", "Amazon shipping and returns", "Envío y devoluciones de Amazon")}</small></div>'
-            f'<a class="btn lime" href="{e(amazon_url(p))}" rel="sponsored nofollow noopener" target="_blank">{L("Vedi su Amazon", "View on Amazon", "Ver en Amazon")}</a></div></div>\n'
-            f'<p class="note">{L("I prezzi su Amazon cambiano spesso: quello in scheda è il listino indicato dalla fonte.", "Amazon prices change often: the one on this page is the list price given by the source.", "Los precios en Amazon cambian a menudo: el de la ficha es el precio de lista indicado por la fuente.")} {nota_aff}</p>')
+                    "La ficha sigue como referencia técnica: el precio de lista indicado es el de la fuente.", "La fiche reste une référence technique : le prix catalogue indiqué est celui de la source.") + '</p>')
+    return (f'<div class="stores"><div class="store"><div><strong>Amazon</strong><small>{L("Spedizione e resi Amazon", "Amazon shipping and returns", "Envío y devoluciones de Amazon", "Livraison et retours Amazon")}</small></div>'
+            f'<a class="btn lime" href="{e(amazon_url(p))}" rel="sponsored nofollow noopener" target="_blank">{L("Vedi su Amazon", "View on Amazon", "Ver en Amazon", "Voir sur Amazon")}</a></div></div>\n'
+            f'<p class="note">{L("I prezzi su Amazon cambiano spesso: quello in scheda è il listino indicato dalla fonte.", "Amazon prices change often: the one on this page is the list price given by the source.", "Los precios en Amazon cambian a menudo: el de la ficha es el precio de lista indicado por la fuente.", "Les prix sur Amazon changent souvent : celui de la fiche est le prix catalogue indiqué par la source.")} {nota_aff}</p>')
 
 
 def amazon_url(p):
@@ -138,13 +138,13 @@ def fonte_link(k):
     return f'<a href="{e(u)}" rel="nofollow noopener" target="_blank">{e(n)}</a>'
 
 
-LAB = {"swing": ("Swing weight", "Swing weight", "Swing weight"), "twist": ("Twist weight", "Twist weight", "Twist weight"),
-       "bilanciamento": ("Punto di bilanciamento", "Balance point", "Punto de balance"),
-       "potenza": ("Velocità al servizio/drive", "Serve/drive speed", "Velocidad de saque/drive"),
-       "pop": ("Velocità in volée (pop)", "Punch volley speed (pop)", "Velocidad en volea (pop)"),
-       "spin": ("Spin", "Spin", "Efecto (spin)"), "peso": ("Peso misurato", "Measured weight", "Peso medido"),
-       "controllo": ("Controllo", "Control", "Control"), "tolleranza": ("Tolleranza", "Forgiveness", "Tolerancia"),
-       "firepower": ("Firepower (indice di potenza 0-100)", "Firepower (0-100 power score)", "Firepower (índice de potencia 0-100)")}
+LAB = {"swing": ("Swing weight", "Swing weight", "Swing weight", "Swing weight"), "twist": ("Twist weight", "Twist weight", "Twist weight", "Twist weight"),
+       "bilanciamento": ("Punto di bilanciamento", "Balance point", "Punto de balance", "Point d'équilibre"),
+       "potenza": ("Velocità al servizio/drive", "Serve/drive speed", "Velocidad de saque/drive", "Vitesse au service/drive"),
+       "pop": ("Velocità in volée (pop)", "Punch volley speed (pop)", "Velocidad en volea (pop)", "Vitesse en volée (pop)"),
+       "spin": ("Spin", "Spin", "Efecto (spin)", "Effet (spin)"), "peso": ("Peso misurato", "Measured weight", "Peso medido", "Poids mesuré"),
+       "controllo": ("Controllo", "Control", "Control", "Contrôle"), "tolleranza": ("Tolleranza", "Forgiveness", "Tolerancia", "Tolérance"),
+       "firepower": ("Firepower (indice di potenza 0-100)", "Firepower (0-100 power score)", "Firepower (índice de potencia 0-100)", "Firepower (indice de puissance 0-100)")}
 
 
 def lab_lab(k):
@@ -152,11 +152,11 @@ def lab_lab(k):
 
 
 def frase_liv(k):
-    return {"principiante": L("per chi inizia", "for beginners", "para quien empieza"),
-            "principiante-intermedio": L("per principianti e intermedi", "for beginners and intermediates", "para principiantes e intermedios"),
-            "intermedio": L("per giocatori intermedi", "for intermediate players", "para jugadores intermedios"),
-            "intermedio-avanzato": L("per intermedi e avanzati", "for intermediate and advanced players", "para intermedios y avanzados"),
-            "avanzato": L("per giocatori avanzati", "for advanced players", "para jugadores avanzados")}[k]
+    return {"principiante": L("per chi inizia", "for beginners", "para quien empieza", "pour débuter"),
+            "principiante-intermedio": L("per principianti e intermedi", "for beginners and intermediates", "para principiantes e intermedios", "pour débutants et intermédiaires"),
+            "intermedio": L("per giocatori intermedi", "for intermediate players", "para jugadores intermedios", "pour joueurs intermédiaires"),
+            "intermedio-avanzato": L("per intermedi e avanzati", "for intermediate and advanced players", "para intermedios y avanzados", "pour intermédiaires et avancés"),
+            "avanzato": L("per giocatori avanzati", "for advanced players", "para jugadores avanzados", "pour joueurs avancés")}[k]
 
 
 def in_breve(p):
@@ -165,42 +165,42 @@ def in_breve(p):
     pb = peso_breve(p)
     if p.get("set"):
         base = L(f"Il {titolo(p)} è un set da pickleball con racchette di forma {f}", f"The {titolo(p)} is a pickleball set with {f}-shape paddles",
-                 f"El {titolo(p)} es un set de pickleball con palas de forma {f}")
+                 f"El {titolo(p)} es un set de pickleball con palas de forma {f}", f"Le {titolo(p)} est un set de pickleball avec des raquettes de forme {f}")
     else:
         base = L(f"La {titolo(p)} è una racchetta da pickleball {f}", f"The {titolo(p)} is {'an' if f[0] in 'aeiou' else 'a'} {f} pickleball paddle",
-                 f"La {titolo(p)} es una pala de pickleball {f}")
+                 f"La {titolo(p)} es una pala de pickleball {f}", f"La {titolo(p)} est une raquette de pickleball {f}")
     extra = []
     if sp:
-        extra.append(L(f"nucleo da {sp}", f"{sp} core", f"núcleo de {sp}"))
+        extra.append(L(f"nucleo da {sp}", f"{sp} core", f"núcleo de {sp}", f"noyau de {sp}"))
     if pb:
         extra.append(pb)
-    t = base + (L(" con ", " with ", " con ") + L(" e ", " and ", " y ").join(extra) if extra else "")
+    t = base + (L(" con ", " with ", " con ", " avec ") + L(" e ", " and ", " y ", " et ").join(extra) if extra else "")
     t += " " + frase_liv(p["livello"])
     if p.get("giocatore"):
-        t += L(f", firmata da {p['giocatore']}", f", signed by {p['giocatore']}", f", firmada por {p['giocatore']}")
+        t += L(f", firmata da {p['giocatore']}", f", signed by {p['giocatore']}", f", firmada por {p['giocatore']}", f", signée par {p['giocatore']}")
     return t + "."
 
 
 def specifiche(p):
-    righe = [(L("Marca", "Brand", "Marca"), p["marca"]), (L("Modello", "Model", "Modelo"), nome(p)),
-             (L("Giocatore", "Player", "Jugador"), p.get("giocatore")),
-             (L("Forma", "Shape", "Forma"), forma(p)),
-             (L("Peso", "Weight", "Peso"), peso(p))]
+    righe = [(L("Marca", "Brand", "Marca", "Marque"), p["marca"]), (L("Modello", "Model", "Modelo", "Modèle"), nome(p)),
+             (L("Giocatore", "Player", "Jugador", "Joueur"), p.get("giocatore")),
+             (L("Forma", "Shape", "Forma", "Forme"), forma(p)),
+             (L("Peso", "Weight", "Peso", "Poids"), peso(p))]
     if p.get("peso_swift_oz"):
-        righe.append((L("Versione leggera (Swift)", "Light version (Swift)", "Versión ligera (Swift)"), f"{num(p['peso_swift_oz'])} oz ({round(p['peso_swift_oz'] * OZ)} g)"))
-    righe += [(L("Lunghezza", "Length", "Longitud"), misura(p, "lunghezza")), (L("Larghezza", "Width", "Anchura"), misura(p, "larghezza")),
-              (L("Lunghezza manico", "Handle length", "Longitud del mango"), misura(p, "manico")),
-              (L("Circonferenza grip", "Grip circumference", "Circunferencia del grip"), misura(p, "grip")),
-              (L("Spessore nucleo", "Core thickness", "Grosor del núcleo"), f"{p['spessore_mm']} mm" if p.get("spessore_mm") else None),
-              (L("Nucleo", "Core", "Núcleo"), g(p["nucleo"])), (L("Faccia", "Face", "Cara"), g(p["faccia"])),
-              (L("Omologazioni", "Approvals", "Homologaciones"), p.get("approvazioni"))]
+        righe.append((L("Versione leggera (Swift)", "Light version (Swift)", "Versión ligera (Swift)", "Version légère (Swift)"), f"{num(p['peso_swift_oz'])} oz ({round(p['peso_swift_oz'] * OZ)} g)"))
+    righe += [(L("Lunghezza", "Length", "Longitud", "Longueur"), misura(p, "lunghezza")), (L("Larghezza", "Width", "Anchura", "Largeur"), misura(p, "larghezza")),
+              (L("Lunghezza manico", "Handle length", "Longitud del mango", "Longueur du manche"), misura(p, "manico")),
+              (L("Circonferenza grip", "Grip circumference", "Circunferencia del grip", "Circonférence du grip"), misura(p, "grip")),
+              (L("Spessore nucleo", "Core thickness", "Grosor del núcleo", "Épaisseur du noyau"), f"{p['spessore_mm']} mm" if p.get("spessore_mm") else None),
+              (L("Nucleo", "Core", "Núcleo", "Noyau"), g(p["nucleo"])), (L("Faccia", "Face", "Cara", "Tamis"), g(p["faccia"])),
+              (L("Omologazioni", "Approvals", "Homologaciones", "Homologations"), p.get("approvazioni"))]
     if p.get("set"):
-        righe.append((L("Contenuto", "Contents", "Contenido"), g(p["set"])))
-    righe += [(L("Livello (stima PadelMetrix)", "Level (PadelMetrix estimate)", "Nivel (estimación PadelMetrix)"), LIVN(p["livello"])),
-              (L("Stile", "Style", "Estilo"), STILEN(p["stile"])),
-              (L("Prezzo di listino", "List price", "Precio de lista"), prezzo(p))]
-    nd = L("Non dichiarato", "Not stated", "No declarado")
-    return [(k, v or nd) for k, v in righe if not (k == L("Giocatore", "Player", "Jugador") and not v)]
+        righe.append((L("Contenuto", "Contents", "Contenido", "Contenu"), g(p["set"])))
+    righe += [(L("Livello (stima PadelMetrix)", "Level (PadelMetrix estimate)", "Nivel (estimación PadelMetrix)", "Niveau (estimation PadelMetrix)"), LIVN(p["livello"])),
+              (L("Stile", "Style", "Estilo", "Style"), STILEN(p["stile"])),
+              (L("Prezzo di listino", "List price", "Precio de lista", "Prix catalogue"), prezzo(p))]
+    nd = L("Non dichiarato", "Not stated", "No declarado", "Non communiqué")
+    return [(k, v or nd) for k, v in righe if not (k == L("Giocatore", "Player", "Jugador", "Joueur") and not v)]
 
 
 def simili(p):
@@ -232,21 +232,21 @@ def faq(p):
     t = titolo(p)
     qa = []
     if peso(p):
-        qa.append((L(f"Quanto pesa la {t}?", f"How much does the {t} weigh?", f"¿Cuánto pesa la {t}?"),
-                   L(f"Secondo i dati pubblicati pesa {peso(p)}.", f"According to published data it weighs {peso(p)}.", f"Según los datos publicados pesa {peso(p)}.")))
+        qa.append((L(f"Quanto pesa la {t}?", f"How much does the {t} weigh?", f"¿Cuánto pesa la {t}?", f"Combien pèse la {t} ?"),
+                   L(f"Secondo i dati pubblicati pesa {peso(p)}.", f"According to published data it weighs {peso(p)}.", f"Según los datos publicados pesa {peso(p)}.", f"D\'après les données publiées, elle pèse {peso(p)}.")))
     if p.get("spessore_mm"):
         sp = p["spessore_mm"]
-        spieg = (L("Un nucleo sottile dà più spinta immediata e meno controllo nel gioco morbido.", "A thin core gives more immediate pop and less control in the soft game.", "Un núcleo fino da más empuje inmediato y menos control en el juego suave.")
-                 if sp <= 14 else L("Un nucleo spesso aumenta controllo, stabilità e tempo di permanenza della palla.", "A thick core adds control, stability and dwell time.", "Un núcleo grueso aumenta el control, la estabilidad y el tiempo de permanencia de la bola."))
-        qa.append((L(f"Che spessore ha la {t}?", f"How thick is the {t}?", f"¿Qué grosor tiene la {t}?"),
-                   L(f"Il nucleo è da {sp} mm. ", f"The core is {sp} mm. ", f"El núcleo es de {sp} mm. ") + spieg))
+        spieg = (L("Un nucleo sottile dà più spinta immediata e meno controllo nel gioco morbido.", "A thin core gives more immediate pop and less control in the soft game.", "Un núcleo fino da más empuje inmediato y menos control en el juego suave.", "Un noyau fin donne plus de punch immédiat et moins de contrôle dans le jeu doux.")
+                 if sp <= 14 else L("Un nucleo spesso aumenta controllo, stabilità e tempo di permanenza della palla.", "A thick core adds control, stability and dwell time.", "Un núcleo grueso aumenta el control, la estabilidad y el tiempo de permanencia de la bola.", "Un noyau épais apporte contrôle, stabilité et temps de contact."))
+        qa.append((L(f"Che spessore ha la {t}?", f"How thick is the {t}?", f"¿Qué grosor tiene la {t}?", f"Quelle est l\'épaisseur de la {t} ?"),
+                   L(f"Il nucleo è da {sp} mm. ", f"The core is {sp} mm. ", f"El núcleo es de {sp} mm. ", f"Le noyau mesure {sp} mm. ") + spieg))
     if p.get("approvazioni"):
-        qa.append((L(f"La {t} è omologata per i tornei?", f"Is the {t} approved for tournaments?", f"¿La {t} está homologada para torneos?"),
-                   L(f"Sì: risulta omologata {p['approvazioni']}.", f"Yes: it is listed as {p['approvazioni']} approved.", f"Sí: figura como homologada {p['approvazioni']}.")))
-    qa.append((L(f"Per che livello è la {t}?", f"What level is the {t} for?", f"¿Para qué nivel es la {t}?"),
+        qa.append((L(f"La {t} è omologata per i tornei?", f"Is the {t} approved for tournaments?", f"¿La {t} está homologada para torneos?", f"La {t} est-elle homologuée pour les tournois ?"),
+                   L(f"Sì: risulta omologata {p['approvazioni']}.", f"Yes: it is listed as {p['approvazioni']} approved.", f"Sí: figura como homologada {p['approvazioni']}.", f"Oui : elle figure comme homologuée {p['approvazioni']}.")))
+    qa.append((L(f"Per che livello è la {t}?", f"What level is the {t} for?", f"¿Para qué nivel es la {t}?", f"À quel niveau s\'adresse la {t} ?"),
                L(f"Secondo la nostra stima, basata su materiali, peso e recensioni: livello {LIVN(p['livello']).lower()}.",
                  f"In our estimate, based on materials, weight and reviews: {LIVN(p['livello']).lower()} level.",
-                 f"Según nuestra estimación, basada en materiales, peso y reseñas: nivel {LIVN(p['livello']).lower()}.")))
+                 f"Según nuestra estimación, basada en materiales, peso y reseñas: nivel {LIVN(p['livello']).lower()}.", f"Selon notre estimation, basée sur les matériaux, le poids et les avis : niveau {LIVN(p['livello']).lower()}.")))
     return qa
 
 
@@ -261,22 +261,22 @@ def scheda(p):
     if p.get("valutazioni"):
         v = p["valutazioni"]
         rows = "".join(f'<div class="bar"><span>{lab_lab(k)}</span><div class="track"><div class="fill" style="width:{round(x / v["scala"] * 100)}%"></div></div><span class="v">{num(x)}{"%" if v["scala"] == 100 else ""}</span></div>' for k, x in v["voci"])
-        blocco = (f'<div class="card"><h2>{L("Valutazioni di", "Ratings from", "Valoraciones de")} {e(F[v["fonte"]][0])}</h2><div class="bars">{rows}</div>'
-                  f'<p class="note">{L("Punteggi pubblicati da", "Scores published by", "Puntuaciones publicadas por")} {fonte_link(v["fonte"])}{L(" su ", " out of ", " sobre ")}{v["scala"]}. {L("Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione.", "The PadelMetrix score will follow with our own rating method.", "La puntuación PadelMetrix llegará con nuestro método de valoración.")}</p></div>')
+        blocco = (f'<div class="card"><h2>{L("Valutazioni di", "Ratings from", "Valoraciones de", "Notes de")} {e(F[v["fonte"]][0])}</h2><div class="bars">{rows}</div>'
+                  f'<p class="note">{L("Punteggi pubblicati da", "Scores published by", "Puntuaciones publicadas por", "Notes publiées par")} {fonte_link(v["fonte"])}{L(" su ", " out of ", " sobre ", " sur ")}{v["scala"]}. {L("Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione.", "The PadelMetrix score will follow with our own rating method.", "La puntuación PadelMetrix llegará con nuestro método de valoración.", "La note PadelMetrix suivra, avec notre propre méthode d\'évaluation.")}</p></div>')
     if p.get("lab"):
         def tab(lab, fk):
             return (f'<dl class="specs">' + "".join(f"<div><dt>{lab_lab(k)}</dt><dd>{e(numtxt(v))}</dd></div>" for k, v in lab) + "</dl>"
-                    f'<p class="note">{L("Misure di laboratorio di", "Lab measurements by", "Medidas de laboratorio de")} {fonte_link(fk)}.</p>')
-        blocco += f'<div class="card"><h2>{L("Dati di laboratorio", "Lab data", "Datos de laboratorio")}</h2>{tab(p["lab"], p["lab_fonte"])}'
+                    f'<p class="note">{L("Misure di laboratorio di", "Lab measurements by", "Medidas de laboratorio de", "Mesures en laboratoire de")} {fonte_link(fk)}.</p>')
+        blocco += f'<div class="card"><h2>{L("Dati di laboratorio", "Lab data", "Datos de laboratorio", "Données de laboratoire")}</h2>{tab(p["lab"], p["lab_fonte"])}'
         if p.get("lab2"):
             blocco += tab(p["lab2"], p["lab2_fonte"])
         blocco += "</div>"
     nota_lab = L("Swing weight: quanto pesa la racchetta in movimento (più alto = più stabile, più lenta). Twist weight: resistenza alla torsione sui colpi decentrati (più alto = più tollerante).",
                  "Swing weight: how heavy the paddle feels in motion (higher = more stable, slower). Twist weight: resistance to twisting on off-centre hits (higher = more forgiving).",
-                 "Swing weight: cuánto pesa la pala en movimiento (más alto = más estable, más lenta). Twist weight: resistencia a la torsión en golpes descentrados (más alto = más tolerante).") if p.get("lab") else ""
+                 "Swing weight: cuánto pesa la pala en movimiento (más alto = más estable, más lenta). Twist weight: resistencia a la torsión en golpes descentrados (más alto = más tolerante).", "Swing weight : le poids ressenti de la raquette en mouvement (plus élevé = plus stable, plus lente). Twist weight : résistance à la torsion sur les frappes décentrées (plus élevé = plus tolérante).") if p.get("lab") else ""
     nota_aff = L("Il link verso Amazon è un link di affiliazione: se acquisti, PadelMetrix può ricevere una commissione senza costi per te.",
                  "The Amazon link is an affiliate link: if you buy, PadelMetrix may receive a commission at no cost to you.",
-                 "El enlace a Amazon es un enlace de afiliado: si compras, PadelMetrix puede recibir una comisión sin coste para ti.")
+                 "El enlace a Amazon es un enlace de afiliado: si compras, PadelMetrix puede recibir una comisión sin coste para ti.", "Le lien Amazon est un lien affilié : si vous achetez, PadelMetrix peut recevoir une commission sans frais pour vous.")
     li = lambda xs: "".join(f"<li>{e(x)}</li>" for x in xs)  # noqa: E731
     sim = "".join(f'<a href="{url_p(o)}"><small>{e(o["marca"])}</small><b>{e(nome(o))}</b><small>{e(forma(o))}{", " + str(o["spessore_mm"]) + " mm" if o.get("spessore_mm") else ""}, {e(LIVN(o["livello"]).lower())}</small></a>' for o in simili(p))
     fonti = " · ".join(fonte_link(k) for k in p["fonti"])
@@ -287,49 +287,49 @@ def scheda(p):
 <div>
 <div class="eyebrow">{e(p["marca"])} · Pickleball{" · " + str(p["anno"]) if p.get("anno") else ""}</div>
 <h1>{e(t)}</h1>
-<p class="note" style="margin-top:6px">{L("Aggiornata il", "Updated on", "Actualizada el")} {data_txt()} · {L("dati con fonti citate", "data with cited sources", "datos con fuentes citadas")} · <a href="{P("chi-siamo")}">{L("metodo", "method", "método")}</a></p>
+<p class="note" style="margin-top:6px">{L("Aggiornata il", "Updated on", "Actualizada el", "Mis à jour le")} {data_txt()} · {L("dati con fonti citate", "data with cited sources", "datos con fuentes citadas", "données avec sources citées")} · <a href="{P("chi-siamo")}">{L("metodo", "method", "método", "méthode")}</a></p>
 </div>
 <p class="lead" style="font-weight:600;color:var(--ink)">{e(breve)}</p>
 <div class="chips">{"".join(f"<span>{e(c)}</span>" for c in chips(p))}</div>
 <p class="lead">{e(tx["lead"])}</p>
 {blocco}
 <div class="card">
-<h2>{L("Dove comprare la", "Where to buy the", "Dónde comprar la")} {e(nome(p))}</h2>
+<h2>{L("Dove comprare la", "Where to buy the", "Dónde comprar la", "Où acheter la")} {e(nome(p))}</h2>
 {negozio(p, nota_aff)}
 </div>
 </div>
 </div>
 
 <section class="block">
-<h2>{L("Dati tecnici della", "Technical specs of the", "Datos técnicos de la")} {e(nome(p))}</h2>
+<h2>{L("Dati tecnici della", "Technical specs of the", "Datos técnicos de la", "Caractéristiques techniques de la")} {e(nome(p))}</h2>
 <dl class="specs">{"".join(f"<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k, v in specifiche(p))}</dl>
-<p class="note">{L("Fonti", "Sources", "Fuentes")}: {fonti}. {e(nota_lab)}</p>
+<p class="note">{L("Fonti", "Sources", "Fuentes", "Sources")}: {fonti}. {e(nota_lab)}</p>
 </section>
 
 <section class="block">
-<h2>{e(nome(p))}: {L("recensioni e opinioni", "reviews and opinions", "reseñas y opiniones")}</h2>
+<h2>{e(nome(p))}: {L("recensioni e opinioni", "reviews and opinions", "reseñas y opiniones", "avis et opinions")}</h2>
 <div class="card"><p style="margin:0;font-size:16px">{e(tx["sintesi"])}</p></div>
 <div class="two">
-<div class="card pros"><h3>{L("Punti di forza", "Strengths", "Puntos fuertes")}</h3><ul class="clean">{li(tx["pro"])}</ul></div>
-<div class="card cons"><h3>{L("Limiti", "Limitations", "Limitaciones")}</h3><ul class="clean">{li(tx["contro"])}</ul></div>
+<div class="card pros"><h3>{L("Punti di forza", "Strengths", "Puntos fuertes", "Points forts")}</h3><ul class="clean">{li(tx["pro"])}</ul></div>
+<div class="card cons"><h3>{L("Limiti", "Limitations", "Limitaciones", "Limites")}</h3><ul class="clean">{li(tx["contro"])}</ul></div>
 </div>
 <div class="two">
-<div class="card"><h3 style="font-size:17px">{L("È adatta se", "It suits you if", "Es para ti si")}</h3><ul class="clean">{li(tx["adatta"])}</ul></div>
-<div class="card"><h3 style="font-size:17px">{L("Meglio un'altra racchetta se", "Better choose another paddle if", "Mejor otra pala si")}</h3><ul class="clean">{li(tx["non_adatta"])}</ul></div>
+<div class="card"><h3 style="font-size:17px">{L("È adatta se", "It suits you if", "Es para ti si", "Elle vous convient si")}</h3><ul class="clean">{li(tx["adatta"])}</ul></div>
+<div class="card"><h3 style="font-size:17px">{L("Meglio un'altra racchetta se", "Better choose another paddle if", "Mejor otra pala si", "Mieux vaut choisir une autre raquette si")}</h3><ul class="clean">{li(tx["non_adatta"])}</ul></div>
 </div>
 </section>
 
 <section class="block">
-<h2>{L("Racchette da pickleball simili", "Similar pickleball paddles", "Palas de pickleball similares")}</h2>
+<h2>{L("Racchette da pickleball simili", "Similar pickleball paddles", "Palas de pickleball similares", "Raquettes de pickleball similaires")}</h2>
 <div class="sim">{sim}</div>
-<p><a class="btn out" href="{P("pickleball")}">{L("Tutte le racchette da pickleball", "All pickleball paddles", "Todas las palas de pickleball")}</a> <a class="btn out" href="{P("articoli", "regolamento-pickleball-regole-spiegate")}">{L("Il regolamento del pickleball", "Pickleball rules explained", "El reglamento del pickleball")}</a></p>
+<p><a class="btn out" href="{P("pickleball")}">{L("Tutte le racchette da pickleball", "All pickleball paddles", "Todas las palas de pickleball", "Toutes les raquettes de pickleball")}</a> <a class="btn out" href="{P("articoli", "regolamento-pickleball-regole-spiegate")}">{L("Il regolamento del pickleball", "Pickleball rules explained", "El reglamento del pickleball", "Les règles du pickleball expliquées")}</a></p>
 </section>
 
-<section class="block faq"><h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes")}</h2>{"".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa)}</section>
-<p class="note" style="padding-bottom:24px">{L("Scheda aggiornata il", "Page updated on", "Ficha actualizada el")} {data_txt()}.</p>"""
-    title = L(f"{t}: scheda tecnica e opinioni (pickleball)", f"{t}: specs and reviews (pickleball)", f"{t}: ficha técnica y opiniones (pickleball)")
+<section class="block faq"><h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes", "Questions fréquentes")}</h2>{"".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa)}</section>
+<p class="note" style="padding-bottom:24px">{L("Scheda aggiornata il", "Page updated on", "Ficha actualizada el", "Fiche mise à jour le")} {data_txt()}.</p>"""
+    title = L(f"{t}: scheda tecnica e opinioni (pickleball)", f"{t}: specs and reviews (pickleball)", f"{t}: ficha técnica y opiniones (pickleball)", f"{t} : caractéristiques et avis (pickleball)")
     prod = {"@context": "https://schema.org", "@type": "Product", "name": t, "brand": {"@type": "Brand", "name": p["marca"]},
-            "category": L("Racchetta da pickleball", "Pickleball paddle", "Pala de pickleball"), "description": breve, "url": SITO + path}
+            "category": L("Racchetta da pickleball", "Pickleball paddle", "Pala de pickleball", "Raquette de pickleball"), "description": breve, "url": SITO + path}
     web = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": SITO + path, "dateModified": OGGI, "inLanguage": S.lang(),
            "author": S.autore(), "publisher": S.editore()}
     faqld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
@@ -344,62 +344,62 @@ f.addEventListener('change',run);run();})();</script>"""
 def elenco():
     path, alt = P("pickleball"), ALT("pickleball")
     mm = sorted({p["marca"] for p in PADDLE})
-    mtxt = L(", ".join(mm[:-1]) + " e " + mm[-1], ", ".join(mm[:-1]) + " and " + mm[-1], ", ".join(mm[:-1]) + " y " + mm[-1])
+    mtxt = L(", ".join(mm[:-1]) + " e " + mm[-1], ", ".join(mm[:-1]) + " and " + mm[-1], ", ".join(mm[:-1]) + " y " + mm[-1], ", ".join(mm[:-1]) + " et " + mm[-1])
     cr, cr_ld = crumbs([S.home_crumb(), ("Pickleball", None)])
     marche = sorted({p["marca"] for p in PADDLE})
     livs = [k for k in S.LIV if any(p["livello"] == k for p in PADDLE)]
     opt = lambda vals, lab: f'<option value="">{lab}</option>' + "".join(f'<option value="{v}">{e(t)}</option>' for v, t in vals)  # noqa: E731
-    tutte, tutti = L("Tutte", "All", "Todas"), L("Tutti", "All", "Todos")
+    tutte, tutti = L("Tutte", "All", "Todas", "Toutes"), L("Tutti", "All", "Todos", "Tous")
     form = (f'<form class="filtri" id="filtri" onsubmit="return false">'
-            f'<label>{L("Marca", "Brand", "Marca")}<select name="marca">{opt([(m, m) for m in marche], tutte)}</select></label>'
-            f'<label>{L("Forma", "Shape", "Forma")}<select name="forma">{opt([(k, g(v)) for k, v in FORME.items()], tutte)}</select></label>'
-            f'<label>{L("Livello", "Level", "Nivel")}<select name="livello">{opt([(k, LIVN(k)) for k in livs], tutti)}</select></label></form>')
+            f'<label>{L("Marca", "Brand", "Marca", "Marque")}<select name="marca">{opt([(m, m) for m in marche], tutte)}</select></label>'
+            f'<label>{L("Forma", "Shape", "Forma", "Forme")}<select name="forma">{opt([(k, g(v)) for k, v in FORME.items()], tutte)}</select></label>'
+            f'<label>{L("Livello", "Level", "Nivel", "Niveau")}<select name="livello">{opt([(k, LIVN(k)) for k in livs], tutti)}</select></label></form>')
     cards = "".join(
         f'<a class="rcard" href="{url_p(p)}" data-marca="{p["marca"]}" data-forma="{p["forma"]}" data-livello="{p["livello"]}"><div class="ill">{paddle_svg(p["forma"], 60, titolo(p))}</div>'
         f'<div><small>{e(p["marca"])}{" · " + str(p["anno"]) if p.get("anno") else ""}</small><b>{e(nome(p))}</b><small>{e(" · ".join(x for x in (forma(p), str(p["spessore_mm"]) + " mm" if p.get("spessore_mm") else None, LIVN(p["livello"])) if x))}</small></div></a>'
         for p in PADDLE)
-    qa = [(L("Che differenza c'è tra pickleball e padel?", "What is the difference between pickleball and padel?", "¿Qué diferencia hay entre pickleball y pádel?"),
+    qa = [(L("Che differenza c'è tra pickleball e padel?", "What is the difference between pickleball and padel?", "¿Qué diferencia hay entre pickleball y pádel?", "Quelle est la différence entre le pickleball et le padel ?"),
            L("Il pickleball si gioca su un campo più piccolo, senza pareti, con una pallina di plastica forata e una racchetta piatta senza fori (paddle). Il padel ha le pareti, una pallina pressurizzata e racchette forate più spesse e pesanti.",
              "Pickleball is played on a smaller court without walls, with a perforated plastic ball and a flat paddle without holes. Padel has walls, a pressurised ball and thicker, heavier perforated rackets.",
-             "El pickleball se juega en una pista más pequeña, sin paredes, con una pelota de plástico perforada y una pala plana sin agujeros (paddle). El pádel tiene paredes, una pelota presurizada y palas perforadas más gruesas y pesadas.")),
-          (L("Meglio un nucleo da 14 o da 16 mm?", "Is a 14 mm or 16 mm core better?", "¿Mejor un núcleo de 14 o de 16 mm?"),
+             "El pickleball se juega en una pista más pequeña, sin paredes, con una pelota de plástico perforada y una pala plana sin agujeros (paddle). El pádel tiene paredes, una pelota presurizada y palas perforadas más gruesas y pesadas.", "Le pickleball se joue sur un terrain plus petit sans murs, avec une balle en plastique perforée et une raquette pleine sans trous. Le padel a des murs, une balle pressurisée et des raquettes perforées plus épaisses et plus lourdes.")),
+          (L("Meglio un nucleo da 14 o da 16 mm?", "Is a 14 mm or 16 mm core better?", "¿Mejor un núcleo de 14 o de 16 mm?", "Vaut-il mieux un noyau de 14 mm ou de 16 mm ?"),
            L("Il 16 mm dà più controllo e stabilità nel gioco morbido; il 14 mm è più reattivo e veloce, con più spinta immediata. Chi inizia di solito si trova meglio con 16 mm o con racchette d'ingresso da 12–14 mm in fibra di vetro.",
              "16 mm gives more control and stability in the soft game; 14 mm is more responsive and faster, with more immediate pop. Beginners usually do better with 16 mm or with 12–14 mm fiberglass entry paddles.",
-             "El de 16 mm da más control y estabilidad en el juego suave; el de 14 mm es más reactivo y rápido, con más empuje inmediato. Quien empieza suele ir mejor con 16 mm o con palas de iniciación de 12–14 mm de fibra de vidrio.")),
-          (L("Cosa vuol dire omologata USAP o UPA-A?", "What does USAP or UPA-A approved mean?", "¿Qué significa homologada USAP o UPA-A?"),
+             "El de 16 mm da más control y estabilidad en el juego suave; el de 14 mm es más reactivo y rápido, con más empuje inmediato. Quien empieza suele ir mejor con 16 mm o con palas de iniciación de 12–14 mm de fibra de vidrio.", "16 mm donne plus de contrôle et de stabilité dans le jeu doux ; 14 mm est plus réactif et plus rapide, avec plus de punch immédiat. Les débutants s\'en sortent généralement mieux avec 16 mm ou avec des raquettes d\'entrée de gamme en fibre de verre de 12–14 mm.")),
+          (L("Cosa vuol dire omologata USAP o UPA-A?", "What does USAP or UPA-A approved mean?", "¿Qué significa homologada USAP o UPA-A?", "Que signifie homologuée USAP ou UPA-A ?"),
            L("Che la racchetta rispetta le regole delle due principali federazioni statunitensi (USA Pickleball e United Pickleball Association) ed è ammessa nei loro tornei. Per giocare per divertimento non serve.",
              "That the paddle meets the rules of the two main US bodies (USA Pickleball and the United Pickleball Association) and is allowed in their tournaments. It is not needed for recreational play.",
-             "Que la pala cumple las reglas de las dos principales federaciones estadounidenses (USA Pickleball y United Pickleball Association) y está admitida en sus torneos. Para jugar por diversión no hace falta.")),
-          (L("Quanto deve pesare una racchetta da pickleball?", "How much should a pickleball paddle weigh?", "¿Cuánto debe pesar una pala de pickleball?"),
+             "Que la pala cumple las reglas de las dos principales federaciones estadounidenses (USA Pickleball y United Pickleball Association) y está admitida en sus torneos. Para jugar por diversión no hace falta.", "Que la raquette respecte les règles des deux principaux organismes américains (USA Pickleball et United Pickleball Association) et qu\'elle est autorisée dans leurs tournois. Ce n\'est pas nécessaire pour jouer en loisir.")),
+          (L("Quanto deve pesare una racchetta da pickleball?", "How much should a pickleball paddle weigh?", "¿Cuánto debe pesar una pala de pickleball?", "Combien doit peser une raquette de pickleball ?"),
            L("Tra le racchette in questa pagina il peso va da circa 200 a 245 grammi (7,1–8,6 oz). Le più pesanti sono più stabili e potenti, le più leggere più rapide a rete e meno faticose per il braccio.",
              "Among the paddles on this page, weight ranges from about 200 to 245 grams (7.1–8.6 oz). Heavier paddles are more stable and powerful, lighter ones quicker at the net and easier on the arm.",
-             "Entre las palas de esta página el peso va de unos 200 a 245 gramos (7,1–8,6 oz). Las más pesadas son más estables y potentes, las más ligeras más rápidas en la red y menos cansadas para el brazo."))]
+             "Entre las palas de esta página el peso va de unos 200 a 245 gramos (7,1–8,6 oz). Las más pesadas son más estables y potentes, las más ligeras más rápidas en la red y menos cansadas para el brazo.", "Parmi les raquettes de cette page, le poids va d\'environ 200 à 245 grammes (7,1–8,6 oz). Les raquettes plus lourdes sont plus stables et puissantes, les plus légères plus rapides au filet et plus douces pour le bras."))]
     corpo = f"""{cr}
-<div class="intro"><h1>{L("Racchette da pickleball: schede e opinioni", "Pickleball paddles: specs and reviews", "Palas de pickleball: fichas y opiniones")}</h1>
-<p><b>{L(f"{len(PADDLE)} racchette da pickleball (paddle) di {mtxt}, con dati tecnici, misure di laboratorio dove esistono, sintesi delle recensioni indipendenti e link per l'acquisto su Amazon.", f"{len(PADDLE)} pickleball paddles from {mtxt}, with specs, lab measurements where available, summaries of independent reviews and links to buy on Amazon.", f"{len(PADDLE)} palas de pickleball (paddle) de {mtxt}, con datos técnicos, medidas de laboratorio cuando existen, resumen de las reseñas independientes y enlaces de compra en Amazon.")}</b> {L("Per chi inizia vanno bene le racchette in fibra di vetro da 12–14 mm o i set da due; chi gioca già con regolarità guarda al carbonio e allo spessore del nucleo.", "Beginners do well with 12–14 mm fiberglass paddles or two-paddle sets; regular players should look at carbon faces and core thickness.", "Para quien empieza van bien las palas de fibra de vidrio de 12–14 mm o los sets de dos; quien ya juega con regularidad debe fijarse en el carbono y el grosor del núcleo.")}</p>{S.data_riga()}</div>
-<p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:0 0 24px">{L("<b>Nuovo al pickleball?</b> Prima di scegliere la racchetta leggi", "<b>New to pickleball?</b> Before choosing a paddle, read", "<b>¿Nuevo en el pickleball?</b> Antes de elegir la pala, lee")} <a href="{P("articoli", "regolamento-pickleball-regole-spiegate")}">{L("il regolamento del pickleball spiegato semplice", "the pickleball rules explained simply", "el reglamento del pickleball explicado fácil")}</a>: {L("servizio, regola dei due rimbalzi, kitchen e punteggio.", "serve, two-bounce rule, kitchen and scoring.", "saque, regla de los dos botes, kitchen y tanteo.")}</p>
+<div class="intro"><h1>{L("Racchette da pickleball: schede e opinioni", "Pickleball paddles: specs and reviews", "Palas de pickleball: fichas y opiniones", "Raquettes de pickleball : caractéristiques et avis")}</h1>
+<p><b>{L(f"{len(PADDLE)} racchette da pickleball (paddle) di {mtxt}, con dati tecnici, misure di laboratorio dove esistono, sintesi delle recensioni indipendenti e link per l'acquisto su Amazon.", f"{len(PADDLE)} pickleball paddles from {mtxt}, with specs, lab measurements where available, summaries of independent reviews and links to buy on Amazon.", f"{len(PADDLE)} palas de pickleball (paddle) de {mtxt}, con datos técnicos, medidas de laboratorio cuando existen, resumen de las reseñas independientes y enlaces de compra en Amazon.", f"{len(PADDLE)} raquettes de pickleball {mtxt}, avec caractéristiques, mesures de laboratoire quand elles existent, résumés d\'avis indépendants et liens pour acheter sur Amazon.")}</b> {L("Per chi inizia vanno bene le racchette in fibra di vetro da 12–14 mm o i set da due; chi gioca già con regolarità guarda al carbonio e allo spessore del nucleo.", "Beginners do well with 12–14 mm fiberglass paddles or two-paddle sets; regular players should look at carbon faces and core thickness.", "Para quien empieza van bien las palas de fibra de vidrio de 12–14 mm o los sets de dos; quien ya juega con regularidad debe fijarse en el carbono y el grosor del núcleo.", "Les débutants s\'en sortent bien avec des raquettes en fibre de verre de 12–14 mm ou des sets de deux raquettes ; les joueurs réguliers devraient regarder les tamis en carbone et l\'épaisseur du noyau.")}</p>{S.data_riga()}</div>
+<p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:0 0 24px">{L("<b>Nuovo al pickleball?</b> Prima di scegliere la racchetta leggi", "<b>New to pickleball?</b> Before choosing a paddle, read", "<b>¿Nuevo en el pickleball?</b> Antes de elegir la pala, lee", "<b>Vous débutez au pickleball ?</b> Avant de choisir une raquette, lisez")} <a href="{P("articoli", "regolamento-pickleball-regole-spiegate")}">{L("il regolamento del pickleball spiegato semplice", "the pickleball rules explained simply", "el reglamento del pickleball explicado fácil", "les règles du pickleball expliquées simplement")}</a>: {L("servizio, regola dei due rimbalzi, kitchen e punteggio.", "serve, two-bounce rule, kitchen and scoring.", "saque, regla de los dos botes, kitchen y tanteo.", "service, règle des deux rebonds, kitchen et comptage des points.")}</p>
 {form}
-<p class="conta" id="conta">{len(PADDLE)} {L("racchette", "paddles", "palas")}</p>
+<p class="conta" id="conta">{len(PADDLE)} {L("racchette", "paddles", "palas", "raquettes")}</p>
 <div class="rgrid">{cards}</div>
 <div class="prose">
-<h2>{L("Come scegliere la racchetta da pickleball", "How to choose a pickleball paddle", "Cómo elegir la pala de pickleball")}</h2>
+<h2>{L("Come scegliere la racchetta da pickleball", "How to choose a pickleball paddle", "Cómo elegir la pala de pickleball", "Comment choisir une raquette de pickleball")}</h2>
 <ul>
-<li><b>{L("Forma", "Shape", "Forma")}:</b> {L("allungata (circa 42 × 19 cm) per portata e potenza; larga o standard (circa 41 × 20 cm) per stabilità e uno sweet spot più ampio; a diamante o ibrida per un compromesso tra potenza e maneggevolezza.", "elongated (about 16.5 × 7.5 in) for reach and power; widebody or standard (about 16 × 8 in) for stability and a larger sweet spot; diamond or hybrid for a compromise between power and maneuverability.", "alargada (unos 42 × 19 cm) para alcance y potencia; ancha o estándar (unos 41 × 20 cm) para estabilidad y un punto dulce más amplio; diamante o híbrida para un compromiso entre potencia y manejabilidad.")}</li>
-<li><b>{L("Spessore", "Thickness", "Grosor")}:</b> {L("16 mm per controllo, 14 mm per reattività, 12 mm nelle racchette d'ingresso.", "16 mm for control, 14 mm for responsiveness, 12 mm on entry paddles.", "16 mm para control, 14 mm para reactividad, 12 mm en las palas de iniciación.")}</li>
-<li><b>{L("Faccia", "Face", "Cara")}:</b> {L("la fibra di vetro è più morbida ed economica; il carbonio testurizzato dà più controllo ed effetto.", "fiberglass is softer and cheaper; textured carbon gives more control and spin.", "la fibra de vidrio es más blanda y económica; el carbono texturizado da más control y efecto.")}</li>
-<li><b>{L("Manico", "Handle", "Mango")}:</b> {L("un manico lungo (circa 14 cm) aiuta chi gioca il rovescio a due mani.", "a long handle (about 5.5 in) helps two-handed backhands.", "un mango largo (unos 14 cm) ayuda a quien juega el revés a dos manos.")}</li>
+<li><b>{L("Forma", "Shape", "Forma", "Forme")}:</b> {L("allungata (circa 42 × 19 cm) per portata e potenza; larga o standard (circa 41 × 20 cm) per stabilità e uno sweet spot più ampio; a diamante o ibrida per un compromesso tra potenza e maneggevolezza.", "elongated (about 16.5 × 7.5 in) for reach and power; widebody or standard (about 16 × 8 in) for stability and a larger sweet spot; diamond or hybrid for a compromise between power and maneuverability.", "alargada (unos 42 × 19 cm) para alcance y potencia; ancha o estándar (unos 41 × 20 cm) para estabilidad y un punto dulce más amplio; diamante o híbrida para un compromiso entre potencia y manejabilidad.", "allongée (environ 16,5 × 7,5 in) pour l\'allonge et la puissance ; widebody ou standard (environ 16 × 8 in) pour la stabilité et un sweet spot plus grand ; diamant ou hybride pour un compromis entre puissance et maniabilité.")}</li>
+<li><b>{L("Spessore", "Thickness", "Grosor", "Épaisseur")}:</b> {L("16 mm per controllo, 14 mm per reattività, 12 mm nelle racchette d'ingresso.", "16 mm for control, 14 mm for responsiveness, 12 mm on entry paddles.", "16 mm para control, 14 mm para reactividad, 12 mm en las palas de iniciación.", "16 mm pour le contrôle, 14 mm pour la réactivité, 12 mm sur les raquettes d\'entrée de gamme.")}</li>
+<li><b>{L("Faccia", "Face", "Cara", "Tamis")}:</b> {L("la fibra di vetro è più morbida ed economica; il carbonio testurizzato dà più controllo ed effetto.", "fiberglass is softer and cheaper; textured carbon gives more control and spin.", "la fibra de vidrio es más blanda y económica; el carbono texturizado da más control y efecto.", "la fibre de verre est plus souple et moins chère ; le carbone texturé donne plus de contrôle et d\'effet.")}</li>
+<li><b>{L("Manico", "Handle", "Mango", "Manche")}:</b> {L("un manico lungo (circa 14 cm) aiuta chi gioca il rovescio a due mani.", "a long handle (about 5.5 in) helps two-handed backhands.", "un mango largo (unos 14 cm) ayuda a quien juega el revés a dos manos.", "un manche long (environ 5,5 in) aide les revers à deux mains.")}</li>
 </ul>
-<h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes")}</h2><div class="faq">{"".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa)}</div>
+<h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes", "Questions fréquentes")}</h2><div class="faq">{"".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa)}</div>
 </div>"""
     il = {"@context": "https://schema.org", "@type": "ItemList", "numberOfItems": len(PADDLE),
           "itemListElement": [{"@type": "ListItem", "position": i, "url": SITO + url_p(p), "name": titolo(p)} for i, p in enumerate(PADDLE, 1)]}
     faqld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
     S.scrivi(path, pagina(L(f"Racchette da pickleball {mtxt}: schede, opinioni e prezzi | PadelMetrix", f"{mtxt} pickleball paddles: specs, reviews and prices | PadelMetrix",
-                            f"Palas de pickleball {mtxt}: fichas, opiniones y precios | PadelMetrix"),
+                            f"Palas de pickleball {mtxt}: fichas, opiniones y precios | PadelMetrix", f"Raquettes de pickleball {mtxt} : caractéristiques, avis et prix | PadelMetrix"),
                           L(f"{len(PADDLE)} racchette da pickleball {mtxt}: peso, spessore, forma, dati di laboratorio e opinioni, e come scegliere quella giusta.",
                             f"{len(PADDLE)} {mtxt} pickleball paddles: weight, thickness, shape, lab data and reviews, and how to choose the right one.",
-                            f"{len(PADDLE)} palas de pickleball {mtxt}: peso, grosor, forma, datos de laboratorio y opiniones, y cómo elegir la adecuada."),
-                          path, corpo, on="pickleball", ld=[cr_ld, il, faqld], extra_js=FILTRI_JS % L("racchette", "paddles", "palas"), alt=alt), alt)
+                            f"{len(PADDLE)} palas de pickleball {mtxt}: peso, grosor, forma, datos de laboratorio y opiniones, y cómo elegir la adecuada.", f"{len(PADDLE)} raquettes de pickleball {mtxt} : poids, épaisseur, forme, données de laboratoire et avis, et comment choisir la bonne."),
+                          path, corpo, on="pickleball", ld=[cr_ld, il, faqld], extra_js=FILTRI_JS % L("racchette", "paddles", "palas", "raquettes"), alt=alt), alt)
 
 
 def main():

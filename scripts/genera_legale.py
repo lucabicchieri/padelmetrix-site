@@ -19,7 +19,7 @@ MAIL = f'<a href="mailto:{EMAIL}">{EMAIL}</a>'
 
 
 def privacy():
-    cr, ld = crumbs([S.home_crumb(), (L("Privacy", "Privacy", "Privacidad"), None)])
+    cr, ld = crumbs([S.home_crumb(), (L("Privacy", "Privacy", "Privacidad", "Confidentialité"), None)])
     agg = data_txt()
     corpo = L(f'''{cr}
 <div class="intro"><h1>Informativa sulla privacy</h1>
@@ -108,19 +108,48 @@ def privacy():
 <p>La información sobre las cookies está en la <a href="{P("cookie")}">política de cookies</a>.</p>
 <h2>Cambios</h2>
 <p>Si la web cambia (por ejemplo, si se añaden estadísticas o una newsletter), esta página se actualizará antes, y la fecha de arriba lo indicará.</p>
+</div>''', f'''{cr}
+<div class="intro"><h1>Politique de confidentialité</h1>
+<p><b>PadelMetrix ne demande pas de données personnelles, ne dépose pas ses propres cookies et n'utilise ni outil de statistiques ni publicité ciblée.</b> Cette page explique quelles données techniques sont tout de même traitées quand vous visitez le site et quels sont vos droits au titre du règlement (UE) 2016/679 (RGPD).</p>
+<p class="note">Dernière mise à jour : {agg}</p></div>
+<div class="prose">
+<h2>Responsable du traitement</h2>
+<p>Luca Bicchieri, particulier, qui gère padelmetrix.com. Contact : {MAIL}.</p>
+<h2>Quelles données sont traitées</h2>
+<ul>
+<li><b>Données de navigation.</b> Comme pour tout site web, les serveurs qui l'hébergent reçoivent automatiquement votre adresse IP, le type de navigateur, la page demandée et l'heure de la requête. C'est nécessaire pour afficher les pages, sécuriser le site et prévenir les abus. Nous ne les utilisons pas pour vous identifier ou vous profiler.</li>
+<li><b>Données que vous nous envoyez.</b> Si vous écrivez à notre adresse e-mail, nous traitons votre adresse et le contenu de votre message uniquement pour vous répondre.</li>
+</ul>
+<p>Le site n'a ni formulaire d'inscription, ni newsletter, ni commentaires, ni comptes utilisateurs.</p>
+<h2>Services tiers</h2>
+<ul>
+<li><b>Cloudflare</b> (Cloudflare, Inc.) héberge le site et assure sa sécurité, en traitant les données de navigation pour le compte du responsable. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Politique de confidentialité de Cloudflare</a>.</li>
+<li><b>Google Fonts</b> (Google Ireland Ltd / Google LLC) fournit les polices de caractères : quand vous ouvrez une page, votre navigateur les télécharge depuis les serveurs de Google, qui reçoivent votre adresse IP. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Politique de confidentialité de Google</a>.</li>
+</ul>
+<p>Cloudflare et Google peuvent aussi traiter des données aux États-Unis ; tous deux adhèrent au EU-U.S. Data Privacy Framework.</p>
+<h2>Liens vers les boutiques et liens affiliés</h2>
+<p>Les fiches des raquettes contiennent des liens vers des boutiques externes, dont Amazon. Certains sont des liens affiliés : si vous achetez, PadelMetrix peut recevoir une commission. Aucune donnée ne passe de PadelMetrix à la boutique : en cliquant vous quittez le site, et ce sont alors les politiques de confidentialité et de cookies de la boutique qui s'appliquent. En tant que Partenaire Amazon, PadelMetrix réalise un bénéfice sur les achats remplissant les conditions requises.</p>
+<h2>Base légale et conservation</h2>
+<p>Les données de navigation sont traitées sur la base de l'intérêt légitime du responsable à exploiter le site en toute sécurité (art. 6, par. 1, point f) du RGPD) et sont conservées par les prestataires pendant la durée prévue dans leurs politiques. Les e-mails sont traités pour répondre à votre demande (art. 6, par. 1, point b) et conservés le temps nécessaire pour la traiter.</p>
+<h2>Vos droits</h2>
+<p>Vous pouvez demander l'accès à vos données, leur rectification, leur effacement, la limitation du traitement et la portabilité, et vous opposer au traitement, en écrivant à {MAIL}. Vous avez aussi le droit d'introduire une réclamation auprès de l'autorité italienne de protection des données (<a href="https://www.garanteprivacy.it/" rel="noopener" target="_blank">Garante per la protezione dei dati personali</a>) ou de l'autorité de contrôle du pays où vous résidez (en France, la <a href="https://www.cnil.fr/" rel="noopener" target="_blank">CNIL</a>).</p>
+<h2>Cookies</h2>
+<p>Les informations sur les cookies se trouvent dans la <a href="{P("cookie")}">politique relative aux cookies</a>.</p>
+<h2>Modifications</h2>
+<p>Si le site évolue (par exemple avec l'ajout de statistiques ou d'une newsletter), cette page sera mise à jour au préalable, et la date en haut l'indiquera.</p>
 </div>''')
     if C.attivo():
         corpo = ga_privacy(corpo)
     path, alt = P("privacy"), ALT("privacy")
-    S.scrivi(path, pagina(L("Informativa sulla privacy | PadelMetrix", "Privacy policy | PadelMetrix", "Política de privacidad | PadelMetrix"),
+    S.scrivi(path, pagina(L("Informativa sulla privacy | PadelMetrix", "Privacy policy | PadelMetrix", "Política de privacidad | PadelMetrix", "Politique de confidentialité | PadelMetrix"),
                           L("Come PadelMetrix tratta i dati personali: nessun cookie proprio, nessun analytics; dati di navigazione, servizi di terze parti e diritti GDPR.",
                             "How PadelMetrix handles personal data: no own cookies, no analytics; browsing data, third-party services and your GDPR rights.",
-                            "Cómo trata PadelMetrix los datos personales: sin cookies propias ni analítica; datos de navegación, servicios de terceros y derechos RGPD."),
+                            "Cómo trata PadelMetrix los datos personales: sin cookies propias ni analítica; datos de navegación, servicios de terceros y derechos RGPD.", "Comment PadelMetrix traite les données personnelles : pas de cookies propres, pas de statistiques ; données de navigation, services tiers et vos droits RGPD."),
                           path, corpo, ld=[ld], alt=alt), alt)
 
 
 def cookie():
-    cr, ld = crumbs([S.home_crumb(), (L("Cookie", "Cookies", "Cookies"), None)])
+    cr, ld = crumbs([S.home_crumb(), (L("Cookie", "Cookies", "Cookies", "Cookies"), None)])
     agg = data_txt()
     corpo = L(f'''{cr}
 <div class="intro"><h1>Cookie policy</h1>
@@ -194,14 +223,38 @@ def cookie():
 <p>Puedes ver y borrar las cookies desde los ajustes del navegador, y bloquearlas todas o solo las de terceros. En esta web, bloquearlas no cambia nada en el funcionamiento de las páginas.</p>
 <h2>Contacto</h2>
 <p>Para cualquier duda: {MAIL}. Si en el futuro añadimos estadísticas o publicidad, actualizaremos esta página y pediremos el consentimiento cuando sea necesario.</p>
+</div>''', f'''{cr}
+<div class="intro"><h1>Politique relative aux cookies</h1>
+<p><b>PadelMetrix ne dépose pas ses propres cookies et n'utilise aucun cookie de statistiques, de profilage ou publicitaire.</b> C'est pourquoi le site n'affiche pas de bandeau de consentement.</p>
+<p class="note">Dernière mise à jour : {agg}</p></div>
+<div class="prose">
+<h2>Qu'est-ce qu'un cookie</h2>
+<p>Les cookies sont de petits fichiers texte qu'un site enregistre dans votre navigateur. Les cookies techniques font fonctionner le site ; les cookies de statistiques et de profilage mesurent les visites ou affichent des publicités ciblées, et nécessitent votre consentement.</p>
+<h2>Cookies utilisés par ce site</h2>
+<table class="tab"><thead><tr><th>Type</th><th>Utilisé ?</th></tr></thead><tbody>
+<tr><td>Cookies techniques propres</td><td>Non</td></tr>
+<tr><td>Cookies de statistiques</td><td>Non</td></tr>
+<tr><td>Cookies de profilage ou publicitaires</td><td>Non</td></tr>
+<tr><td>Cookies techniques de l'hébergeur (Cloudflare)</td><td>Seulement si nécessaire pour la sécurité</td></tr>
+</tbody></table>
+<p>Cloudflare, qui héberge le site, peut déposer des cookies de sécurité (par exemple <code>__cf_bm</code>) pour distinguer les vrais visiteurs des robots. Ils sont nécessaires au fonctionnement sécurisé du site et ne requièrent pas de consentement. <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" rel="noopener" target="_blank">Liste des cookies Cloudflare</a>.</p>
+<p>Le site n'utilise pas non plus d'autres formes de stockage dans le navigateur (comme le localStorage).</p>
+<h2>Polices Google</h2>
+<p>Les polices du site sont chargées depuis Google Fonts. Google Fonts ne dépose pas de cookies, mais votre navigateur contacte les serveurs de Google, qui reçoivent votre adresse IP. Détails dans la <a href="{P("privacy")}">politique de confidentialité</a>.</p>
+<h2>Sites externes</h2>
+<p>Quand vous cliquez sur un lien vers une boutique (par exemple Amazon) ou vers une autre source, vous quittez PadelMetrix : ce site peut utiliser ses propres cookies, régis par sa politique relative aux cookies. C'est ainsi que les boutiques reconnaissent les achats arrivés par des liens affiliés.</p>
+<h2>Gérer les cookies</h2>
+<p>Vous pouvez consulter et supprimer les cookies dans les paramètres de votre navigateur, et bloquer tous les cookies ou seulement ceux de tiers. Sur ce site, les bloquer ne change rien au fonctionnement des pages.</p>
+<h2>Contact</h2>
+<p>Questions : {MAIL}. Si nous ajoutons à l'avenir des statistiques ou de la publicité, nous mettrons cette page à jour et demanderons le consentement lorsque c'est requis.</p>
 </div>''')
     if C.attivo():
         corpo = ga_cookie(corpo)
     path, alt = P("cookie"), ALT("cookie")
-    S.scrivi(path, pagina(L("Cookie policy | PadelMetrix", "Cookie policy | PadelMetrix", "Política de cookies | PadelMetrix"),
+    S.scrivi(path, pagina(L("Cookie policy | PadelMetrix", "Cookie policy | PadelMetrix", "Política de cookies | PadelMetrix", "Politique relative aux cookies | PadelMetrix"),
                           L("PadelMetrix non usa cookie propri, di analisi o pubblicitari: quali cookie tecnici possono essere impostati e come gestirli.",
                             "PadelMetrix uses no own, analytics or advertising cookies: which technical cookies may be set and how to manage them.",
-                            "PadelMetrix no usa cookies propias, de análisis ni publicitarias: qué cookies técnicas pueden instalarse y cómo gestionarlas."),
+                            "PadelMetrix no usa cookies propias, de análisis ni publicitarias: qué cookies técnicas pueden instalarse y cómo gestionarlas.", "PadelMetrix n'utilise ni cookies propres, ni cookies de statistiques ou publicitaires : quels cookies techniques peuvent être déposés et comment les gérer."),
                           path, corpo, ld=[ld], alt=alt), alt)
 
 
@@ -215,14 +268,17 @@ GA_PRIV = {
     "es": ("no usa cookies propias ni herramientas de análisis ni publicidad personalizada.</b>",
            "no usa publicidad personalizada y usa Google Analytics solo si lo aceptas.</b>",
            "<li><b>Google Analytics 4</b> (Google Ireland Ltd / Google LLC), gestionado mediante Google Tag Manager: <b>solo si aceptas las cookies</b> en el banner, recoge de forma estadística las páginas visitadas, la procedencia de las visitas, el tipo de dispositivo y la ubicación aproximada. Google declara que GA4 no registra ni almacena las direcciones IP. Usamos estos datos solo para saber qué contenidos son útiles; no los usamos para publicidad ni los cruzamos con otros datos. Base jurídica: tu consentimiento (art. 6.1.a RGPD), que puedes retirar en cualquier momento desde el enlace «Preferencias de cookies» al pie de cada página. Conservación de los datos en Analytics: 14 meses.</li>"),
+    "fr": ("ne dépose pas ses propres cookies et n'utilise ni outil de statistiques ni publicité ciblée.</b>",
+           "n'utilise pas de publicité ciblée et n'utilise Google Analytics que si vous l'acceptez.</b>",
+           "<li><b>Google Analytics 4</b> (Google Ireland Ltd / Google LLC), géré via Google Tag Manager : <b>uniquement si vous acceptez les cookies</b> dans le bandeau, il collecte sous forme statistique les pages visitées, la provenance des visites, le type d'appareil et la localisation approximative. Google déclare que GA4 n'enregistre ni ne conserve les adresses IP. Nous utilisons ces données uniquement pour comprendre quels contenus sont utiles ; nous ne les utilisons pas pour la publicité et ne les croisons pas avec d'autres données. Base légale : votre consentement (art. 6, par. 1, point a) du RGPD), que vous pouvez retirer à tout moment via le lien « Préférences cookies » en bas de chaque page. Conservation des données dans Analytics : 14 mois.</li>"),
 }
 
 
 def ga_privacy(corpo):
     vecchio, nuovo, voce = GA_PRIV[S.lang()]
     corpo = corpo.replace(vecchio, nuovo)
-    corpo = corpo.replace(L("non usa cookie propri, ", "", "no usa cookies propias, "), "")
-    return corpo.replace("</ul>\n<p>Cloudflare", voce + "</ul>\n<p>Cloudflare", 1).replace("</ul>\n<p>Cloudflare and Google", voce + "</ul>\n<p>Cloudflare and Google", 1).replace("</ul>\n<p>Cloudflare y Google", voce + "</ul>\n<p>Cloudflare y Google", 1)
+    corpo = corpo.replace(L("non usa cookie propri, ", "", "no usa cookies propias, ", ""), "")
+    return corpo.replace("</ul>\n<p>Cloudflare", voce + "</ul>\n<p>Cloudflare", 1).replace("</ul>\n<p>Cloudflare and Google", voce + "</ul>\n<p>Cloudflare and Google", 1).replace("</ul>\n<p>Cloudflare y Google", voce + "</ul>\n<p>Cloudflare y Google", 1).replace("</ul>\n<p>Cloudflare et Google", voce + "</ul>\n<p>Cloudflare et Google", 1)
 
 
 GA_COOKIE = {
@@ -250,6 +306,14 @@ GA_COOKIE = {
            "<h2>Google Analytics y consentimiento</h2><p>Google Analytics 4, cargado mediante Google Tag Manager, solo se activa después de que hagas clic en «Aceptar» en el banner. Si rechazas, Tag Manager ni siquiera se carga. Tu elección se guarda en el navegador (una entrada técnica, <code>pm_consenso</code>, sin datos personales) y puedes cambiarla en cualquier momento desde el enlace «Preferencias de cookies» al pie de la página. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Cómo usa Google las cookies</a>.</p>\n<h2>Tipografías de Google</h2>",
            "<p>La web tampoco usa otras formas de almacenamiento en el navegador (como localStorage).</p>", "",
            "Si en el futuro añadimos estadísticas o publicidad", "Si en el futuro añadimos publicidad"),
+    "fr": ("ne dépose pas ses propres cookies et n'utilise aucun cookie de statistiques, de profilage ou publicitaire.</b> C'est pourquoi le site n'affiche pas de bandeau de consentement.",
+           "n'utilise des cookies de statistiques (Google Analytics) que si vous les acceptez dans le bandeau, et n'utilise jamais de cookies de profilage ou publicitaires.</b>",
+           "<tr><td>Cookies de statistiques</td><td>Non</td></tr>",
+           "<tr><td>Cookies de statistiques (Google Analytics : <code>_ga</code>, <code>_ga_*</code>)</td><td>Oui, uniquement avec votre consentement ; durée jusqu'à 2 ans</td></tr>",
+           "<h2>Polices Google</h2>",
+           "<h2>Google Analytics et consentement</h2><p>Google Analytics 4, chargé via Google Tag Manager, ne s'active qu'après que vous avez cliqué sur « Accepter » dans le bandeau. Si vous refusez, Tag Manager n'est même pas chargé. Votre choix est enregistré dans le navigateur (une entrée technique, <code>pm_consenso</code>, sans données personnelles) et vous pouvez le modifier à tout moment via le lien « Préférences cookies » en bas de la page. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Comment Google utilise les cookies</a>.</p>\n<h2>Polices Google</h2>",
+           "<p>Le site n'utilise pas non plus d'autres formes de stockage dans le navigateur (comme le localStorage).</p>", "",
+           "Si nous ajoutons à l'avenir des statistiques ou de la publicité", "Si nous ajoutons à l'avenir de la publicité"),
 }
 
 
@@ -262,7 +326,7 @@ def ga_cookie(corpo):
 
 
 def contatti():
-    cr, ld = crumbs([S.home_crumb(), (L("Contatti", "Contact", "Contacto"), None)])
+    cr, ld = crumbs([S.home_crumb(), (L("Contatti", "Contact", "Contacto", "Contact"), None)])
     corpo = L(f'''{cr}
 <div class="intro"><h1>Contatti</h1>
 <p><b>Per qualsiasi richiesta scrivi a {MAIL}.</b> Rispondo personalmente, di solito entro pochi giorni.</p></div>
@@ -326,15 +390,36 @@ def contatti():
 <p>En Instagram y Facebook publicamos comparativas y datos de palas en formato carrusel: {S.social_links()}.</p>
 <h2>Privacidad</h2>
 <p>Uso tu dirección y el contenido del mensaje solo para responderte. Detalles en la <a href="{P("privacy")}">política de privacidad</a>.</p>
+</div>''', f'''{cr}
+<div class="intro"><h1>Contact</h1>
+<p><b>Pour toute demande, écrivez à {MAIL}.</b> Je réponds personnellement, en général sous quelques jours.</p></div>
+<div class="prose">
+<h2>Pour les joueurs</h2>
+<ul>
+<li><b>Vous avez trouvé une donnée erronée ou manquante ?</b> Indiquez-moi la raquette et, si possible, la source (site du fabricant, fiche d'une boutique). Je corrigerai la fiche en citant la source.</li>
+<li><b>Vous cherchez une raquette qui n'est pas ici ?</b> Envoyez-moi marque, modèle et année : je l'ajouterai dès que je trouverai des données vérifiables.</li>
+</ul>
+<h2>Pour les boutiques et les marques</h2>
+<p>PadelMetrix compare les raquettes à partir de données déclarées et de sources citées. Si vous gérez une boutique de padel ou une marque, vous pouvez m'écrire au sujet de :</p>
+<ul>
+<li><b>programmes d'affiliation</b> : ajouter votre boutique à celles indiquées sur les fiches des raquettes, à côté d'Amazon ;</li>
+<li><b>fiches techniques et données officielles</b> de vos modèles, pour compléter ce qui est aujourd'hui « non communiqué » ;</li>
+<li><b>nouvelles collections</b>, pour qu'elles soient ajoutées à la base dès leur sortie.</li>
+</ul>
+<p>Les règles sont les mêmes pour tous : comparatifs, notes et classements ne s'achètent pas et ne dépendent pas des accords d'affiliation. Les liens affiliés sont toujours signalés comme tels. La méthode est expliquée sur la page <a href="{P("chi-siamo")}">À propos et méthode</a>.</p>
+<h2>Suivez-nous</h2>
+<p>Sur Instagram et Facebook, nous publions des comparatifs et des données sur les raquettes sous forme de carrousels : {S.social_links()}.</p>
+<h2>Confidentialité</h2>
+<p>J'utilise votre adresse et le contenu de votre message uniquement pour vous répondre. Détails dans la <a href="{P("privacy")}">politique de confidentialité</a>.</p>
 </div>''')
-    org = {"@context": "https://schema.org", "@type": "ContactPage", "name": L("Contatti", "Contact", "Contacto"), "url": S.SITO + P("contatti"),
+    org = {"@context": "https://schema.org", "@type": "ContactPage", "name": L("Contatti", "Contact", "Contacto", "Contact"), "url": S.SITO + P("contatti"),
            "mainEntity": {"@type": "Organization", "name": "PadelMetrix", "url": S.SITO, "email": EMAIL,
-                          "sameAs": [u for _, u in S.SOCIAL], "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "customer support", "availableLanguage": ["it", "en", "es"]}}}
+                          "sameAs": [u for _, u in S.SOCIAL], "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "customer support", "availableLanguage": ["it", "en", "es", "fr"]}}}
     path, alt = P("contatti"), ALT("contatti")
-    S.scrivi(path, pagina(L("Contatti | PadelMetrix", "Contact | PadelMetrix", "Contacto | PadelMetrix"),
+    S.scrivi(path, pagina(L("Contatti | PadelMetrix", "Contact | PadelMetrix", "Contacto | PadelMetrix", "Contact | PadelMetrix"),
                           L("Scrivi a PadelMetrix: segnalazioni sui dati delle racchette, richieste di nuovi modelli, affiliazioni per negozi e schede tecniche per i marchi.",
                             "Write to PadelMetrix: corrections to racket data, requests for new models, affiliate partnerships for shops and spec sheets from brands.",
-                            "Escribe a PadelMetrix: correcciones de datos de palas, peticiones de nuevos modelos, afiliaciones para tiendas y fichas técnicas para marcas."),
+                            "Escribe a PadelMetrix: correcciones de datos de palas, peticiones de nuevos modelos, afiliaciones para tiendas y fichas técnicas para marcas.", "Écrire à PadelMetrix : corrections des données des raquettes, demandes de nouveaux modèles, partenariats d'affiliation pour les boutiques et fiches techniques des marques."),
                           path, corpo, ld=[ld, org], alt=alt), alt)
 
 

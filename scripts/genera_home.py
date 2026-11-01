@@ -135,6 +135,41 @@ T = {
         "forme": {"diamante": "Diamante", "rotonda": "Redonda", "goccia": "Lágrima"},
         "lingua": "Idioma",
     },
+    "fr": {
+        "html_lang": "fr", "title": "PadelMetrix · Le guide indépendant du matériel de padel",
+        "desc": "Fiches techniques, comparaisons et conseils sur les raquettes de padel et de pickleball et le matériel pour enfants. Trouvez la raquette adaptée à votre jeu.",
+        "claim": "Le padel, analysé.",
+        "nav": ["Raquettes", "Pickleball", "Enfants", "Comparer", "Guides", "Articles"],
+        "h1": "Le guide indépendant pour choisir son matériel de padel.",
+        "intro": "PadelMetrix réunit au même endroit fiches techniques, comparaisons et conseils sur les raquettes de padel et de pickleball et le matériel pour enfants. Nous vous aidons à comprendre ce qui vous convient ; ensuite, vous achetez où vous voulez.",
+        "cta1": "Trouvez votre raquette en 2 minutes", "cta2": "Explorer les raquettes",
+        "cerca_label": "Rechercher un modèle ou une marque", "cerca_ph": "Ex. Metalbone, AT10, Viper", "cerca_btn": "Rechercher",
+        "conta": "{n} raquettes de {m} marques dans la base, mises à jour chaque semaine",
+        "sez_titolo": "Ce que vous trouvez sur PadelMetrix", "sez_sub": "Trois rubriques, pour tout ce qu'il faut sur le terrain.",
+        "sezioni": [
+            ("racchette", "Raquettes", "Des fiches avec toutes les données techniques, la synthèse des avis et les modèles similaires. Filtrez par niveau, forme, poids et marque.", "Voir les raquettes"),
+            ("pickleball", "Pickleball", "Les raquettes de pickleball HEAD, JOOLA, Selkirk, Six Zero et VICLION avec données techniques, mesures de laboratoire et avis, plus un guide de choix rapide.", "Voir le pickleball"),
+            ("bambini", "Enfants", "Des raquettes junior classées par âge, avec un guide pour choisir la bonne taille selon l'âge et la taille.", "Voir la rubrique enfants"),
+        ],
+        "tool": "Outil",
+        "t1": ("Trouve ta raquette", "7 questions sur le niveau, le style et le budget : nous vous proposons les 3 raquettes les plus adaptées.", "Faire le test"),
+        "t2": ("Comparer des raquettes", "Mettez jusqu'à 3 modèles côte à côte et voyez tout de suite ce qui les distingue.", "Ouvrir le comparateur"),
+        "come_titolo": "Notre méthode",
+        "come": [
+            ("Données vérifiées", "Les caractéristiques techniques viennent des fabricants et de sources spécialisées, organisées de façon homogène pour vraiment comparer."),
+            ("Avis en synthèse", "Nous lisons les tests publiés en ligne et en résumons qualités et limites avec nos mots, toujours avec le lien vers la source."),
+            ("Transparence", "Nous ne vendons rien. Certains liens mènent à des boutiques partenaires : si vous achetez, nous pouvons toucher une petite commission, sans frais pour vous."),
+        ],
+        "evid_titolo": "Raquettes à la une", "evid_tutte": "Voir toutes les raquettes",
+        "evid_nota": "",
+        "marche_titolo": "Les marques de la base",
+        "racchette_n": "{n} raquettes", "racchetta_1": "1 raquette",
+        "footer_sez": "Rubriques", "footer_str": "Outils", "footer_info": "PadelMetrix",
+        "chi": "À propos", "contatti": "Contact", "privacy": "Confidentialité", "cookie": "Cookies",
+        "disclosure": "En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Certains liens vers d'autres boutiques sont des liens d'affiliation.",
+        "forme": {"diamante": "Diamant", "rotonda": "Ronde", "goccia": "Goutte d'eau"},
+        "lingua": "Langue",
+    },
 }
 
 CSS = """
@@ -217,16 +252,16 @@ SHOE = '<svg viewBox="0 0 240 140" width="190" aria-hidden="true"><path d="M20 9
 
 def guide_box():
     g = lambda x: P("guide", x)  # noqa: E731
-    voci = [(g("racchetta-padel-principianti"), L("Principianti", "Beginners", "Principiantes"), L("la prima racchetta", "your first racket", "la primera pala")),
-            (g("racchetta-padel-epicondilite"), L("Gomito", "Tennis elbow", "Codo"), L("racchette confortevoli", "comfortable rackets", "palas cómodas")),
-            (g("forme-racchetta-padel"), L("Forme", "Shapes", "Formas"), L("rotonda, goccia o diamante", "round, teardrop or diamond", "redonda, lágrima o diamante")),
-            (P("bambini"), L("Bambini", "Kids", "Niños"), L("misure per età", "sizes by age", "medidas por edad")),
-            (g("racchette-padel-economiche"), L("Economiche", "Cheap", "Baratas"), L("fino a 130 €", "up to €130", "hasta 130 €")),
-            (P("confronta"), L("Confronti", "Comparisons", "Comparativas"), L("modello contro modello", "model versus model", "modelo contra modelo")),
-            (g("racchette-giocatori-professionisti"), L("Professionisti", "Pro players", "Profesionales"), L("con che racchetta giocano", "which rackets they use", "con qué pala juegan")),
-            (P("report", "racchette-padel-2026-2027-in-numeri"), L("Report 2026–2027", "2026–2027 report", "Informe 2026–2027"), L("il mercato in numeri", "the market in numbers", "el mercado en cifras")),
-            (P("dati"), L("Dati aperti", "Open data", "Datos abiertos"), L("scarica il database", "download the database", "descarga la base de datos"))]
-    return (f'<div class="head" style="margin-top:40px"><h2>{L("Guide alla scelta", "Buying guides", "Guías de compra")}</h2><a href="{P("guide")}"><b>{L("Tutte le guide", "All guides", "Todas las guías")} →</b></a></div>\n'
+    voci = [(g("racchetta-padel-principianti"), L("Principianti", "Beginners", "Principiantes", "Débutants"), L("la prima racchetta", "your first racket", "la primera pala", "votre première raquette")),
+            (g("racchetta-padel-epicondilite"), L("Gomito", "Tennis elbow", "Codo", "Tennis elbow"), L("racchette confortevoli", "comfortable rackets", "palas cómodas", "raquettes confortables")),
+            (g("forme-racchetta-padel"), L("Forme", "Shapes", "Formas", "Formes"), L("rotonda, goccia o diamante", "round, teardrop or diamond", "redonda, lágrima o diamante", "ronde, goutte d'eau ou diamant")),
+            (P("bambini"), L("Bambini", "Kids", "Niños", "Enfants"), L("misure per età", "sizes by age", "medidas por edad", "tailles selon l'âge")),
+            (g("racchette-padel-economiche"), L("Economiche", "Cheap", "Baratas", "Pas chères"), L("fino a 130 €", "up to €130", "hasta 130 €", "jusqu'à 130 €")),
+            (P("confronta"), L("Confronti", "Comparisons", "Comparativas", "Comparaisons"), L("modello contro modello", "model versus model", "modelo contra modelo", "modèle contre modèle")),
+            (g("racchette-giocatori-professionisti"), L("Professionisti", "Pro players", "Profesionales", "Joueurs pro"), L("con che racchetta giocano", "which rackets they use", "con qué pala juegan", "leurs raquettes")),
+            (P("report", "racchette-padel-2026-2027-in-numeri"), L("Report 2026–2027", "2026–2027 report", "Informe 2026–2027", "Rapport 2026–2027"), L("il mercato in numeri", "the market in numbers", "el mercado en cifras", "le marché en chiffres")),
+            (P("dati"), L("Dati aperti", "Open data", "Datos abiertos", "Données ouvertes"), L("scarica il database", "download the database", "descarga la base de datos", "télécharger la base"))]
+    return (f'<div class="head" style="margin-top:40px"><h2>{L("Guide alla scelta", "Buying guides", "Guías de compra", "Guides d'achat")}</h2><a href="{P("guide")}"><b>{L("Tutte le guide", "All guides", "Todas las guías", "Tous les guides")} →</b></a></div>\n'
             + '<div class="marche">' + "".join(f'<a href="{u}"><b>{b}</b><span>{sp}</span></a>' for u, b, sp in voci) + "</div>")
 
 
@@ -240,7 +275,7 @@ def articoli_box():
     voci = "".join(f'<a href="{a["url"][l]}"><b>{html.escape(a["titolo"][l])}</b><span>{html.escape(a["desc"][l])}</span></a>' for a in arts if l in a["url"])
     if not voci:
         return ""
-    return (f'<div class="head" style="margin-top:40px"><h2>{L("Ultimi articoli", "Latest articles", "Últimos artículos")}</h2><a href="{P("articoli")}"><b>{L("Tutti gli articoli", "All articles", "Todos los artículos")} →</b></a></div>\n'
+    return (f'<div class="head" style="margin-top:40px"><h2>{L("Ultimi articoli", "Latest articles", "Últimos artículos", "Derniers articles")}</h2><a href="{P("articoli")}"><b>{L("Tutti gli articoli", "All articles", "Todos los artículos", "Tous les articles")} →</b></a></div>\n'
             f'<div class="marche">{voci}</div>')
 
 
@@ -375,7 +410,7 @@ def pagina(lang, db):
 <div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{P("pickleball")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
 <div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a><a href="{P("articoli")}">{e(t["nav"][5])}</a></div>
 <div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "contatti")}">{e(t["contatti"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a>{C.link_footer(lang)}</div>
-<div><b>{L("Seguici", "Follow us", "Síguenos")}</b>{S.social_links(sep="")}</div>
+<div><b>{L("Seguici", "Follow us", "Síguenos", "Suivez-nous")}</b>{S.social_links(sep="")}</div>
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
 </div></footer>
@@ -397,13 +432,14 @@ ROOT_INDEX = """<!doctype html>
 <link rel="alternate" hreflang="it" href="https://www.padelmetrix.com/it/">
 <link rel="alternate" hreflang="en" href="https://www.padelmetrix.com/en/">
 <link rel="alternate" hreflang="es" href="https://www.padelmetrix.com/es/">
+<link rel="alternate" hreflang="fr" href="https://www.padelmetrix.com/fr/">
 <link rel="alternate" hreflang="x-default" href="https://www.padelmetrix.com/en/">
 <script>
-(function(){var l=(navigator.language||"it").slice(0,2).toLowerCase();var m={it:"/it/",en:"/en/",es:"/es/"};location.replace(m[l]||"/en/");})();
+(function(){var l=(navigator.language||"it").slice(0,2).toLowerCase();var m={it:"/it/",en:"/en/",es:"/es/",fr:"/fr/"};location.replace(m[l]||"/en/");})();
 </script>
 </head>
 <body style="font-family:system-ui,sans-serif;padding:40px">
-<p><a href="/it/">Italiano</a> · <a href="/en/">English</a> · <a href="/es/">Español</a></p>
+<p><a href="/it/">Italiano</a> · <a href="/en/">English</a> · <a href="/es/">Español</a> · <a href="/fr/">Français</a></p>
 </body>
 </html>
 """
@@ -418,7 +454,7 @@ def main():
     for lang in LINGUE:
         dest = ROOT / lang / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_text(pagina(lang, db), encoding="utf-8")
+        dest.write_text(S.tipo_fr(pagina(lang, db)) if lang == "fr" else pagina(lang, db), encoding="utf-8")
         print("ok", f"/{lang}/")
     (ROOT / "index.html").write_text(ROOT_INDEX, encoding="utf-8")
     (ROOT / "_redirects").write_text(REDIRECTS, encoding="utf-8")

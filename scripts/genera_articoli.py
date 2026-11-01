@@ -19,8 +19,8 @@ OGGI_ISO = "2026-10-30"
 DATE_ART = {"regolamento-padel-regole-spiegate": "2026-11-01", "regolamento-pickleball-regole-spiegate": "2026-11-01", "racchette-padel-2027-vs-2026-cosa-cambia": "2026-10-31", "migliori-racchette-padel-2026-classifiche-indipendenti": "2026-10-31"}
 
 
-def T(it, en, es):
-    return {"it": it, "en": en, "es": es}
+def T(it, en, es, fr=None):
+    return {"it": it, "en": en, "es": es, "fr": fr if fr is not None else en}
 
 
 def g(d):
@@ -44,18 +44,18 @@ def articolo_ld(titolo, desc, path, data=OGGI_ISO):
 
 def scrivi_articolo(slug, title, desc, h1, crumb, corpo_html, items=None, ld_extra=()):
     path, alt = P("articoli", slug), ALT("articoli", slug)
-    cr, ld = crumbs([H(), (L("Articoli", "Articles", "Artículos"), P("articoli")), (crumb, None)])
-    lista = (f'<section class="block"><h2>{L("Le racchette citate", "Rackets mentioned", "Las palas citadas")} ({len(items)})</h2>{griglia(ordina(items))}</section>'
+    cr, ld = crumbs([H(), (L("Articoli", "Articles", "Artículos", "Articles"), P("articoli")), (crumb, None)])
+    lista = (f'<section class="block"><h2>{L("Le racchette citate", "Rackets mentioned", "Las palas citadas", "Raquettes citées")} ({len(items)})</h2>{griglia(ordina(items))}</section>'
              if items else "")
     corpo = f'''{cr}
-<div class="intro"><div class="eyebrow">{L("Articolo", "Article", "Artículo")}</div><h1>{e(h1)}</h1><p class="note">{L("Pubblicato il ", "Published on ", "Publicado el ")}{S.data_txt(DATE_ART.get(slug, OGGI_ISO))} · {L("a cura di", "by", "por")} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p></div>
-<div class="prose">{corpo_html}<p class="note" style="margin:28px 0 56px">{L("Ti è stato utile? Seguici per i prossimi confronti:", "Found this useful? Follow us for the next comparisons:", "¿Te ha sido útil? Síguenos para las próximas comparativas:")} {S.social_links()}</p></div>
+<div class="intro"><div class="eyebrow">{L("Articolo", "Article", "Artículo", "Article")}</div><h1>{e(h1)}</h1><p class="note">{L("Pubblicato il ", "Published on ", "Publicado el ", "Publié le ")}{S.data_txt(DATE_ART.get(slug, OGGI_ISO))} · {L("a cura di", "by", "por", "par")} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p></div>
+<div class="prose">{corpo_html}<p class="note" style="margin:28px 0 56px">{L("Ti è stato utile? Seguici per i prossimi confronti:", "Found this useful? Follow us for the next comparisons:", "¿Te ha sido útil? Síguenos para las próximas comparativas:", "Cet article vous a été utile ? Suivez-nous pour les prochains comparatifs :")} {S.social_links()}</p></div>
 {lista}'''
     S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, articolo_ld(h1, desc, path, DATE_ART.get(slug, OGGI_ISO)), *ld_extra], alt=alt), alt)
 
 
 def faq(qa):
-    htm = f'<h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes")}</h2><div class="faq">' + "".join(
+    htm = f'<h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes", "Questions fréquentes")}</h2><div class="faq">' + "".join(
         f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa) + "</div>"
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
@@ -82,14 +82,14 @@ def novita_2027(db):
         old = vecchi.get((n["marca"], n["modello"]))
         rif = ""
         if old and tuple(sorted((n["slug"], old["slug"]))) in pairs:
-            rif = f'<a href="{confronto_url(old["slug"], n["slug"])}">{L("vs 2026", "vs 2026", "vs 2026")}</a>'
-        celle = [f'<a href="{url_r(n)}">{e(n["nome"])}</a>', e((S.tr(n["giocatore"]) if "ispirata" in n["giocatore"] else n["giocatore"]) if n["giocatore"] else "—"), e(FORMA(n["forma"]) or L("n.d.", "n/a", "n.d.")),
-                 e(n["peso"] or L("n.d.", "n/a", "n.d.")), e(LIVN(n["livello"]) or L("n.d.", "n/a", "n.d.")),
-                 euro(n["prezzo"]) if n["prezzo"] else L("n.d.", "n/a", "n.d."), rif]
+            rif = f'<a href="{confronto_url(old["slug"], n["slug"])}">{L("vs 2026", "vs 2026", "vs 2026", "vs 2026")}</a>'
+        celle = [f'<a href="{url_r(n)}">{e(n["nome"])}</a>', e((S.tr(n["giocatore"]) if "ispirata" in n["giocatore"] else n["giocatore"]) if n["giocatore"] else "—"), e(FORMA(n["forma"]) or L("n.d.", "n/a", "n.d.", "n.c.")),
+                 e(n["peso"] or L("n.d.", "n/a", "n.d.", "n.c.")), e(LIVN(n["livello"]) or L("n.d.", "n/a", "n.d.", "n.c.")),
+                 euro(n["prezzo"]) if n["prezzo"] else L("n.d.", "n/a", "n.d.", "n.c."), rif]
         return "<tr>" + "".join(f"<td>{c}</td>" for c in celle) + "</tr>"
 
-    th = [L("Modello", "Model", "Modelo"), L("Giocatore", "Player", "Jugador"), L("Forma", "Shape", "Forma"), L("Peso", "Weight", "Peso"),
-          L("Livello", "Level", "Nivel"), L("Listino", "List price", "Precio"), L("Confronto", "Comparison", "Comparativa")]
+    th = [L("Modello", "Model", "Modelo", "Modèle"), L("Giocatore", "Player", "Jugador", "Joueur"), L("Forma", "Shape", "Forma", "Forme"), L("Peso", "Weight", "Peso", "Poids"),
+          L("Livello", "Level", "Nivel", "Niveau"), L("Listino", "List price", "Precio", "Prix catalogue"), L("Confronto", "Comparison", "Comparativa", "Comparatif")]
     sezioni = []
     indice = []
     for m in marche:
@@ -105,37 +105,37 @@ def novita_2027(db):
                     fonti.append(u)
         frasi = [L(f"<b>{len(items)} modelli 2027</b> nel nostro database",
                    f"<b>{len(items)} 2027 models</b> in our database",
-                   f"<b>{len(items)} modelos 2027</b> en nuestra base de datos")]
+                   f"<b>{len(items)} modelos 2027</b> en nuestra base de datos", f"<b>{len(items)} modèles 2027</b> dans notre base")]
         if pz:
             frasi.append(L(f"listino da {euro(min(pz))} a {euro(max(pz))}", f"list prices from {euro(min(pz))} to {euro(max(pz))}",
-                           f"precio de lista de {euro(min(pz))} a {euro(max(pz))}"))
+                           f"precio de lista de {euro(min(pz))} a {euro(max(pz))}", f"prix catalogue de {euro(min(pz))} à {euro(max(pz))}"))
         if fm:
             fm_txt = ", ".join(f"{FORMA(k).lower()} {v}" for k, v in fm.most_common())
-            frasi.append(L(f"forme: {fm_txt}", f"shapes: {fm_txt}", f"formas: {fm_txt}"))
+            frasi.append(L(f"forme: {fm_txt}", f"shapes: {fm_txt}", f"formas: {fm_txt}", f"formes : {fm_txt}"))
         if rinnovi:
-            frasi.append(L(f"{rinnovi} sono il rinnovo di un modello 2026", f"{rinnovi} replace a 2026 model", f"{rinnovi} renuevan un modelo 2026"))
+            frasi.append(L(f"{rinnovi} sono il rinnovo di un modello 2026", f"{rinnovi} replace a 2026 model", f"{rinnovi} renuevan un modelo 2026", f"{rinnovi} remplacent un modèle 2026"))
         gtxt = ""
         if gioc:
-            gtxt = L(f" Modelli firmati: {', '.join(gioc)}.", f" Signature models: {', '.join(gioc)}.", f" Modelos firmados: {', '.join(gioc)}.")
+            gtxt = L(f" Modelli firmati: {', '.join(gioc)}.", f" Signature models: {', '.join(gioc)}.", f" Modelos firmados: {', '.join(gioc)}.", f" Modèles signature : {', '.join(gioc)}.")
         ancora = S.slugify(m)
         indice.append(f'<a href="#{ancora}">{e(m)} ({len(items)})</a>')
         sezioni.append(f'''<h2 id="{ancora}">{e(m)}</h2>
 <p>{"; ".join(frasi)}.{gtxt}</p>
 <div class="tablebox"><table class="tab"><thead><tr>{"".join(f"<th>{t}</th>" for t in th)}</tr></thead><tbody>{"".join(riga(n) for n in items)}</tbody></table></div>
-<p class="note">{L("Fonti dei dati", "Data sources", "Fuentes de los datos")}: {", ".join(fonte(u) for u in fonti[:6])}{" …" if len(fonti) > 6 else ""}.</p>''')
+<p class="note">{L("Fonti dei dati", "Data sources", "Fuentes de los datos", "Sources des données")}: {", ".join(fonte(u) for u in fonti[:6])}{" …" if len(fonti) > 6 else ""}.</p>''')
 
-    qa = [(L("Quali marchi hanno già presentato le racchette 2027?", "Which brands have already launched their 2027 rackets?", "¿Qué marcas ya han presentado sus palas 2027?"),
+    qa = [(L("Quali marchi hanno già presentato le racchette 2027?", "Which brands have already launched their 2027 rackets?", "¿Qué marcas ya han presentado sus palas 2027?", "Quelles marques ont déjà lancé leurs raquettes 2027 ?"),
            L(f"Nel database PadelMetrix al {S.data_txt(OGGI_ISO)} ci sono modelli 2027 di {', '.join(marche)}. Gli altri marchi verranno aggiunti appena pubblicano le collezioni con dati verificabili.",
              f"As of {S.data_txt(OGGI_ISO)}, the PadelMetrix database includes 2027 models from {', '.join(marche)}. Other brands will be added as soon as they publish their collections with verifiable data.",
-             f"A {S.data_txt(OGGI_ISO)}, la base de datos de PadelMetrix incluye modelos 2027 de {', '.join(marche)}. Las demás marcas se añadirán en cuanto publiquen sus colecciones con datos verificables.")),
-          (L("Quanto costano le racchette da padel 2027?", "How much do 2027 padel rackets cost?", "¿Cuánto cuestan las palas de pádel 2027?"),
+             f"A {S.data_txt(OGGI_ISO)}, la base de datos de PadelMetrix incluye modelos 2027 de {', '.join(marche)}. Las demás marcas se añadirán en cuanto publiquen sus colecciones con datos verificables.", f"Au {S.data_txt(OGGI_ISO)}, la base PadelMetrix comprend des modèles 2027 de {', '.join(marche)}. Les autres marques seront ajoutées dès qu'elles publieront leurs collections avec des données vérifiables.")),
+          (L("Quanto costano le racchette da padel 2027?", "How much do 2027 padel rackets cost?", "¿Cuánto cuestan las palas de pádel 2027?", "Combien coûtent les raquettes de padel 2027 ?"),
            L(f"Tra i modelli con prezzo dichiarato il listino va da {euro(min(prezzi))} a {euro(max(prezzi))}. I prezzi reali nei negozi cambiano spesso e i modelli 2026 si trovano scontati.",
              f"Among models with a declared price, list prices range from {euro(min(prezzi))} to {euro(max(prezzi))}. Real shop prices change often and 2026 models can be found discounted.",
-             f"Entre los modelos con precio declarado, el precio de lista va de {euro(min(prezzi))} a {euro(max(prezzi))}. Los precios reales cambian a menudo y los modelos 2026 se encuentran rebajados.")) if prezzi else None,
-          (L("Conviene comprare il modello 2027 o il 2026 scontato?", "Should I buy the 2027 model or the discounted 2026?", "¿Conviene comprar el modelo 2027 o el 2026 rebajado?"),
+             f"Entre los modelos con precio declarado, el precio de lista va de {euro(min(prezzi))} a {euro(max(prezzi))}. Los precios reales cambian a menudo y los modelos 2026 se encuentran rebajados.", f"Parmi les modèles au prix déclaré, les prix catalogue vont de {euro(min(prezzi))} à {euro(max(prezzi))}. Les prix réels en boutique changent souvent et les modèles 2026 se trouvent en promotion.")) if prezzi else None,
+          (L("Conviene comprare il modello 2027 o il 2026 scontato?", "Should I buy the 2027 model or the discounted 2026?", "¿Conviene comprar el modelo 2027 o el 2026 rebajado?", "Vaut-il mieux acheter le modèle 2027 ou le 2026 en promotion ?"),
            L("Dipende da quanto cambia davvero: in molti casi le schede tecniche sono quasi uguali e il 2026 costa meno. Per ogni rinnovo trovi il link al confronto tra le due versioni.",
              "It depends on how much really changes: in many cases the spec sheets are almost identical and the 2026 costs less. For each update there is a link to the comparison between the two versions.",
-             "Depende de cuánto cambie realmente: en muchos casos las fichas técnicas son casi iguales y el 2026 cuesta menos. Para cada renovación tienes el enlace a la comparativa entre las dos versiones."))]
+             "Depende de cuánto cambie realmente: en muchos casos las fichas técnicas son casi iguales y el 2026 cuesta menos. Para cada renovación tienes el enlace a la comparativa entre las dos versiones.", "Cela dépend de ce qui change vraiment : dans beaucoup de cas les fiches techniques sont presque identiques et le 2026 coûte moins cher. Pour chaque mise à jour, un lien mène au comparatif entre les deux versions."))]
     qa = [x for x in qa if x]
     faq_htm, faq_ld = faq(qa)
 
@@ -148,20 +148,22 @@ def novita_2027(db):
         + "Below are the new models brand by brand, with the data declared by manufacturers and retailers and a link to the comparison with the 2026 model where one exists.</p>",
         f"<p><b>Las colecciones 2027 ya están en las tiendas: la base de datos de PadelMetrix ya incluye {len(nuove)} palas 2027 de {len(marche)} marcas.</b> "
         + (f"La forma más común es {FORMA(forma_top).lower()} ({forma_n} modelos) y los precios de lista van de {euro(min(prezzi))} a {euro(max(prezzi))}. " if prezzi and forma_top else "")
-        + "Abajo tienes las novedades marca por marca, con los datos declarados por fabricantes y tiendas y el enlace a la comparativa con el modelo 2026 cuando existe.</p>")
+        + "Abajo tienes las novedades marca por marca, con los datos declarados por fabricantes y tiendas y el enlace a la comparativa con el modelo 2026 cuando existe.</p>", f"<p><b>Les collections 2027 sont arrivées en boutique : la base PadelMetrix recense déjà {len(nuove)} raquettes 2027 de {len(marche)} marques.</b> "
+        + (f"La forme la plus répandue est la forme {FORMA(forma_top).lower()} ({forma_n} modèles) et les prix catalogue vont de {euro(min(prezzi))} à {euro(max(prezzi))}. " if prezzi and forma_top else "")
+        + "Voici les nouveaux modèles marque par marque, avec les données déclarées par les fabricants et les revendeurs et un lien vers le comparatif avec le modèle 2026 quand il existe.</p>")
     metodo = L(
-        f'<p class="note">Come leggere i dati: "n.d." significa che il dato non è pubblicato dalle fonti consultate. Le valutazioni indipendenti dei modelli 2027 sono ancora poche: quando escono le aggiungiamo alle schede. Vedi anche <a href="{P("guide", "racchette-padel-2026-2027-in-numeri")}">le racchette 2026 e 2027 in numeri</a>.</p>',
-        f'<p class="note">How to read the data: "n/a" means the figure is not published by the sources we consulted. Independent reviews of 2027 models are still few: we add them to the spec pages as they come out. See also <a href="{P("guide", "racchette-padel-2026-2027-in-numeri")}">2026 and 2027 rackets in numbers</a>.</p>',
-        f'<p class="note">Cómo leer los datos: "n.d." significa que el dato no lo publican las fuentes consultadas. Las valoraciones independientes de los modelos 2027 todavía son pocas: las añadimos a las fichas cuando salen. Mira también <a href="{P("guide", "racchette-padel-2026-2027-in-numeri")}">las palas 2026 y 2027 en cifras</a>.</p>')
+        f'<p class="note">Come leggere i dati: "n.d." significa che il dato non è pubblicato dalle fonti consultate. Le valutazioni indipendenti dei modelli 2027 sono ancora poche: quando escono le aggiungiamo alle schede. Vedi anche <a href="{P("report", "racchette-padel-2026-2027-in-numeri")}">le racchette 2026 e 2027 in numeri</a>.</p>',
+        f'<p class="note">How to read the data: "n/a" means the figure is not published by the sources we consulted. Independent reviews of 2027 models are still few: we add them to the spec pages as they come out. See also <a href="{P("report", "racchette-padel-2026-2027-in-numeri")}">2026 and 2027 rackets in numbers</a>.</p>',
+        f'<p class="note">Cómo leer los datos: "n.d." significa que el dato no lo publican las fuentes consultadas. Las valoraciones independientes de los modelos 2027 todavía son pocas: las añadimos a las fichas cuando salen. Mira también <a href="{P("report", "racchette-padel-2026-2027-in-numeri")}">las palas 2026 y 2027 en cifras</a>.</p>', f'<p class="note">Comment lire les données : « n.c. » signifie que la donnée n\'est pas publiée par les sources consultées. Les tests indépendants des modèles 2027 sont encore rares : nous les ajoutons aux fiches au fur et à mesure de leur parution. Voir aussi <a href="{P("report", "racchette-padel-2026-2027-in-numeri")}">les raquettes 2026 et 2027 en chiffres</a>.</p>')
     corpo = intro + f'<div class="marche">{"".join(indice)}</div>' + metodo + "".join(sezioni) + faq_htm
-    titolo = L("Racchette padel 2027: tutte le novità per marca", "Padel rackets 2027: what's new from every brand", "Palas de pádel 2027: todas las novedades por marca")
+    titolo = L("Racchette padel 2027: tutte le novità per marca", "Padel rackets 2027: what's new from every brand", "Palas de pádel 2027: todas las novedades por marca", "Raquettes de padel 2027 : les nouveautés de chaque marque")
     scrivi_articolo(slug, titolo + " | PadelMetrix",
                     L(f"Le racchette da padel 2027 di {', '.join(marche[:4])} e altri: {len(nuove)} modelli con forma, peso, giocatore, prezzo di listino e confronto con il 2026.",
                       f"2027 padel rackets from {', '.join(marche[:4])} and more: {len(nuove)} models with shape, weight, player, list price and comparison with 2026.",
-                      f"Las palas de pádel 2027 de {', '.join(marche[:4])} y otras: {len(nuove)} modelos con forma, peso, jugador, precio de lista y comparativa con 2026."),
-                    titolo, L("Novità 2027", "What's new in 2027", "Novedades 2027"), corpo, ld_extra=[faq_ld])
+                      f"Las palas de pádel 2027 de {', '.join(marche[:4])} y otras: {len(nuove)} modelos con forma, peso, jugador, precio de lista y comparativa con 2026.", f"Raquettes de padel 2027 de {', '.join(marche[:4])} et d'autres : {len(nuove)} modèles avec forme, poids, joueur, prix catalogue et comparatif avec le 2026."),
+                    titolo, L("Novità 2027", "What's new in 2027", "Novedades 2027", "Les nouveautés 2027"), corpo, ld_extra=[faq_ld])
     return slug, titolo, L(f"{len(nuove)} modelli 2027 di {len(marche)} marchi, con dati e confronti.", f"{len(nuove)} 2027 models from {len(marche)} brands, with data and comparisons.",
-                           f"{len(nuove)} modelos 2027 de {len(marche)} marcas, con datos y comparativas.")
+                           f"{len(nuove)} modelos 2027 de {len(marche)} marcas, con datos y comparativas.", f"{len(nuove)} modèles 2027 de {len(marche)} marques, avec données et comparatifs.")
 
 
 # ---------------------------------------------------------------- 2. Siux Diablo Pro 2026 vs 2027
@@ -172,25 +174,25 @@ F_PS = "https://padelspeed.com/blogs/news/siux-2026-padel-rackets-in-depth-revie
 F_PP = "https://padelproshop.com/en-dk/products/siux-padel-racket-diablo-pro-metallic-blue-2027-tino-libaak"
 F_PP2 = "https://padelproshop.com/pages/siux-2027"
 
-ND = T("Non dichiarato", "Not stated", "No declarado")
+ND = T("Non dichiarato", "Not stated", "No declarado", "Non communiqué")
 
 DIABLO = [  # (voce, 2026, 2027, cambia?)
-    (T("Giocatore", "Player", "Jugador"), "Tino Libaak", "Tino Libaak", False),
-    (T("Forma", "Shape", "Forma"), T("Goccia secondo Padel Market (Racketguide e PadelSpeed: ibrida)", "Teardrop according to Padel Market (Racketguide and PadelSpeed: hybrid)",
-                                     "Lágrima según Padel Market (Racketguide y PadelSpeed: híbrida)"), T("Goccia", "Teardrop", "Lágrima"), None),
-    (T("Peso", "Weight", "Peso"), "355–375 g", "355–375 g", False),
-    (T("Bilanciamento", "Balance", "Balance"), T("Medio (circa 260 mm)", "Medium (about 260 mm)", "Medio (unos 260 mm)"), T("Medio", "Medium", "Medio"), False),
-    (T("Nucleo", "Core", "Núcleo"), T("EVA a densità media", "Medium-density EVA", "EVA de densidad media"), "EVA Mid", False),
-    (T("Faccia", "Face", "Cara"), T("Carbonio 18K TeXtreme (in un'altra sezione della stessa scheda: 24K)", "18K TeXtreme carbon (another section of the same listing says 24K)",
-                                    "Carbono 18K TeXtreme (en otra sección de la misma ficha: 24K)"), T("Carbonio 3K SC Balance", "3K SC Balance carbon", "Carbono 3K SC Balance"), True),
-    (T("Superficie", "Surface", "Superficie"), T("Ruvida 3D, finitura opaca", "Rough 3D, matte finish", "Rugosa 3D, acabado mate"),
-     T("Texture 3D con finitura Soft Sand", "3D texture with Soft Sand finish", "Textura 3D con acabado Soft Sand"), True),
-    (T("Telaio", "Frame", "Marco"), T("100% carbonio", "100% carbon", "100% carbono"), T("Fibra di carbonio", "Carbon fibre", "Fibra de carbono"), False),
-    (T("Spessore", "Thickness", "Grosor"), "38 mm", ND, None),
-    (T("Durezza / tatto dichiarati", "Declared hardness / feel", "Dureza / tacto declarados"), "7/10", "7/10", False),
-    (T("Livello", "Level", "Nivel"), T("Avanzato / professionale", "Advanced / professional", "Avanzado / profesional"),
-     T("Avanzato / professionale", "Advanced / professional", "Avanzado / profesional"), False),
-    (T("Prezzo di listino", "List price", "Precio de lista"), "350,00 €", "359,95 €", True),
+    (T("Giocatore", "Player", "Jugador", "Joueur"), "Tino Libaak", "Tino Libaak", False),
+    (T("Forma", "Shape", "Forma", "Forme"), T("Goccia secondo Padel Market (Racketguide e PadelSpeed: ibrida)", "Teardrop according to Padel Market (Racketguide and PadelSpeed: hybrid)",
+                                     "Lágrima según Padel Market (Racketguide y PadelSpeed: híbrida)", "Goutte d'eau selon Padel Market (Racketguide et PadelSpeed : hybride)"), T("Goccia", "Teardrop", "Lágrima", "Goutte d'eau"), None),
+    (T("Peso", "Weight", "Peso", "Poids"), "355–375 g", "355–375 g", False),
+    (T("Bilanciamento", "Balance", "Balance", "Équilibre"), T("Medio (circa 260 mm)", "Medium (about 260 mm)", "Medio (unos 260 mm)", "Moyen (environ 260 mm)"), T("Medio", "Medium", "Medio", "Moyen"), False),
+    (T("Nucleo", "Core", "Núcleo", "Noyau"), T("EVA a densità media", "Medium-density EVA", "EVA de densidad media", "EVA de densité moyenne"), "EVA Mid", False),
+    (T("Faccia", "Face", "Cara", "Tamis"), T("Carbonio 18K TeXtreme (in un'altra sezione della stessa scheda: 24K)", "18K TeXtreme carbon (another section of the same listing says 24K)",
+                                    "Carbono 18K TeXtreme (en otra sección de la misma ficha: 24K)", "Carbone 18K TeXtreme (une autre partie de la même fiche indique 24K)"), T("Carbonio 3K SC Balance", "3K SC Balance carbon", "Carbono 3K SC Balance", "Carbone 3K SC Balance"), True),
+    (T("Superficie", "Surface", "Superficie", "Surface"), T("Ruvida 3D, finitura opaca", "Rough 3D, matte finish", "Rugosa 3D, acabado mate", "Rugueuse 3D, finition mate"),
+     T("Texture 3D con finitura Soft Sand", "3D texture with Soft Sand finish", "Textura 3D con acabado Soft Sand", "Texture 3D avec finition Soft Sand"), True),
+    (T("Telaio", "Frame", "Marco", "Cadre"), T("100% carbonio", "100% carbon", "100% carbono", "100 % carbone"), T("Fibra di carbonio", "Carbon fibre", "Fibra de carbono", "Fibre de carbone"), False),
+    (T("Spessore", "Thickness", "Grosor", "Épaisseur"), "38 mm", ND, None),
+    (T("Durezza / tatto dichiarati", "Declared hardness / feel", "Dureza / tacto declarados", "Dureté / toucher déclaré"), "7/10", "7/10", False),
+    (T("Livello", "Level", "Nivel", "Niveau"), T("Avanzato / professionale", "Advanced / professional", "Avanzado / profesional", "Avancé / professionnel"),
+     T("Avanzato / professionale", "Advanced / professional", "Avanzado / profesional", "Avancé / professionnel"), False),
+    (T("Prezzo di listino", "List price", "Precio de lista", "Prix catalogue"), "350,00 €", "359,95 €", True),
 ]
 
 
@@ -199,13 +201,13 @@ def diablo(db):
     per = {n["slug"]: n for n in db}
     a, b = per.get("siux-diablo-pro-2026"), per.get("siux-diablo-pro-2027")
     righe = "".join(
-        f'<tr><td>{e(g(v))}</td><td>{e(g(x))}</td><td>{e(g(y))}</td><td>{L("Sì", "Yes", "Sí") if c else (L("No", "No", "No") if c is False else L("Da verificare", "To be confirmed", "Por confirmar"))}</td></tr>'
+        f'<tr><td>{e(g(v))}</td><td>{e(g(x))}</td><td>{e(g(y))}</td><td>{L("Sì", "Yes", "Sí", "Oui") if c else (L("No", "No", "No", "Non") if c is False else L("Da verificare", "To be confirmed", "Por confirmar", "À confirmer"))}</td></tr>'
         for v, x, y, c in DIABLO)
     tab = (f'<div class="tablebox"><table class="tab"><thead><tr><th></th><th><a href="{url_r(a)}">Diablo Pro 2026</a></th><th><a href="{url_r(b)}">Diablo Pro 2027</a></th>'
-           f'<th>{L("Cambia?", "Changes?", "¿Cambia?")}</th></tr></thead><tbody>{righe}</tbody></table></div>')
+           f'<th>{L("Cambia?", "Changes?", "¿Cambia?", "Ça change ?")}</th></tr></thead><tbody>{righe}</tbody></table></div>')
     fonti = L(f'<p class="note">Dati 2026: {fonte(F_PM, "Padel Market")}, {fonte(F_RG, "Racketguide")}, {fonte(F_PS, "PadelSpeed")}. Dati 2027: {fonte(F_PP, "PadelPROShop")} ({fonte(F_PP2, "pagina collezione")}). Schede consultate a ottobre 2026.</p>',
               f'<p class="note">2026 data: {fonte(F_PM, "Padel Market")}, {fonte(F_RG, "Racketguide")}, {fonte(F_PS, "PadelSpeed")}. 2027 data: {fonte(F_PP, "PadelPROShop")} ({fonte(F_PP2, "collection page")}). Listings consulted in October 2026.</p>',
-              f'<p class="note">Datos 2026: {fonte(F_PM, "Padel Market")}, {fonte(F_RG, "Racketguide")}, {fonte(F_PS, "PadelSpeed")}. Datos 2027: {fonte(F_PP, "PadelPROShop")} ({fonte(F_PP2, "página de la colección")}). Fichas consultadas en octubre de 2026.</p>')
+              f'<p class="note">Datos 2026: {fonte(F_PM, "Padel Market")}, {fonte(F_RG, "Racketguide")}, {fonte(F_PS, "PadelSpeed")}. Datos 2027: {fonte(F_PP, "PadelPROShop")} ({fonte(F_PP2, "página de la colección")}). Fichas consultadas en octubre de 2026.</p>', f'<p class="note">Données 2026 : {fonte(F_PM, "Padel Market")}, {fonte(F_RG, "Racketguide")}, {fonte(F_PS, "PadelSpeed")}. Données 2027 : {fonte(F_PP, "PadelPROShop")} ({fonte(F_PP2, "page de la collection")}). Fiches consultées en octobre 2026.</p>')
     gloss = P("glossario", "carbonio-3k-12k-18k")
     cmp_url = confronto_url(a["slug"], b["slug"])
     corpo = L(
@@ -241,26 +243,36 @@ def diablo(db):
 <p>Sobre la 2026, PadelSpeed habla de una pala más firme que la versión 2025, con respuesta más seca y menos rebote. En Racketguide la media de las reseñas de usuarios es 3,5 sobre 5 (8 reseñas): gustan la solidez, la manejabilidad y el control; un jugador avanzado la encuentra poco potente cuando hace falta, otro demasiado blanda. De la 2027 todavía no hay reseñas independientes.</p>
 <h2>Cuál elegir</h2>
 <ul><li><b>Elige la 2026</b> si la encuentras rebajada: datos declarados casi idénticos y más de 100 € de diferencia en el precio de lista.</li><li><b>Elige la 2027</b> si quieres la nueva cara de carbono 3K y el acabado Soft Sand, o si la 2026 ya no está disponible en tu talla y color.</li><li><b>Espera</b> si para ti cuentan el efecto y la potencia: las primeras pruebas independientes de la 2027 dirán si la nueva cara cambia algo en pista.</li></ul>
-<p><a class="btn" href="{cmp_url}">Comparativa completa con los demás datos de la base</a></p>""")
-    qa = [(L("Qual è la differenza tra Siux Diablo Pro 2026 e 2027?", "What is the difference between the Siux Diablo Pro 2026 and 2027?", "¿Qué diferencia hay entre la Siux Diablo Pro 2026 y la 2027?"),
+<p><a class="btn" href="{cmp_url}">Comparativa completa con los demás datos de la base</a></p>""", f"""<p><b>Sur le papier, la Siux Diablo Pro 2027 change surtout le tamis : elle passe du carbone 18K TeXtreme du 2026 au carbone 3K SC Balance, avec une nouvelle finition Soft Sand.</b> Poids (355–375 g), équilibre moyen, noyau EVA de densité moyenne et dureté déclarée de 7/10 restent identiques. Le 2026 se trouve en promotion : en octobre 2026, Padel Market le vendait 229,95 € au lieu de 350 €.</p>
+<h2>Comparaison des fiches techniques</h2>{tab}{fonti}
+<h2>Ce qui change vraiment</h2>
+<p><b>Le tamis.</b> C'est la seule différence technique déclarée. Le chiffre K indique combien de filaments composent chaque mèche de carbone : il change le tissage et le toucher, mais à lui seul il ne dit pas si une raquette est plus rigide ou plus puissante (<a href="{gloss}">voir le glossaire</a>). Pour savoir ce que cela change sur le terrain, il faut des tests indépendants du 2027, qui n'ont pas encore été publiés.</p>
+<p><b>La surface.</b> Le 2027 ajoute une finition Soft Sand à la texture 3D. Les revendeurs la présentent comme conçue pour l'effet, mais il n'existe pas de mesures d'effet.</p>
+<p><b>La forme.</b> Les sources divergent sur le 2026 : Padel Market l'indique en goutte d'eau, Racketguide et PadelSpeed en hybride. Le 2027 est indiqué en goutte d'eau. Tant que le fabricant ne publie pas de mesures, nous ne pouvons pas dire si le moule a changé.</p>
+<h2>Ce qu'en disent les utilisateurs (2026)</h2>
+<p>Pour le 2026, PadelSpeed décrit une raquette plus ferme que la version 2025, avec une réponse plus sèche et moins de rebond. Sur Racketguide, la note moyenne des utilisateurs est de 3,5 sur 5 (8 avis) : ils apprécient sa solidité, sa maniabilité et son contrôle ; un joueur avancé la trouve en manque de puissance quand il le faut, un autre la trouve trop souple. Il n'existe pas encore de tests indépendants du 2027.</p>
+<h2>Laquelle choisir</h2>
+<ul><li><b>Choisissez le 2026</b> si vous le trouvez en promotion : fiches déclarées presque identiques et plus de 100 € d'écart de prix catalogue.</li><li><b>Choisissez le 2027</b> si vous voulez le nouveau tamis en carbone 3K et la finition Soft Sand, ou si le 2026 n'est plus disponible dans votre taille et votre couleur.</li><li><b>Attendez</b> si l'effet et la puissance comptent pour vous : les premiers tests indépendants du 2027 montreront si le nouveau tamis change quelque chose sur le terrain.</li></ul>
+<p><a class="btn" href="{cmp_url}">Comparatif complet avec les autres données de la base</a></p>""")
+    qa = [(L("Qual è la differenza tra Siux Diablo Pro 2026 e 2027?", "What is the difference between the Siux Diablo Pro 2026 and 2027?", "¿Qué diferencia hay entre la Siux Diablo Pro 2026 y la 2027?", "Quelle est la différence entre la Siux Diablo Pro 2026 et 2027 ?"),
            L("Secondo le schede dei rivenditori cambia la faccia (da carbonio 18K TeXtreme a carbonio 3K SC Balance) e la finitura della superficie, che aggiunge il Soft Sand. Peso, bilanciamento, nucleo e durezza dichiarata restano uguali.",
              "According to retailer listings, the face changes (from 18K TeXtreme carbon to 3K SC Balance carbon), as does the surface finish, which adds Soft Sand. Weight, balance, core and declared hardness stay the same.",
-             "Según las fichas de las tiendas cambia la cara (de carbono 18K TeXtreme a carbono 3K SC Balance) y el acabado de la superficie, que añade el Soft Sand. Peso, balance, núcleo y dureza declarada se mantienen.")),
-          (L("Quanto pesa la Siux Diablo Pro 2027?", "How much does the Siux Diablo Pro 2027 weigh?", "¿Cuánto pesa la Siux Diablo Pro 2027?"),
-           L("Il peso dichiarato è 355–375 g, uguale alla versione 2026.", "The declared weight is 355–375 g, the same as the 2026 version.", "El peso declarado es 355–375 g, igual que la versión 2026.")),
-          (L("La Siux Diablo Pro è adatta ai principianti?", "Is the Siux Diablo Pro suitable for beginners?", "¿La Siux Diablo Pro es adecuada para principiantes?"),
+             "Según las fichas de las tiendas cambia la cara (de carbono 18K TeXtreme a carbono 3K SC Balance) y el acabado de la superficie, que añade el Soft Sand. Peso, balance, núcleo y dureza declarada se mantienen.", "D'après les fiches des revendeurs, le tamis change (du carbone 18K TeXtreme au carbone 3K SC Balance), tout comme la finition de surface, qui ajoute le Soft Sand. Poids, équilibre, noyau et dureté déclarée restent identiques.")),
+          (L("Quanto pesa la Siux Diablo Pro 2027?", "How much does the Siux Diablo Pro 2027 weigh?", "¿Cuánto pesa la Siux Diablo Pro 2027?", "Combien pèse la Siux Diablo Pro 2027 ?"),
+           L("Il peso dichiarato è 355–375 g, uguale alla versione 2026.", "The declared weight is 355–375 g, the same as the 2026 version.", "El peso declarado es 355–375 g, igual que la versión 2026.", "Le poids déclaré est de 355–375 g, comme la version 2026.")),
+          (L("La Siux Diablo Pro è adatta ai principianti?", "Is the Siux Diablo Pro suitable for beginners?", "¿La Siux Diablo Pro es adecuada para principiantes?", "La Siux Diablo Pro convient-elle aux débutants ?"),
            L("No: entrambe le versioni sono indicate per livello avanzato o professionale e richiedono una buona tecnica.",
              "No: both versions are aimed at advanced or professional players and require good technique.",
-             "No: ambas versiones están indicadas para nivel avanzado o profesional y requieren buena técnica."))]
+             "No: ambas versiones están indicadas para nivel avanzado o profesional y requieren buena técnica.", "Non : les deux versions s'adressent aux joueurs avancés ou professionnels et demandent une bonne technique."))]
     faq_htm, faq_ld = faq(qa)
-    titolo = L("Siux Diablo Pro 2026 vs 2027: cosa cambia davvero", "Siux Diablo Pro 2026 vs 2027: what really changes", "Siux Diablo Pro 2026 vs 2027: qué cambia realmente")
+    titolo = L("Siux Diablo Pro 2026 vs 2027: cosa cambia davvero", "Siux Diablo Pro 2026 vs 2027: what really changes", "Siux Diablo Pro 2026 vs 2027: qué cambia realmente", "Siux Diablo Pro 2026 vs 2027 : ce qui change vraiment")
     scrivi_articolo(slug, titolo + " | PadelMetrix",
                     L("Siux Diablo Pro 2026 e 2027 (Tino Libaak) a confronto: faccia, superficie, peso, bilanciamento, prezzo e quale conviene comprare. Dati con fonti.",
                       "Siux Diablo Pro 2026 and 2027 (Tino Libaak) compared: face, surface, weight, balance, price and which one to buy. Data with sources.",
-                      "Siux Diablo Pro 2026 y 2027 (Tino Libaak) comparadas: cara, superficie, peso, balance, precio y cuál conviene comprar. Datos con fuentes."),
+                      "Siux Diablo Pro 2026 y 2027 (Tino Libaak) comparadas: cara, superficie, peso, balance, precio y cuál conviene comprar. Datos con fuentes.", "Siux Diablo Pro 2026 et 2027 (Tino Libaak) comparées : tamis, surface, poids, équilibre, prix et laquelle acheter. Données avec sources."),
                     titolo, "Diablo Pro 2026 vs 2027", corpo + faq_htm, items=[a, b], ld_extra=[faq_ld])
     return slug, titolo, L("La 2027 cambia la faccia e la finitura; il resto della scheda è uguale.", "The 2027 changes the face and the finish; the rest of the spec sheet is the same.",
-                           "La 2027 cambia la cara y el acabado; el resto de la ficha es igual.")
+                           "La 2027 cambia la cara y el acabado; el resto de la ficha es igual.", "Le 2027 change le tamis et la finition ; le reste de la fiche est identique.")
 
 
 # ---------------------------------------------------------------- 3. Ale Galán: chi è e che racchetta usa
@@ -280,17 +292,17 @@ def galan(db):
     per = {n["slug"]: n for n in db}
     hrd, mb = per.get("adidas-metalbone-hrd-plus-2026"), per.get("adidas-metalbone-2026")
     righe_dati = [
-        (T("Peso", "Weight", "Peso"), "345–360 g (+11,2 g)", "345–360 g (+11,2 g)"),
-        (T("Forma", "Shape", "Forma"), T("Diamante", "Diamond", "Diamante"), T("Diamante", "Diamond", "Diamante")),
-        (T("Gomma", "Core", "Goma"), "EVA High Memory", "EVA Soft Performance"),
-        (T("Faccia", "Face", "Cara"), T("Carbonio alluminizzato 16K", "16K aluminised carbon", "Carbono aluminizado 16K"),
-         T("Carbonio alluminizzato 16K", "16K aluminised carbon", "Carbono aluminizado 16K")),
-        (T("Tatto", "Feel", "Tacto"), T("Medio-duro", "Medium-hard", "Medio-duro"), T("Medio", "Medium", "Medio")),
-        (T("Potenza (PadelZoom)", "Power (PadelZoom)", "Potencia (PadelZoom)"), "10/10", "9/10"),
-        (T("Controllo (PadelZoom)", "Control (PadelZoom)", "Control (PadelZoom)"), "9,5/10", "8,5/10"),
-        (T("Uscita di palla (PadelZoom)", "Ball output (PadelZoom)", "Salida de bola (PadelZoom)"), "8/10", "9,5/10"),
-        (T("Voto complessivo (PadelZoom)", "Overall score (PadelZoom)", "Nota global (PadelZoom)"), "8,7/10", "8,6/10"),
-        (T("Prezzo di listino", "List price", "Precio de lista"), "390 €", "390 €"),
+        (T("Peso", "Weight", "Peso", "Poids"), "345–360 g (+11,2 g)", "345–360 g (+11,2 g)"),
+        (T("Forma", "Shape", "Forma", "Forme"), T("Diamante", "Diamond", "Diamante", "Diamant"), T("Diamante", "Diamond", "Diamante", "Diamant")),
+        (T("Gomma", "Core", "Goma", "Noyau"), "EVA High Memory", "EVA Soft Performance"),
+        (T("Faccia", "Face", "Cara", "Tamis"), T("Carbonio alluminizzato 16K", "16K aluminised carbon", "Carbono aluminizado 16K", "Carbone aluminisé 16K"),
+         T("Carbonio alluminizzato 16K", "16K aluminised carbon", "Carbono aluminizado 16K", "Carbone aluminisé 16K")),
+        (T("Tatto", "Feel", "Tacto", "Toucher"), T("Medio-duro", "Medium-hard", "Medio-duro", "Moyen-dur"), T("Medio", "Medium", "Medio", "Moyen")),
+        (T("Potenza (PadelZoom)", "Power (PadelZoom)", "Potencia (PadelZoom)", "Puissance (PadelZoom)"), "10/10", "9/10"),
+        (T("Controllo (PadelZoom)", "Control (PadelZoom)", "Control (PadelZoom)", "Contrôle (PadelZoom)"), "9,5/10", "8,5/10"),
+        (T("Uscita di palla (PadelZoom)", "Ball output (PadelZoom)", "Salida de bola (PadelZoom)", "Sortie de balle (PadelZoom)"), "8/10", "9,5/10"),
+        (T("Voto complessivo (PadelZoom)", "Overall score (PadelZoom)", "Nota global (PadelZoom)", "Note globale (PadelZoom)"), "8,7/10", "8,6/10"),
+        (T("Prezzo di listino", "List price", "Precio de lista", "Prix catalogue"), "390 €", "390 €"),
     ]
     num = lambda x: x.replace(",", ".") if S.lang() == "en" else x  # noqa: E731
     righe = "".join(f"<tr><td>{e(g(v))}</td><td>{e(num(g(a)))}</td><td>{e(num(g(b)))}</td></tr>" for v, a, b in righe_dati)
@@ -298,7 +310,7 @@ def galan(db):
            f'<th><a href="{url_r(mb)}">Metalbone 2026</a></th></tr></thead><tbody>{righe}</tbody></table></div>')
     note_tab = L(f'<p class="note">Dati e punteggi: {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. Il peso si può aumentare fino a 11,2 g con il sistema Weight &amp; Balance.</p>',
                  f'<p class="note">Data and scores: {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. Weight can be increased by up to 11.2 g with the Weight &amp; Balance system.</p>',
-                 f'<p class="note">Datos y puntuaciones: {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. El peso se puede aumentar hasta 11,2 g con el sistema Weight &amp; Balance.</p>')
+                 f'<p class="note">Datos y puntuaciones: {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. El peso se puede aumentar hasta 11,2 g con el sistema Weight &amp; Balance.</p>', f'<p class="note">Données et notes : {fonte(G_PZ_HRD, "PadelZoom (HRD+)")}, {fonte(G_PZ, "PadelZoom (Metalbone)")}. Le poids peut être augmenté jusqu\'à 11,2 g avec le système Weight &amp; Balance.</p>')
     pro_url = P("guide", "racchette-giocatori-professionisti")
     corpo = L(
         f"""<p><b>Alejandro "Ale" Galán Romo è un giocatore di padel spagnolo, nato a Madrid il 15 maggio 1996, che gioca sul lato sinistro (revés). È stato numero 1 del mondo con Juan Lebrón e dal marzo 2024 fa coppia con l'argentino Federico Chingotto. In partita usa la Adidas Metalbone HRD+ 2026, la versione più rigida della sua linea firmata.</b></p>
@@ -345,31 +357,45 @@ def galan(db):
 <p>En enero de 2026 Adidas anunció también la <b>Metalbone Reserve</b>, una edición limitada con la firma de Galán para la Reserve Cup ({fonte(G_RES, "All for Padel")}). La fuente no dice que la use en torneo.</p>
 <h2>¿La pala de Galán es para ti?</h2>
 <ul><li><b>Sí, la HRD+</b>, si eres un jugador avanzado, juegas en el lado izquierdo, cierras muchos puntos de remate y tienes el brazo entrenado: es rígida y exigente.</li><li><b>Mejor la Metalbone</b> si quieres el mismo estilo de juego con más tolerancia y más ayuda en defensa.</li><li><b>Ninguna de las dos</b> si eres principiante o tienes molestias en el codo: mira las <a href="{P("guide", "racchetta-padel-principianti")}">palas para principiantes</a> o las <a href="{P("guide", "racchetta-padel-epicondilite")}">palas para la epicondilitis</a>.</li></ul>
-<p>Las palas de los demás profesionales están en la guía <a href="{pro_url}">con qué pala juegan los profesionales</a>.</p>""")
-    qa = [(L("Che racchetta usa Ale Galán?", "Which racket does Ale Galán use?", "¿Qué pala usa Ale Galán?"),
+<p>Las palas de los demás profesionales están en la guía <a href="{pro_url}">con qué pala juegan los profesionales</a>.</p>""", f"""<p><b>Alejandro « Ale » Galán Romo est un joueur de padel espagnol, né à Madrid le 15 mai 1996, qui joue à gauche (côté revers). Il a été numéro 1 mondial avec Juan Lebrón et, depuis mars 2024, il fait équipe avec l'Argentin Federico Chingotto. En match, il utilise l'Adidas Metalbone HRD+ 2026, la version la plus rigide de sa ligne signature.</b></p>
+<h2>Qui est Ale Galán</h2>
+<ul><li><b>Naissance :</b> 15 mai 1996 à Madrid ; 1,86 m.</li><li><b>Côté :</b> gauche (revers), le côté qui conclut généralement les points au smash.</li><li><b>Principaux partenaires :</b> Juan Lebrón de 2020 à mars 2024, puis Federico Chingotto.</li><li><b>Numéro 1 mondial :</b> avec Lebrón en 2020, 2021 et 2022 ; ils ont perdu la première place en mai 2023 au profit de Tapia et Coello.</li><li><b>Principaux titres :</b> trois Master Finals du World Padel Tour (2019 avec Pablo Lima, 2021 et 2022 avec Lebrón) et le Championnat du monde 2021 avec l'Espagne.</li></ul>
+<p class="note">Source : {fonte(G_WIKI, "Wikipedia")}.</p>
+<h2>2026 avec Chingotto</h2>
+<p>En 2026, Galán et Chingotto ont remporté sept tournois Premier Padel : Gijón P2, Miami P1, Gizeh P2, Asunción P2, Buenos Aires P1 (en battant Tapia et Coello en finale), Pretoria P1 et Madrid P1. Fin octobre, Galán est numéro 3 du classement FIP selon StudyPadel, qui lui attribue 56 titres professionnels.</p>
+<p class="note">Sources : {fonte(G_WIKI26, "Wikipedia – Premier Padel 2026")}, {fonte(G_STUDY, "StudyPadel")}, {fonte(G_CHINGO, "Chingoland")}. Classements et titres changent chaque semaine.</p>
+<h2>Avec quelle raquette joue Ale Galán</h2>
+<p>Galán est un joueur Adidas et la ligne <b>Metalbone</b> est sa raquette signature. Selon Chingoland et Padel Ibérico, en 2026 il joue ses matchs avec la <b><a href="{url_r(hrd)}">Metalbone HRD+ 2026</a></b> : une diamant avec noyau EVA High Memory et tamis en carbone aluminisé 16K, la raquette la plus dure de la gamme Adidas. À ses côtés, il y a la <a href="{url_r(mb)}">Metalbone 2026</a>, avec la même forme et les mêmes matériaux de tamis mais un noyau plus souple.</p>
+{tab}{note_tab}
+<p>Selon PadelZoom, la HRD+ est la Metalbone la plus puissante (10/10) et celle qui offre le plus de contrôle sur les frappes d'attaque, mais avec une sortie de balle modérée : en défense, il faut davantage accompagner et le sweet spot est plus petit. La Metalbone standard est plus tolérante et a une sortie de balle très élevée pour une diamant.</p>
+<p>En janvier 2026, Adidas a aussi annoncé la <b>Metalbone Reserve</b>, une édition limitée signée Galán pour la Reserve Cup ({fonte(G_RES, "All for Padel")}). La source ne dit pas qu'il l'utilise en tournoi.</p>
+<h2>La raquette de Galán est-elle faite pour vous ?</h2>
+<ul><li><b>Oui, la HRD+</b>, si vous êtes un joueur avancé, jouez à gauche, concluez beaucoup de points au smash et avez un bras entraîné : elle est rigide et exigeante.</li><li><b>La Metalbone est meilleure</b> si vous voulez le même style de jeu avec plus de tolérance et plus d'aide en défense.</li><li><b>Aucune des deux</b> si vous débutez ou avez des problèmes de coude : regardez les <a href="{P("guide", "racchetta-padel-principianti")}">raquettes pour débutants</a> ou celles <a href="{P("guide", "racchetta-padel-epicondilite")}">pour l'épicondylite</a>.</li></ul>
+<p>Les raquettes des autres pros sont dans le guide <a href="{pro_url}">quelles raquettes utilisent les pros</a>.</p>""")
+    qa = [(L("Che racchetta usa Ale Galán?", "Which racket does Ale Galán use?", "¿Qué pala usa Ale Galán?", "Quelle raquette utilise Ale Galán ?"),
            L("Nel 2026 usa la Adidas Metalbone HRD+ 2026, una diamante rigida con gomma EVA High Memory e faccia in carbonio alluminizzato 16K.",
              "In 2026 he uses the Adidas Metalbone HRD+ 2026, a stiff diamond with an EVA High Memory core and a 16K aluminised carbon face.",
-             "En 2026 usa la Adidas Metalbone HRD+ 2026, una diamante rígida con goma EVA High Memory y cara de carbono aluminizado 16K.")),
-          (L("Con chi gioca Ale Galán?", "Who does Ale Galán play with?", "¿Con quién juega Ale Galán?"),
+             "En 2026 usa la Adidas Metalbone HRD+ 2026, una diamante rígida con goma EVA High Memory y cara de carbono aluminizado 16K.", "En 2026, il utilise l'Adidas Metalbone HRD+ 2026, une diamant rigide avec noyau EVA High Memory et tamis en carbone aluminisé 16K.")),
+          (L("Con chi gioca Ale Galán?", "Who does Ale Galán play with?", "¿Con quién juega Ale Galán?", "Avec qui joue Ale Galán ?"),
            L("Dal marzo 2024 gioca con l'argentino Federico Chingotto; prima, dal 2020, con Juan Lebrón.",
              "Since March 2024 he has played with Argentina's Federico Chingotto; before that, from 2020, with Juan Lebrón.",
-             "Desde marzo de 2024 juega con el argentino Federico Chingotto; antes, desde 2020, con Juan Lebrón.")),
-          (L("Quanto costa la racchetta di Galán?", "How much does Galán's racket cost?", "¿Cuánto cuesta la pala de Galán?"),
+             "Desde marzo de 2024 juega con el argentino Federico Chingotto; antes, desde 2020, con Juan Lebrón.", "Depuis mars 2024, il joue avec l'Argentin Federico Chingotto ; avant cela, à partir de 2020, avec Juan Lebrón.")),
+          (L("Quanto costa la racchetta di Galán?", "How much does Galán's racket cost?", "¿Cuánto cuesta la pala de Galán?", "Combien coûte la raquette de Galán ?"),
            L("Il prezzo di listino della Metalbone HRD+ 2026 è 390 €; nei negozi si trova spesso scontata.",
              "The list price of the Metalbone HRD+ 2026 is €390; shops often sell it at a discount.",
-             "El precio de lista de la Metalbone HRD+ 2026 es de 390 €; en las tiendas suele encontrarse rebajada."))]
+             "El precio de lista de la Metalbone HRD+ 2026 es de 390 €; en las tiendas suele encontrarse rebajada.", "Le prix catalogue de la Metalbone HRD+ 2026 est de 390 € ; les boutiques la vendent souvent en promotion."))]
     faq_htm, faq_ld = faq(qa)
     persona = {"@context": "https://schema.org", "@type": "Person", "name": "Alejandro Galán Romo", "alternateName": "Ale Galán",
                "birthDate": "1996-05-15", "birthPlace": "Madrid", "nationality": "Spain", "sameAs": [G_WIKI]}
-    titolo = L("Ale Galán: chi è e che racchetta usa nel 2026", "Ale Galán: who he is and which racket he uses in 2026", "Ale Galán: quién es y qué pala usa en 2026")
+    titolo = L("Ale Galán: chi è e che racchetta usa nel 2026", "Ale Galán: who he is and which racket he uses in 2026", "Ale Galán: quién es y qué pala usa en 2026", "Ale Galán : qui il est et quelle raquette il utilise en 2026")
     scrivi_articolo(slug, titolo + " | PadelMetrix",
                     L("Chi è Ale Galán (Madrid, 1996), con chi gioca, i suoi titoli e la racchetta che usa nel 2026: Adidas Metalbone HRD+, con dati tecnici e alternative.",
                       "Who Ale Galán is (Madrid, 1996), who he plays with, his titles and the racket he uses in 2026: Adidas Metalbone HRD+, with specs and alternatives.",
-                      "Quién es Ale Galán (Madrid, 1996), con quién juega, sus títulos y la pala que usa en 2026: Adidas Metalbone HRD+, con datos técnicos y alternativas."),
+                      "Quién es Ale Galán (Madrid, 1996), con quién juega, sus títulos y la pala que usa en 2026: Adidas Metalbone HRD+, con datos técnicos y alternativas.", "Qui est Ale Galán (Madrid, 1996), avec qui il joue, ses titres et la raquette qu'il utilise en 2026 : Adidas Metalbone HRD+, avec caractéristiques et alternatives."),
                     titolo, "Ale Galán", corpo + faq_htm, items=[hrd, mb], ld_extra=[faq_ld, persona])
     return slug, titolo, L("Il campione madrileno, i titoli con Lebrón e Chingotto e la sua Adidas Metalbone HRD+.",
                            "The Madrid champion, his titles with Lebrón and Chingotto and his Adidas Metalbone HRD+.",
-                           "El campeón madrileño, sus títulos con Lebrón y Chingotto y su Adidas Metalbone HRD+.")
+                           "El campeón madrileño, sus títulos con Lebrón y Chingotto y su Adidas Metalbone HRD+.", "Le champion madrilène, ses titres avec Lebrón et Chingotto et son Adidas Metalbone HRD+.")
 
 
 # ---------------------------------------------------------------- 4. Giocatori (Chingotto, Coello, Tapia, Lebrón)
@@ -379,6 +405,7 @@ from dati_giocatori import GIOCATORI, F as FG, TITOLI_TC, TITOLI_GC  # noqa: E40
 
 for _g in GIOCATORI:
     S.SLUG[_g["slug"]] = (_g["slug_en"], _g["slug_es"])
+    S.SLUG_FR[_g["slug"]] = _g["slug"].replace("-chi-e-e-che-racchetta-usa", "-qui-est-il-et-quelle-raquette-utilise-t-il")
 
 
 def _link_r(txt, per):
@@ -394,15 +421,15 @@ def _fonti(keys):
 
 def giocatore(db, G):
     per = {n["slug"]: n for n in db}
-    nd = L("n.d.", "n/a", "n.d.")
+    nd = L("n.d.", "n/a", "n.d.", "n.c.")
     tab_r = [per[s] for s in G["tabella"] if s in per]
-    righe_def = [(L("Forma", "Shape", "Forma"), lambda n: FORMA(n["forma"])), (L("Peso", "Weight", "Peso"), lambda n: n["peso"]),
-                 (L("Bilanciamento", "Balance", "Balance"), lambda n: S.tr(n["bilanciamento"]) if isinstance(n["bilanciamento"], str) else None),
-                 (L("Gomma", "Core", "Goma"), lambda n: S.tr(n["nucleo"]) if isinstance(n["nucleo"], str) else None),
-                 (L("Faccia", "Face", "Cara"), lambda n: S.tr(n["superficie"]) if isinstance(n["superficie"], str) else None),
-                 (L("Tatto", "Feel", "Tacto"), lambda n: S.tr(n["sensazione"]) if isinstance(n["sensazione"], str) else None),
-                 (L("Livello", "Level", "Nivel"), lambda n: LIVN(n["livello"])),
-                 (L("Prezzo di listino", "List price", "Precio de lista"), lambda n: euro(n["prezzo"]) if n["prezzo"] else None)]
+    righe_def = [(L("Forma", "Shape", "Forma", "Forme"), lambda n: FORMA(n["forma"])), (L("Peso", "Weight", "Peso", "Poids"), lambda n: n["peso"]),
+                 (L("Bilanciamento", "Balance", "Balance", "Équilibre"), lambda n: S.tr(n["bilanciamento"]) if isinstance(n["bilanciamento"], str) else None),
+                 (L("Gomma", "Core", "Goma", "Noyau"), lambda n: S.tr(n["nucleo"]) if isinstance(n["nucleo"], str) else None),
+                 (L("Faccia", "Face", "Cara", "Tamis"), lambda n: S.tr(n["superficie"]) if isinstance(n["superficie"], str) else None),
+                 (L("Tatto", "Feel", "Tacto", "Toucher"), lambda n: S.tr(n["sensazione"]) if isinstance(n["sensazione"], str) else None),
+                 (L("Livello", "Level", "Nivel", "Niveau"), lambda n: LIVN(n["livello"])),
+                 (L("Prezzo di listino", "List price", "Precio de lista", "Prix catalogue"), lambda n: euro(n["prezzo"]) if n["prezzo"] else None)]
     righe = "".join("<tr><td>" + e(lab) + "</td>" + "".join(f"<td>{e(f(n) or nd)}</td>" for n in tab_r) + "</tr>" for lab, f in righe_def)
     tab = ('<div class="tablebox"><table class="tab"><thead><tr><th></th>' + "".join(f'<th><a href="{url_r(n)}">{e(n["titolo"])}</a></th>' for n in tab_r)
            + f"</tr></thead><tbody>{righe}</tbody></table></div>")
@@ -411,28 +438,28 @@ def giocatore(db, G):
         for u in n["d"].get("fonti_dati", []):
             if u not in fonti_tab:
                 fonti_tab.append(u)
-    note_tab = (f'<p class="note">{L("Dati tecnici dalle schede PadelMetrix; fonti", "Specs from the PadelMetrix spec pages; sources", "Datos técnicos de las fichas de PadelMetrix; fuentes")}: '
-                + ", ".join(fonte(u) for u in fonti_tab) + f'. {L("n.d. = non dichiarato dalle fonti.", "n/a = not stated by the sources.", "n.d. = no declarado por las fuentes.")}</p>')
+    note_tab = (f'<p class="note">{L("Dati tecnici dalle schede PadelMetrix; fonti", "Specs from the PadelMetrix spec pages; sources", "Datos técnicos de las fichas de PadelMetrix; fuentes", "Caractéristiques issues des fiches PadelMetrix ; sources")}: '
+                + ", ".join(fonte(u) for u in fonti_tab) + f'. {L("n.d. = non dichiarato dalle fonti.", "n/a = not stated by the sources.", "n.d. = no declarado por las fuentes.", "n.c. = non communiqué par les sources.")}</p>')
     bio = "".join(f"<li><b>{e(g(k))}:</b> {e(g(v))}</li>" for k, v in G["bio"])
     stagione = g(G["stagione"]).format(tc=g(TITOLI_TC), gc=g(TITOLI_GC))
     nome, breve = G["nome"], G["breve"]
     pro_url = P("guide", "racchette-giocatori-professionisti")
     corpo = f"""<p><b>{e(g(G["lead"]))}</b></p>
-<h2>{L(f"Chi è {nome}", f"Who is {nome}", f"Quién es {nome}")}</h2>
+<h2>{L(f"Chi è {nome}", f"Who is {nome}", f"Quién es {nome}", f"Qui est {nome}")}</h2>
 <ul>{bio}</ul>
-<p class="note">{L("Fonte", "Source", "Fuente")}: {_fonti(G["fonti_bio"])}.</p>
-<h2>{L(f"{breve} nel 2026", f"{breve} in 2026", f"{breve} en 2026")}</h2>
+<p class="note">{L("Fonte", "Source", "Fuente", "Source")}: {_fonti(G["fonti_bio"])}.</p>
+<h2>{L(f"{breve} nel 2026", f"{breve} in 2026", f"{breve} en 2026", f"{breve} en 2026")}</h2>
 <p>{e(stagione)}</p>
-<p class="note">{L("Fonti", "Sources", "Fuentes")}: {_fonti(G["fonti_stagione"])}. {L("Classifiche e titoli cambiano di settimana in settimana.", "Rankings and titles change week by week.", "Los rankings y los títulos cambian cada semana.")}</p>
-<h2>{L(f"Che racchetta usa {breve}", f"Which racket does {breve} use", f"Qué pala usa {breve}")}</h2>
+<p class="note">{L("Fonti", "Sources", "Fuentes", "Sources")}: {_fonti(G["fonti_stagione"])}. {L("Classifiche e titoli cambiano di settimana in settimana.", "Rankings and titles change week by week.", "Los rankings y los títulos cambian cada semana.", "Classements et titres changent chaque semaine.")}</p>
+<h2>{L(f"Che racchetta usa {breve}", f"Which racket does {breve} use", f"Qué pala usa {breve}", f"Avec quelle raquette joue {breve}")}</h2>
 <p>{_link_r(e(g(G["racchetta"])), per)}</p>
-<p class="note">{L("Fonti sul modello usato", "Sources on the model used", "Fuentes sobre el modelo usado")}: {_fonti(G["fonti_racchetta"])}.</p>
+<p class="note">{L("Fonti sul modello usato", "Sources on the model used", "Fuentes sobre el modelo usado", "Sources sur le modèle utilisé")}: {_fonti(G["fonti_racchetta"])}.</p>
 {tab}{note_tab}
-<h2>{L(f"La racchetta di {breve} fa per te?", f"Is {breve}'s racket right for you?", f"¿La pala de {breve} es para ti?")}</h2>
+<h2>{L(f"La racchetta di {breve} fa per te?", f"Is {breve}'s racket right for you?", f"¿La pala de {breve} es para ti?", f"La raquette de {breve} est-elle faite pour vous ?")}</h2>
 <ul>{"".join(f"<li>{g(x)}</li>" for x in G["adatta"])}<li>{L(f'<b>Nessuna delle sue racchette da torneo</b> se sei principiante o hai fastidi al gomito: guarda le <a href="{P("guide", "racchetta-padel-principianti")}">racchette per principianti</a> o quelle <a href="{P("guide", "racchetta-padel-epicondilite")}">per l\'epicondilite</a>.',
         f'<b>None of his tournament rackets</b> if you are a beginner or have elbow problems: look at <a href="{P("guide", "racchetta-padel-principianti")}">rackets for beginners</a> or those <a href="{P("guide", "racchetta-padel-epicondilite")}">for tennis elbow</a>.',
-        f'<b>Ninguna de sus palas de torneo</b> si eres principiante o tienes molestias en el codo: mira las <a href="{P("guide", "racchetta-padel-principianti")}">palas para principiantes</a> o las <a href="{P("guide", "racchetta-padel-epicondilite")}">palas para la epicondilitis</a>.')}</li></ul>
-<p>{L(f'Le racchette degli altri professionisti sono nella guida <a href="{pro_url}">con che racchetta giocano i professionisti</a>.', f'The rackets of the other pros are in the guide <a href="{pro_url}">which rackets the pros use</a>.', f'Las palas de los demás profesionales están en la guía <a href="{pro_url}">con qué pala juegan los profesionales</a>.')}</p>"""
+        f'<b>Ninguna de sus palas de torneo</b> si eres principiante o tienes molestias en el codo: mira las <a href="{P("guide", "racchetta-padel-principianti")}">palas para principiantes</a> o las <a href="{P("guide", "racchetta-padel-epicondilite")}">palas para la epicondilitis</a>.', f'<b>Aucune de ses raquettes de tournoi</b> si vous débutez ou avez des problèmes de coude : regardez les <a href="{P("guide", "racchetta-padel-principianti")}">raquettes pour débutants</a> ou celles <a href="{P("guide", "racchetta-padel-epicondilite")}">pour l\'épicondylite</a>.')}</li></ul>
+<p>{L(f'Le racchette degli altri professionisti sono nella guida <a href="{pro_url}">con che racchetta giocano i professionisti</a>.', f'The rackets of the other pros are in the guide <a href="{pro_url}">which rackets the pros use</a>.', f'Las palas de los demás profesionales están en la guía <a href="{pro_url}">con qué pala juegan los profesionales</a>.', f'Les raquettes des autres pros sont dans le guide <a href="{pro_url}">quelles raquettes utilisent les pros</a>.')}</p>"""
     qa = [(g(q), g(a)) for q, a in G["faq"]]
     faq_htm, faq_ld = faq(qa)
     persona = {"@context": "https://schema.org", "@type": "Person", **G["persona"]}
@@ -447,9 +474,9 @@ def giocatore(db, G):
 S.SLUG["racchette-padel-2027-vs-2026-cosa-cambia"] = ("padel-rackets-2027-vs-2026-what-changes", "palas-padel-2027-vs-2026-que-cambia")
 S.SLUG["migliori-racchette-padel-2026-classifiche-indipendenti"] = ("best-padel-rackets-2026-independent-rankings", "mejores-palas-padel-2026-rankings-independientes")
 
-VOCI = [("giocatore", T("Giocatore", "Player", "Jugador")), ("forma", T("Forma", "Shape", "Forma")), ("peso", T("Peso", "Weight", "Peso")),
-        ("bilanciamento", T("Bilanciamento", "Balance", "Balance")), ("superficie", T("Faccia", "Face", "Cara")), ("telaio", T("Telaio", "Frame", "Marco")),
-        ("sensazione", T("Sensazione", "Feel", "Tacto")), ("livello", T("Livello", "Level", "Nivel")), ("prezzo_listino_eur", T("Listino", "List price", "Precio de lista"))]
+VOCI = [("giocatore", T("Giocatore", "Player", "Jugador", "Joueur")), ("forma", T("Forma", "Shape", "Forma", "Forme")), ("peso", T("Peso", "Weight", "Peso", "Poids")),
+        ("bilanciamento", T("Bilanciamento", "Balance", "Balance", "Équilibre")), ("superficie", T("Faccia", "Face", "Cara", "Tamis")), ("telaio", T("Telaio", "Frame", "Marco", "Cadre")),
+        ("sensazione", T("Sensazione", "Feel", "Tacto", "Toucher")), ("livello", T("Livello", "Level", "Nivel", "Niveau")), ("prezzo_listino_eur", T("Listino", "List price", "Precio de lista", "Prix catalogue"))]
 
 
 def _val(k, v):
@@ -478,7 +505,7 @@ def confronti_2027(db):
     coppie_ok = set(coppie(db))
     pairs = sorted(((k, v[2026], v[2027]) for k, v in gruppi.items() if 2026 in v and 2027 in v), key=lambda x: x[0])
     sezioni, cambi_forma, cambi_prezzo, tot_diff = [], [], [], 0
-    nd = L("non dichiarato", "not stated", "no declarado")
+    nd = L("non dichiarato", "not stated", "no declarado", "non communiqué")
     for (marca, modello), a, b in pairs:
         da, dbb = a["d"], b["d"]
         righe, n_diff, n_ug, n_manca = [], 0, 0, 0
@@ -487,31 +514,31 @@ def confronti_2027(db):
             if va in (None, "") and vb in (None, ""):
                 continue
             if va in (None, "") or vb in (None, ""):
-                stato, n_manca = L("non confrontabile", "not comparable", "no comparable"), n_manca + 1
+                stato, n_manca = L("non confrontabile", "not comparable", "no comparable", "non comparable"), n_manca + 1
                 cls = "nd"
             elif _norm(va) == _norm(vb):
-                stato, n_ug, cls = L("uguale", "same", "igual"), n_ug + 1, "ok"
+                stato, n_ug, cls = L("uguale", "same", "igual", "identique"), n_ug + 1, "ok"
             else:
-                stato, n_diff, cls = f"<b>{L('cambia', 'changes', 'cambia')}</b>", n_diff + 1, "diff"
+                stato, n_diff, cls = f"<b>{L('cambia', 'changes', 'cambia', "change")}</b>", n_diff + 1, "diff"
                 if k == "forma":
-                    cambi_forma.append((marca, modello + (L(", fonti 2026 discordanti", ", 2026 sources disagree", ", fuentes 2026 discrepantes") if (marca, modello) == ("Siux", "Diablo Pro") else ""), FORMA(va), FORMA(vb)))
+                    cambi_forma.append((marca, modello + (L(", fonti 2026 discordanti", ", 2026 sources disagree", ", fuentes 2026 discrepantes", ", les sources 2026 divergent") if (marca, modello) == ("Siux", "Diablo Pro") else ""), FORMA(va), FORMA(vb)))
                 if k == "prezzo_listino_eur":
                     cambi_prezzo.append((marca, modello, va, vb))
             righe.append(f'<tr class="{cls}"><td>{g(nome)}</td><td>{e(_val(k, va) or nd)}</td><td>{e(_val(k, vb) or nd)}</td><td>{stato}</td></tr>')
         tot_diff += n_diff
         if slug_art := ("siux-diablo-pro-2026-vs-2027-cosa-cambia" if (marca, modello) == ("Siux", "Diablo Pro") else None):
-            extra = f'<a href="{P("articoli", slug_art)}">{L("Articolo dedicato", "Dedicated article", "Artículo dedicado")}</a>'
+            extra = f'<a href="{P("articoli", slug_art)}">{L("Articolo dedicato", "Dedicated article", "Artículo dedicado", "Article dédié")}</a>'
         elif tuple(sorted((a["slug"], b["slug"]))) in coppie_ok:
-            extra = f'<a href="{confronto_url(a["slug"], b["slug"])}">{L("Confronto completo", "Full comparison", "Comparativa completa")}</a>'
+            extra = f'<a href="{confronto_url(a["slug"], b["slug"])}">{L("Confronto completo", "Full comparison", "Comparativa completa", "Comparatif complet")}</a>'
         else:
             extra = ""
         sint = L(f"Cambiano: {n_diff} · uguali: {n_ug} · non confrontabili (manca il dato di una delle due versioni): {n_manca}.",
                  f"Changed: {n_diff} · same: {n_ug} · not comparable (one version does not state the figure): {n_manca}.",
-                 f"Cambian: {n_diff} · iguales: {n_ug} · no comparables (falta el dato de una de las dos versiones): {n_manca}.")
+                 f"Cambian: {n_diff} · iguales: {n_ug} · no comparables (falta el dato de una de las dos versiones): {n_manca}.", f"Changé : {n_diff} · identique : {n_ug} · non comparable (une version ne communique pas la donnée) : {n_manca}.")
         ancora = S.slugify(f"{marca} {modello}")
         sezioni.append(f'''<h3 id="{ancora}">{e(marca)} {e(modello)}: 2026 vs 2027</h3>
-<p>{sint} <a href="{url_r(a)}">{L("Scheda 2026", "2026 page", "Ficha 2026")}</a> · <a href="{url_r(b)}">{L("Scheda 2027", "2027 page", "Ficha 2027")}</a>{" · " + extra if extra else ""}</p>
-<div class="tablebox"><table class="tab"><thead><tr><th>{L("Voce", "Item", "Dato")}</th><th>2026</th><th>2027</th><th>{L("Esito", "Result", "Resultado")}</th></tr></thead><tbody>{"".join(righe)}</tbody></table></div>''')
+<p>{sint} <a href="{url_r(a)}">{L("Scheda 2026", "2026 page", "Ficha 2026", "Fiche 2026")}</a> · <a href="{url_r(b)}">{L("Scheda 2027", "2027 page", "Ficha 2027", "Fiche 2027")}</a>{" · " + extra if extra else ""}</p>
+<div class="tablebox"><table class="tab"><thead><tr><th>{L("Voce", "Item", "Dato", "Critère")}</th><th>2026</th><th>2027</th><th>{L("Esito", "Result", "Resultado", "Résultat")}</th></tr></thead><tbody>{"".join(righe)}</tbody></table></div>''')
     indice_htm = '<div class="marche">' + "".join(f'<a href="#{S.slugify(m + " " + mo)}">{e(m)} {e(mo)}</a>' for (m, mo), _, _ in pairs) + "</div>"
     forma_txt = "; ".join(f"{e(m)} {e(mo)} ({e(x)} → {e(y)})" for m, mo, x, y in cambi_forma)
     aum = [x for x in cambi_prezzo if x[3] > x[2]]
@@ -523,32 +550,33 @@ def confronti_2027(db):
         f"<p><b>We compared, item by item, the {len(pairs)} rackets that exist in the PadelMetrix database in both a 2026 and a 2027 version</b> ({', '.join(marche)}). For each model you can see what changes, what stays the same and what cannot be compared because the manufacturer or retailers do not state it.</p>"
         f"<p>In short: the shape changes in {len(cambi_forma)} models ({forma_txt}). The list price is stated for both versions in only {len(cambi_prezzo)} cases ({prezzo_txt}){', always going up' if cambi_prezzo and len(aum) == len(cambi_prezzo) else ''}. Many 2026 figures were never published, so for several models it is impossible to say whether the 2027 is really different.</p>",
         f"<p><b>Hemos comparado, dato por dato, las {len(pairs)} palas que en la base de datos de PadelMetrix existen tanto en versión 2026 como en versión 2027</b> ({', '.join(marche)}). Para cada modelo verás qué cambia, qué se mantiene y qué no se puede comparar porque el fabricante o las tiendas no lo declaran.</p>"
-        f"<p>En resumen: la forma cambia en {len(cambi_forma)} modelos ({forma_txt}). El precio de lista está declarado para ambas versiones solo en {len(cambi_prezzo)} casos ({prezzo_txt}){', siempre al alza' if cambi_prezzo and len(aum) == len(cambi_prezzo) else ''}. Muchos datos de las versiones 2026 nunca se publicaron, así que en varios modelos no se puede decir si la 2027 es realmente distinta.</p>")
+        f"<p>En resumen: la forma cambia en {len(cambi_forma)} modelos ({forma_txt}). El precio de lista está declarado para ambas versiones solo en {len(cambi_prezzo)} casos ({prezzo_txt}){', siempre al alza' if cambi_prezzo and len(aum) == len(cambi_prezzo) else ''}. Muchos datos de las versiones 2026 nunca se publicaron, así que en varios modelos no se puede decir si la 2027 es realmente distinta.</p>", f"<p><b>Nous avons comparé, critère par critère, les {len(pairs)} raquettes qui existent dans la base PadelMetrix en version 2026 et 2027</b> ({', '.join(marche)}). Pour chaque modèle, vous voyez ce qui change, ce qui reste identique et ce qui ne peut pas être comparé parce que le fabricant ou les revendeurs ne le communiquent pas.</p>"
+        f"<p>En bref : la forme change sur {len(cambi_forma)} modèles ({forma_txt}). Le prix catalogue n'est indiqué pour les deux versions que dans {len(cambi_prezzo)} cas ({prezzo_txt}){', toujours à la hausse' if cambi_prezzo and len(aum) == len(cambi_prezzo) else ''}. Beaucoup de données 2026 n'ont jamais été publiées : pour plusieurs modèles, il est donc impossible de dire si le 2027 est vraiment différent.</p>")
     metodo = L(
         '<p class="note">Come leggere le tabelle: "cambia" significa che le fonti dichiarano valori diversi per le due versioni. A volte la differenza dipende anche da come rivenditori diversi descrivono la stessa racchetta (per esempio il livello di gioco): prima di decidere guarda le fonti nelle schede. "Non confrontabile" significa che una delle due versioni non dichiara il dato.</p>',
         '<p class="note">How to read the tables: "changes" means the sources state different values for the two versions. Sometimes the difference also depends on how different retailers describe the same racket (for example the playing level): check the sources on each spec page before deciding. "Not comparable" means one of the two versions does not state the figure.</p>',
-        '<p class="note">Cómo leer las tablas: "cambia" significa que las fuentes declaran valores distintos para las dos versiones. A veces la diferencia depende también de cómo tiendas distintas describen la misma pala (por ejemplo el nivel de juego): antes de decidir mira las fuentes en cada ficha. "No comparable" significa que una de las dos versiones no declara el dato.</p>')
-    qa = [(L("Le racchette 2027 sono molto diverse dalle 2026?", "Are 2027 rackets very different from the 2026 ones?", "¿Las palas 2027 son muy distintas de las 2026?"),
+        '<p class="note">Cómo leer las tablas: "cambia" significa que las fuentes declaran valores distintos para las dos versiones. A veces la diferencia depende también de cómo tiendas distintas describen la misma pala (por ejemplo el nivel de juego): antes de decidir mira las fuentes en cada ficha. "No comparable" significa que una de las dos versiones no declara el dato.</p>', "<p class=\"note\">Comment lire les tableaux : « change » signifie que les sources indiquent des valeurs différentes pour les deux versions. Parfois la différence dépend aussi de la façon dont différents revendeurs décrivent la même raquette (par exemple le niveau de jeu) : vérifiez les sources sur chaque fiche avant de décider. « Non comparable » signifie qu'une des deux versions ne communique pas la donnée.</p>")
+    qa = [(L("Le racchette 2027 sono molto diverse dalle 2026?", "Are 2027 rackets very different from the 2026 ones?", "¿Las palas 2027 son muy distintas de las 2026?", "Les raquettes 2027 sont-elles très différentes des 2026 ?"),
            L(f"Dipende dal modello. Su {len(pairs)} rinnovi confrontati la forma cambia in {len(cambi_forma)} casi; negli altri le differenze dichiarate riguardano soprattutto materiali della faccia, finitura e prezzo.",
              f"It depends on the model. Across {len(pairs)} updates compared, the shape changes in {len(cambi_forma)} cases; in the others the stated differences are mostly about face materials, finish and price.",
-             f"Depende del modelo. En {len(pairs)} renovaciones comparadas la forma cambia en {len(cambi_forma)} casos; en las demás las diferencias declaradas son sobre todo de materiales de la cara, acabado y precio.")),
-          (L("Conviene comprare la 2026 scontata?", "Is the discounted 2026 worth buying?", "¿Conviene comprar la 2026 rebajada?"),
+             f"Depende del modelo. En {len(pairs)} renovaciones comparadas la forma cambia en {len(cambi_forma)} casos; en las demás las diferencias declaradas son sobre todo de materiales de la cara, acabado y precio.", f"Cela dépend du modèle. Sur {len(pairs)} mises à jour comparées, la forme change dans {len(cambi_forma)} cas ; dans les autres, les différences déclarées portent surtout sur les matériaux du tamis, la finition et le prix.")),
+          (L("Conviene comprare la 2026 scontata?", "Is the discounted 2026 worth buying?", "¿Conviene comprar la 2026 rebajada?", "Le 2026 en promotion vaut-il le coup ?"),
            L("Se forma, peso e bilanciamento restano uguali e la 2026 si trova scontata, spesso sì. Se cambia la forma, la racchetta si comporta in modo diverso e conviene provarle entrambe.",
              "If shape, weight and balance stay the same and the 2026 is discounted, often yes. If the shape changes, the racket behaves differently and it is worth trying both.",
-             "Si forma, peso y balance se mantienen y la 2026 está rebajada, muchas veces sí. Si cambia la forma, la pala se comporta distinto y conviene probar las dos."))]
+             "Si forma, peso y balance se mantienen y la 2026 está rebajada, muchas veces sí. Si cambia la forma, la pala se comporta distinto y conviene probar las dos.", "Si la forme, le poids et l'équilibre restent identiques et que le 2026 est en promotion, souvent oui. Si la forme change, la raquette se comporte différemment et il vaut la peine d'essayer les deux."))]
     faq_htm, faq_ld = faq(qa)
     corpo = intro + indice_htm + metodo + "".join(sezioni) + faq_htm
     titolo = L("Racchette padel 2027 vs 2026: cosa cambia modello per modello", "Padel rackets 2027 vs 2026: what changes, model by model",
-               "Palas de pádel 2027 vs 2026: qué cambia modelo por modelo")
+               "Palas de pádel 2027 vs 2026: qué cambia modelo por modelo", "Raquettes de padel 2027 vs 2026 : ce qui change, modèle par modèle")
     items = [x for _, a, b in pairs for x in (b,)]
     scrivi_articolo(slug, titolo + " | PadelMetrix",
                     L(f"{len(pairs)} racchette da padel confrontate voce per voce tra versione 2026 e 2027: forma, peso, bilanciamento, faccia, livello e prezzo.",
                       f"{len(pairs)} padel rackets compared item by item between the 2026 and 2027 versions: shape, weight, balance, face, level and price.",
-                      f"{len(pairs)} palas de pádel comparadas dato por dato entre la versión 2026 y la 2027: forma, peso, balance, cara, nivel y precio."),
-                    titolo, L("2027 vs 2026", "2027 vs 2026", "2027 vs 2026"), corpo, items=items, ld_extra=[faq_ld])
+                      f"{len(pairs)} palas de pádel comparadas dato por dato entre la versión 2026 y la 2027: forma, peso, balance, cara, nivel y precio.", f"{len(pairs)} raquettes de padel comparées critère par critère entre les versions 2026 et 2027 : forme, poids, équilibre, tamis, niveau et prix."),
+                    titolo, L("2027 vs 2026", "2027 vs 2026", "2027 vs 2026", "2027 vs 2026"), corpo, items=items, ld_extra=[faq_ld])
     RACCHETTE_ARTICOLO[slug] = [x["slug"] for _, a, b in pairs for x in (a, b)]
     return slug, titolo, L(f"{len(pairs)} rinnovi confrontati voce per voce: cosa cambia davvero.", f"{len(pairs)} updates compared item by item: what really changes.",
-                           f"{len(pairs)} renovaciones comparadas dato por dato: qué cambia de verdad.")
+                           f"{len(pairs)} renovaciones comparadas dato por dato: qué cambia de verdad.", f"{len(pairs)} mises à jour comparées critère par critère : ce qui change vraiment.")
 
 
 # ---------------------------------------------------------------- 10. Migliori racchette 2026 secondo le classifiche indipendenti
@@ -597,20 +625,20 @@ def migliori_2026(db):
     def nome(txt, s):
         return f'<a href="{url_r(per[s])}">{e(txt)}</a>' if s in per else e(txt)
 
-    th_pf = [L("#", "#", "#"), L("Racchetta (come la chiama la fonte)", "Racket (as named by the source)", "Pala (como la llama la fuente)"), L("Voto", "Score", "Nota"),
-             L("Potenza", "Power", "Potencia"), L("Controllo", "Control", "Control"), L("Uscita palla", "Ball exit", "Salida de bola"),
-             L("Maneggevolezza", "Handling", "Manejabilidad"), L("Punto dolce", "Sweet spot", "Punto dulce")]
+    th_pf = [L("#", "#", "#", "#"), L("Racchetta (come la chiama la fonte)", "Racket (as named by the source)", "Pala (como la llama la fuente)", "Raquette (nom donné par la source)"), L("Voto", "Score", "Nota", "Note"),
+             L("Potenza", "Power", "Potencia", "Puissance"), L("Controllo", "Control", "Control", "Contrôle"), L("Uscita palla", "Ball exit", "Salida de bola", "Sortie de balle"),
+             L("Maneggevolezza", "Handling", "Manejabilidad", "Maniabilité"), L("Punto dolce", "Sweet spot", "Punto dulce", "Sweet spot")]
     pf_rows = "".join("<tr>" + "".join(f"<td>{c}</td>" for c in (i, nome(n, s), f"<b>{v}</b>", *sub)) + "</tr>" for i, (n, s, v, *sub) in enumerate(PADELFUL, 1))
     tab_pf = f'<div class="tablebox"><table class="tab"><thead><tr>{"".join(f"<th>{t}</th>" for t in th_pf)}</tr></thead><tbody>{pf_rows}</tbody></table></div>'
 
-    sez = {"gen": L("Classifica generale", "Overall ranking", "Ranking general"), "hyb": L("Migliori polivalenti", "Best all-round", "Mejores polivalentes"),
-           "def": L("Migliori per il controllo", "Best for control", "Mejores para control")}
-    prof = {"gen": L("Attacco", "Attack", "Ataque"), "hyb": L("Polivalente", "All-round", "Polivalente"), "def": L("Controllo", "Control", "Control")}
+    sez = {"gen": L("Classifica generale", "Overall ranking", "Ranking general", "Classement général"), "hyb": L("Migliori polivalenti", "Best all-round", "Mejores polivalentes", "Meilleures polyvalentes"),
+           "def": L("Migliori per il controllo", "Best for control", "Mejores para control", "Meilleures pour le contrôle")}
+    prof = {"gen": L("Attacco", "Attack", "Ataque", "Attaque"), "hyb": L("Polivalente", "All-round", "Polivalente", "Polyvalente"), "def": L("Controllo", "Control", "Control", "Contrôle")}
     blocchi = []
     for k in ("gen", "hyb", "def"):
         rr = "".join(f"<tr><td>{i}</td><td>{nome(n, s)}</td><td><b>{v:.1f}</b></td><td>{p:.2f}</td></tr>"
                      for i, (_, n, s, v, p) in enumerate([x for x in VERDICT if x[0] == k], 1))
-        blocchi.append(f'<h3>{sez[k]}</h3><div class="tablebox"><table class="tab"><thead><tr><th>#</th><th>{L("Racchetta (come la chiama la fonte)", "Racket (as named by the source)", "Pala (como la llama la fuente)")}</th><th>Verdict Score</th><th>{L("Punteggio", "Profile score", "Puntuación")} {prof[k]}</th></tr></thead><tbody>{rr}</tbody></table></div>')
+        blocchi.append(f'<h3>{sez[k]}</h3><div class="tablebox"><table class="tab"><thead><tr><th>#</th><th>{L("Racchetta (come la chiama la fonte)", "Racket (as named by the source)", "Pala (como la llama la fuente)", "Raquette (nom donné par la source)")}</th><th>Verdict Score</th><th>{L("Punteggio", "Profile score", "Puntuación", "Note du profil")} {prof[k]}</th></tr></thead><tbody>{rr}</tbody></table></div>')
 
     pz = sorted([n for n in db if n["d"].get("valutazioni_padelzoom") and n["anno"] == 2026], key=lambda n: -n["d"]["valutazioni_padelzoom"]["globale"])[:5]
     pz_rows = "".join(f'<tr><td><a href="{url_r(n)}">{e(n["nome"])}</a></td><td><b>{n["d"]["valutazioni_padelzoom"]["globale"]}</b></td><td>{n["d"]["valutazioni_padelzoom"]["potenza"]}</td><td>{n["d"]["valutazioni_padelzoom"]["controllo"]}</td></tr>' for n in pz)
@@ -668,32 +696,48 @@ def migliori_2026(db):
 <p class="note">Fuente: padelzoom.es, notas indicadas en cada ficha.</p>
 <h2>Cómo usar estos rankings</h2>
 <p>Casi todas las palas de arriba son modelos para jugadores avanzados, con forma diamante o lágrima y notas altas de potencia. Si estás empezando o juegas sobre todo en defensa, mira la sección "control" de PadelVerdict o usa nuestro <a href="{P("selettore")}">selector Encuentra tu pala</a>.</p>
-<p class="note">Las dos webs declaran que no aceptan posiciones pagadas y que usan enlaces de afiliación. PadelMetrix no tiene relación con ninguna de ellas.</p>""")
-    qa = [(L("Qual è la migliore racchetta da padel del 2026?", "What is the best padel racket of 2026?", "¿Cuál es la mejor pala de pádel de 2026?"),
+<p class="note">Las dos webs declaran que no aceptan posiciones pagadas y que usan enlaces de afiliación. PadelMetrix no tiene relación con ninguna de ellas.</p>""", f"""<p><b>Quelles sont les meilleures raquettes de padel de 2026 ? Plutôt que de faire un énième classement, nous avons croisé ceux de deux sites de tests qui ne vendent pas de raquettes : Padelful et PadelVerdict.</b> La seule raquette présente dans les deux classements est la {ent_txt} : 8e sur Padelful avec 86/100 et 2e sur PadelVerdict avec 9,0 (1re parmi les raquettes d'attaque). Les autres positions varient beaucoup d'une source à l'autre : un classement unique serait donc inventé.</p>
+<p>Attention aux noms : les marques font plusieurs versions du même modèle (par exemple la Metalbone HRD et HRD+, ou la Viper Juan Lebrón et la Technical Viper). Nous les avons gardées séparées et n'avons mis un lien vers la fiche PadelMetrix que quand le modèle est exactement le même.</p>
+<h2>Le classement de Padelful</h2>
+<p>Padelful note les raquettes de 0 à 100 sur cinq aspects : puissance, contrôle, sortie de balle, maniabilité et sweet spot. Les notes viennent des données des fabricants, des avis d'analystes et d'avis de joueurs vérifiés ; le site précise qu'il ne teste pas chaque raquette en laboratoire ({fonte(PF_M, "méthode Padelful")}). Classement mis à jour en juillet 2026.</p>
+{tab_pf}
+<p class="note">Source : {fonte(PF, "Padelful, Mejores palas de pádel")}. Dans le texte de l'article, Padelful donne aussi des notes de 1 à 10 qui ne correspondent pas toujours aux badges : nous utilisons les badges.</p>
+<h2>Le classement de PadelVerdict</h2>
+<p>PadelVerdict évalue huit paramètres (puissance, effet, contrôle, stabilité, confort, maniabilité, sweet spot, jouabilité) et les combine dans le Verdict Score, avec des pénalités quand le confort ou le sweet spot passent sous un seuil et une correction basée sur le recoupement de plusieurs sources. Il publie aussi une note par profil de jeu. Il ne précise pas si les tests sont faits en laboratoire ou sur le terrain. Classement mis à jour en avril 2026.</p>
+{"".join(blocchi)}
+<p class="note">Source : {fonte(PV, "PadelVerdict, Mejores palas de pádel 2026")}.</p>
+<h2>Et Adidas ? Les notes de PadelZoom</h2>
+<p>Pour les raquettes Adidas 2026, notre base contient aussi les notes de PadelZoom (échelle de 1 à 10). Voici les cinq avec la meilleure note globale :</p>
+<div class="tablebox"><table class="tab"><thead><tr><th>Raquette</th><th>Globale</th><th>Puissance</th><th>Contrôle</th></tr></thead><tbody>{pz_rows}</tbody></table></div>
+<p class="note">Source : padelzoom.es, notes indiquées sur chaque fiche.</p>
+<h2>Comment utiliser ces classements</h2>
+<p>Presque toutes les raquettes en tête sont des modèles pour joueurs avancés, en forme diamant ou goutte d'eau, avec des notes de puissance élevées. Si vous débutez ou jouez surtout en défense, regardez la section « contrôle » de PadelVerdict ou utilisez notre outil <a href="{P("selettore")}">Trouve ta raquette</a>.</p>
+<p class="note">Les deux sites déclarent n'accepter aucun placement payant et utiliser des liens affiliés. PadelMetrix n'a aucun lien avec l'un ou l'autre.</p>""")
+    qa = [(L("Qual è la migliore racchetta da padel del 2026?", "What is the best padel racket of 2026?", "¿Cuál es la mejor pala de pádel de 2026?", "Quelle est la meilleure raquette de padel de 2026 ?"),
            L("Non esiste una risposta unica: le classifiche indipendenti non concordano. L'unica racchetta presente sia nella top 10 di Padelful sia nella classifica generale di PadelVerdict è la StarVie Black Titan 2026, una racchetta d'attacco per giocatori avanzati.",
              "There is no single answer: independent rankings disagree. The only racket in both Padelful's top 10 and PadelVerdict's overall ranking is the StarVie Black Titan 2026, an attacking racket for advanced players.",
-             "No hay una única respuesta: los rankings independientes no coinciden. La única pala presente tanto en el top 10 de Padelful como en el ranking general de PadelVerdict es la StarVie Black Titan 2026, una pala de ataque para jugadores avanzados.")),
-          (L("Queste classifiche si basano su test di laboratorio?", "Are these rankings based on lab tests?", "¿Estos rankings se basan en pruebas de laboratorio?"),
+             "No hay una única respuesta: los rankings independientes no coinciden. La única pala presente tanto en el top 10 de Padelful como en el ranking general de PadelVerdict es la StarVie Black Titan 2026, una pala de ataque para jugadores avanzados.", "Il n'y a pas de réponse unique : les classements indépendants ne sont pas d'accord. La seule raquette présente à la fois dans le top 10 de Padelful et dans le classement général de PadelVerdict est la StarVie Black Titan 2026, une raquette d'attaque pour joueurs avancés.")),
+          (L("Queste classifiche si basano su test di laboratorio?", "Are these rankings based on lab tests?", "¿Estos rankings se basan en pruebas de laboratorio?", "Ces classements reposent-ils sur des tests en laboratoire ?"),
            L("No. Padelful dichiara di combinare dati dei produttori, recensioni di esperti e opinioni di giocatori, senza prove di laboratorio; PadelVerdict non specifica come vengono fatte le prove.",
              "No. Padelful says it combines manufacturer data, expert reviews and player opinions, without lab tests; PadelVerdict does not specify how tests are done.",
-             "No. Padelful declara que combina datos de fabricantes, análisis de expertos y opiniones de jugadores, sin pruebas de laboratorio; PadelVerdict no especifica cómo se hacen las pruebas.")),
-          (L("Qual è la migliore racchetta 2026 per il controllo?", "What is the best 2026 racket for control?", "¿Cuál es la mejor pala 2026 para control?"),
+             "No. Padelful declara que combina datos de fabricantes, análisis de expertos y opiniones de jugadores, sin pruebas de laboratorio; PadelVerdict no especifica cómo se hacen las pruebas.", "Non. Padelful indique combiner données des fabricants, avis d'experts et avis de joueurs, sans tests en laboratoire ; PadelVerdict ne précise pas comment les tests sont réalisés.")),
+          (L("Qual è la migliore racchetta 2026 per il controllo?", "What is the best 2026 racket for control?", "¿Cuál es la mejor pala 2026 para control?", "Quelle est la meilleure raquette 2026 pour le contrôle ?"),
            L("Nella classifica per giocatori difensivi di PadelVerdict il primo posto va alla Nox ML10 Ventus Control 3K 2026 (8,8), seguita dalla Nox VK10 Ventus Control 12K 2026.",
              "In PadelVerdict's ranking for defensive players first place goes to the Nox ML10 Ventus Control 3K 2026 (8.8), followed by the Nox VK10 Ventus Control 12K 2026.",
-             "En el ranking de PadelVerdict para jugadores defensivos el primer puesto es para la Nox ML10 Ventus Control 3K 2026 (8,8), seguida de la Nox VK10 Ventus Control 12K 2026."))]
+             "En el ranking de PadelVerdict para jugadores defensivos el primer puesto es para la Nox ML10 Ventus Control 3K 2026 (8,8), seguida de la Nox VK10 Ventus Control 12K 2026.", "Dans le classement de PadelVerdict pour les joueurs défensifs, la première place revient à la Nox ML10 Ventus Control 3K 2026 (8,8), suivie de la Nox VK10 Ventus Control 12K 2026."))]
     faq_htm, faq_ld = faq(qa)
     corpo += faq_htm
     titolo = L("Le migliori racchette da padel 2026 secondo le classifiche indipendenti", "The best padel rackets of 2026 according to independent rankings",
-               "Las mejores palas de pádel 2026 según los rankings independientes")
+               "Las mejores palas de pádel 2026 según los rankings independientes", "Les meilleures raquettes de padel de 2026 selon les classements indépendants")
     slugs = list(dict.fromkeys([s for _, s, *_ in PADELFUL if s] + [s for _, _, s, _, _ in VERDICT if s]))
     scrivi_articolo(slug, titolo + " | PadelMetrix",
                     L("Le classifiche 2026 di Padelful e PadelVerdict a confronto, con voti, metodo e l'unica racchetta presente in entrambe.",
                       "Padelful's and PadelVerdict's 2026 rankings side by side, with scores, method and the only racket that appears in both.",
-                      "Los rankings 2026 de Padelful y PadelVerdict comparados, con notas, método y la única pala presente en los dos."),
-                    titolo, L("Migliori 2026", "Best of 2026", "Mejores 2026"), corpo, items=[per[s] for s in slugs if s in per], ld_extra=[faq_ld])
+                      "Los rankings 2026 de Padelful y PadelVerdict comparados, con notas, método y la única pala presente en los dos.", "Les classements 2026 de Padelful et PadelVerdict côte à côte, avec notes, méthode et la seule raquette présente dans les deux."),
+                    titolo, L("Migliori 2026", "Best of 2026", "Mejores 2026", "Meilleures de 2026"), corpo, items=[per[s] for s in slugs if s in per], ld_extra=[faq_ld])
     RACCHETTE_ARTICOLO[slug] = slugs
     return slug, titolo, L("Padelful e PadelVerdict a confronto: voti, metodo e l'unica racchetta in entrambe.", "Padelful and PadelVerdict side by side: scores, method and the one racket in both.",
-                           "Padelful y PadelVerdict comparados: notas, método y la única pala en los dos.")
+                           "Padelful y PadelVerdict comparados: notas, método y la única pala en los dos.", "Padelful et PadelVerdict côte à côte : notes, méthode et la seule raquette présente dans les deux.")
 
 
 
@@ -712,13 +756,14 @@ def pickleball_regole(db):
     url_pb = P("pickleball")
 
     def pl(p):
-        return f'<a href="{P("pickleball", p["slug"])}">{e(p["marca"])} {e(p["modello"])}</a>'
+        import genera_pickleball as GP
+        return f'<a href="{P("pickleball", p["slug"])}">{e(GP.titolo(p))}</a>'
 
     inizio_txt = ", ".join(pl(p) for p in inizio[:5])
-    reg, chg = fonte(PB_REG, L("Regolamento USA Pickleball 2026, edizione EPF in italiano", "2026 USA Pickleball Rulebook, EPF edition", "Reglamento USA Pickleball 2026, edición EPF")), fonte(PB_CHG, L("documento delle modifiche 2026 (Pickleball Canada)", "2026 rule change document (Pickleball Canada)", "documento de cambios 2026 (Pickleball Canada)"))
+    reg, chg = fonte(PB_REG, L("Regolamento USA Pickleball 2026, edizione EPF in italiano", "2026 USA Pickleball Rulebook, EPF edition", "Reglamento USA Pickleball 2026, edición EPF", "USA Pickleball Rulebook 2026, édition EPF")), fonte(PB_CHG, L("documento delle modifiche 2026 (Pickleball Canada)", "2026 rule change document (Pickleball Canada)", "documento de cambios 2026 (Pickleball Canada)", "Document des changements de règles 2026 (Pickleball Canada)"))
     cta = L(f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Hai capito le regole e ti serve la racchetta?</b><br>Nella nostra sezione pickleball trovi {len(pad)} racchette di {len({p["marca"] for p in pad})} marche, con peso, spessore, forma, omologazioni e opinioni delle recensioni indipendenti.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">Vedi le racchette da pickleball →</a></div>''',
             f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Got the rules and need a paddle?</b><br>Our pickleball section lists {len(pad)} paddles from {len({p["marca"] for p in pad})} brands, with weight, thickness, shape, approvals and summaries of independent reviews.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">See the pickleball paddles →</a></div>''',
-            f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>¿Ya conoces las reglas y necesitas pala?</b><br>En nuestra sección de pickleball tienes {len(pad)} palas de {len({p["marca"] for p in pad})} marcas, con peso, grosor, forma, homologaciones y resumen de las reseñas independientes.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">Ver las palas de pickleball →</a></div>''')
+            f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>¿Ya conoces las reglas y necesitas pala?</b><br>En nuestra sección de pickleball tienes {len(pad)} palas de {len({p["marca"] for p in pad})} marcas, con peso, grosor, forma, homologaciones y resumen de las reseñas independientes.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">Ver las palas de pickleball →</a></div>''', f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Vous connaissez les règles et il vous faut une raquette ?</b><br>Notre section pickleball recense {len(pad)} raquettes de {len({p["marca"] for p in pad})} marques, avec poids, épaisseur, forme, homologations et résumés de tests indépendants.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">Voir les raquettes de pickleball →</a></div>''')
     corpo = L(f'''<p><b>Il pickleball si gioca su un campo da 13,41 × 6,10 m, con una rete più bassa al centro, una racchetta piatta e una pallina di plastica forata.</b> Le regole sono poche, ma tre sono diverse da tutti gli altri sport di racchetta: il servizio dal basso, la regola dei due rimbalzi e la "kitchen", la zona vicino alla rete in cui non si può colpire al volo. Questa guida le spiega una per una, seguendo il regolamento ufficiale USA Pickleball 2026, quello adottato anche dalla Federazione Europea (EPF).</p>
 <h2>Le regole in breve</h2>
 <ol>
@@ -874,38 +919,89 @@ def pickleball_regole(db):
 <li>en torneos se exige un modelo homologado "USA Pickleball Approved", con la marca visible (3.D.1).</li>
 </ul>
 <p>Para jugar con amigos la homologación no hace falta. De las {len(pad)} palas de <a href="{url_pb}">nuestra sección de pickleball</a>, {len(approvate)} están homologadas por USA Pickleball. Si estás empezando, mira las pensadas para principiantes: {inizio_txt}.</p>
-<p class="note">Fuentes: {reg}; {chg}. El reglamento completo incluye también normas para árbitros, torneos, silla de ruedas y jugadores con discapacidad, que aquí no tratamos.</p>''')
+<p class="note">Fuentes: {reg}; {chg}. El reglamento completo incluye también normas para árbitros, torneos, silla de ruedas y jugadores con discapacidad, que aquí no tratamos.</p>''', f'''<p><b>Le pickleball se joue sur un terrain de 44 × 20 pieds (13,41 × 6,10 m), avec un filet qui s'abaisse au centre, une raquette pleine et une balle en plastique perforée.</b> Les règles sont peu nombreuses, mais trois ne ressemblent à aucun autre sport de raquette : le service à la cuillère, la règle des deux rebonds et la « kitchen », la zone près du filet où l'on ne peut pas jouer de volée. Ce guide les explique une par une, d'après le règlement officiel USA Pickleball 2026, adopté aussi par la Fédération européenne de pickleball (EPF).</p>
+<h2>Les règles en bref</h2>
+<ol>
+<li>Servez à la cuillère, en diagonale, en dépassant la kitchen adverse.</li>
+<li>Le service et le retour doivent rebondir avant d'être frappés : c'est la règle des deux rebonds.</li>
+<li>On ne peut pas jouer de volée dans la kitchen (7 pieds, soit 2,13 m, depuis le filet).</li>
+<li>Avec le comptage traditionnel, seule l'équipe au service marque ; les jeux se jouent en 11 points, avec 2 points d'écart.</li>
+<li>Une balle qui touche une ligne est bonne, sauf un service qui tombe sur la ligne de la kitchen.</li>
+</ol>
+{cta}
+<h2>Le terrain et le filet</h2>
+<p>Le terrain mesure <b>20 pieds de large et 44 pieds de long</b> (6,10 × 13,41 m), le même en simple et en double (règle 3.A.1). Contre le filet, de chaque côté, se trouve la <b>zone de non-volée</b>, ou kitchen, profonde de <b>7 pieds</b> (2,13 m). Le filet mesure <b>36 pouces aux poteaux et 34 pouces au centre</b> (91,4 et 86,4 cm, règles 3.B.6 et 3.B.7) : plus bas qu'au tennis, c'est pourquoi une si grande partie du jeu se déroule au filet.</p>
+<h2>Le service</h2>
+<p>Il existe deux façons de servir.</p>
+<ul>
+<li><b>Service de volée</b> (règle 7.C) : à l'impact, la raquette doit suivre un arc clairement ascendant, la tête de la raquette ne peut pas être au-dessus du poignet et la balle doit être frappée au plus à hauteur de la taille. Coup droit ou revers sont tous deux autorisés.</li>
+<li><b>Service après rebond</b> (drop serve, règle 7.D) : lâchez la balle d'une hauteur naturelle, sans la pousser, et frappez-la après le rebond. Dans ce cas, le mouvement du bras et la hauteur d'impact n'ont pas d'importance.</li>
+</ul>
+<p>À l'impact, au moins un pied doit être au sol derrière la ligne de fond, dans la zone de service (7.A). Le service se joue <b>en diagonale</b> et doit dépasser la kitchen adverse (7.E). Depuis 2026, l'effet ne peut être donné que par la raquette à l'impact, pas par la main au moment de lâcher la balle (7.B.2).</p>
+<h2>La règle des deux rebonds</h2>
+<p>Le service doit rebondir dans le camp du relanceur, et le retour doit rebondir dans le camp du serveur. Ce n'est qu'après ces deux rebonds que les joueurs peuvent jouer de volée (règle 10.A). Cela empêche le serveur de monter au filet et de conclure le point aussitôt : c'est pourquoi les premiers coups de chaque échange se jouent presque toujours du fond.</p>
+<h2>La kitchen, ou zone de non-volée</h2>
+<p>On ne peut pas jouer de volée dans la kitchen (règle 11.A). On peut y entrer quand on veut, par exemple pour jouer une balle qui a déjà rebondi. Sont des fautes :</p>
+<ul>
+<li>toucher la kitchen, ligne comprise, en jouant une volée ;</li>
+<li>y être emporté par l'élan après une volée, même si la balle est déjà morte ;</li>
+<li>jouer une volée avant d'avoir les deux pieds ressortis de la kitchen.</li>
+</ul>
+<h2>Le comptage des points</h2>
+<p>Avec le comptage traditionnel, <b>seule l'équipe au service marque</b> (règle 4.A). Un jeu se joue en 11 points, avec 2 points d'écart (4.B). En double, le score s'annonce avec <b>trois nombres</b> : score du serveur, score du relanceur et numéro du serveur, 1 ou 2. Un jeu commence à <b>« zéro – zéro – deux »</b> car la première équipe au service n'a qu'un seul serveur (6.B.2). Ensuite, les deux joueurs servent : quand l'équipe perd un échange avec le premier serveur, c'est le partenaire qui sert ; quand elle le perd aussi avec le second serveur, le service passe aux adversaires (5.B).</p>
+<p>En 2026, le règlement prévoit aussi, à titre provisoire, le <b>rally scoring</b> : celui qui gagne l'échange marque, même en retour (14.A.2). C'est le directeur du tournoi qui décide de l'utiliser.</p>
+<h2>Bonne ou faute</h2>
+<p>Une balle qui touche une ligne est <b>bonne</b>, avec une exception : un service qui tombe sur la ligne de la kitchen est faute (8.C). Pour annoncer « out », il faut un espace visible entre la balle et la ligne (8.E), et l'annonce doit être faite rapidement, de la voix ou d'un signe de la main (8.F). Si les partenaires ne sont pas d'accord, la balle est bonne (8.H). Les spectateurs ne peuvent pas être consultés (8.J).</p>
+<h2>Les fautes les plus courantes</h2>
+<ul>
+<li>la balle tombe dehors ou ne passe pas le filet (10.C) ;</li>
+<li>la balle touche un joueur ou ses vêtements ; la main sous le poignet compte comme la raquette (10.C.3) ;</li>
+<li>frapper la balle deux fois, ou que les deux partenaires la frappent (10.D) ;</li>
+<li>toucher le filet ou les poteaux pendant que la balle est en jeu (13.G) ;</li>
+<li>jouer une volée dans la kitchen (11.A).</li>
+</ul>
+<h2>La raquette : ce que dit le règlement</h2>
+<p>Une raquette de pickleball est pleine et n'a pas de trous. Le règlement ne fixe que quelques limites (règle 3.D) :</p>
+<ul>
+<li>longueur maximale <b>17 pouces</b> (43,18 cm) ;</li>
+<li>longueur plus largeur, protège-cadre et embout compris, pas plus de <b>24 pouces</b> (60,96 cm) ;</li>
+<li>aucune limite de poids ni d'épaisseur ;</li>
+<li>une surface lisse et non réfléchissante : pas de trous, de caoutchouc ni de textures rugueuses qui ajoutent de l'effet (3.D.5) ;</li>
+<li>les tournois exigent un modèle « USA Pickleball Approved » avec marquages visibles (3.D.1).</li>
+</ul>
+<p>Pour jouer en loisir, l'homologation n'est pas nécessaire. Sur les {len(pad)} raquettes de <a href="{url_pb}">notre section pickleball</a>, {len(approvate)} sont homologuées USA Pickleball. Si vous débutez, regardez celles adaptées aux débutants : {inizio_txt}.</p>
+<p class="note">Sources : {reg} ; {chg}. Le règlement complet traite aussi de l'arbitrage, des tournois, du jeu en fauteuil et du jeu adapté, qui ne sont pas abordés ici.</p>''')
     corpo += cta
-    qa = [(L("Il servizio nel pickleball si fa dal basso?", "Is the pickleball serve underhand?", "¿El saque de pickleball es por abajo?"),
+    qa = [(L("Il servizio nel pickleball si fa dal basso?", "Is the pickleball serve underhand?", "¿El saque de pickleball es por abajo?", "Le service au pickleball se fait-il à la cuillère ?"),
            L("Sì. Nel servizio al volo la racchetta deve salire dal basso verso l'alto, la sua testa non può superare il polso e la palla va colpita sotto la vita. In alternativa si può fare il servizio a rimbalzo, lasciando cadere la palla e colpendola dopo il rimbalzo.",
              "Yes. On a volley serve the paddle must move upward, its head cannot be above the wrist and the ball must be hit below the waist. Alternatively you can use the drop serve, letting the ball bounce before hitting it.",
-             "Sí. En el saque de volea la pala debe subir de abajo arriba, su cabeza no puede superar la muñeca y la pelota se golpea por debajo de la cintura. También se puede hacer el saque con bote, dejando caer la pelota y golpeándola tras el bote.")),
-          (L("Cos'è la kitchen nel pickleball?", "What is the kitchen in pickleball?", "¿Qué es la kitchen en el pickleball?"),
+             "Sí. En el saque de volea la pala debe subir de abajo arriba, su cabeza no puede superar la muñeca y la pelota se golpea por debajo de la cintura. También se puede hacer el saque con bote, dejando caer la pelota y golpeándola tras el bote.", "Oui. Pour un service de volée, la raquette doit monter, sa tête ne peut pas être au-dessus du poignet et la balle doit être frappée sous la taille. Sinon, on peut utiliser le service après rebond, en laissant la balle rebondir avant de la frapper.")),
+          (L("Cos'è la kitchen nel pickleball?", "What is the kitchen in pickleball?", "¿Qué es la kitchen en el pickleball?", "Qu'est-ce que la kitchen au pickleball ?"),
            L("È la zona di non volée: 2,13 metri di campo su ciascun lato della rete in cui non si può colpire la palla al volo. Ci si può entrare per giocare palle che hanno già rimbalzato.",
              "It is the non-volley zone: 7 feet of court on each side of the net where you cannot volley. You may step in to play balls that have already bounced.",
-             "Es la zona de no volea: 2,13 metros de pista a cada lado de la red donde no se puede volear. Se puede entrar para jugar pelotas que ya han botado.")),
-          (L("A quanti punti si gioca a pickleball?", "How many points is a pickleball game?", "¿A cuántos puntos se juega al pickleball?"),
+             "Es la zona de no volea: 2,13 metros de pista a cada lado de la red donde no se puede volear. Se puede entrar para jugar pelotas que ya han botado.", "C'est la zone de non-volée : 7 pieds (2,13 m) de terrain de chaque côté du filet où l'on ne peut pas jouer de volée. On peut y entrer pour jouer des balles qui ont déjà rebondi.")),
+          (L("A quanti punti si gioca a pickleball?", "How many points is a pickleball game?", "¿A cuántos puntos se juega al pickleball?", "En combien de points se joue un jeu de pickleball ?"),
            L("Di solito a 11, con almeno 2 punti di scarto. Con il punteggio tradizionale fa punto solo chi serve; alcuni tornei usano il rally scoring, in cui ogni scambio vale un punto.",
              "Usually to 11, win by 2. With traditional scoring only the serving side scores; some tournaments use rally scoring, where every rally is worth a point.",
-             "Normalmente a 11, con al menos 2 puntos de diferencia. Con el tanteo tradicional solo puntúa quien saca; algunos torneos usan el rally scoring, en el que cada punto cuenta.")),
-          (L("Quanto è grande un campo da pickleball?", "How big is a pickleball court?", "¿Cuánto mide una pista de pickleball?"),
+             "Normalmente a 11, con al menos 2 puntos de diferencia. Con el tanteo tradicional solo puntúa quien saca; algunos torneos usan el rally scoring, en el que cada punto cuenta.", "En général en 11 points, avec 2 points d'écart. Avec le comptage traditionnel, seule l'équipe au service marque ; certains tournois utilisent le rally scoring, où chaque échange vaut un point.")),
+          (L("Quanto è grande un campo da pickleball?", "How big is a pickleball court?", "¿Cuánto mide una pista de pickleball?", "Quelles sont les dimensions d'un terrain de pickleball ?"),
            L("13,41 metri per 6,10 (44 × 20 piedi), sia per il singolare sia per il doppio. La rete è alta 91,44 cm ai lati e 86,36 cm al centro.",
              "44 by 20 feet (13.41 × 6.10 m), for both singles and doubles. The net is 36 inches high at the sidelines and 34 inches at the centre.",
-             "13,41 por 6,10 metros (44 × 20 pies), tanto en individuales como en dobles. La red mide 91,44 cm en los laterales y 86,36 cm en el centro.")),
-          (L("Serve una racchetta omologata per giocare?", "Do I need an approved paddle to play?", "¿Hace falta una pala homologada para jugar?"),
+             "13,41 por 6,10 metros (44 × 20 pies), tanto en individuales como en dobles. La red mide 91,44 cm en los laterales y 86,36 cm en el centro.", "44 pieds sur 20 (13,41 × 6,10 m), en simple comme en double. Le filet mesure 36 pouces (91,4 cm) aux poteaux et 34 pouces (86,4 cm) au centre.")),
+          (L("Serve una racchetta omologata per giocare?", "Do I need an approved paddle to play?", "¿Hace falta una pala homologada para jugar?", "Faut-il une raquette homologuée pour jouer ?"),
            L("Solo nei tornei ufficiali, dove serve un modello USA Pickleball Approved. Per giocare per divertimento va bene qualsiasi racchetta da pickleball.",
              "Only in official tournaments, which require a USA Pickleball Approved model. For casual play any pickleball paddle will do.",
-             "Solo en torneos oficiales, donde se exige un modelo USA Pickleball Approved. Para jugar por diversión vale cualquier pala de pickleball."))]
+             "Solo en torneos oficiales, donde se exige un modelo USA Pickleball Approved. Para jugar por diversión vale cualquier pala de pickleball.", "Seulement dans les tournois officiels, qui exigent un modèle USA Pickleball Approved. Pour jouer en loisir, n'importe quelle raquette de pickleball convient."))]
     faq_htm, faq_ld = faq(qa)
     corpo += faq_htm
-    titolo = L("Regolamento del pickleball 2026: le regole spiegate semplici", "Pickleball rules 2026: the rules explained simply", "Reglamento del pickleball 2026: las reglas explicadas fácil")
+    titolo = L("Regolamento del pickleball 2026: le regole spiegate semplici", "Pickleball rules 2026: the rules explained simply", "Reglamento del pickleball 2026: las reglas explicadas fácil", "Règles du pickleball 2026 : les règles expliquées simplement")
     scrivi_articolo(slug, titolo + " | PadelMetrix",
                     L("Le regole del pickleball secondo il regolamento ufficiale 2026: campo, servizio dal basso, regola dei due rimbalzi, kitchen, punteggio, falli e misure della racchetta.",
                       "Pickleball rules from the official 2026 rulebook: court, underhand serve, two-bounce rule, kitchen, scoring, faults and paddle limits.",
-                      "Las reglas del pickleball según el reglamento oficial 2026: pista, saque por abajo, regla de los dos botes, kitchen, tanteo, faltas y medidas de la pala."),
-                    titolo, L("Regolamento pickleball", "Pickleball rules", "Reglamento pickleball"), corpo, ld_extra=[faq_ld])
+                      "Las reglas del pickleball según el reglamento oficial 2026: pista, saque por abajo, regla de los dos botes, kitchen, tanteo, faltas y medidas de la pala.", "Les règles du pickleball d'après le règlement officiel 2026 : terrain, service à la cuillère, règle des deux rebonds, kitchen, comptage des points, fautes et limites de la raquette."),
+                    titolo, L("Regolamento pickleball", "Pickleball rules", "Reglamento pickleball", "Règles du pickleball"), corpo, ld_extra=[faq_ld])
     return slug, titolo, L("Campo, servizio, due rimbalzi, kitchen e punteggio, secondo il regolamento 2026.", "Court, serve, two bounces, kitchen and scoring, per the 2026 rulebook.",
-                           "Pista, saque, dos botes, kitchen y tanteo, según el reglamento 2026.")
+                           "Pista, saque, dos botes, kitchen y tanteo, según el reglamento 2026.", "Terrain, service, deux rebonds, kitchen et comptage des points, d'après le règlement 2026.")
 
 
 
@@ -920,11 +1016,11 @@ def padel_regole(db):
     adulti = [n for n in db if n["categoria"] != "junior"]
     inizio = [n for n in adulti if n["livello"] in ("principiante", "principiante-intermedio")]
     url_r_all, url_sel = P("racchette"), P("selettore")
-    reg = fonte(PD_REG, L("Regolamento del padel FIP, revisione in vigore dal 1° gennaio 2026", "FIP Padel Rules, revision in force from 1 January 2026", "Reglas del Pádel FIP, revisión en vigor desde el 1 de enero de 2026"))
-    star = fonte(PD_STAR, L("comunicato FIP sullo Star Point", "FIP Star Point announcement", "comunicado FIP sobre el Star Point"))
+    reg = fonte(PD_REG, L("Regolamento del padel FIP, revisione in vigore dal 1° gennaio 2026", "FIP Padel Rules, revision in force from 1 January 2026", "Reglas del Pádel FIP, revisión en vigor desde el 1 de enero de 2026", "Règlement du padel FIP, révision en vigueur depuis le 1er janvier 2026"))
+    star = fonte(PD_STAR, L("comunicato FIP sullo Star Point", "FIP Star Point announcement", "comunicado FIP sobre el Star Point", "Annonce du Star Point par la FIP"))
     box = lambda: L(f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Regole chiare? Ora scegli la racchetta giusta.</b><br>Nel nostro database ci sono {len(adulti)} racchette da padel 2026 e 2027, con forma, peso, bilanciamento e voti delle recensioni indipendenti. Se non sai da dove partire, il test ti consiglia in 2 minuti.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Fai il test</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">Vedi tutte le racchette →</a></div>''',
                     f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Rules clear? Now pick the right racket.</b><br>Our database has {len(adulti)} 2026 and 2027 padel rackets, with shape, weight, balance and independent review scores. Not sure where to start? The quiz gives you a recommendation in 2 minutes.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Take the quiz</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">See all rackets →</a></div>''',
-                    f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>¿Reglas claras? Ahora elige la pala adecuada.</b><br>En nuestra base de datos hay {len(adulti)} palas de pádel 2026 y 2027, con forma, peso, balance y notas de las reseñas independientes. Si no sabes por dónde empezar, el test te recomienda en 2 minutos.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Haz el test</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">Ver todas las palas →</a></div>''')
+                    f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>¿Reglas claras? Ahora elige la pala adecuada.</b><br>En nuestra base de datos hay {len(adulti)} palas de pádel 2026 y 2027, con forma, peso, balance y notas de las reseñas independientes. Si no sabes por dónde empezar, el test te recomienda en 2 minutos.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Haz el test</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">Ver todas las palas →</a></div>''', f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Les règles sont claires ? Choisissez maintenant la bonne raquette.</b><br>Notre base contient {len(adulti)} raquettes de padel 2026 et 2027, avec forme, poids, équilibre et notes de tests indépendants. Vous ne savez pas par où commencer ? Le quiz vous donne une recommandation en 2 minutes.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Faire le quiz</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">Voir toutes les raquettes →</a></div>''')
     corpo = L(f'''<p><b>Il padel si gioca in doppio su un campo di 20 × 10 metri chiuso da pareti, con una rete alta 88 cm al centro e una pallina simile a quella del tennis.</b> Le pareti sono la vera differenza: la palla può rimbalzarci contro e restare in gioco. Questa guida spiega le regole una per una seguendo il regolamento ufficiale della Federazione Internazionale (FIP), nella revisione in vigore dal 1° gennaio 2026, con le novità di quest'anno come lo Star Point.</p>
 <h2>Le regole in breve</h2>
 <ol>
@@ -1104,38 +1200,97 @@ def padel_regole(db):
 <li>sin límite de peso.</li>
 </ul>
 <p>Todas las palas que encuentras en las tiendas cumplen estas medidas: la elección depende de forma, peso y balance. En nuestra base de datos hay {len(adulti)} palas 2026 y 2027, {len(inizio)} de ellas pensadas para quien empieza o tiene nivel principiante-intermedio. Puedes filtrarlas en la <a href="{url_r_all}">página de palas</a> o pedir consejo al <a href="{url_sel}">test "Encuentra tu pala"</a>. Para entender qué cambia entre formas, lee las <a href="{P("guide")}">guías</a>.</p>
-<p class="note">Fuentes: {reg}; {star}. El reglamento completo incluye también normas sobre árbitros, conducta y torneos, que aquí no tratamos.</p>''')
+<p class="note">Fuentes: {reg}; {star}. El reglamento completo incluye también normas sobre árbitros, conducta y torneos, que aquí no tratamos.</p>''', f'''<p><b>Le padel se joue en double sur un terrain de 20 × 10 m entouré de murs, avec un filet de 88 cm au centre et une balle semblable à une balle de tennis.</b> Les murs sont la vraie différence : la balle peut rebondir dessus et rester en jeu. Ce guide explique les règles une par une, d'après le règlement officiel de la Fédération internationale de padel (FIP), dans la révision en vigueur depuis le 1er janvier 2026, y compris les nouveautés de cette année comme le Star Point.</p>
+<h2>Les règles en bref</h2>
+<ol>
+<li>Servez à la cuillère : faites rebondir la balle et frappez-la à hauteur de la taille ou en dessous, en diagonale.</li>
+<li>Vous avez deux services par point, comme au tennis.</li>
+<li>La balle doit d'abord rebondir dans le camp adverse ; ensuite, elle peut toucher les murs et le grillage.</li>
+<li>Renvoyez la balle avant son deuxième rebond au sol, même après qu'elle a touché les murs de votre côté.</li>
+<li>Comptage comme au tennis : 15, 30, 40, jeu ; sets en 6 jeux, au meilleur des 3 sets.</li>
+</ol>
+{box()}
+<h2>Le terrain, le filet et la balle</h2>
+<p>Le terrain mesure <b>20 mètres de long et 10 mètres de large</b>. À chaque extrémité se trouvent des murs de 3 m surmontés d'1 m de grillage, soit 4 m au total ; les côtés combinent murs et grillage en escalier. Le filet mesure <b>88 cm au centre et jusqu'à 92 cm aux extrémités</b>. La balle fait 6,35–6,77 cm de diamètre et pèse 56–59,4 grammes, avec un rebond légèrement plus bas qu'une balle de tennis.</p>
+<h2>Le service</h2>
+<p>C'est le service qui suscite le plus de doutes (règle 6) :</p>
+<ul>
+<li>le serveur a au moins un pied sur la ligne de service ou derrière, dans la moitié comprise entre la ligne centrale et le mur latéral ;</li>
+<li>il fait rebondir la balle au sol derrière la ligne, puis la frappe ;</li>
+<li>à l'impact, la balle doit être <b>à hauteur de la taille ou en dessous</b>, avec au moins un pied au sol ;</li>
+<li>la balle doit passer le filet <b>en diagonale</b> et rebondir dans le carré de service adverse ;</li>
+<li>si le premier service est faute, il y a un <b>second service</b>.</li>
+</ul>
+<p>Après avoir rebondi dans le bon carré, la balle peut toucher la vitre, mais si elle touche le grillage avant le deuxième rebond, le service est faute. Si la balle touche le filet et tombe dans le carré sans toucher le grillage, le service est rejoué (let).</p>
+<h2>Comment fonctionnent les murs</h2>
+<p>C'est ce qui rend le padel unique (règles 12 et 14).</p>
+<ul>
+<li>Un coup est bon si la balle <b>rebondit d'abord dans le camp adverse</b> ; ensuite, elle peut toucher murs, grillage ou filet.</li>
+<li>Vous pouvez aussi frapper la balle contre un <b>mur de votre côté</b> : si elle passe ensuite le filet et rebondit dans le camp adverse, le coup est bon.</li>
+<li>Quand la balle arrive de votre côté, vous pouvez la jouer de volée, ou après un rebond, même après qu'elle a touché les murs : l'important est qu'elle <b>ne rebondisse pas deux fois au sol</b>.</li>
+<li>Sortir du terrain pour jouer la balle n'est autorisé que sur les terrains disposant de la zone de sécurité requise (règle 16).</li>
+</ul>
+<h2>Le comptage et le Star Point</h2>
+<p>Le comptage est le même qu'au tennis (règle 1) : <b>15, 30, 40, jeu</b>. À 40–40, on joue l'avantage. Un set se joue en 6 jeux avec 2 jeux d'écart ; à 6–6, on joue un <b>tie-break en 7 points</b>, là encore avec 2 points d'écart. Les matchs se jouent au meilleur des <b>3 sets</b>. Les joueurs changent de côté quand le nombre total de jeux du set est impair, et tous les 6 points dans le tie-break.</p>
+<p><b>Nouveauté 2026 : le Star Point.</b> Depuis 2026, sur les circuits Premier Padel, CUPRA FIP Tour, FIP Promises et FIP Beyond, à 40–40 on joue au maximum deux avantages. Si l'équipe qui a l'avantage perd aussi le second, un seul point décisif, le Star Point, attribue le jeu. Beaucoup de clubs utilisent plutôt le <b>point en or</b> : à 40–40, on joue directement un seul point décisif. Le règlement prévoit les deux comme formats alternatifs.</p>
+<h2>Les fautes les plus courantes</h2>
+<ul>
+<li>toucher le filet, les poteaux ou le camp adverse avec le corps, la raquette ou la dragonne pendant que la balle est en jeu ;</li>
+<li>laisser la balle rebondir deux fois au sol ;</li>
+<li>frapper la balle de façon qu'elle touche le grillage ou le mur adverse <b>avant</b> de rebondir au sol ;</li>
+<li>frapper la balle deux fois, ou que les deux partenaires la frappent ;</li>
+<li>être touché par la balle, sur le corps ou les vêtements ;</li>
+<li>rater aussi le second service.</li>
+</ul>
+<h2>Les autres nouveautés 2026</h2>
+<ul>
+<li>au service, un pied <b>sur la ligne</b> ou derrière suffit, et la balle doit toujours être sous la taille ;</li>
+<li>l'échauffement avant le match passe de 5 à 3 minutes ;</li>
+<li>si la dragonne casse pendant un point, ce point est perdu ;</li>
+<li>sur la raquette, les trous le long du bord peuvent être non ronds, jusqu'à 20 mm.</li>
+</ul>
+<h2>La raquette : ce que dit le règlement</h2>
+<p>Le règlement FIP fixe les dimensions maximales de la raquette :</p>
+<ul>
+<li>longueur totale, tête plus manche, pas plus de <b>45,5 cm</b> ;</li>
+<li>tête pas plus large que <b>26 cm</b> ni plus épaisse que <b>38 mm</b> ;</li>
+<li>trous cylindriques de 9–13 mm, en nombre libre ;</li>
+<li>une dragonne obligatoire, non élastique, de 35 cm au maximum ;</li>
+<li>aucune limite de poids.</li>
+</ul>
+<p>Toutes les raquettes vendues en magasin respectent ces limites : le choix se fait sur la forme, le poids et l'équilibre. Notre base contient {len(adulti)} raquettes 2026 et 2027, dont {len(inizio)} destinées aux débutants ou aux joueurs débutants-intermédiaires. Vous pouvez les filtrer sur la <a href="{url_r_all}">page des raquettes</a> ou obtenir une recommandation avec le <a href="{url_sel}">quiz Trouve ta raquette</a>. Pour comprendre les différences entre les formes, lisez les <a href="{P("guide")}">guides</a>.</p>
+<p class="note">Sources : {reg} ; {star}. Le règlement complet traite aussi de l'arbitrage, du comportement et des tournois, qui ne sont pas abordés ici.</p>''')
     corpo += box()
-    qa = [(L("Nel padel il servizio si fa dal basso?", "Is the padel serve underhand?", "¿En el pádel se saca por abajo?"),
+    qa = [(L("Nel padel il servizio si fa dal basso?", "Is the padel serve underhand?", "¿En el pádel se saca por abajo?", "Le service au padel se fait-il à la cuillère ?"),
            L("Sì. Si lascia rimbalzare la palla a terra dietro la linea di servizio e la si colpisce all'altezza della vita o più in basso, in diagonale. Ci sono due servizi per punto.",
              "Yes. You bounce the ball behind the service line and hit it at or below waist height, diagonally. There are two serves per point.",
-             "Sí. Se bota la pelota detrás de la línea de saque y se golpea a la altura de la cintura o por debajo, en diagonal. Hay dos saques por punto.")),
-          (L("La palla può toccare le pareti?", "Can the ball hit the walls?", "¿La pelota puede tocar las paredes?"),
+             "Sí. Se bota la pelota detrás de la línea de saque y se golpea a la altura de la cintura o por debajo, en diagonal. Hay dos saques por punto.", "Oui. On fait rebondir la balle derrière la ligne de service et on la frappe à hauteur de la taille ou en dessous, en diagonale. Il y a deux services par point.")),
+          (L("La palla può toccare le pareti?", "Can the ball hit the walls?", "¿La pelota puede tocar las paredes?", "La balle peut-elle toucher les murs ?"),
            L("Sì, ma deve rimbalzare prima a terra nel campo avversario. Puoi anche giocarla contro una parete del tuo campo, purché poi passi la rete e rimbalzi nel campo avversario.",
              "Yes, but it must bounce on the ground in the opponents' court first. You can also play it off a wall on your side, as long as it then clears the net and bounces in the opponents' court.",
-             "Sí, pero debe botar primero en el suelo del campo rival. También puedes jugarla contra una pared de tu campo, siempre que después pase la red y bote en el campo rival.")),
-          (L("Cos'è lo Star Point nel padel?", "What is the Star Point in padel?", "¿Qué es el Star Point en el pádel?"),
+             "Sí, pero debe botar primero en el suelo del campo rival. También puedes jugarla contra una pared de tu campo, siempre que después pase la red y bote en el campo rival.", "Oui, mais elle doit d'abord rebondir au sol dans le camp adverse. Vous pouvez aussi la jouer contre un mur de votre côté, à condition qu'elle passe ensuite le filet et rebondisse dans le camp adverse.")),
+          (L("Cos'è lo Star Point nel padel?", "What is the Star Point in padel?", "¿Qué es el Star Point en el pádel?", "Qu'est-ce que le Star Point au padel ?"),
            L("È la regola introdotta nel 2026 nei circuiti professionistici: sul 40 pari si giocano al massimo due vantaggi, poi un punto decisivo che assegna il gioco.",
              "It is the rule introduced in 2026 on the pro circuits: at 40–40 a maximum of two advantages are played, then a single deciding point wins the game.",
-             "Es la regla introducida en 2026 en los circuitos profesionales: con 40 iguales se juegan como máximo dos ventajas y después un punto decisivo que da el juego.")),
-          (L("Quanto è grande un campo da padel?", "How big is a padel court?", "¿Cuánto mide una pista de pádel?"),
+             "Es la regla introducida en 2026 en los circuitos profesionales: con 40 iguales se juegan como máximo dos ventajas y después un punto decisivo que da el juego.", "C'est la règle introduite en 2026 sur les circuits professionnels : à 40–40, on joue au maximum deux avantages, puis un seul point décisif attribue le jeu.")),
+          (L("Quanto è grande un campo da padel?", "How big is a padel court?", "¿Cuánto mide una pista de pádel?", "Quelles sont les dimensions d'un terrain de padel ?"),
            L("20 metri per 10, con pareti di fondo alte 3 metri più 1 metro di rete metallica. La rete è alta 88 cm al centro.",
              "20 by 10 metres, with 3 m back walls plus 1 m of wire mesh. The net is 88 cm high at the centre.",
-             "20 por 10 metros, con paredes de fondo de 3 metros más 1 metro de malla metálica. La red mide 88 cm en el centro.")),
-          (L("Quali sono le misure massime della racchetta da padel?", "What are the maximum padel racket dimensions?", "¿Cuáles son las medidas máximas de la pala de pádel?"),
+             "20 por 10 metros, con paredes de fondo de 3 metros más 1 metro de malla metálica. La red mide 88 cm en el centro.", "20 mètres sur 10, avec des murs de fond de 3 m plus 1 m de grillage. Le filet mesure 88 cm au centre.")),
+          (L("Quali sono le misure massime della racchetta da padel?", "What are the maximum padel racket dimensions?", "¿Cuáles son las medidas máximas de la pala de pádel?", "Quelles sont les dimensions maximales d'une raquette de padel ?"),
            L("Lunghezza totale 45,5 cm, testa larga 26 cm e spessa 38 mm al massimo. Non c'è un limite di peso e il laccetto da polso è obbligatorio.",
              "Total length 45.5 cm, head up to 26 cm wide and 38 mm thick. There is no weight limit and the wrist strap is mandatory.",
-             "Longitud total 45,5 cm, cabeza de hasta 26 cm de ancho y 38 mm de grosor. No hay límite de peso y el cordón de muñeca es obligatorio."))]
+             "Longitud total 45,5 cm, cabeza de hasta 26 cm de ancho y 38 mm de grosor. No hay límite de peso y el cordón de muñeca es obligatorio.", "Longueur totale de 45,5 cm, tête jusqu'à 26 cm de large et 38 mm d'épaisseur. Il n'y a pas de limite de poids et la dragonne est obligatoire."))]
     faq_htm, faq_ld = faq(qa)
     corpo += faq_htm
-    titolo = L("Regolamento del padel 2026: le regole spiegate semplici", "Padel rules 2026: the rules explained simply", "Reglamento del pádel 2026: las reglas explicadas fácil")
+    titolo = L("Regolamento del padel 2026: le regole spiegate semplici", "Padel rules 2026: the rules explained simply", "Reglamento del pádel 2026: las reglas explicadas fácil", "Règles du padel 2026 : les règles expliquées simplement")
     scrivi_articolo(slug, titolo + " | PadelMetrix",
                     L("Le regole del padel secondo il regolamento FIP 2026: campo, servizio, uso delle pareti, punteggio, Star Point, falli e misure della racchetta.",
                       "Padel rules from the 2026 FIP rulebook: court, serve, playing off the walls, scoring, Star Point, faults and racket limits.",
-                      "Las reglas del pádel según el reglamento FIP 2026: pista, saque, uso de las paredes, tanteo, Star Point, faltas y medidas de la pala."),
-                    titolo, L("Regolamento padel", "Padel rules", "Reglamento pádel"), corpo, ld_extra=[faq_ld])
+                      "Las reglas del pádel según el reglamento FIP 2026: pista, saque, uso de las paredes, tanteo, Star Point, faltas y medidas de la pala.", "Les règles du padel d'après le règlement FIP 2026 : terrain, service, jeu avec les murs, comptage des points, Star Point, fautes et limites de la raquette."),
+                    titolo, L("Regolamento padel", "Padel rules", "Reglamento pádel", "Règles du padel"), corpo, ld_extra=[faq_ld])
     return slug, titolo, L("Servizio, pareti, punteggio e Star Point, secondo il regolamento FIP 2026.", "Serve, walls, scoring and Star Point, per the 2026 FIP rules.",
-                           "Saque, paredes, tanteo y Star Point, según el reglamento FIP 2026.")
+                           "Saque, paredes, tanteo y Star Point, según el reglamento FIP 2026.", "Service, murs, comptage et Star Point, d'après le règlement FIP 2026.")
 
 
 
@@ -1143,18 +1298,18 @@ def padel_regole(db):
 
 def indice(arts):
     path, alt = P("articoli"), ALT("articoli")
-    cr, ld = crumbs([H(), (L("Articoli", "Articles", "Artículos"), None)])
+    cr, ld = crumbs([H(), (L("Articoli", "Articles", "Artículos", "Articles"), None)])
     lista = "".join(f'<li><a href="{P("articoli", s)}"><b>{e(t)}</b></a><br><span class="note">{e(d)}</span></li>' for s, t, d in arts)
     corpo = f'''{cr}
-<div class="intro"><h1>{L("Articoli", "Articles", "Artículos")}</h1><p>{L(
+<div class="intro"><h1>{L("Articoli", "Articles", "Artículos", "Articles")}</h1><p>{L(
         "Novità, confronti tra versioni e approfondimenti sulle racchette da padel, con i dati del database PadelMetrix e le fonti citate.",
         "New releases, comparisons between versions and in-depth articles on padel rackets, with data from the PadelMetrix database and cited sources.",
-        "Novedades, comparativas entre versiones y artículos en profundidad sobre palas de pádel, con los datos de la base de PadelMetrix y las fuentes citadas.")}</p></div>
+        "Novedades, comparativas entre versiones y artículos en profundidad sobre palas de pádel, con los datos de la base de PadelMetrix y las fuentes citadas.", "Nouveautés, comparatifs entre versions et articles de fond sur les raquettes de padel, avec les données de la base PadelMetrix et des sources citées.")}</p></div>
 <div class="prose"><ul class="clean lista-art">{lista}</ul></div>'''
-    S.scrivi(path, pagina(L("Articoli sulle racchette da padel | PadelMetrix", "Padel racket articles | PadelMetrix", "Artículos sobre palas de pádel | PadelMetrix"),
+    S.scrivi(path, pagina(L("Articoli sulle racchette da padel | PadelMetrix", "Padel racket articles | PadelMetrix", "Artículos sobre palas de pádel | PadelMetrix", "Articles sur les raquettes de padel | PadelMetrix"),
                           L("Novità 2027, confronti tra versioni e approfondimenti sulle racchette da padel, con dati e fonti.",
                             "2027 releases, comparisons between versions and in-depth articles on padel rackets, with data and sources.",
-                            "Novedades 2027, comparativas entre versiones y artículos sobre palas de pádel, con datos y fuentes."),
+                            "Novedades 2027, comparativas entre versiones y artículos sobre palas de pádel, con datos y fuentes.", "Nouveautés 2027, comparatifs entre versions et articles de fond sur les raquettes de padel, avec données et sources."),
                           path, corpo, on="articoli", ld=[ld], alt=alt), alt)
 
 
