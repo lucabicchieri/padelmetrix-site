@@ -49,7 +49,7 @@ def scrivi_articolo(slug, title, desc, h1, crumb, corpo_html, items=None, ld_ext
              if items else "")
     corpo = f'''{cr}
 <div class="intro"><div class="eyebrow">{L("Articolo", "Article", "Artículo")}</div><h1>{e(h1)}</h1><p class="note">{L("Pubblicato il ", "Published on ", "Publicado el ")}{S.data_txt(DATE_ART.get(slug, OGGI_ISO))} · {L("a cura di", "by", "por")} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p></div>
-<div class="prose">{corpo_html}<p class="note" style="margin-top:28px">{L("Ti è stato utile? Seguici per i prossimi confronti:", "Found this useful? Follow us for the next comparisons:", "¿Te ha sido útil? Síguenos para las próximas comparativas:")} {S.social_links()}</p></div>
+<div class="prose">{corpo_html}<p class="note" style="margin:28px 0 56px">{L("Ti è stato utile? Seguici per i prossimi confronti:", "Found this useful? Follow us for the next comparisons:", "¿Te ha sido útil? Síguenos para las próximas comparativas:")} {S.social_links()}</p></div>
 {lista}'''
     S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, articolo_ld(h1, desc, path, DATE_ART.get(slug, OGGI_ISO)), *ld_extra], alt=alt), alt)
 
