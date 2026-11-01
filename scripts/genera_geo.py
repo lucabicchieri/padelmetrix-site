@@ -86,8 +86,8 @@ def statistiche(db):
 
 def chi_siamo(db):
     s = statistiche(db)
-    cr, ld = crumbs([H(), (L("Chi siamo e metodo", "About and method", "Quiénes somos y método"), None)])
-    cit = L(f"«Fonte: PadelMetrix (padelmetrix.com), {data_txt()}»", f"\"Source: PadelMetrix (padelmetrix.com), {data_txt()}\"", f"«Fuente: PadelMetrix (padelmetrix.com), {data_txt()}»")
+    cr, ld = crumbs([H(), (L("Chi siamo e metodo", "About and method", "Quiénes somos y método", "À propos et méthode"), None)])
+    cit = L(f"«Fonte: PadelMetrix (padelmetrix.com), {data_txt()}»", f"\"Source: PadelMetrix (padelmetrix.com), {data_txt()}\"", f"«Fuente: PadelMetrix (padelmetrix.com), {data_txt()}»", f"\"Source : PadelMetrix (padelmetrix.com), {data_txt()}\"")
     corpo = L(f'''{cr}
 <div class="intro"><h1>Chi siamo e come lavoriamo</h1>
 <p>PadelMetrix è un database indipendente di racchette da padel: {s["n"]} schede delle collezioni 2026 e 2027 di {len(s["marche"])} marche, con dati tecnici, fonti citate e confronti. Lo cura Luca Bicchieri.</p>{data_riga()}</div>
@@ -130,15 +130,15 @@ def chi_siamo(db):
 <p>La base de datos se actualiza cuando salen nuevas colecciones y cuando cambian los precios o llegan nuevas reseñas. Cada página muestra la fecha de su última actualización. Los datos también están disponibles como <a href="{P("dati")}">dataset abierto</a>.</p>
 <h2>Citar PadelMetrix</h2>
 <p>Puedes reutilizar datos y estadísticas citando la fuente: {cit}.</p>
-</div>''')
-    about = {"@context": "https://schema.org", "@type": "AboutPage", "name": L("Chi siamo e metodo", "About and method", "Quiénes somos y método"), "dateModified": OGGI,
+</div>''', f'''{cr}\n<div class="intro"><h1>Qui sommes-nous et comment nous travaillons</h1>\n<p>PadelMetrix est une base de données indépendante de raquettes de padel : {s["n"]} fiches des collections 2026 et 2027 de {len(s["marche"])} marques, avec caractéristiques, sources citées et comparatifs. Elle est gérée par Luca Bicchieri.</p>{data_riga()}</div>\n<div class="prose">\n<h2>D'où viennent les données</h2>\n<p>Chaque valeur technique (poids, forme, équilibre, matériaux, niveau) provient des sites des fabricants, des fiches produit de magasins spécialisés ou de tests publiés. Chaque fiche indique ses sources avec un lien. Quand deux sources divergent, nous indiquons la valeur de la fiche produit ; quand une valeur n'est pas publiée, nous écrivons « non communiqué » au lieu de l'estimer.</p>\n<h2>Notes et avis</h2>\n<p>Quand il existe des tests indépendants, nous reprenons les notes telles que la source les a publiées (par exemple Padelful ou PadelZoom), toujours avec son nom et un lien. Nous n'inventons pas de notes. L'indice PadelMetrix, une note unique calculée avec une méthode publique, est en préparation : cette page décrira sa formule avant sa publication.</p>\n<h2>Indépendance et revenus</h2>\n<p>PadelMetrix ne vend pas de raquettes et ne reçoit aucun paiement des marques pour ses fiches. Certains liens vers des boutiques sont des liens affiliés : si vous achetez, le site peut recevoir une petite commission sans frais pour vous. Les commissions n'influencent ni les données, ni les comparatifs, ni les conseils.</p>\n<h2>Fréquence des mises à jour</h2>\n<p>La base est mise à jour à la sortie des nouvelles collections et quand les prix changent ou que de nouveaux avis paraissent. Chaque fiche indique la date de sa dernière mise à jour. Les données sont aussi disponibles en <a href="{P("dati")}">jeu de données ouvert</a>.</p>\n<h2>Citer PadelMetrix</h2>\n<p>Vous pouvez réutiliser données et statistiques en citant la source : {cit}.</p>\n</div>''')
+    about = {"@context": "https://schema.org", "@type": "AboutPage", "name": L("Chi siamo e metodo", "About and method", "Quiénes somos y método", "À propos et méthode"), "dateModified": OGGI,
              "publisher": S.editore(), "author": S.autore()}
     path, alt = P("chi-siamo"), ALT("chi-siamo")
     scrivi(path, pagina(L("Chi siamo e metodo: come PadelMetrix raccoglie i dati sulle racchette | PadelMetrix", "About and method: how PadelMetrix collects padel racket data | PadelMetrix",
-                          "Quiénes somos y método: cómo PadelMetrix recoge los datos de las palas | PadelMetrix"),
+                          "Quiénes somos y método: cómo PadelMetrix recoge los datos de las palas | PadelMetrix", "À propos et méthode : comment PadelMetrix collecte les données des raquettes de padel | PadelMetrix"),
                         L("Chi cura PadelMetrix, da dove vengono i dati sulle racchette da padel, come trattiamo punteggi e recensioni e come guadagniamo.",
                           "Who runs PadelMetrix, where the padel racket data comes from, how we handle scores and reviews and how we earn money.",
-                          "Quién lleva PadelMetrix, de dónde vienen los datos de las palas de pádel, cómo tratamos puntuaciones y reseñas y cómo ganamos dinero."),
+                          "Quién lleva PadelMetrix, de dónde vienen los datos de las palas de pádel, cómo tratamos puntuaciones y reseñas y cómo ganamos dinero.", "Qui gère PadelMetrix, d\'où viennent les données des raquettes de padel, comment nous traitons notes et avis et comment nous gagnons de l\'argent."),
                         path, corpo, ld=[ld, about], alt=alt), alt)
 
 
@@ -162,54 +162,54 @@ def report(db):
     k_rows = sorted(s["ks"].items(), key=lambda kv: -kv[1])[:5]
     stili_tot = sum(s["stili"].values())
     path, alt = P("report", REPORT), ALT("report", REPORT)
-    titolo = L("Racchette da padel 2026–2027 in numeri", "Padel rackets 2026–2027 in numbers", "Palas de pádel 2026–2027 en cifras")
+    titolo = L("Racchette da padel 2026–2027 in numeri", "Padel rackets 2026–2027 in numbers", "Palas de pádel 2026–2027 en cifras", "Les raquettes de padel 2026–2027 en chiffres")
     ft = FORMA(forma_top).lower()
     pf = pct(s['forme'][forma_top], s['con_forma'])
     intro = L(f"Secondo il database PadelMetrix ({s['n']} racchette delle collezioni 2026 e 2027), la racchetta da padel tipica per adulti pesa circa {med_peso} g, ha forma {ft} ({pf}% dei modelli con forma dichiarata) e costa {eur(med_prezzo)} di listino (valore mediano).",
               f"According to the PadelMetrix database ({s['n']} rackets from the 2026 and 2027 collections), the typical adult padel racket weighs about {med_peso} g, has a {ft} shape ({pf}% of models with a declared shape) and has a list price of {eur(med_prezzo)} (median).",
-              f"Según la base de datos PadelMetrix ({s['n']} palas de las colecciones 2026 y 2027), la pala de pádel típica para adultos pesa unos {med_peso} g, tiene forma {ft} ({pf}% de los modelos con forma declarada) y cuesta {eur(med_prezzo)} de precio de lista (valor mediano).")
-    cr, ld = crumbs([H(), (L("Report", "Report", "Informe"), None), (titolo, None)])
-    anni = ", ".join(L(f"{c} del {a}", f"{c} from {a}", f"{c} de {a}") for a, c in s["anni"].items())
+              f"Según la base de datos PadelMetrix ({s['n']} palas de las colecciones 2026 y 2027), la pala de pádel típica para adultos pesa unos {med_peso} g, tiene forma {ft} ({pf}% de los modelos con forma declarada) y cuesta {eur(med_prezzo)} de precio de lista (valor mediano).", f"D'après la base de données PadelMetrix ({s['n']} raquettes des collections 2026 et 2027), la raquette de padel adulte type pèse environ {med_peso} g, a une forme {ft} ({pf} % des modèles à forme déclarée) et un prix catalogue de {eur(med_prezzo)} (médiane).")
+    cr, ld = crumbs([H(), (L("Report", "Report", "Informe", "Rapport"), None), (titolo, None)])
+    anni = ", ".join(L(f"{c} del {a}", f"{c} from {a}", f"{c} de {a}", f"{c} sur {a}") for a, c in s["anni"].items())
     citaz = L(f"«PadelMetrix, Racchette da padel 2026–2027 in numeri, {data_txt()}, padelmetrix.com»",
               f"\"PadelMetrix, Padel rackets 2026–2027 in numbers, {data_txt()}, padelmetrix.com\"",
-              f"«PadelMetrix, Palas de pádel 2026–2027 en cifras, {data_txt()}, padelmetrix.com»")
+              f"«PadelMetrix, Palas de pádel 2026–2027 en cifras, {data_txt()}, padelmetrix.com»", f"\"PadelMetrix, Les raquettes de padel 2026–2027 en chiffres, {data_txt()}, padelmetrix.com\"")
     corpo = f'''{cr}
 <div class="intro"><h1>{titolo}</h1><p>{e(intro)}</p>{data_riga()}</div>
 <div class="prose">
-<h2>{L("Le cifre principali", "Key figures", "Las cifras principales")}</h2>
+<h2>{L("Le cifre principali", "Key figures", "Las cifras principales", "Chiffres clés")}</h2>
 <table class="tab"><tbody>
-<tr><td>{L("Racchette analizzate", "Rackets analysed", "Palas analizadas")}</td><td><b>{s["n"]}</b> ({anni})</td></tr>
-<tr><td>{L("Marche", "Brands", "Marcas")}</td><td><b>{len(s["marche"])}</b></td></tr>
-<tr><td>{L("Modelli junior", "Junior models", "Modelos junior")}</td><td><b>{s["junior"]}</b></td></tr>
-<tr><td>{L("Peso tipico (adulti, mediana)", "Typical weight (adults, median)", "Peso típico (adultos, mediana)")}</td><td><b>{med_peso} g</b>, {L(f"da {min_p} a {max_p} g su {len(s['pesi'])} modelli con peso dichiarato", f"from {min_p} to {max_p} g across {len(s['pesi'])} models with a declared weight", f"de {min_p} a {max_p} g en {len(s['pesi'])} modelos con peso declarado")}</td></tr>
-<tr><td>{L("Prezzo di listino (mediana)", "List price (median)", "Precio de lista (mediana)")}</td><td><b>{eur(med_prezzo)}</b> {L(f"su {len(s['prezzi'])} modelli con prezzo rilevato", f"across {len(s['prezzi'])} models with a recorded price", f"en {len(s['prezzi'])} modelos con precio registrado")}</td></tr>
-<tr><td>{L("Superficie in carbonio", "Carbon face", "Cara de carbono")}</td><td><b>{pct(s["carbonio"], s["sup"])}%</b> {L(f"dei modelli con superficie dichiarata; fibra di vetro {pct(s['vetro'], s['sup'])}%", f"of models with a declared face; fiberglass {pct(s['vetro'], s['sup'])}%", f"de los modelos con cara declarada; fibra de vidrio {pct(s['vetro'], s['sup'])}%")}</td></tr>
+<tr><td>{L("Racchette analizzate", "Rackets analysed", "Palas analizadas", "Raquettes analysées")}</td><td><b>{s["n"]}</b> ({anni})</td></tr>
+<tr><td>{L("Marche", "Brands", "Marcas", "Marques")}</td><td><b>{len(s["marche"])}</b></td></tr>
+<tr><td>{L("Modelli junior", "Junior models", "Modelos junior", "Modèles junior")}</td><td><b>{s["junior"]}</b></td></tr>
+<tr><td>{L("Peso tipico (adulti, mediana)", "Typical weight (adults, median)", "Peso típico (adultos, mediana)", "Poids type (adultes, médiane)")}</td><td><b>{med_peso} g</b>, {L(f"da {min_p} a {max_p} g su {len(s['pesi'])} modelli con peso dichiarato", f"from {min_p} to {max_p} g across {len(s['pesi'])} models with a declared weight", f"de {min_p} a {max_p} g en {len(s['pesi'])} modelos con peso declarado", f"de {min_p} à {max_p} g sur {len(s['pesi'])} modèles à poids déclaré")}</td></tr>
+<tr><td>{L("Prezzo di listino (mediana)", "List price (median)", "Precio de lista (mediana)", "Prix catalogue (médiane)")}</td><td><b>{eur(med_prezzo)}</b> {L(f"su {len(s['prezzi'])} modelli con prezzo rilevato", f"across {len(s['prezzi'])} models with a recorded price", f"en {len(s['prezzi'])} modelos con precio registrado", f"sur {len(s['prezzi'])} modèles avec un prix relevé")}</td></tr>
+<tr><td>{L("Superficie in carbonio", "Carbon face", "Cara de carbono", "Tamis en carbone")}</td><td><b>{pct(s["carbonio"], s["sup"])}%</b> {L(f"dei modelli con superficie dichiarata; fibra di vetro {pct(s['vetro'], s['sup'])}%", f"of models with a declared face; fiberglass {pct(s['vetro'], s['sup'])}%", f"de los modelos con cara declarada; fibra de vidrio {pct(s['vetro'], s['sup'])}%", f"des modèles à tamis déclaré ; fibre de verre {pct(s['vetro'], s['sup'])} %")}</td></tr>
 </tbody></table>
-<h2>{L("Che forma hanno le racchette", "What shape the rackets are", "Qué forma tienen las palas")}</h2>
-<p>{L(f"La forma {ft} è la più diffusa. Quota sui {s['con_forma']} modelli per adulti con forma dichiarata:", f"The {ft} shape is the most common. Share across the {s['con_forma']} adult models with a declared shape:", f"La forma {ft} es la más común. Cuota sobre los {s['con_forma']} modelos para adultos con forma declarada:")}</p>
+<h2>{L("Che forma hanno le racchette", "What shape the rackets are", "Qué forma tienen las palas", "Quelle forme ont les raquettes")}</h2>
+<p>{L(f"La forma {ft} è la più diffusa. Quota sui {s['con_forma']} modelli per adulti con forma dichiarata:", f"The {ft} shape is the most common. Share across the {s['con_forma']} adult models with a declared shape:", f"La forma {ft} es la más común. Cuota sobre los {s['con_forma']} modelos para adultos con forma declarada:", f"La forme {ft} est la plus répandue. Répartition sur les {s['con_forma']} modèles adultes à forme déclarée :")}</p>
 {barre(forme_rows)}
-<h2>{L("Attacco, controllo o polivalenti", "Attack, control or all-round", "Ataque, control o polivalentes")}</h2>
-<p>{L(f"Stile di gioco indicato da produttori e rivenditori, su {stili_tot} modelli per adulti:", f"Playing style stated by manufacturers and retailers, across {stili_tot} adult models:", f"Estilo de juego indicado por fabricantes y tiendas, sobre {stili_tot} modelos para adultos:")}</p>
+<h2>{L("Attacco, controllo o polivalenti", "Attack, control or all-round", "Ataque, control o polivalentes", "Attaque, contrôle ou polyvalente")}</h2>
+<p>{L(f"Stile di gioco indicato da produttori e rivenditori, su {stili_tot} modelli per adulti:", f"Playing style stated by manufacturers and retailers, across {stili_tot} adult models:", f"Estilo de juego indicado por fabricantes y tiendas, sobre {stili_tot} modelos para adultos:", f"Style de jeu indiqué par les fabricants et les revendeurs, sur {stili_tot} modèles adultes :")}</p>
 {barre([(STILEN(k), pct(v, stili_tot)) for k, v in sorted(s["stili"].items(), key=lambda kv: -kv[1]) if v])}
-<h2>{L("Quanto costano, per livello", "How much they cost, by level", "Cuánto cuestan, por nivel")}</h2>
-<table class="tab"><thead><tr><th>{L("Livello", "Level", "Nivel")}</th><th>{L("Prezzo di listino mediano", "Median list price", "Precio de lista mediano")}</th><th>{L("Modelli", "Models", "Modelos")}</th></tr></thead><tbody>
+<h2>{L("Quanto costano, per livello", "How much they cost, by level", "Cuánto cuestan, por nivel", "Combien elles coûtent, par niveau")}</h2>
+<table class="tab"><thead><tr><th>{L("Livello", "Level", "Nivel", "Niveau")}</th><th>{L("Prezzo di listino mediano", "Median list price", "Precio de lista mediano", "Prix catalogue médian")}</th><th>{L("Modelli", "Models", "Modelos", "Modèles")}</th></tr></thead><tbody>
 {"".join(f"<tr><td>{e(lv)}</td><td>{eur(p)}</td><td>{c}</td></tr>" for lv, p, c in liv_rows)}
 </tbody></table>
-<h2>{L("Il carbonio più usato", "The most used carbon", "El carbono más usado")}</h2>
-<p>{L("Tipi di carbonio dichiarati più frequenti nelle superfici (numero di modelli):", "Most frequently declared carbon types in the faces (number of models):", "Tipos de carbono declarados más frecuentes en las caras (número de modelos):")}</p>
+<h2>{L("Il carbonio più usato", "The most used carbon", "El carbono más usado", "Le carbone le plus utilisé")}</h2>
+<p>{L("Tipi di carbonio dichiarati più frequenti nelle superfici (numero di modelli):", "Most frequently declared carbon types in the faces (number of models):", "Tipos de carbono declarados más frecuentes en las caras (número de modelos):", "Types de carbone les plus souvent déclarés dans les tamis (nombre de modèles) :")}</p>
 {barre(k_rows, unit="")}
-<h2>{L("Modelli per marca", "Models by brand", "Modelos por marca")}</h2>
-<table class="tab"><thead><tr><th>{L("Marca", "Brand", "Marca")}</th><th>{L("Racchette nel database", "Rackets in the database", "Palas en la base de datos")}</th></tr></thead><tbody>
+<h2>{L("Modelli per marca", "Models by brand", "Modelos por marca", "Modèles par marque")}</h2>
+<table class="tab"><thead><tr><th>{L("Marca", "Brand", "Marca", "Marque")}</th><th>{L("Racchette nel database", "Rackets in the database", "Palas en la base de datos", "Raquettes dans la base")}</th></tr></thead><tbody>
 {"".join(f'<tr><td><a href="{P("marche", slugify(m))}">{e(m)}</a></td><td>{c}</td></tr>' for m, c in marche_rows)}
 </tbody></table>
-<h2>{L("Metodo e limiti", "Method and limitations", "Método y limitaciones")}</h2>
+<h2>{L("Metodo e limiti", "Method and limitations", "Método y limitaciones", "Méthode et limites")}</h2>
 <p>{L(f'I numeri sono calcolati sulle schede del database PadelMetrix, che copre le collezioni 2026 e 2027 delle marche principali ma non tutto il mercato. Peso e prezzo sono quelli dichiarati da produttori e rivenditori; per il peso usiamo il punto medio dell\'intervallo dichiarato. Il numero di modelli per marca riflette la copertura del database, non le quote di mercato. I dati completi sono nel <a href="{P("dati")}">dataset aperto</a>.',
       f'The figures are calculated from the pages in the PadelMetrix database, which covers the 2026 and 2027 collections of the main brands but not the whole market. Weight and price are those declared by manufacturers and retailers; for weight we use the midpoint of the declared range. The number of models per brand reflects the database coverage, not market share. The full data is in the <a href="{P("dati")}">open dataset</a>.',
-      f'Las cifras se calculan sobre las fichas de la base de datos PadelMetrix, que cubre las colecciones 2026 y 2027 de las principales marcas pero no todo el mercado. Peso y precio son los declarados por fabricantes y tiendas; para el peso usamos el punto medio del intervalo declarado. El número de modelos por marca refleja la cobertura de la base de datos, no las cuotas de mercado. Los datos completos están en el <a href="{P("dati")}">dataset abierto</a>.')}</p>
-<p>{L("Citazione suggerita:", "Suggested citation:", "Cita sugerida:")} {citaz}.</p>
+      f'Las cifras se calculan sobre las fichas de la base de datos PadelMetrix, que cubre las colecciones 2026 y 2027 de las principales marcas pero no todo el mercado. Peso y precio son los declarados por fabricantes y tiendas; para el peso usamos el punto medio del intervalo declarado. El número de modelos por marca refleja la cobertura de la base de datos, no las cuotas de mercado. Los datos completos están en el <a href="{P("dati")}">dataset abierto</a>.', f'Les chiffres sont calculés à partir des fiches de la base PadelMetrix, qui couvre les collections 2026 et 2027 des principales marques mais pas tout le marché. Poids et prix sont ceux déclarés par les fabricants et les revendeurs ; pour le poids nous utilisons le milieu de la fourchette déclarée. Le nombre de modèles par marque reflète la couverture de la base, pas les parts de marché. Les données complètes sont dans le <a href="{P("dati")}">jeu de données ouvert</a>.')}</p>
+<p>{L("Citazione suggerita:", "Suggested citation:", "Cita sugerida:", "Citation suggérée :")} {citaz}.</p>
 </div>'''
     desc = intro[:300]
-    scrivi(path, pagina(L(f"{titolo}: peso, forme, prezzi e materiali | PadelMetrix", f"{titolo}: weight, shapes, prices and materials | PadelMetrix", f"{titolo}: peso, formas, precios y materiales | PadelMetrix"),
+    scrivi(path, pagina(L(f"{titolo}: peso, forme, prezzi e materiali | PadelMetrix", f"{titolo}: weight, shapes, prices and materials | PadelMetrix", f"{titolo}: peso, formas, precios y materiales | PadelMetrix", f"{titolo} : poids, formes, prix et matériaux | PadelMetrix"),
                         desc, path, corpo, ld=[ld, meta_art(titolo, desc, path)], alt=alt), alt)
     return s, med_peso, min_p, max_p, med_prezzo, forma_top, liv_rows
 
@@ -246,33 +246,33 @@ def file_dataset(db):
 
 def dataset(nr):
     ds = {"@context": "https://schema.org", "@type": "Dataset",
-          "name": L("Racchette da padel 2026–2027 — PadelMetrix", "Padel rackets 2026–2027 — PadelMetrix", "Palas de pádel 2026–2027 — PadelMetrix"),
+          "name": L("Racchette da padel 2026–2027 — PadelMetrix", "Padel rackets 2026–2027 — PadelMetrix", "Palas de pádel 2026–2027 — PadelMetrix", "Raquettes de padel 2026–2027 — PadelMetrix"),
           "description": L(f"Dati tecnici di {nr} racchette da padel delle collezioni 2026 e 2027: marca, modello, forma, peso, bilanciamento, materiali, livello, stile, prezzo di listino e fonti.",
                            f"Technical data for {nr} padel rackets from the 2026 and 2027 collections: brand, model, shape, weight, balance, materials, level, style, list price and sources.",
-                           f"Datos técnicos de {nr} palas de pádel de las colecciones 2026 y 2027: marca, modelo, forma, peso, balance, materiales, nivel, estilo, precio de lista y fuentes."),
+                           f"Datos técnicos de {nr} palas de pádel de las colecciones 2026 y 2027: marca, modelo, forma, peso, balance, materiales, nivel, estilo, precio de lista y fuentes.", f"Données techniques de {nr} raquettes de padel des collections 2026 et 2027 : marque, modèle, forme, poids, équilibre, matériaux, niveau, style, prix catalogue et sources."),
           "url": SITO + P("dati"), "license": "https://creativecommons.org/licenses/by/4.0/", "creator": S.editore(), "dateModified": OGGI,
           "inLanguage": S.lang(), "keywords": ["padel", "racchette da padel", "pale da padel", "padel rackets", "palas de pádel"],
           "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": SITO + "/dati/racchette-padelmetrix.csv"},
                            {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": SITO + "/dati/racchette-padelmetrix.json"}]}
-    cr, ld = crumbs([H(), (L("Dati aperti", "Open data", "Datos abiertos"), None)])
-    cit = L(f"«Fonte: PadelMetrix (padelmetrix.com), {data_txt()}»", f"\"Source: PadelMetrix (padelmetrix.com), {data_txt()}\"", f"«Fuente: PadelMetrix (padelmetrix.com), {data_txt()}»")
+    cr, ld = crumbs([H(), (L("Dati aperti", "Open data", "Datos abiertos", "Données ouvertes"), None)])
+    cit = L(f"«Fonte: PadelMetrix (padelmetrix.com), {data_txt()}»", f"\"Source: PadelMetrix (padelmetrix.com), {data_txt()}\"", f"«Fuente: PadelMetrix (padelmetrix.com), {data_txt()}»", f"\"Source : PadelMetrix (padelmetrix.com), {data_txt()}\"")
     rep = P("report", REPORT)
     corpo = f'''{cr}
-<div class="intro"><h1>{L("Dataset aperto delle racchette da padel", "Open padel racket dataset", "Dataset abierto de palas de pádel")}</h1><p>{L(f"Il database PadelMetrix è scaricabile gratis: {nr} racchette delle collezioni 2026 e 2027 con marca, modello, forma, peso, bilanciamento, materiali, livello, stile, prezzo di listino e le fonti di ogni scheda. Licenza CC BY 4.0: puoi usarlo citando PadelMetrix.",
+<div class="intro"><h1>{L("Dataset aperto delle racchette da padel", "Open padel racket dataset", "Dataset abierto de palas de pádel", "Jeu de données ouvert des raquettes de padel")}</h1><p>{L(f"Il database PadelMetrix è scaricabile gratis: {nr} racchette delle collezioni 2026 e 2027 con marca, modello, forma, peso, bilanciamento, materiali, livello, stile, prezzo di listino e le fonti di ogni scheda. Licenza CC BY 4.0: puoi usarlo citando PadelMetrix.",
        f"The PadelMetrix database can be downloaded for free: {nr} rackets from the 2026 and 2027 collections with brand, model, shape, weight, balance, materials, level, style, list price and the sources for each page. CC BY 4.0 licence: you can use it by crediting PadelMetrix.",
-       f"La base de datos PadelMetrix se puede descargar gratis: {nr} palas de las colecciones 2026 y 2027 con marca, modelo, forma, peso, balance, materiales, nivel, estilo, precio de lista y las fuentes de cada ficha. Licencia CC BY 4.0: puedes usarla citando PadelMetrix.")}</p>{data_riga()}</div>
+       f"La base de datos PadelMetrix se puede descargar gratis: {nr} palas de las colecciones 2026 y 2027 con marca, modelo, forma, peso, balance, materiales, nivel, estilo, precio de lista y las fuentes de cada ficha. Licencia CC BY 4.0: puedes usarla citando PadelMetrix.", f"La base de données PadelMetrix est téléchargeable gratuitement : {nr} raquettes des collections 2026 et 2027 avec marque, modèle, forme, poids, équilibre, matériaux, niveau, style, prix catalogue et les sources de chaque fiche. Licence CC BY 4.0 : vous pouvez l\'utiliser en citant PadelMetrix.")}</p>{data_riga()}</div>
 <div class="prose">
-<p><a class="btn" href="/dati/racchette-padelmetrix.csv" download>{L("Scarica CSV", "Download CSV", "Descargar CSV")}</a> &nbsp; <a class="btn out" href="/dati/racchette-padelmetrix.json" download>{L("Scarica JSON", "Download JSON", "Descargar JSON")}</a></p>
-<h2>{L("Campi", "Fields", "Campos")}</h2><p>{", ".join(f"<code>{c}</code>" for c in CAMPI)}. {L("I campi vuoti indicano dati non dichiarati dalle fonti.", "Empty fields mean data not stated by the sources. Field names and values are in Italian.", "Los campos vacíos indican datos no declarados por las fuentes. Los nombres y valores de los campos están en italiano.")}</p>
-<h2>{L("Licenza e citazione", "Licence and citation", "Licencia y cita")}</h2><p>{L("Dati rilasciati con licenza", "Data released under the", "Datos publicados con licencia")} <a href="https://creativecommons.org/licenses/by/4.0/{L("deed.it", "", "deed.es")}" rel="noopener" target="_blank">{L("Creative Commons Attribuzione 4.0", "Creative Commons Attribution 4.0 licence", "Creative Commons Atribución 4.0")}</a>. {L("Citazione:", "Citation:", "Cita:")} {cit}. {L("I punteggi di siti terzi non sono inclusi: restano di proprietà delle rispettive fonti.", "Third-party scores are not included: they remain the property of their sources.", "Las puntuaciones de webs de terceros no están incluidas: siguen siendo propiedad de sus fuentes.")}</p>
-<p>{L(f'Le statistiche principali sono nel report <a href="{rep}">Racchette da padel 2026–2027 in numeri</a>.', f'The main statistics are in the report <a href="{rep}">Padel rackets 2026–2027 in numbers</a>.', f'Las estadísticas principales están en el informe <a href="{rep}">Palas de pádel 2026–2027 en cifras</a>.')}</p>
+<p><a class="btn" href="/dati/racchette-padelmetrix.csv" download>{L("Scarica CSV", "Download CSV", "Descargar CSV", "Télécharger le CSV")}</a> &nbsp; <a class="btn out" href="/dati/racchette-padelmetrix.json" download>{L("Scarica JSON", "Download JSON", "Descargar JSON", "Télécharger le JSON")}</a></p>
+<h2>{L("Campi", "Fields", "Campos", "Champs")}</h2><p>{", ".join(f"<code>{c}</code>" for c in CAMPI)}. {L("I campi vuoti indicano dati non dichiarati dalle fonti.", "Empty fields mean data not stated by the sources. Field names and values are in Italian.", "Los campos vacíos indican datos no declarados por las fuentes. Los nombres y valores de los campos están en italiano.", "Les champs vides correspondent à des données non communiquées par les sources. Les noms et valeurs des champs sont en italien.")}</p>
+<h2>{L("Licenza e citazione", "Licence and citation", "Licencia y cita", "Licence et citation")}</h2><p>{L("Dati rilasciati con licenza", "Data released under the", "Datos publicados con licencia", "Données publiées sous")} <a href="https://creativecommons.org/licenses/by/4.0/{L("deed.it", "", "deed.es", "")}" rel="noopener" target="_blank">{L("Creative Commons Attribuzione 4.0", "Creative Commons Attribution 4.0 licence", "Creative Commons Atribución 4.0", "licence Creative Commons Attribution 4.0")}</a>. {L("Citazione:", "Citation:", "Cita:", "Citation :")} {cit}. {L("I punteggi di siti terzi non sono inclusi: restano di proprietà delle rispettive fonti.", "Third-party scores are not included: they remain the property of their sources.", "Las puntuaciones de webs de terceros no están incluidas: siguen siendo propiedad de sus fuentes.", "Les notes de tiers ne sont pas incluses : elles restent la propriété de leurs sources.")}</p>
+<p>{L(f'Le statistiche principali sono nel report <a href="{rep}">Racchette da padel 2026–2027 in numeri</a>.', f'The main statistics are in the report <a href="{rep}">Padel rackets 2026–2027 in numbers</a>.', f'Las estadísticas principales están en el informe <a href="{rep}">Palas de pádel 2026–2027 en cifras</a>.', f'Les principales statistiques sont dans le rapport <a href="{rep}">Les raquettes de padel 2026–2027 en chiffres</a>.')}</p>
 </div>'''
     path, alt = P("dati"), ALT("dati")
     scrivi(path, pagina(L("Dataset aperto racchette da padel 2026–2027 (CSV e JSON) | PadelMetrix", "Open padel racket dataset 2026–2027 (CSV and JSON) | PadelMetrix",
-                          "Dataset abierto de palas de pádel 2026–2027 (CSV y JSON) | PadelMetrix"),
+                          "Dataset abierto de palas de pádel 2026–2027 (CSV y JSON) | PadelMetrix", "Jeu de données ouvert des raquettes de padel 2026–2027 (CSV et JSON) | PadelMetrix"),
                         L(f"Scarica gratis i dati tecnici di {nr} racchette da padel 2026 e 2027 in CSV e JSON, con licenza CC BY 4.0.",
                           f"Download for free the technical data of {nr} padel rackets from 2026 and 2027 in CSV and JSON, under a CC BY 4.0 licence.",
-                          f"Descarga gratis los datos técnicos de {nr} palas de pádel 2026 y 2027 en CSV y JSON, con licencia CC BY 4.0."),
+                          f"Descarga gratis los datos técnicos de {nr} palas de pádel 2026 y 2027 en CSV y JSON, con licencia CC BY 4.0.", f"Téléchargez gratuitement les données techniques de {nr} raquettes de padel 2026 et 2027 en CSV et JSON, sous licence CC BY 4.0."),
                         path, corpo, ld=[ld, ds], alt=alt), alt)
 
 
@@ -379,12 +379,54 @@ GLOSSARIO = [
 ]
 
 
+# francese: (nome, definizione, testo) per slug
+GLOSS_FR = {
+    "bilanciamento": ("Équilibre",
+        "L'équilibre est la distance entre le centre de gravité de la raquette et le bout du manche, exprimée en millimètres ou en centimètres.",
+        "Plus il est élevé, plus le poids se déplace vers la tête : la raquette donne plus de puissance au smash mais elle est moins maniable et fatigue davantage le bras. Un équilibre bas déplace le poids vers le manche et favorise le contrôle et la vitesse de réaction. Par exemple, parmi les modèles de la base, 255 mm est considéré comme bas et 270 mm comme haut."),
+    "swingweight": ("Swingweight",
+        "Le swingweight mesure combien la raquette « pèse » pendant qu'on la déplace, c'est-à-dire son inertie autour du point de prise en main.",
+        "Deux raquettes de même poids peuvent avoir des swingweights différents si le poids est réparti autrement. Un swingweight élevé apporte stabilité et puissance mais rend la raquette plus lente à manier ; un swingweight bas la rend plus rapide au filet. Peu de fabricants le communiquent : certains magasins le mesurent, et dans ce cas nous l'indiquons sur les fiches."),
+    "sweet-spot": ("Sweet spot",
+        "Le sweet spot est la zone du tamis où l'impact avec la balle donne la meilleure réponse : plus de contrôle, moins de vibrations et une sortie de balle plus nette.",
+        "Sur les raquettes rondes il est central et plus grand ; sur les raquettes diamant il est plus haut et plus petit. Un grand sweet spot pardonne davantage les frappes décentrées et il est utile aux débutants."),
+    "eva": ("Gomme EVA",
+        "L'EVA (éthylène-acétate de vinyle) est la gomme la plus utilisée pour le noyau des raquettes de padel.",
+        "Elle existe en différentes densités : l'EVA souple absorbe les vibrations et facilite la sortie de balle avec peu d'effort ; l'EVA dure restitue plus de puissance sur les frappes fortes mais demande plus de force et de technique. De nombreuses marques utilisent des noyaux multicouches de densités différentes."),
+    "foam": ("Foam",
+        "Le foam est un matériau utilisé pour le noyau à la place de l'EVA, généralement plus souple et plus élastique.",
+        "Il offre un toucher plus doux et une bonne sortie de balle même à faible vitesse, au prix d'un peu de précision sur les frappes violentes. Head, par exemple, utilise des noyaux Power Foam et Control Foam."),
+    "carbonio-3k-12k-18k": ("Carbone 3K, 12K, 18K",
+        "Le chiffre K indique combien de milliers de filaments composent chaque mèche de fibre de carbone utilisée dans le tamis : 3K signifie 3 000 filaments.",
+        "Ce chiffre change le tissage et le toucher, mais à lui seul il ne dit pas si une raquette est plus rigide ou plus puissante : la résine, le nombre de couches et le noyau comptent aussi. En général, les tamis en carbone sont plus rigides et plus précis que ceux en fibre de verre."),
+    "fibra-di-vetro": ("Fibre de verre",
+        "La fibre de verre est un matériau de tamis et de cadre plus flexible et moins cher que le carbone.",
+        "Un tamis en fibre de verre se déforme davantage à l'impact : toucher souple, sortie de balle facile et plus de confort, au détriment de la précision et de la durabilité. C'est le matériau typique des raquettes pour débutants et de nombreuses raquettes junior."),
+    "racchetta-diamante": ("Raquette diamant",
+        "Une raquette diamant a une tête plus large en haut et un poids déplacé vers la pointe.",
+        "C'est la forme de la puissance : elle aide au smash et à la volée d'attaque, mais son sweet spot est plus haut et plus petit et elle pardonne moins en défense. Elle convient aux joueurs techniques qui jouent souvent au filet."),
+    "racchetta-rotonda": ("Raquette ronde",
+        "Une raquette ronde a une tête circulaire et un poids déplacé vers le manche.",
+        "C'est la forme du contrôle : sweet spot central et large, grande maniabilité et facilité en défense. C'est la forme conseillée aux débutants et aux joueurs qui construisent le point avec patience."),
+    "racchetta-goccia": ("Raquette goutte d'eau",
+        "Une raquette goutte d'eau a une forme intermédiaire entre ronde et diamant, avec un poids légèrement vers la tête.",
+        "C'est la forme la plus polyvalente : un compromis entre contrôle et puissance qui convient à la plupart des joueurs, d'intermédiaire à avancé."),
+    "superficie-ruvida": ("Surface rugueuse",
+        "Une surface rugueuse (sablée ou avec reliefs 3D) augmente le frottement entre la raquette et la balle.",
+        "Elle sert à donner plus d'effet aux frappes, comme les coupés et les víboras. Avec l'usage, la rugosité a tendance à s'user. De nombreux modèles haut de gamme ont des surfaces rugueuses, les modèles d'entrée de gamme sont souvent lisses."),
+    "misure-regolamentari": ("Dimensions réglementaires",
+        "Le règlement de la Fédération internationale de padel fixe les limites de la raquette : longueur maximale 45,5 cm, largeur maximale 26 cm et épaisseur maximale 38 mm.",
+        "C'est pourquoi presque toutes les raquettes adultes ont la même épaisseur de 38 mm ; les raquettes junior sont plus courtes et plus légères. Le poids n'a pas de limite réglementaire : les raquettes adultes pèsent en général entre 340 et 375 grammes."),
+}
+GLOSSARIO = [(s, (*n, GLOSS_FR[s][0]), (*d, GLOSS_FR[s][1]), (*t, GLOSS_FR[s][2]), l) for s, n, d, t, l in GLOSSARIO]
+
+
 def _g(t):
     return t[S.LINGUE.index(S.lang())]
 
 
 def glossario():
-    G = L("Glossario", "Glossary", "Glosario")
+    G = L("Glossario", "Glossary", "Glosario", "Glossaire")
     for slug, nome, defin, testo, link in GLOSSARIO:
         nome, defin, testo = _g(nome), _g(defin), _g(testo)
         path, alt = P("glossario", slug), ALT("glossario", slug)
@@ -392,23 +434,23 @@ def glossario():
         term = {"@context": "https://schema.org", "@type": "DefinedTerm", "name": nome, "description": defin,
                 "inDefinedTermSet": SITO + P("glossario"), "url": SITO + path}
         altri = "".join(f'<li><a href="{P("glossario", s)}">{e(_g(n))}</a></li>' for s, n, *_ in GLOSSARIO if s != slug)
-        h1 = L(f"{e(nome)}: cos'è nel padel", f"{e(nome)}: what it means in padel", f"{e(nome)}: qué es en el pádel")
+        h1 = L(f"{e(nome)}: cos'è nel padel", f"{e(nome)}: what it means in padel", f"{e(nome)}: qué es en el pádel", f"{e(nome)} : ce que cela signifie au padel")
         corpo = f'''{cr}
 <div class="intro"><h1>{h1}</h1><p><b>{e(defin)}</b></p><p>{e(testo)}</p>{data_riga()}</div>
-<div class="prose"><p><a href="{P(*link)}">{L("Approfondisci", "Learn more", "Saber más")}</a></p><h2>{L("Altri termini", "Other terms", "Otros términos")}</h2><ul class="lista-link">{altri}</ul></div>'''
+<div class="prose"><p><a href="{P(*link)}">{L("Approfondisci", "Learn more", "Saber más", "En savoir plus")}</a></p><h2>{L("Altri termini", "Other terms", "Otros términos", "Autres termes")}</h2><ul class="lista-link">{altri}</ul></div>'''
         scrivi(path, pagina(L(f"{nome}: cos'è e cosa significa nel padel | PadelMetrix", f"{nome}: what it is and what it means in padel | PadelMetrix",
-                              f"{nome}: qué es y qué significa en el pádel | PadelMetrix"), defin[:160], path, corpo, on="guide", ld=[ld, term], alt=alt), alt)
+                              f"{nome}: qué es y qué significa en el pádel | PadelMetrix", f"{nome} : définition et signification au padel | PadelMetrix"), defin[:160], path, corpo, on="guide", ld=[ld, term], alt=alt), alt)
     cr, ld = crumbs([H(), (G, None)])
     voci = "".join(f'<li><a href="{P("glossario", s)}"><b>{e(_g(n))}</b></a>: {e(_g(d))}</li>' for s, n, d, *_ in GLOSSARIO)
-    t_g = L("Glossario delle racchette da padel", "Padel racket glossary", "Glosario de las palas de pádel")
-    corpo = f'''{cr}<div class="intro"><h1>{t_g}</h1><p>{L("I termini tecnici che trovi nelle schede, spiegati in breve.", "The technical terms you will find on the racket pages, briefly explained.", "Los términos técnicos que encontrarás en las fichas, explicados en breve.")}</p>{data_riga()}</div><div class="prose"><ul>{voci}</ul></div>'''
+    t_g = L("Glossario delle racchette da padel", "Padel racket glossary", "Glosario de las palas de pádel", "Glossaire des raquettes de padel")
+    corpo = f'''{cr}<div class="intro"><h1>{t_g}</h1><p>{L("I termini tecnici che trovi nelle schede, spiegati in breve.", "The technical terms you will find on the racket pages, briefly explained.", "Los términos técnicos que encontrarás en las fichas, explicados en breve.", "Les termes techniques que vous trouverez sur les fiches des raquettes, expliqués brièvement.")}</p>{data_riga()}</div><div class="prose"><ul>{voci}</ul></div>'''
     sett = {"@context": "https://schema.org", "@type": "DefinedTermSet", "name": t_g, "url": SITO + P("glossario")}
     path, alt = P("glossario"), ALT("glossario")
     scrivi(path, pagina(L("Glossario delle racchette da padel: bilanciamento, EVA, carbonio e altri termini | PadelMetrix", "Padel racket glossary: balance, EVA, carbon and other terms | PadelMetrix",
-                          "Glosario de palas de pádel: balance, EVA, carbono y otros términos | PadelMetrix"),
+                          "Glosario de palas de pádel: balance, EVA, carbono y otros términos | PadelMetrix", "Glossaire des raquettes de padel : équilibre, EVA, carbone et autres termes | PadelMetrix"),
                         L("Cosa significano bilanciamento, swingweight, sweet spot, EVA, foam, carbonio 12K e le forme delle racchette da padel.",
                           "What balance, swingweight, sweet spot, EVA, foam, 12K carbon and the padel racket shapes mean.",
-                          "Qué significan balance, swingweight, punto dulce, EVA, foam, carbono 12K y las formas de las palas de pádel."),
+                          "Qué significan balance, swingweight, punto dulce, EVA, foam, carbono 12K y las formas de las palas de pádel.", "Ce que signifient équilibre, swingweight, sweet spot, EVA, foam, carbone 12K et les formes des raquettes de padel."),
                         path, corpo, on="guide", ld=[ld, sett], alt=alt), alt)
 
 
@@ -421,7 +463,7 @@ def faq_ld(q, a):
 
 def domande(db, stats):
     s, med_peso, min_p, max_p, med_prezzo, forma_top, liv_rows = stats
-    D = L("Domande", "Questions", "Preguntas")
+    D = L("Domande", "Questions", "Preguntas", "Questions")
     voci = []
     gioc = {}
     for n in db:
@@ -433,80 +475,80 @@ def domande(db, stats):
         top = its[0]
         slug = "racchetta-" + slugify(g)
         path, alt = P("domande", slug), ALT("domande", slug)
-        q = L(f"Con che racchetta gioca {g}?", f"What racket does {g} use?", f"¿Con qué pala juega {g}?")
+        q = L(f"Con che racchetta gioca {g}?", f"What racket does {g} use?", f"¿Con qué pala juega {g}?", f"Avec quelle raquette joue {g} ?")
         anno = top["anno"]
         ult = [x for x in its if x["anno"] == anno]
         marche_g = sorted({x["marca"] for x in ult})
         nomi = [x["nome"].replace(f" {anno}", "") for x in ult]
         resto = len(nomi) - 4
-        elenco = ", ".join(nomi[:4]) + (L(f" e altre {resto}", f" and {resto} more", f" y {resto} más") if resto > 0 else "")
+        elenco = ", ".join(nomi[:4]) + (L(f" e altre {resto}", f" and {resto} more", f" y {resto} más", f" et {resto} autres") if resto > 0 else "")
         if len(ult) == 1:
-            dett = ", ".join(x for x in (L(f"forma {FORMA(top['forma']).lower()}", f"{FORMA(top['forma']).lower()} shape", f"forma {FORMA(top['forma']).lower()}") if top["forma"] else None, top["peso"]) if x)
-            ans = L(f"Nella collezione {anno} {g} firma la {top['titolo']}", f"In the {anno} collection {g} signs the {top['titolo']}", f"En la colección {anno} {g} firma la {top['titolo']}") + (f" ({dett})" if dett else "") + "."
+            dett = ", ".join(x for x in (L(f"forma {FORMA(top['forma']).lower()}", f"{FORMA(top['forma']).lower()} shape", f"forma {FORMA(top['forma']).lower()}", f"forme {FORMA(top['forma']).lower()}") if top["forma"] else None, top["peso"]) if x)
+            ans = L(f"Nella collezione {anno} {g} firma la {top['titolo']}", f"In the {anno} collection {g} signs the {top['titolo']}", f"En la colección {anno} {g} firma la {top['titolo']}", f"Dans la collection {anno}, {g} signe la {top['titolo']}") + (f" ({dett})" if dett else "") + "."
         else:
-            mg = L(" e ", " and ", " y ").join(marche_g)
+            mg = L(" e ", " and ", " y ", " et ").join(marche_g)
             ans = L(f"Nella collezione {anno} {g} firma {len(ult)} racchette {mg}: {elenco}.", f"In the {anno} collection {g} signs {len(ult)} {mg} rackets: {elenco}.",
-                    f"En la colección {anno} {g} firma {len(ult)} palas {mg}: {elenco}.")
+                    f"En la colección {anno} {g} firma {len(ult)} palas {mg}: {elenco}.", f"Dans la collection {anno}, {g} signe {len(ult)} raquettes {mg} : {elenco}.")
         if len(its) > len(ult):
             ans += L(f" In tutto il database PadelMetrix conta {len(its)} modelli firmati tra 2026 e 2027, elencati sotto.",
                      f" In total the PadelMetrix database lists {len(its)} signature models across 2026 and 2027, shown below.",
-                     f" En total la base de datos PadelMetrix recoge {len(its)} modelos firmados entre 2026 y 2027, listados abajo.")
+                     f" En total la base de datos PadelMetrix recoge {len(its)} modelos firmados entre 2026 y 2027, listados abajo.", f" Au total, la base PadelMetrix recense {len(its)} modèles signature entre 2026 et 2027, listés ci-dessous.")
         nota = L("I professionisti possono usare versioni personalizzate del modello in vendita.", "Professionals may use customised versions of the model on sale.",
-                 "Los profesionales pueden usar versiones personalizadas del modelo a la venta.")
+                 "Los profesionales pueden usar versiones personalizadas del modelo a la venta.", "Les professionnels peuvent utiliser des versions personnalisées du modèle vendu dans le commerce.")
         cr, ld = crumbs([H(), (D, P("domande")), (g, None)])
         pro = P("guide", "racchette-giocatori-professionisti")
         corpo = f'''{cr}
 <div class="intro"><h1>{e(q)}</h1><p><b>{e(ans)}</b> {e(nota)}</p>{data_riga()}</div>
 {griglia(its)}
-<div class="prose"><p>{L(f'Tutti i giocatori nella pagina <a href="{pro}">racchette dei professionisti</a>.', f'All players on the <a href="{pro}">pro players\' rackets</a> page.', f'Todos los jugadores en la página <a href="{pro}">palas de los profesionales</a>.')}</p></div>'''
+<div class="prose"><p>{L(f'Tutti i giocatori nella pagina <a href="{pro}">racchette dei professionisti</a>.', f'All players on the <a href="{pro}">pro players\' rackets</a> page.', f'Todos los jugadores en la página <a href="{pro}">palas de los profesionales</a>.', f'Tous les joueurs sur la page <a href="{pro}">raquettes des joueurs pros</a>.')}</p></div>'''
         scrivi(path, pagina(L(f"Con che racchetta gioca {g}? Modelli 2026 e 2027 | PadelMetrix", f"What racket does {g} use? 2026 and 2027 models | PadelMetrix",
-                              f"¿Con qué pala juega {g}? Modelos 2026 y 2027 | PadelMetrix"), ans[:300], path, corpo, on="guide", ld=[ld, faq_ld(q, ans + " " + nota)], alt=alt), alt)
+                              f"¿Con qué pala juega {g}? Modelos 2026 y 2027 | PadelMetrix", f"Avec quelle raquette joue {g} ? Modèles 2026 et 2027 | PadelMetrix"), ans[:300], path, corpo, on="guide", ld=[ld, faq_ld(q, ans + " " + nota)], alt=alt), alt)
         voci.append((path, q))
 
     # risposte calcolate dal database
     adulti = [n for n in db if n["categoria"] != "junior"]
-    q1 = L("Quanto pesa una racchetta da padel?", "How much does a padel racket weigh?", "¿Cuánto pesa una pala de pádel?")
+    q1 = L("Quanto pesa una racchetta da padel?", "How much does a padel racket weigh?", "¿Cuánto pesa una pala de pádel?", "Combien pèse une raquette de padel ?")
     a1 = L(f"Una racchetta da padel per adulti pesa in genere tra 340 e 375 grammi: nel database PadelMetrix il peso tipico (mediana) è {med_peso} g, su {len(s['pesi'])} modelli 2026 e 2027 con peso dichiarato. Le racchette junior pesano meno, di solito tra 280 e 340 g.",
            f"An adult padel racket usually weighs between 340 and 375 grams: in the PadelMetrix database the typical (median) weight is {med_peso} g, across {len(s['pesi'])} 2026 and 2027 models with a declared weight. Junior rackets weigh less, usually between 280 and 340 g.",
-           f"Una pala de pádel para adultos pesa en general entre 340 y 375 gramos: en la base de datos PadelMetrix el peso típico (mediana) es {med_peso} g, sobre {len(s['pesi'])} modelos 2026 y 2027 con peso declarado. Las palas junior pesan menos, normalmente entre 280 y 340 g.")
+           f"Una pala de pádel para adultos pesa en general entre 340 y 375 gramos: en la base de datos PadelMetrix el peso típico (mediana) es {med_peso} g, sobre {len(s['pesi'])} modelos 2026 y 2027 con peso declarado. Las palas junior pesan menos, normalmente entre 280 y 340 g.", f"Une raquette de padel adulte pèse en général entre 340 et 375 grammes : dans la base PadelMetrix le poids type (médiane) est de {med_peso} g, sur {len(s['pesi'])} modèles 2026 et 2027 à poids déclaré. Les raquettes junior sont plus légères, généralement entre 280 et 340 g.")
     leggere = sorted([n for n in adulti if n["peso_min"]], key=lambda n: n["peso_min"])[:12]
-    q2 = L("Quanto costa una racchetta da padel?", "How much does a padel racket cost?", "¿Cuánto cuesta una pala de pádel?")
+    q2 = L("Quanto costa una racchetta da padel?", "How much does a padel racket cost?", "¿Cuánto cuesta una pala de pádel?", "Combien coûte une raquette de padel ?")
     righe_l = "".join(f"<tr><td>{e(lv)}</td><td>{eur(p)}</td><td>{c}</td></tr>" for lv, p, c in liv_rows)
     a2 = L(f"Il prezzo di listino mediano di una racchetta da padel 2026–2027 è {eur(med_prezzo)} nel database PadelMetrix; si va da meno di 100 € per i modelli d'ingresso a oltre 350 € per quelli dei professionisti. Online i prezzi reali sono spesso più bassi del listino.",
            f"The median list price of a 2026–2027 padel racket is {eur(med_prezzo)} in the PadelMetrix database; it ranges from under €100 for entry models to over €350 for pro models. Online, actual prices are often lower than the list price.",
-           f"El precio de lista mediano de una pala de pádel 2026–2027 es {eur(med_prezzo)} en la base de datos PadelMetrix; va de menos de 100 € en los modelos de iniciación a más de 350 € en los de los profesionales. Online los precios reales suelen ser más bajos que el de lista.")
-    q3 = L("Qual è la forma di racchetta da padel più diffusa?", "What is the most common padel racket shape?", "¿Cuál es la forma de pala de pádel más común?")
+           f"El precio de lista mediano de una pala de pádel 2026–2027 es {eur(med_prezzo)} en la base de datos PadelMetrix; va de menos de 100 € en los modelos de iniciación a más de 350 € en los de los profesionales. Online los precios reales suelen ser más bajos que el de lista.", f"Le prix catalogue médian d\'une raquette de padel 2026–2027 est de {eur(med_prezzo)} dans la base PadelMetrix ; il va de moins de 100 € pour les modèles d\'entrée de gamme à plus de 350 € pour les modèles pro. En ligne, les prix réels sont souvent inférieurs au prix catalogue.")
+    q3 = L("Qual è la forma di racchetta da padel più diffusa?", "What is the most common padel racket shape?", "¿Cuál es la forma de pala de pádel más común?", "Quelle est la forme de raquette de padel la plus répandue ?")
     ft = FORMA(forma_top).lower()
     resto = ", ".join(f"{FORMA(f).lower()} {pct(c, s['con_forma'])}%" for f, c in sorted(s["forme"].items(), key=lambda kv: -kv[1]) if f != forma_top and c)
     pf = pct(s['forme'][forma_top], s['con_forma'])
     a3 = L(f"La forma più diffusa è la {ft}: {pf}% dei {s['con_forma']} modelli per adulti con forma dichiarata nel database PadelMetrix. {resto}.",
            f"The most common shape is {ft}: {pf}% of the {s['con_forma']} adult models with a declared shape in the PadelMetrix database. {resto[0].upper() + resto[1:]}.",
-           f"La forma más común es la {ft}: {pf}% de los {s['con_forma']} modelos para adultos con forma declarada en la base de datos PadelMetrix. {resto[0].upper() + resto[1:]}.")
+           f"La forma más común es la {ft}: {pf}% de los {s['con_forma']} modelos para adultos con forma declarada en la base de datos PadelMetrix. {resto[0].upper() + resto[1:]}.", f"La forme la plus répandue est la forme {ft} : {pf} % des {s['con_forma']} modèles adultes à forme déclarée dans la base PadelMetrix. {resto[0].upper() + resto[1:]}.")
     if S.lang() == "it":
         a3 = a3.replace(f"PadelMetrix. {resto}", f"PadelMetrix. {resto[0].upper() + resto[1:]}")
     eco, forme_g = P("guide", "racchette-padel-economiche"), P("guide", "forme-racchetta-padel")
     extra = [
-        ("quanto-pesa-una-racchetta-da-padel", q1, a1, f'<h2>{L("Le racchette per adulti più leggere nel database", "The lightest adult rackets in the database", "Las palas de adulto más ligeras de la base de datos")}</h2>{griglia(leggere)}'),
-        ("quanto-costa-una-racchetta-da-padel", q2, a2, f'<h2>{L("Prezzo di listino mediano per livello", "Median list price by level", "Precio de lista mediano por nivel")}</h2><table class="tab"><thead><tr><th>{L("Livello", "Level", "Nivel")}</th><th>{L("Mediana", "Median", "Mediana")}</th><th>{L("Modelli", "Models", "Modelos")}</th></tr></thead><tbody>{righe_l}</tbody></table><p><a href="{eco}">{L("Racchette economiche fino a 130 €", "Cheap rackets up to €130", "Palas baratas hasta 130 €")}</a></p>'),
-        ("forma-racchetta-padel-piu-diffusa", q3, a3, L(f'<p>Le differenze tra le forme sono spiegate nella <a href="{forme_g}">guida alle forme</a>.</p>', f'<p>The differences between shapes are explained in the <a href="{forme_g}">shapes guide</a>.</p>', f'<p>Las diferencias entre formas se explican en la <a href="{forme_g}">guía de las formas</a>.</p>')),
+        ("quanto-pesa-una-racchetta-da-padel", q1, a1, f'<h2>{L("Le racchette per adulti più leggere nel database", "The lightest adult rackets in the database", "Las palas de adulto más ligeras de la base de datos", "Les raquettes adultes les plus légères de la base")}</h2>{griglia(leggere)}'),
+        ("quanto-costa-una-racchetta-da-padel", q2, a2, f'<h2>{L("Prezzo di listino mediano per livello", "Median list price by level", "Precio de lista mediano por nivel", "Prix catalogue médian par niveau")}</h2><table class="tab"><thead><tr><th>{L("Livello", "Level", "Nivel", "Niveau")}</th><th>{L("Mediana", "Median", "Mediana", "Médiane")}</th><th>{L("Modelli", "Models", "Modelos", "Modèles")}</th></tr></thead><tbody>{righe_l}</tbody></table><p><a href="{eco}">{L("Racchette economiche fino a 130 €", "Cheap rackets up to €130", "Palas baratas hasta 130 €", "Raquettes pas chères jusqu\'à 130 €")}</a></p>'),
+        ("forma-racchetta-padel-piu-diffusa", q3, a3, L(f'<p>Le differenze tra le forme sono spiegate nella <a href="{forme_g}">guida alle forme</a>.</p>', f'<p>The differences between shapes are explained in the <a href="{forme_g}">shapes guide</a>.</p>', f'<p>Las diferencias entre formas se explican en la <a href="{forme_g}">guía de las formas</a>.</p>', f'<p>Les différences entre les formes sont expliquées dans le <a href="{forme_g}">guide des formes</a>.</p>')),
     ]
     rep = P("report", REPORT)
     for slug, q, a, html_extra in extra:
         path, alt = P("domande", slug), ALT("domande", slug)
         cr, ld = crumbs([H(), (D, P("domande")), (q, None)])
         corpo = f'''{cr}<div class="intro"><h1>{e(q)}</h1><p><b>{e(a)}</b></p>{data_riga()}</div>
-<div class="prose">{html_extra}<p class="note">{L(f'Calcolato sul database PadelMetrix; metodo e limiti nel <a href="{rep}">report in numeri</a>.', f'Calculated on the PadelMetrix database; method and limitations in the <a href="{rep}">report in numbers</a>.', f'Calculado sobre la base de datos PadelMetrix; método y limitaciones en el <a href="{rep}">informe en cifras</a>.')}</p></div>'''
-        scrivi(path, pagina(L(f"{q} Dati 2026–2027 | PadelMetrix", f"{q} 2026–2027 data | PadelMetrix", f"{q} Datos 2026–2027 | PadelMetrix"), a[:300], path, corpo, on="guide", ld=[ld, faq_ld(q, a)], alt=alt), alt)
+<div class="prose">{html_extra}<p class="note">{L(f'Calcolato sul database PadelMetrix; metodo e limiti nel <a href="{rep}">report in numeri</a>.', f'Calculated on the PadelMetrix database; method and limitations in the <a href="{rep}">report in numbers</a>.', f'Calculado sobre la base de datos PadelMetrix; método y limitaciones en el <a href="{rep}">informe en cifras</a>.', f'Calculé sur la base PadelMetrix ; méthode et limites dans le <a href="{rep}">rapport en chiffres</a>.')}</p></div>'''
+        scrivi(path, pagina(L(f"{q} Dati 2026–2027 | PadelMetrix", f"{q} 2026–2027 data | PadelMetrix", f"{q} Datos 2026–2027 | PadelMetrix", f"{q} Données 2026–2027 | PadelMetrix"), a[:300], path, corpo, on="guide", ld=[ld, faq_ld(q, a)], alt=alt), alt)
         voci.insert(0, (path, q))
 
     cr, ld = crumbs([H(), (D, None)])
-    corpo = f'''{cr}<div class="intro"><h1>{L("Domande frequenti sulle racchette da padel", "Frequently asked questions about padel rackets", "Preguntas frecuentes sobre las palas de pádel")}</h1><p>{L("Risposte brevi, con i dati del database PadelMetrix.", "Short answers, with data from the PadelMetrix database.", "Respuestas breves, con los datos de la base de datos PadelMetrix.")}</p>{data_riga()}</div>
+    corpo = f'''{cr}<div class="intro"><h1>{L("Domande frequenti sulle racchette da padel", "Frequently asked questions about padel rackets", "Preguntas frecuentes sobre las palas de pádel", "Questions fréquentes sur les raquettes de padel")}</h1><p>{L("Risposte brevi, con i dati del database PadelMetrix.", "Short answers, with data from the PadelMetrix database.", "Respuestas breves, con los datos de la base de datos PadelMetrix.", "Des réponses courtes, avec les données de la base PadelMetrix.")}</p>{data_riga()}</div>
 <div class="prose"><ul class="lista-link">{"".join(f'<li><a href="{p}">{e(q)}</a></li>' for p, q in voci)}</ul></div>'''
     path, alt = P("domande"), ALT("domande")
-    scrivi(path, pagina(L("Domande frequenti sulle racchette da padel | PadelMetrix", "Padel racket FAQ | PadelMetrix", "Preguntas frecuentes sobre palas de pádel | PadelMetrix"),
+    scrivi(path, pagina(L("Domande frequenti sulle racchette da padel | PadelMetrix", "Padel racket FAQ | PadelMetrix", "Preguntas frecuentes sobre palas de pádel | PadelMetrix", "FAQ raquettes de padel | PadelMetrix"),
                         L("Quanto pesa e quanto costa una racchetta da padel, che forma scegliere, con che racchetta giocano i professionisti: risposte con i dati.",
                           "How much a padel racket weighs and costs, which shape to choose, which rackets the pros use: answers backed by data.",
-                          "Cuánto pesa y cuánto cuesta una pala de pádel, qué forma elegir, con qué pala juegan los profesionales: respuestas con datos."),
+                          "Cuánto pesa y cuánto cuesta una pala de pádel, qué forma elegir, con qué pala juegan los profesionales: respuestas con datos.", "Combien pèse et coûte une raquette de padel, quelle forme choisir, quelles raquettes utilisent les pros : des réponses appuyées par les données."),
                         path, corpo, on="guide", ld=[ld], alt=alt), alt)
 
 
@@ -515,26 +557,26 @@ def domande(db, stats):
 def llms(db):
     s = statistiche(db)
     righe = []
-    for l, nome in (("it", "Italiano"), ("en", "English"), ("es", "Español")):
+    for l, nome in (("it", "Italiano"), ("en", "English"), ("es", "Español"), ("fr", "Français")):
         set_lang(l)
         righe.append(f"""
 
 ## {nome}
-- [{L("Racchette", "Rackets", "Palas")}]({SITO}{P("racchette")}): {L("tutte le schede con filtri per marca, forma, livello, stile e prezzo", "all racket pages with filters by brand, shape, level, style and price", "todas las fichas con filtros por marca, forma, nivel, estilo y precio")}
-- [{L("Marche", "Brands", "Marcas")}]({SITO}{P("marche")}): {L("i modelli di ogni marca", "each brand's models", "los modelos de cada marca")}
-- [{L("Confronti", "Comparisons", "Comparativas")}]({SITO}{P("confronta")}): {L("confronti modello contro modello", "model-versus-model comparisons", "comparativas modelo contra modelo")}
-- [{L("Guide", "Guides", "Guías")}]({SITO}{P("guide")}): {L("come scegliere la racchetta per livello, problema fisico, budget", "how to choose a racket by level, physical issue, budget", "cómo elegir la pala según nivel, problema físico, presupuesto")}
-- [{L("Bambini", "Kids", "Niños")}]({SITO}{P("bambini")}): {L("misure per età e racchette junior", "sizes by age and junior rackets", "medidas por edad y palas junior")}
-- [{L("Domande frequenti", "FAQ", "Preguntas frecuentes")}]({SITO}{P("domande")}): {L("risposte brevi con dati", "short answers with data", "respuestas breves con datos")}
-- [{L("Glossario", "Glossary", "Glosario")}]({SITO}{P("glossario")}): {L("termini tecnici", "technical terms", "términos técnicos")}
-- [Pickleball]({SITO}{P("pickleball")}): {L("schede delle racchette da pickleball HEAD, JOOLA, Selkirk, Six Zero e VICLION", "HEAD, JOOLA, Selkirk, Six Zero and VICLION pickleball paddle pages", "fichas de las palas de pickleball HEAD, JOOLA, Selkirk, Six Zero y VICLION")}
-- [{L("Report Racchette da padel 2026–2027 in numeri", "Report: Padel rackets 2026–2027 in numbers", "Informe Palas de pádel 2026–2027 en cifras")}]({SITO}{P("report", REPORT)})
-- [{L("Dataset aperto CSV/JSON, licenza CC BY 4.0", "Open dataset CSV/JSON, CC BY 4.0 licence", "Dataset abierto CSV/JSON, licencia CC BY 4.0")}]({SITO}{P("dati")})
-- [{L("Chi siamo e metodo", "About and method", "Quiénes somos y método")}]({SITO}{P("chi-siamo")}): {L("fonti dei dati, indipendenza, aggiornamenti", "data sources, independence, updates", "fuentes de los datos, independencia, actualizaciones")}""")
+- [{L("Racchette", "Rackets", "Palas", "Raquettes")}]({SITO}{P("racchette")}): {L("tutte le schede con filtri per marca, forma, livello, stile e prezzo", "all racket pages with filters by brand, shape, level, style and price", "todas las fichas con filtros por marca, forma, nivel, estilo y precio", "toutes les fiches raquettes avec filtres par marque, forme, niveau, style et prix")}
+- [{L("Marche", "Brands", "Marcas", "Marques")}]({SITO}{P("marche")}): {L("i modelli di ogni marca", "each brand's models", "los modelos de cada marca", "les modèles de chaque marque")}
+- [{L("Confronti", "Comparisons", "Comparativas", "Comparatifs")}]({SITO}{P("confronta")}): {L("confronti modello contro modello", "model-versus-model comparisons", "comparativas modelo contra modelo", "comparatifs modèle contre modèle")}
+- [{L("Guide", "Guides", "Guías", "Guides")}]({SITO}{P("guide")}): {L("come scegliere la racchetta per livello, problema fisico, budget", "how to choose a racket by level, physical issue, budget", "cómo elegir la pala según nivel, problema físico, presupuesto", "comment choisir une raquette selon le niveau, un problème physique, le budget")}
+- [{L("Bambini", "Kids", "Niños", "Enfants")}]({SITO}{P("bambini")}): {L("misure per età e racchette junior", "sizes by age and junior rackets", "medidas por edad y palas junior", "tailles par âge et raquettes junior")}
+- [{L("Domande frequenti", "FAQ", "Preguntas frecuentes", "FAQ")}]({SITO}{P("domande")}): {L("risposte brevi con dati", "short answers with data", "respuestas breves con datos", "réponses courtes avec données")}
+- [{L("Glossario", "Glossary", "Glosario", "Glossaire")}]({SITO}{P("glossario")}): {L("termini tecnici", "technical terms", "términos técnicos", "termes techniques")}
+- [Pickleball]({SITO}{P("pickleball")}): {L("schede delle racchette da pickleball HEAD, JOOLA, Selkirk, Six Zero e VICLION", "HEAD, JOOLA, Selkirk, Six Zero and VICLION pickleball paddle pages", "fichas de las palas de pickleball HEAD, JOOLA, Selkirk, Six Zero y VICLION", "Fiches des raquettes de pickleball HEAD, JOOLA, Selkirk, Six Zero et VICLION")}
+- [{L("Report Racchette da padel 2026–2027 in numeri", "Report: Padel rackets 2026–2027 in numbers", "Informe Palas de pádel 2026–2027 en cifras", "Rapport : Les raquettes de padel 2026–2027 en chiffres")}]({SITO}{P("report", REPORT)})
+- [{L("Dataset aperto CSV/JSON, licenza CC BY 4.0", "Open dataset CSV/JSON, CC BY 4.0 licence", "Dataset abierto CSV/JSON, licencia CC BY 4.0", "Jeu de données ouvert CSV/JSON, licence CC BY 4.0")}]({SITO}{P("dati")})
+- [{L("Chi siamo e metodo", "About and method", "Quiénes somos y método", "À propos et méthode")}]({SITO}{P("chi-siamo")}): {L("fonti dei dati, indipendenza, aggiornamenti", "data sources, independence, updates", "fuentes de los datos, independencia, actualizaciones", "sources des données, indépendance, mises à jour")}""")
     set_lang("it")
     txt = f"""# PadelMetrix
 
-> Independent padel racket database / Database indipendente di racchette da padel / Base de datos independiente de palas de pádel: {s['n']} racket pages from the 2026 and 2027 collections of {len(s['marche'])} brands, with specs, cited sources, comparisons and guides. Available in Italian, English and Spanish. Updated {OGGI}.
+> Independent padel racket database / Database indipendente di racchette da padel / Base de datos independiente de palas de pádel / Base de données indépendante de raquettes de padel: {s['n']} racket pages from the 2026 and 2027 collections of {len(s['marche'])} brands, with specs, cited sources, comparisons and guides. Available in Italian, English, Spanish and French. Updated {OGGI}.
 {"".join(righe)}
 """
     (ROOT / "llms.txt").write_text(txt, encoding="utf-8")

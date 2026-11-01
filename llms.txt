@@ -1,6 +1,6 @@
 # PadelMetrix
 
-> Independent padel racket database / Database indipendente di racchette da padel / Base de datos independiente de palas de pádel: 298 racket pages from the 2026 and 2027 collections of 20 brands, with specs, cited sources, comparisons and guides. Available in Italian, English and Spanish. Updated 2026-10-24.
+> Independent padel racket database / Database indipendente di racchette da padel / Base de datos independiente de palas de pádel / Base de données indépendante de raquettes de padel: 298 racket pages from the 2026 and 2027 collections of 20 brands, with specs, cited sources, comparisons and guides. Available in Italian, English, Spanish and French. Updated 2026-10-24.
 
 
 ## Italiano
@@ -41,3 +41,16 @@
 - [Informe Palas de pádel 2026–2027 en cifras](https://www.padelmetrix.com/es/informe/palas-padel-2026-2027-en-cifras/)
 - [Dataset abierto CSV/JSON, licencia CC BY 4.0](https://www.padelmetrix.com/es/datos/)
 - [Quiénes somos y método](https://www.padelmetrix.com/es/quienes-somos/): fuentes de los datos, independencia, actualizaciones
+
+## Français
+- [Raquettes](https://www.padelmetrix.com/fr/raquettes/): toutes les fiches raquettes avec filtres par marque, forme, niveau, style et prix
+- [Marques](https://www.padelmetrix.com/fr/marques/): les modèles de chaque marque
+- [Comparatifs](https://www.padelmetrix.com/fr/comparer/): comparatifs modèle contre modèle
+- [Guides](https://www.padelmetrix.com/fr/guides/): comment choisir une raquette selon le niveau, un problème physique, le budget
+- [Enfants](https://www.padelmetrix.com/fr/enfants/): tailles par âge et raquettes junior
+- [FAQ](https://www.padelmetrix.com/fr/questions/): réponses courtes avec données
+- [Glossaire](https://www.padelmetrix.com/fr/glossaire/): termes techniques
+- [Pickleball](https://www.padelmetrix.com/fr/pickleball/): Fiches des raquettes de pickleball HEAD, JOOLA, Selkirk, Six Zero et VICLION
+- [Rapport : Les raquettes de padel 2026–2027 en chiffres](https://www.padelmetrix.com/fr/rapport/raquettes-padel-2026-2027-en-chiffres/)
+- [Jeu de données ouvert CSV/JSON, licence CC BY 4.0](https://www.padelmetrix.com/fr/donnees/)
+- [À propos et méthode](https://www.padelmetrix.com/fr/a-propos/): sources des données, indépendance, mises à jour

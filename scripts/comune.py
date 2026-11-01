@@ -1,12 +1,13 @@
 """Elementi condivisi dai generatori del sito (illustrazioni, lingue, URL)."""
 
-LINGUE = ["it", "en", "es"]
+LINGUE = ["it", "en", "es", "fr"]
 
 # Percorsi delle sezioni per lingua
 SEZIONI = {
     "it": {"racchette": "racchette", "abbigliamento": "abbigliamento", "bambini": "bambini", "confronta": "confronta", "selettore": "trova-la-tua-racchetta", "chi": "chi-siamo", "contatti": "contatti", "privacy": "privacy", "cookie": "cookie"},
     "en": {"racchette": "rackets", "abbigliamento": "clothing", "bambini": "kids", "confronta": "compare", "selettore": "racket-finder", "chi": "about", "contatti": "contact", "privacy": "privacy", "cookie": "cookies"},
     "es": {"racchette": "palas", "abbigliamento": "ropa", "bambini": "ninos", "confronta": "comparar", "selettore": "encuentra-tu-pala", "chi": "quienes-somos", "contatti": "contacto", "privacy": "privacidad", "cookie": "cookies"},
+    "fr": {"racchette": "raquettes", "abbigliamento": "vetements", "bambini": "enfants", "confronta": "comparer", "selettore": "trouve-ta-raquette", "chi": "a-propos", "contatti": "contact", "privacy": "confidentialite", "cookie": "cookies"},
 }
 
 

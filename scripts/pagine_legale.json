@@ -4,7 +4,8 @@
 "alt": {
 "it": "/it/privacy/",
 "en": "/en/privacy/",
-"es": "/es/privacidad/"
+"es": "/es/privacidad/",
+"fr": "/fr/confidentialite/"
 }
 },
 {
@@ -12,7 +13,8 @@
 "alt": {
 "it": "/it/cookie/",
 "en": "/en/cookies/",
-"es": "/es/cookies/"
+"es": "/es/cookies/",
+"fr": "/fr/cookies/"
 }
 },
 {
@@ -20,7 +22,8 @@
 "alt": {
 "it": "/it/contatti/",
 "en": "/en/contact/",
-"es": "/es/contacto/"
+"es": "/es/contacto/",
+"fr": "/fr/contact/"
 }
 },
 {
@@ -28,7 +31,8 @@
 "alt": {
 "it": "/it/privacy/",
 "en": "/en/privacy/",
-"es": "/es/privacidad/"
+"es": "/es/privacidad/",
+"fr": "/fr/confidentialite/"
 }
 },
 {
@@ -36,7 +40,8 @@
 "alt": {
 "it": "/it/cookie/",
 "en": "/en/cookies/",
-"es": "/es/cookies/"
+"es": "/es/cookies/",
+"fr": "/fr/cookies/"
 }
 },
 {
@@ -44,7 +49,8 @@
 "alt": {
 "it": "/it/contatti/",
 "en": "/en/contact/",
-"es": "/es/contacto/"
+"es": "/es/contacto/",
+"fr": "/fr/contact/"
 }
 },
 {
@@ -52,7 +58,8 @@
 "alt": {
 "it": "/it/privacy/",
 "en": "/en/privacy/",
-"es": "/es/privacidad/"
+"es": "/es/privacidad/",
+"fr": "/fr/confidentialite/"
 }
 },
 {
@@ -60,7 +67,8 @@
 "alt": {
 "it": "/it/cookie/",
 "en": "/en/cookies/",
-"es": "/es/cookies/"
+"es": "/es/cookies/",
+"fr": "/fr/cookies/"
 }
 },
 {
@@ -68,7 +76,35 @@
 "alt": {
 "it": "/it/contatti/",
 "en": "/en/contact/",
-"es": "/es/contacto/"
+"es": "/es/contacto/",
+"fr": "/fr/contact/"
+}
+},
+{
+"path": "/fr/confidentialite/",
+"alt": {
+"it": "/it/privacy/",
+"en": "/en/privacy/",
+"es": "/es/privacidad/",
+"fr": "/fr/confidentialite/"
+}
+},
+{
+"path": "/fr/cookies/",
+"alt": {
+"it": "/it/cookie/",
+"en": "/en/cookies/",
+"es": "/es/cookies/",
+"fr": "/fr/cookies/"
+}
+},
+{
+"path": "/fr/contact/",
+"alt": {
+"it": "/it/contatti/",
+"en": "/en/contact/",
+"es": "/es/contacto/",
+"fr": "/fr/contact/"
 }
 }
 ]

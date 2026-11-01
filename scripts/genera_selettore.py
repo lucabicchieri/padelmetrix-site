@@ -40,47 +40,47 @@ SVGS = {f: racket_svg(f, 72, "") for f in ("diamante", "rotonda", "goccia")}
 
 def domande(marche):
     q = [
-        ("l", L("Che livello hai?", "What is your level?", "¿Qué nivel tienes?"),
-         [("0", L("Ho appena iniziato", "I've just started", "Acabo de empezar")), ("2", L("Gioco con regolarità", "I play regularly", "Juego con regularidad")),
-          ("4", L("Sono avanzato", "I'm advanced", "Soy avanzado")), ("5", L("Gioco tornei", "I play tournaments", "Juego torneos"))]),
-        ("s", L("Come giochi?", "How do you play?", "¿Cómo juegas?"),
-         [("controllo", L("Difendo e costruisco il punto", "I defend and build the point", "Defiendo y construyo el punto")),
-          ("polivalente", L("Un po' di tutto", "A bit of everything", "Un poco de todo")),
-          ("offensivo", L("Attacco e chiudo a rete", "I attack and finish at the net", "Ataco y cierro en la red"))]),
-        ("b", L("Hai fastidi a gomito o spalla?", "Do you have elbow or shoulder problems?", "¿Tienes molestias en el codo o el hombro?"),
-         [("si", L("Sì", "Yes", "Sí")), ("no", L("No", "No", "No"))]),
-        ("w", L("Che peso preferisci?", "What weight do you prefer?", "¿Qué peso prefieres?"),
-         [("leggera", L("Leggera (sotto 355 g)", "Light (under 355 g)", "Ligera (menos de 355 g)")), ("media", L("Media (355–365 g)", "Medium (355–365 g)", "Media (355–365 g)")),
-          ("pesante", L("Pesante (oltre 365 g)", "Heavy (over 365 g)", "Pesada (más de 365 g)")), ("", L("Non so", "Not sure", "No sé"))]),
-        ("p", L("Quanto vuoi spendere (prezzo di listino)?", "How much do you want to spend (list price)?", "¿Cuánto quieres gastar (precio de lista)?"),
-         [("100", L("Fino a 100 €", "Up to €100", "Hasta 100 €")), ("200", L("Fino a 200 €", "Up to €200", "Hasta 200 €")),
-          ("300", L("Fino a 300 €", "Up to €300", "Hasta 300 €")), ("", L("Indifferente", "Doesn't matter", "Me da igual"))]),
-        ("c", L("Per chi è?", "Who is it for?", "¿Para quién es?"),
-         [("adulto", L("Adulto", "Adult", "Adulto")), ("donna", L("Donna (anche modelli femminili)", "Woman (women's models too)", "Mujer (también modelos femeninos)")),
-          ("junior", L("Bambino o ragazzo", "Child or teenager", "Niño o joven"))]),
-        ("m", L("Hai una marca preferita?", "Do you have a favourite brand?", "¿Tienes una marca preferida?"),
-         [("", L("Nessuna", "None", "Ninguna"))] + [(s, m) for s, m in marche]),
+        ("l", L("Che livello hai?", "What is your level?", "¿Qué nivel tienes?", "Quel est votre niveau ?"),
+         [("0", L("Ho appena iniziato", "I've just started", "Acabo de empezar", "Je viens de commencer")), ("2", L("Gioco con regolarità", "I play regularly", "Juego con regularidad", "Je joue régulièrement")),
+          ("4", L("Sono avanzato", "I'm advanced", "Soy avanzado", "Je suis confirmé")), ("5", L("Gioco tornei", "I play tournaments", "Juego torneos", "Je joue des tournois"))]),
+        ("s", L("Come giochi?", "How do you play?", "¿Cómo juegas?", "Comment jouez-vous ?"),
+         [("controllo", L("Difendo e costruisco il punto", "I defend and build the point", "Defiendo y construyo el punto", "Je défends et je construis le point")),
+          ("polivalente", L("Un po' di tutto", "A bit of everything", "Un poco de todo", "Un peu de tout")),
+          ("offensivo", L("Attacco e chiudo a rete", "I attack and finish at the net", "Ataco y cierro en la red", "J'attaque et je conclus au filet"))]),
+        ("b", L("Hai fastidi a gomito o spalla?", "Do you have elbow or shoulder problems?", "¿Tienes molestias en el codo o el hombro?", "Avez-vous des problèmes de coude ou d'épaule ?"),
+         [("si", L("Sì", "Yes", "Sí", "Oui")), ("no", L("No", "No", "No", "Non"))]),
+        ("w", L("Che peso preferisci?", "What weight do you prefer?", "¿Qué peso prefieres?", "Quel poids préférez-vous ?"),
+         [("leggera", L("Leggera (sotto 355 g)", "Light (under 355 g)", "Ligera (menos de 355 g)", "Légère (moins de 355 g)")), ("media", L("Media (355–365 g)", "Medium (355–365 g)", "Media (355–365 g)", "Moyenne (355–365 g)")),
+          ("pesante", L("Pesante (oltre 365 g)", "Heavy (over 365 g)", "Pesada (más de 365 g)", "Lourde (plus de 365 g)")), ("", L("Non so", "Not sure", "No sé", "Je ne sais pas"))]),
+        ("p", L("Quanto vuoi spendere (prezzo di listino)?", "How much do you want to spend (list price)?", "¿Cuánto quieres gastar (precio de lista)?", "Combien voulez-vous dépenser (prix catalogue) ?"),
+         [("100", L("Fino a 100 €", "Up to €100", "Hasta 100 €", "Jusqu'à 100 €")), ("200", L("Fino a 200 €", "Up to €200", "Hasta 200 €", "Jusqu'à 200 €")),
+          ("300", L("Fino a 300 €", "Up to €300", "Hasta 300 €", "Jusqu'à 300 €")), ("", L("Indifferente", "Doesn't matter", "Me da igual", "Peu importe"))]),
+        ("c", L("Per chi è?", "Who is it for?", "¿Para quién es?", "Pour qui est-elle ?"),
+         [("adulto", L("Adulto", "Adult", "Adulto", "Adulte")), ("donna", L("Donna (anche modelli femminili)", "Woman (women's models too)", "Mujer (también modelos femeninos)", "Femme (modèles féminins inclus)")),
+          ("junior", L("Bambino o ragazzo", "Child or teenager", "Niño o joven", "Enfant ou adolescent"))]),
+        ("m", L("Hai una marca preferita?", "Do you have a favourite brand?", "¿Tienes una marca preferida?", "Avez-vous une marque préférée ?"),
+         [("", L("Nessuna", "None", "Ninguna", "Aucune"))] + [(s, m) for s, m in marche]),
     ]
     return q
 
 
 def testi_js():
     return {
-        "liv": L("adatta al tuo livello", "suits your level", "adecuada a tu nivel"),
-        "stile": L("stile di gioco in linea con il tuo", "playing style matches yours", "estilo de juego como el tuyo"),
-        "forma": L("forma adatta a come giochi", "shape suits how you play", "forma adecuada a cómo juegas"),
-        "soft": L("tatto morbido, più comodo per il braccio", "soft feel, easier on the arm", "tacto blando, más cómodo para el brazo"),
-        "peso": L("peso come lo preferisci", "weight as you prefer", "peso como lo prefieres"),
-        "budget": L("nel tuo budget", "within your budget", "dentro de tu presupuesto"),
-        "donna": L("modello femminile", "women's model", "modelo femenino"),
-        "nuova": L("collezione 2027", "2027 collection", "colección 2027"),
-        "scheda": L("Leggi la scheda", "Read the page", "Lee la ficha"),
-        "titolo": L("Le 3 racchette più adatte a te", "The 3 rackets that suit you best", "Las 3 palas que mejor te encajan"),
+        "liv": L("adatta al tuo livello", "suits your level", "adecuada a tu nivel", "adaptée à votre niveau"),
+        "stile": L("stile di gioco in linea con il tuo", "playing style matches yours", "estilo de juego como el tuyo", "style de jeu proche du vôtre"),
+        "forma": L("forma adatta a come giochi", "shape suits how you play", "forma adecuada a cómo juegas", "forme adaptée à votre jeu"),
+        "soft": L("tatto morbido, più comodo per il braccio", "soft feel, easier on the arm", "tacto blando, más cómodo para el brazo", "toucher doux, plus facile pour le bras"),
+        "peso": L("peso come lo preferisci", "weight as you prefer", "peso como lo prefieres", "poids selon votre préférence"),
+        "budget": L("nel tuo budget", "within your budget", "dentro de tu presupuesto", "dans votre budget"),
+        "donna": L("modello femminile", "women's model", "modelo femenino", "modèle féminin"),
+        "nuova": L("collezione 2027", "2027 collection", "colección 2027", "collection 2027"),
+        "scheda": L("Leggi la scheda", "Read the page", "Lee la ficha", "Voir la fiche"),
+        "titolo": L("Le 3 racchette più adatte a te", "The 3 rackets that suit you best", "Las 3 palas que mejor te encajan", "Les 3 raquettes qui vous conviennent le mieux"),
         "vuoto": L("Nessuna racchetta corrisponde a tutti i criteri: prova ad allargare budget o marca.", "No racket matches all the criteria: try widening budget or brand.",
-                   "Ninguna pala cumple todos los criterios: prueba a ampliar el presupuesto o la marca."),
-        "manca": L("Rispondi a tutte le domande per vedere il risultato.", "Answer all the questions to see the result.", "Responde a todas las preguntas para ver el resultado."),
-        "confronta": L("Confronta queste racchette", "Compare these rackets", "Compara estas palas"),
-        "prezzo": L("Listino", "List price", "Precio de lista"),
+                   "Ninguna pala cumple todos los criterios: prueba a ampliar el presupuesto o la marca.", "Aucune raquette ne correspond à tous les critères : essayez d'élargir le budget ou la marque."),
+        "manca": L("Rispondi a tutte le domande per vedere il risultato.", "Answer all the questions to see the result.", "Responde a todas las preguntas para ver el resultado.", "Répondez à toutes les questions pour voir le résultat."),
+        "confronta": L("Confronta queste racchette", "Compare these rackets", "Compara estas palas", "Comparer ces raquettes"),
+        "prezzo": L("Listino", "List price", "Precio de lista", "Prix catalogue"),
         "cmp": P("confronta"),
     }
 
@@ -153,31 +153,31 @@ def pagina_selettore(db):
         f'<fieldset><legend>{i}. {e(t)}</legend><div class="opts">' + "".join(
             f'<label><input type="radio" name="{k}" value="{v}"{" required" if j == 0 else ""}><span>{e(lab)}</span></label>' for j, (v, lab) in enumerate(opts)) + "</div></fieldset>"
         for i, (k, t, opts) in enumerate(domande(marche), 1))
-    cr, ld = crumbs([S.home_crumb(), (L("Trova la tua racchetta", "Racket finder", "Encuentra tu pala"), None)])
+    cr, ld = crumbs([S.home_crumb(), (L("Trova la tua racchetta", "Racket finder", "Encuentra tu pala", "Trouve ta raquette"), None)])
     corpo = f'''{CSS}{cr}
-<div class="intro"><h1>{L("Trova la tua racchetta da padel in 2 minuti", "Find your padel racket in 2 minutes", "Encuentra tu pala de pádel en 2 minutos")}</h1>
-<p><b>{L(f"Rispondi a 7 domande su livello, stile, braccio, peso, budget e marca: ti proponiamo le 3 racchette più adatte tra le {len(db)} del database PadelMetrix.", f"Answer 7 questions about level, style, arm, weight, budget and brand: we suggest the 3 best-suited rackets out of the {len(db)} in the PadelMetrix database.", f"Responde a 7 preguntas sobre nivel, estilo, brazo, peso, presupuesto y marca: te proponemos las 3 palas más adecuadas entre las {len(db)} de la base de datos PadelMetrix.")}</b> {L("Il test gira nel tuo browser: le risposte non vengono inviate a nessuno.", "The quiz runs in your browser: your answers are not sent anywhere.", "El test funciona en tu navegador: las respuestas no se envían a nadie.")}</p></div>
-<form class="finder" id="finder">{form}<button type="submit">{L("Mostra le mie racchette", "Show my rackets", "Mostrar mis palas")}</button></form>
+<div class="intro"><h1>{L("Trova la tua racchetta da padel in 2 minuti", "Find your padel racket in 2 minutes", "Encuentra tu pala de pádel en 2 minutos", "Trouvez votre raquette de padel en 2 minutes")}</h1>
+<p><b>{L(f"Rispondi a 7 domande su livello, stile, braccio, peso, budget e marca: ti proponiamo le 3 racchette più adatte tra le {len(db)} del database PadelMetrix.", f"Answer 7 questions about level, style, arm, weight, budget and brand: we suggest the 3 best-suited rackets out of the {len(db)} in the PadelMetrix database.", f"Responde a 7 preguntas sobre nivel, estilo, brazo, peso, presupuesto y marca: te proponemos las 3 palas más adecuadas entre las {len(db)} de la base de datos PadelMetrix.", f"Répondez à 7 questions sur le niveau, le style, le bras, le poids, le budget et la marque : nous vous proposons les 3 raquettes les plus adaptées parmi les {len(db)} de la base PadelMetrix.")}</b> {L("Il test gira nel tuo browser: le risposte non vengono inviate a nessuno.", "The quiz runs in your browser: your answers are not sent anywhere.", "El test funciona en tu navegador: las respuestas no se envían a nadie.", "Le quiz fonctionne dans votre navigateur : vos réponses ne sont envoyées nulle part.")}</p></div>
+<form class="finder" id="finder">{form}<button type="submit">{L("Mostra le mie racchette", "Show my rackets", "Mostrar mis palas", "Voir mes raquettes")}</button></form>
 <div id="risultato" aria-live="polite"></div>
 <div class="prose" style="margin-top:36px">
-<h2>{L("Come scegliamo", "How we choose", "Cómo elegimos")}</h2>
+<h2>{L("Come scegliamo", "How we choose", "Cómo elegimos", "Comment nous choisissons")}</h2>
 <p>{L("Ogni racchetta riceve un punteggio in base ai dati della sua scheda: quanto il livello consigliato è vicino al tuo, se stile e forma corrispondono a come giochi (rotonda per il controllo, goccia o ibrida per il gioco completo, diamante per l'attacco), il tatto se hai fastidi al braccio, il peso, il prezzo di listino rispetto al budget e la categoria. Le racchette troppo avanzate per chi inizia vengono penalizzate. Non ci sono posizioni a pagamento.",
        "Each racket gets a score based on its page data: how close the recommended level is to yours, whether style and shape match how you play (round for control, teardrop or hybrid for an all-round game, diamond for attack), the feel if you have arm problems, the weight, the list price against your budget and the category. Rackets that are too advanced for beginners are penalised. There are no paid placements.",
-       "Cada pala recibe una puntuación según los datos de su ficha: lo cerca que está el nivel recomendado del tuyo, si estilo y forma coinciden con tu juego (redonda para el control, lágrima o híbrida para un juego completo, diamante para el ataque), el tacto si tienes molestias en el brazo, el peso, el precio de lista frente al presupuesto y la categoría. Las palas demasiado avanzadas para quien empieza se penalizan. No hay posiciones de pago.")}</p>
+       "Cada pala recibe una puntuación según los datos de su ficha: lo cerca que está el nivel recomendado del tuyo, si estilo y forma coinciden con tu juego (redonda para el control, lágrima o híbrida para un juego completo, diamante para el ataque), el tacto si tienes molestias en el brazo, el peso, el precio de lista frente al presupuesto y la categoría. Las palas demasiado avanzadas para quien empieza se penalizan. No hay posiciones de pago.", "Chaque raquette reçoit une note basée sur les données de sa fiche : la proximité entre le niveau conseillé et le vôtre, l'adéquation du style et de la forme à votre jeu (ronde pour le contrôle, goutte d'eau ou hybride pour un jeu polyvalent, diamant pour l'attaque), le toucher si vous avez des problèmes au bras, le poids, le prix catalogue par rapport à votre budget et la catégorie. Les raquettes trop avancées pour les débutants sont pénalisées. Il n'y a aucun placement payant.")}</p>
 <p>{L(f'Vuoi capire meglio? Leggi le guide <a href="{P("guide", "racchetta-padel-principianti")}">per principianti</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">per il gomito</a> e <a href="{P("guide", "forme-racchetta-padel")}">sulle forme</a>, oppure cerca nell\'<a href="{P("racchette")}">elenco completo</a>.',
        f'Want to know more? Read the guides <a href="{P("guide", "racchetta-padel-principianti")}">for beginners</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">for tennis elbow</a> and <a href="{P("guide", "forme-racchetta-padel")}">on shapes</a>, or search the <a href="{P("racchette")}">full list</a>.',
-       f'¿Quieres saber más? Lee las guías <a href="{P("guide", "racchetta-padel-principianti")}">para principiantes</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">para el codo</a> y <a href="{P("guide", "forme-racchetta-padel")}">sobre las formas</a>, o busca en la <a href="{P("racchette")}">lista completa</a>.')}</p>
+       f'¿Quieres saber más? Lee las guías <a href="{P("guide", "racchetta-padel-principianti")}">para principiantes</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">para el codo</a> y <a href="{P("guide", "forme-racchetta-padel")}">sobre las formas</a>, o busca en la <a href="{P("racchette")}">lista completa</a>.', f'Vous voulez en savoir plus ? Lisez les guides <a href="{P("guide", "racchetta-padel-principianti")}">pour débutants</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">pour l\'épicondylite</a> et <a href="{P("guide", "forme-racchetta-padel")}">sur les formes</a>, ou parcourez la <a href="{P("racchette")}">liste complète</a>.')}</p>
 </div>'''
     js = ("<script>var IDX=" + json.dumps(indice(db), ensure_ascii=False) + ";var TX=" + json.dumps(testi_js(), ensure_ascii=False)
           + ";var SVG=" + json.dumps(SVGS) + ";</script>" + JS)
-    app = {"@context": "https://schema.org", "@type": "WebApplication", "name": L("Trova la tua racchetta da padel", "Padel racket finder", "Encuentra tu pala de pádel"),
+    app = {"@context": "https://schema.org", "@type": "WebApplication", "name": L("Trova la tua racchetta da padel", "Padel racket finder", "Encuentra tu pala de pádel", "Trouve ta raquette de padel"),
            "applicationCategory": "SportsApplication", "operatingSystem": "Web", "url": S.SITO + path, "inLanguage": S.lang(),
            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": S.editore()}
     S.scrivi(path, pagina(L("Trova la tua racchetta da padel in 2 minuti: test con 7 domande | PadelMetrix", "Find your padel racket in 2 minutes: 7-question quiz | PadelMetrix",
-                            "Encuentra tu pala de pádel en 2 minutos: test de 7 preguntas | PadelMetrix"),
+                            "Encuentra tu pala de pádel en 2 minutos: test de 7 preguntas | PadelMetrix", "Trouvez votre raquette de padel en 2 minutes : quiz en 7 questions | PadelMetrix"),
                           L(f"Test gratuito: 7 domande su livello, stile, braccio, peso e budget e le 3 racchette da padel più adatte tra {len(db)} modelli 2026 e 2027.",
                             f"Free quiz: 7 questions on level, style, arm, weight and budget, and the 3 best-suited padel rackets among {len(db)} 2026 and 2027 models.",
-                            f"Test gratuito: 7 preguntas sobre nivel, estilo, brazo, peso y presupuesto y las 3 palas de pádel más adecuadas entre {len(db)} modelos 2026 y 2027."),
+                            f"Test gratuito: 7 preguntas sobre nivel, estilo, brazo, peso y presupuesto y las 3 palas de pádel más adecuadas entre {len(db)} modelos 2026 y 2027.", f"Quiz gratuit : 7 questions sur le niveau, le style, le bras, le poids et le budget, et les 3 raquettes de padel les plus adaptées parmi {len(db)} modèles 2026 et 2027."),
                           path, corpo, on="racchette", ld=[ld, app], extra_js=js, alt=alt), alt)
 
 

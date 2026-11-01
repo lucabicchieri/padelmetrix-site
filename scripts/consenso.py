@@ -26,6 +26,8 @@ TESTI = {
            "Accept", "Reject", "Cookie policy", "Cookie preferences"),
     "es": ("Usamos cookies de Google Analytics para contar las visitas y saber qué páginas son útiles. Solo las activamos si aceptas.",
            "Aceptar", "Rechazar", "Política de cookies", "Preferencias de cookies"),
+    "fr": ("Nous utilisons des cookies Google Analytics pour compter les visites et savoir quelles pages sont utiles. Nous ne les activons que si vous acceptez.",
+           "Accepter", "Refuser", "Politique de cookies", "Préférences cookies"),
 }
 
 

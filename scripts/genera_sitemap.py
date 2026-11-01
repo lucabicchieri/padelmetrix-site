@@ -9,7 +9,7 @@ OGGI = "2026-10-24"
 
 
 def main():
-    voci = [{"path": f"/{l}/", "alt": {x: f"/{x}/" for x in ("it", "en", "es")}} for l in ("it", "en", "es")]
+    voci = [{"path": f"/{l}/", "alt": {x: f"/{x}/" for x in ("it", "en", "es", "fr")}} for l in ("it", "en", "es", "fr")]
     for nome in ("pagine_schede.json", "pagine_sezioni.json", "pagine_geo.json", "pagine_legale.json", "pagine_pickleball.json", "pagine_selettore.json", "pagine_articoli.json"):
         f = ROOT / "scripts" / nome
         if f.exists():

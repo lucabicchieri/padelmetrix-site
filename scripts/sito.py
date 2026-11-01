@@ -14,7 +14,7 @@ import consenso as C
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "racchette"
 SITO = "https://www.padelmetrix.com"
-LINGUE = ("it", "en", "es")
+LINGUE = ("it", "en", "es", "fr")
 e = html.escape
 
 _LANG = ["it"]
@@ -28,8 +28,33 @@ def lang():
     return _LANG[0]
 
 
-def L(it, en, es):
-    return {"it": it, "en": en, "es": es}[_LANG[0]]
+class FrMancante(Exception):
+    pass
+
+
+FR_MANCANTI = []
+
+
+def _fr_report():
+    if FR_MANCANTI:
+        from collections import Counter
+        print("FR mancanti:", sorted(Counter(FR_MANCANTI).items())[:40])
+
+
+import atexit  # noqa: E402
+atexit.register(_fr_report)
+
+
+def L(it, en, es, fr=None):
+    l = _LANG[0]
+    if l == "fr":
+        if fr is None:
+            import inspect
+            f = inspect.stack()[1]
+            FR_MANCANTI.append((f.filename.split("/")[-1], f.lineno))
+            return en
+        return fr
+    return {"it": it, "en": en, "es": es}[l]
 
 
 def tr(x):
@@ -41,14 +66,15 @@ def tr(x):
 
 MESI = {"it": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
         "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]}
+        "es": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+        "fr": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]}
 OGGI = "2026-10-24"
 
 
 def data_txt(iso=OGGI):
     y, m, d = (int(x) for x in iso.split("-"))
     mese = MESI[_LANG[0]][m - 1]
-    return L(f"{d} {mese} {y}", f"{d} {mese} {y}", f"{d} de {mese} de {y}")
+    return L(f"{d} {mese} {y}", f"{d} {mese} {y}", f"{d} de {mese} de {y}", f"{'1er' if d == 1 else d} {mese} {y}")
 
 
 def data_it_to_iso(txt):
@@ -71,6 +97,8 @@ def euro(x, dec=True):
         s = f"{x:,.0f}"
     if _LANG[0] == "en":
         return "€" + s
+    if _LANG[0] == "fr":
+        return s.replace(",", "\u202f").replace(".", ",") + " €"
     return s.replace(",", "X").replace(".", ",").replace("X", ".") + " €"
 
 
@@ -82,24 +110,24 @@ def numero(v):
 # ---------------------------------------------------------------- percorsi
 
 SEZ = {
-    "home": ("", "", ""),
-    "racchette": ("racchette", "rackets", "palas"),
-    "marche": ("marche", "brands", "marcas"),
-    "confronta": ("confronta", "compare", "comparar"),
-    "guide": ("guide", "guides", "guias"),
-    "bambini": ("bambini", "kids", "ninos"),
-    "abbigliamento": ("abbigliamento", "clothing", "ropa"),
-    "chi-siamo": ("chi-siamo", "about", "quienes-somos"),
-    "contatti": ("contatti", "contact", "contacto"),
-    "report": ("report", "report", "informe"),
-    "dati": ("dati", "data", "datos"),
-    "glossario": ("glossario", "glossary", "glosario"),
-    "domande": ("domande", "questions", "preguntas"),
-    "pickleball": ("pickleball", "pickleball", "pickleball"),
-    "selettore": ("trova-la-tua-racchetta", "racket-finder", "encuentra-tu-pala"),
-    "articoli": ("articoli", "articles", "articulos"),
-    "privacy": ("privacy", "privacy", "privacidad"),
-    "cookie": ("cookie", "cookies", "cookies"),
+    "home": ("", "", "", ""),
+    "racchette": ("racchette", "rackets", "palas", "raquettes"),
+    "marche": ("marche", "brands", "marcas", "marques"),
+    "confronta": ("confronta", "compare", "comparar", "comparer"),
+    "guide": ("guide", "guides", "guias", "guides"),
+    "bambini": ("bambini", "kids", "ninos", "enfants"),
+    "abbigliamento": ("abbigliamento", "clothing", "ropa", "vetements"),
+    "chi-siamo": ("chi-siamo", "about", "quienes-somos", "a-propos"),
+    "contatti": ("contatti", "contact", "contacto", "contact"),
+    "report": ("report", "report", "informe", "rapport"),
+    "dati": ("dati", "data", "datos", "donnees"),
+    "glossario": ("glossario", "glossary", "glosario", "glossaire"),
+    "domande": ("domande", "questions", "preguntas", "questions"),
+    "pickleball": ("pickleball", "pickleball", "pickleball", "pickleball"),
+    "selettore": ("trova-la-tua-racchetta", "racket-finder", "encuentra-tu-pala", "trouve-ta-raquette"),
+    "articoli": ("articoli", "articles", "articulos", "articles"),
+    "privacy": ("privacy", "privacy", "privacidad", "confidentialite"),
+    "cookie": ("cookie", "cookies", "cookies", "cookies"),
 }
 
 # slug italiani -> (inglese, spagnolo)
@@ -136,16 +164,54 @@ SLUG = {
 }
 
 
+# slug italiani -> francese (dove serve una traduzione dedicata)
+SLUG_FR = {
+    "racchetta-padel-principianti": "raquette-padel-debutant",
+    "racchetta-padel-epicondilite": "raquette-padel-tennis-elbow",
+    "forme-racchetta-padel": "formes-raquette-padel",
+    "racchette-padel-donna": "raquettes-padel-femme",
+    "racchette-padel-economiche": "raquettes-padel-pas-cheres",
+    "racchette-padel-controllo": "raquettes-padel-controle",
+    "racchette-padel-potenza": "raquettes-padel-puissance",
+    "racchette-giocatori-professionisti": "raquettes-joueurs-professionnels",
+    "racchette-padel-2026-2027-in-numeri": "raquettes-padel-2026-2027-en-chiffres",
+    "racchette-padel-2027-novita-per-marca": "raquettes-padel-2027-nouveautes-par-marque",
+    "ale-galan-chi-e-e-che-racchetta-usa": "ale-galan-qui-est-il-et-quelle-raquette-utilise-t-il",
+    "regolamento-padel-regole-spiegate": "regles-du-padel-expliquees",
+    "regolamento-pickleball-regole-spiegate": "regles-du-pickleball-expliquees",
+    "siux-diablo-pro-2026-vs-2027-cosa-cambia": "siux-diablo-pro-2026-vs-2027-ce-qui-change",
+    "racchette-padel-2027-vs-2026-cosa-cambia": "raquettes-padel-2027-vs-2026-ce-qui-change",
+    "migliori-racchette-padel-2026-classifiche-indipendenti": "meilleures-raquettes-padel-2026-classements-independants",
+    "bilanciamento": "equilibre",
+    "swingweight": "swingweight",
+    "sweet-spot": "sweet-spot",
+    "eva": "gomme-eva",
+    "foam": "mousse-foam",
+    "carbonio-3k-12k-18k": "carbone-3k-12k-18k",
+    "fibra-di-vetro": "fibre-de-verre",
+    "racchetta-diamante": "raquette-diamant",
+    "racchetta-rotonda": "raquette-ronde",
+    "racchetta-goccia": "raquette-goutte-d-eau",
+    "superficie-ruvida": "surface-rugueuse",
+    "misure-regolamentari": "dimensions-reglementaires",
+    "quanto-pesa-una-racchetta-da-padel": "combien-pese-une-raquette-de-padel",
+    "quanto-costa-una-racchetta-da-padel": "combien-coute-une-raquette-de-padel",
+    "forma-racchetta-padel-piu-diffusa": "forme-de-raquette-de-padel-la-plus-courante",
+}
+
+
 def _slug(s, l):
     if s is None:
         return None
     if l == "it":
         return s
+    if l == "fr" and s in SLUG_FR:
+        return SLUG_FR[s]
     if s in SLUG:
-        return SLUG[s][0 if l == "en" else 1]
+        return SLUG[s][0 if l == "en" else 1] if l != "fr" else SLUG[s][0]
     m = re.match(r"racchetta-(.+)$", s)
     if m and not s.startswith("racchetta-padel"):
-        return f"{m.group(1)}-padel-racket" if l == "en" else f"pala-{m.group(1)}"
+        return {"en": f"{m.group(1)}-padel-racket", "es": f"pala-{m.group(1)}", "fr": f"raquette-{m.group(1)}"}[l]
     return s
 
 
@@ -194,20 +260,20 @@ def loc_html(s):
 # ---------------------------------------------------------------- vocabolario dei dati
 
 FORMA_IT = {"diamante": "Diamante", "rotonda": "Rotonda", "goccia": "Goccia", "ibrida": "Ibrida"}
-_FORMA = {"diamante": ("Diamante", "Diamond", "Diamante"), "rotonda": ("Rotonda", "Round", "Redonda"),
-          "goccia": ("Goccia", "Teardrop", "Lágrima"), "ibrida": ("Ibrida", "Hybrid", "Híbrida")}
+_FORMA = {"diamante": ("Diamante", "Diamond", "Diamante", "Diamant"), "rotonda": ("Rotonda", "Round", "Redonda", "Ronde"),
+          "goccia": ("Goccia", "Teardrop", "Lágrima", "Goutte d'eau"), "ibrida": ("Ibrida", "Hybrid", "Híbrida", "Hybride")}
 LIV = ["principiante", "principiante-intermedio", "intermedio", "intermedio-avanzato", "avanzato", "professionale"]
 LIV_IT = {"principiante": "Principiante", "principiante-intermedio": "Principiante / intermedio", "intermedio": "Intermedio",
           "intermedio-avanzato": "Intermedio / avanzato", "avanzato": "Avanzato", "professionale": "Avanzato / professionale"}
-_LIV = {"principiante": ("Principiante", "Beginner", "Principiante"),
-        "principiante-intermedio": ("Principiante / intermedio", "Beginner / intermediate", "Principiante / intermedio"),
-        "intermedio": ("Intermedio", "Intermediate", "Intermedio"),
-        "intermedio-avanzato": ("Intermedio / avanzato", "Intermediate / advanced", "Intermedio / avanzado"),
-        "avanzato": ("Avanzato", "Advanced", "Avanzado"),
-        "professionale": ("Avanzato / professionale", "Advanced / professional", "Avanzado / profesional")}
+_LIV = {"principiante": ("Principiante", "Beginner", "Principiante", "Débutant"),
+        "principiante-intermedio": ("Principiante / intermedio", "Beginner / intermediate", "Principiante / intermedio", "Débutant / intermédiaire"),
+        "intermedio": ("Intermedio", "Intermediate", "Intermedio", "Intermédiaire"),
+        "intermedio-avanzato": ("Intermedio / avanzato", "Intermediate / advanced", "Intermedio / avanzado", "Intermédiaire / confirmé"),
+        "avanzato": ("Avanzato", "Advanced", "Avanzado", "Confirmé"),
+        "professionale": ("Avanzato / professionale", "Advanced / professional", "Avanzado / profesional", "Confirmé / expert")}
 STILE_IT = {"offensivo": "Attacco", "controllo": "Controllo", "polivalente": "Polivalente"}
-_STILE = {"offensivo": ("Attacco", "Attack", "Ataque"), "controllo": ("Controllo", "Control", "Control"),
-          "polivalente": ("Polivalente", "All-round", "Polivalente")}
+_STILE = {"offensivo": ("Attacco", "Attack", "Ataque", "Attaque"), "controllo": ("Controllo", "Control", "Control", "Contrôle"),
+          "polivalente": ("Polivalente", "All-round", "Polivalente", "Polyvalente")}
 
 
 def FORMA(k):
@@ -326,12 +392,12 @@ CSS = (ROOT / "scripts" / "scheda.css").read_text(encoding="utf-8") + (ROOT / "s
 
 
 def nav():
-    return [("racchette", L("Racchette", "Rackets", "Palas"), P("racchette")),
+    return [("racchette", L("Racchette", "Rackets", "Palas", "Raquettes"), P("racchette")),
             ("pickleball", "Pickleball", P("pickleball")),
-            ("bambini", L("Bambini", "Kids", "Niños"), P("bambini")),
-            ("confronta", L("Confronta", "Compare", "Comparar"), P("confronta")),
-            ("guide", L("Guide", "Guides", "Guías"), P("guide")),
-            ("articoli", L("Articoli", "Articles", "Artículos"), P("articoli"))]
+            ("bambini", L("Bambini", "Kids", "Niños", "Enfants"), P("bambini")),
+            ("confronta", L("Confronta", "Compare", "Comparar", "Comparer"), P("confronta")),
+            ("guide", L("Guide", "Guides", "Guías", "Guides"), P("guide")),
+            ("articoli", L("Articoli", "Articles", "Artículos", "Articles"), P("articoli"))]
 
 
 def header(on, alt=None):
@@ -341,21 +407,21 @@ def header(on, alt=None):
     langs = " · ".join(f'<a{" class=\"on\"" if x == l else ""} href="{alt.get(x, P("home", l=x))}" hreflang="{x}">{x.upper()}</a>' for x in LINGUE)
     return f'''<header class="site"><div class="wrap">
 <a class="brand" href="{P("home")}">{LOGO}<span><b>padel</b>metrix</span></a>
-<nav class="main" aria-label="{L("Principale", "Main", "Principal")}">
+<nav class="main" aria-label="{L("Principale", "Main", "Principal", "Principal")}">
 {items}
 </nav>
-<div class="langs" aria-label="{L("Lingua", "Language", "Idioma")}">{langs}</div>
+<div class="langs" aria-label="{L("Lingua", "Language", "Idioma", "Langue")}">{langs}</div>
 </div></header>'''
 
 
 def footer():
     testo = L("PadelMetrix è un sito indipendente di Luca Bicchieri. In qualità di Affiliato Amazon, PadelMetrix riceve un guadagno dagli acquisti idonei. Alcuni link verso altri negozi sono link di affiliazione.",
               "PadelMetrix is an independent website by Luca Bicchieri. As an Amazon Associate, PadelMetrix earns from qualifying purchases. Some links to other shops are affiliate links.",
-              "PadelMetrix es una web independiente de Luca Bicchieri. Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.")
-    links = [(P("racchette"), L("Racchette", "Rackets", "Palas")), (P("guide"), L("Guide", "Guides", "Guías")),
-             (P("articoli"), L("Articoli", "Articles", "Artículos")), (P("domande"), L("Domande", "Questions", "Preguntas")), (P("glossario"), L("Glossario", "Glossary", "Glosario")),
-             (P("dati"), L("Dati aperti", "Open data", "Datos abiertos")), (P("chi-siamo"), L("Chi siamo e metodo", "About and method", "Quiénes somos y método")), (P("contatti"), L("Contatti", "Contact", "Contacto")),
-             (P("privacy"), L("Privacy", "Privacy", "Privacidad")), (P("cookie"), L("Cookie", "Cookies", "Cookies"))]
+              "PadelMetrix es una web independiente de Luca Bicchieri. Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.", "PadelMetrix est un site indépendant de Luca Bicchieri. En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Certains liens vers d'autres boutiques sont des liens d'affiliation.")
+    links = [(P("racchette"), L("Racchette", "Rackets", "Palas", "Raquettes")), (P("guide"), L("Guide", "Guides", "Guías", "Guides")),
+             (P("articoli"), L("Articoli", "Articles", "Artículos", "Articles")), (P("domande"), L("Domande", "Questions", "Preguntas", "Questions")), (P("glossario"), L("Glossario", "Glossary", "Glosario", "Glossaire")),
+             (P("dati"), L("Dati aperti", "Open data", "Datos abiertos", "Données ouvertes")), (P("chi-siamo"), L("Chi siamo e metodo", "About and method", "Quiénes somos y método", "À propos et méthode")), (P("contatti"), L("Contatti", "Contact", "Contacto", "Contact")),
+             (P("privacy"), L("Privacy", "Privacy", "Privacidad", "Confidentialité")), (P("cookie"), L("Cookie", "Cookies", "Cookies", "Cookies"))]
     return f'''<footer><div class="wrap">
 <span style="max-width:760px">{testo}</span>
 <span>{social_links()}</span>
@@ -372,15 +438,15 @@ def crumbs(items):
         if u:
             el["item"] = SITO + u
         ld.append(el)
-    htm = f'<nav class="crumbs" aria-label="{L("Percorso", "Breadcrumb", "Ruta")}">' + "<span>›</span>".join(parts) + "</nav>"
+    htm = f'<nav class="crumbs" aria-label="{L("Percorso", "Breadcrumb", "Ruta", "Fil d'Ariane")}">' + "<span>›</span>".join(parts) + "</nav>"
     return htm, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": ld}
 
 
 def home_crumb():
-    return ("Home", P("home"))
+    return ("Accueil" if _LANG[0] == "fr" else "Home", P("home"))
 
 
-OG_LOCALE = {"it": "it_IT", "en": "en_GB", "es": "es_ES"}
+OG_LOCALE = {"it": "it_IT", "en": "en_GB", "es": "es_ES", "fr": "fr_FR"}
 
 
 def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None):
@@ -467,15 +533,31 @@ def editore():
 
 
 def data_riga(femm=False):
-    agg = L("Aggiornata" if femm else "Aggiornato", "Updated", "Actualizada" if femm else "Actualizado")
-    by = L("a cura di", "by", "por")
-    return f'<p class="note">{agg} {L("il ", "on ", "el ")}{data_txt()} · {by} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p>'
+    agg = L("Aggiornata" if femm else "Aggiornato", "Updated", "Actualizada" if femm else "Actualizado", "Mis à jour")
+    by = L("a cura di", "by", "por", "par")
+    return f'<p class="note">{agg} {L("il ", "on ", "el ", "le ")}{data_txt()} · {by} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p>'
 
 
 PAGINE = []  # (percorso, {lingua: percorso}) per la sitemap
 
 
+_FR_COLON = re.compile(r"(?<=[^\s\d/:\u00a0]):(?=\s|$)")
+
+
+def tipo_fr(html_txt):
+    """Tipografia francese: spazio insecabile prima dei due punti, solo nel testo visibile (non in tag, script, style)."""
+    out, pos = [], 0
+    for m in re.finditer(r"<script.*?</script>|<style.*?</style>|<[^>]+>", html_txt, flags=re.S):
+        out.append(_FR_COLON.sub("\u00a0:", html_txt[pos:m.start()]))
+        out.append(m.group(0))
+        pos = m.end()
+    out.append(_FR_COLON.sub("\u00a0:", html_txt[pos:]))
+    return "".join(out)
+
+
 def scrivi(path, html_txt, alt=None):
+    if path.startswith("/fr/"):
+        html_txt = tipo_fr(html_txt)
     dest = ROOT / path.strip("/") / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(html_txt, encoding="utf-8")
