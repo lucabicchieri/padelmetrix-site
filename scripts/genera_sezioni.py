@@ -63,6 +63,7 @@ def elenco(db):
       f"{len(db)} rackets from {nm} brands with specs, review summaries and similar models. Filter by brand, shape, level, style and price, or take the <a href=\"{P('selettore')}\">2-minute quiz</a> or read the <a href=\"{P('guide')}\">buying guides</a>.",
       f"{len(db)} palas de {nm} marcas con datos técnicos, resumen de reseñas y modelos similares. Filtra por marca, forma, nivel, estilo y precio, o haz el <a href=\"{P('selettore')}\">test de 2 minutos</a> o lee las <a href=\"{P('guide')}\">guías de compra</a>.")}</p></div>
 <div class="marche">{"".join(f'<a href="{P("marche", s)}">{e(m)}</a>' for s, m in marche)}</div>
+<p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:16px 0 24px">{L("<b>Nuovo al padel?</b> Prima di scegliere la racchetta leggi", "<b>New to padel?</b> Before choosing a racket, read", "<b>¿Nuevo en el pádel?</b> Antes de elegir la pala, lee")} <a href="{P("articoli", "regolamento-padel-regole-spiegate")}">{L("il regolamento del padel spiegato semplice", "the padel rules explained simply", "el reglamento del pádel explicado fácil")}</a>: {L("servizio, pareti, punteggio e Star Point.", "serve, walls, scoring and Star Point.", "saque, paredes, tanteo y Star Point.")}</p>
 {form}
 <p class="conta" id="conta">{len(db)} {L("racchette", "rackets", "palas")}</p>
 {griglia(ordina(db))}'''

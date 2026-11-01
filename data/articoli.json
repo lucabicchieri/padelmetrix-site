@@ -1,5 +1,25 @@
 [
  {
+  "slug": "regolamento-padel-regole-spiegate",
+  "data": "2026-11-01",
+  "racchette": [],
+  "titolo": {
+   "it": "Regolamento del padel 2026: le regole spiegate semplici",
+   "en": "Padel rules 2026: the rules explained simply",
+   "es": "Reglamento del pádel 2026: las reglas explicadas fácil"
+  },
+  "desc": {
+   "it": "Servizio, pareti, punteggio e Star Point, secondo il regolamento FIP 2026.",
+   "en": "Serve, walls, scoring and Star Point, per the 2026 FIP rules.",
+   "es": "Saque, paredes, tanteo y Star Point, según el reglamento FIP 2026."
+  },
+  "url": {
+   "it": "/it/articoli/regolamento-padel-regole-spiegate/",
+   "en": "/en/articles/padel-rules-explained/",
+   "es": "/es/articulos/reglamento-padel-reglas-explicadas/"
+  }
+ },
+ {
   "slug": "regolamento-pickleball-regole-spiegate",
   "data": "2026-11-01",
   "racchette": [],

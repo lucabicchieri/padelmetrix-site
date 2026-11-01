@@ -16,7 +16,7 @@ from sito import (ROOT, SITO, e, L, P, ALT, carica, crumbs, pagina, griglia, ord
                   url_r, LINGUE, set_lang, data_riga, confronto_url, coppie)
 
 OGGI_ISO = "2026-10-30"
-DATE_ART = {"regolamento-pickleball-regole-spiegate": "2026-11-01", "racchette-padel-2027-vs-2026-cosa-cambia": "2026-10-31", "migliori-racchette-padel-2026-classifiche-indipendenti": "2026-10-31"}
+DATE_ART = {"regolamento-padel-regole-spiegate": "2026-11-01", "regolamento-pickleball-regole-spiegate": "2026-11-01", "racchette-padel-2027-vs-2026-cosa-cambia": "2026-10-31", "migliori-racchette-padel-2026-classifiche-indipendenti": "2026-10-31"}
 
 
 def T(it, en, es):
@@ -909,6 +909,236 @@ def pickleball_regole(db):
 
 
 
+# ---------------------------------------------------------------- 12. Regolamento del padel
+
+PD_REG = "https://www.padelfip.com/wp-content/uploads/2025/12/FIP_Reglas-del-Padel.pdf"
+PD_STAR = "https://www.padelfip.com/wp-content/uploads/2025/12/18-diciembre_Star-Point_ESP.pdf"
+
+
+def padel_regole(db):
+    slug = "regolamento-padel-regole-spiegate"
+    adulti = [n for n in db if n["categoria"] != "junior"]
+    inizio = [n for n in adulti if n["livello"] in ("principiante", "principiante-intermedio")]
+    url_r_all, url_sel = P("racchette"), P("selettore")
+    reg = fonte(PD_REG, L("Regolamento del padel FIP, revisione in vigore dal 1° gennaio 2026", "FIP Padel Rules, revision in force from 1 January 2026", "Reglas del Pádel FIP, revisión en vigor desde el 1 de enero de 2026"))
+    star = fonte(PD_STAR, L("comunicato FIP sullo Star Point", "FIP Star Point announcement", "comunicado FIP sobre el Star Point"))
+    box = lambda: L(f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Regole chiare? Ora scegli la racchetta giusta.</b><br>Nel nostro database ci sono {len(adulti)} racchette da padel 2026 e 2027, con forma, peso, bilanciamento e voti delle recensioni indipendenti. Se non sai da dove partire, il test ti consiglia in 2 minuti.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Fai il test</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">Vedi tutte le racchette →</a></div>''',
+                    f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Rules clear? Now pick the right racket.</b><br>Our database has {len(adulti)} 2026 and 2027 padel rackets, with shape, weight, balance and independent review scores. Not sure where to start? The quiz gives you a recommendation in 2 minutes.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Take the quiz</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">See all rackets →</a></div>''',
+                    f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>¿Reglas claras? Ahora elige la pala adecuada.</b><br>En nuestra base de datos hay {len(adulti)} palas de pádel 2026 y 2027, con forma, peso, balance y notas de las reseñas independientes. Si no sabes por dónde empezar, el test te recomienda en 2 minutos.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_sel}">Haz el test</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{url_r_all}">Ver todas las palas →</a></div>''')
+    corpo = L(f'''<p><b>Il padel si gioca in doppio su un campo di 20 × 10 metri chiuso da pareti, con una rete alta 88 cm al centro e una pallina simile a quella del tennis.</b> Le pareti sono la vera differenza: la palla può rimbalzarci contro e restare in gioco. Questa guida spiega le regole una per una seguendo il regolamento ufficiale della Federazione Internazionale (FIP), nella revisione in vigore dal 1° gennaio 2026, con le novità di quest'anno come lo Star Point.</p>
+<h2>Le regole in breve</h2>
+<ol>
+<li>Si serve dal basso: la palla rimbalza a terra e va colpita all'altezza della vita o più in basso, in diagonale.</li>
+<li>Per ogni punto hai due servizi, come nel tennis.</li>
+<li>La palla deve rimbalzare prima nel campo avversario; dopo può toccare pareti e rete metallica.</li>
+<li>Si risponde prima del secondo rimbalzo a terra, anche dopo che la palla ha toccato le pareti del proprio campo.</li>
+<li>Punteggio come nel tennis: 15, 30, 40, gioco; set a 6 giochi, partita al meglio dei 3 set.</li>
+</ol>
+{box()}
+<h2>Il campo, la rete e la pallina</h2>
+<p>Il campo misura <b>20 metri di lunghezza per 10 di larghezza</b>. Sul fondo ci sono pareti alte 3 metri sormontate da 1 metro di rete metallica, per un totale di 4 metri; ai lati pareti e rete metallica seguono uno schema a gradini. La rete è alta <b>88 cm al centro e fino a 92 cm alle estremità</b>. La pallina ha un diametro tra 6,35 e 6,77 cm e pesa tra 56 e 59,4 grammi, con un rimbalzo un po' più basso di quella da tennis.</p>
+<h2>Il servizio</h2>
+<p>Il servizio è la regola che crea più dubbi (regola 6):</p>
+<ul>
+<li>chi serve ha almeno un piede sulla linea di servizio o dietro, nella metà campo tra la linea centrale e la parete laterale;</li>
+<li>lascia rimbalzare la palla a terra dietro la linea, poi la colpisce;</li>
+<li>al momento del colpo la palla deve essere <b>all'altezza della vita o più in basso</b>, con almeno un piede a terra;</li>
+<li>la palla deve passare la rete <b>in diagonale</b> e rimbalzare nel riquadro di servizio avversario;</li>
+<li>se il primo servizio è sbagliato, c'è il <b>secondo</b>.</li>
+</ul>
+<p>Dopo il rimbalzo nel riquadro giusto la palla può toccare la parete di vetro, ma se tocca la rete metallica (la "griglia") prima del secondo rimbalzo il servizio è fallo. Se la palla tocca il nastro della rete e poi entra nel riquadro senza toccare la griglia, il servizio si ripete (net).</p>
+<h2>Come si usano le pareti</h2>
+<p>È la parte che rende unico il padel (regole 12 e 14).</p>
+<ul>
+<li>Il colpo è buono se la palla <b>rimbalza prima nel campo avversario</b>; dopo può toccare pareti, griglia o rete.</li>
+<li>Puoi anche colpire la palla contro una <b>parete del tuo campo</b>: se poi passa la rete e rimbalza nel campo avversario, il colpo è valido.</li>
+<li>Quando la palla arriva nel tuo campo, la puoi colpire al volo, oppure dopo un rimbalzo a terra, anche dopo che ha toccato le pareti: conta solo che <b>non rimbalzi due volte a terra</b>.</li>
+<li>Uscire dal campo per riprendere la palla è permesso solo nei campi che hanno lo spazio di sicurezza previsto (regola 16).</li>
+</ul>
+<h2>Il punteggio e lo Star Point</h2>
+<p>Il punteggio è quello del tennis (regola 1): <b>15, 30, 40, gioco</b>. Sul 40 pari si gioca il vantaggio. Il set va a 6 giochi con 2 di scarto; sul 6–6 si gioca il <b>tie-break a 7 punti</b>, sempre con 2 di scarto. La partita è al meglio dei <b>3 set</b>. Si cambia campo quando la somma dei giochi del set è dispari, e nel tie-break ogni 6 punti.</p>
+<p><b>Novità 2026: lo Star Point.</b> Dal 2026 nei circuiti Premier Padel, CUPRA FIP Tour, FIP Promises e FIP Beyond, sul 40 pari si giocano al massimo due vantaggi. Se chi ha il vantaggio perde anche il secondo, si gioca un unico punto decisivo, lo Star Point, che assegna il gioco. Nei circoli molti usano invece il <b>punto d'oro</b>: sul 40 pari si gioca subito un solo punto decisivo. Il regolamento li prevede entrambi come formule alternative.</p>
+<h2>I falli più comuni</h2>
+<ul>
+<li>toccare la rete, i pali o il campo avversario con il corpo, la racchetta o il laccetto mentre la palla è in gioco;</li>
+<li>lasciare rimbalzare la palla due volte a terra;</li>
+<li>colpire la palla in modo che tocchi la griglia o la parete avversaria <b>prima</b> di rimbalzare a terra;</li>
+<li>colpire la palla due volte, o colpirla con entrambi i giocatori della coppia;</li>
+<li>essere toccati dalla palla, sul corpo o sui vestiti;</li>
+<li>sbagliare anche il secondo servizio.</li>
+</ul>
+<h2>Le altre novità del 2026</h2>
+<ul>
+<li>al servizio basta avere un piede <b>sulla linea</b> o dietro, e la palla resta comunque sotto la vita;</li>
+<li>il riscaldamento prima della partita scende da 5 a 3 minuti;</li>
+<li>se il laccetto di sicurezza si rompe durante un punto, quel punto è perso;</li>
+<li>nella racchetta, i fori lungo il bordo possono avere forme non rotonde, fino a 20 mm.</li>
+</ul>
+<h2>La racchetta: cosa dice il regolamento</h2>
+<p>Il regolamento FIP fissa le misure massime della racchetta:</p>
+<ul>
+<li>lunghezza totale, testa più manico, al massimo <b>45,5 cm</b>;</li>
+<li>testa larga al massimo <b>26 cm</b> e spessa al massimo <b>38 mm</b>;</li>
+<li>fori cilindrici da 9 a 13 mm, in numero libero;</li>
+<li>laccetto da polso obbligatorio, non elastico, lungo al massimo 35 cm;</li>
+<li>nessun limite di peso.</li>
+</ul>
+<p>Tutte le racchette che trovi nei negozi rispettano queste misure: la scelta dipende da forma, peso e bilanciamento. Nel nostro database ci sono {len(adulti)} racchette 2026 e 2027, di cui {len(inizio)} pensate per chi inizia o è a livello principiante-intermedio. Puoi filtrarle nella <a href="{url_r_all}">pagina delle racchette</a> o farti consigliare dal <a href="{url_sel}">test "Trova la tua racchetta"</a>. Se vuoi capire cosa cambia tra le forme, leggi le <a href="{P("guide")}">guide</a>.</p>
+<p class="note">Fonti: {reg}; {star}. Il regolamento completo comprende anche le norme su arbitri, comportamento e tornei, che qui non trattiamo.</p>''',
+              f'''<p><b>Padel is played in doubles on a 20 × 10 m court enclosed by walls, with a net 88 cm high at the centre and a ball similar to a tennis ball.</b> The walls are the real difference: the ball can bounce off them and stay in play. This guide explains the rules one by one, following the official rules of the International Padel Federation (FIP), in the revision in force from 1 January 2026, including this year's changes such as the Star Point.</p>
+<h2>The rules in short</h2>
+<ol>
+<li>Serve underhand: bounce the ball and hit it at or below waist height, diagonally.</li>
+<li>You get two serves per point, as in tennis.</li>
+<li>The ball must bounce first in the opponents' court; after that it may hit the walls and the wire fence.</li>
+<li>Return the ball before its second bounce on the ground, even after it has hit the walls on your side.</li>
+<li>Scoring as in tennis: 15, 30, 40, game; sets to 6 games, best of 3 sets.</li>
+</ol>
+{box()}
+<h2>The court, the net and the ball</h2>
+<p>The court is <b>20 metres long and 10 metres wide</b>. At each end there are 3 m walls topped by 1 m of wire mesh, 4 m in total; the sides combine walls and mesh in a stepped layout. The net is <b>88 cm high at the centre and up to 92 cm at the ends</b>. The ball is 6.35–6.77 cm in diameter and weighs 56–59.4 grams, with a slightly lower bounce than a tennis ball.</p>
+<h2>The serve</h2>
+<p>The serve causes the most doubts (rule 6):</p>
+<ul>
+<li>the server has at least one foot on or behind the service line, in the half between the centre line and the side wall;</li>
+<li>bounces the ball on the ground behind the line, then hits it;</li>
+<li>at contact the ball must be <b>at or below waist height</b>, with at least one foot on the ground;</li>
+<li>the ball must cross the net <b>diagonally</b> and bounce in the opponents' service box;</li>
+<li>if the first serve is a fault, there is a <b>second serve</b>.</li>
+</ul>
+<p>After bouncing in the correct box the ball may hit the glass wall, but if it hits the wire fence before the second bounce the serve is a fault. If the ball clips the net and lands in the box without touching the fence, the serve is replayed (let).</p>
+<h2>How the walls work</h2>
+<p>This is what makes padel unique (rules 12 and 14).</p>
+<ul>
+<li>A shot is good if the ball <b>bounces first in the opponents' court</b>; after that it may hit walls, fence or net.</li>
+<li>You may also hit the ball against a <b>wall on your own side</b>: if it then clears the net and bounces in the opponents' court, the shot is good.</li>
+<li>When the ball comes to your side you can volley it, or play it after one bounce, even after it has hit the walls: what matters is that it <b>does not bounce twice on the ground</b>.</li>
+<li>Leaving the court to play the ball is only allowed on courts with the required safety area (rule 16).</li>
+</ul>
+<h2>Scoring and the Star Point</h2>
+<p>Scoring is the same as tennis (rule 1): <b>15, 30, 40, game</b>. At 40–40 advantage is played. A set goes to 6 games with a 2-game margin; at 6–6 a <b>tie-break to 7 points</b> is played, again with a 2-point margin. Matches are best of <b>3 sets</b>. Players change ends when the total number of games in the set is odd, and every 6 points in the tie-break.</p>
+<p><b>New in 2026: the Star Point.</b> From 2026 on the Premier Padel, CUPRA FIP Tour, FIP Promises and FIP Beyond circuits, at 40–40 a maximum of two advantages are played. If the team with advantage loses the second one too, a single deciding point, the Star Point, wins the game. Many clubs instead use the <b>golden point</b>: at 40–40 a single deciding point is played straight away. The rules include both as alternative formats.</p>
+<h2>The most common faults</h2>
+<ul>
+<li>touching the net, posts or the opponents' court with body, racket or wrist strap while the ball is in play;</li>
+<li>letting the ball bounce twice on the ground;</li>
+<li>hitting the ball so that it hits the opponents' fence or wall <b>before</b> bouncing on the ground;</li>
+<li>hitting the ball twice, or both partners hitting it;</li>
+<li>being hit by the ball, on the body or clothing;</li>
+<li>missing the second serve too.</li>
+</ul>
+<h2>Other changes in 2026</h2>
+<ul>
+<li>on the serve, one foot <b>on the line</b> or behind it is enough, and the ball must still be below the waist;</li>
+<li>the pre-match warm-up drops from 5 to 3 minutes;</li>
+<li>if the safety strap breaks during a point, that point is lost;</li>
+<li>on the racket, holes along the edge may be non-round, up to 20 mm.</li>
+</ul>
+<h2>The racket: what the rules say</h2>
+<p>The FIP rules set the maximum racket dimensions:</p>
+<ul>
+<li>total length, head plus handle, no more than <b>45.5 cm</b>;</li>
+<li>head no wider than <b>26 cm</b> and no thicker than <b>38 mm</b>;</li>
+<li>cylindrical holes of 9–13 mm, in any number;</li>
+<li>a mandatory, non-elastic wrist strap no longer than 35 cm;</li>
+<li>no weight limit.</li>
+</ul>
+<p>All rackets sold in shops meet these limits: the choice comes down to shape, weight and balance. Our database has {len(adulti)} 2026 and 2027 rackets, {len(inizio)} of them aimed at beginner or beginner-intermediate players. You can filter them on the <a href="{url_r_all}">rackets page</a> or get a recommendation from the <a href="{url_sel}">racket finder quiz</a>. To understand how shapes differ, read the <a href="{P("guide")}">guides</a>.</p>
+<p class="note">Sources: {reg}; {star}. The full rules also cover referees, conduct and tournaments, which are not covered here.</p>''',
+              f'''<p><b>El pádel se juega por parejas en una pista de 20 × 10 metros cerrada por paredes, con una red de 88 cm en el centro y una pelota parecida a la de tenis.</b> Las paredes son la verdadera diferencia: la pelota puede rebotar en ellas y seguir en juego. Esta guía explica las reglas una a una siguiendo el reglamento oficial de la Federación Internacional (FIP), en la revisión vigente desde el 1 de enero de 2026, con las novedades de este año como el Star Point.</p>
+<h2>Las reglas en breve</h2>
+<ol>
+<li>Se saca por abajo: la pelota bota en el suelo y se golpea a la altura de la cintura o por debajo, en diagonal.</li>
+<li>En cada punto hay dos saques, como en el tenis.</li>
+<li>La pelota debe botar primero en el campo rival; después puede tocar paredes y malla metálica.</li>
+<li>Se devuelve antes del segundo bote en el suelo, aunque la pelota haya tocado las paredes del propio campo.</li>
+<li>Tanteo como en el tenis: 15, 30, 40, juego; sets a 6 juegos, partido al mejor de 3 sets.</li>
+</ol>
+{box()}
+<h2>La pista, la red y la pelota</h2>
+<p>La pista mide <b>20 metros de largo por 10 de ancho</b>. En los fondos hay paredes de 3 metros coronadas por 1 metro de malla metálica, 4 metros en total; en los laterales paredes y malla siguen un esquema escalonado. La red mide <b>88 cm en el centro y hasta 92 cm en los extremos</b>. La pelota tiene un diámetro de 6,35 a 6,77 cm y pesa de 56 a 59,4 gramos, con un bote algo más bajo que la de tenis.</p>
+<h2>El saque</h2>
+<p>El saque es la regla que genera más dudas (regla 6):</p>
+<ul>
+<li>quien saca tiene al menos un pie sobre la línea de saque o detrás, en la mitad entre la línea central y la pared lateral;</li>
+<li>bota la pelota en el suelo detrás de la línea y después la golpea;</li>
+<li>en el impacto la pelota debe estar <b>a la altura de la cintura o por debajo</b>, con al menos un pie en el suelo;</li>
+<li>la pelota debe pasar la red <b>en diagonal</b> y botar en el recuadro de saque rival;</li>
+<li>si el primer saque es falta, hay <b>segundo saque</b>.</li>
+</ul>
+<p>Tras botar en el recuadro correcto la pelota puede tocar el cristal, pero si toca la malla metálica antes del segundo bote el saque es falta. Si la pelota toca la red y entra en el recuadro sin tocar la malla, el saque se repite (net).</p>
+<h2>Cómo se usan las paredes</h2>
+<p>Es lo que hace único al pádel (reglas 12 y 14).</p>
+<ul>
+<li>El golpe es bueno si la pelota <b>bota primero en el campo rival</b>; después puede tocar paredes, malla o red.</li>
+<li>También puedes golpear la pelota contra una <b>pared de tu campo</b>: si después pasa la red y bota en el campo rival, el golpe es válido.</li>
+<li>Cuando la pelota llega a tu campo puedes volearla o jugarla tras un bote, aunque haya tocado las paredes: solo cuenta que <b>no bote dos veces en el suelo</b>.</li>
+<li>Salir de la pista para jugar la pelota solo está permitido en pistas con la zona de seguridad prevista (regla 16).</li>
+</ul>
+<h2>El tanteo y el Star Point</h2>
+<p>El tanteo es el del tenis (regla 1): <b>15, 30, 40, juego</b>. Con 40 iguales se juega la ventaja. El set va a 6 juegos con 2 de diferencia; con 6–6 se juega el <b>tie-break a 7 puntos</b>, también con 2 de diferencia. El partido es al mejor de <b>3 sets</b>. Se cambia de lado cuando la suma de juegos del set es impar, y en el tie-break cada 6 puntos.</p>
+<p><b>Novedad 2026: el Star Point.</b> Desde 2026 en los circuitos Premier Padel, CUPRA FIP Tour, FIP Promises y FIP Beyond, con 40 iguales se juegan como máximo dos ventajas. Si quien tiene la ventaja pierde también la segunda, se juega un único punto decisivo, el Star Point, que da el juego. En los clubes muchos usan en cambio el <b>punto de oro</b>: con 40 iguales se juega directamente un solo punto decisivo. El reglamento recoge ambos como fórmulas alternativas.</p>
+<h2>Las faltas más comunes</h2>
+<ul>
+<li>tocar la red, los postes o el campo rival con el cuerpo, la pala o el cordón con la pelota en juego;</li>
+<li>dejar que la pelota bote dos veces en el suelo;</li>
+<li>golpear la pelota de forma que toque la malla o la pared rival <b>antes</b> de botar en el suelo;</li>
+<li>golpear la pelota dos veces, o que la golpeen los dos jugadores de la pareja;</li>
+<li>que la pelota te toque en el cuerpo o la ropa;</li>
+<li>fallar también el segundo saque.</li>
+</ul>
+<h2>Las otras novedades de 2026</h2>
+<ul>
+<li>en el saque basta con tener un pie <b>sobre la línea</b> o detrás, y la pelota sigue por debajo de la cintura;</li>
+<li>el calentamiento antes del partido baja de 5 a 3 minutos;</li>
+<li>si el cordón de seguridad se rompe durante un punto, ese punto se pierde;</li>
+<li>en la pala, los agujeros del borde pueden no ser redondos, hasta 20 mm.</li>
+</ul>
+<h2>La pala: qué dice el reglamento</h2>
+<p>El reglamento FIP fija las medidas máximas de la pala:</p>
+<ul>
+<li>longitud total, cabeza más puño, como máximo <b>45,5 cm</b>;</li>
+<li>cabeza de <b>26 cm</b> de ancho y <b>38 mm</b> de grosor como máximo;</li>
+<li>agujeros cilíndricos de 9 a 13 mm, en número libre;</li>
+<li>cordón de muñeca obligatorio, no elástico, de 35 cm como máximo;</li>
+<li>sin límite de peso.</li>
+</ul>
+<p>Todas las palas que encuentras en las tiendas cumplen estas medidas: la elección depende de forma, peso y balance. En nuestra base de datos hay {len(adulti)} palas 2026 y 2027, {len(inizio)} de ellas pensadas para quien empieza o tiene nivel principiante-intermedio. Puedes filtrarlas en la <a href="{url_r_all}">página de palas</a> o pedir consejo al <a href="{url_sel}">test "Encuentra tu pala"</a>. Para entender qué cambia entre formas, lee las <a href="{P("guide")}">guías</a>.</p>
+<p class="note">Fuentes: {reg}; {star}. El reglamento completo incluye también normas sobre árbitros, conducta y torneos, que aquí no tratamos.</p>''')
+    corpo += box()
+    qa = [(L("Nel padel il servizio si fa dal basso?", "Is the padel serve underhand?", "¿En el pádel se saca por abajo?"),
+           L("Sì. Si lascia rimbalzare la palla a terra dietro la linea di servizio e la si colpisce all'altezza della vita o più in basso, in diagonale. Ci sono due servizi per punto.",
+             "Yes. You bounce the ball behind the service line and hit it at or below waist height, diagonally. There are two serves per point.",
+             "Sí. Se bota la pelota detrás de la línea de saque y se golpea a la altura de la cintura o por debajo, en diagonal. Hay dos saques por punto.")),
+          (L("La palla può toccare le pareti?", "Can the ball hit the walls?", "¿La pelota puede tocar las paredes?"),
+           L("Sì, ma deve rimbalzare prima a terra nel campo avversario. Puoi anche giocarla contro una parete del tuo campo, purché poi passi la rete e rimbalzi nel campo avversario.",
+             "Yes, but it must bounce on the ground in the opponents' court first. You can also play it off a wall on your side, as long as it then clears the net and bounces in the opponents' court.",
+             "Sí, pero debe botar primero en el suelo del campo rival. También puedes jugarla contra una pared de tu campo, siempre que después pase la red y bote en el campo rival.")),
+          (L("Cos'è lo Star Point nel padel?", "What is the Star Point in padel?", "¿Qué es el Star Point en el pádel?"),
+           L("È la regola introdotta nel 2026 nei circuiti professionistici: sul 40 pari si giocano al massimo due vantaggi, poi un punto decisivo che assegna il gioco.",
+             "It is the rule introduced in 2026 on the pro circuits: at 40–40 a maximum of two advantages are played, then a single deciding point wins the game.",
+             "Es la regla introducida en 2026 en los circuitos profesionales: con 40 iguales se juegan como máximo dos ventajas y después un punto decisivo que da el juego.")),
+          (L("Quanto è grande un campo da padel?", "How big is a padel court?", "¿Cuánto mide una pista de pádel?"),
+           L("20 metri per 10, con pareti di fondo alte 3 metri più 1 metro di rete metallica. La rete è alta 88 cm al centro.",
+             "20 by 10 metres, with 3 m back walls plus 1 m of wire mesh. The net is 88 cm high at the centre.",
+             "20 por 10 metros, con paredes de fondo de 3 metros más 1 metro de malla metálica. La red mide 88 cm en el centro.")),
+          (L("Quali sono le misure massime della racchetta da padel?", "What are the maximum padel racket dimensions?", "¿Cuáles son las medidas máximas de la pala de pádel?"),
+           L("Lunghezza totale 45,5 cm, testa larga 26 cm e spessa 38 mm al massimo. Non c'è un limite di peso e il laccetto da polso è obbligatorio.",
+             "Total length 45.5 cm, head up to 26 cm wide and 38 mm thick. There is no weight limit and the wrist strap is mandatory.",
+             "Longitud total 45,5 cm, cabeza de hasta 26 cm de ancho y 38 mm de grosor. No hay límite de peso y el cordón de muñeca es obligatorio."))]
+    faq_htm, faq_ld = faq(qa)
+    corpo += faq_htm
+    titolo = L("Regolamento del padel 2026: le regole spiegate semplici", "Padel rules 2026: the rules explained simply", "Reglamento del pádel 2026: las reglas explicadas fácil")
+    scrivi_articolo(slug, titolo + " | PadelMetrix",
+                    L("Le regole del padel secondo il regolamento FIP 2026: campo, servizio, uso delle pareti, punteggio, Star Point, falli e misure della racchetta.",
+                      "Padel rules from the 2026 FIP rulebook: court, serve, playing off the walls, scoring, Star Point, faults and racket limits.",
+                      "Las reglas del pádel según el reglamento FIP 2026: pista, saque, uso de las paredes, tanteo, Star Point, faltas y medidas de la pala."),
+                    titolo, L("Regolamento padel", "Padel rules", "Reglamento pádel"), corpo, ld_extra=[faq_ld])
+    return slug, titolo, L("Servizio, pareti, punteggio e Star Point, secondo il regolamento FIP 2026.", "Serve, walls, scoring and Star Point, per the 2026 FIP rules.",
+                           "Saque, paredes, tanteo y Star Point, según el reglamento FIP 2026.")
+
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -938,7 +1168,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})

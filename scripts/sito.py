@@ -115,6 +115,7 @@ SLUG = {
     "racchette-padel-2026-2027-in-numeri": ("padel-rackets-2026-2027-in-numbers", "palas-padel-2026-2027-en-cifras"),
     "racchette-padel-2027-novita-per-marca": ("padel-rackets-2027-whats-new-by-brand", "palas-padel-2027-novedades-por-marca"),
     "ale-galan-chi-e-e-che-racchetta-usa": ("ale-galan-who-he-is-and-which-racket-he-uses", "ale-galan-quien-es-y-que-pala-usa"),
+    "regolamento-padel-regole-spiegate": ("padel-rules-explained", "reglamento-padel-reglas-explicadas"),
     "regolamento-pickleball-regole-spiegate": ("pickleball-rules-explained", "reglamento-pickleball-reglas-explicadas"),
     "siux-diablo-pro-2026-vs-2027-cosa-cambia": ("siux-diablo-pro-2026-vs-2027-whats-changed", "siux-diablo-pro-2026-vs-2027-que-cambia"),
     "bilanciamento": ("balance", "balance"),

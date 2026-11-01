@@ -1,5 +1,13 @@
 [
 {
+"path": "/it/articoli/regolamento-padel-regole-spiegate/",
+"alt": {
+"it": "/it/articoli/regolamento-padel-regole-spiegate/",
+"en": "/en/articles/padel-rules-explained/",
+"es": "/es/articulos/reglamento-padel-reglas-explicadas/"
+}
+},
+{
 "path": "/it/articoli/regolamento-pickleball-regole-spiegate/",
 "alt": {
 "it": "/it/articoli/regolamento-pickleball-regole-spiegate/",
@@ -96,6 +104,14 @@
 }
 },
 {
+"path": "/en/articles/padel-rules-explained/",
+"alt": {
+"it": "/it/articoli/regolamento-padel-regole-spiegate/",
+"en": "/en/articles/padel-rules-explained/",
+"es": "/es/articulos/reglamento-padel-reglas-explicadas/"
+}
+},
+{
 "path": "/en/articles/pickleball-rules-explained/",
 "alt": {
 "it": "/it/articoli/regolamento-pickleball-regole-spiegate/",
@@ -189,6 +205,14 @@
 "it": "/it/articoli/",
 "en": "/en/articles/",
 "es": "/es/articulos/"
+}
+},
+{
+"path": "/es/articulos/reglamento-padel-reglas-explicadas/",
+"alt": {
+"it": "/it/articoli/regolamento-padel-regole-spiegate/",
+"en": "/en/articles/padel-rules-explained/",
+"es": "/es/articulos/reglamento-padel-reglas-explicadas/"
 }
 },
 {
