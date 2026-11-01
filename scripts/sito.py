@@ -358,7 +358,7 @@ def footer():
              (P("privacy"), L("Privacy", "Privacy", "Privacidad")), (P("cookie"), L("Cookie", "Cookies", "Cookies"))]
     return f'''<footer><div class="wrap">
 <span style="max-width:760px">{testo}</span>
-<span>{L("Seguici", "Follow us", "Síguenos")}: {social_links()}</span>
+<span>{social_links()}</span>
 <span>{" · ".join([f'<a href="{u}">{t}</a>' for u, t in links] + ([C.link_footer(_LANG[0])] if C.attivo() else []))} · © 2026 PadelMetrix</span>
 </div></footer>'''
 
