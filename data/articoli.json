@@ -1,5 +1,25 @@
 [
  {
+  "slug": "regolamento-pickleball-regole-spiegate",
+  "data": "2026-11-01",
+  "racchette": [],
+  "titolo": {
+   "it": "Regolamento del pickleball 2026: le regole spiegate semplici",
+   "en": "Pickleball rules 2026: the rules explained simply",
+   "es": "Reglamento del pickleball 2026: las reglas explicadas fácil"
+  },
+  "desc": {
+   "it": "Campo, servizio, due rimbalzi, kitchen e punteggio, secondo il regolamento 2026.",
+   "en": "Court, serve, two bounces, kitchen and scoring, per the 2026 rulebook.",
+   "es": "Pista, saque, dos botes, kitchen y tanteo, según el reglamento 2026."
+  },
+  "url": {
+   "it": "/it/articoli/regolamento-pickleball-regole-spiegate/",
+   "en": "/en/articles/pickleball-rules-explained/",
+   "es": "/es/articulos/reglamento-pickleball-reglas-explicadas/"
+  }
+ },
+ {
   "slug": "migliori-racchette-padel-2026-classifiche-indipendenti",
   "data": "2026-10-31",
   "racchette": [
