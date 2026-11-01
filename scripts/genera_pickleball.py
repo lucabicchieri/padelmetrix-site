@@ -322,7 +322,7 @@ def scheda(p):
 <section class="block">
 <h2>{L("Racchette da pickleball simili", "Similar pickleball paddles", "Palas de pickleball similares")}</h2>
 <div class="sim">{sim}</div>
-<p><a class="btn out" href="{P("pickleball")}">{L("Tutte le racchette da pickleball", "All pickleball paddles", "Todas las palas de pickleball")}</a></p>
+<p><a class="btn out" href="{P("pickleball")}">{L("Tutte le racchette da pickleball", "All pickleball paddles", "Todas las palas de pickleball")}</a> <a class="btn out" href="{P("articoli", "regolamento-pickleball-regole-spiegate")}">{L("Il regolamento del pickleball", "Pickleball rules explained", "El reglamento del pickleball")}</a></p>
 </section>
 
 <section class="block faq"><h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes")}</h2>{"".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa)}</section>
@@ -377,6 +377,7 @@ def elenco():
     corpo = f"""{cr}
 <div class="intro"><h1>{L("Racchette da pickleball: schede e opinioni", "Pickleball paddles: specs and reviews", "Palas de pickleball: fichas y opiniones")}</h1>
 <p><b>{L(f"{len(PADDLE)} racchette da pickleball (paddle) di {mtxt}, con dati tecnici, misure di laboratorio dove esistono, sintesi delle recensioni indipendenti e link per l'acquisto su Amazon.", f"{len(PADDLE)} pickleball paddles from {mtxt}, with specs, lab measurements where available, summaries of independent reviews and links to buy on Amazon.", f"{len(PADDLE)} palas de pickleball (paddle) de {mtxt}, con datos técnicos, medidas de laboratorio cuando existen, resumen de las reseñas independientes y enlaces de compra en Amazon.")}</b> {L("Per chi inizia vanno bene le racchette in fibra di vetro da 12–14 mm o i set da due; chi gioca già con regolarità guarda al carbonio e allo spessore del nucleo.", "Beginners do well with 12–14 mm fiberglass paddles or two-paddle sets; regular players should look at carbon faces and core thickness.", "Para quien empieza van bien las palas de fibra de vidrio de 12–14 mm o los sets de dos; quien ya juega con regularidad debe fijarse en el carbono y el grosor del núcleo.")}</p>{S.data_riga()}</div>
+<p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:0 0 24px">{L("<b>Nuovo al pickleball?</b> Prima di scegliere la racchetta leggi", "<b>New to pickleball?</b> Before choosing a paddle, read", "<b>¿Nuevo en el pickleball?</b> Antes de elegir la pala, lee")} <a href="{P("articoli", "regolamento-pickleball-regole-spiegate")}">{L("il regolamento del pickleball spiegato semplice", "the pickleball rules explained simply", "el reglamento del pickleball explicado fácil")}</a>: {L("servizio, regola dei due rimbalzi, kitchen e punteggio.", "serve, two-bounce rule, kitchen and scoring.", "saque, regla de los dos botes, kitchen y tanteo.")}</p>
 {form}
 <p class="conta" id="conta">{len(PADDLE)} {L("racchette", "paddles", "palas")}</p>
 <div class="rgrid">{cards}</div>

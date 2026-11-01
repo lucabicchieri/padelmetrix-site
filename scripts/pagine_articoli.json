@@ -1,5 +1,13 @@
 [
 {
+"path": "/it/articoli/regolamento-pickleball-regole-spiegate/",
+"alt": {
+"it": "/it/articoli/regolamento-pickleball-regole-spiegate/",
+"en": "/en/articles/pickleball-rules-explained/",
+"es": "/es/articulos/reglamento-pickleball-reglas-explicadas/"
+}
+},
+{
 "path": "/it/articoli/migliori-racchette-padel-2026-classifiche-indipendenti/",
 "alt": {
 "it": "/it/articoli/migliori-racchette-padel-2026-classifiche-indipendenti/",
@@ -88,6 +96,14 @@
 }
 },
 {
+"path": "/en/articles/pickleball-rules-explained/",
+"alt": {
+"it": "/it/articoli/regolamento-pickleball-regole-spiegate/",
+"en": "/en/articles/pickleball-rules-explained/",
+"es": "/es/articulos/reglamento-pickleball-reglas-explicadas/"
+}
+},
+{
 "path": "/en/articles/best-padel-rackets-2026-independent-rankings/",
 "alt": {
 "it": "/it/articoli/migliori-racchette-padel-2026-classifiche-indipendenti/",
@@ -173,6 +189,14 @@
 "it": "/it/articoli/",
 "en": "/en/articles/",
 "es": "/es/articulos/"
+}
+},
+{
+"path": "/es/articulos/reglamento-pickleball-reglas-explicadas/",
+"alt": {
+"it": "/it/articoli/regolamento-pickleball-regole-spiegate/",
+"en": "/en/articles/pickleball-rules-explained/",
+"es": "/es/articulos/reglamento-pickleball-reglas-explicadas/"
 }
 },
 {

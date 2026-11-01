@@ -16,7 +16,7 @@ from sito import (ROOT, SITO, e, L, P, ALT, carica, crumbs, pagina, griglia, ord
                   url_r, LINGUE, set_lang, data_riga, confronto_url, coppie)
 
 OGGI_ISO = "2026-10-30"
-DATE_ART = {"racchette-padel-2027-vs-2026-cosa-cambia": "2026-10-31", "migliori-racchette-padel-2026-classifiche-indipendenti": "2026-10-31"}
+DATE_ART = {"regolamento-pickleball-regole-spiegate": "2026-11-01", "racchette-padel-2027-vs-2026-cosa-cambia": "2026-10-31", "migliori-racchette-padel-2026-classifiche-indipendenti": "2026-10-31"}
 
 
 def T(it, en, es):
@@ -697,6 +697,218 @@ def migliori_2026(db):
 
 
 
+# ---------------------------------------------------------------- 11. Regolamento del pickleball
+
+PB_REG = "https://europeanpickleballfederation.org/wp-content/uploads/2026/04/2026-USAP-Official-Rulebook-–-EPF-Edition-–-Italian-Version.pdf"
+PB_CHG = "https://pickleballcanada.org/wp-content/uploads/2026/04/2026-Rulebook-Change-Document-EN.pdf"
+
+
+def pickleball_regole(db):
+    import dati_pickleball as DP
+    slug = "regolamento-pickleball-regole-spiegate"
+    pad = DP.P
+    approvate = [p for p in pad if p.get("approvazioni") and "USAP" in p["approvazioni"]]
+    inizio = [p for p in pad if p["livello"] in ("principiante", "principiante-intermedio")]
+    url_pb = P("pickleball")
+
+    def pl(p):
+        return f'<a href="{P("pickleball", p["slug"])}">{e(p["marca"])} {e(p["modello"])}</a>'
+
+    inizio_txt = ", ".join(pl(p) for p in inizio[:5])
+    reg, chg = fonte(PB_REG, L("Regolamento USA Pickleball 2026, edizione EPF in italiano", "2026 USA Pickleball Rulebook, EPF edition", "Reglamento USA Pickleball 2026, edición EPF")), fonte(PB_CHG, L("documento delle modifiche 2026 (Pickleball Canada)", "2026 rule change document (Pickleball Canada)", "documento de cambios 2026 (Pickleball Canada)"))
+    cta = L(f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Hai capito le regole e ti serve la racchetta?</b><br>Nella nostra sezione pickleball trovi {len(pad)} racchette di {len({p["marca"] for p in pad})} marche, con peso, spessore, forma, omologazioni e opinioni delle recensioni indipendenti.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">Vedi le racchette da pickleball →</a></div>''',
+            f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Got the rules and need a paddle?</b><br>Our pickleball section lists {len(pad)} paddles from {len({p["marca"] for p in pad})} brands, with weight, thickness, shape, approvals and summaries of independent reviews.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">See the pickleball paddles →</a></div>''',
+            f'''<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>¿Ya conoces las reglas y necesitas pala?</b><br>En nuestra sección de pickleball tienes {len(pad)} palas de {len({p["marca"] for p in pad})} marcas, con peso, grosor, forma, homologaciones y resumen de las reseñas independientes.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{url_pb}">Ver las palas de pickleball →</a></div>''')
+    corpo = L(f'''<p><b>Il pickleball si gioca su un campo da 13,41 × 6,10 m, con una rete più bassa al centro, una racchetta piatta e una pallina di plastica forata.</b> Le regole sono poche, ma tre sono diverse da tutti gli altri sport di racchetta: il servizio dal basso, la regola dei due rimbalzi e la "kitchen", la zona vicino alla rete in cui non si può colpire al volo. Questa guida le spiega una per una, seguendo il regolamento ufficiale USA Pickleball 2026, quello adottato anche dalla Federazione Europea (EPF).</p>
+<h2>Le regole in breve</h2>
+<ol>
+<li>Si serve dal basso, in diagonale, e la palla deve superare la kitchen avversaria.</li>
+<li>Servizio e risposta devono rimbalzare prima di essere colpiti: è la regola dei due rimbalzi.</li>
+<li>Nella kitchen (2,13 m dalla rete) non si può colpire la palla al volo.</li>
+<li>Con il punteggio tradizionale fa punto solo chi serve; si gioca a 11, con 2 punti di scarto.</li>
+<li>Una palla che tocca la linea è buona, tranne il servizio che cade sulla linea della kitchen.</li>
+</ol>
+{cta}
+<h2>Il campo e la rete</h2>
+<p>Il campo misura <b>6,10 m di larghezza per 13,41 m di lunghezza</b> (20 × 44 piedi), uguale per singolare e doppio (regola 3.A.1). Vicino alla rete, su ciascun lato, c'è la <b>zona di non volée</b>, detta kitchen, profonda <b>2,13 m</b> (7 piedi). La rete è alta <b>91,44 cm ai lati e 86,36 cm al centro</b> (regole 3.B.6 e 3.B.7): più bassa del tennis, e infatti a rete si gioca molto.</p>
+<h2>Il servizio</h2>
+<p>Esistono due modi di servire.</p>
+<ul>
+<li><b>Servizio al volo</b> (regola 7.C): al momento del contatto la racchetta deve muoversi chiaramente dal basso verso l'alto, la testa della racchetta non può essere sopra il polso e la palla va colpita non più in alto della vita. Si può servire di dritto o di rovescio.</li>
+<li><b>Servizio a rimbalzo</b> (regola 7.D): si lascia cadere la palla da un'altezza naturale, senza spingerla, e la si colpisce dopo il rimbalzo. In questo caso non contano né il movimento del braccio né l'altezza del contatto.</li>
+</ul>
+<p>Al momento del colpo almeno un piede deve essere a terra dietro la linea di fondo, dentro l'area di battuta (7.A). La palla va servita <b>in diagonale</b> e deve superare la kitchen avversaria (7.E). Dal 2026 la rotazione si può dare solo con la racchetta al momento del contatto, non con la mano mentre si lascia la palla (7.B.2).</p>
+<h2>La regola dei due rimbalzi</h2>
+<p>Il servizio deve rimbalzare nel campo di chi risponde, e la risposta deve rimbalzare nel campo di chi ha servito. Solo dopo questi due rimbalzi si può colpire al volo (regola 10.A). Serve a evitare che chi serve corra subito a rete e chiuda il punto: per questo i primi colpi di ogni scambio sono quasi sempre da fondo campo.</p>
+<h2>La kitchen, o zona di non volée</h2>
+<p>Dentro la kitchen non si può colpire la palla al volo (regola 11.A). Si può entrare quando si vuole, per esempio per giocare una palla che ha già rimbalzato. Sono fallo:</p>
+<ul>
+<li>toccare la kitchen, linea compresa, mentre si colpisce al volo;</li>
+<li>finirci dentro per lo slancio dopo un colpo al volo, anche se la palla è già morta;</li>
+<li>colpire al volo prima di essere usciti dalla kitchen con entrambi i piedi.</li>
+</ul>
+<h2>Il punteggio</h2>
+<p>Con il punteggio tradizionale <b>fa punto solo la squadra che serve</b> (regola 4.A). La partita, o game, va a 11 punti con almeno 2 di scarto (4.B). Nel doppio il punteggio si chiama con <b>tre numeri</b>: punti di chi serve, punti di chi riceve e numero del battitore, 1 o 2. La partita inizia con <b>"zero – zero – due"</b> perché la squadra che serve per prima ha a disposizione un solo battitore (6.B.2). Negli scambi successivi servono entrambi i giocatori: quando la squadra perde lo scambio con il primo battitore, serve il compagno; quando perde anche con il secondo, il servizio passa agli avversari (5.B).</p>
+<p>Nel 2026 il regolamento prevede anche, in via provvisoria, il <b>rally scoring</b>: chi vince lo scambio fa punto, anche se stava rispondendo (14.A.2). Lo decide l'organizzatore del torneo.</p>
+<h2>Palla dentro o fuori</h2>
+<p>La palla che tocca una linea è <b>buona</b>, con un'eccezione: il servizio che cade sulla linea della kitchen è fuori (8.C). Per chiamare "fuori" si deve vedere spazio tra palla e linea (8.E), e la chiamata va fatta subito, a voce o con un gesto (8.F). Se due compagni non sono d'accordo, la palla è considerata dentro (8.H). Gli spettatori non possono essere consultati (8.J).</p>
+<h2>I falli più comuni</h2>
+<ul>
+<li>la palla esce dal campo o non supera la rete (10.C);</li>
+<li>la palla colpisce un giocatore o i suoi vestiti; la mano sotto il polso conta come racchetta (10.C.3);</li>
+<li>colpire la palla due volte, o colpirla con entrambi i giocatori della stessa squadra (10.D);</li>
+<li>toccare la rete o i pali mentre la palla è in gioco (13.G);</li>
+<li>colpire al volo nella kitchen (11.A).</li>
+</ul>
+<h2>La racchetta: cosa dice il regolamento</h2>
+<p>La racchetta da pickleball, chiamata anche paddle, è piatta e senza fori. Il regolamento fissa poche misure (regola 3.D):</p>
+<ul>
+<li>lunghezza massima <b>43,18 cm</b> (17 pollici);</li>
+<li>lunghezza più larghezza, bordo e tappo del manico compresi, al massimo <b>60,96 cm</b> (24 pollici);</li>
+<li>nessun limite di peso né di spessore;</li>
+<li>superficie liscia e non riflettente: niente fori, gomma o superfici ruvide che aumentino l'effetto (3.D.5);</li>
+<li>nei tornei serve un modello omologato "USA Pickleball Approved", con il marchio visibile (3.D.1).</li>
+</ul>
+<p>Per giocare con gli amici l'omologazione non serve. Delle {len(pad)} racchette nella <a href="{url_pb}">nostra sezione pickleball</a>, {len(approvate)} risultano omologate USA Pickleball. Se sei agli inizi, guarda quelle pensate per chi comincia: {inizio_txt}.</p>
+<p class="note">Fonti: {reg}; {chg}. Il regolamento completo prevede anche regole per arbitri, tornei, wheelchair e giocatori con disabilità, che qui non trattiamo.</p>''',
+              f'''<p><b>Pickleball is played on a 44 × 20 ft court, with a net that dips in the middle, a flat paddle and a perforated plastic ball.</b> The rules are few, but three are unlike any other racket sport: the underhand serve, the two-bounce rule and the "kitchen", the area near the net where you cannot volley. This guide explains them one by one, following the official 2026 USA Pickleball Rulebook, also adopted by the European Pickleball Federation (EPF).</p>
+<h2>The rules in short</h2>
+<ol>
+<li>Serve underhand, diagonally, and clear the opponents' kitchen.</li>
+<li>The serve and the return must bounce before being hit: the two-bounce rule.</li>
+<li>You cannot volley inside the kitchen (7 ft from the net).</li>
+<li>With traditional scoring only the serving side scores; games go to 11, win by 2.</li>
+<li>A ball touching a line is in, except a serve landing on the kitchen line.</li>
+</ol>
+{cta}
+<h2>The court and the net</h2>
+<p>The court is <b>20 ft wide and 44 ft long</b> (6.10 × 13.41 m), the same for singles and doubles (rule 3.A.1). Next to the net on each side is the <b>non-volley zone</b>, or kitchen, <b>7 ft</b> deep. The net is <b>36 in high at the sidelines and 34 in at the centre</b> (rules 3.B.6 and 3.B.7): lower than tennis, which is why so much of the game is played at the net.</p>
+<h2>The serve</h2>
+<p>There are two ways to serve.</p>
+<ul>
+<li><b>Volley serve</b> (rule 7.C): at contact the paddle must move in a clear upward arc, the paddle head cannot be above the wrist and the ball must be hit no higher than the waist. Forehand or backhand are both allowed.</li>
+<li><b>Drop serve</b> (rule 7.D): drop the ball from a natural height, without pushing it, and hit it after the bounce. Arm motion and contact height do not matter in this case.</li>
+</ul>
+<p>At contact at least one foot must be on the ground behind the baseline, inside the serving area (7.A). The serve goes <b>diagonally</b> and must clear the opponents' kitchen (7.E). From 2026 spin may only be added by the paddle at contact, not by the hand when releasing the ball (7.B.2).</p>
+<h2>The two-bounce rule</h2>
+<p>The serve must bounce in the receiver's court, and the return must bounce in the server's court. Only after these two bounces can players volley (rule 10.A). It stops the server from rushing the net and ending the point at once, which is why the first shots of every rally are almost always from the baseline.</p>
+<h2>The kitchen, or non-volley zone</h2>
+<p>You cannot volley inside the kitchen (rule 11.A). You can step in whenever you like, for example to play a ball that has already bounced. These are faults:</p>
+<ul>
+<li>touching the kitchen, line included, while volleying;</li>
+<li>being carried into it by momentum after a volley, even if the ball is already dead;</li>
+<li>volleying before both feet are back out of the kitchen.</li>
+</ul>
+<h2>Scoring</h2>
+<p>With traditional scoring <b>only the serving side scores</b> (rule 4.A). A game goes to 11 points, win by 2 (4.B). In doubles the score is called with <b>three numbers</b>: server's score, receiver's score and server number, 1 or 2. A game starts at <b>"zero – zero – two"</b> because the first serving side gets only one server (6.B.2). After that both players serve: when the side loses a rally with the first server, the partner serves; when it loses with the second server too, the serve passes to the opponents (5.B).</p>
+<p>In 2026 the rulebook also includes provisional <b>rally scoring</b>: whoever wins the rally scores, even when receiving (14.A.2). The tournament director decides whether to use it.</p>
+<h2>In or out</h2>
+<p>A ball touching a line is <b>in</b>, with one exception: a serve landing on the kitchen line is out (8.C). To call "out" there must be visible space between ball and line (8.E), and the call must be made promptly, by voice or hand signal (8.F). If partners disagree, the ball is in (8.H). Spectators cannot be consulted (8.J).</p>
+<h2>The most common faults</h2>
+<ul>
+<li>the ball lands out or fails to clear the net (10.C);</li>
+<li>the ball hits a player or their clothing; the hand below the wrist counts as the paddle (10.C.3);</li>
+<li>hitting the ball twice, or both partners hitting it (10.D);</li>
+<li>touching the net or posts while the ball is in play (13.G);</li>
+<li>volleying inside the kitchen (11.A).</li>
+</ul>
+<h2>The paddle: what the rules say</h2>
+<p>A pickleball paddle is flat and has no holes. The rules set only a few limits (rule 3.D):</p>
+<ul>
+<li>maximum length <b>17 in</b> (43.18 cm);</li>
+<li>length plus width, edge guard and butt cap included, no more than <b>24 in</b> (60.96 cm);</li>
+<li>no limit on weight or thickness;</li>
+<li>a smooth, non-reflective surface: no holes, rubber or rough textures that add spin (3.D.5);</li>
+<li>tournaments require a "USA Pickleball Approved" model with visible markings (3.D.1).</li>
+</ul>
+<p>For casual play approval is not needed. Of the {len(pad)} paddles in <a href="{url_pb}">our pickleball section</a>, {len(approvate)} are USA Pickleball approved. If you are just starting, look at the beginner-friendly ones: {inizio_txt}.</p>
+<p class="note">Sources: {reg}; {chg}. The full rulebook also covers referees, tournaments, wheelchair and adaptive play, which are not covered here.</p>''',
+              f'''<p><b>El pickleball se juega en una pista de 13,41 × 6,10 m, con una red más baja en el centro, una pala plana y una pelota de plástico perforada.</b> Las reglas son pocas, pero tres son distintas de cualquier otro deporte de raqueta: el saque por abajo, la regla de los dos botes y la "kitchen", la zona junto a la red donde no se puede volear. Esta guía las explica una a una, siguiendo el reglamento oficial USA Pickleball 2026, adoptado también por la Federación Europea (EPF).</p>
+<h2>Las reglas en breve</h2>
+<ol>
+<li>Se saca por abajo, en diagonal, y la pelota debe superar la kitchen rival.</li>
+<li>El saque y el resto deben botar antes de golpearse: es la regla de los dos botes.</li>
+<li>Dentro de la kitchen (2,13 m desde la red) no se puede volear.</li>
+<li>Con el tanteo tradicional solo puntúa quien saca; se juega a 11, con 2 de diferencia.</li>
+<li>La pelota que toca la línea es buena, salvo el saque que cae en la línea de la kitchen.</li>
+</ol>
+{cta}
+<h2>La pista y la red</h2>
+<p>La pista mide <b>6,10 m de ancho por 13,41 m de largo</b> (20 × 44 pies), igual para individuales y dobles (regla 3.A.1). Junto a la red, a cada lado, está la <b>zona de no volea</b> o kitchen, de <b>2,13 m</b> (7 pies) de profundidad. La red mide <b>91,44 cm en los laterales y 86,36 cm en el centro</b> (reglas 3.B.6 y 3.B.7): más baja que en el tenis, y por eso se juega tanto en la red.</p>
+<h2>El saque</h2>
+<p>Hay dos formas de sacar.</p>
+<ul>
+<li><b>Saque de volea</b> (regla 7.C): en el contacto la pala debe moverse claramente de abajo arriba, la cabeza de la pala no puede estar por encima de la muñeca y la pelota se golpea como máximo a la altura de la cintura. Se puede sacar de derecha o de revés.</li>
+<li><b>Saque con bote</b> (regla 7.D): se deja caer la pelota desde una altura natural, sin impulsarla, y se golpea tras el bote. En este caso no cuentan ni el movimiento del brazo ni la altura del contacto.</li>
+</ul>
+<p>En el contacto al menos un pie debe estar en el suelo detrás de la línea de fondo, dentro de la zona de saque (7.A). El saque va <b>en diagonal</b> y debe superar la kitchen rival (7.E). Desde 2026 el efecto solo puede darse con la pala en el contacto, no con la mano al soltar la pelota (7.B.2).</p>
+<h2>La regla de los dos botes</h2>
+<p>El saque debe botar en el campo de quien resta, y el resto debe botar en el campo de quien sacó. Solo después de esos dos botes se puede volear (regla 10.A). Evita que quien saca suba a la red y cierre el punto enseguida: por eso los primeros golpes de cada punto casi siempre son desde el fondo.</p>
+<h2>La kitchen, o zona de no volea</h2>
+<p>Dentro de la kitchen no se puede volear (regla 11.A). Se puede entrar cuando se quiera, por ejemplo para jugar una pelota que ya ha botado. Son falta:</p>
+<ul>
+<li>tocar la kitchen, línea incluida, mientras se volea;</li>
+<li>entrar en ella por la inercia tras una volea, aunque la pelota ya esté muerta;</li>
+<li>volear antes de haber salido de la kitchen con los dos pies.</li>
+</ul>
+<h2>El tanteo</h2>
+<p>Con el tanteo tradicional <b>solo puntúa el equipo que saca</b> (regla 4.A). El juego va a 11 puntos con al menos 2 de diferencia (4.B). En dobles el tanteo se canta con <b>tres números</b>: puntos de quien saca, puntos de quien resta y número del sacador, 1 o 2. El juego empieza con <b>"cero – cero – dos"</b> porque el primer equipo que saca solo tiene un sacador (6.B.2). Después sacan los dos jugadores: cuando el equipo pierde el punto con el primer sacador, saca el compañero; cuando lo pierde también con el segundo, el saque pasa a los rivales (5.B).</p>
+<p>En 2026 el reglamento incluye también, de forma provisional, el <b>rally scoring</b>: quien gana el punto suma, aunque estuviera restando (14.A.2). Lo decide el organizador del torneo.</p>
+<h2>Pelota dentro o fuera</h2>
+<p>La pelota que toca una línea es <b>buena</b>, con una excepción: el saque que cae en la línea de la kitchen es fuera (8.C). Para cantar "fuera" debe verse espacio entre la pelota y la línea (8.E), y hay que cantarlo enseguida, de viva voz o con un gesto (8.F). Si los compañeros no están de acuerdo, la pelota es buena (8.H). No se puede consultar al público (8.J).</p>
+<h2>Las faltas más comunes</h2>
+<ul>
+<li>la pelota sale de la pista o no pasa la red (10.C);</li>
+<li>la pelota golpea a un jugador o su ropa; la mano por debajo de la muñeca cuenta como pala (10.C.3);</li>
+<li>golpear la pelota dos veces, o que la golpeen los dos jugadores del mismo equipo (10.D);</li>
+<li>tocar la red o los postes con la pelota en juego (13.G);</li>
+<li>volear dentro de la kitchen (11.A).</li>
+</ul>
+<h2>La pala: qué dice el reglamento</h2>
+<p>La pala de pickleball, también llamada paddle, es plana y sin agujeros. El reglamento fija pocas medidas (regla 3.D):</p>
+<ul>
+<li>longitud máxima <b>43,18 cm</b> (17 pulgadas);</li>
+<li>longitud más anchura, protector y tapón incluidos, como máximo <b>60,96 cm</b> (24 pulgadas);</li>
+<li>sin límite de peso ni de grosor;</li>
+<li>superficie lisa y no reflectante: sin agujeros, goma ni texturas rugosas que aumenten el efecto (3.D.5);</li>
+<li>en torneos se exige un modelo homologado "USA Pickleball Approved", con la marca visible (3.D.1).</li>
+</ul>
+<p>Para jugar con amigos la homologación no hace falta. De las {len(pad)} palas de <a href="{url_pb}">nuestra sección de pickleball</a>, {len(approvate)} están homologadas por USA Pickleball. Si estás empezando, mira las pensadas para principiantes: {inizio_txt}.</p>
+<p class="note">Fuentes: {reg}; {chg}. El reglamento completo incluye también normas para árbitros, torneos, silla de ruedas y jugadores con discapacidad, que aquí no tratamos.</p>''')
+    corpo += cta
+    qa = [(L("Il servizio nel pickleball si fa dal basso?", "Is the pickleball serve underhand?", "¿El saque de pickleball es por abajo?"),
+           L("Sì. Nel servizio al volo la racchetta deve salire dal basso verso l'alto, la sua testa non può superare il polso e la palla va colpita sotto la vita. In alternativa si può fare il servizio a rimbalzo, lasciando cadere la palla e colpendola dopo il rimbalzo.",
+             "Yes. On a volley serve the paddle must move upward, its head cannot be above the wrist and the ball must be hit below the waist. Alternatively you can use the drop serve, letting the ball bounce before hitting it.",
+             "Sí. En el saque de volea la pala debe subir de abajo arriba, su cabeza no puede superar la muñeca y la pelota se golpea por debajo de la cintura. También se puede hacer el saque con bote, dejando caer la pelota y golpeándola tras el bote.")),
+          (L("Cos'è la kitchen nel pickleball?", "What is the kitchen in pickleball?", "¿Qué es la kitchen en el pickleball?"),
+           L("È la zona di non volée: 2,13 metri di campo su ciascun lato della rete in cui non si può colpire la palla al volo. Ci si può entrare per giocare palle che hanno già rimbalzato.",
+             "It is the non-volley zone: 7 feet of court on each side of the net where you cannot volley. You may step in to play balls that have already bounced.",
+             "Es la zona de no volea: 2,13 metros de pista a cada lado de la red donde no se puede volear. Se puede entrar para jugar pelotas que ya han botado.")),
+          (L("A quanti punti si gioca a pickleball?", "How many points is a pickleball game?", "¿A cuántos puntos se juega al pickleball?"),
+           L("Di solito a 11, con almeno 2 punti di scarto. Con il punteggio tradizionale fa punto solo chi serve; alcuni tornei usano il rally scoring, in cui ogni scambio vale un punto.",
+             "Usually to 11, win by 2. With traditional scoring only the serving side scores; some tournaments use rally scoring, where every rally is worth a point.",
+             "Normalmente a 11, con al menos 2 puntos de diferencia. Con el tanteo tradicional solo puntúa quien saca; algunos torneos usan el rally scoring, en el que cada punto cuenta.")),
+          (L("Quanto è grande un campo da pickleball?", "How big is a pickleball court?", "¿Cuánto mide una pista de pickleball?"),
+           L("13,41 metri per 6,10 (44 × 20 piedi), sia per il singolare sia per il doppio. La rete è alta 91,44 cm ai lati e 86,36 cm al centro.",
+             "44 by 20 feet (13.41 × 6.10 m), for both singles and doubles. The net is 36 inches high at the sidelines and 34 inches at the centre.",
+             "13,41 por 6,10 metros (44 × 20 pies), tanto en individuales como en dobles. La red mide 91,44 cm en los laterales y 86,36 cm en el centro.")),
+          (L("Serve una racchetta omologata per giocare?", "Do I need an approved paddle to play?", "¿Hace falta una pala homologada para jugar?"),
+           L("Solo nei tornei ufficiali, dove serve un modello USA Pickleball Approved. Per giocare per divertimento va bene qualsiasi racchetta da pickleball.",
+             "Only in official tournaments, which require a USA Pickleball Approved model. For casual play any pickleball paddle will do.",
+             "Solo en torneos oficiales, donde se exige un modelo USA Pickleball Approved. Para jugar por diversión vale cualquier pala de pickleball."))]
+    faq_htm, faq_ld = faq(qa)
+    corpo += faq_htm
+    titolo = L("Regolamento del pickleball 2026: le regole spiegate semplici", "Pickleball rules 2026: the rules explained simply", "Reglamento del pickleball 2026: las reglas explicadas fácil")
+    scrivi_articolo(slug, titolo + " | PadelMetrix",
+                    L("Le regole del pickleball secondo il regolamento ufficiale 2026: campo, servizio dal basso, regola dei due rimbalzi, kitchen, punteggio, falli e misure della racchetta.",
+                      "Pickleball rules from the official 2026 rulebook: court, underhand serve, two-bounce rule, kitchen, scoring, faults and paddle limits.",
+                      "Las reglas del pickleball según el reglamento oficial 2026: pista, saque por abajo, regla de los dos botes, kitchen, tanteo, faltas y medidas de la pala."),
+                    titolo, L("Regolamento pickleball", "Pickleball rules", "Reglamento pickleball"), corpo, ld_extra=[faq_ld])
+    return slug, titolo, L("Campo, servizio, due rimbalzi, kitchen e punteggio, secondo il regolamento 2026.", "Court, serve, two bounces, kitchen and scoring, per the 2026 rulebook.",
+                           "Pista, saque, dos botes, kitchen y tanteo, según el reglamento 2026.")
+
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -726,7 +938,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
