@@ -275,6 +275,7 @@ def head(lang, t):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "PadelMetrix", "url": f"{SITO}/{lang}/", "inLanguage": lang, "description": t["desc"]}, ensure_ascii=False)}</script>
+<script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "Organization", "name": "PadelMetrix", "url": SITO, "email": "info@padelmetrix.com", "sameAs": [u for _, u in S.SOCIAL]}, ensure_ascii=False)}</script>
 <style>{CSS}</style>
 </head>'''
 
@@ -374,6 +375,7 @@ def pagina(lang, db):
 <div><b>{e(t["footer_sez"])}</b><a href="{url(lang, "racchette")}">{e(t["nav"][0])}</a><a href="{P("pickleball")}">{e(t["nav"][1])}</a><a href="{url(lang, "bambini")}">{e(t["nav"][2])}</a></div>
 <div><b>{e(t["footer_str"])}</b><a href="{url(lang, "confronta")}">{e(t["nav"][3])}</a><a href="{P("guide")}">{e(t["nav"][4])}</a><a href="{P("articoli")}">{e(t["nav"][5])}</a></div>
 <div><b>{e(t["footer_info"])}</b><a href="{url(lang, "chi")}">{e(t["chi"])}</a><a href="{url(lang, "contatti")}">{e(t["contatti"])}</a><a href="{url(lang, "privacy")}">{e(t["privacy"])}</a><a href="{url(lang, "cookie")}">{e(t["cookie"])}</a>{C.link_footer(lang)}</div>
+<div><b>{L("Seguici", "Follow us", "Síguenos")}</b>{S.social_links(sep="")}</div>
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
 </div></footer>

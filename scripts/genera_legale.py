@@ -280,6 +280,8 @@ def contatti():
 <li><b>nuove collezioni</b>, per inserirle nel database appena escono.</li>
 </ul>
 <p>Le regole restano le stesse per tutti: i confronti, i voti e le classifiche non si comprano e non dipendono dagli accordi di affiliazione. I link di affiliazione sono sempre indicati come tali. Il metodo è spiegato nella pagina <a href="{P("chi-siamo")}">Chi siamo e metodo</a>.</p>
+<h2>Seguici sui social</h2>
+<p>Su Instagram e Facebook pubblichiamo confronti e dati sulle racchette in formato carosello: {S.social_links()}.</p>
 <h2>Privacy</h2>
 <p>Uso il tuo indirizzo e il contenuto del messaggio solo per risponderti. Dettagli nell'<a href="{P("privacy")}">informativa sulla privacy</a>.</p>
 </div>''', f'''{cr}
@@ -299,6 +301,8 @@ def contatti():
 <li><b>new collections</b>, so they can be added to the database as soon as they launch.</li>
 </ul>
 <p>The rules are the same for everyone: comparisons, scores and rankings cannot be bought and do not depend on affiliate agreements. Affiliate links are always labelled as such. The method is explained on the <a href="{P("chi-siamo")}">About and method</a> page.</p>
+<h2>Follow us</h2>
+<p>On Instagram and Facebook we post racket comparisons and data as carousels: {S.social_links()}.</p>
 <h2>Privacy</h2>
 <p>I use your address and the content of your message only to reply to you. Details in the <a href="{P("privacy")}">privacy policy</a>.</p>
 </div>''', f'''{cr}
@@ -318,12 +322,14 @@ def contatti():
 <li><b>nuevas colecciones</b>, para incluirlas en la base de datos en cuanto salgan.</li>
 </ul>
 <p>Las reglas son las mismas para todos: las comparativas, las notas y los rankings no se compran y no dependen de los acuerdos de afiliación. Los enlaces de afiliado siempre se indican como tales. El método se explica en la página <a href="{P("chi-siamo")}">Quiénes somos y método</a>.</p>
+<h2>Síguenos en redes</h2>
+<p>En Instagram y Facebook publicamos comparativas y datos de palas en formato carrusel: {S.social_links()}.</p>
 <h2>Privacidad</h2>
 <p>Uso tu dirección y el contenido del mensaje solo para responderte. Detalles en la <a href="{P("privacy")}">política de privacidad</a>.</p>
 </div>''')
     org = {"@context": "https://schema.org", "@type": "ContactPage", "name": L("Contatti", "Contact", "Contacto"), "url": S.SITO + P("contatti"),
            "mainEntity": {"@type": "Organization", "name": "PadelMetrix", "url": S.SITO, "email": EMAIL,
-                          "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "customer support", "availableLanguage": ["it", "en", "es"]}}}
+                          "sameAs": [u for _, u in S.SOCIAL], "contactPoint": {"@type": "ContactPoint", "email": EMAIL, "contactType": "customer support", "availableLanguage": ["it", "en", "es"]}}}
     path, alt = P("contatti"), ALT("contatti")
     S.scrivi(path, pagina(L("Contatti | PadelMetrix", "Contact | PadelMetrix", "Contacto | PadelMetrix"),
                           L("Scrivi a PadelMetrix: segnalazioni sui dati delle racchette, richieste di nuovi modelli, affiliazioni per negozi e schede tecniche per i marchi.",

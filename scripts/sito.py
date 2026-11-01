@@ -358,6 +358,7 @@ def footer():
              (P("privacy"), L("Privacy", "Privacy", "Privacidad")), (P("cookie"), L("Cookie", "Cookies", "Cookies"))]
     return f'''<footer><div class="wrap">
 <span style="max-width:760px">{testo}</span>
+<span>{L("Seguici", "Follow us", "Síguenos")}: {social_links()}</span>
 <span>{" · ".join([f'<a href="{u}">{t}</a>' for u, t in links] + ([C.link_footer(_LANG[0])] if C.attivo() else []))} · © 2026 PadelMetrix</span>
 </div></footer>'''
 
@@ -447,8 +448,22 @@ def autore():
     return {"@type": "Person", "name": "Luca Bicchieri", "url": SITO + P("chi-siamo")}
 
 
+INSTAGRAM = "https://www.instagram.com/padelmetrix/"
+FACEBOOK = "https://www.facebook.com/profile.php?id=61595943486589"
+_ICO = {
+    "Instagram": '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>',
+    "Facebook": '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1z"/></svg>',
+}
+SOCIAL = [("Instagram", INSTAGRAM), ("Facebook", FACEBOOK)]
+
+
+def social_links(sep=" · "):
+    """Link ai profili social con icona, per footer e pagine."""
+    return sep.join(f'<a href="{u}" rel="me noopener" target="_blank" style="display:inline-flex;align-items:center;gap:6px">{_ICO[n]}{n}</a>' for n, u in SOCIAL)
+
+
 def editore():
-    return {"@type": "Organization", "name": "PadelMetrix", "url": SITO + P("home")}
+    return {"@type": "Organization", "name": "PadelMetrix", "url": SITO + P("home"), "sameAs": [u for _, u in SOCIAL]}
 
 
 def data_riga(femm=False):
