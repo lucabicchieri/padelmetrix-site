@@ -192,6 +192,14 @@
 }
 },
 {
+"path": "/it/racchette/adidas-metalbone-reserve-edt-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-reserve-edt-2026/",
+"en": "/en/rackets/adidas-metalbone-reserve-edt-2026/",
+"es": "/es/palas/adidas-metalbone-reserve-edt-2026/"
+}
+},
+{
 "path": "/it/racchette/adidas-metalbone-superlight-2026/",
 "alt": {
 "it": "/it/racchette/adidas-metalbone-superlight-2026/",
@@ -888,6 +896,14 @@
 }
 },
 {
+"path": "/it/racchette/dunlop-aero-star-pro-2023/",
+"alt": {
+"it": "/it/racchette/dunlop-aero-star-pro-2023/",
+"en": "/en/rackets/dunlop-aero-star-pro-2023/",
+"es": "/es/palas/dunlop-aero-star-pro-2023/"
+}
+},
+{
 "path": "/it/racchette/dunlop-fx-junior-2026/",
 "alt": {
 "it": "/it/racchette/dunlop-fx-junior-2026/",
@@ -925,6 +941,14 @@
 "it": "/it/racchette/dunlop-fx-team-2026/",
 "en": "/en/rackets/dunlop-fx-team-2026/",
 "es": "/es/palas/dunlop-fx-team-2026/"
+}
+},
+{
+"path": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
+"alt": {
+"it": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
+"en": "/en/rackets/dunlop-galactica-pro-nisse-2026/",
+"es": "/es/palas/dunlop-galactica-pro-nisse-2026/"
 }
 },
 {
@@ -1048,6 +1072,30 @@
 }
 },
 {
+"path": "/it/racchette/head-speed-motion-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-motion-2025/",
+"en": "/en/rackets/head-speed-motion-2025/",
+"es": "/es/palas/head-speed-motion-2025/"
+}
+},
+{
+"path": "/it/racchette/head-speed-pro-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-2025/",
+"en": "/en/rackets/head-speed-pro-2025/",
+"es": "/es/palas/head-speed-pro-2025/"
+}
+},
+{
+"path": "/it/racchette/head-speed-pro-x-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-x-2025/",
+"en": "/en/rackets/head-speed-pro-x-2025/",
+"es": "/es/palas/head-speed-pro-x-2025/"
+}
+},
+{
 "path": "/it/racchette/head-speed-team-2026/",
 "alt": {
 "it": "/it/racchette/head-speed-team-2026/",
@@ -1112,6 +1160,14 @@
 }
 },
 {
+"path": "/it/racchette/joma-tournament-pro-iconic-2026/",
+"alt": {
+"it": "/it/racchette/joma-tournament-pro-iconic-2026/",
+"en": "/en/rackets/joma-tournament-pro-iconic-2026/",
+"es": "/es/palas/joma-tournament-pro-iconic-2026/"
+}
+},
+{
 "path": "/it/racchette/joma-valkiria-flex-2026/",
 "alt": {
 "it": "/it/racchette/joma-valkiria-flex-2026/",
@@ -1125,6 +1181,14 @@
 "it": "/it/racchette/joma-valkiria-pro-hrd-2026/",
 "en": "/en/rackets/joma-valkiria-pro-hrd-2026/",
 "es": "/es/palas/joma-valkiria-pro-hrd-2026/"
+}
+},
+{
+"path": "/it/racchette/joma-valkiria-pro-sft-2026/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-sft-2026/",
+"en": "/en/rackets/joma-valkiria-pro-sft-2026/",
+"es": "/es/palas/joma-valkiria-pro-sft-2026/"
 }
 },
 {
@@ -1496,6 +1560,14 @@
 }
 },
 {
+"path": "/it/racchette/nox-x-one-2026/",
+"alt": {
+"it": "/it/racchette/nox-x-one-2026/",
+"en": "/en/rackets/nox-x-one-2026/",
+"es": "/es/palas/nox-x-one-2026/"
+}
+},
+{
 "path": "/it/racchette/nox-x-one-silhouette-2026/",
 "alt": {
 "it": "/it/racchette/nox-x-one-silhouette-2026/",
@@ -1589,6 +1661,14 @@
 "it": "/it/racchette/oxdog-ultimate-tour-x-2026/",
 "en": "/en/rackets/oxdog-ultimate-tour-x-2026/",
 "es": "/es/palas/oxdog-ultimate-tour-x-2026/"
+}
+},
+{
+"path": "/it/racchette/puma-nova-elite-momo-gonzalez-2025/",
+"alt": {
+"it": "/it/racchette/puma-nova-elite-momo-gonzalez-2025/",
+"en": "/en/rackets/puma-nova-elite-momo-gonzalez-2025/",
+"es": "/es/palas/puma-nova-elite-momo-gonzalez-2025/"
 }
 },
 {
@@ -2200,6 +2280,22 @@
 }
 },
 {
+"path": "/it/racchette/wilson-bela-pro-v3-2026/",
+"alt": {
+"it": "/it/racchette/wilson-bela-pro-v3-2026/",
+"en": "/en/rackets/wilson-bela-pro-v3-2026/",
+"es": "/es/palas/wilson-bela-pro-v3-2026/"
+}
+},
+{
+"path": "/it/racchette/wilson-bela-v3-2026/",
+"alt": {
+"it": "/it/racchette/wilson-bela-v3-2026/",
+"en": "/en/rackets/wilson-bela-v3-2026/",
+"es": "/es/palas/wilson-bela-v3-2026/"
+}
+},
+{
 "path": "/it/racchette/wilson-blade-jr-v4-2026/",
 "alt": {
 "it": "/it/racchette/wilson-blade-jr-v4-2026/",
@@ -2477,6 +2573,14 @@
 "it": "/it/racchette/adidas-metalbone-hrd-plus-2026/",
 "en": "/en/rackets/adidas-metalbone-hrd-plus-2026/",
 "es": "/es/palas/adidas-metalbone-hrd-plus-2026/"
+}
+},
+{
+"path": "/en/rackets/adidas-metalbone-reserve-edt-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-reserve-edt-2026/",
+"en": "/en/rackets/adidas-metalbone-reserve-edt-2026/",
+"es": "/es/palas/adidas-metalbone-reserve-edt-2026/"
 }
 },
 {
@@ -3176,6 +3280,14 @@
 }
 },
 {
+"path": "/en/rackets/dunlop-aero-star-pro-2023/",
+"alt": {
+"it": "/it/racchette/dunlop-aero-star-pro-2023/",
+"en": "/en/rackets/dunlop-aero-star-pro-2023/",
+"es": "/es/palas/dunlop-aero-star-pro-2023/"
+}
+},
+{
 "path": "/en/rackets/dunlop-fx-junior-2026/",
 "alt": {
 "it": "/it/racchette/dunlop-fx-junior-2026/",
@@ -3213,6 +3325,14 @@
 "it": "/it/racchette/dunlop-fx-team-2026/",
 "en": "/en/rackets/dunlop-fx-team-2026/",
 "es": "/es/palas/dunlop-fx-team-2026/"
+}
+},
+{
+"path": "/en/rackets/dunlop-galactica-pro-nisse-2026/",
+"alt": {
+"it": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
+"en": "/en/rackets/dunlop-galactica-pro-nisse-2026/",
+"es": "/es/palas/dunlop-galactica-pro-nisse-2026/"
 }
 },
 {
@@ -3336,6 +3456,30 @@
 }
 },
 {
+"path": "/en/rackets/head-speed-motion-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-motion-2025/",
+"en": "/en/rackets/head-speed-motion-2025/",
+"es": "/es/palas/head-speed-motion-2025/"
+}
+},
+{
+"path": "/en/rackets/head-speed-pro-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-2025/",
+"en": "/en/rackets/head-speed-pro-2025/",
+"es": "/es/palas/head-speed-pro-2025/"
+}
+},
+{
+"path": "/en/rackets/head-speed-pro-x-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-x-2025/",
+"en": "/en/rackets/head-speed-pro-x-2025/",
+"es": "/es/palas/head-speed-pro-x-2025/"
+}
+},
+{
 "path": "/en/rackets/head-speed-team-2026/",
 "alt": {
 "it": "/it/racchette/head-speed-team-2026/",
@@ -3400,6 +3544,14 @@
 }
 },
 {
+"path": "/en/rackets/joma-tournament-pro-iconic-2026/",
+"alt": {
+"it": "/it/racchette/joma-tournament-pro-iconic-2026/",
+"en": "/en/rackets/joma-tournament-pro-iconic-2026/",
+"es": "/es/palas/joma-tournament-pro-iconic-2026/"
+}
+},
+{
 "path": "/en/rackets/joma-valkiria-flex-2026/",
 "alt": {
 "it": "/it/racchette/joma-valkiria-flex-2026/",
@@ -3413,6 +3565,14 @@
 "it": "/it/racchette/joma-valkiria-pro-hrd-2026/",
 "en": "/en/rackets/joma-valkiria-pro-hrd-2026/",
 "es": "/es/palas/joma-valkiria-pro-hrd-2026/"
+}
+},
+{
+"path": "/en/rackets/joma-valkiria-pro-sft-2026/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-sft-2026/",
+"en": "/en/rackets/joma-valkiria-pro-sft-2026/",
+"es": "/es/palas/joma-valkiria-pro-sft-2026/"
 }
 },
 {
@@ -3784,6 +3944,14 @@
 }
 },
 {
+"path": "/en/rackets/nox-x-one-2026/",
+"alt": {
+"it": "/it/racchette/nox-x-one-2026/",
+"en": "/en/rackets/nox-x-one-2026/",
+"es": "/es/palas/nox-x-one-2026/"
+}
+},
+{
 "path": "/en/rackets/nox-x-one-silhouette-2026/",
 "alt": {
 "it": "/it/racchette/nox-x-one-silhouette-2026/",
@@ -3877,6 +4045,14 @@
 "it": "/it/racchette/oxdog-ultimate-tour-x-2026/",
 "en": "/en/rackets/oxdog-ultimate-tour-x-2026/",
 "es": "/es/palas/oxdog-ultimate-tour-x-2026/"
+}
+},
+{
+"path": "/en/rackets/puma-nova-elite-momo-gonzalez-2025/",
+"alt": {
+"it": "/it/racchette/puma-nova-elite-momo-gonzalez-2025/",
+"en": "/en/rackets/puma-nova-elite-momo-gonzalez-2025/",
+"es": "/es/palas/puma-nova-elite-momo-gonzalez-2025/"
 }
 },
 {
@@ -4488,6 +4664,22 @@
 }
 },
 {
+"path": "/en/rackets/wilson-bela-pro-v3-2026/",
+"alt": {
+"it": "/it/racchette/wilson-bela-pro-v3-2026/",
+"en": "/en/rackets/wilson-bela-pro-v3-2026/",
+"es": "/es/palas/wilson-bela-pro-v3-2026/"
+}
+},
+{
+"path": "/en/rackets/wilson-bela-v3-2026/",
+"alt": {
+"it": "/it/racchette/wilson-bela-v3-2026/",
+"en": "/en/rackets/wilson-bela-v3-2026/",
+"es": "/es/palas/wilson-bela-v3-2026/"
+}
+},
+{
 "path": "/en/rackets/wilson-blade-jr-v4-2026/",
 "alt": {
 "it": "/it/racchette/wilson-blade-jr-v4-2026/",
@@ -4765,6 +4957,14 @@
 "it": "/it/racchette/adidas-metalbone-hrd-plus-2026/",
 "en": "/en/rackets/adidas-metalbone-hrd-plus-2026/",
 "es": "/es/palas/adidas-metalbone-hrd-plus-2026/"
+}
+},
+{
+"path": "/es/palas/adidas-metalbone-reserve-edt-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-reserve-edt-2026/",
+"en": "/en/rackets/adidas-metalbone-reserve-edt-2026/",
+"es": "/es/palas/adidas-metalbone-reserve-edt-2026/"
 }
 },
 {
@@ -5464,6 +5664,14 @@
 }
 },
 {
+"path": "/es/palas/dunlop-aero-star-pro-2023/",
+"alt": {
+"it": "/it/racchette/dunlop-aero-star-pro-2023/",
+"en": "/en/rackets/dunlop-aero-star-pro-2023/",
+"es": "/es/palas/dunlop-aero-star-pro-2023/"
+}
+},
+{
 "path": "/es/palas/dunlop-fx-junior-2026/",
 "alt": {
 "it": "/it/racchette/dunlop-fx-junior-2026/",
@@ -5501,6 +5709,14 @@
 "it": "/it/racchette/dunlop-fx-team-2026/",
 "en": "/en/rackets/dunlop-fx-team-2026/",
 "es": "/es/palas/dunlop-fx-team-2026/"
+}
+},
+{
+"path": "/es/palas/dunlop-galactica-pro-nisse-2026/",
+"alt": {
+"it": "/it/racchette/dunlop-galactica-pro-nisse-2026/",
+"en": "/en/rackets/dunlop-galactica-pro-nisse-2026/",
+"es": "/es/palas/dunlop-galactica-pro-nisse-2026/"
 }
 },
 {
@@ -5624,6 +5840,30 @@
 }
 },
 {
+"path": "/es/palas/head-speed-motion-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-motion-2025/",
+"en": "/en/rackets/head-speed-motion-2025/",
+"es": "/es/palas/head-speed-motion-2025/"
+}
+},
+{
+"path": "/es/palas/head-speed-pro-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-2025/",
+"en": "/en/rackets/head-speed-pro-2025/",
+"es": "/es/palas/head-speed-pro-2025/"
+}
+},
+{
+"path": "/es/palas/head-speed-pro-x-2025/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-x-2025/",
+"en": "/en/rackets/head-speed-pro-x-2025/",
+"es": "/es/palas/head-speed-pro-x-2025/"
+}
+},
+{
 "path": "/es/palas/head-speed-team-2026/",
 "alt": {
 "it": "/it/racchette/head-speed-team-2026/",
@@ -5688,6 +5928,14 @@
 }
 },
 {
+"path": "/es/palas/joma-tournament-pro-iconic-2026/",
+"alt": {
+"it": "/it/racchette/joma-tournament-pro-iconic-2026/",
+"en": "/en/rackets/joma-tournament-pro-iconic-2026/",
+"es": "/es/palas/joma-tournament-pro-iconic-2026/"
+}
+},
+{
 "path": "/es/palas/joma-valkiria-flex-2026/",
 "alt": {
 "it": "/it/racchette/joma-valkiria-flex-2026/",
@@ -5701,6 +5949,14 @@
 "it": "/it/racchette/joma-valkiria-pro-hrd-2026/",
 "en": "/en/rackets/joma-valkiria-pro-hrd-2026/",
 "es": "/es/palas/joma-valkiria-pro-hrd-2026/"
+}
+},
+{
+"path": "/es/palas/joma-valkiria-pro-sft-2026/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-sft-2026/",
+"en": "/en/rackets/joma-valkiria-pro-sft-2026/",
+"es": "/es/palas/joma-valkiria-pro-sft-2026/"
 }
 },
 {
@@ -6072,6 +6328,14 @@
 }
 },
 {
+"path": "/es/palas/nox-x-one-2026/",
+"alt": {
+"it": "/it/racchette/nox-x-one-2026/",
+"en": "/en/rackets/nox-x-one-2026/",
+"es": "/es/palas/nox-x-one-2026/"
+}
+},
+{
 "path": "/es/palas/nox-x-one-silhouette-2026/",
 "alt": {
 "it": "/it/racchette/nox-x-one-silhouette-2026/",
@@ -6165,6 +6429,14 @@
 "it": "/it/racchette/oxdog-ultimate-tour-x-2026/",
 "en": "/en/rackets/oxdog-ultimate-tour-x-2026/",
 "es": "/es/palas/oxdog-ultimate-tour-x-2026/"
+}
+},
+{
+"path": "/es/palas/puma-nova-elite-momo-gonzalez-2025/",
+"alt": {
+"it": "/it/racchette/puma-nova-elite-momo-gonzalez-2025/",
+"en": "/en/rackets/puma-nova-elite-momo-gonzalez-2025/",
+"es": "/es/palas/puma-nova-elite-momo-gonzalez-2025/"
 }
 },
 {
@@ -6773,6 +7045,22 @@
 "it": "/it/racchette/vibor-a-yarara-pro-white-2-0-2026/",
 "en": "/en/rackets/vibor-a-yarara-pro-white-2-0-2026/",
 "es": "/es/palas/vibor-a-yarara-pro-white-2-0-2026/"
+}
+},
+{
+"path": "/es/palas/wilson-bela-pro-v3-2026/",
+"alt": {
+"it": "/it/racchette/wilson-bela-pro-v3-2026/",
+"en": "/en/rackets/wilson-bela-pro-v3-2026/",
+"es": "/es/palas/wilson-bela-pro-v3-2026/"
+}
+},
+{
+"path": "/es/palas/wilson-bela-v3-2026/",
+"alt": {
+"it": "/it/racchette/wilson-bela-v3-2026/",
+"en": "/en/rackets/wilson-bela-v3-2026/",
+"es": "/es/palas/wilson-bela-v3-2026/"
 }
 },
 {

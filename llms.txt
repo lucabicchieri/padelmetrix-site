@@ -1,6 +1,6 @@
 # PadelMetrix
 
-> Independent padel racket database / Database indipendente di racchette da padel / Base de datos independiente de palas de pádel: 286 racket pages from the 2026 and 2027 collections of 19 brands, with specs, cited sources, comparisons and guides. Available in Italian, English and Spanish. Updated 2026-10-24.
+> Independent padel racket database / Database indipendente di racchette da padel / Base de datos independiente de palas de pádel: 298 racket pages from the 2026 and 2027 collections of 20 brands, with specs, cited sources, comparisons and guides. Available in Italian, English and Spanish. Updated 2026-10-24.
 
 
 ## Italiano

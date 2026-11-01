@@ -240,6 +240,14 @@
 }
 },
 {
+"path": "/it/domande/racchetta-fernando-belasteguin/",
+"alt": {
+"it": "/it/domande/racchetta-fernando-belasteguin/",
+"en": "/en/questions/fernando-belasteguin-padel-racket/",
+"es": "/es/preguntas/pala-fernando-belasteguin/"
+}
+},
+{
 "path": "/it/domande/racchetta-franco-stupaczuk/",
 "alt": {
 "it": "/it/domande/racchetta-franco-stupaczuk/",
@@ -688,6 +696,14 @@
 }
 },
 {
+"path": "/en/questions/fernando-belasteguin-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-fernando-belasteguin/",
+"en": "/en/questions/fernando-belasteguin-padel-racket/",
+"es": "/es/preguntas/pala-fernando-belasteguin/"
+}
+},
+{
 "path": "/en/questions/franco-stupaczuk-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-franco-stupaczuk/",
@@ -1133,6 +1149,14 @@
 "it": "/it/domande/racchetta-federico-chingotto/",
 "en": "/en/questions/federico-chingotto-padel-racket/",
 "es": "/es/preguntas/pala-federico-chingotto/"
+}
+},
+{
+"path": "/es/preguntas/pala-fernando-belasteguin/",
+"alt": {
+"it": "/it/domande/racchetta-fernando-belasteguin/",
+"en": "/en/questions/fernando-belasteguin-padel-racket/",
+"es": "/es/preguntas/pala-fernando-belasteguin/"
 }
 },
 {
