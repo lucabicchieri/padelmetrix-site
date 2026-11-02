@@ -32,3 +32,6 @@
 .cmp-tool select{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:8px;min-width:240px;max-width:100%}
 .tablebox .tab{min-width:560px}
 .vs .card h2{margin:0 0 10px}
+
+.tab tr.diff td{background:#F4FBE3}.tab tr.diff td:first-child{font-weight:600}.cmp-n3 th,.cmp-n4 th{min-width:150px}.cmp-links .btn{margin:0 8px 8px 0}
+table[class*="cmp-n"] td:first-child,table[class*="cmp-n"] th:first-child{position:sticky;left:0;z-index:1;background:#fff}table[class*="cmp-n"] tr.diff td:first-child{background:#F4FBE3}

@@ -289,37 +289,45 @@ def confronti(db, pairs):
               [L("Forma", "Shape", "Forma", "Forme"), "forma"], [L("Peso", "Weight", "Peso", "Poids"), "peso"], [L("Superficie", "Face", "Cara", "Surface"), "superficie"],
               [L("Livello", "Level", "Nivel", "Niveau"), "livello"], [L("Stile", "Style", "Estilo", "Style"), "stile"], [L("Prezzo di listino", "List price", "Precio de lista", "Prix public"), "prezzo"]]
     base_c = P("confronta")
-    tool_js = "<script>var IDX=" + json.dumps(indice, ensure_ascii=False) + ";var PAIRS=" + json.dumps(pairkeys) + ";var LAB=" + json.dumps(labels, ensure_ascii=False) + """;
-(function(){var s1=document.getElementById('r1'),s2=document.getElementById('r2'),out=document.getElementById('cmp-out');
-var q=new URLSearchParams(location.search).get('r');if(q){var p=q.split(',');if(p[0])s1.value=p[0];if(p[1])s2.value=p[1];}
+    tool_js = "<script>var IDX=" + json.dumps(indice, ensure_ascii=False) + ";var PAIRS=" + json.dumps(pairkeys) + ";var LAB=" + json.dumps(labels, ensure_ascii=False) + ";var BASE=" + json.dumps(base_c) + ";var FULL=" + json.dumps(L("Confronti completi già spiegati", "Full comparisons already explained", "Comparativas completas ya explicadas", "Comparaisons complètes déjà expliquées"), ensure_ascii=False) + ";var DIFF=" + json.dumps(L("Le righe evidenziate sono quelle in cui le racchette sono diverse.", "Highlighted rows are where the rackets differ.", "Las filas resaltadas son aquellas en las que las palas son distintas.", "Les lignes surlignées sont celles où les raquettes diffèrent."), ensure_ascii=False) + """;
+(function(){var sel=[1,2,3,4].map(function(i){return document.getElementById('r'+i);}),out=document.getElementById('cmp-out');
+var q=new URLSearchParams(location.search).get('r');if(q){q.split(',').slice(0,4).forEach(function(v,i){if(v)sel[i].value=v;});}
 function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function get(s){for(var i=0;i<IDX.length;i++)if(IDX[i].slug===s)return IDX[i];return null;}
-function run(){var a=get(s1.value),b=get(s2.value);if(!a||!b||a===b){out.innerHTML='';return;}
-var h='<div class="tablebox"><table class="tab"><thead><tr><th></th><th><a href="'+a.url+'">'+esc(a.titolo)+'</a></th><th><a href="'+b.url+'">'+esc(b.titolo)+'</a></th></tr></thead><tbody>';
-LAB.forEach(function(r){var x=a[r[1]],y=b[r[1]];if(x||y)h+='<tr><td>'+r[0]+'</td><td>'+esc(x||'—')+'</td><td>'+esc(y||'—')+'</td></tr>';});
-h+='</tbody></table></div>';var k=[a.slug,b.slug].sort().join('|');if(PAIRS.indexOf(k)>=0){var u='""" + base_c + """'+[a.slug,b.slug].sort().join('-vs-')+'/';h+='<p><a class="btn" href="'+u+'">""" + L("Leggi il confronto completo", "Read the full comparison", "Lee la comparativa completa", "Lire la comparaison complète") + """</a></p>';}
+function run(){var rs=[],seen={};sel.forEach(function(x){var r=get(x.value);if(r&&!seen[r.slug]){seen[r.slug]=1;rs.push(r);}});
+if(rs.length<2){out.innerHTML='';if(history.replaceState)history.replaceState(null,'',location.pathname+(rs.length?'?r='+rs[0].slug:''));return;}
+if(history.replaceState)history.replaceState(null,'',location.pathname+'?r='+rs.map(function(r){return r.slug;}).join(','));
+var h='<div class="tablebox"><table class="tab cmp-n'+rs.length+'"><thead><tr><th></th>';rs.forEach(function(r){h+='<th><a href="'+r.url+'">'+esc(r.titolo)+'</a></th>';});h+='</tr></thead><tbody>';
+LAB.forEach(function(l){var v=rs.map(function(r){return r[l[1]];});if(!v.some(function(x){return x;}))return;var d=v.some(function(x){return String(x||'')!==String(v[0]||'');});
+h+='<tr'+(d?' class="diff"':'')+'><td>'+l[0]+'</td>';v.forEach(function(x){h+='<td>'+esc(x||'—')+'</td>';});h+='</tr>';});
+h+='</tbody></table></div><p class="note">'+DIFF+'</p>';var links=[];
+for(var a=0;a<rs.length;a++)for(var b=a+1;b<rs.length;b++){var k=[rs[a].slug,rs[b].slug].sort();if(PAIRS.indexOf(k.join('|'))>=0)links.push('<a class="btn" href="'+BASE+k.join('-vs-')+'/">'+esc(rs[a].nome)+' vs '+esc(rs[b].nome)+'</a>');}
+if(links.length)h+='<p><b>'+FULL+'</b></p><p class="cmp-links">'+links.join(' ')+'</p>';
 out.innerHTML=h;}
-s1.addEventListener('change',run);s2.addEventListener('change',run);run();})();
+sel.forEach(function(x){x.addEventListener('change',run);});run();})();
 </script>"""
     elenco_c = '<ul class="lista-link">' + "".join(
         f'<li><a href="{confronto_url(x, y)}">{e(per[x]["nome"])} vs {e(per[y]["nome"])}</a></li>'
         for x, y in sorted(pairs, key=lambda p: (per[p[0]]["marca"], per[p[0]]["nome"]))) + "</ul>"
     cr, ld = crumbs([H(), (C, None)])
     r1, r2 = L("Prima racchetta", "First racket", "Primera pala", "Première raquette"), L("Seconda racchetta", "Second racket", "Segunda pala", "Deuxième raquette")
+    r3, r4 = L("Terza racchetta (facoltativa)", "Third racket (optional)", "Tercera pala (opcional)", "Troisième raquette (facultatif)"), L("Quarta racchetta (facoltativa)", "Fourth racket (optional)", "Cuarta pala (opcional)", "Quatrième raquette (facultatif)")
     corpo = f'''{cr}
-<div class="intro"><h1>{L("Confronta racchette da padel", "Compare padel rackets", "Compara palas de pádel", "Comparer des raquettes de padel")}</h1><p>{L(f"Scegli due racchette e guarda subito dove si differenziano: peso, forma, materiali, livello e prezzo. Sotto trovi i {len(pairs)} confronti più cercati, già spiegati.",
-       f"Pick two rackets and see at once where they differ: weight, shape, materials, level and price. Below are the {len(pairs)} most searched comparisons, already explained.",
-       f"Elige dos palas y mira enseguida en qué se diferencian: peso, forma, materiales, nivel y precio. Debajo tienes las {len(pairs)} comparativas más buscadas, ya explicadas.", f"Choisissez deux raquettes et voyez tout de suite ce qui les distingue : poids, forme, matériaux, niveau et prix. Voici les {len(pairs)} comparaisons les plus recherchées, déjà expliquées.")}</p></div>
+<div class="intro"><h1>{L("Confronta racchette da padel", "Compare padel rackets", "Compara palas de pádel", "Comparer des raquettes de padel")}</h1><p>{L(f"Scegli da due a quattro racchette e guarda subito dove si differenziano: peso, forma, materiali, livello e prezzo. Sotto trovi i {len(pairs)} confronti più cercati, già spiegati.",
+       f"Pick two to four rackets and see at once where they differ: weight, shape, materials, level and price. Below are the {len(pairs)} most searched comparisons, already explained.",
+       f"Elige de dos a cuatro palas y mira enseguida en qué se diferencian: peso, forma, materiales, nivel y precio. Debajo tienes las {len(pairs)} comparativas más buscadas, ya explicadas.", f"Choisissez de deux à quatre raquettes et voyez tout de suite ce qui les distingue : poids, forme, matériaux, niveau et prix. Voici les {len(pairs)} comparaisons les plus recherchées, déjà expliquées.")}</p></div>
 <form class="cmp-tool" onsubmit="return false"><select id="r1" aria-label="{r1}"><option value="">{r1}</option>{opts}</select>
-<select id="r2" aria-label="{r2}"><option value="">{r2}</option>{opts}</select></form>
+<select id="r2" aria-label="{r2}"><option value="">{r2}</option>{opts}</select>
+<select id="r3" aria-label="{r3}"><option value="">{r3}</option>{opts}</select>
+<select id="r4" aria-label="{r4}"><option value="">{r4}</option>{opts}</select></form>
 <div id="cmp-out"></div>
 <section class="block"><h2>{L("Confronti più cercati", "Most searched comparisons", "Comparativas más buscadas", "Comparaisons les plus recherchées")}</h2>{elenco_c}</section>'''
     path = P("confronta")
-    scrivi(path, pagina(L("Confronto racchette padel: metti a confronto due modelli | PadelMetrix", "Padel racket comparison: compare two models side by side | PadelMetrix",
-                          "Comparador de palas de pádel: compara dos modelos | PadelMetrix", "Comparateur de raquettes de padel : deux modèles côte à côte | PadelMetrix"),
-                        L(f"Confronta due racchette da padel per peso, forma, materiali, livello e prezzo. {len(pairs)} confronti già spiegati tra i modelli 2026 e 2027.",
-                          f"Compare two padel rackets by weight, shape, materials, level and price. {len(pairs)} comparisons of 2026 and 2027 models already explained.",
-                          f"Compara dos palas de pádel por peso, forma, materiales, nivel y precio. {len(pairs)} comparativas ya explicadas entre modelos 2026 y 2027.", f"Comparez deux raquettes de padel par poids, forme, matériaux, niveau et prix. {len(pairs)} comparaisons de modèles 2026 et 2027 déjà expliquées."),
+    scrivi(path, pagina(L("Confronto racchette padel: metti a confronto fino a 4 modelli | PadelMetrix", "Padel racket comparison: compare up to 4 models side by side | PadelMetrix",
+                          "Comparador de palas de pádel: compara hasta 4 modelos | PadelMetrix", "Comparateur de raquettes de padel : jusqu'à 4 modèles côte à côte | PadelMetrix"),
+                        L(f"Confronta fino a quattro racchette da padel per peso, forma, materiali, livello e prezzo. {len(pairs)} confronti già spiegati tra i modelli 2026 e 2027.",
+                          f"Compare up to four padel rackets by weight, shape, materials, level and price. {len(pairs)} comparisons of 2026 and 2027 models already explained.",
+                          f"Compara hasta cuatro palas de pádel por peso, forma, materiales, nivel y precio. {len(pairs)} comparativas ya explicadas entre modelos 2026 y 2027.", f"Comparez jusqu'à quatre raquettes de padel par poids, forme, matériaux, niveau et prix. {len(pairs)} comparaisons de modèles 2026 et 2027 déjà expliquées."),
                         path, corpo, on="confronta", ld=[ld], extra_js=tool_js, alt=ALT("confronta")), ALT("confronta"))
 
 
