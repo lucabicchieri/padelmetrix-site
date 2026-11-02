@@ -1,5 +1,28 @@
 [
  {
+  "slug": "fitp-supera-figc-tesserati-tennis-padel",
+  "data": "2026-11-02",
+  "racchette": [],
+  "titolo": {
+   "it": "La FITP supera la FIGC: tennis e padel hanno più tesserati del calcio",
+   "en": "The FITP overtakes the FIGC: tennis and padel now have more members than football",
+   "es": "La FITP supera a la FIGC: tenis y pádel ya tienen más federados que el fútbol",
+   "fr": "La FITP dépasse la FIGC : le tennis et le padel comptent plus de licenciés que le football"
+  },
+  "desc": {
+   "it": "Cos'è la FITP e i numeri del sorpasso sulla Federcalcio, con il ruolo del padel.",
+   "en": "What the FITP is and the numbers behind overtaking football, including padel's role.",
+   "es": "Qué es la FITP y las cifras del adelantamiento a la federación de fútbol, con el papel del pádel.",
+   "fr": "Ce qu'est la FITP et les chiffres du dépassement du football, avec le rôle du padel."
+  },
+  "url": {
+   "it": "/it/articoli/fitp-supera-figc-tesserati-tennis-padel/",
+   "en": "/en/articles/fitp-overtakes-figc-registered-members-tennis-padel/",
+   "es": "/es/articulos/fitp-supera-figc-federados-tenis-padel/",
+   "fr": "/fr/articles/fitp-depasse-figc-licencies-tennis-padel/"
+  }
+ },
+ {
   "slug": "regolamento-padel-regole-spiegate",
   "data": "2026-11-01",
   "racchette": [],
