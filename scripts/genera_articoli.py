@@ -1294,6 +1294,177 @@ def padel_regole(db):
 
 
 
+FITP_SOLE = "https://en.ilsole24ore.com/art/tennis-has-overtaken-football-in-terms-of-the-number-of-registered-members-whilst-the-football-federation-recorded-revenue-of-280-million-AJMhseuB"
+FITP_POST = "https://www.ilpost.it/2026/10/27/federtennis-fitp-superato-tesserati-figc-federcalcio-come-ha-fatto-rapporto-coni-2024/"
+FITP_FQ = "https://www.ilfattoquotidiano.it/2026/10/27/tennis-sorpasso-calcio-tesserati-padel-fitp-figc-buonfiglio-binaghi/8551561/"
+FITP_NOME = "https://www.oasport.it/2022/10/tennis-la-fit-cambia-nome-diventa-fitp-e-include-il-padel/"
+FITP_FIP = "https://www.padelfip.com/?p=161358"
+FITP_AGI = "https://www.agi.it/sport/news/2026-07-12/campi-da-padel-italia-37986662/"
+S.SLUG["fitp-supera-figc-tesserati-tennis-padel"] = ("fitp-overtakes-figc-registered-members-tennis-padel", "fitp-supera-figc-federados-tenis-padel")
+S.SLUG_FR["fitp-supera-figc-tesserati-tennis-padel"] = "fitp-depasse-figc-licencies-tennis-padel"
+DATE_ART["fitp-supera-figc-tesserati-tennis-padel"] = "2026-11-02"
+
+
+def fitp_sorpasso(db):
+    slug = "fitp-supera-figc-tesserati-tennis-padel"
+    adulti = [n for n in db if n["categoria"] != "junior"]
+    sole, post, fq = fonte(FITP_SOLE, "Il Sole 24 Ore"), fonte(FITP_POST, "Il Post"), fonte(FITP_FQ, "Il Fatto Quotidiano")
+    nome_src, fip, agi = fonte(FITP_NOME, "OA Sport"), fonte(FITP_FIP, "FIP"), fonte(FITP_AGI, "AGI")
+    reg, sel, rac = P("articoli", "regolamento-padel-regole-spiegate"), P("selettore"), P("racchette")
+    num = (lambda x: x) if S.lang() != "en" else (lambda x: x.replace(".", ","))
+    righe = [("FITP (tennis e padel)", "FITP (tennis and padel)", "FITP (tenis y pádel)", "FITP (tennis et padel)", "1.162.477", "20,2"),
+             ("FIGC (calcio)", "FIGC (football)", "FIGC (fútbol)", "FIGC (football)", "1.123.054", "19,5"),
+             ("Pallavolo", "Volleyball", "Voleibol", "Volley-ball", "359.797", ""), ("Pallacanestro", "Basketball", "Baloncesto", "Basket-ball", "320.769", ""),
+             ("Atletica leggera", "Athletics", "Atletismo", "Athlétisme", "292.599", "")]
+    def fmt(v):
+        if S.lang() == "en":
+            return v.replace(".", "§").replace(",", ".").replace("§", ",")
+        if S.lang() == "fr":
+            return v.replace(".", " ")
+        return v
+    tab = ('<div class="tablebox"><table class="tab"><thead><tr><th>' + L("Federazione", "Federation", "Federación", "Fédération") + '</th><th>'
+           + L("Tesserati 2024", "Registered members 2024", "Federados 2024", "Licenciés 2024") + '</th><th>' + L("Quota sul totale", "Share of total", "Cuota del total", "Part du total") + '</th></tr></thead><tbody>'
+           + "".join(f'<tr><td>{L(a, b, c, d)}</td><td>{fmt(n)}</td><td>{(fmt(q) + " %") if q and S.lang() == "fr" else ((fmt(q) + "%") if q else "—")}</td></tr>' for a, b, c, d, n, q in righe)
+           + '</tbody></table></div>')
+    box = L(f'<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Sei tra i nuovi giocatori di padel?</b><br>Parti dalle <a href="{reg}">regole spiegate semplici</a>, poi scegli la racchetta tra le {len(adulti)} del nostro database.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{sel}">Trova la tua racchetta</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{rac}">Vedi tutte le racchette →</a></div>',
+            f'<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>New to padel?</b><br>Start with the <a href="{reg}">rules explained simply</a>, then pick your racket from the {len(adulti)} in our database.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{sel}">Find your racket</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{rac}">See all rackets →</a></div>',
+            f'<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>¿Acabas de empezar con el pádel?</b><br>Empieza por las <a href="{reg}">reglas explicadas fácil</a> y luego elige pala entre las {len(adulti)} de nuestra base de datos.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{sel}">Encuentra tu pala</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{rac}">Ver todas las palas →</a></div>',
+            f'<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>Vous débutez au padel ?</b><br>Commencez par les <a href="{reg}">règles expliquées simplement</a>, puis choisissez votre raquette parmi les {len(adulti)} de notre base.<br><a class="btn" style="margin-top:12px;display:inline-block" href="{sel}">Trouve ta raquette</a> <a class="btn out" style="margin-top:12px;display:inline-block" href="{rac}">Voir toutes les raquettes →</a></div>')
+    corpo = L(f'''<p><b>Per la prima volta in Italia la Federazione Italiana Tennis e Padel (FITP) ha più tesserati della Federcalcio (FIGC): secondo il monitoraggio del CONI sul 2024, 1.162.477 contro 1.123.054.</b> È un sorpasso storico, che ha più di una spiegazione. Una di queste è il padel, che dal 2023 fa parte anche del nome della federazione.</p>
+<h2>Cos'è la FITP</h2>
+<p>La FITP è la federazione sportiva nazionale, riconosciuta dal CONI, che governa in Italia il tennis e il padel: affilia i circoli, rilascia le tessere, forma maestri e arbitri e organizza campionati e tornei. Fino al 2022 si chiamava FIT, Federazione Italiana Tennis. Il 16 ottobre 2022 l'assemblea straordinaria riunita a Firenze ha approvato all'unanimità il nuovo nome, Federazione Italiana Tennis e Padel, con la nuova federazione costituita dal 1° gennaio 2023 dopo il via libera del CONI ({nome_src}). Il padel era già una disciplina della federazione dal 2008 ({post}).</p>
+<p>La guida dal 2001 Angelo Binaghi: quando è diventato presidente i tesserati erano circa 130.000 ({fq}). Oggi la FITP conta oltre 4.000 circoli affiliati, più di 2.500 scuole di tennis e padel, circa 14.000 tecnici e 10.000 ufficiali di gara, e organizza grandi eventi come le ATP Finals di Torino e gli Internazionali d'Italia ({sole}).</p>
+<h2>I numeri del sorpasso</h2>
+<p>I dati vengono dal "Monitoraggio CONI-FSN-DSA", il censimento di società e tesserati di 48 federazioni, 15 discipline associate e 14 enti di promozione, anticipato da Il Sole 24 Ore. Nel 2024 i tesserati in Italia sono stati 6.069.891, il dato più alto di sempre (+7,7% sul 2023).</p>
+{tab}
+<p>Nel 2025 la FITP è salita a 1.254.153 tesserati ({sole}). La crescita è soprattutto dell'ultimo decennio: nel rapporto CONI sul 2014 la federazione aveva meno di 300.000 tesserati ed era dietro a pallavolo e pallacanestro; da allora è cresciuta di oltre il 300%, mentre la FIGC di circa il 5% ({post}).</p>
+<p>Il sorpasso riguarda anche i conti. Nel 2024 il valore della produzione era di 209 milioni per la FITP e 224 per la FIGC; nel 2025 la FITP ha superato i 240 milioni contro i 214 della Federcalcio, e per il 2026 prevede oltre 280 milioni. Più del 70% dei ricavi arriva dall'organizzazione di eventi internazionali ({sole}).</p>
+<h2>Perché tennis e padel crescono così</h2>
+<ul>
+<li><b>Il padel.</b> Si impara in fretta e basta essere in quattro invece che in dieci: per molti ha preso il posto della partita di calcetto ({sole}).</li>
+<li><b>I campioni.</b> Sinner, Paolini ed Errani hanno avvicinato tante persone al tennis, ma soprattutto negli ultimi anni: Il Sole 24 Ore considera i successi più una conseguenza che la causa della crescita ({post}).</li>
+<li><b>Le donne.</b> Il tennis è storicamente più aperto alle donne: gli uomini sono il 59% dei tesserati FITP e il 96% di quelli FIGC ({post}).</li>
+<li><b>Il modello economico.</b> I ricavi dei grandi eventi vengono reinvestiti in scuole, formazione dei tecnici e tornei: i tornei internazionali in Italia sono passati da meno di 30 a circa 90 in 25 anni ({post}).</li>
+</ul>
+<h2>Quanto pesa il padel</h2>
+<p>La FITP non pubblica nel rapporto un dato separato per il padel, ma alcuni numeri danno l'idea della crescita. A fine 2023 i tesserati padel erano quasi 74.000 e i circoli affiliati 1.682 ({fip}). Secondo i dati 2025 del centro studi della Federazione Internazionale Padel riportati da AGI, i campi affiliati FITP sono 5.321, con il Lazio in testa (2.014), e l'Italia è il secondo Paese al mondo per diffusione del padel ({agi}).</p>
+<h2>Da leggere con attenzione</h2>
+<ul>
+<li><b>Tesserati non vuol dire praticanti.</b> Il calcio non è diventato meno popolare: si gioca moltissimo anche senza tessera federale.</li>
+<li>Il rapporto CONI non conta il CSI, il Centro Sportivo Italiano, che raccoglie molta attività calcistica amatoriale e degli oratori ({post}).</li>
+<li>La FIGC resta la federazione più diffusa sul territorio, con oltre 10.000 società affiliate, ed è ancora prima per tesserati in 11 regioni ({post}, {sole}).</li>
+</ul>
+<p class="note">Fonti: {sole} (27 ottobre 2026), {post}, {fq}, {nome_src}, {fip}, {agi}.</p>''',
+              f'''<p><b>For the first time in Italy, the Italian Tennis and Padel Federation (FITP) has more registered members than the football federation (FIGC): according to CONI's monitoring report for 2024, 1,162,477 against 1,123,054.</b> It is a historic overtaking with more than one explanation. One of them is padel, which since 2023 has also been part of the federation's name.</p>
+<h2>What the FITP is</h2>
+<p>The FITP is the national sports federation, recognised by the Italian Olympic Committee (CONI), that governs tennis and padel in Italy: it affiliates clubs, issues memberships, trains coaches and referees and organises championships and tournaments. Until 2022 it was called FIT, the Italian Tennis Federation. On 16 October 2022 an extraordinary assembly in Florence unanimously approved the new name, Italian Tennis and Padel Federation, with the new federation established from 1 January 2023 after CONI's approval ({nome_src}). Padel had already been one of the federation's disciplines since 2008 ({post}).</p>
+<p>It has been led since 2001 by Angelo Binaghi: when he became president it had around 130,000 members ({fq}). Today the FITP has more than 4,000 affiliated clubs, over 2,500 tennis and padel schools, about 14,000 coaches and 10,000 officials, and it organises major events such as the ATP Finals in Turin and the Internazionali d'Italia in Rome ({sole}).</p>
+<h2>The numbers behind the overtaking</h2>
+<p>The data come from the "CONI-FSN-DSA Monitoring", a census of clubs and members of 48 federations, 15 associated disciplines and 14 sports promotion bodies, previewed by Il Sole 24 Ore. In 2024 Italy had 6,069,891 registered members, the highest figure ever (+7.7% on 2023).</p>
+{tab}
+<p>In 2025 the FITP rose to 1,254,153 members ({sole}). The growth came mostly in the last decade: in CONI's report for 2014 the federation had fewer than 300,000 members and was behind volleyball and basketball; since then it has grown by more than 300%, while the FIGC grew by about 5% ({post}).</p>
+<p>The overtaking also shows in the accounts. In 2024 production value was 209 million euros for the FITP and 224 million for the FIGC; in 2025 the FITP passed 240 million against the football federation's 214, and for 2026 it forecasts more than 280 million. Over 70% of its revenue comes from organising international events ({sole}).</p>
+<h2>Why tennis and padel are growing so fast</h2>
+<ul>
+<li><b>Padel.</b> It is quick to learn and you only need four people instead of ten: for many it has replaced the five-a-side football game ({sole}).</li>
+<li><b>The champions.</b> Sinner, Paolini and Errani have drawn many people to tennis, but mostly in recent years: Il Sole 24 Ore sees their success more as a consequence than the cause of the growth ({post}).</li>
+<li><b>Women.</b> Tennis has historically been more open to women: men make up 59% of FITP members and 96% of FIGC members ({post}).</li>
+<li><b>The business model.</b> Revenue from major events is reinvested in schools, coach training and tournaments: international tournaments in Italy have gone from fewer than 30 to about 90 in 25 years ({post}).</li>
+</ul>
+<h2>How big is padel's share</h2>
+<p>The report does not give a separate figure for padel, but some numbers show its growth. At the end of 2023 there were almost 74,000 padel members and 1,682 affiliated clubs ({fip}). According to 2025 data from the International Padel Federation's research department reported by AGI, there are 5,321 FITP-affiliated courts, with Lazio in the lead (2,014), and Italy is the second country in the world for padel ({agi}).</p>
+<h2>Read with care</h2>
+<ul>
+<li><b>Registered members are not players.</b> Football has not become less popular: a lot of it is played without a federal membership.</li>
+<li>CONI's report does not count the CSI (Centro Sportivo Italiano), which covers much amateur and parish football ({post}).</li>
+<li>The FIGC is still the most widespread federation, with more than 10,000 affiliated clubs, and still has the most members in 11 regions ({post}, {sole}).</li>
+</ul>
+<p class="note">Sources: {sole} (27 October 2026), {post}, {fq}, {nome_src}, {fip}, {agi}.</p>''',
+              f'''<p><b>Por primera vez en Italia, la Federación Italiana de Tenis y Pádel (FITP) tiene más federados que la federación de fútbol (FIGC): según el informe de seguimiento del CONI sobre 2024, 1.162.477 frente a 1.123.054.</b> Es un adelantamiento histórico con más de una explicación. Una de ellas es el pádel, que desde 2023 forma parte también del nombre de la federación.</p>
+<h2>Qué es la FITP</h2>
+<p>La FITP es la federación deportiva nacional, reconocida por el Comité Olímpico Italiano (CONI), que gobierna el tenis y el pádel en Italia: afilia a los clubes, expide las licencias, forma a entrenadores y árbitros y organiza campeonatos y torneos. Hasta 2022 se llamaba FIT, Federación Italiana de Tenis. El 16 de octubre de 2022, una asamblea extraordinaria en Florencia aprobó por unanimidad el nuevo nombre, Federación Italiana de Tenis y Pádel, con la nueva federación constituida desde el 1 de enero de 2023 tras el visto bueno del CONI ({nome_src}). El pádel ya era una disciplina de la federación desde 2008 ({post}).</p>
+<p>La preside desde 2001 Angelo Binaghi: cuando llegó a la presidencia tenía unos 130.000 federados ({fq}). Hoy la FITP cuenta con más de 4.000 clubes afiliados, más de 2.500 escuelas de tenis y pádel, unos 14.000 técnicos y 10.000 jueces, y organiza grandes eventos como las ATP Finals de Turín y los Internazionali d'Italia de Roma ({sole}).</p>
+<h2>Las cifras del adelantamiento</h2>
+<p>Los datos proceden del "Monitoraggio CONI-FSN-DSA", el censo de clubes y federados de 48 federaciones, 15 disciplinas asociadas y 14 entes de promoción, adelantado por Il Sole 24 Ore. En 2024 Italia tuvo 6.069.891 federados, la cifra más alta de la historia (+7,7% respecto a 2023).</p>
+{tab}
+<p>En 2025 la FITP subió a 1.254.153 federados ({sole}). El crecimiento se concentra en la última década: en el informe del CONI sobre 2014 la federación tenía menos de 300.000 federados y estaba por detrás del voleibol y el baloncesto; desde entonces ha crecido más de un 300%, mientras que la FIGC lo ha hecho en torno a un 5% ({post}).</p>
+<p>El adelantamiento también se ve en las cuentas. En 2024 el valor de la producción fue de 209 millones de euros para la FITP y 224 para la FIGC; en 2025 la FITP superó los 240 millones frente a los 214 de la federación de fútbol, y para 2026 prevé más de 280 millones. Más del 70% de sus ingresos procede de la organización de eventos internacionales ({sole}).</p>
+<h2>Por qué crecen tanto el tenis y el pádel</h2>
+<ul>
+<li><b>El pádel.</b> Se aprende rápido y basta con ser cuatro en lugar de diez: para muchos ha sustituido al partido de fútbol sala ({sole}).</li>
+<li><b>Los campeones.</b> Sinner, Paolini y Errani han acercado a mucha gente al tenis, pero sobre todo en los últimos años: Il Sole 24 Ore considera sus éxitos más una consecuencia que la causa del crecimiento ({post}).</li>
+<li><b>Las mujeres.</b> El tenis ha sido históricamente más abierto a las mujeres: los hombres son el 59% de los federados de la FITP y el 96% de los de la FIGC ({post}).</li>
+<li><b>El modelo económico.</b> Los ingresos de los grandes eventos se reinvierten en escuelas, formación de técnicos y torneos: los torneos internacionales en Italia han pasado de menos de 30 a unos 90 en 25 años ({post}).</li>
+</ul>
+<h2>Cuánto pesa el pádel</h2>
+<p>El informe no da una cifra separada para el pádel, pero algunos datos muestran su crecimiento. A finales de 2023 había casi 74.000 federados de pádel y 1.682 clubes afiliados ({fip}). Según datos de 2025 del departamento de estudios de la Federación Internacional de Pádel recogidos por AGI, hay 5.321 pistas afiliadas a la FITP, con el Lacio en cabeza (2.014), e Italia es el segundo país del mundo en difusión del pádel ({agi}).</p>
+<h2>Para leer con atención</h2>
+<ul>
+<li><b>Federados no significa practicantes.</b> El fútbol no ha perdido popularidad: se juega muchísimo también sin licencia federativa.</li>
+<li>El informe del CONI no incluye al CSI (Centro Sportivo Italiano), que agrupa mucho fútbol aficionado y de parroquia ({post}).</li>
+<li>La FIGC sigue siendo la federación más extendida, con más de 10.000 clubes afiliados, y sigue siendo la primera en federados en 11 regiones ({post}, {sole}).</li>
+</ul>
+<p class="note">Fuentes: {sole} (27 de octubre de 2026), {post}, {fq}, {nome_src}, {fip}, {agi}.</p>''',
+              f'''<p><b>Pour la première fois en Italie, la Fédération italienne de tennis et de padel (FITP) compte plus de licenciés que la fédération de football (FIGC) : selon le rapport de suivi du CONI sur 2024, 1 162 477 contre 1 123 054.</b> C'est un dépassement historique qui a plusieurs explications. L'une d'elles est le padel, qui fait aussi partie du nom de la fédération depuis 2023.</p>
+<h2>Qu'est-ce que la FITP</h2>
+<p>La FITP est la fédération sportive nationale, reconnue par le Comité olympique italien (CONI), qui gère le tennis et le padel en Italie : elle affilie les clubs, délivre les licences, forme les enseignants et les arbitres et organise championnats et tournois. Jusqu'en 2022, elle s'appelait FIT, Fédération italienne de tennis. Le 16 octobre 2022, une assemblée extraordinaire réunie à Florence a approuvé à l'unanimité le nouveau nom, Fédération italienne de tennis et de padel, la nouvelle fédération étant constituée au 1er janvier 2023 après l'accord du CONI ({nome_src}). Le padel était déjà une discipline de la fédération depuis 2008 ({post}).</p>
+<p>Elle est présidée depuis 2001 par Angelo Binaghi : à son arrivée, elle comptait environ 130 000 licenciés ({fq}). Aujourd'hui, la FITP réunit plus de 4 000 clubs affiliés, plus de 2 500 écoles de tennis et de padel, environ 14 000 enseignants et 10 000 officiels, et organise de grands événements comme les ATP Finals de Turin et les Internazionali d'Italia à Rome ({sole}).</p>
+<h2>Les chiffres du dépassement</h2>
+<p>Les données viennent du « Monitoraggio CONI-FSN-DSA », le recensement des clubs et licenciés de 48 fédérations, 15 disciplines associées et 14 organismes de promotion, dévoilé en avant-première par Il Sole 24 Ore. En 2024, l'Italie comptait 6 069 891 licenciés, un record (+7,7 % par rapport à 2023).</p>
+{tab}
+<p>En 2025, la FITP est montée à 1 254 153 licenciés ({sole}). La croissance s'est surtout faite au cours de la dernière décennie : dans le rapport du CONI sur 2014, la fédération comptait moins de 300 000 licenciés et se trouvait derrière le volley-ball et le basket-ball ; depuis, elle a progressé de plus de 300 %, contre environ 5 % pour la FIGC ({post}).</p>
+<p>Le dépassement se voit aussi dans les comptes. En 2024, la valeur de la production était de 209 millions d'euros pour la FITP et de 224 millions pour la FIGC ; en 2025, la FITP a dépassé les 240 millions contre 214 pour la fédération de football, et elle prévoit plus de 280 millions pour 2026. Plus de 70 % de ses recettes proviennent de l'organisation d'événements internationaux ({sole}).</p>
+<h2>Pourquoi le tennis et le padel progressent autant</h2>
+<ul>
+<li><b>Le padel.</b> Il s'apprend vite et il suffit d'être quatre au lieu de dix : pour beaucoup, il a remplacé le match de foot à cinq ({sole}).</li>
+<li><b>Les champions.</b> Sinner, Paolini et Errani ont attiré beaucoup de monde vers le tennis, mais surtout ces dernières années : Il Sole 24 Ore voit leurs succès davantage comme une conséquence que comme la cause de la croissance ({post}).</li>
+<li><b>Les femmes.</b> Le tennis a toujours été plus ouvert aux femmes : les hommes représentent 59 % des licenciés de la FITP et 96 % de ceux de la FIGC ({post}).</li>
+<li><b>Le modèle économique.</b> Les recettes des grands événements sont réinvesties dans les écoles, la formation des enseignants et les tournois : les tournois internationaux en Italie sont passés de moins de 30 à environ 90 en 25 ans ({post}).</li>
+</ul>
+<h2>Quel poids pour le padel</h2>
+<p>Le rapport ne donne pas de chiffre séparé pour le padel, mais quelques données montrent sa croissance. Fin 2023, on comptait près de 74 000 licenciés de padel et 1 682 clubs affiliés ({fip}). Selon les données 2025 du service d'études de la Fédération internationale de padel reprises par AGI, il y a 5 321 terrains affiliés à la FITP, le Latium en tête (2 014), et l'Italie est le deuxième pays au monde pour la diffusion du padel ({agi}).</p>
+<h2>À lire avec prudence</h2>
+<ul>
+<li><b>Licenciés ne veut pas dire pratiquants.</b> Le football n'est pas devenu moins populaire : on y joue énormément sans licence fédérale.</li>
+<li>Le rapport du CONI ne compte pas le CSI (Centro Sportivo Italiano), qui regroupe une grande partie du football amateur et paroissial ({post}).</li>
+<li>La FIGC reste la fédération la plus implantée, avec plus de 10 000 clubs affiliés, et reste la première en nombre de licenciés dans 11 régions ({post}, {sole}).</li>
+</ul>
+<p class="note">Sources : {sole} (27 octobre 2026), {post}, {fq}, {nome_src}, {fip}, {agi}.</p>''')
+    corpo += box
+    qa = [(L("Cos'è la FITP?", "What is the FITP?", "¿Qué es la FITP?", "Qu'est-ce que la FITP ?"),
+           L("È la Federazione Italiana Tennis e Padel, la federazione sportiva nazionale riconosciuta dal CONI che governa tennis e padel in Italia. Fino al 2022 si chiamava FIT; il nuovo nome è in vigore dal 2023.",
+             "It is the Italian Tennis and Padel Federation, the national sports federation recognised by CONI that governs tennis and padel in Italy. Until 2022 it was called FIT; the new name has applied since 2023.",
+             "Es la Federación Italiana de Tenis y Pádel, la federación deportiva nacional reconocida por el CONI que gobierna el tenis y el pádel en Italia. Hasta 2022 se llamaba FIT; el nuevo nombre está en vigor desde 2023.",
+             "C'est la Fédération italienne de tennis et de padel, la fédération sportive nationale reconnue par le CONI qui gère le tennis et le padel en Italie. Jusqu'en 2022, elle s'appelait FIT ; le nouveau nom s'applique depuis 2023.")),
+          (L("Quanti tesserati ha la FITP?", "How many members does the FITP have?", "¿Cuántos federados tiene la FITP?", "Combien de licenciés compte la FITP ?"),
+           L("1.162.477 nel 2024 secondo il monitoraggio CONI, più dei 1.123.054 della FIGC; nel 2025 è salita a 1.254.153.",
+             "1,162,477 in 2024 according to CONI's monitoring report, more than the FIGC's 1,123,054; in 2025 it rose to 1,254,153.",
+             "1.162.477 en 2024 según el informe del CONI, más que los 1.123.054 de la FIGC; en 2025 subió a 1.254.153.",
+             "1 162 477 en 2024 selon le rapport du CONI, plus que les 1 123 054 de la FIGC ; en 2025, elle est montée à 1 254 153.")),
+          (L("Il padel fa parte della FITP?", "Is padel part of the FITP?", "¿El pádel forma parte de la FITP?", "Le padel fait-il partie de la FITP ?"),
+           L("Sì: è una disciplina della federazione dal 2008 e dal 2023 è anche nel nome. I tesserati padel non sono indicati separatamente nel rapporto CONI.",
+             "Yes: it has been one of the federation's disciplines since 2008 and has been in its name since 2023. Padel members are not shown separately in CONI's report.",
+             "Sí: es una disciplina de la federación desde 2008 y desde 2023 también forma parte de su nombre. Los federados de pádel no aparecen por separado en el informe del CONI.",
+             "Oui : c'est une discipline de la fédération depuis 2008 et elle figure dans son nom depuis 2023. Les licenciés de padel n'apparaissent pas séparément dans le rapport du CONI.")),
+          (L("In Italia si gioca più a tennis e padel che a calcio?", "Do more people in Italy play tennis and padel than football?", "¿En Italia se juega más al tenis y al pádel que al fútbol?", "En Italie, joue-t-on plus au tennis et au padel qu'au football ?"),
+           L("Non necessariamente: il dato riguarda i tesserati delle federazioni. Il calcio si gioca molto anche senza tessera e il rapporto non conta il CSI, che raccoglie tanta attività amatoriale.",
+             "Not necessarily: the figure concerns federation members. A lot of football is played without a membership, and the report does not count the CSI, which covers much amateur activity.",
+             "No necesariamente: la cifra se refiere a los federados. El fútbol se juega mucho sin licencia y el informe no incluye al CSI, que agrupa mucha actividad aficionada.",
+             "Pas forcément : le chiffre concerne les licenciés des fédérations. On joue beaucoup au football sans licence et le rapport ne compte pas le CSI, qui regroupe une grande partie de l'activité amateur."))]
+    faq_htm, faq_ld = faq(qa)
+    corpo += faq_htm
+    titolo = L("La FITP supera la FIGC: tennis e padel hanno più tesserati del calcio", "The FITP overtakes the FIGC: tennis and padel now have more members than football",
+               "La FITP supera a la FIGC: tenis y pádel ya tienen más federados que el fútbol", "La FITP dépasse la FIGC : le tennis et le padel comptent plus de licenciés que le football")
+    scrivi_articolo(slug, titolo + " | PadelMetrix",
+                    L("Cos'è la FITP, la Federazione Italiana Tennis e Padel, e come ha superato la Federcalcio per tesserati: numeri CONI 2024, ricavi, ruolo del padel e limiti del confronto.",
+                      "What the FITP, the Italian Tennis and Padel Federation, is and how it overtook the football federation in members: CONI 2024 figures, revenue, padel's role and the limits of the comparison.",
+                      "Qué es la FITP, la Federación Italiana de Tenis y Pádel, y cómo superó a la federación de fútbol en federados: cifras CONI 2024, ingresos, papel del pádel y límites de la comparación.",
+                      "Ce qu'est la FITP, la Fédération italienne de tennis et de padel, et comment elle a dépassé la fédération de football en licenciés : chiffres CONI 2024, recettes, rôle du padel et limites de la comparaison."),
+                    titolo, L("FITP e FIGC", "FITP and FIGC", "FITP y FIGC", "FITP et FIGC"), corpo, ld_extra=[faq_ld])
+    return slug, titolo, L("Cos'è la FITP e i numeri del sorpasso sulla Federcalcio, con il ruolo del padel.", "What the FITP is and the numbers behind overtaking football, including padel's role.",
+                           "Qué es la FITP y las cifras del adelantamiento a la federación de fútbol, con el papel del pádel.", "Ce qu'est la FITP et les chiffres du dépassement du football, avec le rôle du padel.")
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -1323,7 +1494,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
