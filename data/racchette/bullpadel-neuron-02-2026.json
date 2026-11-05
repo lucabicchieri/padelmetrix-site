@@ -47,7 +47,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Bullpadel+Neuron+02+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0FPT5S2P7"
       },
       {
         "nome": "PadelMarket",
