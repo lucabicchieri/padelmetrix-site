@@ -1,0 +1,24 @@
+name: Amazon Creators API test
+on:
+  workflow_dispatch:
+    inputs:
+      asins:
+        description: "ASIN separati da spazio"
+        default: "B0FPT5S2P7 B0FPTM52HS"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Interroga la Creators API
+        env:
+          CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+          CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
+          CREATORS_VERSION: ${{ secrets.CREATORS_VERSION }}
+        run: python3 scripts/amazon/creators.py ${{ github.event.inputs.asins }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: risposta-amazon
+          path: amazon-out/
+          if-no-files-found: ignore
