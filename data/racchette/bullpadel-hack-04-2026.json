@@ -58,7 +58,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Bullpadel+Hack+04+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0FPTM52HS"
       },
       {
         "nome": "PadelPROShop",

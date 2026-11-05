@@ -61,6 +61,8 @@ def store(s):
     cls = "btn lime" if s.get("amazon") else "btn"
     rel = "sponsored nofollow noopener" if s.get("amazon") else "nofollow noopener"
     u = s["url"]
+    if s.get("amazon") and s.get("asin") and S.lang() == "it":
+        u = "https://www.amazon.it/dp/" + s["asin"]
     if s.get("amazon"):
         u = u.replace("www.amazon.it", AMAZON[S.lang()])
         tag = AMAZON_TAG[S.lang()]
