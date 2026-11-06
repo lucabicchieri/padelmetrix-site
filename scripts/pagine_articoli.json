@@ -1,5 +1,50 @@
 [
 {
+"path": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
+"alt": {
+"it": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
+"en": "/en/articles/how-long-does-a-padel-racket-last/",
+"es": "/es/articulos/cuanto-dura-una-pala-de-padel/",
+"fr": "/fr/articles/combien-de-temps-dure-une-raquette-de-padel/"
+}
+},
+{
+"path": "/it/articoli/carbonio-3k-12k-18k-racchetta-padel/",
+"alt": {
+"it": "/it/articoli/carbonio-3k-12k-18k-racchetta-padel/",
+"en": "/en/articles/padel-racket-carbon-3k-12k-18k-explained/",
+"es": "/es/articulos/carbono-3k-12k-18k-pala-padel/",
+"fr": "/fr/articles/carbone-3k-12k-18k-raquette-padel/"
+}
+},
+{
+"path": "/it/articoli/peso-racchetta-padel-quale-scegliere/",
+"alt": {
+"it": "/it/articoli/peso-racchetta-padel-quale-scegliere/",
+"en": "/en/articles/padel-racket-weight-how-heavy/",
+"es": "/es/articulos/peso-pala-padel-cual-elegir/",
+"fr": "/fr/articles/poids-raquette-padel-lequel-choisir/"
+}
+},
+{
+"path": "/it/articoli/padel-over-50-racchetta-consigli/",
+"alt": {
+"it": "/it/articoli/padel-over-50-racchetta-consigli/",
+"en": "/en/articles/padel-over-50-racket-and-tips/",
+"es": "/es/articulos/padel-mayores-de-50-pala-consejos/",
+"fr": "/fr/articles/padel-apres-50-ans-raquette-conseils/"
+}
+},
+{
+"path": "/it/articoli/scarpe-padel-come-sceglierle/",
+"alt": {
+"it": "/it/articoli/scarpe-padel-come-sceglierle/",
+"en": "/en/articles/padel-shoes-how-to-choose/",
+"es": "/es/articulos/zapatillas-padel-como-elegirlas/",
+"fr": "/fr/articles/chaussures-padel-comment-choisir/"
+}
+},
+{
 "path": "/it/articoli/fitp-supera-figc-tesserati-tennis-padel/",
 "alt": {
 "it": "/it/articoli/fitp-supera-figc-tesserati-tennis-padel/",
@@ -123,6 +168,51 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/how-long-does-a-padel-racket-last/",
+"alt": {
+"it": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
+"en": "/en/articles/how-long-does-a-padel-racket-last/",
+"es": "/es/articulos/cuanto-dura-una-pala-de-padel/",
+"fr": "/fr/articles/combien-de-temps-dure-une-raquette-de-padel/"
+}
+},
+{
+"path": "/en/articles/padel-racket-carbon-3k-12k-18k-explained/",
+"alt": {
+"it": "/it/articoli/carbonio-3k-12k-18k-racchetta-padel/",
+"en": "/en/articles/padel-racket-carbon-3k-12k-18k-explained/",
+"es": "/es/articulos/carbono-3k-12k-18k-pala-padel/",
+"fr": "/fr/articles/carbone-3k-12k-18k-raquette-padel/"
+}
+},
+{
+"path": "/en/articles/padel-racket-weight-how-heavy/",
+"alt": {
+"it": "/it/articoli/peso-racchetta-padel-quale-scegliere/",
+"en": "/en/articles/padel-racket-weight-how-heavy/",
+"es": "/es/articulos/peso-pala-padel-cual-elegir/",
+"fr": "/fr/articles/poids-raquette-padel-lequel-choisir/"
+}
+},
+{
+"path": "/en/articles/padel-over-50-racket-and-tips/",
+"alt": {
+"it": "/it/articoli/padel-over-50-racchetta-consigli/",
+"en": "/en/articles/padel-over-50-racket-and-tips/",
+"es": "/es/articulos/padel-mayores-de-50-pala-consejos/",
+"fr": "/fr/articles/padel-apres-50-ans-raquette-conseils/"
+}
+},
+{
+"path": "/en/articles/padel-shoes-how-to-choose/",
+"alt": {
+"it": "/it/articoli/scarpe-padel-come-sceglierle/",
+"en": "/en/articles/padel-shoes-how-to-choose/",
+"es": "/es/articulos/zapatillas-padel-como-elegirlas/",
+"fr": "/fr/articles/chaussures-padel-comment-choisir/"
 }
 },
 {
@@ -252,6 +342,51 @@
 }
 },
 {
+"path": "/es/articulos/cuanto-dura-una-pala-de-padel/",
+"alt": {
+"it": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
+"en": "/en/articles/how-long-does-a-padel-racket-last/",
+"es": "/es/articulos/cuanto-dura-una-pala-de-padel/",
+"fr": "/fr/articles/combien-de-temps-dure-une-raquette-de-padel/"
+}
+},
+{
+"path": "/es/articulos/carbono-3k-12k-18k-pala-padel/",
+"alt": {
+"it": "/it/articoli/carbonio-3k-12k-18k-racchetta-padel/",
+"en": "/en/articles/padel-racket-carbon-3k-12k-18k-explained/",
+"es": "/es/articulos/carbono-3k-12k-18k-pala-padel/",
+"fr": "/fr/articles/carbone-3k-12k-18k-raquette-padel/"
+}
+},
+{
+"path": "/es/articulos/peso-pala-padel-cual-elegir/",
+"alt": {
+"it": "/it/articoli/peso-racchetta-padel-quale-scegliere/",
+"en": "/en/articles/padel-racket-weight-how-heavy/",
+"es": "/es/articulos/peso-pala-padel-cual-elegir/",
+"fr": "/fr/articles/poids-raquette-padel-lequel-choisir/"
+}
+},
+{
+"path": "/es/articulos/padel-mayores-de-50-pala-consejos/",
+"alt": {
+"it": "/it/articoli/padel-over-50-racchetta-consigli/",
+"en": "/en/articles/padel-over-50-racket-and-tips/",
+"es": "/es/articulos/padel-mayores-de-50-pala-consejos/",
+"fr": "/fr/articles/padel-apres-50-ans-raquette-conseils/"
+}
+},
+{
+"path": "/es/articulos/zapatillas-padel-como-elegirlas/",
+"alt": {
+"it": "/it/articoli/scarpe-padel-come-sceglierle/",
+"en": "/en/articles/padel-shoes-how-to-choose/",
+"es": "/es/articulos/zapatillas-padel-como-elegirlas/",
+"fr": "/fr/articles/chaussures-padel-comment-choisir/"
+}
+},
+{
 "path": "/es/articulos/fitp-supera-figc-federados-tenis-padel/",
 "alt": {
 "it": "/it/articoli/fitp-supera-figc-tesserati-tennis-padel/",
@@ -375,6 +510,51 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/combien-de-temps-dure-une-raquette-de-padel/",
+"alt": {
+"it": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
+"en": "/en/articles/how-long-does-a-padel-racket-last/",
+"es": "/es/articulos/cuanto-dura-una-pala-de-padel/",
+"fr": "/fr/articles/combien-de-temps-dure-une-raquette-de-padel/"
+}
+},
+{
+"path": "/fr/articles/carbone-3k-12k-18k-raquette-padel/",
+"alt": {
+"it": "/it/articoli/carbonio-3k-12k-18k-racchetta-padel/",
+"en": "/en/articles/padel-racket-carbon-3k-12k-18k-explained/",
+"es": "/es/articulos/carbono-3k-12k-18k-pala-padel/",
+"fr": "/fr/articles/carbone-3k-12k-18k-raquette-padel/"
+}
+},
+{
+"path": "/fr/articles/poids-raquette-padel-lequel-choisir/",
+"alt": {
+"it": "/it/articoli/peso-racchetta-padel-quale-scegliere/",
+"en": "/en/articles/padel-racket-weight-how-heavy/",
+"es": "/es/articulos/peso-pala-padel-cual-elegir/",
+"fr": "/fr/articles/poids-raquette-padel-lequel-choisir/"
+}
+},
+{
+"path": "/fr/articles/padel-apres-50-ans-raquette-conseils/",
+"alt": {
+"it": "/it/articoli/padel-over-50-racchetta-consigli/",
+"en": "/en/articles/padel-over-50-racket-and-tips/",
+"es": "/es/articulos/padel-mayores-de-50-pala-consejos/",
+"fr": "/fr/articles/padel-apres-50-ans-raquette-conseils/"
+}
+},
+{
+"path": "/fr/articles/chaussures-padel-comment-choisir/",
+"alt": {
+"it": "/it/articoli/scarpe-padel-come-sceglierle/",
+"en": "/en/articles/padel-shoes-how-to-choose/",
+"es": "/es/articulos/zapatillas-padel-como-elegirlas/",
+"fr": "/fr/articles/chaussures-padel-comment-choisir/"
 }
 },
 {
