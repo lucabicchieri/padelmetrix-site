@@ -1465,6 +1465,660 @@ def fitp_sorpasso(db):
                            "Qué es la FITP y las cifras del adelantamiento a la federación de fútbol, con el papel del pádel.", "Ce qu'est la FITP et les chiffres du dépassement du football, avec le rôle du padel.")
 
 
+# ---------------------------------------------------------------- Cinque guide pratiche (novembre 2026)
+G5 = {
+    "durata": ("quanto-dura-racchetta-padel-quando-cambiarla", "how-long-does-a-padel-racket-last", "cuanto-dura-una-pala-de-padel", "combien-de-temps-dure-une-raquette-de-padel"),
+    "carbonio": ("carbonio-3k-12k-18k-racchetta-padel", "padel-racket-carbon-3k-12k-18k-explained", "carbono-3k-12k-18k-pala-padel", "carbone-3k-12k-18k-raquette-padel"),
+    "peso": ("peso-racchetta-padel-quale-scegliere", "padel-racket-weight-how-heavy", "peso-pala-padel-cual-elegir", "poids-raquette-padel-lequel-choisir"),
+    "over50": ("padel-over-50-racchetta-consigli", "padel-over-50-racket-and-tips", "padel-mayores-de-50-pala-consejos", "padel-apres-50-ans-raquette-conseils"),
+    "scarpe": ("scarpe-padel-come-sceglierle", "padel-shoes-how-to-choose", "zapatillas-padel-como-elegirlas", "chaussures-padel-comment-choisir"),
+}
+for _k, (_it, _en, _es, _fr) in G5.items():
+    S.SLUG[_it] = (_en, _es)
+    S.SLUG_FR[_it] = _fr
+    DATE_ART[_it] = "2026-11-06"
+
+F5 = {
+    "speed": ("PadelSpeed", "https://padelspeed.com/blogs/news/how-often-should-i-change-my-padel-racket"),
+    "fyi": ("padel.fyi", "https://www.padel.fyi/articles/how-long-do-padel-rackets-last/"),
+    "pps_k": ("PadelPROShop", "https://padelproshop.com/en/blogs/blog/tipos-palas-carbono-3k-12k-18k"),
+    "pps_w": ("PadelPROShop", "https://padelproshop.com/en/blogs/blog/how-to-choose-the-ideal-weight-of-a-padel-racket"),
+    "castillo": ("Castillo-Lozano, Rev. Andal. Med. Deporte 2015", "https://www.elsevier.es/es-revista-revista-andaluza-medicina-del-deporte-284-articulo-epidemiology-prevention-strategies-for-musculoskeletal-S1888754615000969"),
+    "sadok": ("Sadok et al., Quality in Sport 2026", "https://apcz.umk.pl/QS/article/view/69884"),
+    "shop": ("Padelshop", "https://padelshop.com/blogs/padel-tips/which-sole-should-you-choose-for-padel-shoes"),
+}
+
+
+def _f5(k):
+    return fonte(F5[k][1], F5[k][0])
+
+
+def _pmid(p):
+    n = [float(x.replace(",", ".")) for x in _re.findall(r"\d{3}(?:[.,]\d)?", p or "")]
+    n = [x for x in n if 250 <= x <= 400][:2]
+    return sum(n) / len(n) if n else None
+
+
+def _g(x):
+    return f"{x:.0f}".replace(".", ",")
+
+
+def _elenco_r(rs):
+    out = []
+    for r in rs:
+        bits = [r["peso"] or "", FORMA(r["forma"]).lower() if r.get("forma") else "", LIVN(r["livello"]).lower() if r.get("livello") else ""]
+        if r.get("prezzo"):
+            bits.append(euro(r["prezzo"]))
+        out.append(f'<li><a href="{url_r(r)}">{e(r["titolo"])}</a> — {e(" · ".join(b for b in bits if b))}</li>')
+    return "<ul>" + "".join(out) + "</ul>"
+
+
+def _box5(titolo, testo, btn, href):
+    return (f'<div class="box" style="border:2px solid #C6F432;border-radius:12px;padding:20px 24px;margin:28px 0;background:#F4FBE3"><b>{titolo}</b><br>{testo}'
+            f'<br><a class="btn" style="margin-top:12px;display:inline-block" href="{href}">{btn}</a></div>')
+
+
+def _pubblica5(chiave, titolo, desc, crumb, corpo, qa, card, items=None):
+    slug = G5[chiave][0]
+    faq_htm, faq_ld = faq(qa)
+    if items:
+        RACCHETTE_ARTICOLO[slug] = [r["slug"] for r in items]
+    scrivi_articolo(slug, titolo + " | PadelMetrix", desc, titolo, crumb, corpo + faq_htm, items=items, ld_extra=[faq_ld])
+    return slug, titolo, card
+
+
+def art_durata(db):
+    epi, sel = P("guide", "racchetta-padel-epicondilite"), P("selettore")
+    sp, fy = _f5("speed"), _f5("fyi")
+    tab = ('<div class="tablebox"><table class="tab"><thead><tr><th>' + L("Quanto giochi", "How often you play", "Cuánto juegas", "Fréquence de jeu") + '</th><th>'
+           + L("Durata indicativa", "Rough lifespan", "Duración orientativa", "Durée indicative") + '</th></tr></thead><tbody>'
+           + "".join(f"<tr><td>{a}</td><td>{b}</td></tr>" for a, b in [
+               (L("Una volta a settimana o meno", "Once a week or less", "Una vez por semana o menos", "Une fois par semaine ou moins"), L("2–3 anni", "2–3 years", "2–3 años", "2 à 3 ans")),
+               (L("2–3 volte a settimana", "2–3 times a week", "2–3 veces por semana", "2 à 3 fois par semaine"), L("12–18 mesi", "12–18 months", "12–18 meses", "12 à 18 mois")),
+               (L("Agonisti o quasi tutti i giorni", "Competitive or almost daily", "Competición o casi a diario", "Compétition ou presque tous les jours"), L("6–12 mesi", "6–12 months", "6–12 meses", "6 à 12 mois"))])
+           + "</tbody></table></div>")
+    box = _box5(L("Hai deciso di cambiarla?", "Decided to replace it?", "¿Has decidido cambiarla?", "Vous avez décidé de la changer ?"),
+                L("Il quiz ti propone le 3 racchette più adatte al tuo livello e al tuo gioco.", "The quiz suggests the 3 rackets that best fit your level and game.", "El test te propone las 3 palas más adecuadas a tu nivel y tu juego.", "Le quiz vous propose les 3 raquettes les plus adaptées à votre niveau et à votre jeu."),
+                L("Trova la tua racchetta", "Find your racket", "Encuentra tu pala", "Trouve ta raquette"), sel)
+    corpo = L(f'''<p><b>Una racchetta da padel dura in media da 6 mesi a 3 anni: dipende soprattutto da quanto giochi.</b> Prima di rompersi, perde le sue qualità: la gomma interna si comprime, la palla esce meno e il braccio riceve più vibrazioni. Ecco come capire quando è il momento di cambiarla.</p>
+<h2>Quanto dura, in base a quanto giochi</h2>{tab}
+<p>Sono indicazioni orientative, non scadenze ({sp}). Un'altra stima diffusa parla di circa 100 partite per chi gioca 2–3 volte a settimana ({fy}). Chi colpisce forte, soprattutto con racchette dalla gomma morbida, la consuma prima.</p>
+<h2>I segnali che è ora di cambiarla</h2>
+<ul><li><b>La palla "muore":</b> meno potenza e meno controllo, un tocco sordo all'impatto. È il primo segnale, e arriva prima dei danni visibili.</li>
+<li><b>Zone morbide o irregolari</b> sul piatto: premendo con il pollice in punti diversi, alcune cedono più di altre.</li>
+<li><b>Crepe sul telaio o sulla faccia:</b> una racchetta con il telaio incrinato si comporta in modo imprevedibile.</li>
+<li><b>Più vibrazioni del solito</b> o rumori strani all'impatto.</li>
+<li><b>Dolore nuovo a gomito, polso o spalla</b> senza altri motivi: una racchetta usurata trasmette più vibrazioni ({sp}).</li></ul>
+<p>Un trucco: se puoi, confronta la tua racchetta con una nuova dello stesso modello. La differenza di rimbalzo si sente subito ({fy}).</p>
+<h2>Cosa la fa invecchiare prima</h2>
+<ul><li><b>Il caldo:</b> mai lasciarla in macchina d'estate. Meglio evitare temperature sopra i 40 °C ({fy}).</li>
+<li><b>L'umidità:</b> la gomma assorbe acqua, si gonfia e poi si ritira asciugandosi.</li>
+<li><b>I colpi contro pareti, suolo e racchetta del compagno</b>, e gli sfoghi di rabbia.</li>
+<li><b>Il peso sopra:</b> nel borsone, non appoggiarci oggetti pesanti.</li></ul>
+<h2>Come farla durare di più</h2>
+<ul><li>Tienila in una custodia imbottita o termica, in un luogo asciutto.</li>
+<li>Usa il paracolpi sul bordo, se ti aiuta a proteggere il telaio.</li>
+<li>Cambia spesso l'overgrip: non allunga la vita della racchetta, ma mantiene presa e sensazioni.</li>
+<li>Le crepe superficiali si possono riparare, ma la racchetta non tornerà come nuova.</li></ul>
+<p>Se hai già dolore al gomito, non aspettare che la racchetta sia distrutta: leggi la guida alle <a href="{epi}">racchette per l'epicondilite</a>.</p>{box}
+<p class="note">Fonti: {sp}, {fy}. I tempi sono indicativi e cambiano con materiali, stile di gioco e cura.</p>''',
+              f'''<p><b>A padel racket lasts on average from 6 months to 3 years, depending mostly on how much you play.</b> Before it breaks, it loses its qualities: the inner rubber compresses, the ball comes off the face less and your arm takes more vibration. Here is how to tell when it is time to replace it.</p>
+<h2>How long it lasts, by how much you play</h2>{tab}
+<p>These are guidelines, not expiry dates ({sp}). Another common estimate is about 100 sessions for someone playing 2–3 times a week ({fy}). Hard hitters, especially with soft-core rackets, wear them out sooner.</p>
+<h2>Signs it is time for a new one</h2>
+<ul><li><b>The ball feels "dead":</b> less power and control, a dull feel at impact. It is the first sign, and it comes before any visible damage.</li>
+<li><b>Soft or uneven spots</b> on the face: pressing with your thumb in different places, some give more than others.</li>
+<li><b>Cracks in the frame or face:</b> a racket with a cracked frame behaves unpredictably.</li>
+<li><b>More vibration than usual</b> or strange sounds at impact.</li>
+<li><b>New pain in the elbow, wrist or shoulder</b> with no other cause: a worn racket passes on more vibration ({sp}).</li></ul>
+<p>A tip: if you can, compare your racket with a new one of the same model. The difference in bounce is obvious straight away ({fy}).</p>
+<h2>What ages it faster</h2>
+<ul><li><b>Heat:</b> never leave it in the car in summer. Avoid temperatures above 40 °C ({fy}).</li>
+<li><b>Humidity:</b> the rubber absorbs water, swells and then shrinks as it dries.</li>
+<li><b>Hitting walls, the floor or your partner's racket</b>, and taking your frustration out on it.</li>
+<li><b>Weight on top:</b> don't put heavy objects on it in your bag.</li></ul>
+<h2>How to make it last longer</h2>
+<ul><li>Keep it in a padded or thermal cover, somewhere dry.</li>
+<li>Use an edge protector if it helps protect the frame.</li>
+<li>Change the overgrip often: it won't extend the racket's life, but it keeps grip and feel.</li>
+<li>Surface cracks can be repaired, but the racket won't play like new.</li></ul>
+<p>If you already have elbow pain, don't wait for the racket to fall apart: read the guide to <a href="{epi}">rackets for tennis elbow</a>.</p>{box}
+<p class="note">Sources: {sp}, {fy}. Timings are guidelines and vary with materials, playing style and care.</p>''',
+              f'''<p><b>Una pala de pádel dura de media entre 6 meses y 3 años: depende sobre todo de cuánto juegues.</b> Antes de romperse, pierde sus cualidades: la goma interior se comprime, la bola sale menos y el brazo recibe más vibraciones. Así puedes saber cuándo toca cambiarla.</p>
+<h2>Cuánto dura, según cuánto juegues</h2>{tab}
+<p>Son orientaciones, no fechas de caducidad ({sp}). Otra estimación habitual habla de unos 100 partidos para quien juega 2–3 veces por semana ({fy}). Quien pega fuerte, sobre todo con palas de goma blanda, la desgasta antes.</p>
+<h2>Las señales de que hay que cambiarla</h2>
+<ul><li><b>La bola "muere":</b> menos potencia y control, un tacto sordo al impactar. Es la primera señal, y llega antes que los daños visibles.</li>
+<li><b>Zonas blandas o irregulares</b> en la cara: al presionar con el pulgar en distintos puntos, algunos ceden más que otros.</li>
+<li><b>Grietas en el marco o en la cara:</b> una pala con el marco agrietado se comporta de forma imprevisible.</li>
+<li><b>Más vibraciones de lo normal</b> o ruidos extraños al golpear.</li>
+<li><b>Dolor nuevo en codo, muñeca u hombro</b> sin otra causa: una pala desgastada transmite más vibraciones ({sp}).</li></ul>
+<p>Un truco: si puedes, compara tu pala con una nueva del mismo modelo. La diferencia de rebote se nota enseguida ({fy}).</p>
+<h2>Qué la hace envejecer antes</h2>
+<ul><li><b>El calor:</b> nunca la dejes en el coche en verano. Mejor evitar temperaturas por encima de 40 °C ({fy}).</li>
+<li><b>La humedad:</b> la goma absorbe agua, se hincha y luego se contrae al secarse.</li>
+<li><b>Los golpes contra paredes, suelo y la pala del compañero</b>, y los arrebatos de rabia.</li>
+<li><b>El peso encima:</b> en el paletero, no le pongas objetos pesados.</li></ul>
+<h2>Cómo hacer que dure más</h2>
+<ul><li>Guárdala en una funda acolchada o térmica, en un lugar seco.</li>
+<li>Usa protector en el marco si te ayuda a protegerlo.</li>
+<li>Cambia a menudo el overgrip: no alarga la vida de la pala, pero mantiene agarre y sensaciones.</li>
+<li>Las grietas superficiales se pueden reparar, pero la pala no volverá a ser nueva.</li></ul>
+<p>Si ya tienes dolor de codo, no esperes a que la pala esté destrozada: lee la guía de <a href="{epi}">palas para la epicondilitis</a>.</p>{box}
+<p class="note">Fuentes: {sp}, {fy}. Los plazos son orientativos y cambian con materiales, estilo de juego y cuidado.</p>''',
+              f'''<p><b>Une raquette de padel dure en moyenne de 6 mois à 3 ans : cela dépend surtout de la fréquence à laquelle vous jouez.</b> Avant de casser, elle perd ses qualités : la gomme intérieure se tasse, la balle sort moins et le bras reçoit plus de vibrations. Voici comment savoir quand la changer.</p>
+<h2>Combien de temps elle dure, selon votre fréquence de jeu</h2>{tab}
+<p>Ce sont des repères, pas des dates de péremption ({sp}). Une autre estimation courante parle d'environ 100 parties pour qui joue 2 à 3 fois par semaine ({fy}). Les gros frappeurs, surtout avec des raquettes à gomme souple, l'usent plus vite.</p>
+<h2>Les signes qu'il est temps de la changer</h2>
+<ul><li><b>La balle « meurt » :</b> moins de puissance et de contrôle, un toucher sourd à l'impact. C'est le premier signe, et il arrive avant les dégâts visibles.</li>
+<li><b>Des zones molles ou irrégulières</b> sur le tamis : en appuyant avec le pouce à différents endroits, certains cèdent plus que d'autres.</li>
+<li><b>Des fissures sur le cadre ou le tamis :</b> une raquette au cadre fissuré se comporte de façon imprévisible.</li>
+<li><b>Plus de vibrations que d'habitude</b> ou des bruits étranges à l'impact.</li>
+<li><b>Une nouvelle douleur au coude, au poignet ou à l'épaule</b> sans autre cause : une raquette usée transmet plus de vibrations ({sp}).</li></ul>
+<p>Une astuce : si possible, comparez votre raquette avec une neuve du même modèle. La différence de rebond se sent tout de suite ({fy}).</p>
+<h2>Ce qui la fait vieillir plus vite</h2>
+<ul><li><b>La chaleur :</b> ne la laissez jamais dans la voiture en été. Évitez les températures au-dessus de 40 °C ({fy}).</li>
+<li><b>L'humidité :</b> la gomme absorbe l'eau, gonfle puis se rétracte en séchant.</li>
+<li><b>Les chocs contre les murs, le sol et la raquette du partenaire</b>, et les accès de colère.</li>
+<li><b>Le poids posé dessus :</b> dans le sac, n'y posez pas d'objets lourds.</li></ul>
+<h2>Comment la faire durer plus longtemps</h2>
+<ul><li>Rangez-la dans une housse rembourrée ou isotherme, dans un endroit sec.</li>
+<li>Utilisez une protection de cadre si elle vous aide à le protéger.</li>
+<li>Changez souvent le surgrip : cela n'allonge pas la vie de la raquette, mais garde l'adhérence et les sensations.</li>
+<li>Les fissures superficielles se réparent, mais la raquette ne redeviendra pas neuve.</li></ul>
+<p>Si vous avez déjà mal au coude, n'attendez pas que la raquette soit cassée : lisez le guide des <a href="{epi}">raquettes pour l'épicondylite</a>.</p>{box}
+<p class="note">Sources : {sp}, {fy}. Les durées sont indicatives et varient selon les matériaux, le style de jeu et l'entretien.</p>''')
+    qa = [(L("Quanto dura una racchetta da padel?", "How long does a padel racket last?", "¿Cuánto dura una pala de pádel?", "Combien de temps dure une raquette de padel ?"),
+           L("Da 6 mesi a 3 anni: circa 2–3 anni giocando una volta a settimana, 12–18 mesi giocando 2–3 volte a settimana, 6–12 mesi per chi gioca quasi tutti i giorni.",
+             "From 6 months to 3 years: about 2–3 years playing once a week, 12–18 months playing 2–3 times a week, 6–12 months for those who play almost every day.",
+             "De 6 meses a 3 años: unos 2–3 años jugando una vez por semana, 12–18 meses jugando 2–3 veces por semana y 6–12 meses para quien juega casi a diario.",
+             "De 6 mois à 3 ans : environ 2 à 3 ans en jouant une fois par semaine, 12 à 18 mois en jouant 2 à 3 fois par semaine, 6 à 12 mois pour qui joue presque tous les jours.")),
+          (L("Come capisco se la racchetta è da cambiare?", "How do I know if my racket needs replacing?", "¿Cómo sé si tengo que cambiar la pala?", "Comment savoir si ma raquette est à changer ?"),
+           L("La palla esce meno e il tocco è sordo, ci sono zone morbide sul piatto, crepe, più vibrazioni o un nuovo dolore al braccio.",
+             "The ball comes off the face less and feels dull, there are soft spots on the face, cracks, more vibration or new arm pain.",
+             "La bola sale menos y el tacto es sordo, hay zonas blandas en la cara, grietas, más vibraciones o un dolor nuevo en el brazo.",
+             "La balle sort moins et le toucher est sourd, il y a des zones molles sur le tamis, des fissures, plus de vibrations ou une nouvelle douleur au bras.")),
+          (L("Il caldo rovina la racchetta?", "Does heat damage a racket?", "¿El calor estropea la pala?", "La chaleur abîme-t-elle la raquette ?"),
+           L("Sì: le alte temperature, per esempio in auto d'estate, accelerano il degrado della gomma interna.",
+             "Yes: high temperatures, such as in a car in summer, speed up the breakdown of the inner rubber.",
+             "Sí: las altas temperaturas, por ejemplo en el coche en verano, aceleran el deterioro de la goma interior.",
+             "Oui : les fortes chaleurs, par exemple dans une voiture en été, accélèrent la dégradation de la gomme intérieure."))]
+    titolo = L("Quanto dura una racchetta da padel e quando cambiarla", "How long does a padel racket last and when to replace it",
+               "Cuánto dura una pala de pádel y cuándo cambiarla", "Combien de temps dure une raquette de padel et quand la changer")
+    return _pubblica5("durata", titolo,
+                      L("Quanto dura una racchetta da padel in base a quanto giochi, i segnali che è da cambiare e come farla durare di più.",
+                        "How long a padel racket lasts depending on how much you play, the signs it needs replacing and how to make it last longer.",
+                        "Cuánto dura una pala de pádel según cuánto juegues, las señales de que hay que cambiarla y cómo hacer que dure más.",
+                        "Combien de temps dure une raquette de padel selon votre fréquence de jeu, les signes qu'elle est à changer et comment la faire durer."),
+                      L("Durata racchetta", "Racket lifespan", "Duración de la pala", "Durée de la raquette"), corpo, qa,
+                      L("Da 6 mesi a 3 anni: i segnali che è ora di cambiarla.", "From 6 months to 3 years: the signs it's time for a new one.",
+                        "De 6 meses a 3 años: las señales de que toca cambiarla.", "De 6 mois à 3 ans : les signes qu'il faut la changer."))
+
+
+def art_carbonio(db):
+    ad = [r for r in db if r["categoria"] != "junior"]
+    gruppi = {}
+    for r in ad:
+        sup = r.get("superficie") or ""
+        ks = set(_re.findall(r"(\d{1,2})\s?K\b", sup, _re.I))
+        for k in ks:
+            gruppi.setdefault(k + "K", []).append(r)
+        if not ks and _re.search(r"vetro|glass", sup, _re.I):
+            gruppi.setdefault("vetro", []).append(r)
+    righe = []
+    for k in ("3K", "12K", "18K", "24K", "vetro"):
+        rs = gruppi.get(k, [])
+        pz = sorted(r["prezzo"] for r in rs if r.get("prezzo"))
+        med = euro(pz[len(pz) // 2]) if pz else "—"
+        avz = sum(1 for r in rs if r.get("livello") in ("avanzato", "professionale"))
+        nome = L("Fibra di vetro (senza carbonio dichiarato)", "Fiberglass (no carbon stated)", "Fibra de vidrio (sin carbono declarado)", "Fibre de verre (sans carbone déclaré)") if k == "vetro" else L(f"Carbonio {k}", f"{k} carbon", f"Carbono {k}", f"Carbone {k}")
+        righe.append((nome, len(rs), med, f"{round(100 * avz / len(rs))} %" if (rs and S.lang() == "fr") else (f"{round(100 * avz / len(rs))}%" if rs else "—")))
+    tab = ('<div class="tablebox"><table class="tab"><thead><tr><th>' + L("Faccia", "Face", "Cara", "Tamis") + '</th><th>' + L("Modelli", "Models", "Modelos", "Modèles") + '</th><th>'
+           + L("Prezzo di listino mediano", "Median list price", "Precio de catálogo mediano", "Prix catalogue médian") + '</th><th>' + L("Per avanzati o pro", "For advanced or pro", "Para avanzados o pro", "Pour avancés ou pros") + '</th></tr></thead><tbody>'
+           + "".join(f"<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td></tr>" for a, b, c, d in righe) + "</tbody></table></div>")
+    n3, n12, n18 = (len(gruppi.get(k, [])) for k in ("3K", "12K", "18K"))
+    pk, gl = _f5("pps_k"), P("glossario", "carbonio-3k-12k-18k")
+    cmp = P("confronta")
+    box = _box5(L("Confronta i materiali sul campo", "Compare materials side by side", "Compara los materiales", "Comparez les matériaux"),
+                L("Metti fianco a fianco fino a 4 racchette e guarda subito faccia, gomma e prezzo.", "Put up to 4 rackets side by side and see face, core and price at a glance.", "Pon hasta 4 palas una al lado de otra y mira de un vistazo cara, goma y precio.", "Mettez jusqu'à 4 raquettes côte à côte et voyez d'un coup d'œil tamis, gomme et prix."),
+                L("Confronta le racchette", "Compare rackets", "Comparar palas", "Comparer les raquettes"), cmp)
+    corpo = L(f'''<p><b>3K, 12K, 18K indicano quanti filamenti di carbonio compongono ogni fascio del tessuto: 3.000, 12.000, 18.000. Non è una classifica di qualità: un numero più alto non vuol dire racchetta migliore, né più cara.</b> Il tocco di una racchetta dipende anche da gomma, numero di strati, resina e telaio.</p>
+<h2>Cosa significa la K</h2>
+<p>Le facce in carbonio sono fatte di un tessuto di fasci di filamenti. La K indica le migliaia di filamenti per fascio: con 3K i fasci sono sottili e il tessuto è fitto, con 12K e 18K i fasci sono più grossi ({pk}). Cambia la trama, e con essa un po' la rigidità e le sensazioni, ma il valore da solo non dice come si comporterà la racchetta (vedi anche il <a href="{gl}">glossario</a>).</p>
+<h2>Le differenze che si leggono di solito</h2>
+<ul><li><b>3K:</b> tocco più secco e diretto, molto controllo; la potenza dipende di più dal tuo braccio.</li>
+<li><b>12K:</b> compromesso tra fermezza e comfort, adatto a giocatori polivalenti.</li>
+<li><b>18K:</b> risposta più solida ed esplosiva quando acceleri, più vibrazioni fuori dal punto dolce.</li></ul>
+<p>Sono descrizioni qualitative dei negozi, senza misure di laboratorio: lo stesso articolo che le propone ricorda che "più filamenti" non significa "migliore" e che conta molto la costruzione complessiva ({pk}).</p>
+<h2>Cosa dicono i dati del nostro database</h2>
+<p>Abbiamo contato il tipo di carbonio dichiarato sulle {len(ad)} racchette adulte del database. Il 3K è il più diffuso ({n3} modelli), seguito da 12K ({n12}) e 18K ({n18}).</p>
+{tab}
+<p>Due cose saltano all'occhio. Primo, i prezzi mediani di 3K, 12K e 18K sono molto vicini: il tipo di carbonio non spiega il prezzo. Secondo, la vera differenza è tra carbonio e fibra di vetro: le facce in vetro costano molto meno e sono pensate soprattutto per chi inizia.</p>
+<h2>Quale scegliere</h2>
+<ul><li><b>Inizi o hai problemi al braccio:</b> fibra di vetro o carbonio con gomma morbida; il tipo di K conta poco.</li>
+<li><b>Giochi di controllo e piazzamento:</b> spesso ti troverai bene con un 3K.</li>
+<li><b>Giochi polivalente o d'attacco:</b> guarda 12K e 18K, ma prova sempre forma, peso e bilanciamento prima del numero.</li></ul>{box}
+<p class="note">Dati: database PadelMetrix, materiali dichiarati da produttori e rivenditori; prezzi di listino dove indicati. Le caratteristiche qualitative vengono da {pk}.</p>''',
+              f'''<p><b>3K, 12K and 18K tell you how many carbon filaments make up each bundle of the weave: 3,000, 12,000, 18,000. It is not a quality ranking: a higher number doesn't mean a better racket, or a more expensive one.</b> How a racket feels also depends on the core, the number of layers, the resin and the frame.</p>
+<h2>What the K means</h2>
+<p>Carbon faces are made of a fabric woven from bundles of filaments. The K is the thousands of filaments per bundle: with 3K the bundles are thin and the weave is tight, with 12K and 18K the bundles are thicker ({pk}). It changes the weave, and with it some of the stiffness and feel, but the number alone doesn't tell you how the racket will play (see also the <a href="{gl}">glossary</a>).</p>
+<h2>The differences you usually read about</h2>
+<ul><li><b>3K:</b> drier, more direct feel, lots of control; power depends more on your arm.</li>
+<li><b>12K:</b> a compromise between firmness and comfort, suited to all-round players.</li>
+<li><b>18K:</b> a more solid, explosive response when you accelerate, more vibration outside the sweet spot.</li></ul>
+<p>These are retailers' qualitative descriptions, without lab measurements: the same article that offers them reminds readers that "more filaments" doesn't mean "better" and that the overall construction matters a lot ({pk}).</p>
+<h2>What our database shows</h2>
+<p>We counted the type of carbon stated for the {len(ad)} adult rackets in the database. 3K is the most common ({n3} models), followed by 12K ({n12}) and 18K ({n18}).</p>
+{tab}
+<p>Two things stand out. First, the median prices of 3K, 12K and 18K are very close: the type of carbon doesn't explain the price. Second, the real difference is between carbon and fiberglass: fiberglass faces cost much less and are aimed mostly at beginners.</p>
+<h2>Which to choose</h2>
+<ul><li><b>You're starting out or have arm problems:</b> fiberglass or carbon with a soft core; the K matters little.</li>
+<li><b>You play a control and placement game:</b> you'll often get on well with 3K.</li>
+<li><b>You play all-round or attacking padel:</b> look at 12K and 18K, but always check shape, weight and balance before the number.</li></ul>{box}
+<p class="note">Data: PadelMetrix database, materials stated by manufacturers and retailers; list prices where given. Qualitative characteristics from {pk}.</p>''',
+              f'''<p><b>3K, 12K y 18K indican cuántos filamentos de carbono forman cada haz del tejido: 3.000, 12.000, 18.000. No es una clasificación de calidad: un número más alto no significa una pala mejor ni más cara.</b> El tacto de una pala depende también de la goma, el número de capas, la resina y el marco.</p>
+<h2>Qué significa la K</h2>
+<p>Las caras de carbono están hechas de un tejido de haces de filamentos. La K indica los miles de filamentos por haz: con 3K los haces son finos y el tejido es tupido; con 12K y 18K los haces son más gruesos ({pk}). Cambia la trama y, con ella, algo de la rigidez y las sensaciones, pero el número por sí solo no dice cómo se comportará la pala (ver también el <a href="{gl}">glosario</a>).</p>
+<h2>Las diferencias que se suelen leer</h2>
+<ul><li><b>3K:</b> tacto más seco y directo, mucho control; la potencia depende más de tu brazo.</li>
+<li><b>12K:</b> equilibrio entre firmeza y comodidad, adecuado para jugadores polivalentes.</li>
+<li><b>18K:</b> respuesta más sólida y explosiva al acelerar, más vibración fuera del punto dulce.</li></ul>
+<p>Son descripciones cualitativas de tiendas, sin mediciones de laboratorio: el mismo artículo que las propone recuerda que "más filamentos" no significa "mejor" y que la construcción global cuenta mucho ({pk}).</p>
+<h2>Qué dicen los datos de nuestra base</h2>
+<p>Hemos contado el tipo de carbono declarado en las {len(ad)} palas de adulto de la base de datos. El 3K es el más frecuente ({n3} modelos), seguido del 12K ({n12}) y el 18K ({n18}).</p>
+{tab}
+<p>Llaman la atención dos cosas. Primero, los precios medianos de 3K, 12K y 18K son muy parecidos: el tipo de carbono no explica el precio. Segundo, la verdadera diferencia está entre carbono y fibra de vidrio: las caras de vidrio cuestan mucho menos y están pensadas sobre todo para quien empieza.</p>
+<h2>Cuál elegir</h2>
+<ul><li><b>Empiezas o tienes problemas en el brazo:</b> fibra de vidrio o carbono con goma blanda; el tipo de K importa poco.</li>
+<li><b>Juegas de control y colocación:</b> a menudo te irá bien un 3K.</li>
+<li><b>Juegas polivalente o de ataque:</b> mira 12K y 18K, pero comprueba siempre forma, peso y balance antes que el número.</li></ul>{box}
+<p class="note">Datos: base de datos PadelMetrix, materiales declarados por fabricantes y tiendas; precios de catálogo donde se indican. Las características cualitativas proceden de {pk}.</p>''',
+              f'''<p><b>3K, 12K et 18K indiquent combien de filaments de carbone composent chaque mèche du tissu : 3 000, 12 000, 18 000. Ce n'est pas un classement de qualité : un chiffre plus élevé ne signifie pas une meilleure raquette, ni une raquette plus chère.</b> Le toucher d'une raquette dépend aussi de la gomme, du nombre de couches, de la résine et du cadre.</p>
+<h2>Ce que signifie le K</h2>
+<p>Les tamis en carbone sont faits d'un tissu de mèches de filaments. Le K indique les milliers de filaments par mèche : en 3K les mèches sont fines et le tissage serré, en 12K et 18K elles sont plus épaisses ({pk}). Cela change le tissage, et avec lui un peu la rigidité et les sensations, mais le chiffre seul ne dit pas comment la raquette se comportera (voir aussi le <a href="{gl}">glossaire</a>).</p>
+<h2>Les différences qu'on lit en général</h2>
+<ul><li><b>3K :</b> toucher plus sec et direct, beaucoup de contrôle ; la puissance dépend davantage de votre bras.</li>
+<li><b>12K :</b> compromis entre fermeté et confort, adapté aux joueurs polyvalents.</li>
+<li><b>18K :</b> réponse plus solide et explosive quand vous accélérez, plus de vibrations hors du sweet spot.</li></ul>
+<p>Ce sont des descriptions qualitatives de revendeurs, sans mesures en laboratoire : l'article même qui les propose rappelle que « plus de filaments » ne veut pas dire « meilleur » et que la construction globale compte beaucoup ({pk}).</p>
+<h2>Ce que disent les données de notre base</h2>
+<p>Nous avons compté le type de carbone déclaré pour les {len(ad)} raquettes adultes de la base. Le 3K est le plus répandu ({n3} modèles), suivi du 12K ({n12}) et du 18K ({n18}).</p>
+{tab}
+<p>Deux choses ressortent. D'abord, les prix médians du 3K, du 12K et du 18K sont très proches : le type de carbone n'explique pas le prix. Ensuite, la vraie différence se fait entre carbone et fibre de verre : les tamis en verre coûtent bien moins cher et visent surtout les débutants.</p>
+<h2>Lequel choisir</h2>
+<ul><li><b>Vous débutez ou avez des problèmes au bras :</b> fibre de verre ou carbone avec gomme souple ; le K compte peu.</li>
+<li><b>Vous jouez contrôle et placement :</b> vous vous sentirez souvent bien avec un 3K.</li>
+<li><b>Vous jouez polyvalent ou en attaque :</b> regardez le 12K et le 18K, mais vérifiez toujours forme, poids et équilibre avant le chiffre.</li></ul>{box}
+<p class="note">Données : base PadelMetrix, matériaux déclarés par les fabricants et les revendeurs ; prix catalogue quand ils sont indiqués. Caractéristiques qualitatives tirées de {pk}.</p>''')
+    qa = [(L("Cosa vuol dire 3K, 12K, 18K in una racchetta da padel?", "What do 3K, 12K and 18K mean on a padel racket?", "¿Qué significa 3K, 12K, 18K en una pala de pádel?", "Que signifient 3K, 12K et 18K sur une raquette de padel ?"),
+           L("Il numero di migliaia di filamenti per fascio del tessuto di carbonio: 3.000, 12.000 o 18.000.", "The thousands of filaments per bundle of the carbon weave: 3,000, 12,000 or 18,000.",
+             "Los miles de filamentos por haz del tejido de carbono: 3.000, 12.000 o 18.000.", "Le nombre de milliers de filaments par mèche du tissu de carbone : 3 000, 12 000 ou 18 000.")),
+          (L("Il carbonio 18K è migliore del 3K?", "Is 18K carbon better than 3K?", "¿El carbono 18K es mejor que el 3K?", "Le carbone 18K est-il meilleur que le 3K ?"),
+           L("No: cambia il tocco, non la qualità. Il comportamento dipende anche da gomma, strati e telaio.", "No: it changes the feel, not the quality. How a racket plays also depends on the core, layers and frame.",
+             "No: cambia el tacto, no la calidad. El comportamiento depende también de la goma, las capas y el marco.", "Non : cela change le toucher, pas la qualité. Le comportement dépend aussi de la gomme, des couches et du cadre.")),
+          (L("Le racchette 18K costano di più?", "Do 18K rackets cost more?", "¿Las palas 18K cuestan más?", "Les raquettes 18K coûtent-elles plus cher ?"),
+           L("Nel nostro database no: i prezzi di listino mediani di 3K, 12K e 18K sono molto vicini. La differenza di prezzo vera è tra carbonio e fibra di vetro.",
+             "Not in our database: the median list prices of 3K, 12K and 18K are very close. The real price gap is between carbon and fiberglass.",
+             "En nuestra base no: los precios de catálogo medianos de 3K, 12K y 18K son muy parecidos. La diferencia real de precio está entre carbono y fibra de vidrio.",
+             "Pas dans notre base : les prix catalogue médians du 3K, du 12K et du 18K sont très proches. Le vrai écart de prix se fait entre carbone et fibre de verre."))]
+    titolo = L("Carbonio 3K, 12K, 18K nelle racchette da padel: cosa cambia davvero", "3K, 12K and 18K carbon in padel rackets: what really changes",
+               "Carbono 3K, 12K y 18K en las palas de pádel: qué cambia de verdad", "Carbone 3K, 12K et 18K dans les raquettes de padel : ce qui change vraiment")
+    return _pubblica5("carbonio", titolo,
+                      L("Cosa significa la K del carbonio nelle racchette da padel, le differenze tra 3K, 12K e 18K e cosa dicono prezzi e livelli del nostro database.",
+                        "What the K in padel racket carbon means, the differences between 3K, 12K and 18K and what prices and levels in our database show.",
+                        "Qué significa la K del carbono en las palas de pádel, las diferencias entre 3K, 12K y 18K y qué dicen precios y niveles de nuestra base.",
+                        "Ce que signifie le K du carbone dans les raquettes de padel, les différences entre 3K, 12K et 18K et ce que montrent prix et niveaux de notre base."),
+                      L("Carbonio 3K, 12K, 18K", "3K, 12K, 18K carbon", "Carbono 3K, 12K, 18K", "Carbone 3K, 12K, 18K"), corpo, qa,
+                      L("Cosa significa la K e perché non è una classifica di qualità.", "What the K means and why it isn't a quality ranking.",
+                        "Qué significa la K y por qué no es una clasificación de calidad.", "Ce que signifie le K et pourquoi ce n'est pas un classement de qualité."))
+
+
+def art_peso(db):
+    ad = [r for r in db if r["categoria"] != "junior"]
+    pesi = [(r, _pmid(r["peso"])) for r in ad]
+    pesi = [(r, w) for r, w in pesi if w]
+    med_all = sorted(w for _, w in pesi)[len(pesi) // 2]
+    livelli = [("principiante", ("principiante", "principiante-intermedio")), ("intermedio", ("intermedio", "intermedio-avanzato")), ("avanzato", ("avanzato", "professionale"))]
+    righe = []
+    for nome, keys in livelli:
+        ws = sorted(w for r, w in pesi if r.get("livello") in keys)
+        if ws:
+            righe.append((LIVN(nome), len(ws), _g(ws[len(ws) // 2]), f"{_g(ws[0])}–{_g(ws[-1])}"))
+    tab = ('<div class="tablebox"><table class="tab"><thead><tr><th>' + L("Livello", "Level", "Nivel", "Niveau") + '</th><th>' + L("Modelli", "Models", "Modelos", "Modèles") + '</th><th>'
+           + L("Peso tipico (g)", "Typical weight (g)", "Peso típico (g)", "Poids type (g)") + '</th><th>' + L("Da – a (g)", "Range (g)", "De – a (g)", "De – à (g)") + '</th></tr></thead><tbody>'
+           + "".join(f"<tr><td>{a}</td><td>{b}</td><td>{c}</td><td>{d}</td></tr>" for a, b, c, d in righe) + "</tbody></table></div>")
+    leggere = [r for r, w in sorted(pesi, key=lambda x: x[1]) if w <= 352.5][:8]
+    pw = _f5("pps_w")
+    epi, don, bimbi = P("guide", "racchetta-padel-epicondilite"), P("guide", "racchette-padel-donna"), P("bambini")
+    box = _box5(L("Vuoi un consiglio su misura?", "Want a tailored suggestion?", "¿Quieres un consejo a medida?", "Vous voulez un conseil sur mesure ?"),
+                L("Nel quiz indichi il peso che preferisci e se hai problemi al braccio.", "In the quiz you choose your preferred weight and say whether you have arm problems.", "En el test indicas el peso que prefieres y si tienes problemas en el brazo.", "Dans le quiz, vous indiquez le poids préféré et si vous avez des problèmes au bras."),
+                L("Trova la tua racchetta", "Find your racket", "Encuentra tu pala", "Trouve ta raquette"), P("selettore"))
+    corpo = L(f'''<p><b>Per la maggior parte dei giocatori adulti il peso giusto è tra 350 e 370 grammi. Chi inizia, chi ha problemi al braccio e molte donne stanno bene sotto i 360 g; chi gioca d'attacco e ha il braccio allenato può salire a 370 g e oltre.</b> Conta però anche il bilanciamento: due racchette dello stesso peso possono sembrare molto diverse.</p>
+<h2>Il peso consigliato</h2>
+<ul><li><b>Principianti:</b> sotto i 360 g.</li>
+<li><b>Intermedi:</b> 360–370 g.</li>
+<li><b>Avanzati e agonisti:</b> 370–390 g, solo con un braccio allenato.</li>
+<li><b>Donne:</b> 330–355 g per comfort e controllo, fino a 360–370 g con livello e forza maggiori.</li>
+<li><b>Epicondilite:</b> meglio non superare i 370 g, con bilanciamento basso e tocco morbido.</li>
+<li><b>Ragazzi:</b> non più di 330 g; per i più piccoli vedi la <a href="{bimbi}">guida per bambini</a>.</li></ul>
+<p class="note">Indicazioni di {pw}. Il peso corporeo e la preparazione fisica contano quanto il livello.</p>
+<h2>Quanto pesano davvero le racchette in vendita</h2>
+<p>Nel nostro database il peso tipico (mediana) di una racchetta adulta è di {_g(med_all)} g, calcolato su {len(pesi)} modelli con peso dichiarato. Per livello:</p>
+{tab}
+<p>La differenza tra livelli è piccola: i produttori fanno racchette da principiante solo poco più leggere di quelle da avanzato. Per questo, se cerchi leggerezza, conviene guardare le versioni "Light" o "Lite" dei modelli.</p>
+<h2>Il bilanciamento conta quanto il peso</h2>
+<ul><li><b>Basso</b> (peso verso il manico): più controllo e maneggevolezza, meno fatica.</li>
+<li><b>Medio:</b> un compromesso tra controllo e potenza.</li>
+<li><b>Alto</b> (peso verso la testa): più potenza nello smash, ma serve un braccio allenato. Una racchetta da 360 g con bilanciamento alto può sembrare più pesante di una da 370 g bilanciata bassa.</li></ul>
+<h2>Come capire se è troppo pesante</h2>
+<p>Se a fine partita il braccio è stanco, se arrivi in ritardo sui colpi a rete o se compare un fastidio a gomito o spalla, scendi di qualche grammo o scegli un bilanciamento più basso ({pw}). Leggi anche le guide alle <a href="{epi}">racchette per l'epicondilite</a> e alle <a href="{don}">racchette da donna</a>.</p>
+<h2>Le racchette adulte più leggere del database</h2>{_elenco_r(leggere)}{box}''',
+              f'''<p><b>For most adult players the right weight is between 350 and 370 grams. Beginners, players with arm problems and many women do well under 360 g; attacking players with a trained arm can go to 370 g and above.</b> Balance matters too: two rackets with the same weight can feel very different.</p>
+<h2>Recommended weight</h2>
+<ul><li><b>Beginners:</b> under 360 g.</li>
+<li><b>Intermediate:</b> 360–370 g.</li>
+<li><b>Advanced and competitive:</b> 370–390 g, only with a trained arm.</li>
+<li><b>Women:</b> 330–355 g for comfort and control, up to 360–370 g with more level and strength.</li>
+<li><b>Tennis elbow:</b> best not to go over 370 g, with a low balance and soft feel.</li>
+<li><b>Juniors:</b> no more than 330 g; for younger children see the <a href="{bimbi}">kids' guide</a>.</li></ul>
+<p class="note">Guidance from {pw}. Body weight and fitness matter as much as level.</p>
+<h2>How much the rackets on sale really weigh</h2>
+<p>In our database the typical (median) weight of an adult racket is {_g(med_all)} g, based on {len(pesi)} models with a stated weight. By level:</p>
+{tab}
+<p>The difference between levels is small: manufacturers make beginner rackets only slightly lighter than advanced ones. So if you want something light, look at the "Light" or "Lite" versions of models.</p>
+<h2>Balance matters as much as weight</h2>
+<ul><li><b>Low</b> (weight towards the handle): more control and manoeuvrability, less fatigue.</li>
+<li><b>Medium:</b> a compromise between control and power.</li>
+<li><b>High</b> (weight towards the head): more power on the smash, but you need a trained arm. A 360 g racket with a high balance can feel heavier than a 370 g one with a low balance.</li></ul>
+<h2>How to tell if it's too heavy</h2>
+<p>If your arm is tired at the end of a match, you're late on shots at the net or you feel discomfort in your elbow or shoulder, drop a few grams or choose a lower balance ({pw}). See also the guides to <a href="{epi}">rackets for tennis elbow</a> and <a href="{don}">women's rackets</a>.</p>
+<h2>The lightest adult rackets in the database</h2>{_elenco_r(leggere)}{box}''',
+              f'''<p><b>Para la mayoría de los jugadores adultos el peso adecuado está entre 350 y 370 gramos. Quien empieza, quien tiene problemas en el brazo y muchas mujeres van bien por debajo de 360 g; quien juega al ataque y tiene el brazo entrenado puede subir a 370 g o más.</b> Pero también cuenta el balance: dos palas del mismo peso pueden sentirse muy distintas.</p>
+<h2>El peso recomendado</h2>
+<ul><li><b>Principiantes:</b> por debajo de 360 g.</li>
+<li><b>Intermedios:</b> 360–370 g.</li>
+<li><b>Avanzados y competición:</b> 370–390 g, solo con el brazo entrenado.</li>
+<li><b>Mujeres:</b> 330–355 g para comodidad y control, hasta 360–370 g con más nivel y fuerza.</li>
+<li><b>Epicondilitis:</b> mejor no pasar de 370 g, con balance bajo y tacto blando.</li>
+<li><b>Jóvenes:</b> no más de 330 g; para los más pequeños, mira la <a href="{bimbi}">guía para niños</a>.</li></ul>
+<p class="note">Indicaciones de {pw}. El peso corporal y la forma física cuentan tanto como el nivel.</p>
+<h2>Cuánto pesan de verdad las palas a la venta</h2>
+<p>En nuestra base el peso típico (mediana) de una pala de adulto es de {_g(med_all)} g, calculado sobre {len(pesi)} modelos con peso declarado. Por nivel:</p>
+{tab}
+<p>La diferencia entre niveles es pequeña: los fabricantes hacen palas de iniciación solo un poco más ligeras que las de avanzado. Por eso, si buscas ligereza, conviene mirar las versiones "Light" o "Lite" de los modelos.</p>
+<h2>El balance cuenta tanto como el peso</h2>
+<ul><li><b>Bajo</b> (peso hacia el mango): más control y manejabilidad, menos cansancio.</li>
+<li><b>Medio:</b> un equilibrio entre control y potencia.</li>
+<li><b>Alto</b> (peso hacia la cabeza): más potencia en el remate, pero hace falta un brazo entrenado. Una pala de 360 g con balance alto puede parecer más pesada que una de 370 g con balance bajo.</li></ul>
+<h2>Cómo saber si es demasiado pesada</h2>
+<p>Si al final del partido el brazo está cansado, llegas tarde a los golpes en la red o aparece una molestia en codo u hombro, baja unos gramos o elige un balance más bajo ({pw}). Lee también las guías de <a href="{epi}">palas para la epicondilitis</a> y de <a href="{don}">palas de mujer</a>.</p>
+<h2>Las palas de adulto más ligeras de la base</h2>{_elenco_r(leggere)}{box}''',
+              f'''<p><b>Pour la plupart des joueurs adultes, le bon poids se situe entre 350 et 370 grammes. Les débutants, les joueurs qui ont des problèmes au bras et beaucoup de femmes sont bien sous les 360 g ; les attaquants au bras entraîné peuvent monter à 370 g et plus.</b> L'équilibre compte aussi : deux raquettes du même poids peuvent donner des sensations très différentes.</p>
+<h2>Le poids conseillé</h2>
+<ul><li><b>Débutants :</b> moins de 360 g.</li>
+<li><b>Intermédiaires :</b> 360 à 370 g.</li>
+<li><b>Avancés et compétiteurs :</b> 370 à 390 g, seulement avec un bras entraîné.</li>
+<li><b>Femmes :</b> 330 à 355 g pour le confort et le contrôle, jusqu'à 360–370 g avec plus de niveau et de force.</li>
+<li><b>Épicondylite :</b> mieux vaut ne pas dépasser 370 g, avec un équilibre bas et un toucher souple.</li>
+<li><b>Jeunes :</b> pas plus de 330 g ; pour les plus petits, voir le <a href="{bimbi}">guide enfants</a>.</li></ul>
+<p class="note">Repères de {pw}. Le poids du corps et la condition physique comptent autant que le niveau.</p>
+<h2>Combien pèsent vraiment les raquettes en vente</h2>
+<p>Dans notre base, le poids type (médiane) d'une raquette adulte est de {_g(med_all)} g, calculé sur {len(pesi)} modèles à poids déclaré. Par niveau :</p>
+{tab}
+<p>L'écart entre niveaux est faible : les fabricants font des raquettes débutant à peine plus légères que les raquettes avancées. Si vous cherchez de la légèreté, regardez donc les versions « Light » ou « Lite » des modèles.</p>
+<h2>L'équilibre compte autant que le poids</h2>
+<ul><li><b>Bas</b> (poids vers le manche) : plus de contrôle et de maniabilité, moins de fatigue.</li>
+<li><b>Moyen :</b> un compromis entre contrôle et puissance.</li>
+<li><b>Haut</b> (poids vers la tête) : plus de puissance au smash, mais il faut un bras entraîné. Une raquette de 360 g à équilibre haut peut sembler plus lourde qu'une raquette de 370 g à équilibre bas.</li></ul>
+<h2>Comment savoir si elle est trop lourde</h2>
+<p>Si votre bras est fatigué en fin de match, si vous êtes en retard sur les frappes au filet ou si une gêne apparaît au coude ou à l'épaule, descendez de quelques grammes ou choisissez un équilibre plus bas ({pw}). Lisez aussi les guides des <a href="{epi}">raquettes pour l'épicondylite</a> et des <a href="{don}">raquettes pour femmes</a>.</p>
+<h2>Les raquettes adultes les plus légères de la base</h2>{_elenco_r(leggere)}{box}''')
+    qa = [(L("Quanto deve pesare una racchetta da padel?", "How heavy should a padel racket be?", "¿Cuánto debe pesar una pala de pádel?", "Combien doit peser une raquette de padel ?"),
+           L("Per la maggior parte degli adulti tra 350 e 370 g: sotto i 360 g per principianti, chi ha problemi al braccio e molte donne; 370 g e oltre per avanzati con il braccio allenato.",
+             "For most adults between 350 and 370 g: under 360 g for beginners, players with arm problems and many women; 370 g and above for advanced players with a trained arm.",
+             "Para la mayoría de los adultos entre 350 y 370 g: por debajo de 360 g para principiantes, quien tiene problemas de brazo y muchas mujeres; 370 g o más para avanzados con el brazo entrenado.",
+             "Pour la plupart des adultes entre 350 et 370 g : moins de 360 g pour les débutants, les joueurs ayant des problèmes au bras et beaucoup de femmes ; 370 g et plus pour les avancés au bras entraîné.")),
+          (L("Una racchetta più pesante dà più potenza?", "Does a heavier racket give more power?", "¿Una pala más pesada da más potencia?", "Une raquette plus lourde donne-t-elle plus de puissance ?"),
+           L("Sì, ma solo se riesci a muoverla in fretta. Se ti rallenta, perdi potenza e controllo e affatichi il braccio.",
+             "Yes, but only if you can swing it fast. If it slows you down, you lose power and control and tire your arm.",
+             "Sí, pero solo si puedes moverla rápido. Si te frena, pierdes potencia y control y cansas el brazo.",
+             "Oui, mais seulement si vous la déplacez vite. Si elle vous ralentit, vous perdez puissance et contrôle et fatiguez le bras.")),
+          (L("Che peso scegliere con l'epicondilite?", "What weight should I choose with tennis elbow?", "¿Qué peso elegir con epicondilitis?", "Quel poids choisir avec une épicondylite ?"),
+           L("Meglio non superare i 370 g, con bilanciamento basso e tocco morbido.", "Best not to go over 370 g, with a low balance and soft feel.",
+             "Mejor no pasar de 370 g, con balance bajo y tacto blando.", "Mieux vaut ne pas dépasser 370 g, avec un équilibre bas et un toucher souple."))]
+    titolo = L("Quanto deve pesare la racchetta da padel: il peso giusto per te", "How heavy should your padel racket be: the right weight for you",
+               "Cuánto debe pesar la pala de pádel: el peso adecuado para ti", "Combien doit peser votre raquette de padel : le bon poids pour vous")
+    return _pubblica5("peso", titolo,
+                      L("Il peso giusto della racchetta da padel per livello, sesso e problemi al braccio, con i pesi reali delle racchette in vendita e il ruolo del bilanciamento.",
+                        "The right padel racket weight by level, gender and arm problems, with the real weights of rackets on sale and the role of balance.",
+                        "El peso adecuado de la pala de pádel según nivel, sexo y problemas de brazo, con los pesos reales de las palas a la venta y el papel del balance.",
+                        "Le bon poids de raquette de padel selon le niveau, le sexe et les problèmes au bras, avec les poids réels des raquettes en vente et le rôle de l'équilibre."),
+                      L("Peso della racchetta", "Racket weight", "Peso de la pala", "Poids de la raquette"), corpo, qa,
+                      L("Il peso giusto per livello e i pesi reali delle racchette in vendita.", "The right weight by level and the real weights of rackets on sale.",
+                        "El peso adecuado por nivel y los pesos reales de las palas a la venta.", "Le bon poids par niveau et les poids réels des raquettes en vente."), items=leggere)
+
+
+def art_over50(db):
+    ad = [r for r in db if r["categoria"] != "junior"]
+    cand = [(r, _pmid(r["peso"])) for r in ad if r.get("forma") in ("rotonda", "goccia") and r.get("livello") in ("principiante", "principiante-intermedio", "intermedio")]
+    scelte = [r for r, w in sorted(cand, key=lambda x: (x[1] or 999)) if w and w <= 355][:8]
+    ca, sa = _f5("castillo"), _f5("sadok")
+    epi, peso, forme, reg = P("guide", "racchetta-padel-epicondilite"), P("articoli", G5["peso"][0]), P("guide", "forme-racchetta-padel"), P("articoli", "regolamento-padel-regole-spiegate")
+    scarpe = P("articoli", G5["scarpe"][0])
+    box = _box5(L("Trova la racchetta giusta per te", "Find the right racket for you", "Encuentra la pala adecuada para ti", "Trouvez la bonne raquette"),
+                L("Nel quiz puoi indicare problemi a gomito o spalla: ti proponiamo modelli leggeri e dal tocco morbido.", "In the quiz you can mention elbow or shoulder problems: we'll suggest light, soft-feeling models.", "En el test puedes indicar problemas de codo u hombro: te proponemos modelos ligeros y de tacto blando.", "Dans le quiz, vous pouvez signaler des problèmes de coude ou d'épaule : nous vous proposons des modèles légers au toucher souple."),
+                L("Trova la tua racchetta", "Find your racket", "Encuentra tu pala", "Trouve ta raquette"), P("selettore"))
+    corpo = L(f'''<p><b>Il padel è uno degli sport più adatti a chi ha superato i 50 anni: si gioca in quattro, il campo è piccolo, la palla rallenta sulle pareti e gli scambi si costruiscono più con la testa che con la forza. Per giocare a lungo senza farsi male contano tre cose: una racchetta leggera e morbida, le scarpe giuste e un buon riscaldamento.</b></p>
+<h2>Gli infortuni più frequenti dopo i 50 anni</h2>
+<p>Uno studio spagnolo su 131 giocatori tra 50 e 66 anni (età media 57) ha rilevato i problemi più comuni: gomito nel 29,8% dei giocatori, zona lombare nel 27,5%, ginocchio nel 22,9%, polpaccio ("tennis leg") nel 22,1% e spalla nel 20,6% ({ca}). Agli arti superiori prevalgono i problemi da sovraccarico, come l'epicondilite; alle gambe quelli acuti, come le distorsioni.</p>
+<p>Una revisione del 2026 indica come strategie di prevenzione un riscaldamento adeguato, un aumento graduale del carico, esercizi di stabilità e propriocezione e un'attrezzatura adatta ({sa}).</p>
+<h2>La racchetta giusta</h2>
+<ul><li><b>Leggera:</b> 340–355 g è un buon punto di partenza; leggi la guida sul <a href="{peso}">peso della racchetta</a>.</li>
+<li><b>Rotonda o a goccia:</b> perdonano di più i colpi decentrati e richiedono meno forza (vedi <a href="{forme}">le forme</a>).</li>
+<li><b>Bilanciamento basso e gomma morbida:</b> meno vibrazioni su gomito e spalla. Se hai già avuto l'epicondilite, leggi la <a href="{epi}">guida dedicata</a>.</li>
+<li><b>Niente racchette "da pro":</b> diamanti rigide e pesanti mettono sotto sforzo il braccio senza dare vantaggi a chi non colpisce fortissimo.</li></ul>
+<h2>Racchette leggere e tolleranti dal nostro database</h2>{_elenco_r(scelte)}
+<h2>Consigli per giocare senza farsi male</h2>
+<ul><li><b>Riscaldati 10 minuti</b> prima di entrare in campo: spalle, polsi, polpacci e qualche spostamento laterale.</li>
+<li><b>Aumenta gradualmente:</b> meglio due partite a settimana con continuità che tante partite in pochi giorni.</li>
+<li><b>Scarpe da padel, non da corsa:</b> servono suola adatta al campo e sostegno laterale (vedi la <a href="{scarpe}">guida alle scarpe</a>).</li>
+<li><b>Lascia lavorare le pareti:</b> nel padel non serve correre su ogni palla, spesso basta aspettarla dopo il rimbalzo sul vetro.</li>
+<li><b>Ascolta i segnali:</b> un fastidio al gomito o al polpaccio che torna a ogni partita va fatto vedere a un medico o a un fisioterapista.</li></ul>
+<p>Se sei agli inizi, parti dalle <a href="{reg}">regole spiegate semplici</a>.</p>{box}
+<p class="note">Fonti: {ca}; {sa}. Questo articolo non sostituisce il parere di un medico.</p>''',
+              f'''<p><b>Padel is one of the best sports for people over 50: it's played in fours, the court is small, the ball slows down off the walls and rallies are built more with your head than with strength. To keep playing for years without getting hurt, three things matter: a light, soft racket, the right shoes and a proper warm-up.</b></p>
+<h2>The most common injuries after 50</h2>
+<p>A Spanish study of 131 players aged 50 to 66 (average age 57) recorded the most common problems: elbow in 29.8% of players, lower back in 27.5%, knee in 22.9%, calf ("tennis leg") in 22.1% and shoulder in 20.6% ({ca}). In the upper limbs overuse problems such as tennis elbow prevail; in the legs, acute ones such as sprains.</p>
+<p>A 2026 review lists as prevention strategies a proper warm-up, a gradual increase in load, stability and proprioception exercises and suitable equipment ({sa}).</p>
+<h2>The right racket</h2>
+<ul><li><b>Light:</b> 340–355 g is a good starting point; read the guide to <a href="{peso}">racket weight</a>.</li>
+<li><b>Round or teardrop:</b> more forgiving on off-centre hits and less demanding on strength (see <a href="{forme}">shapes</a>).</li>
+<li><b>Low balance and soft core:</b> less vibration on elbow and shoulder. If you've already had tennis elbow, read the <a href="{epi}">dedicated guide</a>.</li>
+<li><b>No "pro" rackets:</b> stiff, heavy diamonds strain the arm without any benefit if you don't hit very hard.</li></ul>
+<h2>Light, forgiving rackets from our database</h2>{_elenco_r(scelte)}
+<h2>Tips for playing without getting hurt</h2>
+<ul><li><b>Warm up for 10 minutes</b> before going on court: shoulders, wrists, calves and some side-to-side movement.</li>
+<li><b>Build up gradually:</b> two matches a week consistently is better than many matches in a few days.</li>
+<li><b>Padel shoes, not running shoes:</b> you need a sole suited to the court and lateral support (see the <a href="{scarpe}">shoe guide</a>).</li>
+<li><b>Let the walls do the work:</b> in padel you don't need to chase every ball; often you can wait for it after it bounces off the glass.</li>
+<li><b>Listen to your body:</b> elbow or calf discomfort that comes back every match should be seen by a doctor or physiotherapist.</li></ul>
+<p>If you're just starting out, begin with the <a href="{reg}">rules explained simply</a>.</p>{box}
+<p class="note">Sources: {ca}; {sa}. This article is not a substitute for medical advice.</p>''',
+              f'''<p><b>El pádel es uno de los deportes más adecuados para quien ha pasado de los 50: se juega de cuatro en cuatro, la pista es pequeña, la bola se frena en las paredes y los puntos se construyen más con la cabeza que con la fuerza. Para jugar muchos años sin lesionarse cuentan tres cosas: una pala ligera y blanda, las zapatillas adecuadas y un buen calentamiento.</b></p>
+<h2>Las lesiones más frecuentes a partir de los 50</h2>
+<p>Un estudio español con 131 jugadores de entre 50 y 66 años (edad media 57) registró los problemas más comunes: codo en el 29,8% de los jugadores, zona lumbar en el 27,5%, rodilla en el 22,9%, gemelo ("pierna de tenista") en el 22,1% y hombro en el 20,6% ({ca}). En las extremidades superiores predominan las lesiones por sobrecarga, como la epicondilitis; en las piernas, las agudas, como los esguinces.</p>
+<p>Una revisión de 2026 señala como estrategias de prevención un calentamiento adecuado, un aumento progresivo de la carga, ejercicios de estabilidad y propiocepción y un material adecuado ({sa}).</p>
+<h2>La pala adecuada</h2>
+<ul><li><b>Ligera:</b> 340–355 g es un buen punto de partida; lee la guía sobre el <a href="{peso}">peso de la pala</a>.</li>
+<li><b>Redonda o lágrima:</b> perdonan más los golpes descentrados y exigen menos fuerza (ver <a href="{forme}">las formas</a>).</li>
+<li><b>Balance bajo y goma blanda:</b> menos vibraciones en codo y hombro. Si ya has tenido epicondilitis, lee la <a href="{epi}">guía específica</a>.</li>
+<li><b>Nada de palas "de pro":</b> los diamantes rígidos y pesados cargan el brazo sin aportar ventajas si no golpeas muy fuerte.</li></ul>
+<h2>Palas ligeras y tolerantes de nuestra base</h2>{_elenco_r(scelte)}
+<h2>Consejos para jugar sin lesionarse</h2>
+<ul><li><b>Calienta 10 minutos</b> antes de entrar en pista: hombros, muñecas, gemelos y algunos desplazamientos laterales.</li>
+<li><b>Aumenta poco a poco:</b> mejor dos partidos a la semana con regularidad que muchos partidos en pocos días.</li>
+<li><b>Zapatillas de pádel, no de running:</b> hace falta una suela adecuada a la pista y sujeción lateral (ver la <a href="{scarpe}">guía de zapatillas</a>).</li>
+<li><b>Deja trabajar a las paredes:</b> en pádel no hace falta correr a por todas las bolas; a menudo basta esperarla tras el rebote en el cristal.</li>
+<li><b>Escucha las señales:</b> una molestia en el codo o el gemelo que vuelve en cada partido debe verla un médico o un fisioterapeuta.</li></ul>
+<p>Si estás empezando, arranca por las <a href="{reg}">reglas explicadas fácil</a>.</p>{box}
+<p class="note">Fuentes: {ca}; {sa}. Este artículo no sustituye la opinión de un médico.</p>''',
+              f'''<p><b>Le padel est l'un des sports les plus adaptés après 50 ans : on joue à quatre, le terrain est petit, la balle ralentit sur les vitres et les échanges se construisent plus avec la tête qu'avec la force. Pour jouer longtemps sans se blesser, trois choses comptent : une raquette légère et souple, les bonnes chaussures et un bon échauffement.</b></p>
+<h2>Les blessures les plus fréquentes après 50 ans</h2>
+<p>Une étude espagnole sur 131 joueurs de 50 à 66 ans (âge moyen 57 ans) a relevé les problèmes les plus courants : coude chez 29,8 % des joueurs, bas du dos chez 27,5 %, genou chez 22,9 %, mollet (« tennis leg ») chez 22,1 % et épaule chez 20,6 % ({ca}). Aux membres supérieurs dominent les problèmes de surmenage comme l'épicondylite ; aux jambes, les blessures aiguës comme les entorses.</p>
+<p>Une revue de 2026 cite comme stratégies de prévention un échauffement adapté, une augmentation progressive de la charge, des exercices de stabilité et de proprioception et un équipement adapté ({sa}).</p>
+<h2>La bonne raquette</h2>
+<ul><li><b>Légère :</b> 340 à 355 g est un bon point de départ ; lisez le guide sur le <a href="{peso}">poids de la raquette</a>.</li>
+<li><b>Ronde ou goutte d'eau :</b> elles pardonnent davantage les frappes décentrées et demandent moins de force (voir <a href="{forme}">les formes</a>).</li>
+<li><b>Équilibre bas et gomme souple :</b> moins de vibrations pour le coude et l'épaule. Si vous avez déjà eu une épicondylite, lisez le <a href="{epi}">guide dédié</a>.</li>
+<li><b>Pas de raquettes « de pro » :</b> les diamants rigides et lourds sollicitent le bras sans avantage si vous ne frappez pas très fort.</li></ul>
+<h2>Raquettes légères et tolérantes de notre base</h2>{_elenco_r(scelte)}
+<h2>Conseils pour jouer sans se blesser</h2>
+<ul><li><b>Échauffez-vous 10 minutes</b> avant d'entrer sur le terrain : épaules, poignets, mollets et quelques déplacements latéraux.</li>
+<li><b>Progressez en douceur :</b> mieux vaut deux matchs par semaine avec régularité que beaucoup de matchs en peu de jours.</li>
+<li><b>Des chaussures de padel, pas de running :</b> il faut une semelle adaptée au terrain et un bon maintien latéral (voir le <a href="{scarpe}">guide des chaussures</a>).</li>
+<li><b>Laissez travailler les vitres :</b> au padel, inutile de courir sur chaque balle ; souvent, il suffit de l'attendre après le rebond sur la vitre.</li>
+<li><b>Écoutez les signaux :</b> une gêne au coude ou au mollet qui revient à chaque match doit être montrée à un médecin ou à un kinésithérapeute.</li></ul>
+<p>Si vous débutez, commencez par les <a href="{reg}">règles expliquées simplement</a>.</p>{box}
+<p class="note">Sources : {ca} ; {sa}. Cet article ne remplace pas l'avis d'un médecin.</p>''')
+    qa = [(L("Si può iniziare a giocare a padel dopo i 50 anni?", "Can you start playing padel after 50?", "¿Se puede empezar a jugar al pádel después de los 50?", "Peut-on commencer le padel après 50 ans ?"),
+           L("Sì: si gioca in quattro, il campo è piccolo e gli scambi richiedono più tecnica che forza. Conviene partire con una racchetta leggera e aumentare il carico poco a poco.",
+             "Yes: it's played in fours, the court is small and rallies need more technique than strength. Start with a light racket and build up gradually.",
+             "Sí: se juega de cuatro en cuatro, la pista es pequeña y los puntos exigen más técnica que fuerza. Conviene empezar con una pala ligera e ir aumentando poco a poco.",
+             "Oui : on joue à quatre, le terrain est petit et les échanges demandent plus de technique que de force. Mieux vaut commencer avec une raquette légère et progresser petit à petit.")),
+          (L("Qual è l'infortunio più comune nei giocatori over 50?", "What's the most common injury in players over 50?", "¿Cuál es la lesión más común en jugadores mayores de 50?", "Quelle est la blessure la plus fréquente chez les joueurs de plus de 50 ans ?"),
+           L("In uno studio su 131 giocatori tra 50 e 66 anni, il gomito (29,8%), seguito da zona lombare, ginocchio, polpaccio e spalla.",
+             "In a study of 131 players aged 50 to 66, the elbow (29.8%), followed by lower back, knee, calf and shoulder.",
+             "En un estudio con 131 jugadores de 50 a 66 años, el codo (29,8%), seguido de zona lumbar, rodilla, gemelo y hombro.",
+             "Dans une étude sur 131 joueurs de 50 à 66 ans, le coude (29,8 %), suivi du bas du dos, du genou, du mollet et de l'épaule.")),
+          (L("Che racchetta usare dopo i 50 anni?", "Which racket should I use after 50?", "¿Qué pala usar después de los 50?", "Quelle raquette utiliser après 50 ans ?"),
+           L("Leggera (340–355 g), rotonda o a goccia, con bilanciamento basso e gomma morbida.", "Light (340–355 g), round or teardrop, with a low balance and soft core.",
+             "Ligera (340–355 g), redonda o de lágrima, con balance bajo y goma blanda.", "Légère (340 à 355 g), ronde ou goutte d'eau, avec un équilibre bas et une gomme souple."))]
+    titolo = L("Padel dopo i 50 anni: racchetta, scarpe e consigli per non farsi male", "Padel after 50: racket, shoes and tips to avoid injury",
+               "Pádel a partir de los 50: pala, zapatillas y consejos para no lesionarse", "Le padel après 50 ans : raquette, chaussures et conseils pour ne pas se blesser")
+    return _pubblica5("over50", titolo,
+                      L("Come giocare a padel dopo i 50 anni: gli infortuni più frequenti secondo gli studi, la racchetta giusta e i consigli per prevenirli.",
+                        "How to play padel after 50: the most common injuries according to studies, the right racket and tips to prevent them.",
+                        "Cómo jugar al pádel a partir de los 50: las lesiones más frecuentes según los estudios, la pala adecuada y consejos para prevenirlas.",
+                        "Comment jouer au padel après 50 ans : les blessures les plus fréquentes selon les études, la bonne raquette et des conseils pour les prévenir."),
+                      L("Padel over 50", "Padel over 50", "Pádel mayores de 50", "Padel après 50 ans"), corpo, qa,
+                      L("Infortuni più comuni, racchetta giusta e consigli pratici.", "Most common injuries, the right racket and practical tips.",
+                        "Lesiones más comunes, la pala adecuada y consejos prácticos.", "Blessures les plus fréquentes, la bonne raquette et conseils pratiques."), items=scelte)
+
+
+def art_scarpe(db):
+    sh = _f5("shop")
+    o50, reg = P("articoli", G5["over50"][0]), P("articoli", "regolamento-padel-regole-spiegate")
+    tab = ('<div class="tablebox"><table class="tab"><thead><tr><th>' + L("Suola", "Sole", "Suela", "Semelle") + '</th><th>' + L("Campo ideale", "Best court", "Pista ideal", "Terrain idéal") + '</th><th>'
+           + L("Pro", "Pros", "Ventajas", "Atouts") + '</th><th>' + L("Contro", "Cons", "Inconvenientes", "Limites") + '</th></tr></thead><tbody>'
+           + "".join(f"<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td><td>{d}</td></tr>" for a, b, c, d in [
+               (L("Spina di pesce (herringbone, clay)", "Herringbone (clay)", "Espiga (clay)", "Chevrons (clay)"),
+                L("Erba sintetica con sabbia, terra", "Sand-filled artificial grass, clay", "Césped artificial con arena, tierra", "Gazon synthétique sablé, terre battue"),
+                L("Ottima presa sulla sabbia, buon sostegno laterale, durevole", "Great grip on sand, good lateral support, durable", "Gran agarre en arena, buena sujeción lateral, duradera", "Excellente adhérence sur le sable, bon maintien latéral, durable"),
+                L("Troppa presa sui campi duri", "Too grippy on hard courts", "Demasiado agarre en pistas duras", "Trop d'adhérence sur terrain dur")),
+               (L("Omni (puntini)", "Omni (studs)", "Omni (tacos)", "Omni (picots)"),
+                L("Campi con poca sabbia, indoor, cemento", "Courts with little sand, indoor, hard", "Pistas con poca arena, indoor, cemento", "Terrains peu sablés, indoor, dur"),
+                L("Movimenti rapidi in tutte le direzioni", "Quick movement in every direction", "Movimientos rápidos en todas las direcciones", "Déplacements rapides dans toutes les directions"),
+                L("Meno presa sulla sabbia, si consuma prima", "Less grip on sand, wears out faster", "Menos agarre en arena, se desgasta antes", "Moins d'adhérence sur le sable, s'use plus vite")),
+               (L("Ibrida", "Hybrid", "Híbrida", "Hybride"),
+                L("Chi gioca su campi diversi", "Players who use different courts", "Quien juega en pistas distintas", "Ceux qui jouent sur des terrains différents"),
+                L("Equilibrio tra presa e mobilità", "Balance of grip and mobility", "Equilibrio entre agarre y movilidad", "Équilibre entre adhérence et mobilité"),
+                L("Meno presa della spina di pesce sui campi molto sabbiosi", "Less grip than herringbone on very sandy courts", "Menos agarre que la espiga en pistas muy arenosas", "Moins d'adhérence que les chevrons sur terrain très sablé"))])
+           + "</tbody></table></div>")
+    corpo = L(f'''<p><b>Per giocare a padel servono scarpe da padel, non da corsa: la suola deve fare presa sulla sabbia del campo e la tomaia deve sostenere il piede negli spostamenti laterali. La scelta più importante è il tipo di suola, che dipende dal campo su cui giochi.</b></p>
+<h2>I tre tipi di suola</h2>{tab}
+<p class="note">Fonte: {sh}.</p>
+<h2>Quale scegliere in Italia</h2>
+<p>La maggior parte dei campi da padel in Italia è in erba sintetica con sabbia: per questi la suola a <b>spina di pesce</b> è la scelta più sicura. Se giochi spesso indoor o su campi con poca sabbia, valuta una <b>omni</b>; se cambi spesso circolo, una <b>ibrida</b> è il compromesso più comodo.</p>
+<h2>Perché non usare scarpe da corsa</h2>
+<ul><li><b>Poco sostegno laterale:</b> sono fatte per correre in avanti, non per frenare e cambiare direzione di lato. Il rischio di distorsioni alla caviglia aumenta.</li>
+<li><b>Suola sbagliata:</b> sulla sabbia scivola troppo, e la suola morbida si consuma in fretta sull'erba sintetica.</li>
+<li><b>Ammortizzazione alta e instabile:</b> va bene nella corsa, ma negli scatti brevi rende il piede meno stabile.</li></ul>
+<h2>Cosa guardare oltre alla suola</h2>
+<ul><li><b>Sostegno laterale e tallone stabile:</b> il piede non deve "uscire" dalla scarpa nei cambi di direzione.</li>
+<li><b>Ammortizzazione nel tallone:</b> utile per chi gioca spesso o ha qualche anno in più (vedi <a href="{o50}">padel dopo i 50 anni</a>).</li>
+<li><b>Punta rinforzata:</b> nel padel si striscia spesso la punta, soprattutto chi gioca a destra.</li>
+<li><b>Misura:</b> provala con le calze da gioco; tra la punta del piede e la scarpa ci vuole circa un dito.</li></ul>
+<h2>Quando cambiarle</h2>
+<p>Quando il disegno della suola è consumato nella zona dell'avampiede, la presa cala molto e aumenta il rischio di scivolare: a quel punto conviene cambiarle, anche se la tomaia sembra ancora buona.</p>
+<p>Se sei agli inizi, leggi anche le <a href="{reg}">regole del padel spiegate semplici</a>.</p>
+<p class="note">Fonte sulle suole: {sh}. Gli altri consigli sono indicazioni generali di PadelMetrix.</p>''',
+              f'''<p><b>To play padel you need padel shoes, not running shoes: the sole must grip the sand on the court and the upper must support your foot when you move sideways. The most important choice is the type of sole, which depends on the court you play on.</b></p>
+<h2>The three types of sole</h2>{tab}
+<p class="note">Source: {sh}.</p>
+<h2>Which to choose</h2>
+<p>Most padel courts are sand-filled artificial grass: for these a <b>herringbone</b> sole is the safest choice. If you often play indoors or on courts with little sand, consider an <b>omni</b> sole; if you switch clubs a lot, a <b>hybrid</b> is the most convenient compromise.</p>
+<h2>Why not to use running shoes</h2>
+<ul><li><b>Little lateral support:</b> they're made for running forwards, not for braking and changing direction sideways. The risk of ankle sprains goes up.</li>
+<li><b>Wrong sole:</b> it slips too much on sand, and a soft sole wears out fast on artificial grass.</li>
+<li><b>High, unstable cushioning:</b> fine for running, but on short bursts it makes the foot less stable.</li></ul>
+<h2>What to look at besides the sole</h2>
+<ul><li><b>Lateral support and a stable heel:</b> your foot shouldn't "roll out" of the shoe when you change direction.</li>
+<li><b>Heel cushioning:</b> useful for frequent players or those a little older (see <a href="{o50}">padel after 50</a>).</li>
+<li><b>Reinforced toe:</b> in padel you often drag the toe, especially if you play on the right.</li>
+<li><b>Size:</b> try them with your playing socks; leave about a finger's width between your toes and the end of the shoe.</li></ul>
+<h2>When to replace them</h2>
+<p>When the tread pattern is worn under the forefoot, grip drops a lot and the risk of slipping goes up: that's the time to replace them, even if the upper still looks fine.</p>
+<p>If you're just starting out, read the <a href="{reg}">padel rules explained simply</a> too.</p>
+<p class="note">Source on soles: {sh}. The other tips are general PadelMetrix guidance.</p>''',
+              f'''<p><b>Para jugar al pádel hacen falta zapatillas de pádel, no de running: la suela tiene que agarrar en la arena de la pista y el empeine tiene que sujetar el pie en los desplazamientos laterales. La elección más importante es el tipo de suela, que depende de la pista en la que juegues.</b></p>
+<h2>Los tres tipos de suela</h2>{tab}
+<p class="note">Fuente: {sh}.</p>
+<h2>Cuál elegir</h2>
+<p>La mayoría de las pistas de pádel son de césped artificial con arena: para estas, la suela de <b>espiga</b> es la opción más segura. Si juegas a menudo en indoor o en pistas con poca arena, valora una <b>omni</b>; si cambias mucho de club, una <b>híbrida</b> es el compromiso más cómodo.</p>
+<h2>Por qué no usar zapatillas de running</h2>
+<ul><li><b>Poca sujeción lateral:</b> están hechas para correr hacia delante, no para frenar y cambiar de dirección de lado. Aumenta el riesgo de esguince de tobillo.</li>
+<li><b>Suela equivocada:</b> en la arena resbala demasiado y la suela blanda se desgasta rápido en el césped artificial.</li>
+<li><b>Amortiguación alta e inestable:</b> va bien para correr, pero en los arranques cortos hace el pie menos estable.</li></ul>
+<h2>Qué mirar además de la suela</h2>
+<ul><li><b>Sujeción lateral y talón estable:</b> el pie no debe "salirse" de la zapatilla en los cambios de dirección.</li>
+<li><b>Amortiguación en el talón:</b> útil para quien juega a menudo o tiene algunos años más (ver <a href="{o50}">pádel a partir de los 50</a>).</li>
+<li><b>Puntera reforzada:</b> en pádel se arrastra a menudo la puntera, sobre todo quien juega en el lado derecho.</li>
+<li><b>Talla:</b> pruébatelas con los calcetines de juego; entre los dedos y la punta debe quedar más o menos un dedo.</li></ul>
+<h2>Cuándo cambiarlas</h2>
+<p>Cuando el dibujo de la suela está gastado en la zona del antepié, el agarre baja mucho y aumenta el riesgo de resbalar: en ese momento conviene cambiarlas, aunque el empeine parezca todavía bueno.</p>
+<p>Si estás empezando, lee también las <a href="{reg}">reglas del pádel explicadas fácil</a>.</p>
+<p class="note">Fuente sobre las suelas: {sh}. Los demás consejos son indicaciones generales de PadelMetrix.</p>''',
+              f'''<p><b>Pour jouer au padel, il faut des chaussures de padel, pas de running : la semelle doit accrocher sur le sable du terrain et la tige doit maintenir le pied dans les déplacements latéraux. Le choix le plus important est le type de semelle, qui dépend du terrain sur lequel vous jouez.</b></p>
+<h2>Les trois types de semelle</h2>{tab}
+<p class="note">Source : {sh}.</p>
+<h2>Laquelle choisir</h2>
+<p>La plupart des terrains de padel sont en gazon synthétique sablé : pour ceux-ci, la semelle à <b>chevrons</b> est le choix le plus sûr. Si vous jouez souvent en salle ou sur des terrains peu sablés, pensez à une <b>omni</b> ; si vous changez souvent de club, une <b>hybride</b> est le compromis le plus pratique.</p>
+<h2>Pourquoi ne pas jouer en chaussures de running</h2>
+<ul><li><b>Peu de maintien latéral :</b> elles sont faites pour courir vers l'avant, pas pour freiner et changer de direction sur le côté. Le risque d'entorse de la cheville augmente.</li>
+<li><b>Mauvaise semelle :</b> elle glisse trop sur le sable, et une semelle souple s'use vite sur le gazon synthétique.</li>
+<li><b>Amorti haut et instable :</b> parfait pour courir, mais sur les démarrages courts il rend le pied moins stable.</li></ul>
+<h2>Ce qu'il faut regarder en plus de la semelle</h2>
+<ul><li><b>Maintien latéral et talon stable :</b> le pied ne doit pas « sortir » de la chaussure dans les changements de direction.</li>
+<li><b>Amorti au talon :</b> utile si vous jouez souvent ou si vous avez quelques années de plus (voir <a href="{o50}">le padel après 50 ans</a>).</li>
+<li><b>Bout renforcé :</b> au padel, on traîne souvent la pointe du pied, surtout à droite.</li>
+<li><b>Pointure :</b> essayez-les avec vos chaussettes de jeu ; il faut environ un doigt entre les orteils et le bout de la chaussure.</li></ul>
+<h2>Quand les changer</h2>
+<p>Quand les reliefs de la semelle sont usés sous l'avant-pied, l'adhérence baisse beaucoup et le risque de glisser augmente : c'est le moment de les changer, même si la tige semble encore en bon état.</p>
+<p>Si vous débutez, lisez aussi les <a href="{reg}">règles du padel expliquées simplement</a>.</p>
+<p class="note">Source sur les semelles : {sh}. Les autres conseils sont des repères généraux de PadelMetrix.</p>''')
+    qa = [(L("Si può giocare a padel con le scarpe da corsa?", "Can you play padel in running shoes?", "¿Se puede jugar al pádel con zapatillas de running?", "Peut-on jouer au padel en chaussures de running ?"),
+           L("È sconsigliato: hanno poco sostegno laterale e una suola che scivola sulla sabbia, quindi aumentano il rischio di distorsioni.",
+             "It's not recommended: they have little lateral support and a sole that slips on sand, which raises the risk of sprains.",
+             "No es recomendable: tienen poca sujeción lateral y una suela que resbala en la arena, por lo que aumentan el riesgo de esguinces.",
+             "C'est déconseillé : elles offrent peu de maintien latéral et une semelle qui glisse sur le sable, ce qui augmente le risque d'entorse.")),
+          (L("Che suola serve per i campi in erba sintetica?", "Which sole is best for artificial grass courts?", "¿Qué suela hace falta para pistas de césped artificial?", "Quelle semelle pour les terrains en gazon synthétique ?"),
+           L("Sui campi in erba sintetica con sabbia la più indicata è la suola a spina di pesce (herringbone).", "On sand-filled artificial grass the best choice is a herringbone sole.",
+             "En pistas de césped artificial con arena, la más indicada es la suela de espiga (herringbone).", "Sur gazon synthétique sablé, la plus indiquée est la semelle à chevrons (herringbone).")),
+          (L("Quando vanno cambiate le scarpe da padel?", "When should padel shoes be replaced?", "¿Cuándo hay que cambiar las zapatillas de pádel?", "Quand faut-il changer ses chaussures de padel ?"),
+           L("Quando il disegno della suola è consumato sotto l'avampiede: la presa cala e si rischia di scivolare.", "When the tread is worn under the forefoot: grip drops and you risk slipping.",
+             "Cuando el dibujo de la suela está gastado bajo el antepié: el agarre baja y se corre el riesgo de resbalar.", "Quand les reliefs de la semelle sont usés sous l'avant-pied : l'adhérence baisse et on risque de glisser."))]
+    titolo = L("Scarpe da padel: come sceglierle (suola, campo e misura)", "Padel shoes: how to choose them (sole, court and fit)",
+               "Zapatillas de pádel: cómo elegirlas (suela, pista y talla)", "Chaussures de padel : comment les choisir (semelle, terrain et pointure)")
+    return _pubblica5("scarpe", titolo,
+                      L("Come scegliere le scarpe da padel: suola a spina di pesce, omni o ibrida in base al campo, perché non usare scarpe da corsa e quando cambiarle.",
+                        "How to choose padel shoes: herringbone, omni or hybrid sole by court type, why not to use running shoes and when to replace them.",
+                        "Cómo elegir zapatillas de pádel: suela de espiga, omni o híbrida según la pista, por qué no usar zapatillas de running y cuándo cambiarlas.",
+                        "Comment choisir ses chaussures de padel : semelle à chevrons, omni ou hybride selon le terrain, pourquoi éviter les chaussures de running et quand les changer."),
+                      L("Scarpe da padel", "Padel shoes", "Zapatillas de pádel", "Chaussures de padel"), corpo, qa,
+                      L("Spina di pesce, omni o ibrida: la suola giusta per il tuo campo.", "Herringbone, omni or hybrid: the right sole for your court.",
+                        "Espiga, omni o híbrida: la suela adecuada para tu pista.", "Chevrons, omni ou hybride : la bonne semelle pour votre terrain."))
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -1494,7 +2148,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
