@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/adidas-metalbone-storia-origine-nome/",
+"alt": {
+"it": "/it/articoli/adidas-metalbone-storia-origine-nome/",
+"en": "/en/articles/adidas-metalbone-history-name-origin/",
+"es": "/es/articulos/adidas-metalbone-historia-origen-nombre/",
+"fr": "/fr/articles/adidas-metalbone-histoire-origine-nom/"
+}
+},
+{
 "path": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
 "alt": {
 "it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
@@ -177,6 +186,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/adidas-metalbone-history-name-origin/",
+"alt": {
+"it": "/it/articoli/adidas-metalbone-storia-origine-nome/",
+"en": "/en/articles/adidas-metalbone-history-name-origin/",
+"es": "/es/articulos/adidas-metalbone-historia-origen-nombre/",
+"fr": "/fr/articles/adidas-metalbone-histoire-origine-nom/"
 }
 },
 {
@@ -360,6 +378,15 @@
 }
 },
 {
+"path": "/es/articulos/adidas-metalbone-historia-origen-nombre/",
+"alt": {
+"it": "/it/articoli/adidas-metalbone-storia-origine-nome/",
+"en": "/en/articles/adidas-metalbone-history-name-origin/",
+"es": "/es/articulos/adidas-metalbone-historia-origen-nombre/",
+"fr": "/fr/articles/adidas-metalbone-histoire-origine-nom/"
+}
+},
+{
 "path": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
 "alt": {
 "it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
@@ -537,6 +564,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/adidas-metalbone-histoire-origine-nom/",
+"alt": {
+"it": "/it/articoli/adidas-metalbone-storia-origine-nome/",
+"en": "/en/articles/adidas-metalbone-history-name-origin/",
+"es": "/es/articulos/adidas-metalbone-historia-origen-nombre/",
+"fr": "/fr/articles/adidas-metalbone-histoire-origine-nom/"
 }
 },
 {
