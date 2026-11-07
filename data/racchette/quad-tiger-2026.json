@@ -1,0 +1,139 @@
+{
+  "slug": "quad-tiger-2026",
+  "marca": "QUAD",
+  "modello": "Tiger",
+  "anno": 2026,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "340 g",
+  "forma": "ibrida",
+  "nucleo": "EVA 990Q, tre strati a densità variabile",
+  "superficie": "Carbonio 3K, 2 strati, superficie ruvida in silice",
+  "stile": "polivalente",
+  "prezzo_listino_eur": 310,
+  "simili": [
+    "quad-dragon-ii-fc-porto-edition-2026",
+    "bullpadel-elite-w-02-2027",
+    "bullpadel-elite-w-2026"
+  ],
+  "fonti_dati": [
+    "https://www.quad-sports.com/products/quad-tiger-padel-racket"
+  ],
+  "aggiornato": "2026-11-07",
+  "pagina": {
+    "titolo": "QUAD Tiger 2026",
+    "title_tag": "QUAD Tiger 2026: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "QUAD Tiger 2026: forma ibrida, peso 340 g, carbonio 3K. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Tiger 2026",
+    "eyebrow": "QUAD · Collezione 2026",
+    "chips": [
+      "Ibrida",
+      "340 g",
+      "Carbonio 3K"
+    ],
+    "lead": "Nuova versione 2026 con stampo ridisegnato: è una delle QUAD più leggere, agile e facile da giocare, con superficie ruvida per dare effetto alla palla. Per chi alterna potenza e controllo.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=QUAD+Tiger+2026",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 310 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=quad-tiger-2026,quad-dragon-ii-fc-porto-edition-2026",
+      "testo": "Confronta con Dragon II FC Porto Edition 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "QUAD"
+      ],
+      [
+        "Modello",
+        "Tiger"
+      ],
+      [
+        "Collezione",
+        "2026"
+      ],
+      [
+        "Forma",
+        "Ibrida"
+      ],
+      [
+        "Peso",
+        "340 g"
+      ],
+      [
+        "Bilanciamento",
+        "Non dichiarato"
+      ],
+      [
+        "Nucleo",
+        "EVA 990Q, tre strati a densità variabile"
+      ],
+      [
+        "Superficie",
+        "Carbonio 3K, 2 strati, superficie ruvida in silice"
+      ],
+      [
+        "Stile di gioco",
+        "Polivalente"
+      ],
+      [
+        "Prezzo di listino",
+        "310 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.quad-sports.com/products/quad-tiger-padel-racket\" rel=\"nofollow noopener\" target=\"_blank\">QUAD</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. QUAD la descrive così: nuova versione 2026 con stampo ridisegnato: è una delle QUAD più leggere, agile e facile da giocare, con superficie ruvida per dare effetto alla palla. Per chi alterna potenza e controllo. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Versatile tra difesa e attacco",
+      "Leggera e facile da muovere"
+    ],
+    "contro": [
+      "Prezzo di listino alto",
+      "Recensioni indipendenti ancora poche"
+    ],
+    "adatta": [
+      "Vuoi una racchetta sola per difesa e attacco"
+    ],
+    "non_adatta": [
+      "Sei avanzato e cerchi il massimo delle prestazioni",
+      "Cerchi una racchetta specializzata in attacco o in difesa"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/quad-dragon-ii-fc-porto-edition-2026/",
+        "sopra": "QUAD · 2026",
+        "nome": "Dragon II FC Porto Edition 2026",
+        "testo": "Ibrida polivalente, 355 g circa, carbonio 3K."
+      },
+      {
+        "url": "/racchette/bullpadel-elite-w-02-2027/",
+        "sopra": "Bullpadel · 2027",
+        "nome": "Elite W 02 2027",
+        "testo": "Ibrida polivalente, 350–360 g, livello intermedio / avanzato."
+      },
+      {
+        "url": "/racchette/bullpadel-elite-w-2026/",
+        "sopra": "Bullpadel · 2026",
+        "nome": "Elite W 2026",
+        "testo": "Ibrida polivalente, fibra di vetro, livello intermedio."
+      }
+    ],
+    "aggiornata": "7 novembre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Polivalente",
+        "Forma ibrida"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

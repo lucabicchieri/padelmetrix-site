@@ -82,7 +82,9 @@ def elenco(db):
 # ---------------------------------------------------------------- Marche
 
 def e_(a):
-    return L(" e ", " and ", " y ", " et ").join(str(x) for x in a)
+    a = [str(x) for x in a]
+    c = L(" e ", " and ", " y ", " et ")
+    return a[0] if len(a) == 1 else ", ".join(a[:-1]) + c + a[-1]
 
 
 def marche(db, pairs):

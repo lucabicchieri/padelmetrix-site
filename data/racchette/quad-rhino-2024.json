@@ -1,0 +1,146 @@
+{
+  "slug": "quad-rhino-2024",
+  "marca": "QUAD",
+  "modello": "Rhino",
+  "anno": 2024,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "360 g circa",
+  "forma": "goccia",
+  "bilanciamento": "equilibrato (valore non dichiarato)",
+  "nucleo": "EVA 990Q",
+  "superficie": "Carbonio 24K, 2 strati, finitura lucida",
+  "telaio": "Carbonio con rinforzi perimetrali",
+  "stile": "polivalente",
+  "prezzo_listino_eur": 330,
+  "simili": [
+    "babolat-air-veron-2-6-2026",
+    "drop-shot-explorer-soft-women-2026",
+    "head-speed-motion-2025"
+  ],
+  "fonti_dati": [
+    "https://www.quad-sports.com/products/quad-rhino-padel-racket"
+  ],
+  "aggiornato": "2026-11-07",
+  "pagina": {
+    "titolo": "QUAD Rhino 2024",
+    "title_tag": "QUAD Rhino 2024: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "QUAD Rhino 2024: forma goccia, peso 360 g circa, bilanciamento equilibrato, carbonio 24K. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Rhino 2024",
+    "eyebrow": "QUAD · Collezione 2024",
+    "chips": [
+      "Goccia",
+      "360 g circa",
+      "Bilanciamento equilibrato",
+      "Carbonio 24K"
+    ],
+    "lead": "Goccia molto equilibrata per chi cerca potenza senza perdere controllo: carbonio 24K, fori più piccoli al centro e più grandi all'esterno per allargare lo sweet spot e un sistema antivibrazione nella parte bassa della faccia.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=QUAD+Rhino+2024",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 330 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=quad-rhino-2024,babolat-air-veron-2-6-2026",
+      "testo": "Confronta con Air Veron 2.6 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "QUAD"
+      ],
+      [
+        "Modello",
+        "Rhino"
+      ],
+      [
+        "Collezione",
+        "2024"
+      ],
+      [
+        "Forma",
+        "Goccia"
+      ],
+      [
+        "Peso",
+        "360 g circa"
+      ],
+      [
+        "Bilanciamento",
+        "Equilibrato (valore non dichiarato)"
+      ],
+      [
+        "Nucleo",
+        "EVA 990Q"
+      ],
+      [
+        "Superficie",
+        "Carbonio 24K, 2 strati, finitura lucida"
+      ],
+      [
+        "Telaio",
+        "Carbonio con rinforzi perimetrali"
+      ],
+      [
+        "Stile di gioco",
+        "Polivalente"
+      ],
+      [
+        "Prezzo di listino",
+        "330 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.quad-sports.com/products/quad-rhino-padel-racket\" rel=\"nofollow noopener\" target=\"_blank\">QUAD</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. QUAD la descrive così: goccia molto equilibrata per chi cerca potenza senza perdere controllo: carbonio 24K, fori più piccoli al centro e più grandi all'esterno per allargare lo sweet spot e un sistema antivibrazione nella parte bassa della faccia. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Versatile tra difesa e attacco",
+      "Superficie in carbonio 24K"
+    ],
+    "contro": [
+      "Prezzo di listino alto",
+      "Recensioni indipendenti ancora poche"
+    ],
+    "adatta": [
+      "Vuoi una racchetta sola per difesa e attacco"
+    ],
+    "non_adatta": [
+      "Sei avanzato e cerchi il massimo delle prestazioni",
+      "Cerchi una racchetta specializzata in attacco o in difesa"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/babolat-air-veron-2-6-2026/",
+        "sopra": "Babolat · 2026",
+        "nome": "Air Veron 2.6 2026",
+        "testo": "Goccia polivalente, 355 g (±10), livello intermedio / avanzato."
+      },
+      {
+        "url": "/racchette/drop-shot-explorer-soft-women-2026/",
+        "sopra": "Drop Shot · 2026",
+        "nome": "Explorer Soft Women 2026",
+        "testo": "Goccia polivalente, 350–370 g, carbonio 3K, livello intermedio."
+      },
+      {
+        "url": "/racchette/head-speed-motion-2025/",
+        "sopra": "Head · 2025",
+        "nome": "Speed Motion 2025",
+        "testo": "Goccia polivalente, 355 g (364 g misurati da Racketguide), fibra di vetro, livello intermedio / avanzato."
+      }
+    ],
+    "aggiornata": "7 novembre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Polivalente",
+        "Forma goccia"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}
