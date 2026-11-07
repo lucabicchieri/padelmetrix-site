@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
+"alt": {
+"it": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
+"en": "/en/articles/padel-court-surfaces-artificial-grass-types/",
+"es": "/es/articulos/superficies-pista-padel-cesped-artificial-tipos/",
+"fr": "/fr/articles/surfaces-terrain-padel-gazon-synthetique-types/"
+}
+},
+{
 "path": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
 "alt": {
 "it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
@@ -195,6 +204,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/padel-court-surfaces-artificial-grass-types/",
+"alt": {
+"it": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
+"en": "/en/articles/padel-court-surfaces-artificial-grass-types/",
+"es": "/es/articulos/superficies-pista-padel-cesped-artificial-tipos/",
+"fr": "/fr/articles/surfaces-terrain-padel-gazon-synthetique-types/"
 }
 },
 {
@@ -396,6 +414,15 @@
 }
 },
 {
+"path": "/es/articulos/superficies-pista-padel-cesped-artificial-tipos/",
+"alt": {
+"it": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
+"en": "/en/articles/padel-court-surfaces-artificial-grass-types/",
+"es": "/es/articulos/superficies-pista-padel-cesped-artificial-tipos/",
+"fr": "/fr/articles/surfaces-terrain-padel-gazon-synthetique-types/"
+}
+},
+{
 "path": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "alt": {
 "it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
@@ -591,6 +618,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/surfaces-terrain-padel-gazon-synthetique-types/",
+"alt": {
+"it": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
+"en": "/en/articles/padel-court-surfaces-artificial-grass-types/",
+"es": "/es/articulos/superficies-pista-padel-cesped-artificial-tipos/",
+"fr": "/fr/articles/surfaces-terrain-padel-gazon-synthetique-types/"
 }
 },
 {

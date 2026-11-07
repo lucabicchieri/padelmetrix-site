@@ -2446,7 +2446,7 @@ S.SLUG_FR[VT_SLUG] = "vitres-terrain-padel-types-trempe-feuillete"
 S.SLUG[SU_SLUG] = ("padel-court-surfaces-artificial-grass-types", "superficies-pista-padel-cesped-artificial-tipos")
 S.SLUG_FR[SU_SLUG] = "surfaces-terrain-padel-gazon-synthetique-types"
 DATE_ART[VT_SLUG], DATE_ART[SU_SLUG] = "2026-11-16", "2026-11-18"
-SU_ONLINE = False  # diventa True quando esce l'articolo sulle superfici
+SU_ONLINE = True
 CF = {
     "fip": ("FIP, regolamento 2021", "https://www.sporteimpianti.it/wp-content/uploads/2019/05/Regolamenti-padel-2022.pdf"),
     "pav": ("Padel Addict", "https://www.padeladdict.com/en/glass-the-most-dangerous-part-of-the-padel-court-which-one-to-choose-to-play-safely/"),
@@ -2737,7 +2737,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_vetri(db), art_metalbone(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_superfici(db), art_vetri(db), art_metalbone(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
