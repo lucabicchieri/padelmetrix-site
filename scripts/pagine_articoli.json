@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
+"alt": {
+"it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
+"en": "/en/articles/quad-portuguese-padel-rackets-models/",
+"es": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
+"fr": "/fr/articles/quad-raquettes-padel-portugaises-modeles/"
+}
+},
+{
 "path": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
 "alt": {
 "it": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
@@ -168,6 +177,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/quad-portuguese-padel-rackets-models/",
+"alt": {
+"it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
+"en": "/en/articles/quad-portuguese-padel-rackets-models/",
+"es": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
+"fr": "/fr/articles/quad-raquettes-padel-portugaises-modeles/"
 }
 },
 {
@@ -342,6 +360,15 @@
 }
 },
 {
+"path": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
+"alt": {
+"it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
+"en": "/en/articles/quad-portuguese-padel-rackets-models/",
+"es": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
+"fr": "/fr/articles/quad-raquettes-padel-portugaises-modeles/"
+}
+},
+{
 "path": "/es/articulos/cuanto-dura-una-pala-de-padel/",
 "alt": {
 "it": "/it/articoli/quanto-dura-racchetta-padel-quando-cambiarla/",
@@ -510,6 +537,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/quad-raquettes-padel-portugaises-modeles/",
+"alt": {
+"it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
+"en": "/en/articles/quad-portuguese-padel-rackets-models/",
+"es": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
+"fr": "/fr/articles/quad-raquettes-padel-portugaises-modeles/"
 }
 },
 {
