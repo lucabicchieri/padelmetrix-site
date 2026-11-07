@@ -2123,7 +2123,7 @@ def art_scarpe(db):
 QUAD_SLUG = "quad-racchette-padel-portoghesi-modelli"
 S.SLUG[QUAD_SLUG] = ("quad-portuguese-padel-rackets-models", "quad-palas-padel-portuguesas-modelos")
 S.SLUG_FR[QUAD_SLUG] = "quad-raquettes-padel-portugaises-modeles"
-DATE_ART[QUAD_SLUG] = "2026-11-07"
+DATE_ART[QUAD_SLUG] = "2026-11-09"
 QUAD_U = "https://www.quad-sports.com/"
 
 
