@@ -1,5 +1,28 @@
 [
  {
+  "slug": "vetri-campo-padel-tipi-temperato-stratificato",
+  "data": "2026-11-16",
+  "racchette": [],
+  "titolo": {
+   "it": "I vetri dei campi da padel: temperato, stratificato e campi panoramici",
+   "en": "Padel court glass: tempered, laminated and panoramic courts",
+   "es": "Los cristales de las pistas de pádel: templado, laminado y pistas panorámicas",
+   "fr": "Les vitres des terrains de padel : trempé, feuilleté et terrains panoramiques"
+  },
+  "desc": {
+   "it": "Temperato 10 o 12 mm, stratificato, panoramico: come sono fatti i campi.",
+   "en": "10 or 12 mm tempered, laminated, panoramic: how courts are built.",
+   "es": "Templado de 10 o 12 mm, laminado, panorámica: cómo son las pistas.",
+   "fr": "Trempé 10 ou 12 mm, feuilleté, panoramique : comment sont faits les terrains."
+  },
+  "url": {
+   "it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
+   "en": "/en/articles/padel-court-glass-types-tempered-laminated/",
+   "es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
+   "fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+  }
+ },
+ {
   "slug": "adidas-metalbone-storia-origine-nome",
   "data": "2026-11-12",
   "racchette": [

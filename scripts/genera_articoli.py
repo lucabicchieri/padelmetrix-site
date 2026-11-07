@@ -2439,6 +2439,275 @@ def art_metalbone(db):
                               "Cinco años de Metalbone, generación a generación, y el enigma del nombre.", "Cinq ans de Metalbone, génération par génération, et l'énigme du nom.")
 
 
+# ---------------------------------------------------------------- Campi: vetri e superfici (novembre 2026)
+VT_SLUG, SU_SLUG = "vetri-campo-padel-tipi-temperato-stratificato", "superfici-campo-padel-erba-sintetica-tipi"
+S.SLUG[VT_SLUG] = ("padel-court-glass-types-tempered-laminated", "cristales-pista-padel-tipos-templado-laminado")
+S.SLUG_FR[VT_SLUG] = "vitres-terrain-padel-types-trempe-feuillete"
+S.SLUG[SU_SLUG] = ("padel-court-surfaces-artificial-grass-types", "superficies-pista-padel-cesped-artificial-tipos")
+S.SLUG_FR[SU_SLUG] = "surfaces-terrain-padel-gazon-synthetique-types"
+DATE_ART[VT_SLUG], DATE_ART[SU_SLUG] = "2026-11-16", "2026-11-18"
+SU_ONLINE = False  # diventa True quando esce l'articolo sulle superfici
+CF = {
+    "fip": ("FIP, regolamento 2021", "https://www.sporteimpianti.it/wp-content/uploads/2019/05/Regolamenti-padel-2022.pdf"),
+    "pav": ("Padel Addict", "https://www.padeladdict.com/en/glass-the-most-dangerous-part-of-the-padel-court-which-one-to-choose-to-play-safely/"),
+    "sb": ("Superb Padel", "https://superbpadel.com/panoramic-padel-court/"),
+    "pap": ("Padel Addict", "https://www.padeladdict.com/en/mejorset-discover-how-is-the-official-court-of-premier-padel/"),
+    "ilk": ("İlke Sport", "https://ilkesport.com/artificial-grass-for-padel-courts/"),
+    "cons": ("Consumoteca", "https://www.consumoteca.com/deporte/cesped-artificial-para-pistas-de-padel/"),
+    "mondo": ("Mondo", "https://mondoworldwide.com/emea/it/sport/paddle/stx-supercourt"),
+}
+
+
+def _tab4(head, rows):
+    return ('<div class="tablebox"><table class="tab"><thead><tr>' + "".join(f"<th>{h}</th>" for h in head) + "</tr></thead><tbody>"
+            + "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows) + "</tbody></table></div>")
+
+
+def art_vetri(db):
+    f = {k: fonte(u, n) for k, (n, u) in CF.items()}
+    su, sc = P("articoli", SU_SLUG), P("articoli", G5["scarpe"][0])
+    reg = P("articoli", "regolamento-padel-regole-spiegate")
+    su_it = f'Per l\'altra metà del campo leggi la guida alle <a href="{su}">superfici e all\'erba sintetica</a>. ' if SU_ONLINE else ""
+    su_en = f'For the other half of the court, read the guide to <a href="{su}">surfaces and artificial grass</a>. ' if SU_ONLINE else ""
+    su_es = f'Para la otra mitad de la pista, lee la guía de <a href="{su}">superficies y césped artificial</a>. ' if SU_ONLINE else ""
+    su_fr = f'Pour l\'autre moitié du terrain, lisez le guide des <a href="{su}">surfaces et du gazon synthétique</a>. ' if SU_ONLINE else ""
+    tv = _tab4([L("Vetro", "Glass", "Cristal", "Vitre"), L("Dove si usa", "Where it's used", "Dónde se usa", "Où on l'utilise"), L("Sicurezza", "Safety", "Seguridad", "Sécurité"), L("Costo", "Cost", "Coste", "Coût")], [
+        (L("<b>Temperato 10 mm</b>", "<b>Tempered 10 mm</b>", "<b>Templado 10 mm</b>", "<b>Trempé 10 mm</b>"), L("Solo campi standard", "Standard courts only", "Solo pistas estándar", "Terrains standard uniquement"),
+         L("La più bassa: ci sono stati casi di vetri esplosi all'impatto", "The lowest: there have been cases of glass shattering on impact", "La más baja: ha habido casos de cristales que estallan al impacto", "La plus faible : il y a eu des cas de vitres qui éclatent à l'impact"),
+         L("Il più economico", "The cheapest", "El más barato", "Le moins cher")),
+        (L("<b>Temperato 12 mm</b>", "<b>Tempered 12 mm</b>", "<b>Templado 12 mm</b>", "<b>Trempé 12 mm</b>"), L("Standard, panoramici e super panoramici", "Standard, panoramic and super panoramic", "Estándar, panorámicas y superpanorámicas", "Standard, panoramiques et super panoramiques"),
+         L("Più alta; può ancora rompersi, ma raramente", "Higher; it can still break, but rarely", "Más alta; aún puede romperse, pero rara vez", "Plus élevée ; il peut encore casser, mais rarement"),
+         L("Medio", "Medium", "Medio", "Moyen")),
+        (L("<b>Stratificato 6+6 mm</b>", "<b>Laminated 6+6 mm</b>", "<b>Laminado 6+6 mm</b>", "<b>Feuilleté 6+6 mm</b>"), L("Tutti i tipi di campo", "Every court type", "Todo tipo de pistas", "Tous les types de terrain"),
+         L("Se si rompe la lastra interna, quella esterna regge; i bordi rotti possono tagliare", "If the inner pane breaks the outer one holds; broken edges can cut", "Si se rompe la lámina interior, la exterior aguanta; los bordes rotos pueden cortar", "Si la vitre intérieure casse, l'extérieure tient ; les bords cassés peuvent couper"),
+         L("Il più caro", "The most expensive", "El más caro", "Le plus cher"))])
+    tc = _tab4([L("Struttura", "Structure", "Estructura", "Structure"), L("Pilastri", "Posts", "Pilares", "Poteaux"), L("Vetri", "Glass", "Cristales", "Vitres"), L("Tipico di", "Typical of", "Típica de", "Typique de")], [
+        (L("<b>Standard</b>", "<b>Standard</b>", "<b>Estándar</b>", "<b>Standard</b>"), L("Visibili", "Visible", "Visibles", "Visibles"), L("Sul fondo campo, lati in rete", "At the back, mesh on the sides", "En el fondo, laterales de malla", "Au fond, côtés grillagés"),
+         L("Club con budget contenuto", "Clubs on a budget", "Clubes con presupuesto ajustado", "Clubs au budget serré")),
+        (L("<b>Panoramico</b>", "<b>Panoramic</b>", "<b>Panorámica</b>", "<b>Panoramique</b>"), L("Nascosti", "Hidden", "Ocultos", "Cachés"), L("12 mm a tutta altezza su lati e fondo", "12 mm full height on sides and back", "12 mm a toda altura en laterales y fondo", "12 mm sur toute la hauteur, côtés et fond"),
+         L("Centri sportivi di fascia alta", "High-end sports centres", "Centros deportivos de gama alta", "Centres sportifs haut de gamme")),
+        (L("<b>Super panoramico</b>", "<b>Super panoramic</b>", "<b>Superpanorámica</b>", "<b>Super panoramique</b>"), L("Nessuno negli angoli", "None in the corners", "Ninguno en las esquinas", "Aucun dans les angles"), L("12 mm su tutti i lati, visuale a 360°", "12 mm all round, 360° view", "12 mm en todos los lados, visión de 360°", "12 mm sur tous les côtés, vue à 360°"),
+         L("Tornei e dirette TV", "Tournaments and TV", "Torneos y TV", "Tournois et télévision"))])
+    corpo = L(f'''<p><b>Nei campi da padel si trovano tre tipi di vetro: temperato da 10 mm, temperato da 12 mm e stratificato 6+6 mm. Il regolamento li ammette tutti e tre. Il 12 mm è lo standard dei campi di qualità e dei tornei; il 10 mm è il più economico e il meno sicuro; lo stratificato è il più caro e regge anche quando una lastra si rompe.</b></p>
+<h2>Cosa dice il regolamento</h2>
+<p>La FIP ammette pareti di qualsiasi materiale, trasparente od opaco, purché il rimbalzo sia regolare. Nell'Unione Europea il vetro deve rispettare la norma EN 12150-1; la nota federale ammette vetro temperato monolitico di almeno 10 mm o stratificato 6+6 mm ({f["fip"]}). Le pareti di fondo sono alte 4 metri: 3 di vetro o muro e 1 di rete metallica.</p>
+<h2>I tre tipi di vetro</h2>{tv}
+<p class="note">Fonte: {f["pav"]}.</p>
+<p>Esiste anche un'alternativa al vetro: pannelli acrilici come il ComfortGlass di NXPadel, che secondo il produttore pesano meno della metà, sono quasi indistruttibili e danno lo stesso rimbalzo. Sono però dati dichiarati dal produttore, non verificati in modo indipendente ({f["pav"]}).</p>
+<h2>Vetro o muro?</h2>
+<p>I campi più vecchi o economici hanno pareti in muratura o cemento. Il regolamento chiede che siano di un unico colore, preferibilmente verde, blu o terracotta, ben distinto dal pavimento ({f["fip"]}). Il vetro è diventato lo standard perché il pubblico vede il gioco e il rimbalzo è più uniforme; sui muri vecchi possono esserci punti in cui la palla rimbalza meno.</p>
+<h2>Standard, panoramico, super panoramico</h2>{tc}
+<p class="note">Fonte: {f["sb"]}.</p>
+<p>Il campo ufficiale di Premier Padel è un super panoramico con vetro temperato da 12 mm, omologato FIP, che può essere fisso o smontabile e regge venti fino a 120 km/h ({f["pap"]}).</p>
+<h2>Le pareti laterali: quattro varianti</h2>
+<p>Il regolamento ammette quattro configurazioni laterali ({f["fip"]}):</p>
+<ul><li><b>Due "a gradino":</b> parete di 3 m per i primi 2 m, poi 2 m di altezza, con la rete sopra.</li>
+<li><b>Due "solo vetro":</b> vetro di 3 m per 4 m di lunghezza a ogni estremità, senza gradino, con la rete per il resto del lato.</li></ul>
+<p>Per chi gioca la differenza si sente negli angoli: con il gradino la palla può cambiare traiettoria sullo spigolo.</p>
+<h2>Cosa cambia per chi gioca</h2>
+<ul><li><b>Rimbalzo:</b> sul vetro è più regolare che sul muro, quindi uscire con la palla dopo la parete è più prevedibile.</li>
+<li><b>Visibilità:</b> nei panoramici si vede meglio la palla che esce dal campo e si gioca con più spazio visivo.</li>
+<li><b>Sicurezza:</b> non lanciare la racchetta contro il vetro e segnala al circolo eventuali scheggiature o vetri che si muovono.</li></ul>
+<p>{su_it}Per le regole sulle pareti leggi le <a href="{reg}">regole del padel spiegate semplici</a>.</p>
+<p class="note">Fonti: {f["fip"]}; {f["pav"]}; {f["sb"]}; {f["pap"]}.</p>''',
+              f'''<p><b>Padel courts use three types of glass: 10 mm tempered, 12 mm tempered and 6+6 mm laminated. The rules allow all three. 12 mm is the standard for quality courts and tournaments; 10 mm is the cheapest and least safe; laminated is the most expensive and holds even when one pane breaks.</b></p>
+<h2>What the rules say</h2>
+<p>The FIP allows walls of any material, transparent or opaque, as long as the bounce is consistent. In the European Union glass must comply with EN 12150-1; the federation note allows monolithic tempered glass of at least 10 mm or 6+6 mm laminated glass ({f["fip"]}). Back walls are 4 metres high: 3 of glass or wall and 1 of wire mesh.</p>
+<h2>The three types of glass</h2>{tv}
+<p class="note">Source: {f["pav"]}.</p>
+<p>There is also an alternative to glass: acrylic panels such as NXPadel's ComfortGlass, which the maker says weigh less than half as much, are nearly indestructible and bounce the same. These are the manufacturer's claims, not independently verified ({f["pav"]}).</p>
+<h2>Glass or wall?</h2>
+<p>Older or cheaper courts have brick or concrete walls. The rules require a single colour, preferably green, blue or terracotta, clearly distinct from the floor ({f["fip"]}). Glass became the standard because spectators can see the play and the bounce is more even; old walls can have spots where the ball bounces less.</p>
+<h2>Standard, panoramic, super panoramic</h2>{tc}
+<p class="note">Source: {f["sb"]}.</p>
+<p>The official Premier Padel court is a super panoramic court with 12 mm tempered glass, FIP-approved, which can be fixed or portable and withstands winds of up to 120 km/h ({f["pap"]}).</p>
+<h2>Side walls: four variants</h2>
+<p>The rules allow four side configurations ({f["fip"]}):</p>
+<ul><li><b>Two "stepped" ones:</b> a 3 m wall for the first 2 m, then 2 m high, with mesh above.</li>
+<li><b>Two "glass only" ones:</b> 3 m glass for 4 m at each end, with no step, and mesh for the rest of the side.</li></ul>
+<p>Players feel the difference in the corners: with a step, the ball can change direction off the edge.</p>
+<h2>What it means for players</h2>
+<ul><li><b>Bounce:</b> glass is more consistent than walls, so playing the ball off the wall is more predictable.</li>
+<li><b>Visibility:</b> on panoramic courts you see balls leaving the court better and play with more visual space.</li>
+<li><b>Safety:</b> don't throw your racket at the glass, and report chips or loose panes to the club.</li></ul>
+<p>{su_en}For the rules on walls, see the <a href="{reg}">padel rules explained simply</a>.</p>
+<p class="note">Sources: {f["fip"]}; {f["pav"]}; {f["sb"]}; {f["pap"]}.</p>''',
+              f'''<p><b>En las pistas de pádel se usan tres tipos de cristal: templado de 10 mm, templado de 12 mm y laminado 6+6 mm. El reglamento admite los tres. El de 12 mm es el estándar de las pistas de calidad y de los torneos; el de 10 mm es el más barato y el menos seguro; el laminado es el más caro y aguanta incluso cuando se rompe una lámina.</b></p>
+<h2>Qué dice el reglamento</h2>
+<p>La FIP admite paredes de cualquier material, transparente u opaco, siempre que el bote sea regular. En la Unión Europea el cristal debe cumplir la norma EN 12150-1; la nota federativa admite cristal templado monolítico de al menos 10 mm o laminado 6+6 mm ({f["fip"]}). Las paredes de fondo miden 4 metros: 3 de cristal o muro y 1 de malla metálica.</p>
+<h2>Los tres tipos de cristal</h2>{tv}
+<p class="note">Fuente: {f["pav"]}.</p>
+<p>También hay una alternativa al cristal: paneles acrílicos como el ComfortGlass de NXPadel, que según el fabricante pesan menos de la mitad, son casi indestructibles y dan el mismo bote. Son datos declarados por el fabricante, no verificados de forma independiente ({f["pav"]}).</p>
+<h2>¿Cristal o muro?</h2>
+<p>Las pistas más antiguas o económicas tienen paredes de obra u hormigón. El reglamento pide un único color, preferiblemente verde, azul o terracota, bien distinto del suelo ({f["fip"]}). El cristal se ha impuesto porque el público ve el juego y el bote es más uniforme; en los muros viejos puede haber zonas donde la bola bota menos.</p>
+<h2>Estándar, panorámica, superpanorámica</h2>{tc}
+<p class="note">Fuente: {f["sb"]}.</p>
+<p>La pista oficial de Premier Padel es superpanorámica con cristal templado de 12 mm, homologada por la FIP, puede ser fija o desmontable y resiste vientos de hasta 120 km/h ({f["pap"]}).</p>
+<h2>Las paredes laterales: cuatro variantes</h2>
+<p>El reglamento admite cuatro configuraciones laterales ({f["fip"]}):</p>
+<ul><li><b>Dos "escalonadas":</b> pared de 3 m en los primeros 2 m y luego de 2 m de altura, con malla encima.</li>
+<li><b>Dos "solo cristal":</b> cristal de 3 m en 4 m de longitud en cada extremo, sin escalón, con malla en el resto del lateral.</li></ul>
+<p>Para el jugador la diferencia se nota en las esquinas: con el escalón, la bola puede cambiar de trayectoria en la arista.</p>
+<h2>Qué cambia para quien juega</h2>
+<ul><li><b>Bote:</b> en el cristal es más regular que en el muro, así que sacar la bola tras la pared es más previsible.</li>
+<li><b>Visibilidad:</b> en las panorámicas se ve mejor la bola que sale de la pista y se juega con más espacio visual.</li>
+<li><b>Seguridad:</b> no lances la pala contra el cristal y avisa al club de desconchones o cristales que se muevan.</li></ul>
+<p>{su_es}Para las reglas de las paredes, lee las <a href="{reg}">reglas del pádel explicadas fácil</a>.</p>
+<p class="note">Fuentes: {f["fip"]}; {f["pav"]}; {f["sb"]}; {f["pap"]}.</p>''',
+              f'''<p><b>Les terrains de padel utilisent trois types de vitres : trempé 10 mm, trempé 12 mm et feuilleté 6+6 mm. Le règlement les autorise tous les trois. Le 12 mm est la norme des bons terrains et des tournois ; le 10 mm est le moins cher et le moins sûr ; le feuilleté est le plus cher et tient même quand une vitre casse.</b></p>
+<h2>Ce que dit le règlement</h2>
+<p>La FIP admet des murs de n'importe quel matériau, transparent ou opaque, à condition que le rebond soit régulier. Dans l'Union européenne, le verre doit respecter la norme EN 12150-1 ; la note fédérale autorise le verre trempé monolithique d'au moins 10 mm ou le feuilleté 6+6 mm ({f["fip"]}). Les murs du fond mesurent 4 mètres : 3 de vitre ou de mur et 1 de grillage.</p>
+<h2>Les trois types de vitres</h2>{tv}
+<p class="note">Source : {f["pav"]}.</p>
+<p>Il existe aussi une alternative au verre : des panneaux acryliques comme le ComfortGlass de NXPadel, qui selon le fabricant pèsent moins de la moitié, sont presque indestructibles et donnent le même rebond. Ce sont des données du fabricant, non vérifiées de façon indépendante ({f["pav"]}).</p>
+<h2>Vitre ou mur ?</h2>
+<p>Les terrains anciens ou bon marché ont des murs en maçonnerie ou en béton. Le règlement demande une seule couleur, de préférence vert, bleu ou terre cuite, bien distincte du sol ({f["fip"]}). Le verre s'est imposé parce que le public voit le jeu et que le rebond est plus homogène ; sur les vieux murs, il peut y avoir des zones où la balle rebondit moins.</p>
+<h2>Standard, panoramique, super panoramique</h2>{tc}
+<p class="note">Source : {f["sb"]}.</p>
+<p>Le terrain officiel de Premier Padel est un super panoramique en verre trempé de 12 mm, homologué FIP, fixe ou démontable, qui résiste à des vents jusqu'à 120 km/h ({f["pap"]}).</p>
+<h2>Les murs latéraux : quatre variantes</h2>
+<p>Le règlement admet quatre configurations latérales ({f["fip"]}) :</p>
+<ul><li><b>Deux « en escalier » :</b> mur de 3 m sur les 2 premiers mètres, puis de 2 m de haut, avec le grillage au-dessus.</li>
+<li><b>Deux « tout vitre » :</b> vitre de 3 m sur 4 m de long à chaque extrémité, sans marche, avec le grillage sur le reste du côté.</li></ul>
+<p>Pour le joueur, la différence se sent dans les angles : avec la marche, la balle peut changer de trajectoire sur l'arête.</p>
+<h2>Ce que cela change pour le joueur</h2>
+<ul><li><b>Rebond :</b> sur la vitre il est plus régulier que sur le mur, donc jouer la balle après la paroi est plus prévisible.</li>
+<li><b>Visibilité :</b> sur les panoramiques, on voit mieux les balles qui sortent du terrain et on joue avec plus d'espace visuel.</li>
+<li><b>Sécurité :</b> ne lancez pas votre raquette contre la vitre et signalez au club les éclats ou les vitres qui bougent.</li></ul>
+<p>{su_fr}Pour les règles sur les murs, lisez les <a href="{reg}">règles du padel expliquées simplement</a>.</p>
+<p class="note">Sources : {f["fip"]} ; {f["pav"]} ; {f["sb"]} ; {f["pap"]}.</p>''')
+    qa = [(L("Che spessore ha il vetro di un campo da padel?", "How thick is padel court glass?", "¿Qué grosor tiene el cristal de una pista de pádel?", "Quelle épaisseur pour les vitres d'un terrain de padel ?"),
+           L("Almeno 10 mm se temperato; lo standard dei campi di qualità è 12 mm. In alternativa si usa lo stratificato 6+6 mm.", "At least 10 mm if tempered; the standard for quality courts is 12 mm. Laminated 6+6 mm is the alternative.",
+             "Al menos 10 mm si es templado; el estándar de las pistas de calidad es 12 mm. La alternativa es el laminado 6+6 mm.", "Au moins 10 mm en trempé ; la norme des bons terrains est 12 mm. L'alternative est le feuilleté 6+6 mm.")),
+          (L("Qual è il vetro più sicuro?", "Which glass is the safest?", "¿Cuál es el cristal más seguro?", "Quelle vitre est la plus sûre ?"),
+           L("Lo stratificato 6+6 mm: se si rompe la lastra interna, quella esterna regge. Tra i temperati, il 12 mm è più sicuro del 10 mm.", "Laminated 6+6 mm: if the inner pane breaks the outer one holds. Among tempered glass, 12 mm is safer than 10 mm.",
+             "El laminado 6+6 mm: si se rompe la lámina interior, la exterior aguanta. Entre los templados, el de 12 mm es más seguro que el de 10 mm.", "Le feuilleté 6+6 mm : si la vitre intérieure casse, l'extérieure tient. Parmi les trempés, le 12 mm est plus sûr que le 10 mm.")),
+          (L("Che differenza c'è tra campo panoramico e standard?", "What's the difference between a panoramic and a standard court?", "¿Qué diferencia hay entre una pista panorámica y una estándar?", "Quelle différence entre un terrain panoramique et un standard ?"),
+           L("Nel panoramico i pilastri sono nascosti e i vetri da 12 mm sono a tutta altezza su lati e fondo; nello standard il vetro è solo sul fondo e i lati sono in rete.", "Panoramic courts have hidden posts and full-height 12 mm glass on the sides and back; standard courts have glass only at the back and mesh on the sides.",
+             "En la panorámica los pilares están ocultos y los cristales de 12 mm van a toda altura en laterales y fondo; en la estándar el cristal solo está en el fondo y los laterales son de malla.", "Sur le panoramique, les poteaux sont cachés et les vitres de 12 mm couvrent toute la hauteur des côtés et du fond ; sur le standard, la vitre n'est qu'au fond et les côtés sont grillagés."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("I vetri dei campi da padel: temperato, stratificato e campi panoramici", "Padel court glass: tempered, laminated and panoramic courts",
+               "Los cristales de las pistas de pádel: templado, laminado y pistas panorámicas", "Les vitres des terrains de padel : trempé, feuilleté et terrains panoramiques")
+    desc = L("I tre tipi di vetro dei campi da padel, cosa dice il regolamento, le differenze tra campo standard, panoramico e super panoramico e cosa cambiano nel gioco.",
+             "The three types of padel court glass, what the rules say, the differences between standard, panoramic and super panoramic courts and how they affect play.",
+             "Los tres tipos de cristal de las pistas de pádel, qué dice el reglamento, las diferencias entre pista estándar, panorámica y superpanorámica y cómo influyen en el juego.",
+             "Les trois types de vitres des terrains de padel, ce que dit le règlement, les différences entre terrain standard, panoramique et super panoramique et leur effet sur le jeu.")
+    scrivi_articolo(VT_SLUG, titolo + " | PadelMetrix", desc, titolo, L("Vetri del campo", "Court glass", "Cristales de la pista", "Vitres du terrain"), corpo + faq_htm, ld_extra=[faq_ld])
+    return VT_SLUG, titolo, L("Temperato 10 o 12 mm, stratificato, panoramico: come sono fatti i campi.", "10 or 12 mm tempered, laminated, panoramic: how courts are built.",
+                              "Templado de 10 o 12 mm, laminado, panorámica: cómo son las pistas.", "Trempé 10 ou 12 mm, feuilleté, panoramique : comment sont faits les terrains.")
+
+
+def art_superfici(db):
+    f = {k: fonte(u, n) for k, (n, u) in CF.items()}
+    vt, sc = P("articoli", VT_SLUG), P("articoli", G5["scarpe"][0])
+    te = _tab4([L("Fibra", "Fibre", "Fibra", "Fibre"), L("Com'è fatta", "What it is", "Cómo es", "Ce que c'est"), L("Gioco", "Play", "Juego", "Jeu"), L("Durata e cura", "Durability and care", "Duración y cuidado", "Durée et entretien")], [
+        (L("<b>Fibrillata</b>", "<b>Fibrillated</b>", "<b>Fibrilada</b>", "<b>Fibrillée</b>"), L("Fibre larghe tagliate in punta, che si arricciano e tengono ferma la sabbia", "Wide fibres split at the tip that curl and hold the sand", "Fibras anchas cortadas en la punta, que se rizan y sujetan la arena", "Fibres larges fendues en pointe, qui frisent et retiennent le sable"),
+         L("Rimbalzo più veloce e regolare", "Faster, more consistent bounce", "Bote más rápido y regular", "Rebond plus rapide et régulier"), L("Dura meno", "Shorter life", "Dura menos", "Dure moins")),
+        (L("<b>Monofilo</b>", "<b>Monofilament</b>", "<b>Monofilamento</b>", "<b>Monofilament</b>"), L("Fibre singole più rigide che restano dritte", "Single, stiffer fibres that stay upright", "Fibras individuales más rígidas que se mantienen erguidas", "Fibres individuelles plus rigides qui restent droites"),
+         L("Frena un po' la palla: gioco più lento", "Slows the ball slightly: slower play", "Frena un poco la bola: juego más lento", "Freine un peu la balle : jeu plus lent"), L("Dura di più, va spazzolata spesso; molto usata nei tornei", "Lasts longer, needs frequent brushing; common at elite level", "Dura más, hay que cepillarla a menudo; muy usada en torneos", "Dure plus, à brosser souvent ; très utilisée en tournoi")),
+        (L("<b>Testurizzata</b>", "<b>Texturised</b>", "<b>Texturizada</b>", "<b>Texturée</b>"), L("Fibre arricciate, spesso combinate con monofili", "Curled fibres, often combined with monofilaments", "Fibras rizadas, a menudo combinadas con monofilamentos", "Fibres frisées, souvent combinées à des monofilaments"),
+         L("Buon equilibrio tra presa e scivolamento", "Good balance of grip and slide", "Buen equilibrio entre agarre y deslizamiento", "Bon équilibre entre accroche et glisse"), L("Indicata per i campi professionali", "Recommended for professional courts", "Indicada para pistas profesionales", "Indiquée pour les terrains professionnels"))])
+    corpo = L(f'''<p><b>Quasi tutti i campi da padel sono in erba sintetica con sabbia di quarzo, ma l'erba non è tutta uguale: fibrillata, monofilo e testurizzata cambiano velocità della palla, presa e durata. Il regolamento ammette anche cemento poroso e superfici sintetiche, purché il rimbalzo sia regolare e l'acqua non ristagni.</b></p>
+<h2>Cosa dice il regolamento</h2>
+<ul><li><b>Materiali ammessi:</b> cemento poroso, cemento, sintetico ed erba artificiale ({f["fip"]}).</li>
+<li><b>Colori:</b> preferibilmente verde, azzurro o terracotta, uniformi; il nero è ammesso solo indoor.</li>
+<li><b>Planarità:</b> dislivelli medi sotto i 3 mm su 3 m.</li>
+<li><b>Linee:</b> larghe 5 cm, preferibilmente bianche o nere.</li></ul>
+<h2>I tre tipi di erba sintetica</h2>{te}
+<p class="note">Fonti: {f["cons"]}; {f["ilk"]}.</p>
+<p>In tutti e tre i casi la superficie deve avere fibra corta e cucitura fitta ({f["ilk"]}). La sabbia di quarzo tra le fibre serve a dare presa e ad attutire i passi; per questo le fibre vanno spazzolate per tenerle dritte e ridistribuire la sabbia ({f["cons"]}).</p>
+<h2>Il campo dei professionisti</h2>
+<p>Mondo è stato fornitore ufficiale del World Padel Tour dal 2015 al 2023 e dal 2024 fornisce l'erba di Premier Padel e della FIP. La sua Premier Supercourt X3 combina monofili di forme diverse con fibre testurizzate e usa sabbia silicea come intaso ({f["mondo"]}). È l'erba dei campi ufficiali Premier Padel, con la sua edizione nero e oro ({f["pap"]}).</p>
+<h2>Erba nuova o consumata: cosa cambia</h2>
+<ul><li><b>Erba nuova e piena di sabbia:</b> la palla rallenta e rimbalza meno, le scarpe fanno più presa.</li>
+<li><b>Erba consumata e con poca sabbia:</b> la palla è più veloce e bassa, si scivola di più. Fai attenzione negli spostamenti laterali.</li>
+<li><b>Umidità:</b> la sabbia bagnata compatta il fondo e cambia il rimbalzo; la mattina presto o dopo la pioggia il campo gioca diverso.</li></ul>
+<h2>Indoor o outdoor</h2>
+<p>Il regolamento chiede almeno 6 metri di altezza libera sopra il campo (8 consigliati per i nuovi impianti) e un'illuminazione minima di 300 lux indoor e 200 lux outdoor per il gioco amatoriale, 750 e 500 lux per le gare nazionali e internazionali ({f["fip"]}). Indoor la palla risente meno di vento e umidità, quindi il rimbalzo è più costante.</p>
+<h2>Le scarpe giuste</h2>
+<p>Sull'erba sintetica con sabbia la suola più indicata è quella a spina di pesce; sui campi indoor o con poca sabbia va bene una omni. Trovi tutto nella <a href="{sc}">guida alle scarpe da padel</a>. Per l'altra metà del campo leggi l'articolo sui <a href="{vt}">vetri e i campi panoramici</a>.</p>
+<p class="note">Fonti: {f["fip"]}; {f["cons"]}; {f["ilk"]}; {f["mondo"]}; {f["pap"]}.</p>''',
+              f'''<p><b>Almost all padel courts are sand-filled artificial grass, but the grass is not all the same: fibrillated, monofilament and texturised fibres change ball speed, grip and durability. The rules also allow porous concrete and synthetic surfaces, as long as the bounce is consistent and water doesn't pool.</b></p>
+<h2>What the rules say</h2>
+<ul><li><b>Allowed materials:</b> porous concrete, concrete, synthetic and artificial grass ({f["fip"]}).</li>
+<li><b>Colours:</b> preferably green, light blue or terracotta, uniform; black is allowed indoors only.</li>
+<li><b>Flatness:</b> average level differences under 3 mm over 3 m.</li>
+<li><b>Lines:</b> 5 cm wide, preferably white or black.</li></ul>
+<h2>The three types of artificial grass</h2>{te}
+<p class="note">Sources: {f["cons"]}; {f["ilk"]}.</p>
+<p>In every case the surface needs short pile and dense stitching ({f["ilk"]}). The quartz sand between the fibres provides grip and cushions footsteps; that's why the fibres must be brushed to keep them upright and redistribute the sand ({f["cons"]}).</p>
+<h2>The pros' court</h2>
+<p>Mondo was the official supplier of the World Padel Tour from 2015 to 2023 and since 2024 has supplied the turf for Premier Padel and the FIP. Its Premier Supercourt X3 combines monofilaments of different shapes with texturised fibres and uses silica sand infill ({f["mondo"]}). It's the turf on the official Premier Padel courts, with their black and gold edition ({f["pap"]}).</p>
+<h2>New or worn grass: what changes</h2>
+<ul><li><b>New grass full of sand:</b> the ball slows down and bounces less, shoes grip more.</li>
+<li><b>Worn grass with little sand:</b> the ball is faster and lower, and you slide more. Be careful moving sideways.</li>
+<li><b>Moisture:</b> wet sand compacts the surface and changes the bounce; early in the morning or after rain the court plays differently.</li></ul>
+<h2>Indoor or outdoor</h2>
+<p>The rules require at least 6 metres of clear height above the court (8 recommended for new facilities) and minimum lighting of 300 lux indoors and 200 lux outdoors for recreational play, 750 and 500 lux for national and international competitions ({f["fip"]}). Indoors the ball is less affected by wind and moisture, so the bounce is more consistent.</p>
+<h2>The right shoes</h2>
+<p>On sand-filled artificial grass a herringbone sole works best; on indoor courts or courts with little sand an omni sole is fine. It's all in the <a href="{sc}">padel shoe guide</a>. For the other half of the court, read the article on <a href="{vt}">glass and panoramic courts</a>.</p>
+<p class="note">Sources: {f["fip"]}; {f["cons"]}; {f["ilk"]}; {f["mondo"]}; {f["pap"]}.</p>''',
+              f'''<p><b>Casi todas las pistas de pádel son de césped artificial con arena de cuarzo, pero el césped no es todo igual: fibrilado, monofilamento y texturizado cambian la velocidad de la bola, el agarre y la duración. El reglamento admite también hormigón poroso y superficies sintéticas, siempre que el bote sea regular y no se acumule el agua.</b></p>
+<h2>Qué dice el reglamento</h2>
+<ul><li><b>Materiales admitidos:</b> hormigón poroso, cemento, sintético y césped artificial ({f["fip"]}).</li>
+<li><b>Colores:</b> preferiblemente verde, azul claro o terracota, uniformes; el negro solo se admite en indoor.</li>
+<li><b>Planeidad:</b> desniveles medios inferiores a 3 mm en 3 m.</li>
+<li><b>Líneas:</b> de 5 cm de ancho, preferiblemente blancas o negras.</li></ul>
+<h2>Los tres tipos de césped artificial</h2>{te}
+<p class="note">Fuentes: {f["cons"]}; {f["ilk"]}.</p>
+<p>En los tres casos la superficie debe tener fibra corta y cosido denso ({f["ilk"]}). La arena de cuarzo entre las fibras da agarre y amortigua las pisadas; por eso hay que cepillar las fibras para mantenerlas erguidas y redistribuir la arena ({f["cons"]}).</p>
+<h2>La pista de los profesionales</h2>
+<p>Mondo fue proveedor oficial del World Padel Tour de 2015 a 2023 y desde 2024 suministra el césped de Premier Padel y de la FIP. Su Premier Supercourt X3 combina monofilamentos de distintas formas con fibras texturizadas y usa arena silícea como relleno ({f["mondo"]}). Es el césped de las pistas oficiales de Premier Padel, con su edición negra y dorada ({f["pap"]}).</p>
+<h2>Césped nuevo o gastado: qué cambia</h2>
+<ul><li><b>Césped nuevo y con mucha arena:</b> la bola se frena y bota menos, las zapatillas agarran más.</li>
+<li><b>Césped gastado y con poca arena:</b> la bola va más rápida y baja, y se resbala más. Cuidado en los desplazamientos laterales.</li>
+<li><b>Humedad:</b> la arena mojada compacta el suelo y cambia el bote; a primera hora o tras la lluvia la pista juega distinto.</li></ul>
+<h2>Indoor o exterior</h2>
+<p>El reglamento exige al menos 6 metros de altura libre sobre la pista (8 recomendados en instalaciones nuevas) y una iluminación mínima de 300 lux en indoor y 200 lux en exterior para el juego recreativo, 750 y 500 lux para competiciones nacionales e internacionales ({f["fip"]}). En indoor la bola sufre menos el viento y la humedad, así que el bote es más constante.</p>
+<h2>Las zapatillas adecuadas</h2>
+<p>En el césped artificial con arena la suela más indicada es la de espiga; en pistas indoor o con poca arena va bien una omni. Lo tienes todo en la <a href="{sc}">guía de zapatillas de pádel</a>. Para la otra mitad de la pista, lee el artículo sobre <a href="{vt}">cristales y pistas panorámicas</a>.</p>
+<p class="note">Fuentes: {f["fip"]}; {f["cons"]}; {f["ilk"]}; {f["mondo"]}; {f["pap"]}.</p>''',
+              f'''<p><b>Presque tous les terrains de padel sont en gazon synthétique sablé, mais le gazon n'est pas toujours le même : fibrillé, monofilament et texturé changent la vitesse de la balle, l'accroche et la durée de vie. Le règlement admet aussi le béton poreux et les surfaces synthétiques, à condition que le rebond soit régulier et que l'eau ne stagne pas.</b></p>
+<h2>Ce que dit le règlement</h2>
+<ul><li><b>Matériaux admis :</b> béton poreux, ciment, synthétique et gazon artificiel ({f["fip"]}).</li>
+<li><b>Couleurs :</b> de préférence vert, bleu clair ou terre cuite, uniformes ; le noir n'est admis qu'en intérieur.</li>
+<li><b>Planéité :</b> écarts moyens inférieurs à 3 mm sur 3 m.</li>
+<li><b>Lignes :</b> 5 cm de large, de préférence blanches ou noires.</li></ul>
+<h2>Les trois types de gazon synthétique</h2>{te}
+<p class="note">Sources : {f["cons"]} ; {f["ilk"]}.</p>
+<p>Dans tous les cas, la surface doit avoir des fibres courtes et une couture serrée ({f["ilk"]}). Le sable de quartz entre les fibres donne de l'accroche et amortit les appuis ; c'est pourquoi il faut brosser les fibres pour les garder droites et redistribuer le sable ({f["cons"]}).</p>
+<h2>Le terrain des pros</h2>
+<p>Mondo a été le fournisseur officiel du World Padel Tour de 2015 à 2023 et fournit depuis 2024 le gazon de Premier Padel et de la FIP. Son Premier Supercourt X3 associe des monofilaments de formes différentes à des fibres texturées, avec un remplissage de sable siliceux ({f["mondo"]}). C'est le gazon des terrains officiels Premier Padel, dans leur édition noir et or ({f["pap"]}).</p>
+<h2>Gazon neuf ou usé : ce qui change</h2>
+<ul><li><b>Gazon neuf et bien sablé :</b> la balle ralentit et rebondit moins, les chaussures accrochent davantage.</li>
+<li><b>Gazon usé et peu sablé :</b> la balle va plus vite et plus bas, on glisse davantage. Attention aux déplacements latéraux.</li>
+<li><b>Humidité :</b> le sable mouillé compacte le sol et modifie le rebond ; tôt le matin ou après la pluie, le terrain joue différemment.</li></ul>
+<h2>Intérieur ou extérieur</h2>
+<p>Le règlement exige au moins 6 mètres de hauteur libre au-dessus du terrain (8 conseillés pour les nouvelles installations) et un éclairage minimal de 300 lux en intérieur et 200 lux en extérieur pour le loisir, 750 et 500 lux pour les compétitions nationales et internationales ({f["fip"]}). En intérieur, la balle subit moins le vent et l'humidité, donc le rebond est plus constant.</p>
+<h2>Les bonnes chaussures</h2>
+<p>Sur gazon synthétique sablé, la semelle la plus indiquée est à chevrons ; en intérieur ou sur terrain peu sablé, une omni convient. Tout est dans le <a href="{sc}">guide des chaussures de padel</a>. Pour l'autre moitié du terrain, lisez l'article sur les <a href="{vt}">vitres et les terrains panoramiques</a>.</p>
+<p class="note">Sources : {f["fip"]} ; {f["cons"]} ; {f["ilk"]} ; {f["mondo"]} ; {f["pap"]}.</p>''')
+    qa = [(L("Su che superficie si gioca a padel?", "What surface is padel played on?", "¿Sobre qué superficie se juega al pádel?", "Sur quelle surface joue-t-on au padel ?"),
+           L("Quasi sempre su erba sintetica con sabbia di quarzo; il regolamento ammette anche cemento poroso e superfici sintetiche.", "Almost always on sand-filled artificial grass; the rules also allow porous concrete and synthetic surfaces.",
+             "Casi siempre sobre césped artificial con arena de cuarzo; el reglamento admite también hormigón poroso y superficies sintéticas.", "Presque toujours sur gazon synthétique sablé ; le règlement admet aussi le béton poreux et les surfaces synthétiques.")),
+          (L("Che differenza c'è tra erba fibrillata e monofilo?", "What's the difference between fibrillated and monofilament grass?", "¿Qué diferencia hay entre césped fibrilado y monofilamento?", "Quelle différence entre gazon fibrillé et monofilament ?"),
+           L("La fibrillata dà un rimbalzo più veloce e regolare ma dura meno; il monofilo frena un po' la palla, dura di più e va spazzolato spesso.", "Fibrillated gives a faster, more consistent bounce but wears sooner; monofilament slows the ball slightly, lasts longer and needs frequent brushing.",
+             "El fibrilado da un bote más rápido y regular pero dura menos; el monofilamento frena un poco la bola, dura más y hay que cepillarlo a menudo.", "Le fibrillé donne un rebond plus rapide et régulier mais dure moins ; le monofilament freine un peu la balle, dure plus et doit être brossé souvent.")),
+          (L("Che erba usano i tornei Premier Padel?", "What turf does Premier Padel use?", "¿Qué césped usa Premier Padel?", "Quel gazon utilise Premier Padel ?"),
+           L("La Premier Supercourt X3 di Mondo, fornitore ufficiale dal 2024: monofili di forme diverse e fibre testurizzate con sabbia silicea.", "Mondo's Premier Supercourt X3, the official supplier since 2024: monofilaments of different shapes and texturised fibres with silica sand.",
+             "La Premier Supercourt X3 de Mondo, proveedor oficial desde 2024: monofilamentos de distintas formas y fibras texturizadas con arena silícea.", "Le Premier Supercourt X3 de Mondo, fournisseur officiel depuis 2024 : monofilaments de formes différentes et fibres texturées avec sable siliceux."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("Le superfici dei campi da padel: tipi di erba sintetica e cosa cambiano", "Padel court surfaces: types of artificial grass and how they play",
+               "Las superficies de las pistas de pádel: tipos de césped artificial y cómo influyen", "Les surfaces des terrains de padel : types de gazon synthétique et leur effet")
+    desc = L("Fibrillata, monofilo o testurizzata: i tipi di erba sintetica dei campi da padel, cosa dice il regolamento, l'erba di Premier Padel e come cambia il gioco.",
+             "Fibrillated, monofilament or texturised: the types of artificial grass on padel courts, what the rules say, Premier Padel's turf and how play changes.",
+             "Fibrilado, monofilamento o texturizado: los tipos de césped artificial de las pistas de pádel, qué dice el reglamento, el césped de Premier Padel y cómo cambia el juego.",
+             "Fibrillé, monofilament ou texturé : les types de gazon synthétique des terrains de padel, ce que dit le règlement, le gazon de Premier Padel et l'effet sur le jeu.")
+    scrivi_articolo(SU_SLUG, titolo + " | PadelMetrix", desc, titolo, L("Superfici del campo", "Court surfaces", "Superficies de la pista", "Surfaces du terrain"), corpo + faq_htm, ld_extra=[faq_ld])
+    return SU_SLUG, titolo, L("Fibrillata, monofilo o testurizzata: come l'erba cambia la palla.", "Fibrillated, monofilament or texturised: how the grass changes the ball.",
+                              "Fibrilado, monofilamento o texturizado: cómo el césped cambia la bola.", "Fibrillé, monofilament ou texturé : comment le gazon change la balle.")
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -2468,7 +2737,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_metalbone(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_vetri(db), art_metalbone(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
