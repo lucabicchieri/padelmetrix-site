@@ -1,0 +1,144 @@
+{
+  "slug": "quad-fox-2026",
+  "marca": "QUAD",
+  "modello": "Fox",
+  "anno": 2026,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "355 g circa",
+  "forma": "goccia",
+  "nucleo": "Hyper Soft Foam (media densità)",
+  "superficie": "Carbonio 3K, 2 strati",
+  "telaio": "Carbonio con rinforzi perimetrali",
+  "stile": "offensivo",
+  "prezzo_listino_eur": 290,
+  "simili": [
+    "bullpadel-vertex-05-geo-2026",
+    "siux-diablo-elite-6-2026",
+    "siux-electra-elite-2026"
+  ],
+  "fonti_dati": [
+    "https://www.quad-sports.com/products/quad-fox-padel-racket"
+  ],
+  "aggiornato": "2026-11-07",
+  "pagina": {
+    "titolo": "QUAD Fox 2026",
+    "title_tag": "QUAD Fox 2026: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "QUAD Fox 2026: forma goccia, peso 355 g circa, carbonio 3K. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Fox 2026",
+    "eyebrow": "QUAD · Collezione 2026",
+    "chips": [
+      "Goccia",
+      "355 g circa",
+      "Carbonio 3K"
+    ],
+    "lead": "Goccia leggera e rinnovata per il gioco offensivo: due strati di carbonio 3K più flessibili, gomma di media densità per comfort e uscita di palla, fori di due misure e sistema antivibrazione per uno sweet spot più uniforme. QUAD non indica l'anno del modello: è quello in catalogo a novembre 2026.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=QUAD+Fox+2026",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 290 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=quad-fox-2026,bullpadel-vertex-05-geo-2026",
+      "testo": "Confronta con Vertex 05 Geo 2026"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "QUAD"
+      ],
+      [
+        "Modello",
+        "Fox"
+      ],
+      [
+        "Collezione",
+        "2026"
+      ],
+      [
+        "Forma",
+        "Goccia"
+      ],
+      [
+        "Peso",
+        "355 g circa"
+      ],
+      [
+        "Bilanciamento",
+        "Non dichiarato"
+      ],
+      [
+        "Nucleo",
+        "Hyper Soft Foam (media densità)"
+      ],
+      [
+        "Superficie",
+        "Carbonio 3K, 2 strati"
+      ],
+      [
+        "Telaio",
+        "Carbonio con rinforzi perimetrali"
+      ],
+      [
+        "Stile di gioco",
+        "Offensivo"
+      ],
+      [
+        "Prezzo di listino",
+        "290 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.quad-sports.com/products/quad-fox-padel-racket\" rel=\"nofollow noopener\" target=\"_blank\">QUAD</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. QUAD la descrive così: goccia leggera e rinnovata per il gioco offensivo: due strati di carbonio 3K più flessibili, gomma di media densità per comfort e uscita di palla, fori di due misure e sistema antivibrazione per uno sweet spot più uniforme. QUAD non indica l'anno del modello: è quello in catalogo a novembre 2026. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Impronta offensiva con buona spinta",
+      "Collezione 2026 di QUAD"
+    ],
+    "contro": [
+      "Recensioni indipendenti ancora poche",
+      "Alcuni dati tecnici non sono dichiarati dal produttore"
+    ],
+    "adatta": [
+      "Ti piace attaccare e chiudere i punti a rete"
+    ],
+    "non_adatta": [
+      "Sei avanzato e cerchi il massimo delle prestazioni",
+      "Giochi soprattutto in difesa da fondo campo"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/bullpadel-vertex-05-geo-2026/",
+        "sopra": "Bullpadel · 2026",
+        "nome": "Vertex 05 Geo 2026",
+        "testo": "Goccia d'attacco, 365–375 g, carbonio 3K, livello avanzato."
+      },
+      {
+        "url": "/racchette/siux-diablo-elite-6-2026/",
+        "sopra": "Siux · 2026",
+        "nome": "Diablo Elite 6 2026",
+        "testo": "Goccia d'attacco, 355–375 g, livello intermedio / avanzato."
+      },
+      {
+        "url": "/racchette/siux-electra-elite-2026/",
+        "sopra": "Siux · 2026",
+        "nome": "Electra Elite 2026",
+        "testo": "Goccia d'attacco, livello intermedio / avanzato."
+      }
+    ],
+    "aggiornata": "7 novembre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Racchetta d'attacco",
+        "Forma goccia"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}

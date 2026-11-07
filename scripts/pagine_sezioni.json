@@ -81,6 +81,15 @@
 }
 },
 {
+"path": "/it/marche/quad/",
+"alt": {
+"it": "/it/marche/quad/",
+"en": "/en/brands/quad/",
+"es": "/es/marcas/quad/",
+"fr": "/fr/marques/quad/"
+}
+},
+{
 "path": "/it/marche/wilson/",
 "alt": {
 "it": "/it/marche/wilson/",
@@ -261,6 +270,15 @@
 }
 },
 {
+"path": "/it/confronta/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"en": "/en/compare/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"es": "/es/comparar/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"fr": "/fr/comparer/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/"
+}
+},
+{
 "path": "/it/confronta/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
 "alt": {
 "it": "/it/confronta/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
@@ -312,6 +330,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/"
+}
+},
+{
+"path": "/it/confronta/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
 }
 },
 {
@@ -369,6 +396,15 @@
 }
 },
 {
+"path": "/it/confronta/adidas-metalbone-2026-vs-quad-naja-2026/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-2026-vs-quad-naja-2026/",
+"en": "/en/compare/adidas-metalbone-2026-vs-quad-naja-2026/",
+"es": "/es/comparar/adidas-metalbone-2026-vs-quad-naja-2026/",
+"fr": "/fr/comparer/adidas-metalbone-2026-vs-quad-naja-2026/"
+}
+},
+{
 "path": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -420,6 +456,24 @@
 "en": "/en/compare/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/"
+}
+},
+{
+"path": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/"
 }
 },
 {
@@ -558,6 +612,15 @@
 }
 },
 {
+"path": "/it/confronta/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/"
+}
+},
+{
 "path": "/it/confronta/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
 "alt": {
 "it": "/it/confronta/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
@@ -654,6 +717,15 @@
 "en": "/en/compare/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "es": "/es/comparar/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "fr": "/fr/comparer/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/"
+}
+},
+{
+"path": "/it/confronta/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"en": "/en/compare/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"es": "/es/comparar/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"fr": "/fr/comparer/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/"
 }
 },
 {
@@ -1131,6 +1203,24 @@
 "en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/"
+}
+},
+{
+"path": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/"
+}
+},
+{
+"path": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/"
 }
 },
 {
@@ -1998,6 +2088,60 @@
 }
 },
 {
+"path": "/it/confronta/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"alt": {
+"it": "/it/confronta/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"en": "/en/compare/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"es": "/es/comparar/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"fr": "/fr/comparer/quad-diogo-dalot-2026-vs-quad-muklay-2026/"
+}
+},
+{
+"path": "/it/confronta/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/it/confronta/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/quad-fpf-edition-2026-vs-quad-garuda-2025/"
+}
+},
+{
+"path": "/it/confronta/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-guel-do-it-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/it/confronta/quad-leopard-2026-vs-quad-wolf-2026/",
+"alt": {
+"it": "/it/confronta/quad-leopard-2026-vs-quad-wolf-2026/",
+"en": "/en/compare/quad-leopard-2026-vs-quad-wolf-2026/",
+"es": "/es/comparar/quad-leopard-2026-vs-quad-wolf-2026/",
+"fr": "/fr/comparer/quad-leopard-2026-vs-quad-wolf-2026/"
+}
+},
+{
+"path": "/it/confronta/quad-shark-2026-vs-siux-electra-pro-2027/",
+"alt": {
+"it": "/it/confronta/quad-shark-2026-vs-siux-electra-pro-2027/",
+"en": "/en/compare/quad-shark-2026-vs-siux-electra-pro-2027/",
+"es": "/es/comparar/quad-shark-2026-vs-siux-electra-pro-2027/",
+"fr": "/fr/comparer/quad-shark-2026-vs-siux-electra-pro-2027/"
+}
+},
+{
 "path": "/it/confronta/royal-padel-130-factor-2026-vs-royal-padel-m27-light-2026/",
 "alt": {
 "it": "/it/confronta/royal-padel-130-factor-2026-vs-royal-padel-m27-light-2026/",
@@ -2529,6 +2673,15 @@
 }
 },
 {
+"path": "/en/brands/quad/",
+"alt": {
+"it": "/it/marche/quad/",
+"en": "/en/brands/quad/",
+"es": "/es/marcas/quad/",
+"fr": "/fr/marques/quad/"
+}
+},
+{
 "path": "/en/brands/wilson/",
 "alt": {
 "it": "/it/marche/wilson/",
@@ -2709,6 +2862,15 @@
 }
 },
 {
+"path": "/en/compare/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"en": "/en/compare/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"es": "/es/comparar/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"fr": "/fr/comparer/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/"
+}
+},
+{
 "path": "/en/compare/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
 "alt": {
 "it": "/it/confronta/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
@@ -2760,6 +2922,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/"
+}
+},
+{
+"path": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
 }
 },
 {
@@ -2817,6 +2988,15 @@
 }
 },
 {
+"path": "/en/compare/adidas-metalbone-2026-vs-quad-naja-2026/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-2026-vs-quad-naja-2026/",
+"en": "/en/compare/adidas-metalbone-2026-vs-quad-naja-2026/",
+"es": "/es/comparar/adidas-metalbone-2026-vs-quad-naja-2026/",
+"fr": "/fr/comparer/adidas-metalbone-2026-vs-quad-naja-2026/"
+}
+},
+{
 "path": "/en/compare/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -2868,6 +3048,24 @@
 "en": "/en/compare/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/"
+}
+},
+{
+"path": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/"
 }
 },
 {
@@ -3006,6 +3204,15 @@
 }
 },
 {
+"path": "/en/compare/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/"
+}
+},
+{
 "path": "/en/compare/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
 "alt": {
 "it": "/it/confronta/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
@@ -3102,6 +3309,15 @@
 "en": "/en/compare/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "es": "/es/comparar/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "fr": "/fr/comparer/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/"
+}
+},
+{
+"path": "/en/compare/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"en": "/en/compare/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"es": "/es/comparar/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"fr": "/fr/comparer/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/"
 }
 },
 {
@@ -3579,6 +3795,24 @@
 "en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/"
+}
+},
+{
+"path": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/"
+}
+},
+{
+"path": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/"
 }
 },
 {
@@ -4446,6 +4680,60 @@
 }
 },
 {
+"path": "/en/compare/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"alt": {
+"it": "/it/confronta/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"en": "/en/compare/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"es": "/es/comparar/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"fr": "/fr/comparer/quad-diogo-dalot-2026-vs-quad-muklay-2026/"
+}
+},
+{
+"path": "/en/compare/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/en/compare/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/quad-fpf-edition-2026-vs-quad-garuda-2025/"
+}
+},
+{
+"path": "/en/compare/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-guel-do-it-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/en/compare/quad-leopard-2026-vs-quad-wolf-2026/",
+"alt": {
+"it": "/it/confronta/quad-leopard-2026-vs-quad-wolf-2026/",
+"en": "/en/compare/quad-leopard-2026-vs-quad-wolf-2026/",
+"es": "/es/comparar/quad-leopard-2026-vs-quad-wolf-2026/",
+"fr": "/fr/comparer/quad-leopard-2026-vs-quad-wolf-2026/"
+}
+},
+{
+"path": "/en/compare/quad-shark-2026-vs-siux-electra-pro-2027/",
+"alt": {
+"it": "/it/confronta/quad-shark-2026-vs-siux-electra-pro-2027/",
+"en": "/en/compare/quad-shark-2026-vs-siux-electra-pro-2027/",
+"es": "/es/comparar/quad-shark-2026-vs-siux-electra-pro-2027/",
+"fr": "/fr/comparer/quad-shark-2026-vs-siux-electra-pro-2027/"
+}
+},
+{
 "path": "/en/compare/royal-padel-130-factor-2026-vs-royal-padel-m27-light-2026/",
 "alt": {
 "it": "/it/confronta/royal-padel-130-factor-2026-vs-royal-padel-m27-light-2026/",
@@ -4977,6 +5265,15 @@
 }
 },
 {
+"path": "/es/marcas/quad/",
+"alt": {
+"it": "/it/marche/quad/",
+"en": "/en/brands/quad/",
+"es": "/es/marcas/quad/",
+"fr": "/fr/marques/quad/"
+}
+},
+{
 "path": "/es/marcas/wilson/",
 "alt": {
 "it": "/it/marche/wilson/",
@@ -5157,6 +5454,15 @@
 }
 },
 {
+"path": "/es/comparar/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"en": "/en/compare/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"es": "/es/comparar/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"fr": "/fr/comparer/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/"
+}
+},
+{
 "path": "/es/comparar/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
 "alt": {
 "it": "/it/confronta/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
@@ -5208,6 +5514,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/"
+}
+},
+{
+"path": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
 }
 },
 {
@@ -5265,6 +5580,15 @@
 }
 },
 {
+"path": "/es/comparar/adidas-metalbone-2026-vs-quad-naja-2026/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-2026-vs-quad-naja-2026/",
+"en": "/en/compare/adidas-metalbone-2026-vs-quad-naja-2026/",
+"es": "/es/comparar/adidas-metalbone-2026-vs-quad-naja-2026/",
+"fr": "/fr/comparer/adidas-metalbone-2026-vs-quad-naja-2026/"
+}
+},
+{
 "path": "/es/comparar/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -5316,6 +5640,24 @@
 "en": "/en/compare/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/"
+}
+},
+{
+"path": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/"
 }
 },
 {
@@ -5454,6 +5796,15 @@
 }
 },
 {
+"path": "/es/comparar/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/"
+}
+},
+{
 "path": "/es/comparar/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
 "alt": {
 "it": "/it/confronta/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
@@ -5550,6 +5901,15 @@
 "en": "/en/compare/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "es": "/es/comparar/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "fr": "/fr/comparer/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/"
+}
+},
+{
+"path": "/es/comparar/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"en": "/en/compare/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"es": "/es/comparar/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"fr": "/fr/comparer/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/"
 }
 },
 {
@@ -6027,6 +6387,24 @@
 "en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/"
+}
+},
+{
+"path": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/"
+}
+},
+{
+"path": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/"
 }
 },
 {
@@ -6894,6 +7272,60 @@
 }
 },
 {
+"path": "/es/comparar/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"alt": {
+"it": "/it/confronta/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"en": "/en/compare/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"es": "/es/comparar/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"fr": "/fr/comparer/quad-diogo-dalot-2026-vs-quad-muklay-2026/"
+}
+},
+{
+"path": "/es/comparar/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/es/comparar/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/quad-fpf-edition-2026-vs-quad-garuda-2025/"
+}
+},
+{
+"path": "/es/comparar/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-guel-do-it-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/es/comparar/quad-leopard-2026-vs-quad-wolf-2026/",
+"alt": {
+"it": "/it/confronta/quad-leopard-2026-vs-quad-wolf-2026/",
+"en": "/en/compare/quad-leopard-2026-vs-quad-wolf-2026/",
+"es": "/es/comparar/quad-leopard-2026-vs-quad-wolf-2026/",
+"fr": "/fr/comparer/quad-leopard-2026-vs-quad-wolf-2026/"
+}
+},
+{
+"path": "/es/comparar/quad-shark-2026-vs-siux-electra-pro-2027/",
+"alt": {
+"it": "/it/confronta/quad-shark-2026-vs-siux-electra-pro-2027/",
+"en": "/en/compare/quad-shark-2026-vs-siux-electra-pro-2027/",
+"es": "/es/comparar/quad-shark-2026-vs-siux-electra-pro-2027/",
+"fr": "/fr/comparer/quad-shark-2026-vs-siux-electra-pro-2027/"
+}
+},
+{
 "path": "/es/comparar/royal-padel-130-factor-2026-vs-royal-padel-m27-light-2026/",
 "alt": {
 "it": "/it/confronta/royal-padel-130-factor-2026-vs-royal-padel-m27-light-2026/",
@@ -7425,6 +7857,15 @@
 }
 },
 {
+"path": "/fr/marques/quad/",
+"alt": {
+"it": "/it/marche/quad/",
+"en": "/en/brands/quad/",
+"es": "/es/marcas/quad/",
+"fr": "/fr/marques/quad/"
+}
+},
+{
 "path": "/fr/marques/wilson/",
 "alt": {
 "it": "/it/marche/wilson/",
@@ -7605,6 +8046,15 @@
 }
 },
 {
+"path": "/fr/comparer/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"en": "/en/compare/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"es": "/es/comparar/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/",
+"fr": "/fr/comparer/adidas-arrow-hit-junior-2026-vs-quad-t-rex-junior-2026/"
+}
+},
+{
 "path": "/fr/comparer/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
 "alt": {
 "it": "/it/confronta/adidas-arrow-hit-light-2026-vs-adidas-metalbone-reserve-edt-2026/",
@@ -7656,6 +8106,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/"
+}
+},
+{
+"path": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
 }
 },
 {
@@ -7713,6 +8172,15 @@
 }
 },
 {
+"path": "/fr/comparer/adidas-metalbone-2026-vs-quad-naja-2026/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-2026-vs-quad-naja-2026/",
+"en": "/en/compare/adidas-metalbone-2026-vs-quad-naja-2026/",
+"es": "/es/comparar/adidas-metalbone-2026-vs-quad-naja-2026/",
+"fr": "/fr/comparer/adidas-metalbone-2026-vs-quad-naja-2026/"
+}
+},
+{
 "path": "/fr/comparer/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -7764,6 +8232,24 @@
 "en": "/en/compare/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-garuda-ii-2026/"
+}
+},
+{
+"path": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"alt": {
+"it": "/it/confronta/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"en": "/en/compare/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"es": "/es/comparar/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/",
+"fr": "/fr/comparer/babolat-air-veron-2-6-2026-vs-quad-rhino-2024/"
 }
 },
 {
@@ -7902,6 +8388,15 @@
 }
 },
 {
+"path": "/fr/comparer/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/babolat-technical-viper-3-0-2026-vs-quad-garuda-2025/"
+}
+},
+{
 "path": "/fr/comparer/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
 "alt": {
 "it": "/it/confronta/babolat-veron-juan-lebron-3-0-2026-vs-bullpadel-hack-05-comfort-2027/",
@@ -7998,6 +8493,15 @@
 "en": "/en/compare/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "es": "/es/comparar/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/",
 "fr": "/fr/comparer/black-crown-viva-2026-vs-wilson-optix-v2-lite-2026/"
+}
+},
+{
+"path": "/fr/comparer/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"en": "/en/compare/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"es": "/es/comparar/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/",
+"fr": "/fr/comparer/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/"
 }
 },
 {
@@ -8475,6 +8979,24 @@
 "en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/",
 "fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-drop-shot-prime-attack-2026/"
+}
+},
+{
+"path": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-euro-padel-cup-edition-2026/"
+}
+},
+{
+"path": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"en": "/en/compare/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"es": "/es/comparar/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/",
+"fr": "/fr/comparer/bullpadel-vertex-05-geo-2026-vs-quad-fox-2026/"
 }
 },
 {
@@ -9339,6 +9861,60 @@
 "en": "/en/compare/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
 "es": "/es/comparar/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
 "fr": "/fr/comparer/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/"
+}
+},
+{
+"path": "/fr/comparer/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"alt": {
+"it": "/it/confronta/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"en": "/en/compare/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"es": "/es/comparar/quad-diogo-dalot-2026-vs-quad-muklay-2026/",
+"fr": "/fr/comparer/quad-diogo-dalot-2026-vs-quad-muklay-2026/"
+}
+},
+{
+"path": "/fr/comparer/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-dragon-ii-fc-porto-edition-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/fr/comparer/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"alt": {
+"it": "/it/confronta/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"en": "/en/compare/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"es": "/es/comparar/quad-fpf-edition-2026-vs-quad-garuda-2025/",
+"fr": "/fr/comparer/quad-fpf-edition-2026-vs-quad-garuda-2025/"
+}
+},
+{
+"path": "/fr/comparer/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"alt": {
+"it": "/it/confronta/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"en": "/en/compare/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"es": "/es/comparar/quad-guel-do-it-2026-vs-quad-tiger-2026/",
+"fr": "/fr/comparer/quad-guel-do-it-2026-vs-quad-tiger-2026/"
+}
+},
+{
+"path": "/fr/comparer/quad-leopard-2026-vs-quad-wolf-2026/",
+"alt": {
+"it": "/it/confronta/quad-leopard-2026-vs-quad-wolf-2026/",
+"en": "/en/compare/quad-leopard-2026-vs-quad-wolf-2026/",
+"es": "/es/comparar/quad-leopard-2026-vs-quad-wolf-2026/",
+"fr": "/fr/comparer/quad-leopard-2026-vs-quad-wolf-2026/"
+}
+},
+{
+"path": "/fr/comparer/quad-shark-2026-vs-siux-electra-pro-2027/",
+"alt": {
+"it": "/it/confronta/quad-shark-2026-vs-siux-electra-pro-2027/",
+"en": "/en/compare/quad-shark-2026-vs-siux-electra-pro-2027/",
+"es": "/es/comparar/quad-shark-2026-vs-siux-electra-pro-2027/",
+"fr": "/fr/comparer/quad-shark-2026-vs-siux-electra-pro-2027/"
 }
 },
 {
