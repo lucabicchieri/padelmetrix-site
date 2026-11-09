@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-09T06:56Z",
+ "aggiornato": "2026-11-09T07:09Z",
  "prodotti": {
   "B0FZWVYJS8": {
    "img": "https://m.media-amazon.com/images/I/41EV0vFpWOL._SL500_.jpg",
@@ -631,47 +631,145 @@
    "titolo": "Wilson Blade V4 Racchetta da Padel, Verde | Racchetta da padel a goccia per intermedi e avanzati, con potenza esplosiva, controllo preciso e stabilità",
    "scheda": "wilson-blade-v4-2026"
   },
-  "B0H3Z2RS2Y": {
-   "img": "https://m.media-amazon.com/images/I/41EU9TqIpHL._SL500_.jpg",
+  "B09VCS7578": {
+   "img": "https://m.media-amazon.com/images/I/31EhkOECEZL._SL500_.jpg",
    "w": 500,
    "h": 500,
-   "titolo": "Wilson Defy Pro V1 Padel Racket 2",
-   "scheda": "wilson-defy-pro-v1-2026"
+   "titolo": "JOOLA Racchetta da Pickleball Ben Johns Hyperion CFS, Paddle Professionale di Alta Qualità in Carbonio, Certificato USAPA, CFS 16mm, 42 x 19 cm",
+   "scheda": "pickleball/joola-hyperion-cfs-16"
   },
-  "B0GF3C4TWM": {
-   "img": "https://m.media-amazon.com/images/I/41lacd1ANRL._SL500_.jpg",
-   "w": 500,
+  "B0C4M5TWRF": {
+   "img": "https://m.media-amazon.com/images/I/31yB8Dom7HL._SL500_.jpg",
+   "w": 375,
    "h": 500,
-   "titolo": "Wilson Endure Ls V1 Racchette da padel 402g Unisex blu",
-   "scheda": "wilson-endure-ls-v1-2026"
+   "titolo": "JOOLA Ben Johns Perseus CFS - Racchetta da pickleball professionale in carbonio, certificata USAPA, CFS 14 mm, 42 x 19 cm",
+   "scheda": "pickleball/joola-perseus-cfs-14"
   },
-  "B0GF3B92HV": {
-   "img": "https://m.media-amazon.com/images/I/41UDOMF92uL._SL500_.jpg",
+  "B09VCRKGCP": {
+   "img": "https://m.media-amazon.com/images/I/31cpe2HF3vL._SL500_.jpg",
    "w": 500,
    "h": 500,
-   "titolo": "Wilson Endure Pro V1 Racchette da padel 412g Unisex blu",
-   "scheda": "wilson-endure-pro-v1-2026"
+   "titolo": "JOOLA Racchetta da Pickleball Ben Johns Hyperion CAS, Paddle Professionale di Alta Qualità in Carbonio, Certificato USAPA, Hyperion-CAS 16mm, 42 x 19 cm",
+   "scheda": "pickleball/joola-hyperion-cas-16"
   },
-  "B0GF3BFJH7": {
-   "img": "https://m.media-amazon.com/images/I/41TasACGz8L._SL500_.jpg",
+  "B09VCT79FS": {
+   "img": "https://m.media-amazon.com/images/I/31AUUGMN5VL._SL500_.jpg",
    "w": 500,
    "h": 500,
-   "titolo": "Wilson Endure V1 Racchette da padel 406g Unisex blu",
-   "scheda": "wilson-endure-v1-2026"
+   "titolo": "JOOLA Solaire Paddle Professionale da Pickleball con Superficie in Carbonio Abrasivo - Racchetta da Pickleball con Nucleo Reattivo in Polipropilene a Nido d'Ape, 14 mm",
+   "scheda": "pickleball/joola-solaire-cfs-14"
   },
-  "B0G8RWTLML": {
-   "img": "https://m.media-amazon.com/images/I/31d3rk7Nc9L._SL500_.jpg",
+  "B0DQQNVBVH": {
+   "img": "https://m.media-amazon.com/images/I/31cJ5cOLaML._SL500_.jpg",
    "w": 500,
    "h": 500,
-   "titolo": "Wilson Racchetta da Padel Optix V2 Lite, Per Principianti, Con Faccia in Fibra di Vetro Leggera, Bianco",
-   "scheda": "wilson-optix-v2-lite-2026"
+   "titolo": "JOOLA Racchetta Pickleball Agassi Champion 12mm – con NFC, superficie Spin & tecnologia Sweetspot",
+   "scheda": "pickleball/joola-agassi-champion-12mm"
   },
-  "B0G8RJSRFK": {
-   "img": "https://m.media-amazon.com/images/I/41v+2Ie-BuL._SL500_.jpg",
+  "B09VCTQRQB": {
+   "img": "https://m.media-amazon.com/images/I/31CDLJUXGvL._SL500_.jpg",
    "w": 500,
    "h": 500,
-   "titolo": "Wilson Racchetta da Padel Optix V2 Power, Con Telaio in Fibra di Vetro e Forma a Goccia, Per Gioco Ricreativo, Blu",
-   "scheda": "wilson-optix-v2-power-2026"
+   "titolo": "JOOLA Pickleball Essentials Paddle Racchetta da Pickleball con Superficie in Fibra di Vetro, Nucleo in Polimero e Certificazione USAPA - Ideale per Principianti e Giocatori Ricreativi, Nero",
+   "scheda": "pickleball/joola-essentials"
+  },
+  "B0G7JKS9ZF": {
+   "img": "https://m.media-amazon.com/images/I/318kua2x8wL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "HEAD Radical TEAM15 2026 pagaia per pickleball",
+   "scheda": "pickleball/head-radical-team15-2026"
+  },
+  "B0G7K8VFZ7": {
+   "img": "https://m.media-amazon.com/images/I/41Cb6V5D23L._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "HEAD Radical TOUR15 2026 pagaia per pickleball",
+   "scheda": "pickleball/head-radical-tour15-2026"
+  },
+  "B0G7J29BXG": {
+   "img": "https://m.media-amazon.com/images/I/41J1EPeNylL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "HEAD Radical PRO15 2026 pagaia per pickleball",
+   "scheda": "pickleball/head-radical-pro15-2026"
+  },
+  "B0GJ789HN8": {
+   "img": "https://m.media-amazon.com/images/I/41Y2O-UK4-L._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "HEAD Radical TOUR EX15 2026 - Pagaia per pickleball",
+   "scheda": "pickleball/head-radical-tour-ex15-2026"
+  },
+  "B0CKM2WWRB": {
+   "img": "https://m.media-amazon.com/images/I/31zdcgDYWeL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Head Radical Tour Raw - Racchetta da pickleball (4-1/8)",
+   "scheda": "pickleball/head-radical-tour-raw-2024"
+  },
+  "B0CR1H4KHX": {
+   "img": "https://m.media-amazon.com/images/I/3193GXnO41L._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "HEAD Pale unisex per adulti Radical Elite 2024 Pickleball Paddle, arancione, taglia unica",
+   "scheda": "pickleball/head-radical-elite-2024"
+  },
+  "B0BSS87MK3": {
+   "img": "https://m.media-amazon.com/images/I/41x2rH7ViwL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "HEAD Pickleball Extreme Tour Lite 2023",
+   "scheda": "pickleball/head-extreme-tour-lite-2023"
+  },
+  "B0BSXTY3RK": {
+   "img": "https://m.media-amazon.com/images/I/31bm1ryyFxL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Head Head Pickleball Extreme Tour Max 2023 Incordata: No G Pickleball Racchetta Da Pickleball Nero - Verde",
+   "scheda": "pickleball/head-extreme-tour-max-2023"
+  },
+  "B0GMJSMLHC": {
+   "img": "https://m.media-amazon.com/images/I/31Lpm-ch3lL._SL500_.jpg",
+   "w": 375,
+   "h": 500,
+   "titolo": "Selkirk Sport SLK Dauntless - Pagaie per pickleball, allungate, colore: Blu | Il nucleo PureFoam e il sistema di tuning MOI offrono prestazioni su tutti i campi e potenza affidabile",
+   "scheda": "pickleball/slk-dauntless-elongated"
+  },
+  "B0GMK7W1X4": {
+   "img": "https://m.media-amazon.com/images/I/31xxwq1iy9L._SL500_.jpg",
+   "w": 375,
+   "h": 500,
+   "titolo": "Selkirk Sport SLK Dauntless Pickleball Paddles | Widebody Lagoon | Il nucleo PureFoam e il sistema di tuning MOI offrono prestazioni su tutti i campi e potenza affidabile",
+   "scheda": "pickleball/slk-dauntless-widebody"
+  },
+  "B0FCQRHFRK": {
+   "img": "https://m.media-amazon.com/images/I/31h7iQ7G9AL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Selkirk Sport SLK ERA Power Pickleball Paddles | Allungata Ciano | Una racchetta da pickleball per giocatori aggressivi da intermedi ad avanzati, alimentata dalla tecnologia Raw Spin per il",
+   "scheda": "pickleball/slk-era-power-elongated"
+  },
+  "B0GGCDY41K": {
+   "img": "https://m.media-amazon.com/images/I/21Al6a4Y3jL._SL500_.jpg",
+   "w": 375,
+   "h": 500,
+   "titolo": "Selkirk Sport SLK ERA Power Pickleball Paddles | Widebody Regal | Una racchetta da pickleball per giocatori aggressivi da intermedi ad avanzati, alimentata dalla tecnologia Raw Spin per il",
+   "scheda": "pickleball/slk-era-power-widebody"
+  },
+  "B0CVR1THC4": {
+   "img": "https://m.media-amazon.com/images/I/311n3H3RKaL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Selkirk SLK Halo Control XL - Pagaia da pickleball in fibra di carbonio con nucleo in polimero Rev-Core Power | Ultimate Spin & Power | Blu",
+   "scheda": "pickleball/slk-halo-control-xl"
+  },
+  "B0GLGVDCSN": {
+   "img": "https://m.media-amazon.com/images/I/31VRWzNV9lL._SL500_.jpg",
+   "w": 375,
+   "h": 500,
+   "titolo": "Selkirk Sport SLK Geo Pickleball Paddles | Fibra di carbonio | Widebody | Una racchetta da pickleball perdonante con un enorme punto dolce, costruita per il controllo su tutti i campi. Quadrante in",
+   "scheda": "pickleball/slk-geo-widebody"
   }
  }
 }
