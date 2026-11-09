@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-09T07:20Z",
+ "aggiornato": "2026-11-09T20:33Z",
  "prodotti": {
   "B0FZWVYJS8": {
    "img": "https://m.media-amazon.com/images/I/41EV0vFpWOL._SL500_.jpg",
@@ -224,6 +224,27 @@
    "h": 500,
    "titolo": "Dunlop Unisex Nanomax Pro Racchetta da paddle Grey/Orange/White One Size",
    "scheda": "dunlop-nanomax-pro-2026"
+  },
+  "B0GGKXK8VN": {
+   "img": "https://m.media-amazon.com/images/I/41ME1px-TaL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Enebe Genius Padel Racket One Size",
+   "scheda": "enebe-genius-2026"
+  },
+  "B0GGKSV2M3": {
+   "img": "https://m.media-amazon.com/images/I/41djpXeSBcL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Enebe Response 3K Evo Padel Racket One Size",
+   "scheda": "enebe-response-3k-evo-2026"
+  },
+  "B0GGJTF1H5": {
+   "img": "https://m.media-amazon.com/images/I/41gVyKdM1KL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Enebe Space 2.0 Padel Racket One Size",
+   "scheda": "enebe-space-2-0-2026"
   },
   "B0GJQ9M2VJ": {
    "img": "https://m.media-amazon.com/images/I/31vH8nz8jQL._SL500_.jpg",
@@ -602,6 +623,20 @@
    "h": 500,
    "titolo": "Racchetta Tecnifibre Curva Speed 2026 16curspe26",
    "scheda": "tecnifibre-curva-speed-2026"
+  },
+  "B0DHD6RT64": {
+   "img": "https://m.media-amazon.com/images/I/31CkUSBBIlL._SL500_.jpg",
+   "w": 375,
+   "h": 500,
+   "titolo": "Racchetta Padel Guardian TENAX, Full Carbon, Superficie Ruvida, Bilanciamento Basso, Gomma Eva Soft, Forma Rotonda, Uomo e Donna",
+   "scheda": "tenax-padel-guardian-2024"
+  },
+  "B0HJ1X1XZ1": {
+   "img": "https://m.media-amazon.com/images/I/41yvE36Pr5L._SL500_.jpg",
+   "w": 389,
+   "h": 500,
+   "titolo": "Racchetta Padel Hammer '25 TENAX | Piatto in Carbonio 12K | Superficie Ruvida | Bilanciamento Alto | Gomma Eva Hard| Uomo e Donna",
+   "scheda": "tenax-padel-hammer-2025"
   },
   "B0CDXX54KH": {
    "img": "https://m.media-amazon.com/images/I/313DQ2LRN+L._SL500_.jpg",
