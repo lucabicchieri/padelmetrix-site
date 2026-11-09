@@ -47,7 +47,7 @@ T = {
             ("bambini", "Bambini", "Racchette junior divise per età, con una guida per scegliere la misura giusta in base a età e altezza.", "Vai alla sezione bambini"),
         ],
         "tool": "Strumento",
-        "t1": ("Trova la tua racchetta", "7 domande su livello, stile e budget: ti proponiamo le 3 racchette più adatte.", "Fai il test"),
+        "t1": ("Trova la tua racchetta", "9 domande su livello, stile, forma, tatto e budget: ti proponiamo le 3 racchette più adatte.", "Fai il test"),
         "t2": ("Confronta racchette", "Affianca fino a 3 modelli e guarda subito dove si differenziano.", "Apri il comparatore"),
         "come_titolo": "Come lavoriamo",
         "come": [
@@ -82,7 +82,7 @@ T = {
             ("bambini", "Kids", "Junior rackets grouped by age, with a guide to choosing the right size by age and height.", "Go to kids"),
         ],
         "tool": "Tool",
-        "t1": ("Racket finder", "7 questions about your level, style and budget: we suggest the 3 rackets that suit you best.", "Take the quiz"),
+        "t1": ("Racket finder", "9 questions about your level, style, shape, feel and budget: we suggest the 3 rackets that suit you best.", "Take the quiz"),
         "t2": ("Compare rackets", "Put up to 3 models side by side and see straight away where they differ.", "Open the comparison"),
         "come_titolo": "How we work",
         "come": [
@@ -117,7 +117,7 @@ T = {
             ("bambini", "Niños", "Palas junior por edades, con una guía para elegir la medida adecuada según edad y altura.", "Ir a niños"),
         ],
         "tool": "Herramienta",
-        "t1": ("Encuentra tu pala", "7 preguntas sobre tu nivel, estilo y presupuesto: te proponemos las 3 palas que mejor te encajan.", "Hacer el test"),
+        "t1": ("Encuentra tu pala", "9 preguntas sobre tu nivel, estilo, forma, tacto y presupuesto: te proponemos las 3 palas que mejor te encajan.", "Hacer el test"),
         "t2": ("Comparar palas", "Pon hasta 3 modelos lado a lado y ve al instante en qué se diferencian.", "Abrir el comparador"),
         "come_titolo": "Cómo trabajamos",
         "come": [
@@ -152,7 +152,7 @@ T = {
             ("bambini", "Enfants", "Des raquettes junior classées par âge, avec un guide pour choisir la bonne taille selon l'âge et la taille.", "Voir la rubrique enfants"),
         ],
         "tool": "Outil",
-        "t1": ("Trouve ta raquette", "7 questions sur le niveau, le style et le budget : nous vous proposons les 3 raquettes les plus adaptées.", "Faire le test"),
+        "t1": ("Trouve ta raquette", "9 questions sur le niveau, le style, la forme, le toucher et le budget : nous vous proposons les 3 raquettes les plus adaptées.", "Faire le test"),
         "t2": ("Comparer des raquettes", "Mettez jusqu'à 3 modèles côte à côte et voyez tout de suite ce qui les distingue.", "Ouvrir le comparateur"),
         "come_titolo": "Notre méthode",
         "come": [

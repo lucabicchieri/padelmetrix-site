@@ -346,6 +346,7 @@ def carica():
             val=p.get("valutazioni"), lead=p.get("lead", ""), d=d,
             asin=next((x.get("asin") for x in (p.get("negozi") or []) if isinstance(x, dict) and x.get("amazon") and x.get("asin")), None),
         )
+        n["tatto"], n["tatto_stima"] = tatto3(n)
         n["nome"] = n["titolo"].replace(n["marca"] + " ", "", 1)
         if str(n["anno"]) not in n["nome"]:
             n["nome"] += f" {n['anno']}"
@@ -515,11 +516,33 @@ def amazon_js(corpo):
             "el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}})}).catch(function(){})})();</script>")
 
 
+def tatto3(n):
+    """Tatto in tre classi (morbido, medio, duro): dichiarato se c'è, altrimenti stimato dalla gomma."""
+    def da_testo(t, gomma=False):
+        t = str(t or "").lower().replace("durezza media", "media").replace("dureza media", "media").replace("medium hardness", "media")
+        if any(w in t for w in ("morbid", "soft", "blando", "blanda", "comfort", "bassa densit", "low densit", "low-densit", "baja densidad")):
+            return "morbido"
+        if any(w in t for w in ("dur", "rigid", "secc", "ferm", "hard", "high memory", "alta densit", "high densit", "high-densit")):
+            return "duro"
+        if any(w in t for w in ("medi", "medium", "mid")):
+            return "medio"
+        return None
+    t = da_testo(n.get("sensazione"))
+    if t:
+        return t, False
+    t = da_testo(n.get("nucleo"), True)
+    return (t, True) if t else (None, False)
+
+
+def TATTI():
+    return {"morbido": L("Morbido", "Soft", "Blando", "Souple"), "medio": L("Medio", "Medium", "Medio", "Moyen"), "duro": L("Duro", "Hard", "Duro", "Dur")}
+
+
 def card(n, extra=""):
     bits = [x for x in (FORMA(n["forma"]), n["peso"], LIVN(n["livello"])) if x]
     attrs = (f'data-marca="{n["marca_slug"]}" data-forma="{n["forma"] or ""}" data-livello="{n["livello"] or ""}" '
              f'data-stile="{n["stile"] or ""}" data-cat="{"junior" if n["categoria"] == "junior" else ("donna" if n["donna"] else "adulto")}" '
-             f'data-prezzo="{n["prezzo"] or ""}" data-anno="{n["anno"]}" data-nome="{e((n["titolo"] + " " + (n["giocatore"] or "")).lower())}"')
+             f'data-prezzo="{n["prezzo"] or ""}" data-anno="{n["anno"]}" data-tatto="{n.get("tatto") or ""}" data-nome="{e((n["titolo"] + " " + (n["giocatore"] or "")).lower())}"')
     testo = f'<small>{e(n["marca"])} · {n["anno"]}</small><b>{e(n["nome"])}</b><small>{e(" · ".join(bits))}</small>{extra}'
     if n.get("asin"):
         # Con immagine Amazon: l'immagine porta ad Amazon (obbligo della licenza), il testo alla scheda
