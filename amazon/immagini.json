@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-09T07:09Z",
+ "aggiornato": "2026-11-09T07:20Z",
  "prodotti": {
   "B0FZWVYJS8": {
    "img": "https://m.media-amazon.com/images/I/41EV0vFpWOL._SL500_.jpg",
@@ -630,6 +630,76 @@
    "h": 500,
    "titolo": "Wilson Blade V4 Racchetta da Padel, Verde | Racchetta da padel a goccia per intermedi e avanzati, con potenza esplosiva, controllo preciso e stabilità",
    "scheda": "wilson-blade-v4-2026"
+  },
+  "B0H3Z2RS2Y": {
+   "img": "https://m.media-amazon.com/images/I/41EU9TqIpHL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Wilson Defy Pro V1 Padel Racket 2",
+   "scheda": "wilson-defy-pro-v1-2026"
+  },
+  "B0GF3C4TWM": {
+   "img": "https://m.media-amazon.com/images/I/41lacd1ANRL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Wilson Endure Ls V1 Racchette da padel 402g Unisex blu",
+   "scheda": "wilson-endure-ls-v1-2026"
+  },
+  "B0GF3B92HV": {
+   "img": "https://m.media-amazon.com/images/I/41UDOMF92uL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Wilson Endure Pro V1 Racchette da padel 412g Unisex blu",
+   "scheda": "wilson-endure-pro-v1-2026"
+  },
+  "B0GF3BFJH7": {
+   "img": "https://m.media-amazon.com/images/I/41TasACGz8L._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Wilson Endure V1 Racchette da padel 406g Unisex blu",
+   "scheda": "wilson-endure-v1-2026"
+  },
+  "B0G8RWTLML": {
+   "img": "https://m.media-amazon.com/images/I/31d3rk7Nc9L._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Wilson Racchetta da Padel Optix V2 Lite, Per Principianti, Con Faccia in Fibra di Vetro Leggera, Bianco",
+   "scheda": "wilson-optix-v2-lite-2026"
+  },
+  "B0G8RJSRFK": {
+   "img": "https://m.media-amazon.com/images/I/41v+2Ie-BuL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Wilson Racchetta da Padel Optix V2 Power, Con Telaio in Fibra di Vetro e Forma a Goccia, Per Gioco Ricreativo, Blu",
+   "scheda": "wilson-optix-v2-power-2026"
+  },
+  "B0GS35JCRW": {
+   "img": "https://m.media-amazon.com/images/I/31zeJXGGYDL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Pala Pickleball Joola Johns Hyperion Pro V 14 600580",
+   "scheda": "pickleball/joola-hyperion-pro-v-14mm"
+  },
+  "B0GFXSQSWH": {
+   "img": "https://m.media-amazon.com/images/I/3162-vf3AOL._SL500_.jpg",
+   "w": 205,
+   "h": 500,
+   "titolo": "JOOLA Racchetta da Pickleball Ben Johns Hyperion Pro V 16 mm",
+   "scheda": "pickleball/joola-hyperion-pro-v-16mm"
+  },
+  "B0GFXLLKTC": {
+   "img": "https://m.media-amazon.com/images/I/312+AdEFPRL._SL500_.jpg",
+   "w": 204,
+   "h": 500,
+   "titolo": "JOOLA Racchetta da pickleball Collin Johns Scorpeus Pro V 16",
+   "scheda": "pickleball/joola-scorpeus-pro-v-16mm"
+  },
+  "B0GFX4BD8C": {
+   "img": "https://m.media-amazon.com/images/I/31k1VoIz2SL._SL500_.jpg",
+   "w": 206,
+   "h": 500,
+   "titolo": "JOOLA Racchetta da Pickleball Anna Bright Scorpeus Pro V 14 mm",
+   "scheda": "pickleball/joola-scorpeus-pro-v-14mm"
   },
   "B09VCS7578": {
    "img": "https://m.media-amazon.com/images/I/31EhkOECEZL._SL500_.jpg",
