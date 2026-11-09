@@ -894,3 +894,19 @@ for _p in P:
         _p["amazon_verifica"] = VERIFICA_AMZ
     elif _p["slug"] in RICERCA_AMZ:
         _p["amazon"] = RICERCA_AMZ[_p["slug"]]
+
+# ASIN Amazon.it verificati (titolo con marca, modello e misura uguali alla scheda), novembre 2026
+ASIN = {
+    "joola-hyperion-pro-v-14mm": "B0GS35JCRW", "joola-hyperion-pro-v-16mm": "B0GFXSQSWH", "joola-scorpeus-pro-v-16mm": "B0GFXLLKTC",
+    "joola-scorpeus-pro-v-14mm": "B0GFX4BD8C", "joola-hyperion-cfs-16": "B09VCS7578", "joola-perseus-cfs-14": "B0C4M5TWRF",
+    "joola-hyperion-cas-16": "B09VCRKGCP", "joola-solaire-cfs-14": "B09VCT79FS", "joola-agassi-champion-12mm": "B0DQQNVBVH",
+    "joola-essentials": "B09VCTQRQB", "head-radical-team15-2026": "B0G7JKS9ZF", "head-radical-tour15-2026": "B0G7K8VFZ7",
+    "head-radical-pro15-2026": "B0G7J29BXG", "head-radical-tour-ex15-2026": "B0GJ789HN8", "head-radical-tour-raw-2024": "B0CKM2WWRB",
+    "head-radical-elite-2024": "B0CR1H4KHX", "head-extreme-tour-lite-2023": "B0BSS87MK3", "head-extreme-tour-max-2023": "B0BSXTY3RK",
+    "slk-dauntless-elongated": "B0GMJSMLHC", "slk-dauntless-widebody": "B0GMK7W1X4", "slk-era-power-elongated": "B0FCQRHFRK",
+    "slk-era-power-widebody": "B0GGCDY41K", "slk-halo-control-xl": "B0CVR1THC4", "slk-geo-widebody": "B0GLGVDCSN",
+}
+for _p in P:
+    if _p["slug"] in ASIN:
+        _p["asin"] = ASIN[_p["slug"]]
+        _p["amazon"] = _p.get("amazon") or f'{_p["marca"]} {_p["modello"]}'

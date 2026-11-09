@@ -25,6 +25,11 @@ def asin_schede():
         for s in negozi:
             if s.get("amazon") and s.get("asin"):
                 out[s["asin"]] = os.path.basename(f)[:-5]
+    sys.path.insert(0, os.path.join(RADICE, "scripts"))
+    from dati_pickleball import P as PADDLE
+    for p in PADDLE:
+        if p.get("asin"):
+            out[p["asin"]] = "pickleball/" + p["slug"]
     return out
 
 
