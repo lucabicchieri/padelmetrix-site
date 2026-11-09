@@ -5,6 +5,10 @@ on:
       slug:
         description: "Slug separati da spazio (vuoto = tutte le schede)"
         default: ""
+      pickleball:
+        description: "Cerca le racchette da pickleball invece di quelle da padel"
+        type: boolean
+        default: false
 jobs:
   cerca:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
           CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
           CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
           CREATORS_VERSION: ${{ secrets.CREATORS_VERSION }}
-        run: python3 scripts/amazon/cerca_asin.py ${{ github.event.inputs.slug }}
+        run: python3 scripts/amazon/cerca_asin.py ${{ github.event.inputs.pickleball == 'true' && '--pickleball' || '' }} ${{ github.event.inputs.slug }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
