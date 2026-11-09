@@ -62,6 +62,8 @@ def main():
             st, res = cerca(f'{d["marca"]} {d["modello"]}', None, tok, ver)
         out[d["slug"]] = {"cerca": kw, "stato": st, "risultati": res}
         print(f"{i + 1}/{len(schede)} {d['slug']}: HTTP {st}, {len(res) if isinstance(res, list) else res}")
+        for r in (res if isinstance(res, list) else []):
+            print("CAND\t" + d["slug"] + "\t" + (r["asin"] or "") + "\t" + r["marca"] + "\t" + r["titolo"].replace("\t", " "))
         time.sleep(1.1)
     os.makedirs("amazon-out", exist_ok=True)
     json.dump(out, open("amazon-out/candidati.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
