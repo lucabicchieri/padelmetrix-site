@@ -45,7 +45,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Siux+Diablo+Pro+2027",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0HPKPX9ZJ"
       },
       {
         "nome": "PadelPROShop",

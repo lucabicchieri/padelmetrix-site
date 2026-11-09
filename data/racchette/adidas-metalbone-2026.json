@@ -53,7 +53,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Adidas+Metalbone+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0FZX2P72Q"
       },
       {
         "nome": "Adidas Padel",
