@@ -344,6 +344,7 @@ def carica():
             donna=bool(d.get("donna")), giocatore=d.get("giocatore"), superficie=d.get("superficie") or d.get("plano"),
             sensazione=d.get("sensazione") or d.get("tatto"), bilanciamento=d.get("bilanciamento"), nucleo=d.get("nucleo") or d.get("gomma"),
             val=p.get("valutazioni"), lead=p.get("lead", ""), d=d,
+            asin=next((x.get("asin") for x in (p.get("negozi") or []) if isinstance(x, dict) and x.get("amazon") and x.get("asin")), None),
         )
         n["nome"] = n["titolo"].replace(n["marca"] + " ", "", 1)
         if str(n["anno"]) not in n["nome"]:
@@ -487,10 +488,31 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None):
 </main>
 {footer()}
 {extra_js}
+{amazon_js(corpo)}
 {C.body(l, P("cookie"))}
 </body>
 </html>
 '''
+
+
+def amazon_js(corpo):
+    """Immagini ufficiali Amazon (Creators API) per gli elementi con data-asin.
+
+    Licenza Amazon: ogni immagine deve portare alla pagina prodotto Amazon e il link
+    all'immagine si può conservare al massimo 24 ore: oltre, resta il disegno.
+    """
+    if "data-asin" not in corpo:
+        return ""
+    cred = L("Immagine: Amazon", "Image: Amazon", "Imagen: Amazon", "Image : Amazon")
+    return ("<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;"
+            "fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){"
+            "var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;"
+            "els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;"
+            "var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/\"/g,'&quot;');"
+            "el.classList.add('has-img');"
+            "el.innerHTML='<a href=\"https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21\" rel=\"sponsored nofollow noopener\" target=\"_blank\" title=\"Amazon\">"
+            "<img src=\"'+x.img+'\" alt=\"'+alt+'\" loading=\"lazy\"></a>'+(big?'<small>" + cred + "</small>':'');"
+            "el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}})}).catch(function(){})})();</script>")
 
 
 def card(n, extra=""):
@@ -498,8 +520,13 @@ def card(n, extra=""):
     attrs = (f'data-marca="{n["marca_slug"]}" data-forma="{n["forma"] or ""}" data-livello="{n["livello"] or ""}" '
              f'data-stile="{n["stile"] or ""}" data-cat="{"junior" if n["categoria"] == "junior" else ("donna" if n["donna"] else "adulto")}" '
              f'data-prezzo="{n["prezzo"] or ""}" data-anno="{n["anno"]}" data-nome="{e((n["titolo"] + " " + (n["giocatore"] or "")).lower())}"')
+    testo = f'<small>{e(n["marca"])} · {n["anno"]}</small><b>{e(n["nome"])}</b><small>{e(" · ".join(bits))}</small>{extra}'
+    if n.get("asin"):
+        # Con immagine Amazon: l'immagine porta ad Amazon (obbligo della licenza), il testo alla scheda
+        return (f'<div class="rcard has-asin" {attrs}><div class="ill" data-asin="{e(n["asin"])}" data-alt="{e(n["titolo"])}">{racket_svg(n["forma"], 64, n["titolo"])}</div>'
+                f'<a class="rtxt" href="{url_r(n)}">{testo}</a></div>')
     return (f'<a class="rcard" href="{url_r(n)}" {attrs}><div class="ill">{racket_svg(n["forma"], 64, n["titolo"])}</div>'
-            f'<div><small>{e(n["marca"])} · {n["anno"]}</small><b>{e(n["nome"])}</b><small>{e(" · ".join(bits))}</small>{extra}</div></a>')
+            f'<div>{testo}</div></a>')
 
 
 def griglia(items):
