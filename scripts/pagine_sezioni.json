@@ -117,12 +117,30 @@
 }
 },
 {
+"path": "/it/marche/softee/",
+"alt": {
+"it": "/it/marche/softee/",
+"en": "/en/brands/softee/",
+"es": "/es/marcas/softee/",
+"fr": "/fr/marques/softee/"
+}
+},
+{
 "path": "/it/marche/dunlop/",
 "alt": {
 "it": "/it/marche/dunlop/",
 "en": "/en/brands/dunlop/",
 "es": "/es/marcas/dunlop/",
 "fr": "/fr/marques/dunlop/"
+}
+},
+{
+"path": "/it/marche/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -162,6 +180,15 @@
 }
 },
 {
+"path": "/it/marche/enebe/",
+"alt": {
+"it": "/it/marche/enebe/",
+"en": "/en/brands/enebe/",
+"es": "/es/marcas/enebe/",
+"fr": "/fr/marques/enebe/"
+}
+},
+{
 "path": "/it/marche/tecnifibre/",
 "alt": {
 "it": "/it/marche/tecnifibre/",
@@ -189,12 +216,30 @@
 }
 },
 {
+"path": "/it/marche/tenax-padel/",
+"alt": {
+"it": "/it/marche/tenax-padel/",
+"en": "/en/brands/tenax-padel/",
+"es": "/es/marcas/tenax-padel/",
+"fr": "/fr/marques/tenax-padel/"
+}
+},
+{
 "path": "/it/marche/puma/",
 "alt": {
 "it": "/it/marche/puma/",
 "en": "/en/brands/puma/",
 "es": "/es/marcas/puma/",
 "fr": "/fr/marques/puma/"
+}
+},
+{
+"path": "/it/marche/vairo/",
+"alt": {
+"it": "/it/marche/vairo/",
+"en": "/en/brands/vairo/",
+"es": "/es/marcas/vairo/",
+"fr": "/fr/marques/vairo/"
 }
 },
 {
@@ -240,6 +285,15 @@
 "en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/"
+}
+},
+{
+"path": "/it/confronta/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/"
 }
 },
 {
@@ -324,6 +378,15 @@
 }
 },
 {
+"path": "/it/confronta/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
 "path": "/it/confronta/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "alt": {
 "it": "/it/confronta/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
@@ -339,6 +402,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
+}
+},
+{
+"path": "/it/confronta/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-vairo-across-2025/"
 }
 },
 {
@@ -663,6 +735,15 @@
 "en": "/en/compare/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "es": "/es/comparar/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "fr": "/fr/comparer/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/it/confronta/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/confronta/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"en": "/en/compare/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"es": "/es/comparar/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"fr": "/fr/comparer/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/"
 }
 },
 {
@@ -1017,6 +1098,15 @@
 }
 },
 {
+"path": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
 "alt": {
 "it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
@@ -1179,6 +1269,15 @@
 }
 },
 {
+"path": "/it/confronta/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"en": "/en/compare/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"es": "/es/comparar/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"fr": "/fr/comparer/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/"
+}
+},
+{
 "path": "/it/confronta/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
 "alt": {
 "it": "/it/confronta/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
@@ -1305,6 +1404,15 @@
 }
 },
 {
+"path": "/it/confronta/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
 "path": "/it/confronta/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
@@ -1359,6 +1467,15 @@
 }
 },
 {
+"path": "/it/confronta/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"en": "/en/compare/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"es": "/es/comparar/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"fr": "/fr/comparer/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/"
+}
+},
+{
 "path": "/it/confronta/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
@@ -1395,12 +1512,39 @@
 }
 },
 {
+"path": "/it/confronta/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"alt": {
+"it": "/it/confronta/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"en": "/en/compare/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"es": "/es/comparar/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/"
+}
+},
+{
 "path": "/it/confronta/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "alt": {
 "it": "/it/confronta/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "en": "/en/compare/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "es": "/es/comparar/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/"
+}
+},
+{
+"path": "/it/confronta/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/enebe-genius-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/it/confronta/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"alt": {
+"it": "/it/confronta/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"en": "/en/compare/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"es": "/es/comparar/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"fr": "/fr/comparer/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/"
 }
 },
 {
@@ -1482,6 +1626,15 @@
 "en": "/en/compare/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "es": "/es/comparar/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "fr": "/fr/comparer/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/"
+}
+},
+{
+"path": "/it/confronta/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"en": "/en/compare/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-kombat-krakatoa-2026/"
 }
 },
 {
@@ -1725,6 +1878,42 @@
 "en": "/en/compare/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "es": "/es/comparar/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "fr": "/fr/comparer/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/"
+}
+},
+{
+"path": "/it/confronta/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"alt": {
+"it": "/it/confronta/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"en": "/en/compare/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"es": "/es/comparar/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"fr": "/fr/comparer/kombat-arenal-2026-vs-kombat-vesubio-2026/"
+}
+},
+{
+"path": "/it/confronta/kombat-etna-2026-vs-kombat-teide-2026/",
+"alt": {
+"it": "/it/confronta/kombat-etna-2026-vs-kombat-teide-2026/",
+"en": "/en/compare/kombat-etna-2026-vs-kombat-teide-2026/",
+"es": "/es/comparar/kombat-etna-2026-vs-kombat-teide-2026/",
+"fr": "/fr/comparer/kombat-etna-2026-vs-kombat-teide-2026/"
+}
+},
+{
+"path": "/it/confronta/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"alt": {
+"it": "/it/confronta/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"en": "/en/compare/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"es": "/es/comparar/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"fr": "/fr/comparer/kombat-fuji-2026-vs-kombat-galeras-2026/"
+}
+},
+{
+"path": "/it/confronta/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/compare/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/comparar/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/comparer/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/"
 }
 },
 {
@@ -2304,6 +2493,51 @@
 }
 },
 {
+"path": "/it/confronta/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-chacal-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/it/confronta/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/confronta/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"en": "/en/compare/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"es": "/es/comparar/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/comparer/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/it/confronta/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/it/confronta/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-phantom-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/it/confronta/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
 "path": "/it/confronta/starvie-arkos-2026-vs-starvie-nyra-2026/",
 "alt": {
 "it": "/it/confronta/starvie-arkos-2026-vs-starvie-nyra-2026/",
@@ -2709,12 +2943,30 @@
 }
 },
 {
+"path": "/en/brands/softee/",
+"alt": {
+"it": "/it/marche/softee/",
+"en": "/en/brands/softee/",
+"es": "/es/marcas/softee/",
+"fr": "/fr/marques/softee/"
+}
+},
+{
 "path": "/en/brands/dunlop/",
 "alt": {
 "it": "/it/marche/dunlop/",
 "en": "/en/brands/dunlop/",
 "es": "/es/marcas/dunlop/",
 "fr": "/fr/marques/dunlop/"
+}
+},
+{
+"path": "/en/brands/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -2754,6 +3006,15 @@
 }
 },
 {
+"path": "/en/brands/enebe/",
+"alt": {
+"it": "/it/marche/enebe/",
+"en": "/en/brands/enebe/",
+"es": "/es/marcas/enebe/",
+"fr": "/fr/marques/enebe/"
+}
+},
+{
 "path": "/en/brands/tecnifibre/",
 "alt": {
 "it": "/it/marche/tecnifibre/",
@@ -2781,12 +3042,30 @@
 }
 },
 {
+"path": "/en/brands/tenax-padel/",
+"alt": {
+"it": "/it/marche/tenax-padel/",
+"en": "/en/brands/tenax-padel/",
+"es": "/es/marcas/tenax-padel/",
+"fr": "/fr/marques/tenax-padel/"
+}
+},
+{
 "path": "/en/brands/puma/",
 "alt": {
 "it": "/it/marche/puma/",
 "en": "/en/brands/puma/",
 "es": "/es/marcas/puma/",
 "fr": "/fr/marques/puma/"
+}
+},
+{
+"path": "/en/brands/vairo/",
+"alt": {
+"it": "/it/marche/vairo/",
+"en": "/en/brands/vairo/",
+"es": "/es/marcas/vairo/",
+"fr": "/fr/marques/vairo/"
 }
 },
 {
@@ -2832,6 +3111,15 @@
 "en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/"
+}
+},
+{
+"path": "/en/compare/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/"
 }
 },
 {
@@ -2916,6 +3204,15 @@
 }
 },
 {
+"path": "/en/compare/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
 "path": "/en/compare/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "alt": {
 "it": "/it/confronta/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
@@ -2931,6 +3228,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
+}
+},
+{
+"path": "/en/compare/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-vairo-across-2025/"
 }
 },
 {
@@ -3255,6 +3561,15 @@
 "en": "/en/compare/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "es": "/es/comparar/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "fr": "/fr/comparer/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/en/compare/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/confronta/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"en": "/en/compare/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"es": "/es/comparar/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"fr": "/fr/comparer/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/"
 }
 },
 {
@@ -3609,6 +3924,15 @@
 }
 },
 {
+"path": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
 "alt": {
 "it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
@@ -3771,6 +4095,15 @@
 }
 },
 {
+"path": "/en/compare/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"en": "/en/compare/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"es": "/es/comparar/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"fr": "/fr/comparer/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/"
+}
+},
+{
 "path": "/en/compare/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
 "alt": {
 "it": "/it/confronta/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
@@ -3897,6 +4230,15 @@
 }
 },
 {
+"path": "/en/compare/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
 "path": "/en/compare/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
@@ -3951,6 +4293,15 @@
 }
 },
 {
+"path": "/en/compare/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"en": "/en/compare/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"es": "/es/comparar/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"fr": "/fr/comparer/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/"
+}
+},
+{
 "path": "/en/compare/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
@@ -3987,12 +4338,39 @@
 }
 },
 {
+"path": "/en/compare/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"alt": {
+"it": "/it/confronta/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"en": "/en/compare/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"es": "/es/comparar/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/"
+}
+},
+{
 "path": "/en/compare/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "alt": {
 "it": "/it/confronta/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "en": "/en/compare/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "es": "/es/comparar/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/"
+}
+},
+{
+"path": "/en/compare/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/enebe-genius-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/en/compare/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"alt": {
+"it": "/it/confronta/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"en": "/en/compare/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"es": "/es/comparar/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"fr": "/fr/comparer/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/"
 }
 },
 {
@@ -4074,6 +4452,15 @@
 "en": "/en/compare/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "es": "/es/comparar/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "fr": "/fr/comparer/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/"
+}
+},
+{
+"path": "/en/compare/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"en": "/en/compare/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-kombat-krakatoa-2026/"
 }
 },
 {
@@ -4317,6 +4704,42 @@
 "en": "/en/compare/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "es": "/es/comparar/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "fr": "/fr/comparer/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/"
+}
+},
+{
+"path": "/en/compare/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"alt": {
+"it": "/it/confronta/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"en": "/en/compare/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"es": "/es/comparar/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"fr": "/fr/comparer/kombat-arenal-2026-vs-kombat-vesubio-2026/"
+}
+},
+{
+"path": "/en/compare/kombat-etna-2026-vs-kombat-teide-2026/",
+"alt": {
+"it": "/it/confronta/kombat-etna-2026-vs-kombat-teide-2026/",
+"en": "/en/compare/kombat-etna-2026-vs-kombat-teide-2026/",
+"es": "/es/comparar/kombat-etna-2026-vs-kombat-teide-2026/",
+"fr": "/fr/comparer/kombat-etna-2026-vs-kombat-teide-2026/"
+}
+},
+{
+"path": "/en/compare/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"alt": {
+"it": "/it/confronta/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"en": "/en/compare/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"es": "/es/comparar/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"fr": "/fr/comparer/kombat-fuji-2026-vs-kombat-galeras-2026/"
+}
+},
+{
+"path": "/en/compare/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/compare/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/comparar/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/comparer/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/"
 }
 },
 {
@@ -4896,6 +5319,51 @@
 }
 },
 {
+"path": "/en/compare/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-chacal-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/en/compare/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/confronta/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"en": "/en/compare/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"es": "/es/comparar/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/comparer/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/en/compare/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/en/compare/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-phantom-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/en/compare/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
 "path": "/en/compare/starvie-arkos-2026-vs-starvie-nyra-2026/",
 "alt": {
 "it": "/it/confronta/starvie-arkos-2026-vs-starvie-nyra-2026/",
@@ -5301,12 +5769,30 @@
 }
 },
 {
+"path": "/es/marcas/softee/",
+"alt": {
+"it": "/it/marche/softee/",
+"en": "/en/brands/softee/",
+"es": "/es/marcas/softee/",
+"fr": "/fr/marques/softee/"
+}
+},
+{
 "path": "/es/marcas/dunlop/",
 "alt": {
 "it": "/it/marche/dunlop/",
 "en": "/en/brands/dunlop/",
 "es": "/es/marcas/dunlop/",
 "fr": "/fr/marques/dunlop/"
+}
+},
+{
+"path": "/es/marcas/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -5346,6 +5832,15 @@
 }
 },
 {
+"path": "/es/marcas/enebe/",
+"alt": {
+"it": "/it/marche/enebe/",
+"en": "/en/brands/enebe/",
+"es": "/es/marcas/enebe/",
+"fr": "/fr/marques/enebe/"
+}
+},
+{
 "path": "/es/marcas/tecnifibre/",
 "alt": {
 "it": "/it/marche/tecnifibre/",
@@ -5373,12 +5868,30 @@
 }
 },
 {
+"path": "/es/marcas/tenax-padel/",
+"alt": {
+"it": "/it/marche/tenax-padel/",
+"en": "/en/brands/tenax-padel/",
+"es": "/es/marcas/tenax-padel/",
+"fr": "/fr/marques/tenax-padel/"
+}
+},
+{
 "path": "/es/marcas/puma/",
 "alt": {
 "it": "/it/marche/puma/",
 "en": "/en/brands/puma/",
 "es": "/es/marcas/puma/",
 "fr": "/fr/marques/puma/"
+}
+},
+{
+"path": "/es/marcas/vairo/",
+"alt": {
+"it": "/it/marche/vairo/",
+"en": "/en/brands/vairo/",
+"es": "/es/marcas/vairo/",
+"fr": "/fr/marques/vairo/"
 }
 },
 {
@@ -5424,6 +5937,15 @@
 "en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/"
+}
+},
+{
+"path": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/"
 }
 },
 {
@@ -5508,6 +6030,15 @@
 }
 },
 {
+"path": "/es/comparar/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
 "path": "/es/comparar/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "alt": {
 "it": "/it/confronta/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
@@ -5523,6 +6054,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
+}
+},
+{
+"path": "/es/comparar/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-vairo-across-2025/"
 }
 },
 {
@@ -5847,6 +6387,15 @@
 "en": "/en/compare/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "es": "/es/comparar/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "fr": "/fr/comparer/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/es/comparar/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/confronta/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"en": "/en/compare/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"es": "/es/comparar/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"fr": "/fr/comparer/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/"
 }
 },
 {
@@ -6201,6 +6750,15 @@
 }
 },
 {
+"path": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
 "alt": {
 "it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
@@ -6363,6 +6921,15 @@
 }
 },
 {
+"path": "/es/comparar/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"en": "/en/compare/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"es": "/es/comparar/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"fr": "/fr/comparer/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/"
+}
+},
+{
 "path": "/es/comparar/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
 "alt": {
 "it": "/it/confronta/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
@@ -6489,6 +7056,15 @@
 }
 },
 {
+"path": "/es/comparar/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
 "path": "/es/comparar/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
@@ -6543,6 +7119,15 @@
 }
 },
 {
+"path": "/es/comparar/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"en": "/en/compare/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"es": "/es/comparar/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"fr": "/fr/comparer/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/"
+}
+},
+{
 "path": "/es/comparar/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
@@ -6579,12 +7164,39 @@
 }
 },
 {
+"path": "/es/comparar/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"alt": {
+"it": "/it/confronta/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"en": "/en/compare/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"es": "/es/comparar/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/"
+}
+},
+{
 "path": "/es/comparar/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "alt": {
 "it": "/it/confronta/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "en": "/en/compare/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "es": "/es/comparar/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/"
+}
+},
+{
+"path": "/es/comparar/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/enebe-genius-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/es/comparar/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"alt": {
+"it": "/it/confronta/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"en": "/en/compare/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"es": "/es/comparar/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"fr": "/fr/comparer/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/"
 }
 },
 {
@@ -6666,6 +7278,15 @@
 "en": "/en/compare/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "es": "/es/comparar/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "fr": "/fr/comparer/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/"
+}
+},
+{
+"path": "/es/comparar/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"en": "/en/compare/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-kombat-krakatoa-2026/"
 }
 },
 {
@@ -6909,6 +7530,42 @@
 "en": "/en/compare/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "es": "/es/comparar/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "fr": "/fr/comparer/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/"
+}
+},
+{
+"path": "/es/comparar/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"alt": {
+"it": "/it/confronta/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"en": "/en/compare/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"es": "/es/comparar/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"fr": "/fr/comparer/kombat-arenal-2026-vs-kombat-vesubio-2026/"
+}
+},
+{
+"path": "/es/comparar/kombat-etna-2026-vs-kombat-teide-2026/",
+"alt": {
+"it": "/it/confronta/kombat-etna-2026-vs-kombat-teide-2026/",
+"en": "/en/compare/kombat-etna-2026-vs-kombat-teide-2026/",
+"es": "/es/comparar/kombat-etna-2026-vs-kombat-teide-2026/",
+"fr": "/fr/comparer/kombat-etna-2026-vs-kombat-teide-2026/"
+}
+},
+{
+"path": "/es/comparar/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"alt": {
+"it": "/it/confronta/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"en": "/en/compare/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"es": "/es/comparar/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"fr": "/fr/comparer/kombat-fuji-2026-vs-kombat-galeras-2026/"
+}
+},
+{
+"path": "/es/comparar/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/compare/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/comparar/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/comparer/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/"
 }
 },
 {
@@ -7488,6 +8145,51 @@
 }
 },
 {
+"path": "/es/comparar/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-chacal-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/es/comparar/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/confronta/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"en": "/en/compare/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"es": "/es/comparar/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/comparer/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/es/comparar/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/es/comparar/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-phantom-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/es/comparar/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
 "path": "/es/comparar/starvie-arkos-2026-vs-starvie-nyra-2026/",
 "alt": {
 "it": "/it/confronta/starvie-arkos-2026-vs-starvie-nyra-2026/",
@@ -7893,12 +8595,30 @@
 }
 },
 {
+"path": "/fr/marques/softee/",
+"alt": {
+"it": "/it/marche/softee/",
+"en": "/en/brands/softee/",
+"es": "/es/marcas/softee/",
+"fr": "/fr/marques/softee/"
+}
+},
+{
 "path": "/fr/marques/dunlop/",
 "alt": {
 "it": "/it/marche/dunlop/",
 "en": "/en/brands/dunlop/",
 "es": "/es/marcas/dunlop/",
 "fr": "/fr/marques/dunlop/"
+}
+},
+{
+"path": "/fr/marques/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -7938,6 +8658,15 @@
 }
 },
 {
+"path": "/fr/marques/enebe/",
+"alt": {
+"it": "/it/marche/enebe/",
+"en": "/en/brands/enebe/",
+"es": "/es/marcas/enebe/",
+"fr": "/fr/marques/enebe/"
+}
+},
+{
 "path": "/fr/marques/tecnifibre/",
 "alt": {
 "it": "/it/marche/tecnifibre/",
@@ -7965,12 +8694,30 @@
 }
 },
 {
+"path": "/fr/marques/tenax-padel/",
+"alt": {
+"it": "/it/marche/tenax-padel/",
+"en": "/en/brands/tenax-padel/",
+"es": "/es/marcas/tenax-padel/",
+"fr": "/fr/marques/tenax-padel/"
+}
+},
+{
 "path": "/fr/marques/puma/",
 "alt": {
 "it": "/it/marche/puma/",
 "en": "/en/brands/puma/",
 "es": "/es/marcas/puma/",
 "fr": "/fr/marques/puma/"
+}
+},
+{
+"path": "/fr/marques/vairo/",
+"alt": {
+"it": "/it/marche/vairo/",
+"en": "/en/brands/vairo/",
+"es": "/es/marcas/vairo/",
+"fr": "/fr/marques/vairo/"
 }
 },
 {
@@ -8016,6 +8763,15 @@
 "en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/",
 "fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-adidas-metalbone-carbon-2026/"
+}
+},
+{
+"path": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/confronta/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"en": "/en/compare/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"es": "/es/comparar/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/",
+"fr": "/fr/comparer/adidas-arrow-hit-carbon-2026-vs-tenax-padel-hammer-2025/"
 }
 },
 {
@@ -8100,6 +8856,15 @@
 }
 },
 {
+"path": "/fr/comparer/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/adidas-cross-it-team-ctrl-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
 "path": "/fr/comparer/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
 "alt": {
 "it": "/it/confronta/adidas-drive-3-4-2027-vs-adidas-drive-black-2026/",
@@ -8115,6 +8880,15 @@
 "en": "/en/compare/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "es": "/es/comparar/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/",
 "fr": "/fr/comparer/adidas-drive-3-4-2027-vs-quad-siza-vieira-2024/"
+}
+},
+{
+"path": "/fr/comparer/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"alt": {
+"it": "/it/confronta/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"en": "/en/compare/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"es": "/es/comparar/adidas-drive-3-4-2027-vs-vairo-across-2025/",
+"fr": "/fr/comparer/adidas-drive-3-4-2027-vs-vairo-across-2025/"
 }
 },
 {
@@ -8439,6 +9213,15 @@
 "en": "/en/compare/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "es": "/es/comparar/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/",
 "fr": "/fr/comparer/black-crown-gladius-2026-vs-joma-blast-pro-sft-2026/"
+}
+},
+{
+"path": "/fr/comparer/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/confronta/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"en": "/en/compare/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"es": "/es/comparar/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/",
+"fr": "/fr/comparer/black-crown-gladius-2026-vs-tenax-padel-gladiator-2024/"
 }
 },
 {
@@ -8793,6 +9576,15 @@
 }
 },
 {
+"path": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
 "alt": {
 "it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-oxdog-hyper-pro-plus-2-0-2026/",
@@ -8955,6 +9747,15 @@
 }
 },
 {
+"path": "/fr/comparer/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/confronta/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"en": "/en/compare/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"es": "/es/comparar/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/",
+"fr": "/fr/comparer/bullpadel-pearl-2026-vs-enebe-mustang-silver-3k-2026/"
+}
+},
+{
 "path": "/fr/comparer/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
 "alt": {
 "it": "/it/confronta/bullpadel-vertex-05-2026-vs-bullpadel-vertex-05-2027/",
@@ -9081,6 +9882,15 @@
 }
 },
 {
+"path": "/fr/comparer/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/drop-shot-axion-attack-soft-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
 "path": "/fr/comparer/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-axion-comfort-1-0-2026-vs-drop-shot-canyon-pro-comfort-2-0-2026/",
@@ -9135,6 +9945,15 @@
 }
 },
 {
+"path": "/fr/comparer/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"alt": {
+"it": "/it/confronta/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"en": "/en/compare/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"es": "/es/comparar/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/",
+"fr": "/fr/comparer/drop-shot-flame-soft-2026-vs-softee-rebounce-2026/"
+}
+},
+{
 "path": "/fr/comparer/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
 "alt": {
 "it": "/it/confronta/drop-shot-flame-soft-2026-vs-wilson-blade-ls-v4-2026/",
@@ -9171,12 +9990,39 @@
 }
 },
 {
+"path": "/fr/comparer/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"alt": {
+"it": "/it/confronta/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"en": "/en/compare/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"es": "/es/comparar/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/",
+"fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-enebe-point-light-2026/"
+}
+},
+{
 "path": "/fr/comparer/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "alt": {
 "it": "/it/confronta/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "en": "/en/compare/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "es": "/es/comparar/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/",
 "fr": "/fr/comparer/dunlop-nanomax-pro-2026-vs-starvie-metheora-plus-2027/"
+}
+},
+{
+"path": "/fr/comparer/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/confronta/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"en": "/en/compare/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"es": "/es/comparar/enebe-genius-2026-vs-tenax-padel-guardian-2024/",
+"fr": "/fr/comparer/enebe-genius-2026-vs-tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/fr/comparer/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"alt": {
+"it": "/it/confronta/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"en": "/en/compare/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"es": "/es/comparar/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/",
+"fr": "/fr/comparer/enebe-response-3k-evo-2026-vs-wilson-bela-pro-v3-2026/"
 }
 },
 {
@@ -9258,6 +10104,15 @@
 "en": "/en/compare/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "es": "/es/comparar/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/",
 "fr": "/fr/comparer/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/"
+}
+},
+{
+"path": "/fr/comparer/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"en": "/en/compare/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-kombat-krakatoa-2026/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-kombat-krakatoa-2026/"
 }
 },
 {
@@ -9501,6 +10356,42 @@
 "en": "/en/compare/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "es": "/es/comparar/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/",
 "fr": "/fr/comparer/joma-valkiria-pro-hrd-2026-vs-nox-equation-hard-advanced-2026/"
+}
+},
+{
+"path": "/fr/comparer/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"alt": {
+"it": "/it/confronta/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"en": "/en/compare/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"es": "/es/comparar/kombat-arenal-2026-vs-kombat-vesubio-2026/",
+"fr": "/fr/comparer/kombat-arenal-2026-vs-kombat-vesubio-2026/"
+}
+},
+{
+"path": "/fr/comparer/kombat-etna-2026-vs-kombat-teide-2026/",
+"alt": {
+"it": "/it/confronta/kombat-etna-2026-vs-kombat-teide-2026/",
+"en": "/en/compare/kombat-etna-2026-vs-kombat-teide-2026/",
+"es": "/es/comparar/kombat-etna-2026-vs-kombat-teide-2026/",
+"fr": "/fr/comparer/kombat-etna-2026-vs-kombat-teide-2026/"
+}
+},
+{
+"path": "/fr/comparer/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"alt": {
+"it": "/it/confronta/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"en": "/en/compare/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"es": "/es/comparar/kombat-fuji-2026-vs-kombat-galeras-2026/",
+"fr": "/fr/comparer/kombat-fuji-2026-vs-kombat-galeras-2026/"
+}
+},
+{
+"path": "/fr/comparer/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/compare/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/comparar/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/comparer/kombat-osorno-2026-vs-softee-speed-gold-power-4-0-nano-mesh-2026/"
 }
 },
 {
@@ -10077,6 +10968,51 @@
 "en": "/en/compare/siux-valkiria-pro-2026-vs-siux-valkiria-pro-2027/",
 "es": "/es/comparar/siux-valkiria-pro-2026-vs-siux-valkiria-pro-2027/",
 "fr": "/fr/comparer/siux-valkiria-pro-2026-vs-siux-valkiria-pro-2027/"
+}
+},
+{
+"path": "/fr/comparer/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-chacal-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-chacal-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/fr/comparer/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/confronta/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"en": "/en/compare/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"es": "/es/comparar/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/comparer/softee-freezer-carbon-3k-2026-vs-softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/fr/comparer/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/confronta/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/compare/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/comparar/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/comparer/softee-oxel-2026-vs-softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/fr/comparer/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-phantom-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-phantom-2026-vs-softee-trionic-light-2026/"
+}
+},
+{
+"path": "/fr/comparer/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"alt": {
+"it": "/it/confronta/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"en": "/en/compare/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"es": "/es/comparar/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/",
+"fr": "/fr/comparer/softee-pro-master-evolution-2026-vs-softee-trionic-light-2026/"
 }
 },
 {
