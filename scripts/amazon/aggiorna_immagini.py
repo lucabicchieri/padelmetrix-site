@@ -41,7 +41,10 @@ def main():
     tok, ver = creators.token()
     oggi = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     risultato, asins = {}, list(schede)
+    import time
     for i in range(0, len(asins), 10):
+        if i:
+            time.sleep(1.5)
         res = creators.get_items(asins[i:i + 10], tok, ver) or {}
         items = (res.get("itemsResult") or {}).get("items") or res.get("items") or []
         for it in items:
