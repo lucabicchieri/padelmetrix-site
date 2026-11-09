@@ -2119,6 +2119,153 @@ def art_scarpe(db):
                         "Espiga, omni o híbrida: la suela adecuada para tu pista.", "Chevrons, omni ou hybride : la bonne semelle pour votre terrain."))
 
 
+# ---------------------------------------------------------------- QUAD, la marca portoghese (novembre 2026)
+QUAD_SLUG = "quad-racchette-padel-portoghesi-modelli"
+S.SLUG[QUAD_SLUG] = ("quad-portuguese-padel-rackets-models", "quad-palas-padel-portuguesas-modelos")
+S.SLUG_FR[QUAD_SLUG] = "quad-raquettes-padel-portugaises-modeles"
+DATE_ART[QUAD_SLUG] = "2026-11-09"
+QUAD_U = "https://www.quad-sports.com/"
+
+
+def art_quad(db):
+    qs = [r for r in db if r["marca"] == "QUAD"]
+    RACCHETTE_ARTICOLO[QUAD_SLUG] = [r["slug"] for r in qs]
+    by = {r["slug"]: r for r in qs}
+    ad = [r["prezzo"] for r in db if r.get("prezzo") and r["categoria"] != "junior"]
+    med = sorted(ad)[len(ad) // 2]
+    base = ["quad-shark-2026", "quad-naja-2026", "quad-rhino-2024", "quad-tiger-2026", "quad-fox-2026", "quad-leopard-2026", "quad-wolf-2026", "quad-t-rex-junior-2026"]
+    spec = ["quad-fpf-edition-2026", "quad-dragon-ii-fc-porto-edition-2026", "quad-euro-padel-cup-edition-2026", "quad-chinese-new-year-edition-2026", "quad-garuda-2025", "quad-garuda-ii-2026",
+            "quad-siza-vieira-2024", "quad-diogo-dalot-2026", "quad-muklay-2026", "quad-guel-do-it-2026"]
+    nd = L("n.d.", "n/a", "n.d.", "n.c.")
+
+    def carb(r):
+        m = _re.search(r"(\d+)K(?:, (\d) strati)?", r.get("superficie") or "")
+        return (m.group(1) + "K" + (f" ×{m.group(2)}" if m.group(2) else "")) if m else nd
+
+    def riga(s):
+        r = by[s]
+        return (f'<tr><td><a href="{url_r(r)}">{e(r["modello"])}</a></td><td>{FORMA(r["forma"]) if r.get("forma") else nd}</td>'
+                f'<td>{e(S.tr(r["peso"])) if r.get("peso") else nd}</td><td>{carb(r)}</td><td>{euro(r["prezzo"])}</td></tr>')
+
+    th = ("<thead><tr><th>" + L("Modello", "Model", "Modelo", "Modèle") + "</th><th>" + L("Forma", "Shape", "Forma", "Forme") + "</th><th>" + L("Peso", "Weight", "Peso", "Poids")
+          + "</th><th>" + L("Carbonio (strati)", "Carbon (layers)", "Carbono (capas)", "Carbone (couches)") + "</th><th>" + L("Listino", "List price", "Precio", "Prix") + "</th></tr></thead>")
+    tab_b = f'<div class="tablebox"><table class="tab">{th}<tbody>{"".join(riga(s) for s in base if s in by)}</tbody></table></div>'
+    tab_s = f'<div class="tablebox"><table class="tab">{th}<tbody>{"".join(riga(s) for s in spec if s in by)}</tbody></table></div>'
+    qf, qe = fonte(QUAD_U + "collections/padel-rackets", "QUAD"), fonte(QUAD_U + "collections/special-editions", "QUAD")
+    eb = fonte("https://echoboomer.pt/marca-portuguesa-quad-abre-loja-padel-norteshopping/", "Echo Boomer")
+    pa = fonte("https://www.padeladdict.com/quad-padel-es-la-nueva-marca-de-tito-allemandi/", "Padel Addict")
+    fb = fonte("https://www.forbespt.com/popularidade-do-padel-coloca-empresa-portuguesa-em-alta-voltagem", "Forbes Portugal")
+    mk = P("marche", "quad")
+    u = lambda s: url_r(by[s])
+    box = _box5(L("Tutte le schede QUAD", "All QUAD racket pages", "Todas las fichas QUAD", "Toutes les fiches QUAD"),
+                L(f"{len(qs)} racchette con dati tecnici, fonti e alternative simili di altri marchi.", f"{len(qs)} rackets with specs, sources and similar alternatives from other brands.",
+                  f"{len(qs)} palas con datos técnicos, fuentes y alternativas similares de otras marcas.", f"{len(qs)} raquettes avec données techniques, sources et alternatives d'autres marques."),
+                L("Vai alla pagina QUAD", "Go to the QUAD page", "Ir a la página QUAD", "Voir la page QUAD"), mk)
+    corpo = L(f'''<p><b>QUAD è un piccolo marchio portoghese che produce le sue racchette in carbonio in una fabbrica propria in Portogallo. In Italia è un marchio di nicchia: non si trova nei grandi negozi di padel, ma si compra dal sito ufficiale. La gamma ha 7 modelli base tra 190 e 390 euro, più una serie di edizioni limitate e d'autore che arrivano a 1.900 euro.</b></p>
+<h2>Chi è QUAD</h2>
+<p>QUAD vende racchette da padel, articoli da pickleball e abbigliamento sportivo. La sua caratteristica principale è la produzione: le racchette nascono nella QUAD Factory, che il marchio presenta come l'unica fabbrica del suo genere in Portogallo ({eb}). Non è scontato: un'altra marca portoghese, Volt, ha dichiarato a Forbes di progettare in casa e produrre in Asia ({fb}).</p>
+<p>Sul sito si può creare una racchetta da zero o cambiare i colori di un modello esistente; QUAD ha aperto il primo negozio monomarca al NorteShopping di Matosinhos, vicino a Porto ({eb}). Nel 2022 ha sponsorizzato l'argentino Tito Allemandi, allora tra i primi dieci dell'APT Padel Tour ({pa}). Il motto è "Play like an animal": quasi tutti i modelli portano il nome di un animale.</p>
+<h2>È un marchio di nicchia?</h2>
+<p>Sì. QUAD è conosciuto soprattutto in Portogallo, non ha giocatori del circuito Premier Padel e le recensioni indipendenti sono poche: per questo nelle nostre schede non trovi ancora valutazioni, solo i dati dichiarati. I prezzi però sono in linea con il mercato: il modello base più caro costa 390 €, contro un prezzo di listino mediano di {euro(med)} per le racchette adulte del nostro database.</p>
+<h2>La gamma base</h2>{tab_b}
+<ul><li><b>Per chi attacca:</b> la <a href="{u("quad-naja-2026")}">Naja</a> (diamante, bilanciamento extra alto, 12K ×3) e la <a href="{u("quad-shark-2026")}">Shark</a>, che QUAD indica per giocatori molto avanzati.</li>
+<li><b>Per chi cerca equilibrio:</b> la <a href="{u("quad-rhino-2024")}">Rhino</a>, una goccia in carbonio 24K, e la <a href="{u("quad-tiger-2026")}">Tiger</a>, la più leggera (340 g) con superficie ruvida per l'effetto.</li>
+<li><b>Per spendere meno:</b> <a href="{u("quad-leopard-2026")}">Leopard</a> e <a href="{u("quad-wolf-2026")}">Wolf</a> a 190 €, ibride in carbonio 3K con gomma morbida.</li>
+<li><b>Per i ragazzi:</b> la <a href="{u("quad-t-rex-junior-2026")}">T-Rex Junior</a>, rotonda da 330 g.</li></ul>
+<h2>Edizioni speciali e linea Creators</h2>
+<p>Una buona parte del catalogo QUAD sono edizioni limitate, spesso numerate e con certificato ({qe}):</p>{tab_s}
+<ul><li>La <a href="{u("quad-fpf-edition-2026")}">FPF Edition</a> con la Federazione portoghese di calcio: nera opaca con dettagli dorati, 500 pezzi numerati.</li>
+<li>La <a href="{u("quad-dragon-ii-fc-porto-edition-2026")}">Dragon II</a> per il Porto, in blu e bianco.</li>
+<li>La <a href="{u("quad-siza-vieira-2024")}">racchetta di Álvaro Siza Vieira</a>, disegnata dall'architetto per i suoi 90 anni in 90 esemplari, con carbonio riciclato.</li>
+<li>Le collaborazioni con Diogo Dalot, difensore del Manchester United, e con gli artisti Muklay e Guel Do It.</li></ul>
+<p>Sotto la grafica, molte di queste edizioni usano le stesse basi tecniche della gamma: carbonio 3K a due o quattro strati e gomma EVA 990Q o Hyper Soft Foam.</p>
+<h2>Dove si comprano</h2>
+<p>Il canale principale è il sito ufficiale, che spedisce in Portogallo e Spagna con CTT e nel resto del mondo con DHL Express ({qf}). Alcuni modelli si trovano anche sul marketplace Decathlon in Portogallo e in Francia e in negozi portoghesi di padel. Prima di comprare conviene controllare la disponibilità: diverse edizioni speciali sono già esaurite.</p>{box}
+<p class="note">Fonti: schede ufficiali {qf}; {eb}; {pa}; {fb}. Prezzi di listino del sito QUAD a novembre 2026.</p>''',
+              f'''<p><b>QUAD is a small Portuguese brand that makes its carbon rackets in its own factory in Portugal. Outside Portugal it is a niche brand: you won't find it in the big padel shops, you buy it from the official website. The range has 7 core models between 190 and 390 euros, plus a series of limited and artist editions that go up to 1,900 euros.</b></p>
+<h2>Who QUAD is</h2>
+<p>QUAD sells padel rackets, pickleball gear and sportswear. Its main distinguishing feature is manufacturing: the rackets are made at the QUAD Factory, which the brand describes as the only factory of its kind in Portugal ({eb}). That is not a given: another Portuguese brand, Volt, told Forbes it designs in-house and manufactures in Asia ({fb}).</p>
+<p>On the website you can design a racket from scratch or change the colours of an existing model; QUAD has opened its first own-brand shop at NorteShopping in Matosinhos, near Porto ({eb}). In 2022 it sponsored Argentine player Tito Allemandi, then in the top ten of the APT Padel Tour ({pa}). Its motto is "Play like an animal": almost every model is named after an animal.</p>
+<h2>Is it a niche brand?</h2>
+<p>Yes. QUAD is known mainly in Portugal, has no players on the Premier Padel tour and independent reviews are scarce: that's why our pages don't have ratings yet, only the stated specs. Prices, though, are in line with the market: the most expensive core model costs €390, against a median list price of {euro(med)} for the adult rackets in our database.</p>
+<h2>The core range</h2>{tab_b}
+<ul><li><b>For attacking players:</b> the <a href="{u("quad-naja-2026")}">Naja</a> (diamond, extra-high balance, 12K ×3) and the <a href="{u("quad-shark-2026")}">Shark</a>, which QUAD recommends for very advanced players.</li>
+<li><b>For balance:</b> the <a href="{u("quad-rhino-2024")}">Rhino</a>, a 24K carbon teardrop, and the <a href="{u("quad-tiger-2026")}">Tiger</a>, the lightest (340 g) with a rough surface for spin.</li>
+<li><b>To spend less:</b> the <a href="{u("quad-leopard-2026")}">Leopard</a> and <a href="{u("quad-wolf-2026")}">Wolf</a> at €190, 3K carbon hybrids with a soft core.</li>
+<li><b>For juniors:</b> the <a href="{u("quad-t-rex-junior-2026")}">T-Rex Junior</a>, a 330 g round racket.</li></ul>
+<h2>Special editions and the Creators line</h2>
+<p>A good part of the QUAD catalogue is limited editions, often numbered and with a certificate ({qe}):</p>{tab_s}
+<ul><li>The <a href="{u("quad-fpf-edition-2026")}">FPF Edition</a> with the Portuguese Football Federation: matte black with gold details, 500 numbered pieces.</li>
+<li>The <a href="{u("quad-dragon-ii-fc-porto-edition-2026")}">Dragon II</a> for FC Porto, in blue and white.</li>
+<li>The <a href="{u("quad-siza-vieira-2024")}">Álvaro Siza Vieira racket</a>, designed by the architect for his 90th birthday in 90 pieces, with recycled carbon.</li>
+<li>Collaborations with Manchester United defender Diogo Dalot and with artists Muklay and Guel Do It.</li></ul>
+<p>Under the artwork, many of these editions share the technical bases of the range: two or four layers of 3K carbon and an EVA 990Q or Hyper Soft Foam core.</p>
+<h2>Where to buy</h2>
+<p>The main channel is the official website, which ships within Portugal and Spain with CTT and worldwide with DHL Express ({qf}). Some models are also on the Decathlon marketplace in Portugal and France and in Portuguese padel shops. Check availability before buying: several special editions are already sold out.</p>{box}
+<p class="note">Sources: official QUAD pages {qf}; {eb}; {pa}; {fb}. List prices from the QUAD website in November 2026.</p>''',
+              f'''<p><b>QUAD es una pequeña marca portuguesa que fabrica sus palas de carbono en una fábrica propia en Portugal. Fuera de Portugal es una marca de nicho: no está en las grandes tiendas de pádel y se compra en la web oficial. La gama tiene 7 modelos base entre 190 y 390 euros, más una serie de ediciones limitadas y de autor que llegan a 1.900 euros.</b></p>
+<h2>Quién es QUAD</h2>
+<p>QUAD vende palas de pádel, material de pickleball y ropa deportiva. Su rasgo principal es la producción: las palas salen de la QUAD Factory, que la marca presenta como la única fábrica de su tipo en Portugal ({eb}). No es lo habitual: otra marca portuguesa, Volt, contó a Forbes que diseña en casa y fabrica en Asia ({fb}).</p>
+<p>En la web se puede crear una pala desde cero o cambiar los colores de un modelo existente; QUAD ha abierto su primera tienda propia en el NorteShopping de Matosinhos, cerca de Oporto ({eb}). En 2022 patrocinó al argentino Tito Allemandi, entonces entre los diez primeros del APT Padel Tour ({pa}). Su lema es "Play like an animal": casi todos los modelos llevan nombre de animal.</p>
+<h2>¿Es una marca de nicho?</h2>
+<p>Sí. QUAD es conocida sobre todo en Portugal, no tiene jugadores en el circuito Premier Padel y las opiniones independientes son pocas: por eso en nuestras fichas aún no hay valoraciones, solo los datos declarados. Los precios, en cambio, están en línea con el mercado: el modelo base más caro cuesta 390 €, frente a un precio de catálogo mediano de {euro(med)} para las palas de adulto de nuestra base.</p>
+<h2>La gama base</h2>{tab_b}
+<ul><li><b>Para atacar:</b> la <a href="{u("quad-naja-2026")}">Naja</a> (diamante, balance extra alto, 12K ×3) y la <a href="{u("quad-shark-2026")}">Shark</a>, que QUAD recomienda para jugadores muy avanzados.</li>
+<li><b>Para buscar equilibrio:</b> la <a href="{u("quad-rhino-2024")}">Rhino</a>, una lágrima de carbono 24K, y la <a href="{u("quad-tiger-2026")}">Tiger</a>, la más ligera (340 g), con superficie rugosa para el efecto.</li>
+<li><b>Para gastar menos:</b> la <a href="{u("quad-leopard-2026")}">Leopard</a> y la <a href="{u("quad-wolf-2026")}">Wolf</a> a 190 €, híbridas de carbono 3K con goma blanda.</li>
+<li><b>Para los jóvenes:</b> la <a href="{u("quad-t-rex-junior-2026")}">T-Rex Junior</a>, redonda de 330 g.</li></ul>
+<h2>Ediciones especiales y línea Creators</h2>
+<p>Buena parte del catálogo QUAD son ediciones limitadas, a menudo numeradas y con certificado ({qe}):</p>{tab_s}
+<ul><li>La <a href="{u("quad-fpf-edition-2026")}">FPF Edition</a> con la Federación Portuguesa de Fútbol: negra mate con detalles dorados, 500 unidades numeradas.</li>
+<li>La <a href="{u("quad-dragon-ii-fc-porto-edition-2026")}">Dragon II</a> para el Oporto, en azul y blanco.</li>
+<li>La <a href="{u("quad-siza-vieira-2024")}">pala de Álvaro Siza Vieira</a>, diseñada por el arquitecto por sus 90 años en 90 unidades, con carbono reciclado.</li>
+<li>Las colaboraciones con Diogo Dalot, defensa del Manchester United, y con los artistas Muklay y Guel Do It.</li></ul>
+<p>Bajo el diseño, muchas de estas ediciones usan las mismas bases técnicas de la gama: carbono 3K de dos o cuatro capas y goma EVA 990Q o Hyper Soft Foam.</p>
+<h2>Dónde se compran</h2>
+<p>El canal principal es la web oficial, que envía a Portugal y España con CTT y al resto del mundo con DHL Express ({qf}). Algunos modelos están también en el marketplace de Decathlon en Portugal y Francia y en tiendas portuguesas de pádel. Antes de comprar conviene comprobar la disponibilidad: varias ediciones especiales ya están agotadas.</p>{box}
+<p class="note">Fuentes: fichas oficiales {qf}; {eb}; {pa}; {fb}. Precios de catálogo de la web de QUAD en noviembre de 2026.</p>''',
+              f'''<p><b>QUAD est une petite marque portugaise qui fabrique ses raquettes en carbone dans sa propre usine au Portugal. Hors du Portugal, c'est une marque de niche : on ne la trouve pas dans les grands magasins de padel, on l'achète sur le site officiel. La gamme compte 7 modèles de base entre 190 et 390 euros, plus une série d'éditions limitées et d'artistes qui montent jusqu'à 1 900 euros.</b></p>
+<h2>Qui est QUAD</h2>
+<p>QUAD vend des raquettes de padel, du matériel de pickleball et des vêtements de sport. Sa particularité principale, c'est la fabrication : les raquettes sortent de la QUAD Factory, que la marque présente comme la seule usine de ce type au Portugal ({eb}). Ce n'est pas la norme : une autre marque portugaise, Volt, a expliqué à Forbes qu'elle conçoit en interne et fabrique en Asie ({fb}).</p>
+<p>Sur le site, on peut créer une raquette de zéro ou changer les couleurs d'un modèle existant ; QUAD a ouvert sa première boutique en propre au NorteShopping de Matosinhos, près de Porto ({eb}). En 2022, elle a sponsorisé l'Argentin Tito Allemandi, alors dans le top 10 de l'APT Padel Tour ({pa}). Sa devise est « Play like an animal » : presque tous les modèles portent un nom d'animal.</p>
+<h2>Est-ce une marque de niche ?</h2>
+<p>Oui. QUAD est surtout connue au Portugal, n'a pas de joueurs sur le circuit Premier Padel et les avis indépendants sont rares : c'est pourquoi nos fiches n'ont pas encore de notes, seulement les données déclarées. Les prix, eux, sont dans la moyenne : le modèle de base le plus cher coûte 390 €, contre un prix catalogue médian de {euro(med)} pour les raquettes adultes de notre base.</p>
+<h2>La gamme de base</h2>{tab_b}
+<ul><li><b>Pour attaquer :</b> la <a href="{u("quad-naja-2026")}">Naja</a> (diamant, équilibre très haut, 12K ×3) et la <a href="{u("quad-shark-2026")}">Shark</a>, que QUAD destine aux joueurs très avancés.</li>
+<li><b>Pour l'équilibre :</b> la <a href="{u("quad-rhino-2024")}">Rhino</a>, une goutte d'eau en carbone 24K, et la <a href="{u("quad-tiger-2026")}">Tiger</a>, la plus légère (340 g), avec surface rugueuse pour l'effet.</li>
+<li><b>Pour dépenser moins :</b> la <a href="{u("quad-leopard-2026")}">Leopard</a> et la <a href="{u("quad-wolf-2026")}">Wolf</a> à 190 €, hybrides en carbone 3K à gomme souple.</li>
+<li><b>Pour les jeunes :</b> la <a href="{u("quad-t-rex-junior-2026")}">T-Rex Junior</a>, ronde de 330 g.</li></ul>
+<h2>Éditions spéciales et ligne Creators</h2>
+<p>Une bonne partie du catalogue QUAD est faite d'éditions limitées, souvent numérotées et avec certificat ({qe}) :</p>{tab_s}
+<ul><li>La <a href="{u("quad-fpf-edition-2026")}">FPF Edition</a> avec la Fédération portugaise de football : noire mate avec détails dorés, 500 exemplaires numérotés.</li>
+<li>La <a href="{u("quad-dragon-ii-fc-porto-edition-2026")}">Dragon II</a> pour le FC Porto, en bleu et blanc.</li>
+<li>La <a href="{u("quad-siza-vieira-2024")}">raquette d'Álvaro Siza Vieira</a>, dessinée par l'architecte pour ses 90 ans en 90 exemplaires, en carbone recyclé.</li>
+<li>Les collaborations avec Diogo Dalot, défenseur de Manchester United, et avec les artistes Muklay et Guel Do It.</li></ul>
+<p>Sous le graphisme, beaucoup de ces éditions reprennent les bases techniques de la gamme : carbone 3K à deux ou quatre couches et gomme EVA 990Q ou Hyper Soft Foam.</p>
+<h2>Où les acheter</h2>
+<p>Le canal principal est le site officiel, qui livre au Portugal et en Espagne avec CTT et dans le reste du monde avec DHL Express ({qf}). Certains modèles sont aussi sur la marketplace Decathlon au Portugal et en France et dans des magasins de padel portugais. Vérifiez la disponibilité avant d'acheter : plusieurs éditions spéciales sont déjà épuisées.</p>{box}
+<p class="note">Sources : fiches officielles {qf} ; {eb} ; {pa} ; {fb}. Prix catalogue du site QUAD en novembre 2026.</p>''')
+    qa = [(L("Che marca è QUAD?", "What brand is QUAD?", "¿Qué marca es QUAD?", "Quelle marque est QUAD ?"),
+           L("Un marchio portoghese di articoli sportivi che produce racchette da padel in carbonio nella propria fabbrica in Portogallo.", "A Portuguese sports brand that makes carbon padel rackets in its own factory in Portugal.",
+             "Una marca portuguesa de material deportivo que fabrica palas de pádel de carbono en su propia fábrica en Portugal.", "Une marque portugaise d'articles de sport qui fabrique des raquettes de padel en carbone dans sa propre usine au Portugal.")),
+          (L("Quanto costano le racchette QUAD?", "How much do QUAD rackets cost?", "¿Cuánto cuestan las palas QUAD?", "Combien coûtent les raquettes QUAD ?"),
+           L("I modelli base vanno da 190 a 390 euro di listino, la junior costa 140 euro; le edizioni limitate arrivano a 1.900 euro.", "Core models list at 190 to 390 euros and the junior costs 140 euros; limited editions go up to 1,900 euros.",
+             "Los modelos base van de 190 a 390 euros de catálogo y la junior cuesta 140 euros; las ediciones limitadas llegan a 1.900 euros.", "Les modèles de base vont de 190 à 390 euros en prix catalogue, la junior coûte 140 euros ; les éditions limitées montent jusqu'à 1 900 euros.")),
+          (L("Dove si comprano le racchette QUAD?", "Where can I buy QUAD rackets?", "¿Dónde se compran las palas QUAD?", "Où acheter les raquettes QUAD ?"),
+           L("Soprattutto sul sito ufficiale quad-sports.com, che spedisce anche all'estero; alcuni modelli sono sul marketplace Decathlon in Portogallo e Francia.", "Mainly on the official website quad-sports.com, which ships abroad; some models are on the Decathlon marketplace in Portugal and France.",
+             "Sobre todo en la web oficial quad-sports.com, que envía también al extranjero; algunos modelos están en el marketplace de Decathlon en Portugal y Francia.", "Surtout sur le site officiel quad-sports.com, qui livre aussi à l'étranger ; certains modèles sont sur la marketplace Decathlon au Portugal et en France."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("QUAD, le racchette da padel fatte in Portogallo: tutti i modelli", "QUAD, the padel rackets made in Portugal: every model",
+               "QUAD, las palas de pádel hechas en Portugal: todos los modelos", "QUAD, les raquettes de padel fabriquées au Portugal : tous les modèles")
+    desc = L("Chi è QUAD, il marchio portoghese che produce le racchette in casa: gamma base, edizioni limitate, prezzi e dove comprarle.",
+             "Who QUAD is, the Portuguese brand that makes its own rackets: core range, limited editions, prices and where to buy.",
+             "Quién es QUAD, la marca portuguesa que fabrica sus propias palas: gama base, ediciones limitadas, precios y dónde comprarlas.",
+             "Qui est QUAD, la marque portugaise qui fabrique ses propres raquettes : gamme de base, éditions limitées, prix et où les acheter.")
+    scrivi_articolo(QUAD_SLUG, titolo + " | PadelMetrix", desc, titolo, "QUAD", corpo + faq_htm, items=qs, ld_extra=[faq_ld])
+    return QUAD_SLUG, titolo, L("Il marchio portoghese di nicchia che produce in casa: gamma, edizioni limitate e prezzi.", "The niche Portuguese brand that makes its own rackets: range, limited editions and prices.",
+                                "La marca portuguesa de nicho que fabrica en casa: gama, ediciones limitadas y precios.", "La marque portugaise de niche qui fabrique elle-même : gamme, éditions limitées et prix.")
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -2148,7 +2295,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})

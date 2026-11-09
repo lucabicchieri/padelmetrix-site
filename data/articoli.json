@@ -1,5 +1,47 @@
 [
  {
+  "slug": "quad-racchette-padel-portoghesi-modelli",
+  "data": "2026-11-09",
+  "racchette": [
+   "quad-chinese-new-year-edition-2026",
+   "quad-diogo-dalot-2026",
+   "quad-dragon-ii-fc-porto-edition-2026",
+   "quad-euro-padel-cup-edition-2026",
+   "quad-fox-2026",
+   "quad-fpf-edition-2026",
+   "quad-garuda-2025",
+   "quad-garuda-ii-2026",
+   "quad-guel-do-it-2026",
+   "quad-leopard-2026",
+   "quad-muklay-2026",
+   "quad-naja-2026",
+   "quad-rhino-2024",
+   "quad-shark-2026",
+   "quad-siza-vieira-2024",
+   "quad-t-rex-junior-2026",
+   "quad-tiger-2026",
+   "quad-wolf-2026"
+  ],
+  "titolo": {
+   "it": "QUAD, le racchette da padel fatte in Portogallo: tutti i modelli",
+   "en": "QUAD, the padel rackets made in Portugal: every model",
+   "es": "QUAD, las palas de pádel hechas en Portugal: todos los modelos",
+   "fr": "QUAD, les raquettes de padel fabriquées au Portugal : tous les modèles"
+  },
+  "desc": {
+   "it": "Il marchio portoghese di nicchia che produce in casa: gamma, edizioni limitate e prezzi.",
+   "en": "The niche Portuguese brand that makes its own rackets: range, limited editions and prices.",
+   "es": "La marca portuguesa de nicho que fabrica en casa: gama, ediciones limitadas y precios.",
+   "fr": "La marque portugaise de niche qui fabrique elle-même : gamme, éditions limitées et prix."
+  },
+  "url": {
+   "it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
+   "en": "/en/articles/quad-portuguese-padel-rackets-models/",
+   "es": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
+   "fr": "/fr/articles/quad-raquettes-padel-portugaises-modeles/"
+  }
+ },
+ {
   "slug": "quanto-dura-racchetta-padel-quando-cambiarla",
   "data": "2026-11-06",
   "racchette": [],
