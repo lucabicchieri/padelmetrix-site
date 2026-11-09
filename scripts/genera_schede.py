@@ -299,6 +299,10 @@ def render(d, n, db, pair_set):
                  "Los enlaces a las tiendas pueden ser enlaces de afiliado: si compras, PadelMetrix puede recibir una comisión sin coste para ti.", "Les liens vers les boutiques peuvent être des liens d'affiliation : si vous achetez, PadelMetrix peut toucher une commission sans frais pour vous.")
     asin = next((x.get("asin") for x in p["negozi"] if isinstance(x, dict) and x.get("amazon") and x.get("asin")), None)
     foto_attr = f' data-asin="{e(asin)}" data-alt="{e(nome_completo)}"' if asin else ""
+    tatto_row = ""
+    if n.get("tatto") and not any(str(k).lower() in ("tatto", "sensazione") for k, _ in p["specifiche"]):
+        stima = L(" (stimato dalla gomma)", " (estimated from the core)", " (estimado por la goma)", " (estimé d'après la gomme)") if n.get("tatto_stima") else ""
+        tatto_row = f'\n<div><dt>{L("Tatto", "Feel", "Tacto", "Toucher")}</dt><dd>{e(S.TATTI()[n["tatto"]] + stima)}</dd></div>'
     corpo = f"""{cr_html}
 
 <div class="top">
@@ -333,7 +337,7 @@ def render(d, n, db, pair_set):
 <section class="block">
 <h2>{L("Dati tecnici della", "Technical specs of the", "Datos técnicos de la", "Caractéristiques techniques de la")} {e(sh)}</h2>
 <dl class="specs">
-{specs(p["specifiche"])}
+{specs(p["specifiche"])}{tatto_row}
 </dl>
 <p class="note">{loc_html(tr(p["nota_specifiche_html"]))}</p>
 </section>
