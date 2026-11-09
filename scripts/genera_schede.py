@@ -297,10 +297,20 @@ def render(d, n, db, pair_set):
     nota_aff = L("I link verso i negozi possono essere link di affiliazione: se acquisti, PadelMetrix può ricevere una commissione senza costi per te.",
                  "Links to shops may be affiliate links: if you buy, PadelMetrix may receive a commission at no cost to you.",
                  "Los enlaces a las tiendas pueden ser enlaces de afiliado: si compras, PadelMetrix puede recibir una comisión sin coste para ti.", "Les liens vers les boutiques peuvent être des liens d'affiliation : si vous achetez, PadelMetrix peut toucher une commission sans frais pour vous.")
+    asin = next((x.get("asin") for x in p["negozi"] if isinstance(x, dict) and x.get("amazon") and x.get("asin")), None)
+    foto_attr, foto_js = "", ""
+    if asin:
+        cred = L("Immagine: Amazon", "Image: Amazon", "Imagen: Amazon", "Image : Amazon")
+        alt_img = e(nome_completo).replace("'", "&#39;")
+        foto_attr = f' data-asin="{e(asin)}"'
+        foto_js = ("<script>fetch('/amazon/immagini.json').then(function(r){return r.json()}).then(function(j){"
+                   "document.querySelectorAll('.photo[data-asin]').forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;var o=el.innerHTML;"
+                   "el.classList.add('has-img');el.innerHTML='<a href=\"https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21\" rel=\"sponsored nofollow noopener\" target=\"_blank\">"
+                   "<img src=\"'+x.img+'\" alt=\"" + alt_img + "\" width=\"'+(x.w||500)+'\" height=\"'+(x.h||500)+'\" loading=\"eager\"></a><small>" + cred + "</small>';el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}})}).catch(function(){})</script>")
     corpo = f"""{cr_html}
 
 <div class="top">
-<div class="photo">{racket_svg(d.get("forma", "goccia"), 220, nome_completo)}</div>
+<div class="photo"{foto_attr}>{racket_svg(d.get("forma", "goccia"), 220, nome_completo)}</div>{foto_js}
 <div class="info">
 <div>
 <div class="eyebrow">{e(tr(p["eyebrow"]))}</div>
