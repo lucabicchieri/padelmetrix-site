@@ -2,7 +2,7 @@ name: Immagini Amazon
 # Ogni giorno aggiorna gli URL delle immagini ufficiali dalla Creators API
 on:
   schedule:
-    - cron: "17 4 * * *"
+    - cron: "17 4,16 * * *"
   workflow_dispatch:
   push:
     branches: [main]
