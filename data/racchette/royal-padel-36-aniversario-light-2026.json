@@ -41,7 +41,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Royal+Padel+36+Aniversario+Light+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0GQC8RN3M"
       },
       {
         "nome": "Ipontennis",
