@@ -41,7 +41,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Tenax+Padel+Guardian+2024",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0DHD6RT64"
       }
     ],
     "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",
@@ -135,7 +136,7 @@
         "testo": "Rotonda di controllo, 360–370 g, fibra di vetro, livello principiante / intermedio."
       }
     ],
-    "aggiornata": "24 ottobre 2026",
+    "aggiornata": "9 novembre 2026",
     "tratti": {
       "titolo": "In sintesi",
       "voci": [

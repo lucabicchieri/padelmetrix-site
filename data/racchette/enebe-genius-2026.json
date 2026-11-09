@@ -39,10 +39,11 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Enebe+Genius+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0GGKXK8VN"
       }
     ],
-    "nota_prezzi": "Prezzo di listino indicativo 255 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "nota_prezzi": "Prezzo di listino indicativo 255 € secondo i rivenditori consultati a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
     "confronta": {
       "url": "/confronta/?r=enebe-genius-2026,tenax-padel-guardian-2024",
       "testo": "Confronta con Guardian 2024"
@@ -132,7 +133,7 @@
         "testo": "Rotonda di controllo, 355–375 g, livello intermedio."
       }
     ],
-    "aggiornata": "24 ottobre 2026",
+    "aggiornata": "9 novembre 2026",
     "tratti": {
       "titolo": "In sintesi",
       "voci": [

@@ -351,6 +351,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-manu-martin/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
+}
+},
+{
 "path": "/it/domande/racchetta-marina-guinart/",
 "alt": {
 "it": "/it/domande/racchetta-marina-guinart/",
@@ -861,6 +870,15 @@
 "en": "/en/questions/lucas-campagnolo-padel-racket/",
 "es": "/es/preguntas/pala-lucas-campagnolo/",
 "fr": "/fr/questions/raquette-lucas-campagnolo/"
+}
+},
+{
+"path": "/en/questions/manu-martin-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
 }
 },
 {
@@ -1377,6 +1395,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-manu-martin/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
+}
+},
+{
 "path": "/es/preguntas/pala-marina-guinart/",
 "alt": {
 "it": "/it/domande/racchetta-marina-guinart/",
@@ -1887,6 +1914,15 @@
 "en": "/en/questions/lucas-campagnolo-padel-racket/",
 "es": "/es/preguntas/pala-lucas-campagnolo/",
 "fr": "/fr/questions/raquette-lucas-campagnolo/"
+}
+},
+{
+"path": "/fr/questions/raquette-manu-martin/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
 }
 },
 {

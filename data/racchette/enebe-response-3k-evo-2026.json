@@ -41,10 +41,11 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Enebe+Response+3K+Evo+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0GGKSV2M3"
       }
     ],
-    "nota_prezzi": "Prezzo di listino indicativo 230 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "nota_prezzi": "Prezzo di listino indicativo 230 € secondo i rivenditori consultati a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
     "confronta": {
       "url": "/confronta/?r=enebe-response-3k-evo-2026,wilson-bela-pro-v3-2026",
       "testo": "Confronta con Bela Pro V3 2026"
@@ -138,7 +139,7 @@
         "testo": "Ibrida d'attacco, 350–370 g, carbonio 24K, livello avanzato / professionale, listino più alto."
       }
     ],
-    "aggiornata": "24 ottobre 2026",
+    "aggiornata": "9 novembre 2026",
     "tratti": {
       "titolo": "In sintesi",
       "voci": [
