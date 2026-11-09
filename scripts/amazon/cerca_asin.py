@@ -43,9 +43,16 @@ def cerca(kw, brand, tok, ver, indice="SportsAndOutdoors"):
 
 
 def main():
-    filtro = set(sys.argv[1:])
+    filtro = set(a for a in sys.argv[1:] if a != "--pickleball")
     schede = []
-    for f in sorted(glob.glob(os.path.join(RADICE, "data", "racchette", "*.json"))):
+    if "--pickleball" in sys.argv:
+        sys.path.insert(0, os.path.join(RADICE, "scripts"))
+        from dati_pickleball import P as PADDLE
+        for d in PADDLE:
+            if not filtro or d["slug"] in filtro:
+                schede.append({"slug": d["slug"], "marca": d["marca"], "modello": d["modello"],
+                               "anno": d.get("anno") or "", "kw": (d.get("amazon") or f'{d["marca"]} {d["modello"]}') + " pickleball"})
+    for f in ([] if "--pickleball" in sys.argv else sorted(glob.glob(os.path.join(RADICE, "data", "racchette", "*.json")))):
         d = json.load(open(f, encoding="utf-8"))
         if filtro and d["slug"] not in filtro:
             continue
@@ -56,7 +63,7 @@ def main():
         if time.time() - t0 > 3000:  # il token dura circa un'ora
             tok, ver = creators.token()
             t0 = time.time()
-        kw = f'{d["marca"]} {d["modello"]} {d["anno"]}'
+        kw = d.get("kw") or f'{d["marca"]} {d["modello"]} {d["anno"]}'
         st, res = cerca(kw, d["marca"], tok, ver)
         if st == 200 and not res:
             st, res = cerca(f'{d["marca"]} {d["modello"]}', None, tok, ver)
