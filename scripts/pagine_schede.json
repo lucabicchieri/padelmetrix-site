@@ -1314,6 +1314,15 @@
 }
 },
 {
+"path": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
+}
+},
+{
 "path": "/it/racchette/head-gravity-pro-2026/",
 "alt": {
 "it": "/it/racchette/head-gravity-pro-2026/",
@@ -4614,6 +4623,15 @@
 "en": "/en/rackets/head-extreme-team-2026/",
 "es": "/es/palas/head-extreme-team-2026/",
 "fr": "/fr/raquettes/head-extreme-team-2026/"
+}
+},
+{
+"path": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
 }
 },
 {
@@ -7920,6 +7938,15 @@
 }
 },
 {
+"path": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
+}
+},
+{
 "path": "/es/palas/head-gravity-pro-2026/",
 "alt": {
 "it": "/it/racchette/head-gravity-pro-2026/",
@@ -11220,6 +11247,15 @@
 "en": "/en/rackets/head-extreme-team-2026/",
 "es": "/es/palas/head-extreme-team-2026/",
 "fr": "/fr/raquettes/head-extreme-team-2026/"
+}
+},
+{
+"path": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
 }
 },
 {

@@ -216,6 +216,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
+}
+},
+{
 "path": "/it/domande/racchetta-bea-gonzalez/",
 "alt": {
 "it": "/it/domande/racchetta-bea-gonzalez/",
@@ -735,6 +744,15 @@
 "en": "/en/questions/arturo-coello-padel-racket/",
 "es": "/es/preguntas/pala-arturo-coello/",
 "fr": "/fr/questions/raquette-arturo-coello/"
+}
+},
+{
+"path": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
 }
 },
 {
@@ -1260,6 +1278,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
+}
+},
+{
 "path": "/es/preguntas/pala-bea-gonzalez/",
 "alt": {
 "it": "/it/domande/racchetta-bea-gonzalez/",
@@ -1779,6 +1806,15 @@
 "en": "/en/questions/arturo-coello-padel-racket/",
 "es": "/es/preguntas/pala-arturo-coello/",
 "fr": "/fr/questions/raquette-arturo-coello/"
+}
+},
+{
+"path": "/fr/questions/raquette-arturo-coello-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
 }
 },
 {
