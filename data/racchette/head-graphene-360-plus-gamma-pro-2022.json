@@ -44,7 +44,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Head+Graphene+360++Gamma+Pro+2022",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B099W3Q7QL"
       }
     ],
     "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",
