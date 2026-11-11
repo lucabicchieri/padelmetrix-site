@@ -1,0 +1,15 @@
+name: Cerca prodotti regalo Amazon
+on:
+  workflow_dispatch:
+jobs:
+  cerca:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cerca su amazon.it
+        env:
+          CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+          CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
+          CREATORS_VERSION: ${{ secrets.CREATORS_VERSION }}
+        run: python3 scripts/amazon/cerca_regali.py
