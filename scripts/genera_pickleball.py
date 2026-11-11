@@ -126,9 +126,21 @@ def negozio(p, nota_aff):
             f'<p class="note">{L("I prezzi su Amazon cambiano spesso: quello in scheda è il listino indicato dalla fonte.", "Amazon prices change often: the one on this page is the list price given by the source.", "Los precios en Amazon cambian a menudo: el de la ficha es el precio de lista indicado por la fuente.", "Les prix sur Amazon changent souvent : celui de la fiche est le prix catalogue indiqué par la source.")} {nota_aff}</p>')
 
 
+def card_p(p):
+    attrs = f'data-marca="{p["marca"]}" data-forma="{p["forma"]}" data-livello="{p["livello"]}"'
+    testo = (f'<small>{e(p["marca"])}{" · " + str(p["anno"]) if p.get("anno") else ""}</small><b>{e(nome(p))}</b>'
+             f'<small>{e(" · ".join(x for x in (forma(p), str(p["spessore_mm"]) + " mm" if p.get("spessore_mm") else None, LIVN(p["livello"])) if x))}</small>')
+    if p.get("asin"):
+        return (f'<div class="rcard has-asin" {attrs}><div class="ill" data-asin="{e(p["asin"])}" data-alt="{e(titolo(p))}">{paddle_svg(p["forma"], 60, titolo(p))}</div>'
+                f'<a class="rtxt" href="{url_p(p)}">{testo}</a></div>')
+    return f'<a class="rcard" href="{url_p(p)}" {attrs}><div class="ill">{paddle_svg(p["forma"], 60, titolo(p))}</div><div>{testo}</div></a>'
+
+
 def amazon_url(p):
     q = p["amazon"].replace(" ", "+")
     u = f"https://{AMAZON[S.lang()]}/s?k={q}"
+    if p.get("asin") and S.lang() == "it":
+        return f"https://www.amazon.it/dp/{p['asin']}?tag={AMAZON_TAG['it']}"
     tag = AMAZON_TAG[S.lang()]
     return u + (f"&tag={tag}" if tag else "")
 
@@ -280,9 +292,10 @@ def scheda(p):
     li = lambda xs: "".join(f"<li>{e(x)}</li>" for x in xs)  # noqa: E731
     sim = "".join(f'<a href="{url_p(o)}"><small>{e(o["marca"])}</small><b>{e(nome(o))}</b><small>{e(forma(o))}{", " + str(o["spessore_mm"]) + " mm" if o.get("spessore_mm") else ""}, {e(LIVN(o["livello"]).lower())}</small></a>' for o in simili(p))
     fonti = " · ".join(fonte_link(k) for k in p["fonti"])
+    foto_attr = f' data-asin="{e(p["asin"])}" data-alt="{e(t)}"' if p.get("asin") else ""
     corpo = f"""{cr}
 <div class="top">
-<div class="photo">{paddle_svg(p["forma"], 200, t)}</div>
+<div class="photo"{foto_attr}>{paddle_svg(p["forma"], 200, t)}</div>
 <div class="info">
 <div>
 <div class="eyebrow">{e(p["marca"])} · Pickleball{" · " + str(p["anno"]) if p.get("anno") else ""}</div>
@@ -355,9 +368,7 @@ def elenco():
             f'<label>{L("Forma", "Shape", "Forma", "Forme")}<select name="forma">{opt([(k, g(v)) for k, v in FORME.items()], tutte)}</select></label>'
             f'<label>{L("Livello", "Level", "Nivel", "Niveau")}<select name="livello">{opt([(k, LIVN(k)) for k in livs], tutti)}</select></label></form>')
     cards = "".join(
-        f'<a class="rcard" href="{url_p(p)}" data-marca="{p["marca"]}" data-forma="{p["forma"]}" data-livello="{p["livello"]}"><div class="ill">{paddle_svg(p["forma"], 60, titolo(p))}</div>'
-        f'<div><small>{e(p["marca"])}{" · " + str(p["anno"]) if p.get("anno") else ""}</small><b>{e(nome(p))}</b><small>{e(" · ".join(x for x in (forma(p), str(p["spessore_mm"]) + " mm" if p.get("spessore_mm") else None, LIVN(p["livello"])) if x))}</small></div></a>'
-        for p in PADDLE)
+        card_p(p) for p in PADDLE)
     qa = [(L("Che differenza c'è tra pickleball e padel?", "What is the difference between pickleball and padel?", "¿Qué diferencia hay entre pickleball y pádel?", "Quelle est la différence entre le pickleball et le padel ?"),
            L("Il pickleball si gioca su un campo più piccolo, senza pareti, con una pallina di plastica forata e una racchetta piatta senza fori (paddle). Il padel ha le pareti, una pallina pressurizzata e racchette forate più spesse e pesanti.",
              "Pickleball is played on a smaller court without walls, with a perforated plastic ball and a flat paddle without holes. Padel has walls, a pressurised ball and thicker, heavier perforated rackets.",

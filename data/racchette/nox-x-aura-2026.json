@@ -44,7 +44,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Nox+X-Aura+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0GX6X3VCX"
       },
       {
         "nome": "PadelMarket",

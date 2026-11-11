@@ -53,7 +53,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Adidas+Cross+It+Light+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0FZX2FFFX"
       },
       {
         "nome": "Adidas Padel",

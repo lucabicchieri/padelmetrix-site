@@ -35,3 +35,5 @@
 
 .tab tr.diff td{background:#F4FBE3}.tab tr.diff td:first-child{font-weight:600}.cmp-n3 th,.cmp-n4 th{min-width:150px}.cmp-links .btn{margin:0 8px 8px 0}
 table[class*="cmp-n"] td:first-child,table[class*="cmp-n"] th:first-child{position:sticky;left:0;z-index:1;background:#fff}table[class*="cmp-n"] tr.diff td:first-child{background:#F4FBE3}
+
+.rcard.has-asin{padding:0;overflow:hidden}.rcard.has-asin .ill{margin:12px 0 12px 14px}.rcard .rtxt{flex:1;display:block;padding:12px 14px 12px 0;color:inherit;text-decoration:none}.rcard .ill.has-img{flex:0 0 64px;height:64px;background:#fff;border-radius:8px}.rcard .ill.has-img img{width:64px;height:64px;object-fit:contain}

@@ -344,7 +344,9 @@ def carica():
             donna=bool(d.get("donna")), giocatore=d.get("giocatore"), superficie=d.get("superficie") or d.get("plano"),
             sensazione=d.get("sensazione") or d.get("tatto"), bilanciamento=d.get("bilanciamento"), nucleo=d.get("nucleo") or d.get("gomma"),
             val=p.get("valutazioni"), lead=p.get("lead", ""), d=d,
+            asin=next((x.get("asin") for x in (p.get("negozi") or []) if isinstance(x, dict) and x.get("amazon") and x.get("asin")), None),
         )
+        n["tatto"], n["tatto_stima"] = tatto3(n)
         n["nome"] = n["titolo"].replace(n["marca"] + " ", "", 1)
         if str(n["anno"]) not in n["nome"]:
             n["nome"] += f" {n['anno']}"
@@ -487,19 +489,67 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None):
 </main>
 {footer()}
 {extra_js}
+{amazon_js(corpo)}
 {C.body(l, P("cookie"))}
 </body>
 </html>
 '''
 
 
+def amazon_js(corpo):
+    """Immagini ufficiali Amazon (Creators API) per gli elementi con data-asin.
+
+    Licenza Amazon: ogni immagine deve portare alla pagina prodotto Amazon e il link
+    all'immagine si può conservare al massimo 24 ore: oltre, resta il disegno.
+    """
+    if "data-asin" not in corpo:
+        return ""
+    cred = L("Immagine: Amazon", "Image: Amazon", "Imagen: Amazon", "Image : Amazon")
+    return ("<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;"
+            "fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){"
+            "var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;"
+            "els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;"
+            "var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/\"/g,'&quot;');"
+            "el.classList.add('has-img');"
+            "el.innerHTML='<a href=\"https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21\" rel=\"sponsored nofollow noopener\" target=\"_blank\" title=\"Amazon\">"
+            "<img src=\"'+x.img+'\" alt=\"'+alt+'\" loading=\"lazy\"></a>'+(big?'<small>" + cred + "</small>':'');"
+            "el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}})}).catch(function(){})})();</script>")
+
+
+def tatto3(n):
+    """Tatto in tre classi (morbido, medio, duro): dichiarato se c'è, altrimenti stimato dalla gomma."""
+    def da_testo(t, gomma=False):
+        t = str(t or "").lower().replace("durezza media", "media").replace("dureza media", "media").replace("medium hardness", "media")
+        if any(w in t for w in ("morbid", "soft", "blando", "blanda", "comfort", "bassa densit", "low densit", "low-densit", "baja densidad")):
+            return "morbido"
+        if any(w in t for w in ("dur", "rigid", "secc", "ferm", "hard", "high memory", "alta densit", "high densit", "high-densit")):
+            return "duro"
+        if any(w in t for w in ("medi", "medium", "mid")):
+            return "medio"
+        return None
+    t = da_testo(n.get("sensazione"))
+    if t:
+        return t, False
+    t = da_testo(n.get("nucleo"), True)
+    return (t, True) if t else (None, False)
+
+
+def TATTI():
+    return {"morbido": L("Morbido", "Soft", "Blando", "Souple"), "medio": L("Medio", "Medium", "Medio", "Moyen"), "duro": L("Duro", "Hard", "Duro", "Dur")}
+
+
 def card(n, extra=""):
     bits = [x for x in (FORMA(n["forma"]), n["peso"], LIVN(n["livello"])) if x]
     attrs = (f'data-marca="{n["marca_slug"]}" data-forma="{n["forma"] or ""}" data-livello="{n["livello"] or ""}" '
              f'data-stile="{n["stile"] or ""}" data-cat="{"junior" if n["categoria"] == "junior" else ("donna" if n["donna"] else "adulto")}" '
-             f'data-prezzo="{n["prezzo"] or ""}" data-anno="{n["anno"]}" data-nome="{e((n["titolo"] + " " + (n["giocatore"] or "")).lower())}"')
+             f'data-prezzo="{n["prezzo"] or ""}" data-anno="{n["anno"]}" data-tatto="{n.get("tatto") or ""}" data-nome="{e((n["titolo"] + " " + (n["giocatore"] or "")).lower())}"')
+    testo = f'<small>{e(n["marca"])} · {n["anno"]}</small><b>{e(n["nome"])}</b><small>{e(" · ".join(bits))}</small>{extra}'
+    if n.get("asin"):
+        # Con immagine Amazon: l'immagine porta ad Amazon (obbligo della licenza), il testo alla scheda
+        return (f'<div class="rcard has-asin" {attrs}><div class="ill" data-asin="{e(n["asin"])}" data-alt="{e(n["titolo"])}">{racket_svg(n["forma"], 64, n["titolo"])}</div>'
+                f'<a class="rtxt" href="{url_r(n)}">{testo}</a></div>')
     return (f'<a class="rcard" href="{url_r(n)}" {attrs}><div class="ill">{racket_svg(n["forma"], 64, n["titolo"])}</div>'
-            f'<div><small>{e(n["marca"])} · {n["anno"]}</small><b>{e(n["nome"])}</b><small>{e(" · ".join(bits))}</small>{extra}</div></a>')
+            f'<div>{testo}</div></a>')
 
 
 def griglia(items):

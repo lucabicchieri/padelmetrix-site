@@ -55,7 +55,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Babolat+Technical+Veron+3.0+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0GHWQFTLG"
       }
     ],
     "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",

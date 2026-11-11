@@ -43,7 +43,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Head+Speed+Motion+2025",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0DNTQSMFD"
       }
     ],
     "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",

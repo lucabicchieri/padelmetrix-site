@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pagina "Trova la tua racchetta in 2 minuti" in it/en/es: 7 domande e le 3 racchette più adatte dal database.
+"""Pagina "Trova la tua racchetta in 2 minuti" in it/en/es: 9 domande e le 3 racchette più adatte dal database.
 
 Il punteggio usa solo i dati delle schede (livello, stile, forma, peso, tatto, prezzo di listino, categoria, marca)
 ed è spiegato in pagina. Tutto gira nel browser: nessun dato viene inviato."""
@@ -16,12 +16,7 @@ LIVNUM = {k: i for i, k in enumerate(LIV)}
 
 
 def tatto(n):
-    s = str(n["sensazione"] or "").lower()
-    if "morbid" in s:
-        return 1
-    if any(w in s for w in ("dur", "rigid", "secc", "ferm")):
-        return -1
-    return 0
+    return {"morbido": 1, "duro": -1}.get(n.get("tatto"), 0)
 
 
 def indice(db):
@@ -29,7 +24,7 @@ def indice(db):
     for n in db:
         out.append({"s": n["slug"], "t": n["titolo"], "m": n["marca"], "ms": n["marca_slug"], "f": n["forma"] or "", "fl": FORMA(n["forma"]) or "",
                     "l": LIVNUM.get(n["livello"], -1), "ll": LIVN(n["livello"]) or "", "st": n["stile"] or "", "p": n["peso_min"] or 0,
-                    "pz": n["prezzo"] or 0, "pzt": euro(n["prezzo"]) if n["prezzo"] else "", "tt": tatto(n),
+                    "pz": n["prezzo"] or 0, "pzt": euro(n["prezzo"]) if n["prezzo"] else "", "tt": tatto(n), "t3": n.get("tatto") or "",
                     "c": "junior" if n["categoria"] == "junior" else ("donna" if n["donna"] else "adulto"), "a": n["anno"], "u": url_r(n),
                     "svg": n["forma"] or "goccia"})
     return out
@@ -47,6 +42,14 @@ def domande(marche):
          [("controllo", L("Difendo e costruisco il punto", "I defend and build the point", "Defiendo y construyo el punto", "Je défends et je construis le point")),
           ("polivalente", L("Un po' di tutto", "A bit of everything", "Un poco de todo", "Un peu de tout")),
           ("offensivo", L("Attacco e chiudo a rete", "I attack and finish at the net", "Ataco y cierro en la red", "J'attaque et je conclus au filet"))]),
+        ("f", L("Che forma preferisci?", "Which shape do you prefer?", "¿Qué forma prefieres?", "Quelle forme préférez-vous ?"),
+         [("rotonda", L("Rotonda (controllo)", "Round (control)", "Redonda (control)", "Ronde (contrôle)")), ("goccia", L("Goccia (equilibrio)", "Teardrop (balance)", "Lágrima (equilibrio)", "Goutte d'eau (équilibre)")),
+          ("diamante", L("Diamante (potenza)", "Diamond (power)", "Diamante (potencia)", "Diamant (puissance)")), ("ibrida", L("Ibrida", "Hybrid", "Híbrida", "Hybride")),
+          ("", L("Non so / indifferente", "Not sure / doesn't matter", "No sé / me da igual", "Je ne sais pas / peu importe"))]),
+        ("t", L("Che tatto preferisci?", "What feel do you prefer?", "¿Qué tacto prefieres?", "Quel toucher préférez-vous ?"),
+         [("morbido", L("Morbido (più comfort e uscita di palla)", "Soft (more comfort and ball exit)", "Blando (más comodidad y salida de bola)", "Souple (plus de confort et de sortie de balle)")),
+          ("medio", L("Medio", "Medium", "Medio", "Moyen")), ("duro", L("Duro (più precisione e potenza nei colpi forti)", "Hard (more precision and power on big shots)", "Duro (más precisión y potencia en golpes fuertes)", "Dur (plus de précision et de puissance sur les frappes fortes)")),
+          ("", L("Non so / indifferente", "Not sure / doesn't matter", "No sé / me da igual", "Je ne sais pas / peu importe"))]),
         ("b", L("Hai fastidi a gomito o spalla?", "Do you have elbow or shoulder problems?", "¿Tienes molestias en el codo o el hombro?", "Avez-vous des problèmes de coude ou d'épaule ?"),
          [("si", L("Sì", "Yes", "Sí", "Oui")), ("no", L("No", "No", "No", "Non"))]),
         ("w", L("Che peso preferisci?", "What weight do you prefer?", "¿Qué peso prefieres?", "Quel poids préférez-vous ?"),
@@ -70,6 +73,8 @@ def testi_js():
         "stile": L("stile di gioco in linea con il tuo", "playing style matches yours", "estilo de juego como el tuyo", "style de jeu proche du vôtre"),
         "forma": L("forma adatta a come giochi", "shape suits how you play", "forma adecuada a cómo juegas", "forme adaptée à votre jeu"),
         "soft": L("tatto morbido, più comodo per il braccio", "soft feel, easier on the arm", "tacto blando, más cómodo para el brazo", "toucher doux, plus facile pour le bras"),
+        "formaok": L("la forma che preferisci", "the shape you prefer", "la forma que prefieres", "la forme que vous préférez"),
+        "tattook": L("il tatto che preferisci", "the feel you prefer", "el tacto que prefieres", "le toucher que vous préférez"),
         "peso": L("peso come lo preferisci", "weight as you prefer", "peso como lo prefieres", "poids selon votre préférence"),
         "budget": L("nel tuo budget", "within your budget", "dentro de tu presupuesto", "dans votre budget"),
         "donna": L("modello femminile", "women's model", "modelo femenino", "modèle féminin"),
@@ -88,7 +93,7 @@ def testi_js():
 JS = r"""<script>
 (function(){
 var f=document.getElementById('finder'),out=document.getElementById('risultato');
-var q=new URLSearchParams(location.search);['l','s','b','w','p','c','m'].forEach(function(k){var v=q.get(k);if(v===null)return;var el=f.querySelector('input[name="'+k+'"][value="'+v+'"]');if(el)el.checked=true;});
+var q=new URLSearchParams(location.search);['l','s','f','t','b','w','p','c','m'].forEach(function(k){var v=q.get(k);if(v===null)return;var el=f.querySelector('input[name="'+k+'"][value="'+v+'"]');if(el)el.checked=true;});
 function val(k){var el=f.querySelector('input[name="'+k+'"]:checked');return el?el.value:null;}
 function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function score(r,a){
@@ -99,7 +104,9 @@ function score(r,a){
  if(r.l>=0){var d=Math.abs(r.l-lv);s-=d*3;if(d<=1)why.push(TX.liv);if(lv<=1&&r.l>=4)s-=6;}
  var forma={controllo:'rotonda',polivalente:'goccia',offensivo:'diamante'}[a.s];
  if(r.st===a.s){s+=4;why.push(TX.stile);}
- if(r.f===forma||(a.s==='polivalente'&&r.f==='ibrida')){s+=3;why.push(TX.forma);}else if(a.s==='controllo'&&r.f==='diamante')s-=3;
+ if(a.f){if(r.f===a.f){s+=5;why.push(TX.formaok);}else s-=3;}
+ else if(r.f===forma||(a.s==='polivalente'&&r.f==='ibrida')){s+=3;why.push(TX.forma);}else if(a.s==='controllo'&&r.f==='diamante')s-=3;
+ if(a.t&&r.t3){if(r.t3===a.t){s+=4;why.push(TX.tattook);}else if((a.t==='morbido'&&r.t3==='duro')||(a.t==='duro'&&r.t3==='morbido'))s-=4;else s-=1;}
  if(a.b==='si'){if(r.tt===1){s+=5;why.push(TX.soft);}else if(r.tt===-1)s-=5;if(r.f==='diamante'&&r.tt!==1)s-=3;}
  if(a.w&&r.p){var w=r.p<355?'leggera':(r.p<=365?'media':'pesante');if(w===a.w){s+=2;why.push(TX.peso);}else s-=1;}
  if(a.p){var b=parseFloat(a.p);if(r.pz){if(r.pz<=b){s+=2;why.push(TX.budget);}else s-=6+(r.pz-b)/25;}else s-=1.5;}
@@ -108,7 +115,7 @@ function score(r,a){
  return {s:s,why:why};
 }
 function run(show){
- var a={};var ok=true;['l','s','b','w','p','c','m'].forEach(function(k){var v=val(k);if(v===null)ok=false;a[k]=v;});
+ var a={};var ok=true;['l','s','f','t','b','w','p','c','m'].forEach(function(k){var v=val(k);if(v===null)ok=false;a[k]=v;});
  if(!ok){if(show)out.innerHTML='<p class="note">'+TX.manca+'</p>';return;}
  var p=new URLSearchParams(a);history.replaceState(null,'','?'+p.toString());
  var res=[];IDX.forEach(function(r){var x=score(r,a);if(x)res.push({r:r,s:x.s,why:x.why});});
@@ -156,14 +163,14 @@ def pagina_selettore(db):
     cr, ld = crumbs([S.home_crumb(), (L("Trova la tua racchetta", "Racket finder", "Encuentra tu pala", "Trouve ta raquette"), None)])
     corpo = f'''{CSS}{cr}
 <div class="intro"><h1>{L("Trova la tua racchetta da padel in 2 minuti", "Find your padel racket in 2 minutes", "Encuentra tu pala de pádel en 2 minutos", "Trouvez votre raquette de padel en 2 minutes")}</h1>
-<p><b>{L(f"Rispondi a 7 domande su livello, stile, braccio, peso, budget e marca: ti proponiamo le 3 racchette più adatte tra le {len(db)} del database PadelMetrix.", f"Answer 7 questions about level, style, arm, weight, budget and brand: we suggest the 3 best-suited rackets out of the {len(db)} in the PadelMetrix database.", f"Responde a 7 preguntas sobre nivel, estilo, brazo, peso, presupuesto y marca: te proponemos las 3 palas más adecuadas entre las {len(db)} de la base de datos PadelMetrix.", f"Répondez à 7 questions sur le niveau, le style, le bras, le poids, le budget et la marque : nous vous proposons les 3 raquettes les plus adaptées parmi les {len(db)} de la base PadelMetrix.")}</b> {L("Il test gira nel tuo browser: le risposte non vengono inviate a nessuno.", "The quiz runs in your browser: your answers are not sent anywhere.", "El test funciona en tu navegador: las respuestas no se envían a nadie.", "Le quiz fonctionne dans votre navigateur : vos réponses ne sont envoyées nulle part.")}</p></div>
+<p><b>{L(f"Rispondi a 9 domande su livello, stile, forma, tatto, braccio, peso, budget e marca: ti proponiamo le 3 racchette più adatte tra le {len(db)} del database PadelMetrix.", f"Answer 9 questions about level, style, shape, feel, arm, weight, budget and brand: we suggest the 3 best-suited rackets out of the {len(db)} in the PadelMetrix database.", f"Responde a 9 preguntas sobre nivel, estilo, forma, tacto, brazo, peso, presupuesto y marca: te proponemos las 3 palas más adecuadas entre las {len(db)} de la base de datos PadelMetrix.", f"Répondez à 9 questions sur le niveau, le style, la forme, le toucher, le bras, le poids, le budget et la marque : nous vous proposons les 3 raquettes les plus adaptées parmi les {len(db)} de la base PadelMetrix.")}</b> {L("Il test gira nel tuo browser: le risposte non vengono inviate a nessuno.", "The quiz runs in your browser: your answers are not sent anywhere.", "El test funciona en tu navegador: las respuestas no se envían a nadie.", "Le quiz fonctionne dans votre navigateur : vos réponses ne sont envoyées nulle part.")}</p></div>
 <form class="finder" id="finder">{form}<button type="submit">{L("Mostra le mie racchette", "Show my rackets", "Mostrar mis palas", "Voir mes raquettes")}</button></form>
 <div id="risultato" aria-live="polite"></div>
 <div class="prose" style="margin-top:36px">
 <h2>{L("Come scegliamo", "How we choose", "Cómo elegimos", "Comment nous choisissons")}</h2>
-<p>{L("Ogni racchetta riceve un punteggio in base ai dati della sua scheda: quanto il livello consigliato è vicino al tuo, se stile e forma corrispondono a come giochi (rotonda per il controllo, goccia o ibrida per il gioco completo, diamante per l'attacco), il tatto se hai fastidi al braccio, il peso, il prezzo di listino rispetto al budget e la categoria. Le racchette troppo avanzate per chi inizia vengono penalizzate. Non ci sono posizioni a pagamento.",
-       "Each racket gets a score based on its page data: how close the recommended level is to yours, whether style and shape match how you play (round for control, teardrop or hybrid for an all-round game, diamond for attack), the feel if you have arm problems, the weight, the list price against your budget and the category. Rackets that are too advanced for beginners are penalised. There are no paid placements.",
-       "Cada pala recibe una puntuación según los datos de su ficha: lo cerca que está el nivel recomendado del tuyo, si estilo y forma coinciden con tu juego (redonda para el control, lágrima o híbrida para un juego completo, diamante para el ataque), el tacto si tienes molestias en el brazo, el peso, el precio de lista frente al presupuesto y la categoría. Las palas demasiado avanzadas para quien empieza se penalizan. No hay posiciones de pago.", "Chaque raquette reçoit une note basée sur les données de sa fiche : la proximité entre le niveau conseillé et le vôtre, l'adéquation du style et de la forme à votre jeu (ronde pour le contrôle, goutte d'eau ou hybride pour un jeu polyvalent, diamant pour l'attaque), le toucher si vous avez des problèmes au bras, le poids, le prix catalogue par rapport à votre budget et la catégorie. Les raquettes trop avancées pour les débutants sont pénalisées. Il n'y a aucun placement payant.")}</p>
+<p>{L("Ogni racchetta riceve un punteggio in base ai dati della sua scheda: quanto il livello consigliato è vicino al tuo, se stile e forma corrispondono a come giochi (rotonda per il controllo, goccia o ibrida per il gioco completo, diamante per l'attacco), la forma e il tatto che preferisci (dichiarato dal produttore o stimato dalla gomma), il tatto se hai fastidi al braccio, il peso, il prezzo di listino rispetto al budget e la categoria. Le racchette troppo avanzate per chi inizia vengono penalizzate. Non ci sono posizioni a pagamento.",
+       "Each racket gets a score based on its page data: how close the recommended level is to yours, whether style and shape match how you play (round for control, teardrop or hybrid for an all-round game, diamond for attack), the shape and feel you prefer (declared by the maker or estimated from the core), the feel if you have arm problems, the weight, the list price against your budget and the category. Rackets that are too advanced for beginners are penalised. There are no paid placements.",
+       "Cada pala recibe una puntuación según los datos de su ficha: lo cerca que está el nivel recomendado del tuyo, si estilo y forma coinciden con tu juego (redonda para el control, lágrima o híbrida para un juego completo, diamante para el ataque), la forma y el tacto que prefieres (declarado por el fabricante o estimado por la goma), el tacto si tienes molestias en el brazo, el peso, el precio de lista frente al presupuesto y la categoría. Las palas demasiado avanzadas para quien empieza se penalizan. No hay posiciones de pago.", "Chaque raquette reçoit une note basée sur les données de sa fiche : la proximité entre le niveau conseillé et le vôtre, l'adéquation du style et de la forme à votre jeu (ronde pour le contrôle, goutte d'eau ou hybride pour un jeu polyvalent, diamant pour l'attaque), la forme et le toucher que vous préférez (déclaré par le fabricant ou estimé d'après la gomme), le toucher si vous avez des problèmes au bras, le poids, le prix catalogue par rapport à votre budget et la catégorie. Les raquettes trop avancées pour les débutants sont pénalisées. Il n'y a aucun placement payant.")}</p>
 <p>{L(f'Vuoi capire meglio? Leggi le guide <a href="{P("guide", "racchetta-padel-principianti")}">per principianti</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">per il gomito</a> e <a href="{P("guide", "forme-racchetta-padel")}">sulle forme</a>, oppure cerca nell\'<a href="{P("racchette")}">elenco completo</a>.',
        f'Want to know more? Read the guides <a href="{P("guide", "racchetta-padel-principianti")}">for beginners</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">for tennis elbow</a> and <a href="{P("guide", "forme-racchetta-padel")}">on shapes</a>, or search the <a href="{P("racchette")}">full list</a>.',
        f'¿Quieres saber más? Lee las guías <a href="{P("guide", "racchetta-padel-principianti")}">para principiantes</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">para el codo</a> y <a href="{P("guide", "forme-racchetta-padel")}">sobre las formas</a>, o busca en la <a href="{P("racchette")}">lista completa</a>.', f'Vous voulez en savoir plus ? Lisez les guides <a href="{P("guide", "racchetta-padel-principianti")}">pour débutants</a>, <a href="{P("guide", "racchetta-padel-epicondilite")}">pour l\'épicondylite</a> et <a href="{P("guide", "forme-racchetta-padel")}">sur les formes</a>, ou parcourez la <a href="{P("racchette")}">liste complète</a>.')}</p>
@@ -173,11 +180,11 @@ def pagina_selettore(db):
     app = {"@context": "https://schema.org", "@type": "WebApplication", "name": L("Trova la tua racchetta da padel", "Padel racket finder", "Encuentra tu pala de pádel", "Trouve ta raquette de padel"),
            "applicationCategory": "SportsApplication", "operatingSystem": "Web", "url": S.SITO + path, "inLanguage": S.lang(),
            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": S.editore()}
-    S.scrivi(path, pagina(L("Trova la tua racchetta da padel in 2 minuti: test con 7 domande | PadelMetrix", "Find your padel racket in 2 minutes: 7-question quiz | PadelMetrix",
-                            "Encuentra tu pala de pádel en 2 minutos: test de 7 preguntas | PadelMetrix", "Trouvez votre raquette de padel en 2 minutes : quiz en 7 questions | PadelMetrix"),
-                          L(f"Test gratuito: 7 domande su livello, stile, braccio, peso e budget e le 3 racchette da padel più adatte tra {len(db)} modelli 2026 e 2027.",
-                            f"Free quiz: 7 questions on level, style, arm, weight and budget, and the 3 best-suited padel rackets among {len(db)} 2026 and 2027 models.",
-                            f"Test gratuito: 7 preguntas sobre nivel, estilo, brazo, peso y presupuesto y las 3 palas de pádel más adecuadas entre {len(db)} modelos 2026 y 2027.", f"Quiz gratuit : 7 questions sur le niveau, le style, le bras, le poids et le budget, et les 3 raquettes de padel les plus adaptées parmi {len(db)} modèles 2026 et 2027."),
+    S.scrivi(path, pagina(L("Trova la tua racchetta da padel in 2 minuti: test con 9 domande | PadelMetrix", "Find your padel racket in 2 minutes: 9-question quiz | PadelMetrix",
+                            "Encuentra tu pala de pádel en 2 minutos: test de 9 preguntas | PadelMetrix", "Trouvez votre raquette de padel en 2 minutes : quiz en 9 questions | PadelMetrix"),
+                          L(f"Test gratuito: 9 domande su livello, stile, forma, tatto, braccio, peso e budget e le 3 racchette da padel più adatte tra {len(db)} modelli 2026 e 2027.",
+                            f"Free quiz: 9 questions on level, style, shape, feel, arm, weight and budget, and the 3 best-suited padel rackets among {len(db)} 2026 and 2027 models.",
+                            f"Test gratuito: 9 preguntas sobre nivel, estilo, forma, tacto, brazo, peso y presupuesto y las 3 palas de pádel más adecuadas entre {len(db)} modelos 2026 y 2027.", f"Quiz gratuit : 9 questions sur le niveau, le style, la forme, le toucher, le bras, le poids et le budget, et les 3 raquettes de padel les plus adaptées parmi {len(db)} modèles 2026 et 2027."),
                           path, corpo, on="racchette", ld=[ld, app], extra_js=js, alt=alt), alt)
 
 
