@@ -27,10 +27,10 @@ def filtri_js():
 (function(){
 var q=new URLSearchParams(location.search);var f=document.getElementById('filtri');if(!f)return;
 var cards=[].slice.call(document.querySelectorAll('.rgrid .rcard'));var out=document.getElementById('conta');
-['marca','forma','livello','stile','cat','prezzo','q'].forEach(function(k){var el=f.elements[k];if(el&&q.get(k))el.value=q.get(k);});
-function run(){var v={};['marca','forma','livello','stile','cat','prezzo','q'].forEach(function(k){v[k]=(f.elements[k].value||'').toLowerCase();});
+['marca','forma','tatto','livello','stile','cat','prezzo','q'].forEach(function(k){var el=f.elements[k];if(el&&q.get(k))el.value=q.get(k);});
+function run(){var v={};['marca','forma','tatto','livello','stile','cat','prezzo','q'].forEach(function(k){v[k]=(f.elements[k].value||'').toLowerCase();});
 var n=0;cards.forEach(function(c){var d=c.dataset,ok=true;
-if(v.marca&&d.marca!==v.marca)ok=false;if(v.forma&&d.forma!==v.forma)ok=false;if(v.livello&&d.livello!==v.livello)ok=false;
+if(v.marca&&d.marca!==v.marca)ok=false;if(v.forma&&d.forma!==v.forma)ok=false;if(v.tatto&&d.tatto!==v.tatto)ok=false;if(v.livello&&d.livello!==v.livello)ok=false;
 if(v.stile&&d.stile!==v.stile)ok=false;if(v.cat&&d.cat!==v.cat)ok=false;
 if(v.prezzo&&(!d.prezzo||parseFloat(d.prezzo)>parseFloat(v.prezzo)))ok=false;if(v.q&&d.nome.indexOf(v.q)<0)ok=false;
 c.style.display=ok?'':'none';if(ok)n++;});out.textContent=n+(n===1?' %s':' %s');}
@@ -50,6 +50,7 @@ def elenco(db):
 <label>{L("Cerca", "Search", "Buscar", "Rechercher")}<input name="q" type="search" placeholder="{L("Modello o giocatore", "Model or player", "Modelo o jugador", "Modèle ou joueur")}"></label>
 <label>{L("Marca", "Brand", "Marca", "Marque")}<select name="marca">{opt(marche, tutte)}</select></label>
 <label>{L("Forma", "Shape", "Forma", "Forme")}<select name="forma">{opt(list(S.forme_d().items()), tutte)}</select></label>
+<label>{L("Tatto", "Feel", "Tacto", "Toucher")}<select name="tatto">{opt(list(S.TATTI().items()), tutti)}</select></label>
 <label>{L("Livello", "Level", "Nivel", "Niveau")}<select name="livello">{opt([(k, LIVN(k)) for k in LIV], tutti)}</select></label>
 <label>{L("Stile", "Style", "Estilo", "Style")}<select name="stile">{opt(list(S.stili_d().items()), tutti)}</select></label>
 <label>{L("Per chi", "For", "Para quién", "Pour qui")}<select name="cat">{opt([("adulto", L("Adulto", "Adult", "Adulto", "Adulte")), ("donna", L("Modelli femminili", "Women's models", "Modelos femeninos", "Modèles femme")), ("junior", "Junior")], tutti)}</select></label>
@@ -59,9 +60,9 @@ def elenco(db):
     nm = len(marche)
     corpo = f'''{cr}
 <div class="intro"><h1>{L("Racchette da padel 2026 e 2027", "Padel rackets 2026 and 2027", "Palas de pádel 2026 y 2027", "Raquettes de padel 2026 et 2027")}</h1>
-<p>{L(f"{len(db)} racchette di {nm} marche con dati tecnici, sintesi delle recensioni e modelli simili. Filtra per marca, forma, livello, stile e prezzo, oppure fai il <a href=\"{P('selettore')}\">test in 2 minuti</a> o leggi le <a href=\"{P('guide')}\">guide alla scelta</a>.",
-      f"{len(db)} rackets from {nm} brands with specs, review summaries and similar models. Filter by brand, shape, level, style and price, or take the <a href=\"{P('selettore')}\">2-minute quiz</a> or read the <a href=\"{P('guide')}\">buying guides</a>.",
-      f"{len(db)} palas de {nm} marcas con datos técnicos, resumen de reseñas y modelos similares. Filtra por marca, forma, nivel, estilo y precio, o haz el <a href=\"{P('selettore')}\">test de 2 minutos</a> o lee las <a href=\"{P('guide')}\">guías de compra</a>.", f"{len(db)} raquettes de {nm} marques avec fiches techniques, synthèse des avis et modèles similaires. Filtrez par marque, forme, niveau, style et prix, ou faites le <a href=\"{P('selettore')}\">test en 2 minutes</a> ou lisez les <a href=\"{P('guide')}\">guides d'achat</a>.")}</p></div>
+<p>{L(f"{len(db)} racchette di {nm} marche con dati tecnici, sintesi delle recensioni e modelli simili. Filtra per marca, forma, tatto, livello, stile e prezzo, oppure fai il <a href=\"{P('selettore')}\">test in 2 minuti</a> o leggi le <a href=\"{P('guide')}\">guide alla scelta</a>.",
+      f"{len(db)} rackets from {nm} brands with specs, review summaries and similar models. Filter by brand, shape, feel, level, style and price, or take the <a href=\"{P('selettore')}\">2-minute quiz</a> or read the <a href=\"{P('guide')}\">buying guides</a>.",
+      f"{len(db)} palas de {nm} marcas con datos técnicos, resumen de reseñas y modelos similares. Filtra por marca, forma, tacto, nivel, estilo y precio, o haz el <a href=\"{P('selettore')}\">test de 2 minutos</a> o lee las <a href=\"{P('guide')}\">guías de compra</a>.", f"{len(db)} raquettes de {nm} marques avec fiches techniques, synthèse des avis et modèles similaires. Filtrez par marque, forme, toucher, niveau, style et prix, ou faites le <a href=\"{P('selettore')}\">test en 2 minutes</a> ou lisez les <a href=\"{P('guide')}\">guides d'achat</a>.")}</p></div>
 <div class="marche">{"".join(f'<a href="{P("marche", s)}">{e(m)}</a>' for s, m in marche)}</div>
 <p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:16px 0 24px">{L("<b>Nuovo al padel?</b> Prima di scegliere la racchetta leggi", "<b>New to padel?</b> Before choosing a racket, read", "<b>¿Nuevo en el pádel?</b> Antes de elegir la pala, lee", "<b>Nouveau au padel ?</b> Avant de choisir votre raquette, lisez")} <a href="{P("articoli", "regolamento-padel-regole-spiegate")}">{L("il regolamento del padel spiegato semplice", "the padel rules explained simply", "el reglamento del pádel explicado fácil", "les règles du padel expliquées simplement")}</a>: {L("servizio, pareti, punteggio e Star Point.", "serve, walls, scoring and Star Point.", "saque, paredes, tanteo y Star Point.", "service, vitres, score et Star Point.")}</p>
 {form}

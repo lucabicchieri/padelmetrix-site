@@ -44,7 +44,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Siux+Obsidian+Pro+2027",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0HPKY5CQ1"
       },
       {
         "nome": "PadelPROShop",

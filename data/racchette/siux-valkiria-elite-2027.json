@@ -47,7 +47,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Siux+Valkiria+Elite+2027",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0HPL2FMRZ"
       },
       {
         "nome": "PadelPROShop",

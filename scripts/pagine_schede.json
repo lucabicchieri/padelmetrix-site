@@ -1170,6 +1170,51 @@
 }
 },
 {
+"path": "/it/racchette/enebe-genius-2026/",
+"alt": {
+"it": "/it/racchette/enebe-genius-2026/",
+"en": "/en/rackets/enebe-genius-2026/",
+"es": "/es/palas/enebe-genius-2026/",
+"fr": "/fr/raquettes/enebe-genius-2026/"
+}
+},
+{
+"path": "/it/racchette/enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/racchette/enebe-mustang-silver-3k-2026/",
+"en": "/en/rackets/enebe-mustang-silver-3k-2026/",
+"es": "/es/palas/enebe-mustang-silver-3k-2026/",
+"fr": "/fr/raquettes/enebe-mustang-silver-3k-2026/"
+}
+},
+{
+"path": "/it/racchette/enebe-point-light-2026/",
+"alt": {
+"it": "/it/racchette/enebe-point-light-2026/",
+"en": "/en/rackets/enebe-point-light-2026/",
+"es": "/es/palas/enebe-point-light-2026/",
+"fr": "/fr/raquettes/enebe-point-light-2026/"
+}
+},
+{
+"path": "/it/racchette/enebe-response-3k-evo-2026/",
+"alt": {
+"it": "/it/racchette/enebe-response-3k-evo-2026/",
+"en": "/en/rackets/enebe-response-3k-evo-2026/",
+"es": "/es/palas/enebe-response-3k-evo-2026/",
+"fr": "/fr/raquettes/enebe-response-3k-evo-2026/"
+}
+},
+{
+"path": "/it/racchette/enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/racchette/enebe-space-2-0-2026/",
+"en": "/en/rackets/enebe-space-2-0-2026/",
+"es": "/es/palas/enebe-space-2-0-2026/",
+"fr": "/fr/raquettes/enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/it/racchette/head-bolt-2026/",
 "alt": {
 "it": "/it/racchette/head-bolt-2026/",
@@ -1266,6 +1311,15 @@
 "en": "/en/rackets/head-extreme-team-2026/",
 "es": "/es/palas/head-extreme-team-2026/",
 "fr": "/fr/raquettes/head-extreme-team-2026/"
+}
+},
+{
+"path": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
 }
 },
 {
@@ -1377,6 +1431,24 @@
 }
 },
 {
+"path": "/it/racchette/hirostar-alien-core-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-core-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-core-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-core-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-core-tolito-aguirre-2026/"
+}
+},
+{
+"path": "/it/racchette/hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-pro-tolito-aguirre-2026/"
+}
+},
+{
 "path": "/it/racchette/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -1473,6 +1545,78 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-arenal-2026/",
+"alt": {
+"it": "/it/racchette/kombat-arenal-2026/",
+"en": "/en/rackets/kombat-arenal-2026/",
+"es": "/es/palas/kombat-arenal-2026/",
+"fr": "/fr/raquettes/kombat-arenal-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-etna-2026/",
+"alt": {
+"it": "/it/racchette/kombat-etna-2026/",
+"en": "/en/rackets/kombat-etna-2026/",
+"es": "/es/palas/kombat-etna-2026/",
+"fr": "/fr/raquettes/kombat-etna-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-fuji-2026/",
+"alt": {
+"it": "/it/racchette/kombat-fuji-2026/",
+"en": "/en/rackets/kombat-fuji-2026/",
+"es": "/es/palas/kombat-fuji-2026/",
+"fr": "/fr/raquettes/kombat-fuji-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-galeras-2026/",
+"alt": {
+"it": "/it/racchette/kombat-galeras-2026/",
+"en": "/en/rackets/kombat-galeras-2026/",
+"es": "/es/palas/kombat-galeras-2026/",
+"fr": "/fr/raquettes/kombat-galeras-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/racchette/kombat-krakatoa-2026/",
+"en": "/en/rackets/kombat-krakatoa-2026/",
+"es": "/es/palas/kombat-krakatoa-2026/",
+"fr": "/fr/raquettes/kombat-krakatoa-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-osorno-2026/",
+"alt": {
+"it": "/it/racchette/kombat-osorno-2026/",
+"en": "/en/rackets/kombat-osorno-2026/",
+"es": "/es/palas/kombat-osorno-2026/",
+"fr": "/fr/raquettes/kombat-osorno-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-teide-2026/",
+"alt": {
+"it": "/it/racchette/kombat-teide-2026/",
+"en": "/en/rackets/kombat-teide-2026/",
+"es": "/es/palas/kombat-teide-2026/",
+"fr": "/fr/raquettes/kombat-teide-2026/"
+}
+},
+{
+"path": "/it/racchette/kombat-vesubio-2026/",
+"alt": {
+"it": "/it/racchette/kombat-vesubio-2026/",
+"en": "/en/rackets/kombat-vesubio-2026/",
+"es": "/es/palas/kombat-vesubio-2026/",
+"fr": "/fr/raquettes/kombat-vesubio-2026/"
 }
 },
 {
@@ -2583,6 +2727,96 @@
 }
 },
 {
+"path": "/it/racchette/softee-chacal-2026/",
+"alt": {
+"it": "/it/racchette/softee-chacal-2026/",
+"en": "/en/rackets/softee-chacal-2026/",
+"es": "/es/palas/softee-chacal-2026/",
+"fr": "/fr/raquettes/softee-chacal-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-freezer-carbon-3k-2026/",
+"alt": {
+"it": "/it/racchette/softee-freezer-carbon-3k-2026/",
+"en": "/en/rackets/softee-freezer-carbon-3k-2026/",
+"es": "/es/palas/softee-freezer-carbon-3k-2026/",
+"fr": "/fr/raquettes/softee-freezer-carbon-3k-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-oxel-2026/",
+"alt": {
+"it": "/it/racchette/softee-oxel-2026/",
+"en": "/en/rackets/softee-oxel-2026/",
+"es": "/es/palas/softee-oxel-2026/",
+"fr": "/fr/raquettes/softee-oxel-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-phantom-2026/",
+"alt": {
+"it": "/it/racchette/softee-phantom-2026/",
+"en": "/en/rackets/softee-phantom-2026/",
+"es": "/es/palas/softee-phantom-2026/",
+"fr": "/fr/raquettes/softee-phantom-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-pro-master-evolution-2026/",
+"alt": {
+"it": "/it/racchette/softee-pro-master-evolution-2026/",
+"en": "/en/rackets/softee-pro-master-evolution-2026/",
+"es": "/es/palas/softee-pro-master-evolution-2026/",
+"fr": "/fr/raquettes/softee-pro-master-evolution-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-rebounce-2026/",
+"alt": {
+"it": "/it/racchette/softee-rebounce-2026/",
+"en": "/en/rackets/softee-rebounce-2026/",
+"es": "/es/palas/softee-rebounce-2026/",
+"fr": "/fr/raquettes/softee-rebounce-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-3-0-royal-power-2026/",
+"en": "/en/rackets/softee-speed-3-0-royal-power-2026/",
+"es": "/es/palas/softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/raquettes/softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/rackets/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/palas/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-speed-gold-power-4-0-nano-mesh-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/rackets/softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/palas/softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/it/racchette/softee-trionic-light-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-light-2026/",
+"en": "/en/rackets/softee-trionic-light-2026/",
+"es": "/es/palas/softee-trionic-light-2026/",
+"fr": "/fr/raquettes/softee-trionic-light-2026/"
+}
+},
+{
 "path": "/it/racchette/starvie-arkos-2026/",
 "alt": {
 "it": "/it/racchette/starvie-arkos-2026/",
@@ -2832,6 +3066,42 @@
 "en": "/en/rackets/tecnifibre-curva-team-2026/",
 "es": "/es/palas/tecnifibre-curva-team-2026/",
 "fr": "/fr/raquettes/tecnifibre-curva-team-2026/"
+}
+},
+{
+"path": "/it/racchette/tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-gladiator-2024/",
+"en": "/en/rackets/tenax-padel-gladiator-2024/",
+"es": "/es/palas/tenax-padel-gladiator-2024/",
+"fr": "/fr/raquettes/tenax-padel-gladiator-2024/"
+}
+},
+{
+"path": "/it/racchette/tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-guardian-2024/",
+"en": "/en/rackets/tenax-padel-guardian-2024/",
+"es": "/es/palas/tenax-padel-guardian-2024/",
+"fr": "/fr/raquettes/tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/it/racchette/tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/racchette/tenax-padel-hammer-2025/",
+"en": "/en/rackets/tenax-padel-hammer-2025/",
+"es": "/es/palas/tenax-padel-hammer-2025/",
+"fr": "/fr/raquettes/tenax-padel-hammer-2025/"
+}
+},
+{
+"path": "/it/racchette/vairo-across-2025/",
+"alt": {
+"it": "/it/racchette/vairo-across-2025/",
+"en": "/en/rackets/vairo-across-2025/",
+"es": "/es/palas/vairo-across-2025/",
+"fr": "/fr/raquettes/vairo-across-2025/"
 }
 },
 {
@@ -4230,6 +4500,51 @@
 }
 },
 {
+"path": "/en/rackets/enebe-genius-2026/",
+"alt": {
+"it": "/it/racchette/enebe-genius-2026/",
+"en": "/en/rackets/enebe-genius-2026/",
+"es": "/es/palas/enebe-genius-2026/",
+"fr": "/fr/raquettes/enebe-genius-2026/"
+}
+},
+{
+"path": "/en/rackets/enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/racchette/enebe-mustang-silver-3k-2026/",
+"en": "/en/rackets/enebe-mustang-silver-3k-2026/",
+"es": "/es/palas/enebe-mustang-silver-3k-2026/",
+"fr": "/fr/raquettes/enebe-mustang-silver-3k-2026/"
+}
+},
+{
+"path": "/en/rackets/enebe-point-light-2026/",
+"alt": {
+"it": "/it/racchette/enebe-point-light-2026/",
+"en": "/en/rackets/enebe-point-light-2026/",
+"es": "/es/palas/enebe-point-light-2026/",
+"fr": "/fr/raquettes/enebe-point-light-2026/"
+}
+},
+{
+"path": "/en/rackets/enebe-response-3k-evo-2026/",
+"alt": {
+"it": "/it/racchette/enebe-response-3k-evo-2026/",
+"en": "/en/rackets/enebe-response-3k-evo-2026/",
+"es": "/es/palas/enebe-response-3k-evo-2026/",
+"fr": "/fr/raquettes/enebe-response-3k-evo-2026/"
+}
+},
+{
+"path": "/en/rackets/enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/racchette/enebe-space-2-0-2026/",
+"en": "/en/rackets/enebe-space-2-0-2026/",
+"es": "/es/palas/enebe-space-2-0-2026/",
+"fr": "/fr/raquettes/enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/en/rackets/head-bolt-2026/",
 "alt": {
 "it": "/it/racchette/head-bolt-2026/",
@@ -4326,6 +4641,15 @@
 "en": "/en/rackets/head-extreme-team-2026/",
 "es": "/es/palas/head-extreme-team-2026/",
 "fr": "/fr/raquettes/head-extreme-team-2026/"
+}
+},
+{
+"path": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
 }
 },
 {
@@ -4437,6 +4761,24 @@
 }
 },
 {
+"path": "/en/rackets/hirostar-alien-core-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-core-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-core-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-core-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-core-tolito-aguirre-2026/"
+}
+},
+{
+"path": "/en/rackets/hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-pro-tolito-aguirre-2026/"
+}
+},
+{
 "path": "/en/rackets/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -4533,6 +4875,78 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-arenal-2026/",
+"alt": {
+"it": "/it/racchette/kombat-arenal-2026/",
+"en": "/en/rackets/kombat-arenal-2026/",
+"es": "/es/palas/kombat-arenal-2026/",
+"fr": "/fr/raquettes/kombat-arenal-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-etna-2026/",
+"alt": {
+"it": "/it/racchette/kombat-etna-2026/",
+"en": "/en/rackets/kombat-etna-2026/",
+"es": "/es/palas/kombat-etna-2026/",
+"fr": "/fr/raquettes/kombat-etna-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-fuji-2026/",
+"alt": {
+"it": "/it/racchette/kombat-fuji-2026/",
+"en": "/en/rackets/kombat-fuji-2026/",
+"es": "/es/palas/kombat-fuji-2026/",
+"fr": "/fr/raquettes/kombat-fuji-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-galeras-2026/",
+"alt": {
+"it": "/it/racchette/kombat-galeras-2026/",
+"en": "/en/rackets/kombat-galeras-2026/",
+"es": "/es/palas/kombat-galeras-2026/",
+"fr": "/fr/raquettes/kombat-galeras-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/racchette/kombat-krakatoa-2026/",
+"en": "/en/rackets/kombat-krakatoa-2026/",
+"es": "/es/palas/kombat-krakatoa-2026/",
+"fr": "/fr/raquettes/kombat-krakatoa-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-osorno-2026/",
+"alt": {
+"it": "/it/racchette/kombat-osorno-2026/",
+"en": "/en/rackets/kombat-osorno-2026/",
+"es": "/es/palas/kombat-osorno-2026/",
+"fr": "/fr/raquettes/kombat-osorno-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-teide-2026/",
+"alt": {
+"it": "/it/racchette/kombat-teide-2026/",
+"en": "/en/rackets/kombat-teide-2026/",
+"es": "/es/palas/kombat-teide-2026/",
+"fr": "/fr/raquettes/kombat-teide-2026/"
+}
+},
+{
+"path": "/en/rackets/kombat-vesubio-2026/",
+"alt": {
+"it": "/it/racchette/kombat-vesubio-2026/",
+"en": "/en/rackets/kombat-vesubio-2026/",
+"es": "/es/palas/kombat-vesubio-2026/",
+"fr": "/fr/raquettes/kombat-vesubio-2026/"
 }
 },
 {
@@ -5643,6 +6057,96 @@
 }
 },
 {
+"path": "/en/rackets/softee-chacal-2026/",
+"alt": {
+"it": "/it/racchette/softee-chacal-2026/",
+"en": "/en/rackets/softee-chacal-2026/",
+"es": "/es/palas/softee-chacal-2026/",
+"fr": "/fr/raquettes/softee-chacal-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-freezer-carbon-3k-2026/",
+"alt": {
+"it": "/it/racchette/softee-freezer-carbon-3k-2026/",
+"en": "/en/rackets/softee-freezer-carbon-3k-2026/",
+"es": "/es/palas/softee-freezer-carbon-3k-2026/",
+"fr": "/fr/raquettes/softee-freezer-carbon-3k-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-oxel-2026/",
+"alt": {
+"it": "/it/racchette/softee-oxel-2026/",
+"en": "/en/rackets/softee-oxel-2026/",
+"es": "/es/palas/softee-oxel-2026/",
+"fr": "/fr/raquettes/softee-oxel-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-phantom-2026/",
+"alt": {
+"it": "/it/racchette/softee-phantom-2026/",
+"en": "/en/rackets/softee-phantom-2026/",
+"es": "/es/palas/softee-phantom-2026/",
+"fr": "/fr/raquettes/softee-phantom-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-pro-master-evolution-2026/",
+"alt": {
+"it": "/it/racchette/softee-pro-master-evolution-2026/",
+"en": "/en/rackets/softee-pro-master-evolution-2026/",
+"es": "/es/palas/softee-pro-master-evolution-2026/",
+"fr": "/fr/raquettes/softee-pro-master-evolution-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-rebounce-2026/",
+"alt": {
+"it": "/it/racchette/softee-rebounce-2026/",
+"en": "/en/rackets/softee-rebounce-2026/",
+"es": "/es/palas/softee-rebounce-2026/",
+"fr": "/fr/raquettes/softee-rebounce-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-3-0-royal-power-2026/",
+"en": "/en/rackets/softee-speed-3-0-royal-power-2026/",
+"es": "/es/palas/softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/raquettes/softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/rackets/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/palas/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-speed-gold-power-4-0-nano-mesh-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/rackets/softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/palas/softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/en/rackets/softee-trionic-light-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-light-2026/",
+"en": "/en/rackets/softee-trionic-light-2026/",
+"es": "/es/palas/softee-trionic-light-2026/",
+"fr": "/fr/raquettes/softee-trionic-light-2026/"
+}
+},
+{
 "path": "/en/rackets/starvie-arkos-2026/",
 "alt": {
 "it": "/it/racchette/starvie-arkos-2026/",
@@ -5892,6 +6396,42 @@
 "en": "/en/rackets/tecnifibre-curva-team-2026/",
 "es": "/es/palas/tecnifibre-curva-team-2026/",
 "fr": "/fr/raquettes/tecnifibre-curva-team-2026/"
+}
+},
+{
+"path": "/en/rackets/tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-gladiator-2024/",
+"en": "/en/rackets/tenax-padel-gladiator-2024/",
+"es": "/es/palas/tenax-padel-gladiator-2024/",
+"fr": "/fr/raquettes/tenax-padel-gladiator-2024/"
+}
+},
+{
+"path": "/en/rackets/tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-guardian-2024/",
+"en": "/en/rackets/tenax-padel-guardian-2024/",
+"es": "/es/palas/tenax-padel-guardian-2024/",
+"fr": "/fr/raquettes/tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/en/rackets/tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/racchette/tenax-padel-hammer-2025/",
+"en": "/en/rackets/tenax-padel-hammer-2025/",
+"es": "/es/palas/tenax-padel-hammer-2025/",
+"fr": "/fr/raquettes/tenax-padel-hammer-2025/"
+}
+},
+{
+"path": "/en/rackets/vairo-across-2025/",
+"alt": {
+"it": "/it/racchette/vairo-across-2025/",
+"en": "/en/rackets/vairo-across-2025/",
+"es": "/es/palas/vairo-across-2025/",
+"fr": "/fr/raquettes/vairo-across-2025/"
 }
 },
 {
@@ -7290,6 +7830,51 @@
 }
 },
 {
+"path": "/es/palas/enebe-genius-2026/",
+"alt": {
+"it": "/it/racchette/enebe-genius-2026/",
+"en": "/en/rackets/enebe-genius-2026/",
+"es": "/es/palas/enebe-genius-2026/",
+"fr": "/fr/raquettes/enebe-genius-2026/"
+}
+},
+{
+"path": "/es/palas/enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/racchette/enebe-mustang-silver-3k-2026/",
+"en": "/en/rackets/enebe-mustang-silver-3k-2026/",
+"es": "/es/palas/enebe-mustang-silver-3k-2026/",
+"fr": "/fr/raquettes/enebe-mustang-silver-3k-2026/"
+}
+},
+{
+"path": "/es/palas/enebe-point-light-2026/",
+"alt": {
+"it": "/it/racchette/enebe-point-light-2026/",
+"en": "/en/rackets/enebe-point-light-2026/",
+"es": "/es/palas/enebe-point-light-2026/",
+"fr": "/fr/raquettes/enebe-point-light-2026/"
+}
+},
+{
+"path": "/es/palas/enebe-response-3k-evo-2026/",
+"alt": {
+"it": "/it/racchette/enebe-response-3k-evo-2026/",
+"en": "/en/rackets/enebe-response-3k-evo-2026/",
+"es": "/es/palas/enebe-response-3k-evo-2026/",
+"fr": "/fr/raquettes/enebe-response-3k-evo-2026/"
+}
+},
+{
+"path": "/es/palas/enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/racchette/enebe-space-2-0-2026/",
+"en": "/en/rackets/enebe-space-2-0-2026/",
+"es": "/es/palas/enebe-space-2-0-2026/",
+"fr": "/fr/raquettes/enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/es/palas/head-bolt-2026/",
 "alt": {
 "it": "/it/racchette/head-bolt-2026/",
@@ -7386,6 +7971,15 @@
 "en": "/en/rackets/head-extreme-team-2026/",
 "es": "/es/palas/head-extreme-team-2026/",
 "fr": "/fr/raquettes/head-extreme-team-2026/"
+}
+},
+{
+"path": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
 }
 },
 {
@@ -7497,6 +8091,24 @@
 }
 },
 {
+"path": "/es/palas/hirostar-alien-core-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-core-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-core-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-core-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-core-tolito-aguirre-2026/"
+}
+},
+{
+"path": "/es/palas/hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-pro-tolito-aguirre-2026/"
+}
+},
+{
 "path": "/es/palas/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -7593,6 +8205,78 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-arenal-2026/",
+"alt": {
+"it": "/it/racchette/kombat-arenal-2026/",
+"en": "/en/rackets/kombat-arenal-2026/",
+"es": "/es/palas/kombat-arenal-2026/",
+"fr": "/fr/raquettes/kombat-arenal-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-etna-2026/",
+"alt": {
+"it": "/it/racchette/kombat-etna-2026/",
+"en": "/en/rackets/kombat-etna-2026/",
+"es": "/es/palas/kombat-etna-2026/",
+"fr": "/fr/raquettes/kombat-etna-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-fuji-2026/",
+"alt": {
+"it": "/it/racchette/kombat-fuji-2026/",
+"en": "/en/rackets/kombat-fuji-2026/",
+"es": "/es/palas/kombat-fuji-2026/",
+"fr": "/fr/raquettes/kombat-fuji-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-galeras-2026/",
+"alt": {
+"it": "/it/racchette/kombat-galeras-2026/",
+"en": "/en/rackets/kombat-galeras-2026/",
+"es": "/es/palas/kombat-galeras-2026/",
+"fr": "/fr/raquettes/kombat-galeras-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/racchette/kombat-krakatoa-2026/",
+"en": "/en/rackets/kombat-krakatoa-2026/",
+"es": "/es/palas/kombat-krakatoa-2026/",
+"fr": "/fr/raquettes/kombat-krakatoa-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-osorno-2026/",
+"alt": {
+"it": "/it/racchette/kombat-osorno-2026/",
+"en": "/en/rackets/kombat-osorno-2026/",
+"es": "/es/palas/kombat-osorno-2026/",
+"fr": "/fr/raquettes/kombat-osorno-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-teide-2026/",
+"alt": {
+"it": "/it/racchette/kombat-teide-2026/",
+"en": "/en/rackets/kombat-teide-2026/",
+"es": "/es/palas/kombat-teide-2026/",
+"fr": "/fr/raquettes/kombat-teide-2026/"
+}
+},
+{
+"path": "/es/palas/kombat-vesubio-2026/",
+"alt": {
+"it": "/it/racchette/kombat-vesubio-2026/",
+"en": "/en/rackets/kombat-vesubio-2026/",
+"es": "/es/palas/kombat-vesubio-2026/",
+"fr": "/fr/raquettes/kombat-vesubio-2026/"
 }
 },
 {
@@ -8703,6 +9387,96 @@
 }
 },
 {
+"path": "/es/palas/softee-chacal-2026/",
+"alt": {
+"it": "/it/racchette/softee-chacal-2026/",
+"en": "/en/rackets/softee-chacal-2026/",
+"es": "/es/palas/softee-chacal-2026/",
+"fr": "/fr/raquettes/softee-chacal-2026/"
+}
+},
+{
+"path": "/es/palas/softee-freezer-carbon-3k-2026/",
+"alt": {
+"it": "/it/racchette/softee-freezer-carbon-3k-2026/",
+"en": "/en/rackets/softee-freezer-carbon-3k-2026/",
+"es": "/es/palas/softee-freezer-carbon-3k-2026/",
+"fr": "/fr/raquettes/softee-freezer-carbon-3k-2026/"
+}
+},
+{
+"path": "/es/palas/softee-oxel-2026/",
+"alt": {
+"it": "/it/racchette/softee-oxel-2026/",
+"en": "/en/rackets/softee-oxel-2026/",
+"es": "/es/palas/softee-oxel-2026/",
+"fr": "/fr/raquettes/softee-oxel-2026/"
+}
+},
+{
+"path": "/es/palas/softee-phantom-2026/",
+"alt": {
+"it": "/it/racchette/softee-phantom-2026/",
+"en": "/en/rackets/softee-phantom-2026/",
+"es": "/es/palas/softee-phantom-2026/",
+"fr": "/fr/raquettes/softee-phantom-2026/"
+}
+},
+{
+"path": "/es/palas/softee-pro-master-evolution-2026/",
+"alt": {
+"it": "/it/racchette/softee-pro-master-evolution-2026/",
+"en": "/en/rackets/softee-pro-master-evolution-2026/",
+"es": "/es/palas/softee-pro-master-evolution-2026/",
+"fr": "/fr/raquettes/softee-pro-master-evolution-2026/"
+}
+},
+{
+"path": "/es/palas/softee-rebounce-2026/",
+"alt": {
+"it": "/it/racchette/softee-rebounce-2026/",
+"en": "/en/rackets/softee-rebounce-2026/",
+"es": "/es/palas/softee-rebounce-2026/",
+"fr": "/fr/raquettes/softee-rebounce-2026/"
+}
+},
+{
+"path": "/es/palas/softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-3-0-royal-power-2026/",
+"en": "/en/rackets/softee-speed-3-0-royal-power-2026/",
+"es": "/es/palas/softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/raquettes/softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/es/palas/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/rackets/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/palas/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-speed-gold-power-4-0-nano-mesh-2026/"
+}
+},
+{
+"path": "/es/palas/softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/rackets/softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/palas/softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/es/palas/softee-trionic-light-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-light-2026/",
+"en": "/en/rackets/softee-trionic-light-2026/",
+"es": "/es/palas/softee-trionic-light-2026/",
+"fr": "/fr/raquettes/softee-trionic-light-2026/"
+}
+},
+{
 "path": "/es/palas/starvie-arkos-2026/",
 "alt": {
 "it": "/it/racchette/starvie-arkos-2026/",
@@ -8952,6 +9726,42 @@
 "en": "/en/rackets/tecnifibre-curva-team-2026/",
 "es": "/es/palas/tecnifibre-curva-team-2026/",
 "fr": "/fr/raquettes/tecnifibre-curva-team-2026/"
+}
+},
+{
+"path": "/es/palas/tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-gladiator-2024/",
+"en": "/en/rackets/tenax-padel-gladiator-2024/",
+"es": "/es/palas/tenax-padel-gladiator-2024/",
+"fr": "/fr/raquettes/tenax-padel-gladiator-2024/"
+}
+},
+{
+"path": "/es/palas/tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-guardian-2024/",
+"en": "/en/rackets/tenax-padel-guardian-2024/",
+"es": "/es/palas/tenax-padel-guardian-2024/",
+"fr": "/fr/raquettes/tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/es/palas/tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/racchette/tenax-padel-hammer-2025/",
+"en": "/en/rackets/tenax-padel-hammer-2025/",
+"es": "/es/palas/tenax-padel-hammer-2025/",
+"fr": "/fr/raquettes/tenax-padel-hammer-2025/"
+}
+},
+{
+"path": "/es/palas/vairo-across-2025/",
+"alt": {
+"it": "/it/racchette/vairo-across-2025/",
+"en": "/en/rackets/vairo-across-2025/",
+"es": "/es/palas/vairo-across-2025/",
+"fr": "/fr/raquettes/vairo-across-2025/"
 }
 },
 {
@@ -10350,6 +11160,51 @@
 }
 },
 {
+"path": "/fr/raquettes/enebe-genius-2026/",
+"alt": {
+"it": "/it/racchette/enebe-genius-2026/",
+"en": "/en/rackets/enebe-genius-2026/",
+"es": "/es/palas/enebe-genius-2026/",
+"fr": "/fr/raquettes/enebe-genius-2026/"
+}
+},
+{
+"path": "/fr/raquettes/enebe-mustang-silver-3k-2026/",
+"alt": {
+"it": "/it/racchette/enebe-mustang-silver-3k-2026/",
+"en": "/en/rackets/enebe-mustang-silver-3k-2026/",
+"es": "/es/palas/enebe-mustang-silver-3k-2026/",
+"fr": "/fr/raquettes/enebe-mustang-silver-3k-2026/"
+}
+},
+{
+"path": "/fr/raquettes/enebe-point-light-2026/",
+"alt": {
+"it": "/it/racchette/enebe-point-light-2026/",
+"en": "/en/rackets/enebe-point-light-2026/",
+"es": "/es/palas/enebe-point-light-2026/",
+"fr": "/fr/raquettes/enebe-point-light-2026/"
+}
+},
+{
+"path": "/fr/raquettes/enebe-response-3k-evo-2026/",
+"alt": {
+"it": "/it/racchette/enebe-response-3k-evo-2026/",
+"en": "/en/rackets/enebe-response-3k-evo-2026/",
+"es": "/es/palas/enebe-response-3k-evo-2026/",
+"fr": "/fr/raquettes/enebe-response-3k-evo-2026/"
+}
+},
+{
+"path": "/fr/raquettes/enebe-space-2-0-2026/",
+"alt": {
+"it": "/it/racchette/enebe-space-2-0-2026/",
+"en": "/en/rackets/enebe-space-2-0-2026/",
+"es": "/es/palas/enebe-space-2-0-2026/",
+"fr": "/fr/raquettes/enebe-space-2-0-2026/"
+}
+},
+{
 "path": "/fr/raquettes/head-bolt-2026/",
 "alt": {
 "it": "/it/racchette/head-bolt-2026/",
@@ -10446,6 +11301,15 @@
 "en": "/en/rackets/head-extreme-team-2026/",
 "es": "/es/palas/head-extreme-team-2026/",
 "fr": "/fr/raquettes/head-extreme-team-2026/"
+}
+},
+{
+"path": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/",
+"alt": {
+"it": "/it/racchette/head-graphene-360-plus-gamma-pro-2022/",
+"en": "/en/rackets/head-graphene-360-plus-gamma-pro-2022/",
+"es": "/es/palas/head-graphene-360-plus-gamma-pro-2022/",
+"fr": "/fr/raquettes/head-graphene-360-plus-gamma-pro-2022/"
 }
 },
 {
@@ -10557,6 +11421,24 @@
 }
 },
 {
+"path": "/fr/raquettes/hirostar-alien-core-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-core-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-core-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-core-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-core-tolito-aguirre-2026/"
+}
+},
+{
+"path": "/fr/raquettes/hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/racchette/hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/rackets/hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/palas/hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/raquettes/hirostar-alien-pro-tolito-aguirre-2026/"
+}
+},
+{
 "path": "/fr/raquettes/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -10653,6 +11535,78 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-arenal-2026/",
+"alt": {
+"it": "/it/racchette/kombat-arenal-2026/",
+"en": "/en/rackets/kombat-arenal-2026/",
+"es": "/es/palas/kombat-arenal-2026/",
+"fr": "/fr/raquettes/kombat-arenal-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-etna-2026/",
+"alt": {
+"it": "/it/racchette/kombat-etna-2026/",
+"en": "/en/rackets/kombat-etna-2026/",
+"es": "/es/palas/kombat-etna-2026/",
+"fr": "/fr/raquettes/kombat-etna-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-fuji-2026/",
+"alt": {
+"it": "/it/racchette/kombat-fuji-2026/",
+"en": "/en/rackets/kombat-fuji-2026/",
+"es": "/es/palas/kombat-fuji-2026/",
+"fr": "/fr/raquettes/kombat-fuji-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-galeras-2026/",
+"alt": {
+"it": "/it/racchette/kombat-galeras-2026/",
+"en": "/en/rackets/kombat-galeras-2026/",
+"es": "/es/palas/kombat-galeras-2026/",
+"fr": "/fr/raquettes/kombat-galeras-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-krakatoa-2026/",
+"alt": {
+"it": "/it/racchette/kombat-krakatoa-2026/",
+"en": "/en/rackets/kombat-krakatoa-2026/",
+"es": "/es/palas/kombat-krakatoa-2026/",
+"fr": "/fr/raquettes/kombat-krakatoa-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-osorno-2026/",
+"alt": {
+"it": "/it/racchette/kombat-osorno-2026/",
+"en": "/en/rackets/kombat-osorno-2026/",
+"es": "/es/palas/kombat-osorno-2026/",
+"fr": "/fr/raquettes/kombat-osorno-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-teide-2026/",
+"alt": {
+"it": "/it/racchette/kombat-teide-2026/",
+"en": "/en/rackets/kombat-teide-2026/",
+"es": "/es/palas/kombat-teide-2026/",
+"fr": "/fr/raquettes/kombat-teide-2026/"
+}
+},
+{
+"path": "/fr/raquettes/kombat-vesubio-2026/",
+"alt": {
+"it": "/it/racchette/kombat-vesubio-2026/",
+"en": "/en/rackets/kombat-vesubio-2026/",
+"es": "/es/palas/kombat-vesubio-2026/",
+"fr": "/fr/raquettes/kombat-vesubio-2026/"
 }
 },
 {
@@ -11763,6 +12717,96 @@
 }
 },
 {
+"path": "/fr/raquettes/softee-chacal-2026/",
+"alt": {
+"it": "/it/racchette/softee-chacal-2026/",
+"en": "/en/rackets/softee-chacal-2026/",
+"es": "/es/palas/softee-chacal-2026/",
+"fr": "/fr/raquettes/softee-chacal-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-freezer-carbon-3k-2026/",
+"alt": {
+"it": "/it/racchette/softee-freezer-carbon-3k-2026/",
+"en": "/en/rackets/softee-freezer-carbon-3k-2026/",
+"es": "/es/palas/softee-freezer-carbon-3k-2026/",
+"fr": "/fr/raquettes/softee-freezer-carbon-3k-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-oxel-2026/",
+"alt": {
+"it": "/it/racchette/softee-oxel-2026/",
+"en": "/en/rackets/softee-oxel-2026/",
+"es": "/es/palas/softee-oxel-2026/",
+"fr": "/fr/raquettes/softee-oxel-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-phantom-2026/",
+"alt": {
+"it": "/it/racchette/softee-phantom-2026/",
+"en": "/en/rackets/softee-phantom-2026/",
+"es": "/es/palas/softee-phantom-2026/",
+"fr": "/fr/raquettes/softee-phantom-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-pro-master-evolution-2026/",
+"alt": {
+"it": "/it/racchette/softee-pro-master-evolution-2026/",
+"en": "/en/rackets/softee-pro-master-evolution-2026/",
+"es": "/es/palas/softee-pro-master-evolution-2026/",
+"fr": "/fr/raquettes/softee-pro-master-evolution-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-rebounce-2026/",
+"alt": {
+"it": "/it/racchette/softee-rebounce-2026/",
+"en": "/en/rackets/softee-rebounce-2026/",
+"es": "/es/palas/softee-rebounce-2026/",
+"fr": "/fr/raquettes/softee-rebounce-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-speed-3-0-royal-power-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-3-0-royal-power-2026/",
+"en": "/en/rackets/softee-speed-3-0-royal-power-2026/",
+"es": "/es/palas/softee-speed-3-0-royal-power-2026/",
+"fr": "/fr/raquettes/softee-speed-3-0-royal-power-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"en": "/en/rackets/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"es": "/es/palas/softee-speed-gold-power-4-0-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-speed-gold-power-4-0-nano-mesh-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-trionic-3k-nano-mesh-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-3k-nano-mesh-2026/",
+"en": "/en/rackets/softee-trionic-3k-nano-mesh-2026/",
+"es": "/es/palas/softee-trionic-3k-nano-mesh-2026/",
+"fr": "/fr/raquettes/softee-trionic-3k-nano-mesh-2026/"
+}
+},
+{
+"path": "/fr/raquettes/softee-trionic-light-2026/",
+"alt": {
+"it": "/it/racchette/softee-trionic-light-2026/",
+"en": "/en/rackets/softee-trionic-light-2026/",
+"es": "/es/palas/softee-trionic-light-2026/",
+"fr": "/fr/raquettes/softee-trionic-light-2026/"
+}
+},
+{
 "path": "/fr/raquettes/starvie-arkos-2026/",
 "alt": {
 "it": "/it/racchette/starvie-arkos-2026/",
@@ -12012,6 +13056,42 @@
 "en": "/en/rackets/tecnifibre-curva-team-2026/",
 "es": "/es/palas/tecnifibre-curva-team-2026/",
 "fr": "/fr/raquettes/tecnifibre-curva-team-2026/"
+}
+},
+{
+"path": "/fr/raquettes/tenax-padel-gladiator-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-gladiator-2024/",
+"en": "/en/rackets/tenax-padel-gladiator-2024/",
+"es": "/es/palas/tenax-padel-gladiator-2024/",
+"fr": "/fr/raquettes/tenax-padel-gladiator-2024/"
+}
+},
+{
+"path": "/fr/raquettes/tenax-padel-guardian-2024/",
+"alt": {
+"it": "/it/racchette/tenax-padel-guardian-2024/",
+"en": "/en/rackets/tenax-padel-guardian-2024/",
+"es": "/es/palas/tenax-padel-guardian-2024/",
+"fr": "/fr/raquettes/tenax-padel-guardian-2024/"
+}
+},
+{
+"path": "/fr/raquettes/tenax-padel-hammer-2025/",
+"alt": {
+"it": "/it/racchette/tenax-padel-hammer-2025/",
+"en": "/en/rackets/tenax-padel-hammer-2025/",
+"es": "/es/palas/tenax-padel-hammer-2025/",
+"fr": "/fr/raquettes/tenax-padel-hammer-2025/"
+}
+},
+{
+"path": "/fr/raquettes/vairo-across-2025/",
+"alt": {
+"it": "/it/racchette/vairo-across-2025/",
+"en": "/en/rackets/vairo-across-2025/",
+"es": "/es/palas/vairo-across-2025/",
+"fr": "/fr/raquettes/vairo-across-2025/"
 }
 },
 {

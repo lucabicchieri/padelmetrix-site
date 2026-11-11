@@ -2438,6 +2438,161 @@ def art_metalbone(db):
     return MB_SLUG, titolo, L("Cinque anni di Metalbone, generazione per generazione, e l'enigma del nome.", "Five years of Metalbone, generation by generation, and the puzzle of the name.",
                               "Cinco años de Metalbone, generación a generación, y el enigma del nombre.", "Cinq ans de Metalbone, génération par génération, et l'énigme du nom.")
 
+# ---------------------------------------------------------------- Tolito Aguirre, il mago (novembre 2026)
+TOLITO_SLUG = "tolito-aguirre-chi-e-colpi-racchetta"
+S.SLUG[TOLITO_SLUG] = ("tolito-aguirre-who-is-he-shots-racket", "tolito-aguirre-quien-es-golpes-pala")
+S.SLUG_FR[TOLITO_SLUG] = "tolito-aguirre-qui-est-il-coups-raquette"
+DATE_ART[TOLITO_SLUG] = "2026-11-11"
+
+
+def art_tolito(db):
+    rs = [r for r in db if r["slug"] in ("hirostar-alien-pro-tolito-aguirre-2026", "hirostar-alien-core-tolito-aguirre-2026")]
+    by = {r["slug"]: r for r in rs}
+    up, uc = url_r(by["hirostar-alien-pro-tolito-aguirre-2026"]), url_r(by["hirostar-alien-core-tolito-aguirre-2026"])
+    f23 = fonte("https://www.padelfip.com/2023/11/tolito-aguirre-flies-to-the-final/", "FIP")
+    f26 = fonte("https://www.padelfip.com/?p=345553", "FIP")
+    mon = fonte("https://www.padeladdict.com/tolito-aguirre-y-gonzalo-alfonso-siguen-imparables-y-ganan-el-monaco-master/", "Padel Addict")
+    odi = fonte("https://padelalto.com/2024/05/21/the-odyssey-of-tolito-aguirre-and-gonza-alfonso-to-arrive-on-time-for-the-mar-del-plata-p1", "Padel Alto")
+    tap = fonte("https://www.padeladdict.com/tapia-contra-tolito-disfruta-del-partido-entre-estos-dos-genios/", "Padel Addict")
+    can = fonte("https://www.padeladdict.com/tolito-aguirre-y-tito-allemandi-culminan-en-canarias-su-mejor-torneo/", "Padel Addict")
+    par = fonte("https://www.padeladdict.com/tolito-aguirre-y-gonza-alfonso-se-coronan-en-el-fip-gold-paredes-y-suman-puntos-clave-en-el-ranking/", "Padel Addict")
+    rub = fonte("https://www.padeladdict.com/tolito-aguirre-volvera-a-competir-en-premier-padel-con-un-nuevo-companero/", "Padel Addict")
+    hs = fonte("https://hirostar.com/gb/padel-rackets/alien/86-racchetta-da-padel-hirostar-alien-pro-tolito-aguirre-r26008.html", "Hirostar")
+    box = _box5(L("Le racchette di Tolito", "Tolito's rackets", "Las palas de Tolito", "Les raquettes de Tolito"),
+                L("Alien Pro e Alien Core 2026: dati tecnici, prezzi e alternative simili.", "Alien Pro and Alien Core 2026: specs, prices and similar alternatives.",
+                  "Alien Pro y Alien Core 2026: datos técnicos, precios y alternativas similares.", "Alien Pro et Alien Core 2026 : données techniques, prix et alternatives similaires."),
+                L("Vedi la Alien Pro", "See the Alien Pro", "Ver la Alien Pro", "Voir l'Alien Pro"), up)
+    corpo = L(f'''<p><b>Se nel padel esistesse un premio per il colpo più assurdo della settimana, Tolito Aguirre lo vincerebbe spesso. Argentino, vero nome Leonel Daniel Aguirre, non è il numero uno del mondo, ma è uno dei giocatori più amati del circuito: i video dei suoi colpi girano su YouTube e sui social anche tra chi non segue i tornei. Ecco chi è, le storie più divertenti della sua carriera e che racchetta usa.</b></p>
+<h2>Chi è Tolito Aguirre</h2>
+<p>Leonel Daniel Aguirre, per tutti "Tolito", è argentino e nel 2023 la FIP lo presentava come residente in Messico ({f23}). La stessa FIP scriveva già allora che i video dei suoi colpi lo avevano reso uno dei giocatori più spettacolari del mondo, e nel 2026 lo descrive come uno dei più popolari del circuito, con un gioco "creativo e spettacolare" ({f26}). A settembre 2026 era numero 31 del ranking FIP.</p>
+<h2>Perché tutti lo guardano</h2>
+<p>Tolito è il giocatore che trasforma un punto normale in un numero da circo: recuperi impossibili, colpi da posizioni strane, soluzioni che nessun allenatore metterebbe in un manuale. Con l'argentino Gonza Alfonso formava una coppia chiamata non a caso "Los Mágicos": nel 2024 hanno vinto i primi due tornei della stagione A1 Padel, compreso il Monaco Master, con 10 partite vinte su 10 senza perdere un set ({mon}).</p>
+<p>Prima di una stagione si è anche allenato contro Agustín Tapia, l'altro grande "mago" del padel: Padel Addict li ha chiamati entrambi geni e maestri della magia sul campo da 20×10. Primo set alla coppia di Tapia per 6-1, secondo molto più combattuto, finito 7-6 ({tap}).</p>
+<h2>La carriera a zig-zag</h2>
+<p>Una delle cose più curiose di Tolito è che non è rimasto fermo in un solo circuito né con un solo compagno:</p>
+<ul><li><b>2022, APT Padel Tour:</b> con Tito Allemandi vince il Canarias Open battendo Ramos e Torre 6-3, 6-0, secondo titolo della coppia dopo Oeiras ({can}).</li>
+<li><b>2023, Città del Messico:</b> senza essere testa di serie arriva in finale al FIP Platinum con l'amico Cristian Gutiérrez, battendo in semifinale i secondi favoriti ({f23}).</li>
+<li><b>2024, A1 Padel:</b> la stagione dei "Mágicos" con Gonza Alfonso ({mon}).</li>
+<li><b>2025, FIP Gold di Paredes:</b> sempre con Alfonso, perde il primo set della finale 3-6 e poi rimonta 6-2, 6-3 contro i fratelli portoghesi Deus. Prima di quel torneo era 165° nel ranking FIP ({par}).</li>
+<li><b>2026:</b> semifinale al P2 di Cancún, ottavi ai P1 di Málaga e Pretoria e vittoria al FIP Silver del Texas con Antonio "Pincho" Fernández ({f26}).</li></ul>
+<p>Sa anche cambiare lato: nel 2024, per giocare con il mancino Gonzalo Rubio, è tornato a sinistra, sul lato del rovescio ({rub}).</p>
+<h2>L'odissea di Mar del Plata</h2>
+<p>La storia più da film è del 2024. Domenica alle 14 Tolito e Alfonso giocano la finale dell'A1 France Open; la partita va al terzo set e perdono l'unico volo diretto per l'Argentina, quello delle 19. Il giorno dopo devono giocare il P1 di Mar del Plata, il loro debutto in Premier Padel: attraversano mezzo mondo con più scali e scendono in campo entro 24 ore. Perdono 7-5, 6-4 contro Lijó e Diestro, ma Padel Alto racconta un'atmosfera impressionante intorno a loro e un Tolito seguitissimo dal pubblico argentino ({odi}).</p>
+<h2>Che racchetta usa Tolito Aguirre</h2>
+<p>Tolito gioca con Hirostar, che ha una linea a suo nome, la Alien. Per il 2026 ci sono due versioni ({hs}):</p>
+<ul><li><a href="{up}">Hirostar Alien Pro Tolito Aguirre 2026</a>: diamante a bilanciamento alto, 365–380 g, carbonio 24K e gomma EVA Black Xtreme. È la terza evoluzione del suo modello e Hirostar la descrive molto rigida: è la versione da attacco.</li>
+<li><a href="{uc}">Hirostar Alien Core Tolito Aguirre 2026</a>: stessa forma e stesso telaio, ma carbonio 12K e gomma EVA Black, un po' più morbida e confortevole.</li></ul>
+<p>Attenzione: entrambe sono racchette a diamante con bilanciamento alto, pensate per giocatori esperti. Se sei agli inizi, la racchetta di Tolito non ti farà giocare come lui: meglio partire da una forma rotonda o a goccia.</p>{box}
+<h2>Giocare "alla Tolito" (senza farsi male)</h2>
+<ul><li><b>Prima la base, poi la magia:</b> i colpi spettacolari funzionano perché dietro c'è una tecnica solidissima. Il colpo da circo si allena dopo la volée.</li>
+<li><b>Uscire dalla pista solo dove si può:</b> i recuperi fuori dal campo si fanno solo su campi con le aperture laterali e lo spazio libero intorno.</li>
+<li><b>Provare in allenamento, non nel punto decisivo:</b> anche Tolito sceglie quando rischiare.</li></ul>
+<p class="note">Fonti: {f23}; {f26}; {mon}; {tap}; {can}; {par}; {rub}; {odi}; {hs}. Dati aggiornati a novembre 2026.</p>''',
+              f'''<p><b>If padel had an award for the craziest shot of the week, Tolito Aguirre would win it a lot. He's Argentine, his real name is Leonel Daniel Aguirre, and he isn't world number one, but he is one of the most popular players on tour: videos of his shots do the rounds on YouTube and social media even among people who don't follow tournaments. Here is who he is, the funniest stories from his career and which racket he uses.</b></p>
+<h2>Who Tolito Aguirre is</h2>
+<p>Leonel Daniel Aguirre, known to everyone as "Tolito", is Argentine, and in 2023 the FIP described him as living in Mexico ({f23}). Back then the FIP already wrote that videos of his shots had made him one of the most spectacular players in the world, and in 2026 it calls him one of the most popular players on tour, with a "creative and spectacular" game ({f26}). In September 2026 he was number 31 in the FIP ranking.</p>
+<h2>Why everyone watches him</h2>
+<p>Tolito is the player who turns an ordinary point into a circus act: impossible retrievals, shots from strange positions, solutions no coach would put in a manual. With fellow Argentine Gonza Alfonso he formed a pair fittingly nicknamed "Los Mágicos": in 2024 they won the first two tournaments of the A1 Padel season, including the Monaco Master, winning 10 matches out of 10 without dropping a set ({mon}).</p>
+<p>Before one season he even trained against Agustín Tapia, padel's other great "magician": Padel Addict called them both geniuses and masters of magic on the 20×10 court. The first set went to Tapia's side 6-1, the second was much tighter and ended 7-6 ({tap}).</p>
+<h2>A zigzag career</h2>
+<p>One of the most curious things about Tolito is that he hasn't stayed on one tour or with one partner:</p>
+<ul><li><b>2022, APT Padel Tour:</b> with Tito Allemandi he wins the Canarias Open, beating Ramos and Torre 6-3, 6-0, the pair's second title after Oeiras ({can}).</li>
+<li><b>2023, Mexico City:</b> unseeded, he reaches the FIP Platinum final with his friend Cristian Gutiérrez, beating the second seeds in the semi-final ({f23}).</li>
+<li><b>2024, A1 Padel:</b> the "Mágicos" season with Gonza Alfonso ({mon}).</li>
+<li><b>2025, FIP Gold Paredes:</b> again with Alfonso, he loses the first set of the final 3-6 and then comes back 6-2, 6-3 against the Portuguese Deus brothers. Before that tournament he was 165th in the FIP ranking ({par}).</li>
+<li><b>2026:</b> a semi-final at the Cancún P2, the last 16 at the Málaga and Pretoria P1s and the FIP Silver title in Texas with Antonio "Pincho" Fernández ({f26}).</li></ul>
+<p>He can switch sides too: in 2024, to play with left-hander Gonzalo Rubio, he went back to the left, the backhand side ({rub}).</p>
+<h2>The Mar del Plata odyssey</h2>
+<p>The most movie-like story is from 2024. On Sunday at 2 pm Tolito and Alfonso play the A1 France Open final; the match goes to a third set and they miss the only direct flight to Argentina, at 7 pm. The next day they are due to play the Mar del Plata P1, their Premier Padel debut: they cross half the world with several stopovers and step on court within 24 hours. They lose 7-5, 6-4 to Lijó and Diestro, but Padel Alto reports an impressive atmosphere around them and a Tolito hugely followed by the Argentine crowd ({odi}).</p>
+<h2>Which racket Tolito Aguirre uses</h2>
+<p>Tolito plays with Hirostar, which has a line named after him, the Alien. For 2026 there are two versions ({hs}):</p>
+<ul><li><a href="{up}">Hirostar Alien Pro Tolito Aguirre 2026</a>: diamond shape, high balance, 365–380 g, 24K carbon and an EVA Black Xtreme core. It's the third evolution of his model and Hirostar describes it as very stiff: it's the attacking version.</li>
+<li><a href="{uc}">Hirostar Alien Core Tolito Aguirre 2026</a>: same shape and frame, but 12K carbon and an EVA Black core, a little softer and more comfortable.</li></ul>
+<p>A word of warning: both are high-balance diamond rackets designed for experienced players. If you're just starting out, Tolito's racket won't make you play like him: a round or teardrop shape is a better place to start.</p>{box}
+<h2>Playing "like Tolito" (without getting hurt)</h2>
+<ul><li><b>Basics first, magic later:</b> spectacular shots work because there's rock-solid technique behind them. Practise the circus shot after the volley.</li>
+<li><b>Only leave the court where you can:</b> retrievals outside the court are only possible on courts with side openings and free space around them.</li>
+<li><b>Try it in practice, not on the deciding point:</b> even Tolito picks his moments to take risks.</li></ul>
+<p class="note">Sources: {f23}; {f26}; {mon}; {tap}; {can}; {par}; {rub}; {odi}; {hs}. Data updated November 2026.</p>''',
+              f'''<p><b>Si en el pádel existiera un premio al golpe más loco de la semana, Tolito Aguirre lo ganaría a menudo. Argentino, de nombre real Leonel Daniel Aguirre, no es el número uno del mundo, pero sí uno de los jugadores más queridos del circuito: los vídeos de sus golpes circulan por YouTube y las redes incluso entre quienes no siguen los torneos. Aquí tienes quién es, las historias más divertidas de su carrera y qué pala usa.</b></p>
+<h2>Quién es Tolito Aguirre</h2>
+<p>Leonel Daniel Aguirre, "Tolito" para todos, es argentino y en 2023 la FIP lo presentaba como residente en México ({f23}). La FIP ya escribía entonces que los vídeos de sus golpes lo habían convertido en uno de los jugadores más espectaculares del mundo, y en 2026 lo describe como uno de los más populares del circuito, con un juego "creativo y espectacular" ({f26}). En septiembre de 2026 era el número 31 del ranking FIP.</p>
+<h2>Por qué todos lo miran</h2>
+<p>Tolito es el jugador que convierte un punto normal en un número de circo: recuperaciones imposibles, golpes desde posiciones extrañas, soluciones que ningún entrenador pondría en un manual. Con el argentino Gonza Alfonso formó una pareja llamada, no por casualidad, "Los Mágicos": en 2024 ganaron los dos primeros torneos de la temporada de A1 Padel, incluido el Mónaco Master, con 10 partidos ganados de 10 sin perder un set ({mon}).</p>
+<p>Antes de una temporada llegó a entrenar contra Agustín Tapia, el otro gran "mago" del pádel: Padel Addict los llamó genios y maestros de la magia en la pista de 20×10. El primer set fue para la pareja de Tapia por 6-1 y el segundo, mucho más igualado, terminó 7-6 ({tap}).</p>
+<h2>Una carrera en zigzag</h2>
+<p>Una de las cosas más curiosas de Tolito es que no se ha quedado en un solo circuito ni con un solo compañero:</p>
+<ul><li><b>2022, APT Padel Tour:</b> con Tito Allemandi gana el Canarias Open ante Ramos y Torre por 6-3, 6-0, segundo título de la pareja tras Oeiras ({can}).</li>
+<li><b>2023, Ciudad de México:</b> sin ser cabeza de serie llega a la final del FIP Platinum con su amigo Cristian Gutiérrez, tras ganar en semifinales a los segundos favoritos ({f23}).</li>
+<li><b>2024, A1 Padel:</b> la temporada de "Los Mágicos" con Gonza Alfonso ({mon}).</li>
+<li><b>2025, FIP Gold Paredes:</b> otra vez con Alfonso, pierde el primer set de la final 3-6 y remonta 6-2, 6-3 ante los hermanos portugueses Deus. Antes de ese torneo era el 165.º del ranking FIP ({par}).</li>
+<li><b>2026:</b> semifinal en el P2 de Cancún, octavos en los P1 de Málaga y Pretoria y título en el FIP Silver de Texas con Antonio "Pincho" Fernández ({f26}).</li></ul>
+<p>También sabe cambiar de lado: en 2024, para jugar con el zurdo Gonzalo Rubio, volvió a la izquierda, el lado del revés ({rub}).</p>
+<h2>La odisea de Mar del Plata</h2>
+<p>La historia más de película es de 2024. El domingo a las 14:00 Tolito y Alfonso juegan la final del A1 France Open; el partido se va al tercer set y pierden el único vuelo directo a Argentina, el de las 19:00. Al día siguiente tienen que jugar el P1 de Mar del Plata, su debut en Premier Padel: cruzan medio mundo con varias escalas y saltan a la pista en menos de 24 horas. Pierden 7-5, 6-4 ante Lijó y Diestro, pero Padel Alto cuenta un ambiente impresionante a su alrededor y un Tolito muy seguido por el público argentino ({odi}).</p>
+<h2>Qué pala usa Tolito Aguirre</h2>
+<p>Tolito juega con Hirostar, que tiene una línea con su nombre, la Alien. Para 2026 hay dos versiones ({hs}):</p>
+<ul><li><a href="{up}">Hirostar Alien Pro Tolito Aguirre 2026</a>: diamante de balance alto, 365–380 g, carbono 24K y goma EVA Black Xtreme. Es la tercera evolución de su modelo y Hirostar la describe muy rígida: es la versión de ataque.</li>
+<li><a href="{uc}">Hirostar Alien Core Tolito Aguirre 2026</a>: misma forma y mismo marco, pero carbono 12K y goma EVA Black, algo más blanda y cómoda.</li></ul>
+<p>Ojo: las dos son palas de diamante con balance alto, pensadas para jugadores con experiencia. Si estás empezando, la pala de Tolito no te hará jugar como él: mejor empezar con una forma redonda o de lágrima.</p>{box}
+<h2>Jugar "a lo Tolito" (sin hacerse daño)</h2>
+<ul><li><b>Primero la base, luego la magia:</b> los golpes espectaculares funcionan porque detrás hay una técnica muy sólida. El golpe de circo se entrena después de la volea.</li>
+<li><b>Salir de la pista solo donde se puede:</b> las recuperaciones por fuera solo se hacen en pistas con aberturas laterales y espacio libre alrededor.</li>
+<li><b>Probar en el entrenamiento, no en el punto decisivo:</b> hasta Tolito elige cuándo arriesgar.</li></ul>
+<p class="note">Fuentes: {f23}; {f26}; {mon}; {tap}; {can}; {par}; {rub}; {odi}; {hs}. Datos actualizados en noviembre de 2026.</p>''',
+              f'''<p><b>Si le padel avait un prix du coup le plus fou de la semaine, Tolito Aguirre le gagnerait souvent. Argentin, de son vrai nom Leonel Daniel Aguirre, il n'est pas numéro un mondial, mais c'est l'un des joueurs les plus appréciés du circuit : les vidéos de ses coups tournent sur YouTube et les réseaux sociaux, même chez ceux qui ne suivent pas les tournois. Voici qui il est, les histoires les plus drôles de sa carrière et la raquette qu'il utilise.</b></p>
+<h2>Qui est Tolito Aguirre</h2>
+<p>Leonel Daniel Aguirre, « Tolito » pour tout le monde, est argentin et, en 2023, la FIP le présentait comme résidant au Mexique ({f23}). La FIP écrivait déjà que les vidéos de ses coups avaient fait de lui l'un des joueurs les plus spectaculaires du monde, et en 2026 elle le décrit comme l'un des plus populaires du circuit, avec un jeu « créatif et spectaculaire » ({f26}). En septembre 2026, il était 31e du classement FIP.</p>
+<h2>Pourquoi tout le monde le regarde</h2>
+<p>Tolito, c'est le joueur qui transforme un point ordinaire en numéro de cirque : récupérations impossibles, coups depuis des positions étranges, solutions qu'aucun entraîneur ne mettrait dans un manuel. Avec l'Argentin Gonza Alfonso, il formait une paire surnommée, ce n'est pas un hasard, « Los Mágicos » : en 2024, ils ont remporté les deux premiers tournois de la saison A1 Padel, dont le Monaco Master, avec 10 victoires en 10 matchs sans perdre un set ({mon}).</p>
+<p>Avant une saison, il s'est même entraîné contre Agustín Tapia, l'autre grand « magicien » du padel : Padel Addict les a qualifiés tous deux de génies et de maîtres de la magie sur le court de 20×10. Premier set pour la paire de Tapia 6-1, deuxième beaucoup plus serré, terminé 7-6 ({tap}).</p>
+<h2>Une carrière en zigzag</h2>
+<p>L'une des choses les plus curieuses chez Tolito, c'est qu'il n'est resté ni sur un seul circuit ni avec un seul partenaire :</p>
+<ul><li><b>2022, APT Padel Tour :</b> avec Tito Allemandi, il remporte le Canarias Open en battant Ramos et Torre 6-3, 6-0, deuxième titre de la paire après Oeiras ({can}).</li>
+<li><b>2023, Mexico :</b> non tête de série, il atteint la finale du FIP Platinum avec son ami Cristian Gutiérrez, après avoir battu les têtes de série n° 2 en demi-finale ({f23}).</li>
+<li><b>2024, A1 Padel :</b> la saison des « Mágicos » avec Gonza Alfonso ({mon}).</li>
+<li><b>2025, FIP Gold de Paredes :</b> toujours avec Alfonso, il perd le premier set de la finale 3-6 puis renverse le match 6-2, 6-3 face aux frères portugais Deus. Avant ce tournoi, il était 165e au classement FIP ({par}).</li>
+<li><b>2026 :</b> demi-finale au P2 de Cancún, huitièmes aux P1 de Málaga et Pretoria et titre au FIP Silver du Texas avec Antonio « Pincho » Fernández ({f26}).</li></ul>
+<p>Il sait aussi changer de côté : en 2024, pour jouer avec le gaucher Gonzalo Rubio, il est revenu à gauche, côté revers ({rub}).</p>
+<h2>L'odyssée de Mar del Plata</h2>
+<p>L'histoire la plus digne d'un film date de 2024. Le dimanche à 14 h, Tolito et Alfonso jouent la finale de l'A1 France Open ; le match va au troisième set et ils ratent le seul vol direct pour l'Argentine, celui de 19 h. Le lendemain, ils doivent jouer le P1 de Mar del Plata, leurs débuts en Premier Padel : ils traversent la moitié du monde avec plusieurs escales et entrent sur le court en moins de 24 heures. Ils perdent 7-5, 6-4 contre Lijó et Diestro, mais Padel Alto raconte une ambiance impressionnante autour d'eux et un Tolito très suivi par le public argentin ({odi}).</p>
+<h2>Quelle raquette utilise Tolito Aguirre</h2>
+<p>Tolito joue avec Hirostar, qui a une ligne à son nom, l'Alien. Pour 2026, il existe deux versions ({hs}) :</p>
+<ul><li><a href="{up}">Hirostar Alien Pro Tolito Aguirre 2026</a> : diamant à équilibre haut, 365–380 g, carbone 24K et gomme EVA Black Xtreme. C'est la troisième évolution de son modèle et Hirostar la décrit comme très rigide : c'est la version d'attaque.</li>
+<li><a href="{uc}">Hirostar Alien Core Tolito Aguirre 2026</a> : même forme et même cadre, mais carbone 12K et gomme EVA Black, un peu plus souple et confortable.</li></ul>
+<p>Attention : ce sont deux raquettes diamant à équilibre haut, pensées pour des joueurs expérimentés. Si vous débutez, la raquette de Tolito ne vous fera pas jouer comme lui : mieux vaut commencer par une forme ronde ou en goutte d'eau.</p>{box}
+<h2>Jouer « à la Tolito » (sans se blesser)</h2>
+<ul><li><b>D'abord les bases, ensuite la magie :</b> les coups spectaculaires fonctionnent parce qu'il y a une technique très solide derrière. Le coup de cirque s'entraîne après la volée.</li>
+<li><b>Sortir du court seulement là où c'est possible :</b> les récupérations à l'extérieur ne se font que sur des courts avec des ouvertures latérales et de l'espace libre autour.</li>
+<li><b>Essayer à l'entraînement, pas sur le point décisif :</b> même Tolito choisit quand prendre des risques.</li></ul>
+<p class="note">Sources : {f23} ; {f26} ; {mon} ; {tap} ; {can} ; {par} ; {rub} ; {odi} ; {hs}. Données mises à jour en novembre 2026.</p>''')
+    qa = [(L("Chi è Tolito Aguirre?", "Who is Tolito Aguirre?", "¿Quién es Tolito Aguirre?", "Qui est Tolito Aguirre ?"),
+           L("Leonel Daniel Aguirre, detto Tolito, è un giocatore di padel argentino famoso per i colpi spettacolari; a settembre 2026 era numero 31 del ranking FIP.",
+             "Leonel Daniel Aguirre, known as Tolito, is an Argentine padel player famous for his spectacular shots; in September 2026 he was number 31 in the FIP ranking.",
+             "Leonel Daniel Aguirre, conocido como Tolito, es un jugador de pádel argentino famoso por sus golpes espectaculares; en septiembre de 2026 era el número 31 del ranking FIP.",
+             "Leonel Daniel Aguirre, dit Tolito, est un joueur de padel argentin célèbre pour ses coups spectaculaires ; en septembre 2026, il était 31e du classement FIP.")),
+          (L("Che racchetta usa Tolito Aguirre?", "Which racket does Tolito Aguirre use?", "¿Qué pala usa Tolito Aguirre?", "Quelle raquette utilise Tolito Aguirre ?"),
+           L("Una Hirostar della linea Alien a suo nome: nel 2026 la Alien Pro, a diamante con carbonio 24K, e la più morbida Alien Core.",
+             "A Hirostar from the Alien line named after him: in 2026 the Alien Pro, a 24K carbon diamond, and the softer Alien Core.",
+             "Una Hirostar de la línea Alien con su nombre: en 2026 la Alien Pro, diamante de carbono 24K, y la más blanda Alien Core.",
+             "Une Hirostar de la ligne Alien à son nom : en 2026, l'Alien Pro, diamant en carbone 24K, et l'Alien Core, plus souple.")),
+          (L("Con chi gioca Tolito Aguirre?", "Who does Tolito Aguirre play with?", "¿Con quién juega Tolito Aguirre?", "Avec qui joue Tolito Aguirre ?"),
+           L("Ha cambiato spesso compagno: tra gli altri Tito Allemandi, Gonza Alfonso e, nel 2026, Antonio \"Pincho\" Fernández e Pablo García.",
+             "He has changed partners often: among others Tito Allemandi, Gonza Alfonso and, in 2026, Antonio \"Pincho\" Fernández and Pablo García.",
+             "Ha cambiado a menudo de compañero: entre otros Tito Allemandi, Gonza Alfonso y, en 2026, Antonio \"Pincho\" Fernández y Pablo García.",
+             "Il a souvent changé de partenaire : entre autres Tito Allemandi, Gonza Alfonso et, en 2026, Antonio « Pincho » Fernández et Pablo García."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("Tolito Aguirre, il mago del padel: chi è, le storie più pazze e che racchetta usa", "Tolito Aguirre, padel's magician: who he is, his wildest stories and which racket he uses",
+               "Tolito Aguirre, el mago del pádel: quién es, sus historias más locas y qué pala usa", "Tolito Aguirre, le magicien du padel : qui il est, ses histoires les plus folles et sa raquette")
+    desc = L("Chi è Tolito Aguirre, il giocatore argentino dei colpi impossibili: carriera a zig-zag, l'odissea di Mar del Plata e la sua racchetta Hirostar Alien.",
+             "Who Tolito Aguirre is, the Argentine player of impossible shots: a zigzag career, the Mar del Plata odyssey and his Hirostar Alien racket.",
+             "Quién es Tolito Aguirre, el jugador argentino de los golpes imposibles: carrera en zigzag, la odisea de Mar del Plata y su pala Hirostar Alien.",
+             "Qui est Tolito Aguirre, le joueur argentin des coups impossibles : carrière en zigzag, l'odyssée de Mar del Plata et sa raquette Hirostar Alien.")
+    RACCHETTE_ARTICOLO[TOLITO_SLUG] = [r["slug"] for r in rs]
+    scrivi_articolo(TOLITO_SLUG, titolo + " | PadelMetrix", desc, titolo, "Tolito Aguirre", corpo + faq_htm, items=rs, ld_extra=[faq_ld])
+    return TOLITO_SLUG, titolo, L("Il giocatore dei colpi impossibili: carriera a zig-zag, storie pazze e la sua racchetta.", "The player of impossible shots: zigzag career, wild stories and his racket.",
+                                  "El jugador de los golpes imposibles: carrera en zigzag, historias locas y su pala.", "Le joueur des coups impossibles : carrière en zigzag, histoires folles et sa raquette.")
+
 
 # ---------------------------------------------------------------- Campi: vetri e superfici (novembre 2026)
 VT_SLUG, SU_SLUG = "vetri-campo-padel-tipi-temperato-stratificato", "superfici-campo-padel-erba-sintetica-tipi"
@@ -2737,7 +2892,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_vetri(db), art_metalbone(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_vetri(db), art_metalbone(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
