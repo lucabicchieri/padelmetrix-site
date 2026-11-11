@@ -33,6 +33,370 @@
   }
  },
  {
+  "slug": "idee-regalo-natale-padel",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Idee regalo di Natale per chi gioca a padel: la guida 2026",
+   "en": "Christmas gift ideas for padel players: the 2026 guide",
+   "es": "Ideas de regalo de Navidad para quien juega al pádel: la guía 2026",
+   "fr": "Idées cadeaux de Noël pour les joueurs de padel : le guide 2026"
+  },
+  "desc": {
+   "it": "Tutte le idee regalo per chi gioca a padel, divise per budget e per persona.",
+   "en": "Every gift idea for padel players, by budget and by person.",
+   "es": "Todas las ideas de regalo para quien juega al pádel, por presupuesto y por persona.",
+   "fr": "Toutes les idées cadeaux pour les joueurs de padel, par budget et par personne."
+  },
+  "url": {
+   "it": "/it/articoli/idee-regalo-natale-padel/",
+   "en": "/en/articles/padel-christmas-gift-ideas/",
+   "es": "/es/articulos/ideas-regalo-navidad-padel/",
+   "fr": "/fr/articles/idees-cadeaux-noel-padel/"
+  }
+ },
+ {
+  "slug": "regali-padel-sotto-20-euro",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Regali padel sotto i 20 euro: 12 idee che si usano davvero",
+   "en": "Padel gifts under 20 euros: 12 ideas that actually get used",
+   "es": "Regalos de pádel por menos de 20 euros: 12 ideas que de verdad se usan",
+   "fr": "Cadeaux padel à moins de 20 euros : 12 idées qu'on utilise vraiment"
+  },
+  "desc": {
+   "it": "Palline, overgrip, polsini e gadget: il pensiero giusto con poco.",
+   "en": "Balls, overgrips, wristbands and gadgets: the right gift on a small budget.",
+   "es": "Pelotas, overgrips, muñequeras y gadgets: el detalle justo con poco.",
+   "fr": "Balles, surgrips, poignets et gadgets : la bonne attention pour pas cher."
+  },
+  "url": {
+   "it": "/it/articoli/regali-padel-sotto-20-euro/",
+   "en": "/en/articles/padel-gifts-under-20-euros/",
+   "es": "/es/articulos/regalos-padel-menos-de-20-euros/",
+   "fr": "/fr/articles/cadeaux-padel-moins-de-20-euros/"
+  }
+ },
+ {
+  "slug": "regali-padel-sotto-50-euro",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Regali padel sotto i 50 euro: pressurizzatori, borse e abbigliamento",
+   "en": "Padel gifts under 50 euros: pressurisers, bags and clothing",
+   "es": "Regalos de pádel por menos de 50 euros: presurizadores, paleteros y ropa",
+   "fr": "Cadeaux padel à moins de 50 euros : pressuriseurs, sacs et vêtements"
+  },
+  "desc": {
+   "it": "Il budget giusto per un pressurizzatore, una borsa o una felpa tecnica.",
+   "en": "The right budget for a pressuriser, a bag or a technical top.",
+   "es": "El presupuesto justo para un presurizador, un paletero o una sudadera técnica.",
+   "fr": "Le bon budget pour un pressuriseur, un sac ou un sweat technique."
+  },
+  "url": {
+   "it": "/it/articoli/regali-padel-sotto-50-euro/",
+   "en": "/en/articles/padel-gifts-under-50-euros/",
+   "es": "/es/articulos/regalos-padel-menos-de-50-euros/",
+   "fr": "/fr/articles/cadeaux-padel-moins-de-50-euros/"
+  }
+ },
+ {
+  "slug": "regalare-scarpe-da-padel",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Regalare scarpe da padel: come non sbagliare taglia e suola",
+   "en": "Padel shoes as a gift: how to get the size and sole right",
+   "es": "Regalar zapatillas de pádel: cómo acertar con la talla y la suela",
+   "fr": "Offrir des chaussures de padel : comment ne pas se tromper de taille et de semelle"
+  },
+  "desc": {
+   "it": "Taglia, suola e modelli da uomo e da donna: la guida per non sbagliare.",
+   "en": "Size, sole and men's and women's models: how to get it right.",
+   "es": "Talla, suela y modelos de hombre y mujer: la guía para acertar.",
+   "fr": "Taille, semelle et modèles homme et femme : le guide pour ne pas se tromper."
+  },
+  "url": {
+   "it": "/it/articoli/regalare-scarpe-da-padel/",
+   "en": "/en/articles/padel-shoes-as-a-gift/",
+   "es": "/es/articulos/regalar-zapatillas-de-padel/",
+   "fr": "/fr/articles/offrir-chaussures-de-padel/"
+  }
+ },
+ {
+  "slug": "borse-zaini-padel-regalo",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Borse e zaini da padel da regalare: quale scegliere",
+   "en": "Padel bags and backpacks as gifts: which one to choose",
+   "es": "Paleteros y mochilas de pádel para regalar: cuál elegir",
+   "fr": "Sacs et sacs à dos de padel à offrir : lequel choisir"
+  },
+  "desc": {
+   "it": "Il regalo che va bene a tutti: misure, scomparti e modelli.",
+   "en": "The gift that suits everyone: sizes, compartments and models.",
+   "es": "El regalo que sirve a todos: tamaños, compartimentos y modelos.",
+   "fr": "Le cadeau qui va à tout le monde : tailles, compartiments et modèles."
+  },
+  "url": {
+   "it": "/it/articoli/borse-zaini-padel-regalo/",
+   "en": "/en/articles/padel-bags-backpacks-gift/",
+   "es": "/es/articulos/paleteros-mochilas-padel-regalo/",
+   "fr": "/fr/articles/sacs-padel-cadeau/"
+  }
+ },
+ {
+  "slug": "pressurizzatore-palline-padel-regalo",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Pressurizzatore per palline da padel: il regalo che nessuno si compra da solo",
+   "en": "Padel ball pressuriser: the gift nobody buys for themselves",
+   "es": "Presurizador de pelotas de pádel: el regalo que nadie se compra",
+   "fr": "Pressuriseur de balles de padel : le cadeau que personne ne s'offre"
+  },
+  "desc": {
+   "it": "A cosa serve, quale scegliere e quali palline metterci dentro.",
+   "en": "What it's for, which one to choose and which balls to put in it.",
+   "es": "Para qué sirve, cuál elegir y qué pelotas meter dentro.",
+   "fr": "À quoi il sert, lequel choisir et quelles balles mettre dedans."
+  },
+  "url": {
+   "it": "/it/articoli/pressurizzatore-palline-padel-regalo/",
+   "en": "/en/articles/padel-ball-pressuriser-gift/",
+   "es": "/es/articulos/presurizador-pelotas-padel-regalo/",
+   "fr": "/fr/articles/pressuriseur-balles-padel-cadeau/"
+  }
+ },
+ {
+  "slug": "abbigliamento-padel-uomo-regalo",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Abbigliamento padel da uomo: idee regalo per Natale",
+   "en": "Men's padel clothing: Christmas gift ideas",
+   "es": "Ropa de pádel para hombre: ideas de regalo para Navidad",
+   "fr": "Vêtements de padel pour homme : idées cadeaux pour Noël"
+  },
+  "desc": {
+   "it": "Felpe, pantaloncini, calze e magliette da regalare a lui.",
+   "en": "Tops, shorts, socks and T-shirts to give him.",
+   "es": "Sudaderas, pantalones cortos, calcetines y camisetas para regalarle a él.",
+   "fr": "Sweats, shorts, chaussettes et T-shirts à lui offrir."
+  },
+  "url": {
+   "it": "/it/articoli/abbigliamento-padel-uomo-regalo/",
+   "en": "/en/articles/mens-padel-clothing-gift/",
+   "es": "/es/articulos/ropa-padel-hombre-regalo/",
+   "fr": "/fr/articles/vetements-padel-homme-cadeau/"
+  }
+ },
+ {
+  "slug": "abbigliamento-padel-donna-regalo",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Abbigliamento padel da donna: idee regalo per Natale",
+   "en": "Women's padel clothing: Christmas gift ideas",
+   "es": "Ropa de pádel para mujer: ideas de regalo para Navidad",
+   "fr": "Vêtements de padel pour femme : idées cadeaux pour Noël"
+  },
+  "desc": {
+   "it": "Gonne, vestiti tecnici, calze e magliette da regalare a lei.",
+   "en": "Skirts, technical dresses, socks and T-shirts to give her.",
+   "es": "Faldas, vestidos técnicos, calcetines y camisetas para regalarle a ella.",
+   "fr": "Jupes, robes techniques, chaussettes et T-shirts à lui offrir."
+  },
+  "url": {
+   "it": "/it/articoli/abbigliamento-padel-donna-regalo/",
+   "en": "/en/articles/womens-padel-clothing-gift/",
+   "es": "/es/articulos/ropa-padel-mujer-regalo/",
+   "fr": "/fr/articles/vetements-padel-femme-cadeau/"
+  }
+ },
+ {
+  "slug": "piccoli-regali-padel-polsini-overgrip",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Polsini, fasce e overgrip: piccoli regali di padel per la calza",
+   "en": "Wristbands, headbands and overgrips: small padel stocking fillers",
+   "es": "Muñequeras, cintas y overgrips: pequeños regalos de pádel",
+   "fr": "Poignets, bandeaux et surgrips : petits cadeaux de padel"
+  },
+  "desc": {
+   "it": "Overgrip, polsini, protezioni e portachiavi: i pensierini che servono.",
+   "en": "Overgrips, wristbands, protectors and keyrings: little gifts that get used.",
+   "es": "Overgrips, muñequeras, protectores y llaveros: los detalles que sirven.",
+   "fr": "Surgrips, poignets, protections et porte-clés : les petites attentions utiles."
+  },
+  "url": {
+   "it": "/it/articoli/piccoli-regali-padel-polsini-overgrip/",
+   "en": "/en/articles/small-padel-gifts-stocking-fillers/",
+   "es": "/es/articulos/pequenos-regalos-padel-munequeras-overgrip/",
+   "fr": "/fr/articles/petits-cadeaux-padel-poignets-surgrips/"
+  }
+ },
+ {
+  "slug": "regali-padel-principianti",
+  "data": "2026-11-11",
+  "racchette": [
+   "nox-x-hero-2026",
+   "starvie-nyra-2026",
+   "wilson-optix-v2-lite-2026",
+   "joma-master-2026"
+  ],
+  "titolo": {
+   "it": "Regali di padel per chi ha appena iniziato",
+   "en": "Padel gifts for beginners",
+   "es": "Regalos de pádel para quien acaba de empezar",
+   "fr": "Cadeaux de padel pour les débutants"
+  },
+  "desc": {
+   "it": "La prima racchetta, le prime scarpe e tutto il resto per chi comincia.",
+   "en": "The first racket, the first shoes and everything else for a beginner.",
+   "es": "La primera pala, las primeras zapatillas y todo lo demás para quien empieza.",
+   "fr": "La première raquette, les premières chaussures et tout le reste pour débuter."
+  },
+  "url": {
+   "it": "/it/articoli/regali-padel-principianti/",
+   "en": "/en/articles/padel-gifts-for-beginners/",
+   "es": "/es/articulos/regalos-padel-principiantes/",
+   "fr": "/fr/articles/cadeaux-padel-debutants/"
+  }
+ },
+ {
+  "slug": "regali-padel-bambini-ragazzi",
+  "data": "2026-11-11",
+  "racchette": [
+   "wilson-blade-jr-v4-2026",
+   "head-coello-junior-2025",
+   "wilson-bela-junior-v2-2023"
+  ],
+  "titolo": {
+   "it": "Regali di padel per bambini e ragazzi",
+   "en": "Padel gifts for kids and teenagers",
+   "es": "Regalos de pádel para niños y adolescentes",
+   "fr": "Cadeaux de padel pour enfants et ados"
+  },
+  "desc": {
+   "it": "Racchette junior, zaini e accessori colorati per i giovani giocatori.",
+   "en": "Junior rackets, backpacks and colourful accessories for young players.",
+   "es": "Palas junior, mochilas y accesorios de colores para los jóvenes jugadores.",
+   "fr": "Raquettes junior, sacs à dos et accessoires colorés pour les jeunes joueurs."
+  },
+  "url": {
+   "it": "/it/articoli/regali-padel-bambini-ragazzi/",
+   "en": "/en/articles/padel-gifts-for-kids/",
+   "es": "/es/articulos/regalos-padel-ninos/",
+   "fr": "/fr/articles/cadeaux-padel-enfants/"
+  }
+ },
+ {
+  "slug": "regalare-racchetta-padel-come-scegliere",
+  "data": "2026-11-11",
+  "racchette": [
+   "nox-x-hero-2026",
+   "starvie-nyra-2026",
+   "wilson-optix-v2-lite-2026",
+   "wilson-blade-v4-2026",
+   "starvie-polaris-2026",
+   "wilson-endure-v1-2026",
+   "adidas-metalbone-2026",
+   "bullpadel-hack-04-2026",
+   "babolat-viper-juan-lebron-3-0-2026"
+  ],
+  "titolo": {
+   "it": "Regalare una racchetta da padel: conviene? Come scegliere senza sapere il livello",
+   "en": "Giving a padel racket: is it a good idea? How to choose without knowing the level",
+   "es": "Regalar una pala de pádel: ¿conviene? Cómo elegir sin saber el nivel",
+   "fr": "Offrir une raquette de padel : bonne idée ? Comment choisir sans connaître le niveau"
+  },
+  "desc": {
+   "it": "Quando conviene, come scoprire il livello e quali modelli scegliere.",
+   "en": "When it's worth it, how to find out the level and which models to choose.",
+   "es": "Cuándo conviene, cómo averiguar el nivel y qué modelos elegir.",
+   "fr": "Quand ça vaut le coup, comment connaître le niveau et quels modèles choisir."
+  },
+  "url": {
+   "it": "/it/articoli/regalare-racchetta-padel-come-scegliere/",
+   "en": "/en/articles/gifting-a-padel-racket-how-to-choose/",
+   "es": "/es/articulos/regalar-pala-padel-como-elegir/",
+   "fr": "/fr/articles/offrir-raquette-padel-comment-choisir/"
+  }
+ },
+ {
+  "slug": "regali-padel-compagno-maestro",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Regali di padel per il compagno di doppio o il maestro",
+   "en": "Padel gifts for your doubles partner or coach",
+   "es": "Regalos de pádel para el compañero de dobles o el entrenador",
+   "fr": "Cadeaux de padel pour le partenaire de double ou le coach"
+  },
+  "desc": {
+   "it": "Regali ironici per il compagno e regali utili per il maestro.",
+   "en": "Funny gifts for your partner and useful ones for your coach.",
+   "es": "Regalos irónicos para el compañero y útiles para el entrenador.",
+   "fr": "Des cadeaux drôles pour le partenaire et utiles pour le coach."
+  },
+  "url": {
+   "it": "/it/articoli/regali-padel-compagno-maestro/",
+   "en": "/en/articles/padel-gifts-partner-coach/",
+   "es": "/es/articulos/regalos-padel-companero-entrenador/",
+   "fr": "/fr/articles/cadeaux-padel-partenaire-coach/"
+  }
+ },
+ {
+  "slug": "regali-padel-per-chi-ha-tutto",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Regali di padel per chi ha già tutto",
+   "en": "Padel gifts for someone who has everything",
+   "es": "Regalos de pádel para quien ya lo tiene todo",
+   "fr": "Cadeaux de padel pour celui qui a déjà tout"
+  },
+  "desc": {
+   "it": "Gadget, scorte e protezioni per il giocatore più attrezzato.",
+   "en": "Gadgets, supplies and supports for the best-equipped player.",
+   "es": "Gadgets, reservas y protecciones para el jugador más equipado.",
+   "fr": "Gadgets, réserves et protections pour le joueur le mieux équipé."
+  },
+  "url": {
+   "it": "/it/articoli/regali-padel-per-chi-ha-tutto/",
+   "en": "/en/articles/padel-gifts-for-someone-who-has-everything/",
+   "es": "/es/articulos/regalos-padel-para-quien-lo-tiene-todo/",
+   "fr": "/fr/articles/cadeaux-padel-pour-celui-qui-a-tout/"
+  }
+ },
+ {
+  "slug": "regali-padel-last-minute",
+  "data": "2026-11-11",
+  "racchette": [],
+  "titolo": {
+   "it": "Regali di padel last minute: cosa arriva in tempo per Natale",
+   "en": "Last-minute padel gifts: what arrives in time for Christmas",
+   "es": "Regalos de pádel de último minuto: qué llega a tiempo para Navidad",
+   "fr": "Cadeaux de padel de dernière minute : ce qui arrive à temps pour Noël"
+  },
+  "desc": {
+   "it": "Idee che arrivano in tempo e regali che non serve spedire.",
+   "en": "Ideas that arrive in time and gifts that don't need shipping.",
+   "es": "Ideas que llegan a tiempo y regalos que no hace falta enviar.",
+   "fr": "Des idées qui arrivent à temps et des cadeaux sans livraison."
+  },
+  "url": {
+   "it": "/it/articoli/regali-padel-last-minute/",
+   "en": "/en/articles/last-minute-padel-gifts/",
+   "es": "/es/articulos/regalos-padel-ultimo-minuto/",
+   "fr": "/fr/articles/cadeaux-padel-derniere-minute/"
+  }
+ },
+ {
   "slug": "tolito-aguirre-chi-e-colpi-racchetta",
   "data": "2026-11-11",
   "racchette": [
