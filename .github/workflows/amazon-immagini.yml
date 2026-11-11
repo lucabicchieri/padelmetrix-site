@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["data/racchette/**", "scripts/dati_pickleball.py"]
+    paths: ["data/racchette/**", "scripts/dati_pickleball.py", "scripts/dati_regali_prodotti.py"]
 permissions:
   contents: write
 concurrency:
