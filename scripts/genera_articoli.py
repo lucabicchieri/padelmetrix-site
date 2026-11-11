@@ -2428,7 +2428,7 @@ import dati_regali_b  # noqa: E402,F401
 import dati_regali_c  # noqa: E402,F401
 from dati_regali_prodotti import P as _RP  # noqa: E402
 
-REGALI_DATA = "2026-11-18"
+REGALI_DATA = "2026-11-11"
 _RA = {a["k"]: a for a in _DR.A}
 for _a in _DR.A:
     _it, _en, _es, _fr = _a["slug"]
