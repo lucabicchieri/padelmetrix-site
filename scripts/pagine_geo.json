@@ -495,6 +495,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-tolito-aguirre/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
+}
+},
+{
 "path": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
 "alt": {
 "it": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
@@ -1023,6 +1032,15 @@
 "en": "/en/questions/tino-libaak-padel-racket/",
 "es": "/es/preguntas/pala-tino-libaak/",
 "fr": "/fr/questions/raquette-tino-libaak/"
+}
+},
+{
+"path": "/en/questions/tolito-aguirre-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
 }
 },
 {
@@ -1557,6 +1575,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-tolito-aguirre/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
+}
+},
+{
 "path": "/es/preguntas/cuanto-pesa-una-pala-de-padel/",
 "alt": {
 "it": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
@@ -2085,6 +2112,15 @@
 "en": "/en/questions/tino-libaak-padel-racket/",
 "es": "/es/preguntas/pala-tino-libaak/",
 "fr": "/fr/questions/raquette-tino-libaak/"
+}
+},
+{
+"path": "/fr/questions/raquette-tolito-aguirre/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
 }
 },
 {

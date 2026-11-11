@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/tolito-aguirre-chi-e-colpi-racchetta/",
+"alt": {
+"it": "/it/articoli/tolito-aguirre-chi-e-colpi-racchetta/",
+"en": "/en/articles/tolito-aguirre-who-is-he-shots-racket/",
+"es": "/es/articulos/tolito-aguirre-quien-es-golpes-pala/",
+"fr": "/fr/articles/tolito-aguirre-qui-est-il-coups-raquette/"
+}
+},
+{
 "path": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
 "alt": {
 "it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
@@ -177,6 +186,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/tolito-aguirre-who-is-he-shots-racket/",
+"alt": {
+"it": "/it/articoli/tolito-aguirre-chi-e-colpi-racchetta/",
+"en": "/en/articles/tolito-aguirre-who-is-he-shots-racket/",
+"es": "/es/articulos/tolito-aguirre-quien-es-golpes-pala/",
+"fr": "/fr/articles/tolito-aguirre-qui-est-il-coups-raquette/"
 }
 },
 {
@@ -360,6 +378,15 @@
 }
 },
 {
+"path": "/es/articulos/tolito-aguirre-quien-es-golpes-pala/",
+"alt": {
+"it": "/it/articoli/tolito-aguirre-chi-e-colpi-racchetta/",
+"en": "/en/articles/tolito-aguirre-who-is-he-shots-racket/",
+"es": "/es/articulos/tolito-aguirre-quien-es-golpes-pala/",
+"fr": "/fr/articles/tolito-aguirre-qui-est-il-coups-raquette/"
+}
+},
+{
 "path": "/es/articulos/quad-palas-padel-portuguesas-modelos/",
 "alt": {
 "it": "/it/articoli/quad-racchette-padel-portoghesi-modelli/",
@@ -537,6 +564,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/tolito-aguirre-qui-est-il-coups-raquette/",
+"alt": {
+"it": "/it/articoli/tolito-aguirre-chi-e-colpi-racchetta/",
+"en": "/en/articles/tolito-aguirre-who-is-he-shots-racket/",
+"es": "/es/articulos/tolito-aguirre-quien-es-golpes-pala/",
+"fr": "/fr/articles/tolito-aguirre-qui-est-il-coups-raquette/"
 }
 },
 {
