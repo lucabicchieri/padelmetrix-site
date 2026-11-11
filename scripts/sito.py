@@ -513,7 +513,11 @@ def amazon_js(corpo):
             "el.classList.add('has-img');"
             "el.innerHTML='<a href=\"https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21\" rel=\"sponsored nofollow noopener\" target=\"_blank\" title=\"Amazon\">"
             "<img src=\"'+x.img+'\" alt=\"'+alt+'\" loading=\"lazy\"></a>'+(big?'<small>" + cred + "</small>':'');"
-            "el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}})}).catch(function(){})})();</script>")
+            "el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}});"
+            "var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);"
+            "document.querySelectorAll('[data-pz]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pz')];if(!x||!x.prezzo)return;"
+            "el.textContent='" + L("Prezzo su Amazon: ", "Price on Amazon: ", "Precio en Amazon: ", "Prix sur Amazon : ") + "'+x.prezzo.replace(/\\u00a0/g,' ')+' (" + L("aggiornato il ", "updated ", "actualizado el ", "mis à jour le ") + "'+gg+' " + L("alle", "at", "a las", "à") + " '+hh+')'})"
+            "}).catch(function(){})})();</script>")
 
 
 def tatto3(n):

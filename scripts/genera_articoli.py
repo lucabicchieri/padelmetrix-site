@@ -2422,6 +2422,85 @@ def art_tolito(db):
                                   "El jugador de los golpes imposibles: carrera en zigzag, historias locas y su pala.", "Le joueur des coups impossibles : carrière en zigzag, histoires folles et sa raquette.")
 
 
+# ---------------------------------------------------------------- Guide regalo di Natale (novembre 2026)
+import dati_regali as _DR  # noqa: E402
+import dati_regali_b  # noqa: E402,F401
+import dati_regali_c  # noqa: E402,F401
+from dati_regali_prodotti import P as _RP  # noqa: E402
+
+REGALI_DATA = "2026-11-18"
+_RA = {a["k"]: a for a in _DR.A}
+for _a in _DR.A:
+    _it, _en, _es, _fr = _a["slug"]
+    S.SLUG[_it] = (_en, _es)
+    S.SLUG_FR[_it] = _fr
+    DATE_ART[_it] = REGALI_DATA
+_LI = {"it": 0, "en": 1, "es": 2, "fr": 3}
+_REGALO_SVG = ('<svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><rect x="10" y="26" width="44" height="30" rx="4" fill="#0F3D2E"/>'
+               '<rect x="6" y="18" width="52" height="12" rx="3" fill="#0F3D2E"/><rect x="29" y="18" width="6" height="38" fill="#C6F432"/>'
+               '<path d="M32 18c-6-10-16-8-14-2 1 3 8 3 14 2zm0 0c6-10 16-8 14-2-1 3-8 3-14 2z" fill="none" stroke="#C6F432" stroke-width="3"/></svg>')
+
+
+def _amz(a):
+    return f"https://www.amazon.it/dp/{a}?tag=padelmetrix-21"
+
+
+def _regalo_card(a, i):
+    p = _RP[a]
+    return (f'<div class="regalo"><div class="rimg" data-asin="{a}" data-alt="{e(p["n"])}">{_REGALO_SVG}</div>'
+            f'<div class="rtx"><b>{e(p["n"])}</b><p>{e(p["d"][i])}</p><p class="rpz" data-pz="{a}"></p>'
+            f'<a class="btn" href="{_amz(a)}" rel="sponsored nofollow noopener" target="_blank">{L("Vedi su Amazon", "See on Amazon", "Ver en Amazon", "Voir sur Amazon")}</a></div></div>')
+
+
+def _regali_corpo(art_, db, i):
+    by = {r["slug"]: r for r in db}
+    t = art_["b"][i]
+    usate = []
+
+    def sost(m):
+        tipo, arg = m.group(1), m.group(2)
+        if tipo == "P":
+            return '<div class="regali">' + "".join(_regalo_card(a.strip(), i) for a in arg.split(",")) + "</div>"
+        if tipo == "P1":
+            return f'<a href="{_amz(arg)}" rel="sponsored nofollow noopener" target="_blank">{e(_RP[arg]["n"])}</a>'
+        if tipo == "R":
+            rs = [by[s.strip()] for s in arg.split(",")]
+            usate.extend(rs)
+            return griglia(rs)
+        if tipo == "A":
+            x = _RA[arg]
+            return f'<a href="{P("articoli", x["slug"][0])}">{e(x["t"][i])}</a>'
+        raise ValueError(tipo)
+    t = _re.sub(r"\[\[(P1|P|R|A):([^\]]+)\]\]", sost, t)
+    g = _RA["guida"]
+    box = ("" if art_["k"] == "guida" else
+           _box5(L("Tutte le idee regalo", "All the gift ideas", "Todas las ideas de regalo", "Toutes les idées cadeaux"),
+                 e(g["c"][i]), L("Vai alla guida", "Go to the guide", "Ir a la guía", "Voir le guide"), P("articoli", g["slug"][0])))
+    t = t.replace("[[G]]", box).replace("[[Q]]", f'<a href="{P("selettore")}">{L("selettore di racchette", "racket finder", "selector de palas", "sélecteur de raquettes")}</a>')
+    nota = ('<p class="note">' + L("Questo articolo contiene link affiliati Amazon: se acquisti, PadelMetrix riceve una piccola commissione senza costi per te. Immagini e prezzi arrivano da Amazon e si aggiornano due volte al giorno.",
+                                   "This article contains Amazon affiliate links: if you buy, PadelMetrix earns a small commission at no cost to you. Images and prices come from Amazon and are updated twice a day.",
+                                   "Este artículo contiene enlaces de afiliado de Amazon: si compras, PadelMetrix recibe una pequeña comisión sin coste para ti. Imágenes y precios vienen de Amazon y se actualizan dos veces al día.",
+                                   "Cet article contient des liens affiliés Amazon : si vous achetez, PadelMetrix perçoit une petite commission sans frais pour vous. Images et prix viennent d'Amazon et sont mis à jour deux fois par jour.") + "</p>")
+    return nota + t, usate
+
+
+def regali(db):
+    i = _LI[S._LANG[0]]
+    out = []
+    for a in _DR.A:
+        slug = a["slug"][0]
+        corpo, usate = _regali_corpo(a, db, i)
+        qa = [(q[i], r[i]) for q, r in a["q"]]
+        faq_htm, faq_ld = faq(qa)
+        if usate:
+            RACCHETTE_ARTICOLO[slug] = [r["slug"] for r in usate]
+        titolo = a["t"][i]
+        scrivi_articolo(slug, titolo + " | PadelMetrix", a["d"][i], titolo, L("Regali di Natale", "Christmas gifts", "Regalos de Navidad", "Cadeaux de Noël"),
+                        corpo + faq_htm, ld_extra=[faq_ld])
+        out.append((slug, titolo, a["c"][i]))
+    return out
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -2451,7 +2530,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [*regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
