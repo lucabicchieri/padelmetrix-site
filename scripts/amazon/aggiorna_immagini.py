@@ -30,6 +30,9 @@ def asin_schede():
     for p in PADDLE:
         if p.get("asin"):
             out[p["asin"]] = "pickleball/" + p["slug"]
+    from dati_regali_prodotti import P as REGALI
+    for a in REGALI:
+        out.setdefault(a, "regali")
     return out
 
 
@@ -54,6 +57,10 @@ def main():
             titolo = (((it.get("itemInfo") or {}).get("title") or {}).get("displayValue")) or ""
             risultato[it["asin"]] = {"img": img["url"], "w": img.get("width"), "h": img.get("height"),
                                      "titolo": titolo, "scheda": schede.get(it["asin"])}
+            off = ((it.get("offersV2") or {}).get("listings") or [{}])[0]
+            soldi = (off.get("price") or {}).get("money") or {}
+            if soldi.get("displayAmount"):
+                risultato[it["asin"]]["prezzo"] = soldi["displayAmount"]
         for err in res.get("errors") or []:
             print("errore:", str(err)[:200])
     if not risultato:
