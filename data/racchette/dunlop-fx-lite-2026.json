@@ -39,7 +39,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Dunlop+FX+Lite+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0G7XJZRG9"
       },
       {
         "nome": "Ipontennis",

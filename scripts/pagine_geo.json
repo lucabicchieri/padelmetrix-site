@@ -216,6 +216,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
+}
+},
+{
 "path": "/it/domande/racchetta-bea-gonzalez/",
 "alt": {
 "it": "/it/domande/racchetta-bea-gonzalez/",
@@ -351,6 +360,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-manu-martin/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
+}
+},
+{
 "path": "/it/domande/racchetta-marina-guinart/",
 "alt": {
 "it": "/it/domande/racchetta-marina-guinart/",
@@ -474,6 +492,15 @@
 "en": "/en/questions/tino-libaak-padel-racket/",
 "es": "/es/preguntas/pala-tino-libaak/",
 "fr": "/fr/questions/raquette-tino-libaak/"
+}
+},
+{
+"path": "/it/domande/racchetta-tolito-aguirre/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
 }
 },
 {
@@ -729,6 +756,15 @@
 }
 },
 {
+"path": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
+}
+},
+{
 "path": "/en/questions/bea-gonzalez-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-bea-gonzalez/",
@@ -864,6 +900,15 @@
 }
 },
 {
+"path": "/en/questions/manu-martin-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
+}
+},
+{
 "path": "/en/questions/marina-guinart-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-marina-guinart/",
@@ -987,6 +1032,15 @@
 "en": "/en/questions/tino-libaak-padel-racket/",
 "es": "/es/preguntas/pala-tino-libaak/",
 "fr": "/fr/questions/raquette-tino-libaak/"
+}
+},
+{
+"path": "/en/questions/tolito-aguirre-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
 }
 },
 {
@@ -1242,6 +1296,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
+}
+},
+{
 "path": "/es/preguntas/pala-bea-gonzalez/",
 "alt": {
 "it": "/it/domande/racchetta-bea-gonzalez/",
@@ -1377,6 +1440,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-manu-martin/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
+}
+},
+{
 "path": "/es/preguntas/pala-marina-guinart/",
 "alt": {
 "it": "/it/domande/racchetta-marina-guinart/",
@@ -1500,6 +1572,15 @@
 "en": "/en/questions/tino-libaak-padel-racket/",
 "es": "/es/preguntas/pala-tino-libaak/",
 "fr": "/fr/questions/raquette-tino-libaak/"
+}
+},
+{
+"path": "/es/preguntas/pala-tolito-aguirre/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
 }
 },
 {
@@ -1755,6 +1836,15 @@
 }
 },
 {
+"path": "/fr/questions/raquette-arturo-coello-edu-alonso/",
+"alt": {
+"it": "/it/domande/racchetta-arturo-coello-edu-alonso/",
+"en": "/en/questions/arturo-coello-edu-alonso-padel-racket/",
+"es": "/es/preguntas/pala-arturo-coello-edu-alonso/",
+"fr": "/fr/questions/raquette-arturo-coello-edu-alonso/"
+}
+},
+{
 "path": "/fr/questions/raquette-bea-gonzalez/",
 "alt": {
 "it": "/it/domande/racchetta-bea-gonzalez/",
@@ -1890,6 +1980,15 @@
 }
 },
 {
+"path": "/fr/questions/raquette-manu-martin/",
+"alt": {
+"it": "/it/domande/racchetta-manu-martin/",
+"en": "/en/questions/manu-martin-padel-racket/",
+"es": "/es/preguntas/pala-manu-martin/",
+"fr": "/fr/questions/raquette-manu-martin/"
+}
+},
+{
 "path": "/fr/questions/raquette-marina-guinart/",
 "alt": {
 "it": "/it/domande/racchetta-marina-guinart/",
@@ -2013,6 +2112,15 @@
 "en": "/en/questions/tino-libaak-padel-racket/",
 "es": "/es/preguntas/pala-tino-libaak/",
 "fr": "/fr/questions/raquette-tino-libaak/"
+}
+},
+{
+"path": "/fr/questions/raquette-tolito-aguirre/",
+"alt": {
+"it": "/it/domande/racchetta-tolito-aguirre/",
+"en": "/en/questions/tolito-aguirre-padel-racket/",
+"es": "/es/preguntas/pala-tolito-aguirre/",
+"fr": "/fr/questions/raquette-tolito-aguirre/"
 }
 },
 {

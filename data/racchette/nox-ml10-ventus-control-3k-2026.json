@@ -45,7 +45,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Nox+ML10+Ventus+Control+3K+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0G1864GVC"
       },
       {
         "nome": "PadelPROShop",

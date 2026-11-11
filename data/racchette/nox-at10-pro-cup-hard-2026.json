@@ -43,7 +43,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Nox+AT10+Pro+Cup+Hard+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0FX4T2W3Z"
       }
     ],
     "nota_prezzi": "Prezzo di listino indicativo 200 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",

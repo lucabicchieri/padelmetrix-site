@@ -57,7 +57,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Babolat+Veron+Juan+Lebrón+3.0+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0G4XVF9XL"
       }
     ],
     "nota_prezzi": "Prezzo di listino indicativo 179 € secondo i rivenditori consultati a ottobre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",

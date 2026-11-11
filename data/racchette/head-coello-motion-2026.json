@@ -56,7 +56,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Head+Coello+Motion+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0GHY4K56K"
       },
       {
         "nome": "PadelMarket",

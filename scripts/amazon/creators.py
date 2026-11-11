@@ -58,12 +58,16 @@ def get_items(asins, tok, ver, tag="padelmetrix-21", market="www.amazon.it", log
     body = json.dumps({"itemIds": asins, "itemIdType": "ASIN", "marketplace": market,
                        "partnerTag": tag, "resources": RISORSE}).encode()
     out = None
-    for auth in (f"Bearer {tok}, Version {ver}", f"Bearer {tok}"):
-        st, txt = _post(API, body, {"Authorization": auth, "Content-Type": "application/json", "x-marketplace": market})
-        log(f"getItems ({'con' if 'Version' in auth else 'senza'} Version): HTTP {st}")
+    import time
+    for tentativo in range(5):
+        st, txt = _post(API, body, {"Authorization": f"Bearer {tok}, Version {ver}", "Content-Type": "application/json", "x-marketplace": market})
+        log(f"getItems: HTTP {st}")
         if st == 200:
             return json.loads(txt)
         out = txt[:400]
+        if st != 429:
+            break
+        time.sleep(2 + 3 * tentativo)  # limite di richieste: si riprova con pausa crescente
     log("  risposta:", out)
     return None
 

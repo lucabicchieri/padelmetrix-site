@@ -56,7 +56,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Nox+AT10+Luxury+Genius+12K+Alum+Xtrem+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0G16FSNG6"
       },
       {
         "nome": "PadelPROShop",

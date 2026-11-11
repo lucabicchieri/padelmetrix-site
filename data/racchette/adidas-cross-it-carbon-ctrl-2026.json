@@ -52,7 +52,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Adidas+Cross+It+Carbon+CTRL+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0FZWVYJS8"
       },
       {
         "nome": "Adidas Padel",

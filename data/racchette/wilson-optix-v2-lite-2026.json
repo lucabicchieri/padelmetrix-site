@@ -39,7 +39,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Wilson+Optix+V2+Lite+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0G8RWTLML"
       }
     ],
     "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",
