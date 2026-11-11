@@ -225,6 +225,15 @@
 }
 },
 {
+"path": "/it/marche/hirostar/",
+"alt": {
+"it": "/it/marche/hirostar/",
+"en": "/en/brands/hirostar/",
+"es": "/es/marcas/hirostar/",
+"fr": "/fr/marques/hirostar/"
+}
+},
+{
 "path": "/it/marche/puma/",
 "alt": {
 "it": "/it/marche/puma/",
@@ -1809,6 +1818,15 @@
 }
 },
 {
+"path": "/it/confronta/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/confronta/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/compare/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/comparar/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/comparer/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/"
+}
+},
+{
 "path": "/it/confronta/joma-blast-pro-hrd-2026-vs-siux-pegasus-pro-2026/",
 "alt": {
 "it": "/it/confronta/joma-blast-pro-hrd-2026-vs-siux-pegasus-pro-2026/",
@@ -3057,6 +3075,15 @@
 "en": "/en/brands/tenax-padel/",
 "es": "/es/marcas/tenax-padel/",
 "fr": "/fr/marques/tenax-padel/"
+}
+},
+{
+"path": "/en/brands/hirostar/",
+"alt": {
+"it": "/it/marche/hirostar/",
+"en": "/en/brands/hirostar/",
+"es": "/es/marcas/hirostar/",
+"fr": "/fr/marques/hirostar/"
 }
 },
 {
@@ -4644,6 +4671,15 @@
 }
 },
 {
+"path": "/en/compare/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/confronta/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/compare/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/comparar/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/comparer/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/"
+}
+},
+{
 "path": "/en/compare/joma-blast-pro-hrd-2026-vs-siux-pegasus-pro-2026/",
 "alt": {
 "it": "/it/confronta/joma-blast-pro-hrd-2026-vs-siux-pegasus-pro-2026/",
@@ -5892,6 +5928,15 @@
 "en": "/en/brands/tenax-padel/",
 "es": "/es/marcas/tenax-padel/",
 "fr": "/fr/marques/tenax-padel/"
+}
+},
+{
+"path": "/es/marcas/hirostar/",
+"alt": {
+"it": "/it/marche/hirostar/",
+"en": "/en/brands/hirostar/",
+"es": "/es/marcas/hirostar/",
+"fr": "/fr/marques/hirostar/"
 }
 },
 {
@@ -7479,6 +7524,15 @@
 }
 },
 {
+"path": "/es/comparar/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/confronta/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/compare/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/comparar/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/comparer/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/"
+}
+},
+{
 "path": "/es/comparar/joma-blast-pro-hrd-2026-vs-siux-pegasus-pro-2026/",
 "alt": {
 "it": "/it/confronta/joma-blast-pro-hrd-2026-vs-siux-pegasus-pro-2026/",
@@ -8727,6 +8781,15 @@
 "en": "/en/brands/tenax-padel/",
 "es": "/es/marcas/tenax-padel/",
 "fr": "/fr/marques/tenax-padel/"
+}
+},
+{
+"path": "/fr/marques/hirostar/",
+"alt": {
+"it": "/it/marche/hirostar/",
+"en": "/en/brands/hirostar/",
+"es": "/es/marcas/hirostar/",
+"fr": "/fr/marques/hirostar/"
 }
 },
 {
@@ -10311,6 +10374,15 @@
 "en": "/en/compare/head-vibe-2026-vs-siux-beat-hybrid-3-2026/",
 "es": "/es/comparar/head-vibe-2026-vs-siux-beat-hybrid-3-2026/",
 "fr": "/fr/comparer/head-vibe-2026-vs-siux-beat-hybrid-3-2026/"
+}
+},
+{
+"path": "/fr/comparer/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"alt": {
+"it": "/it/confronta/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"en": "/en/compare/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"es": "/es/comparar/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/",
+"fr": "/fr/comparer/hirostar-alien-core-tolito-aguirre-2026-vs-hirostar-alien-pro-tolito-aguirre-2026/"
 }
 },
 {
