@@ -131,6 +131,17 @@ footer a{color:#C9D6CF}
 table[class*="cmp-n"] td:first-child,table[class*="cmp-n"] th:first-child{position:sticky;left:0;z-index:1;background:#fff}table[class*="cmp-n"] tr.diff td:first-child{background:#F4FBE3}
 
 .rcard.has-asin{padding:0;overflow:hidden}.rcard.has-asin .ill{margin:12px 0 12px 14px}.rcard .rtxt{flex:1;display:block;padding:12px 14px 12px 0;color:inherit;text-decoration:none}.rcard .ill.has-img{flex:0 0 64px;height:64px;background:#fff;border-radius:8px}.rcard .ill.has-img img{width:64px;height:64px;object-fit:contain}
+.regali{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:18px 0 26px}
+.regalo{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line,#E1E5DF);border-radius:14px;overflow:hidden}
+.regalo .rimg{height:140px;display:flex;align-items:center;justify-content:center;background:#fff;border-bottom:1px solid var(--line,#E1E5DF)}
+.regalo .rimg a{display:flex;width:100%;height:100%;align-items:center;justify-content:center}
+.regalo .rimg img{max-width:88%;max-height:124px;object-fit:contain}
+.regalo .rtx{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.regalo .rtx b{font-family:'Space Grotesk',sans-serif;font-size:16px;line-height:1.25}
+.prose .regalo .rtx p{font-size:14px;margin:6px 0 0;line-height:1.4}
+.prose .regalo .rpz{font-size:13px;color:var(--muted,#5B6B63);margin-top:8px}
+.prose .regalo .rpz:empty{display:none}
+.regalo .btn{margin-top:auto;align-self:flex-start;margin-top:12px;font-size:14px;padding:8px 14px}
 
 </style>
 </head>
@@ -258,7 +269,7 @@ table[class*="cmp-n"] td:first-child,table[class*="cmp-n"] th:first-child{positi
 <span><a href="/it/racchette/">Racchette</a> · <a href="/it/guide/">Guide</a> · <a href="/it/articoli/">Articoli</a> · <a href="/it/domande/">Domande</a> · <a href="/it/glossario/">Glossario</a> · <a href="/it/dati/">Dati aperti</a> · <a href="/it/chi-siamo/">Chi siamo e metodo</a> · <a href="/it/contatti/">Contatti</a> · <a href="/it/privacy/">Privacy</a> · <a href="/it/cookie/">Cookie</a> · <a href="#" onclick="return pmApriCookie()">Preferenze cookie</a> · © 2026 PadelMetrix</span>
 </div></footer>
 
-<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/"/g,'&quot;');el.classList.add('has-img');el.innerHTML='<a href="https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank" title="Amazon"><img src="'+x.img+'" alt="'+alt+'" loading="lazy"></a>'+(big?'<small>Immagine: Amazon</small>':'');el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}})}).catch(function(){})})();</script>
+<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/"/g,'&quot;');el.classList.add('has-img');el.innerHTML='<a href="https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank" title="Amazon"><img src="'+x.img+'" alt="'+alt+'" loading="lazy"></a>'+(big?'<small>Immagine: Amazon</small>':'');el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}});var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);document.querySelectorAll('[data-pz]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pz')];if(!x||!x.prezzo)return;el.textContent='Prezzo su Amazon: '+x.prezzo.replace(/\u00a0/g,' ')+' (aggiornato il '+gg+' alle '+hh+')'})}).catch(function(){})})();</script>
 <style>
 #pm-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;background:#fff;color:#1F2D27;border:1px solid #E1E5DF;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.15);padding:16px 18px;display:none;font:15px/1.5 'IBM Plex Sans',system-ui,sans-serif}
 #pm-cc p{margin:0 0 12px}#pm-cc .b{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
