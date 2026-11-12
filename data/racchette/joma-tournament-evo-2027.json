@@ -1,0 +1,175 @@
+{
+  "slug": "joma-tournament-evo-2027",
+  "marca": "Joma",
+  "modello": "Tournament Evo",
+  "anno": 2027,
+  "categoria": "adulto",
+  "donna": false,
+  "peso": "350–360 g",
+  "forma": "ibrida",
+  "forma_nota": "ibrida secondo Joma, rotonda secondo PadelPROShop",
+  "bilanciamento": "medio",
+  "nucleo": "Black EVA Soft",
+  "superficie": "Carbonio 8K, finitura ruvida 3D",
+  "telaio": "Dualtech Frame in carbonio",
+  "sensazione": "morbido",
+  "livello": "avanzato",
+  "stile": "controllo",
+  "prezzo_listino_eur": 190,
+  "simili": [
+    "joma-valkiria-pro-hard-2027",
+    "bullpadel-vertex-05-hybrid-2027",
+    "joma-tournament-pro-iconic-2027"
+  ],
+  "fonti_dati": [
+    "https://www.sportlife.es/material-deportivo/desvelamos-nueva-coleccion-palas-padel-joma_335621_102.html",
+    "https://www.infobae.com/america/agencias/2026/11/06/joma-presenta-su-nueva-coleccion-de-palas-2027-para-tres-gamas-de-rendimiento/",
+    "https://padelproshop.com/it/products/racchetta-da-padel-joma-tournament-evo-nero-grigio-clear-2027"
+  ],
+  "aggiornato": "2026-11-12",
+  "pagina": {
+    "titolo": "Joma Tournament Evo 2027",
+    "title_tag": "Joma Tournament Evo 2027: scheda tecnica, caratteristiche e alternative",
+    "meta_description": "Joma Tournament Evo 2027: forma ibrida, peso 350–360 g, bilanciamento medio, carbonio 8K. Dati tecnici, a chi è adatta e racchette simili.",
+    "breadcrumb": "Tournament Evo 2027",
+    "eyebrow": "Joma · Collezione 2027",
+    "chips": [
+      "Ibrida",
+      "350–360 g",
+      "Bilanciamento medio",
+      "Carbonio 8K",
+      "Avanzato"
+    ],
+    "lead": "La gemella di controllo della Gold Evo: stessa linea Evo in carbonio 8K, ma gomma morbida e bilanciamento medio per costruire il punto con comfort e uscita di palla. Indicata per giocatori avanzati.",
+    "negozi": [
+      {
+        "nome": "Amazon",
+        "nota": "Spedizione e resi Amazon",
+        "url": "https://www.amazon.it/s?k=Joma+Tournament+Evo+2027",
+        "pulsante": "Vedi su Amazon",
+        "amazon": true,
+        "asin": "B0HQJNGW7T"
+      },
+      {
+        "nome": "PadelPROShop",
+        "nota": "Scheda prodotto del rivenditore",
+        "url": "https://padelproshop.com/it/products/racchetta-da-padel-joma-tournament-evo-nero-grigio-clear-2027",
+        "pulsante": "Vedi sul sito"
+      }
+    ],
+    "nota_prezzi": "Prezzo di listino indicativo 190 € secondo i rivenditori consultati a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
+    "confronta": {
+      "url": "/confronta/?r=joma-tournament-evo-2027,joma-valkiria-pro-hard-2027",
+      "testo": "Confronta con Valkiria Pro Hard 2027"
+    },
+    "specifiche": [
+      [
+        "Marca",
+        "Joma"
+      ],
+      [
+        "Modello",
+        "Tournament Evo"
+      ],
+      [
+        "Collezione",
+        "2027"
+      ],
+      [
+        "Forma",
+        "Ibrida secondo Joma, rotonda secondo PadelPROShop"
+      ],
+      [
+        "Peso",
+        "350–360 g"
+      ],
+      [
+        "Bilanciamento",
+        "Medio"
+      ],
+      [
+        "Nucleo",
+        "Black EVA Soft"
+      ],
+      [
+        "Superficie",
+        "Carbonio 8K, finitura ruvida 3D"
+      ],
+      [
+        "Telaio",
+        "Dualtech Frame in carbonio"
+      ],
+      [
+        "Tatto",
+        "Morbido"
+      ],
+      [
+        "Livello",
+        "Avanzato"
+      ],
+      [
+        "Stile di gioco",
+        "Controllo"
+      ],
+      [
+        "Colori",
+        "nero e grigio"
+      ],
+      [
+        "Prezzo di listino",
+        "190 €"
+      ]
+    ],
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.sportlife.es/material-deportivo/desvelamos-nueva-coleccion-palas-padel-joma_335621_102.html\" rel=\"nofollow noopener\" target=\"_blank\">Sportlife</a>, <a href=\"https://www.infobae.com/america/agencias/2026/11/06/joma-presenta-su-nueva-coleccion-de-palas-2027-para-tres-gamas-de-rendimiento/\" rel=\"nofollow noopener\" target=\"_blank\">Infobae</a>, <a href=\"https://padelproshop.com/it/products/racchetta-da-padel-joma-tournament-evo-nero-grigio-clear-2027\" rel=\"nofollow noopener\" target=\"_blank\">PadelPROShop</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. Sportlife la descrive così: la gemella di controllo della Gold Evo: stessa linea Evo in carbonio 8K, ma gomma morbida e bilanciamento medio per costruire il punto con comfort e uscita di palla. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "pro": [
+      "Controllo e regolarità negli scambi",
+      "Tatto morbido, più comfort per il braccio"
+    ],
+    "contro": [
+      "Poca potenza facile nello smash",
+      "Esigente per chi non ha ancora una tecnica solida"
+    ],
+    "adatta": [
+      "Sei di livello avanzato",
+      "Costruisci il punto con pazienza e piazzamento",
+      "Vuoi proteggere gomito e spalla"
+    ],
+    "non_adatta": [
+      "Sei principiante: meglio una racchetta più tollerante",
+      "Cerchi tanta potenza nello smash"
+    ],
+    "recensioni": [],
+    "simili": [
+      {
+        "url": "/racchette/joma-valkiria-pro-hard-2027/",
+        "sopra": "Joma · 2027",
+        "nome": "Valkiria Pro Hard 2027",
+        "testo": "Ibrida di controllo, carbonio 12K, livello avanzato."
+      },
+      {
+        "url": "/racchette/bullpadel-vertex-05-hybrid-2027/",
+        "sopra": "Bullpadel · 2027",
+        "nome": "Vertex 05 Hybrid 2027",
+        "testo": "Ibrida di controllo, 365–375 g, livello avanzato."
+      },
+      {
+        "url": "/racchette/joma-tournament-pro-iconic-2027/",
+        "sopra": "Joma · 2027",
+        "nome": "Tournament Pro Iconic 2027",
+        "testo": "Ibrida di controllo, carbonio 3K, livello intermedio / avanzato."
+      }
+    ],
+    "aggiornata": "12 novembre 2026",
+    "tratti": {
+      "titolo": "In sintesi",
+      "voci": [
+        "Racchetta di controllo",
+        "Livello avanzato",
+        "Tatto morbido",
+        "Forma ibrida secondo Joma, rotonda secondo PadelPROShop"
+      ],
+      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+    }
+  }
+}
