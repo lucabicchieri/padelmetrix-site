@@ -28,6 +28,7 @@
   "racchette": [
    "adidas-metalbone-2026",
    "adidas-metalbone-carbon-2026",
+   "adidas-metalbone-carbon-apa-2026",
    "adidas-metalbone-carbon-ctrl-2026",
    "adidas-metalbone-ctrl-2026",
    "adidas-metalbone-hrd-plus-2026",
@@ -753,6 +754,10 @@
    "bullpadel-vertex-05-w-2027",
    "bullpadel-wonder-2026",
    "bullpadel-wonder-2027",
+   "joma-slam-pro-iconic-2026",
+   "joma-slam-pro-iconic-2027",
+   "joma-tournament-pro-iconic-2026",
+   "joma-tournament-pro-iconic-2027",
    "nox-ventus-hybrid-12k-lite-2026",
    "nox-ventus-hybrid-12k-lite-2027",
    "siux-diablo-pro-2026",
@@ -781,10 +786,10 @@
    "fr": "Raquettes de padel 2027 vs 2026 : ce qui change, modèle par modèle"
   },
   "desc": {
-   "it": "19 rinnovi confrontati voce per voce: cosa cambia davvero.",
-   "en": "19 updates compared item by item: what really changes.",
-   "es": "19 renovaciones comparadas dato por dato: qué cambia de verdad.",
-   "fr": "19 mises à jour comparées critère par critère : ce qui change vraiment."
+   "it": "21 rinnovi confrontati voce per voce: cosa cambia davvero.",
+   "en": "21 updates compared item by item: what really changes.",
+   "es": "21 renovaciones comparadas dato por dato: qué cambia de verdad.",
+   "fr": "21 mises à jour comparées critère par critère : ce qui change vraiment."
   },
   "url": {
    "it": "/it/articoli/racchette-padel-2027-vs-2026-cosa-cambia/",
@@ -804,10 +809,10 @@
    "fr": "Raquettes de padel 2027 : les nouveautés de chaque marque"
   },
   "desc": {
-   "it": "67 modelli 2027 di 6 marchi, con dati e confronti.",
-   "en": "67 2027 models from 6 brands, with data and comparisons.",
-   "es": "67 modelos 2027 de 6 marcas, con datos y comparativas.",
-   "fr": "67 modèles 2027 de 6 marques, avec données et comparatifs."
+   "it": "77 modelli 2027 di 8 marchi, con dati e confronti.",
+   "en": "77 2027 models from 8 brands, with data and comparisons.",
+   "es": "77 modelos 2027 de 8 marcas, con datos y comparativas.",
+   "fr": "77 modèles 2027 de 8 marques, avec données et comparatifs."
   },
   "url": {
    "it": "/it/articoli/racchette-padel-2027-novita-per-marca/",

@@ -26,13 +26,14 @@ def filtri_js():
     return """<script>
 (function(){
 var q=new URLSearchParams(location.search);var f=document.getElementById('filtri');if(!f)return;
+function nz(s){return (s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();}
 var cards=[].slice.call(document.querySelectorAll('.rgrid .rcard'));var out=document.getElementById('conta');
 ['marca','forma','tatto','livello','stile','cat','prezzo','q'].forEach(function(k){var el=f.elements[k];if(el&&q.get(k))el.value=q.get(k);});
 function run(){var v={};['marca','forma','tatto','livello','stile','cat','prezzo','q'].forEach(function(k){v[k]=(f.elements[k].value||'').toLowerCase();});
 var n=0;cards.forEach(function(c){var d=c.dataset,ok=true;
 if(v.marca&&d.marca!==v.marca)ok=false;if(v.forma&&d.forma!==v.forma)ok=false;if(v.tatto&&d.tatto!==v.tatto)ok=false;if(v.livello&&d.livello!==v.livello)ok=false;
 if(v.stile&&d.stile!==v.stile)ok=false;if(v.cat&&d.cat!==v.cat)ok=false;
-if(v.prezzo&&(!d.prezzo||parseFloat(d.prezzo)>parseFloat(v.prezzo)))ok=false;if(v.q&&d.nome.indexOf(v.q)<0)ok=false;
+if(v.prezzo&&(!d.prezzo||parseFloat(d.prezzo)>parseFloat(v.prezzo)))ok=false;if(v.q&&nz(d.nome).indexOf(nz(v.q).trim())<0)ok=false;
 c.style.display=ok?'':'none';if(ok)n++;});out.textContent=n+(n===1?' %s':' %s');}
 f.addEventListener('input',run);f.addEventListener('change',run);run();})();
 </script>""" % (uno, piu)
