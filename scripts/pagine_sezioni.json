@@ -63,6 +63,15 @@
 }
 },
 {
+"path": "/it/marche/joma/",
+"alt": {
+"it": "/it/marche/joma/",
+"en": "/en/brands/joma/",
+"es": "/es/marcas/joma/",
+"fr": "/fr/marques/joma/"
+}
+},
+{
 "path": "/it/marche/babolat/",
 "alt": {
 "it": "/it/marche/babolat/",
@@ -99,15 +108,6 @@
 }
 },
 {
-"path": "/it/marche/joma/",
-"alt": {
-"it": "/it/marche/joma/",
-"en": "/en/brands/joma/",
-"es": "/es/marcas/joma/",
-"fr": "/fr/marques/joma/"
-}
-},
-{
 "path": "/it/marche/oxdog/",
 "alt": {
 "it": "/it/marche/oxdog/",
@@ -135,21 +135,21 @@
 }
 },
 {
-"path": "/it/marche/kombat/",
-"alt": {
-"it": "/it/marche/kombat/",
-"en": "/en/brands/kombat/",
-"es": "/es/marcas/kombat/",
-"fr": "/fr/marques/kombat/"
-}
-},
-{
 "path": "/it/marche/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/it/marche/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -486,6 +486,15 @@
 }
 },
 {
+"path": "/it/confronta/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"en": "/en/compare/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"es": "/es/comparar/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"fr": "/fr/comparer/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/"
+}
+},
+{
 "path": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -762,6 +771,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/it/confronta/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"en": "/en/compare/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"es": "/es/comparar/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"fr": "/fr/comparer/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/"
 }
 },
 {
@@ -1113,6 +1131,15 @@
 "en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
+"path": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/"
 }
 },
 {
@@ -1845,6 +1872,15 @@
 }
 },
 {
+"path": "/it/confronta/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"alt": {
+"it": "/it/confronta/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"en": "/en/compare/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"es": "/es/comparar/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"fr": "/fr/comparer/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/"
+}
+},
+{
 "path": "/it/confronta/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
 "alt": {
 "it": "/it/confronta/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
@@ -1863,12 +1899,48 @@
 }
 },
 {
+"path": "/it/confronta/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"en": "/en/compare/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"es": "/es/comparar/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/"
+}
+},
+{
 "path": "/it/confronta/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "alt": {
 "it": "/it/confronta/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "en": "/en/compare/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/"
+}
+},
+{
+"path": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/"
+}
+},
+{
+"path": "/it/confronta/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"en": "/en/compare/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"es": "/es/comparar/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/"
 }
 },
 {
@@ -2916,6 +2988,15 @@
 }
 },
 {
+"path": "/en/brands/joma/",
+"alt": {
+"it": "/it/marche/joma/",
+"en": "/en/brands/joma/",
+"es": "/es/marcas/joma/",
+"fr": "/fr/marques/joma/"
+}
+},
+{
 "path": "/en/brands/babolat/",
 "alt": {
 "it": "/it/marche/babolat/",
@@ -2952,15 +3033,6 @@
 }
 },
 {
-"path": "/en/brands/joma/",
-"alt": {
-"it": "/it/marche/joma/",
-"en": "/en/brands/joma/",
-"es": "/es/marcas/joma/",
-"fr": "/fr/marques/joma/"
-}
-},
-{
 "path": "/en/brands/oxdog/",
 "alt": {
 "it": "/it/marche/oxdog/",
@@ -2988,21 +3060,21 @@
 }
 },
 {
-"path": "/en/brands/kombat/",
-"alt": {
-"it": "/it/marche/kombat/",
-"en": "/en/brands/kombat/",
-"es": "/es/marcas/kombat/",
-"fr": "/fr/marques/kombat/"
-}
-},
-{
 "path": "/en/brands/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/en/brands/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -3339,6 +3411,15 @@
 }
 },
 {
+"path": "/en/compare/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"en": "/en/compare/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"es": "/es/comparar/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"fr": "/fr/comparer/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/"
+}
+},
+{
 "path": "/en/compare/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -3615,6 +3696,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/en/compare/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"en": "/en/compare/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"es": "/es/comparar/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"fr": "/fr/comparer/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/"
 }
 },
 {
@@ -3966,6 +4056,15 @@
 "en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
+"path": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/"
 }
 },
 {
@@ -4698,6 +4797,15 @@
 }
 },
 {
+"path": "/en/compare/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"alt": {
+"it": "/it/confronta/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"en": "/en/compare/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"es": "/es/comparar/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"fr": "/fr/comparer/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/"
+}
+},
+{
 "path": "/en/compare/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
 "alt": {
 "it": "/it/confronta/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
@@ -4716,12 +4824,48 @@
 }
 },
 {
+"path": "/en/compare/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"en": "/en/compare/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"es": "/es/comparar/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/"
+}
+},
+{
 "path": "/en/compare/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "alt": {
 "it": "/it/confronta/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "en": "/en/compare/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/"
+}
+},
+{
+"path": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/"
+}
+},
+{
+"path": "/en/compare/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"en": "/en/compare/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"es": "/es/comparar/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/"
 }
 },
 {
@@ -5769,6 +5913,15 @@
 }
 },
 {
+"path": "/es/marcas/joma/",
+"alt": {
+"it": "/it/marche/joma/",
+"en": "/en/brands/joma/",
+"es": "/es/marcas/joma/",
+"fr": "/fr/marques/joma/"
+}
+},
+{
 "path": "/es/marcas/babolat/",
 "alt": {
 "it": "/it/marche/babolat/",
@@ -5805,15 +5958,6 @@
 }
 },
 {
-"path": "/es/marcas/joma/",
-"alt": {
-"it": "/it/marche/joma/",
-"en": "/en/brands/joma/",
-"es": "/es/marcas/joma/",
-"fr": "/fr/marques/joma/"
-}
-},
-{
 "path": "/es/marcas/oxdog/",
 "alt": {
 "it": "/it/marche/oxdog/",
@@ -5841,21 +5985,21 @@
 }
 },
 {
-"path": "/es/marcas/kombat/",
-"alt": {
-"it": "/it/marche/kombat/",
-"en": "/en/brands/kombat/",
-"es": "/es/marcas/kombat/",
-"fr": "/fr/marques/kombat/"
-}
-},
-{
 "path": "/es/marcas/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/es/marcas/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -6192,6 +6336,15 @@
 }
 },
 {
+"path": "/es/comparar/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"en": "/en/compare/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"es": "/es/comparar/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"fr": "/fr/comparer/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/"
+}
+},
+{
 "path": "/es/comparar/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -6468,6 +6621,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/es/comparar/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"en": "/en/compare/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"es": "/es/comparar/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"fr": "/fr/comparer/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/"
 }
 },
 {
@@ -6819,6 +6981,15 @@
 "en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
+"path": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/"
 }
 },
 {
@@ -7551,6 +7722,15 @@
 }
 },
 {
+"path": "/es/comparar/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"alt": {
+"it": "/it/confronta/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"en": "/en/compare/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"es": "/es/comparar/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"fr": "/fr/comparer/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/"
+}
+},
+{
 "path": "/es/comparar/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
 "alt": {
 "it": "/it/confronta/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
@@ -7569,12 +7749,48 @@
 }
 },
 {
+"path": "/es/comparar/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"en": "/en/compare/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"es": "/es/comparar/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/"
+}
+},
+{
 "path": "/es/comparar/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "alt": {
 "it": "/it/confronta/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "en": "/en/compare/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/"
+}
+},
+{
+"path": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/"
+}
+},
+{
+"path": "/es/comparar/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"en": "/en/compare/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"es": "/es/comparar/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/"
 }
 },
 {
@@ -8622,6 +8838,15 @@
 }
 },
 {
+"path": "/fr/marques/joma/",
+"alt": {
+"it": "/it/marche/joma/",
+"en": "/en/brands/joma/",
+"es": "/es/marcas/joma/",
+"fr": "/fr/marques/joma/"
+}
+},
+{
 "path": "/fr/marques/babolat/",
 "alt": {
 "it": "/it/marche/babolat/",
@@ -8658,15 +8883,6 @@
 }
 },
 {
-"path": "/fr/marques/joma/",
-"alt": {
-"it": "/it/marche/joma/",
-"en": "/en/brands/joma/",
-"es": "/es/marcas/joma/",
-"fr": "/fr/marques/joma/"
-}
-},
-{
 "path": "/fr/marques/oxdog/",
 "alt": {
 "it": "/it/marche/oxdog/",
@@ -8694,21 +8910,21 @@
 }
 },
 {
-"path": "/fr/marques/kombat/",
-"alt": {
-"it": "/it/marche/kombat/",
-"en": "/en/brands/kombat/",
-"es": "/es/marcas/kombat/",
-"fr": "/fr/marques/kombat/"
-}
-},
-{
 "path": "/fr/marques/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/fr/marques/kombat/",
+"alt": {
+"it": "/it/marche/kombat/",
+"en": "/en/brands/kombat/",
+"es": "/es/marcas/kombat/",
+"fr": "/fr/marques/kombat/"
 }
 },
 {
@@ -9045,6 +9261,15 @@
 }
 },
 {
+"path": "/fr/comparer/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/confronta/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"en": "/en/compare/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"es": "/es/comparar/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/",
+"fr": "/fr/comparer/adidas-metalbone-carbon-apa-2026-vs-joma-hyper-pro-2027/"
+}
+},
+{
 "path": "/fr/comparer/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
 "alt": {
 "it": "/it/confronta/adidas-metalbone-superlight-2026-vs-adidas-rx-series-2026/",
@@ -9321,6 +9546,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/fr/comparer/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"en": "/en/compare/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"es": "/es/comparar/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/",
+"fr": "/fr/comparer/black-crown-hurricane-pro-4-0-2027-vs-black-crown-patron-kore-2026/"
 }
 },
 {
@@ -9672,6 +9906,15 @@
 "en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/",
 "fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-enebe-space-2-0-2026/"
+}
+},
+{
+"path": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"en": "/en/compare/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"es": "/es/comparar/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/",
+"fr": "/fr/comparer/bullpadel-hack-05-hybrid-2027-vs-joma-blast-pro-hard-2027/"
 }
 },
 {
@@ -10404,6 +10647,15 @@
 }
 },
 {
+"path": "/fr/comparer/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"alt": {
+"it": "/it/confronta/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"en": "/en/compare/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"es": "/es/comparar/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/",
+"fr": "/fr/comparer/joma-blast-pro-soft-2027-vs-joma-gold-evo-2027/"
+}
+},
+{
 "path": "/fr/comparer/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
 "alt": {
 "it": "/it/confronta/joma-hyper-pro-hrd-2026-vs-joma-hyper-pro-sft-2026/",
@@ -10422,12 +10674,48 @@
 }
 },
 {
+"path": "/fr/comparer/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"en": "/en/compare/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"es": "/es/comparar/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-joma-slam-pro-iconic-2027/"
+}
+},
+{
 "path": "/fr/comparer/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "alt": {
 "it": "/it/confronta/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "en": "/en/compare/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "es": "/es/comparar/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/",
 "fr": "/fr/comparer/joma-slam-pro-iconic-2026-vs-nox-pro-cup-hard-2027/"
+}
+},
+{
+"path": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-hard-2027/"
+}
+},
+{
+"path": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"en": "/en/compare/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"es": "/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/",
+"fr": "/fr/comparer/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/"
+}
+},
+{
+"path": "/fr/comparer/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/confronta/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"en": "/en/compare/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"es": "/es/comparar/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/",
+"fr": "/fr/comparer/joma-tournament-pro-iconic-2026-vs-joma-tournament-pro-iconic-2027/"
 }
 },
 {

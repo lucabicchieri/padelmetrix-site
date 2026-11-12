@@ -50,7 +50,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Joma+Blast+Pro+Hard+2027",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0HQNWHVKQ"
       },
       {
         "nome": "PadelPROShop",

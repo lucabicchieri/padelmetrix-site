@@ -44,7 +44,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Black+Crown+Hurricane+Pro+4.0+2027",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0HCCCFKTF"
       }
     ],
     "nota_prezzi": "Prezzo di listino indicativo 260 € secondo i rivenditori consultati a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
