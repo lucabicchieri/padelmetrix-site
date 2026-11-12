@@ -7,39 +7,60 @@
   "categoria": "adulto",
   "donna": false,
   "peso": "365–375 g",
-  "forma": "diamante",
-  "forma_nota": "geometrica",
-  "bilanciamento": "medio-alto (26 cm)",
+  "forma": "goccia",
+  "forma_nota": "geometrica (Geo Shape): Padelful la classifica a goccia, alcuni negozi a diamante",
+  "bilanciamento": "alto (circa 26 cm)",
+  "nucleo": "MultiEVA (tre strati di EVA, Vertex Core)",
+  "superficie": "Carbonio X-Tend 3K, finitura Top Spin",
+  "telaio": "Carbonio (CarbonTube)",
+  "sensazione": "medio-duro",
   "livello": "avanzato",
   "stile": "offensivo",
+  "prezzo_listino_eur": 350,
+  "valutazioni_esterne": {
+    "fonte": "Padelful",
+    "url": "https://www.padelful.com/es/palas/bullpadel-vertex-05-geo-2027-pablo-cardona",
+    "tot": 8.7,
+    "v": [
+      9.2,
+      9.1,
+      7.8,
+      8.5,
+      9.0
+    ]
+  },
   "misure": [
     62,
     161
   ],
   "simili": [
     "bullpadel-vertex-05-geo-2026",
-    "bullpadel-hack-05-2027",
-    "bullpadel-xplo-02-2027"
+    "drop-shot-axion-attack-2-0-2026",
+    "drop-shot-explorer-pro-attack-2-0-2026"
   ],
   "fonti_dati": [
-    "https://pdhsports.com/en-at/blogs/padel/bullpadel-2027-pro-line-padel-rackets",
-    "https://padelshop.com/collections/bullpadel-padel-rackets?page=3"
+    "https://www.bullpadel.com/es/5678-pala-bullpadel-pearl-26.html",
+    "https://www.padelful.com/es/palas/bullpadel-vertex-05-geo-2027-pablo-cardona",
+    "https://padelproshop.com/products/pala-bullpadel-vertex-05-geo-2027",
+    "https://padelmarket.com/en/products/bullpadel-vertex-05-geo-2027-pablo-cardona-padel-racket",
+    "https://pdhsports.com/en-at/blogs/padel/bullpadel-2027-pro-line-padel-rackets"
   ],
-  "aggiornato": "2026-10-24",
+  "aggiornato": "2026-11-12",
   "pagina": {
     "titolo": "Bullpadel Vertex 05 Geo 2027",
     "title_tag": "Bullpadel Vertex 05 Geo 2027: scheda tecnica, caratteristiche e alternative",
-    "meta_description": "Bullpadel Vertex 05 Geo 2027 (Pablo Cardona): forma diamante, peso 365–375 g, bilanciamento medio-alto. Dati tecnici, a chi è adatta e racchette simili.",
+    "meta_description": "Bullpadel Vertex 05 Geo 2027 (Pablo Cardona): forma goccia, peso 365–375 g, bilanciamento alto. Scheda tecnica e alternative.",
     "breadcrumb": "Vertex 05 Geo 2027",
     "eyebrow": "Bullpadel · Collezione 2027",
     "chips": [
-      "Diamante",
+      "Goccia",
       "365–375 g",
-      "Bilanciamento medio-alto",
+      "Bilanciamento alto",
+      "Carbonio 3K",
       "Avanzato",
       "Racchetta di Pablo Cardona"
     ],
-    "lead": "La Vertex con testa geometrica di Pablo Cardona, più reattiva nei colpi di attacco. Indicata per giocatori avanzati.",
+    "lead": "La Vertex con testa geometrica di Pablo Cardona per il 2027: stessa superficie da 541 cm², profilo 38 mm, carbonio X-Tend 3K e gomma MultiEVA della 2026. Per Padelful accelera in fretta senza pesare in testa ed è pensata per chi gioca molto a rete. Indicata per giocatori avanzati.",
     "negozi": [
       {
         "nome": "Amazon",
@@ -49,13 +70,13 @@
         "amazon": true
       },
       {
-        "nome": "Padelshop",
+        "nome": "PadelPROShop",
         "nota": "Scheda prodotto del rivenditore",
-        "url": "https://padelshop.com/collections/bullpadel-padel-rackets?page=3",
+        "url": "https://padelproshop.com/products/pala-bullpadel-vertex-05-geo-2027",
         "pulsante": "Vedi sul sito"
       }
     ],
-    "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",
+    "nota_prezzi": "Prezzo di listino indicativo 350 € secondo i rivenditori consultati a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
     "confronta": {
       "url": "/confronta/?r=bullpadel-vertex-05-geo-2027,bullpadel-vertex-05-geo-2026",
       "testo": "Confronta con Vertex 05 Geo 2026"
@@ -79,7 +100,7 @@
       ],
       [
         "Forma",
-        "Diamante (geometrica)"
+        "Goccia (geometrica (Geo Shape): Padelful la classifica a goccia, alcuni negozi a diamante)"
       ],
       [
         "Peso",
@@ -87,7 +108,23 @@
       ],
       [
         "Bilanciamento",
-        "Medio-alto (26 cm)"
+        "Alto (circa 26 cm)"
+      ],
+      [
+        "Nucleo",
+        "MultiEVA (tre strati di EVA, Vertex Core)"
+      ],
+      [
+        "Superficie",
+        "Carbonio X-Tend 3K, finitura Top Spin"
+      ],
+      [
+        "Telaio",
+        "Carbonio (CarbonTube)"
+      ],
+      [
+        "Tatto",
+        "Medio-duro"
       ],
       [
         "Livello",
@@ -104,28 +141,46 @@
       [
         "Swingweight misurato",
         "161"
+      ],
+      [
+        "Colori",
+        "arancione e giallo"
+      ],
+      [
+        "Prezzo di listino",
+        "350 €"
       ]
     ],
-    "nota_specifiche_html": "Dati raccolti da <a href=\"https://pdhsports.com/en-at/blogs/padel/bullpadel-2027-pro-line-padel-rackets\" rel=\"nofollow noopener\" target=\"_blank\">PDH Sports</a>, <a href=\"https://padelshop.com/collections/bullpadel-padel-rackets?page=3\" rel=\"nofollow noopener\" target=\"_blank\">Padelshop</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
-    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. PDH Sports la descrive così: la Vertex con testa geometrica di Pablo Cardona, più reattiva nei colpi di attacco. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.bullpadel.com/es/5678-pala-bullpadel-pearl-26.html\" rel=\"nofollow noopener\" target=\"_blank\">Bullpadel</a>, <a href=\"https://www.padelful.com/es/palas/bullpadel-vertex-05-geo-2027-pablo-cardona\" rel=\"nofollow noopener\" target=\"_blank\">Padelful</a>, <a href=\"https://padelproshop.com/products/pala-bullpadel-vertex-05-geo-2027\" rel=\"nofollow noopener\" target=\"_blank\">PadelPROShop</a>, <a href=\"https://padelmarket.com/en/products/bullpadel-vertex-05-geo-2027-pablo-cardona-padel-racket\" rel=\"nofollow noopener\" target=\"_blank\">Padel Market</a>, <a href=\"https://pdhsports.com/en-at/blogs/padel/bullpadel-2027-pro-line-padel-rackets\" rel=\"nofollow noopener\" target=\"_blank\">PDH Sports</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Per Padelful ottiene 8,7/10. In sintesi: la Vertex con testa geometrica di Pablo Cardona per il 2027: stessa superficie da 541 cm², profilo 38 mm, carbonio X-Tend 3K e gomma MultiEVA della 2026. Per Padelful accelera in fretta senza pesare in testa ed è pensata per chi gioca molto a rete. Il valore più alto è potenza (9,2/10), il più basso uscita di palla (7,8/10). Le altre recensioni indipendenti sono ancora poche: aggiorneremo la scheda appena ne usciranno.",
     "pro": [
-      "Pensata per chiudere i punti: smash e volée",
-      "Il modello di Pablo Cardona"
+      "Potenza nei colpi d'attacco",
+      "Controllo e precisione",
+      "Impronta offensiva con buona spinta",
+      "Risposta secca e precisa all'impatto"
     ],
     "contro": [
-      "Bilanciamento alto: più impegnativa in difesa",
-      "Esigente per chi non ha ancora una tecnica solida"
+      "Tatto medio-duro: meno comfort di una racchetta morbida",
+      "Esigente per chi non ha ancora una tecnica solida",
+      "Prezzo di listino alto"
     ],
     "adatta": [
       "Sei di livello avanzato",
-      "Ti piace attaccare e chiudere i punti a rete",
-      "Hai un buon tempismo nei colpi sopra la testa"
+      "Ti piace attaccare e chiudere i punti a rete"
     ],
     "non_adatta": [
       "Sei principiante: meglio una racchetta più tollerante",
       "Giochi soprattutto in difesa da fondo campo"
     ],
-    "recensioni": [],
+    "recensioni": [
+      {
+        "fonte": "Padelful",
+        "url": "https://www.padelful.com/es/palas/bullpadel-vertex-05-geo-2027-pablo-cardona",
+        "voto": "8,7/10",
+        "voto_dettaglio": "potenza 9,2 · controllo 9,1",
+        "sintesi": "La Vertex con testa geometrica di Pablo Cardona per il 2027: stessa superficie da 541 cm², profilo 38 mm, carbonio X-Tend 3K e gomma MultiEVA della 2026. Per Padelful accelera in fretta senza pesare in testa ed è pensata per chi gioca molto a rete."
+      }
+    ],
     "simili": [
       {
         "url": "/racchette/bullpadel-vertex-05-geo-2026/",
@@ -134,29 +189,46 @@
         "testo": "La versione 2026 dello stesso modello."
       },
       {
-        "url": "/racchette/bullpadel-hack-05-2027/",
-        "sopra": "Bullpadel · 2027",
-        "nome": "Hack 05 2027",
-        "testo": "Diamante d'attacco, 365–375 g, livello avanzato."
+        "url": "/racchette/drop-shot-axion-attack-2-0-2026/",
+        "sopra": "Drop Shot · 2026",
+        "nome": "Axion Attack 2.0 2026",
+        "testo": "Goccia d'attacco, 350–370 g, carbonio 24K, livello avanzato."
       },
       {
-        "url": "/racchette/bullpadel-xplo-02-2027/",
-        "sopra": "Bullpadel · 2027",
-        "nome": "XPLO 02 2027",
-        "testo": "Diamante d'attacco, 365–375 g, livello avanzato."
+        "url": "/racchette/drop-shot-explorer-pro-attack-2-0-2026/",
+        "sopra": "Drop Shot · 2026",
+        "nome": "Explorer Pro Attack 2.0 2026",
+        "testo": "Goccia d'attacco, 350–370 g, carbonio 24K, livello avanzato."
       }
     ],
-    "aggiornata": "24 ottobre 2026",
+    "aggiornata": "12 novembre 2026",
     "avviso_html": "<p>Questa è la nuova versione. Il <a href=\"/it/racchette/bullpadel-vertex-05-geo-2026/\">modello 2026</a> resta in vendita e spesso si trova scontato.</p>",
-    "tratti": {
-      "titolo": "In sintesi",
+    "valutazioni": {
+      "titolo": "Valutazioni di Padelful",
+      "scala": 10,
       "voci": [
-        "Racchetta d'attacco",
-        "Livello avanzato",
-        "Forma geometrica",
-        "Durezza misurata 62"
+        {
+          "nome": "Potenza",
+          "valore": 9.2
+        },
+        {
+          "nome": "Controllo",
+          "valore": 9.1
+        },
+        {
+          "nome": "Uscita di palla",
+          "valore": 7.8
+        },
+        {
+          "nome": "Maneggevolezza",
+          "valore": 8.5
+        },
+        {
+          "nome": "Sweet spot",
+          "valore": 9.0
+        }
       ],
-      "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Durezza e swingweight misurati da <a href=\"https://padelshop.com/collections/bullpadel-padel-rackets?page=3\" rel=\"nofollow noopener\" target=\"_blank\">Padelshop</a>. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
+      "nota_html": "Punteggi su 10 pubblicati da <a href=\"https://www.padelful.com/es/palas/bullpadel-vertex-05-geo-2027-pablo-cardona\" rel=\"nofollow noopener\" target=\"_blank\">Padelful</a>, voto complessivo 8,7/10. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
     }
   }
 }
