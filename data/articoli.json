@@ -1,5 +1,38 @@
 [
  {
+  "slug": "adidas-metalbone-storia-origine-nome",
+  "data": "2026-11-12",
+  "racchette": [
+   "adidas-metalbone-2026",
+   "adidas-metalbone-carbon-2026",
+   "adidas-metalbone-carbon-ctrl-2026",
+   "adidas-metalbone-ctrl-2026",
+   "adidas-metalbone-hrd-plus-2026",
+   "adidas-metalbone-reserve-edt-2026",
+   "adidas-metalbone-superlight-2026",
+   "adidas-metalbone-team-2026",
+   "adidas-metalbone-team-light-2026"
+  ],
+  "titolo": {
+   "it": "La storia della adidas Metalbone e l'origine del nome",
+   "en": "The history of the adidas Metalbone and where the name comes from",
+   "es": "La historia de la adidas Metalbone y el origen del nombre",
+   "fr": "L'histoire de l'adidas Metalbone et l'origine de son nom"
+  },
+  "desc": {
+   "it": "Cinque anni di Metalbone, generazione per generazione, e l'enigma del nome.",
+   "en": "Five years of Metalbone, generation by generation, and the puzzle of the name.",
+   "es": "Cinco años de Metalbone, generación a generación, y el enigma del nombre.",
+   "fr": "Cinq ans de Metalbone, génération par génération, et l'énigme du nom."
+  },
+  "url": {
+   "it": "/it/articoli/adidas-metalbone-storia-origine-nome/",
+   "en": "/en/articles/adidas-metalbone-history-name-origin/",
+   "es": "/es/articulos/adidas-metalbone-historia-origen-nombre/",
+   "fr": "/fr/articles/adidas-metalbone-histoire-origine-nom/"
+  }
+ },
+ {
   "slug": "idee-regalo-natale-padel",
   "data": "2026-11-11",
   "racchette": [],

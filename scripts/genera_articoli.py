@@ -2266,6 +2266,178 @@ def art_quad(db):
                                 "La marca portuguesa de nicho que fabrica en casa: gama, ediciones limitadas y precios.", "La marque portugaise de niche qui fabrique elle-même : gamme, éditions limitées et prix.")
 
 
+# ---------------------------------------------------------------- Storia della Metalbone (novembre 2026)
+MB_SLUG = "adidas-metalbone-storia-origine-nome"
+S.SLUG[MB_SLUG] = ("adidas-metalbone-history-name-origin", "adidas-metalbone-historia-origen-nombre")
+S.SLUG_FR[MB_SLUG] = "adidas-metalbone-histoire-origine-nom"
+DATE_ART[MB_SLUG] = "2026-11-12"
+MB_F = {
+    "pa21": ("Padel Addict", "https://www.padeladdict.com/ale-galan-estrena-nueva-pala-adidas-el-modelo-metalbone/"),
+    "pa23": ("Padel Addict", "https://www.padeladdict.com/la-nueva-gama-metalbone-2023-ve-la-luz-incluyendo-las-nuevas-palas-de-ale-galan/"),
+    "zdp": ("Zona de Padel", "https://www.zonadepadel.com/blog/2022/12/adidas-padel-2023-collection-metalbone-and-adipower-renewed"),
+    "kp": ("Keepadel", "https://keepadel.com/en/prestablog?id=95"),
+    "afp": ("All for Padel", "https://allforpadel.com/en/166-metalbone-"),
+    "pu": ("Padel Underground", "https://padelunderground.co.uk/equipment/adidas-metalbone/"),
+    "pa09": ("Padel Addict", "https://www.padeladdict.com/asi-es-nueva-pala-adidas-metalbone09-potencia-diseno-unico/"),
+    "parv": ("Padel Addict", "https://www.padeladdict.com/asi-es-adidas-metalbone-reserve-exclusiva-pala-ale-galan/"),
+}
+
+
+def art_metalbone(db):
+    f = {k: fonte(u, n) for k, (n, u) in MB_F.items()}
+    mbs = [r for r in db if "Metalbone" in r["modello"]]
+    RACCHETTE_ARTICOLO[MB_SLUG] = [r["slug"] for r in mbs]
+    gal = P("articoli", "ale-galan-chi-e-e-che-racchetta-usa")
+    gl = P("glossario", "carbonio-3k-12k-18k")
+    carb = P("articoli", G5["carbonio"][0])
+    gen = [
+        ("2021", L("Metalbone (prima versione)", "Metalbone (first version)", "Metalbone (primera versión)", "Metalbone (première version)"),
+         L("Modello nuovo: diamante oversize, 100% carbonio con fibra alluminizzata, gomma EVA Soft Performance, pesi a vite fino a 12 g.",
+           "A brand-new model: oversize diamond, 100% carbon with aluminised fibre, EVA Soft Performance core, screw-in weights up to 12 g.",
+           "Modelo nuevo: diamante oversize, 100% carbono con fibra aluminizada, goma EVA Soft Performance, pesos de rosca de hasta 12 g.",
+           "Modèle inédit : diamant oversize, 100 % carbone avec fibre aluminisée, gomme EVA Soft Performance, poids à visser jusqu'à 12 g.")),
+        ("2022", "Metalbone 3.1", L("Seconda generazione, sempre la racchetta di Ale Galán.", "Second generation, still Ale Galán's racket.", "Segunda generación, sigue siendo la pala de Ale Galán.", "Deuxième génération, toujours la raquette d'Ale Galán.")),
+        ("2023", "Metalbone 3.2", L("Diventa una famiglia: HRD (gomma più dura), CTRL rotonda, Carbon 6K, Team in fibra di vetro, Youth.",
+                                    "It becomes a family: HRD (harder core), round CTRL, 6K Carbon, fiberglass Team, Youth.",
+                                    "Se convierte en familia: HRD (goma más dura), CTRL redonda, Carbon 6K, Team de fibra de vidrio, Youth.",
+                                    "Elle devient une famille : HRD (gomme plus dure), CTRL ronde, Carbon 6K, Team en fibre de verre, Youth.")),
+        ("2024", "Metalbone 3.3 / HRD+", L("La HRD diventa HRD+; i pesi si regolano sul ponte del telaio.", "HRD becomes HRD+; weights are adjusted on the frame bridge.",
+                                           "La HRD pasa a ser HRD+; los pesos se regulan en el puente del marco.", "La HRD devient HRD+ ; les poids se règlent sur le pont du cadre.")),
+        ("2025", "Metalbone 3.4", L("Manico più lungo, area d'impatto più piccola, pesi in cima e sui lati. Edizioni Reserve e Metalbone09.",
+                                    "Longer handle, smaller hitting area, weights at the top and sides. Reserve and Metalbone09 editions.",
+                                    "Mango más largo, zona de impacto más pequeña, pesos arriba y en los laterales. Ediciones Reserve y Metalbone09.",
+                                    "Manche plus long, zone d'impact plus petite, poids en haut et sur les côtés. Éditions Reserve et Metalbone09.")),
+        ("2026", "Metalbone 2026", L("Sparisce la numerazione; carbonio alluminizzato 16K. HRD+ di Galán con gomma High Memory.",
+                                     "The numbering disappears; 16K aluminised carbon. Galán's HRD+ with a High Memory core.",
+                                     "Desaparece la numeración; carbono aluminizado 16K. HRD+ de Galán con goma High Memory.",
+                                     "La numérotation disparaît ; carbone aluminisé 16K. HRD+ de Galán avec gomme High Memory.")),
+    ]
+    tab_g = ('<div class="tablebox"><table class="tab"><thead><tr><th>' + L("Anno", "Year", "Año", "Année") + "</th><th>" + L("Modello", "Model", "Modelo", "Modèle") + "</th><th>"
+             + L("Cosa cambia", "What changes", "Qué cambia", "Ce qui change") + "</th></tr></thead><tbody>"
+             + "".join(f"<tr><td><b>{a}</b></td><td>{m}</td><td>{t}</td></tr>" for a, m, t in gen) + "</tbody></table></div>")
+    ordine = ["adidas-metalbone-hrd-plus-2026", "adidas-metalbone-2026", "adidas-metalbone-ctrl-2026", "adidas-metalbone-reserve-edt-2026", "adidas-metalbone-carbon-2026",
+              "adidas-metalbone-carbon-ctrl-2026", "adidas-metalbone-team-2026", "adidas-metalbone-team-light-2026", "adidas-metalbone-superlight-2026"]
+    by = {r["slug"]: r for r in mbs}
+
+    def riga(s):
+        r = by[s]
+        return (f'<tr><td><a href="{url_r(r)}">{e(r["modello"])}</a></td><td>{FORMA(r["forma"])}</td><td>{e(S.tr(r["superficie"]))}</td>'
+                f'<td>{e(S.tr(r["nucleo"]))}</td><td>{euro(r["prezzo"]) if r.get("prezzo") else "—"}</td></tr>')
+    tab_r = ('<div class="tablebox"><table class="tab"><thead><tr><th>' + L("Modello", "Model", "Modelo", "Modèle") + "</th><th>" + L("Forma", "Shape", "Forma", "Forme") + "</th><th>"
+             + L("Faccia", "Face", "Cara", "Tamis") + "</th><th>" + L("Gomma", "Core", "Goma", "Gomme") + "</th><th>" + L("Listino", "List price", "Precio", "Prix") + "</th></tr></thead><tbody>"
+             + "".join(riga(s) for s in ordine if s in by) + "</tbody></table></div>")
+    u = lambda s: url_r(by[s])
+    box = _box5(L("Quale Metalbone fa per te?", "Which Metalbone suits you?", "¿Qué Metalbone es para ti?", "Quelle Metalbone vous convient ?"),
+                L("Confronta fino a 4 versioni fianco a fianco: forma, gomma, peso e prezzo.", "Compare up to 4 versions side by side: shape, core, weight and price.", "Compara hasta 4 versiones una al lado de otra: forma, goma, peso y precio.", "Comparez jusqu'à 4 versions côte à côte : forme, gomme, poids et prix."),
+                L("Confronta le racchette", "Compare rackets", "Comparar palas", "Comparer les raquettes"), P("confronta"))
+    corpo = L(f'''<p><b>La Metalbone è nata nel 2021 come racchetta nuova di zecca nella collezione adidas, ed è subito diventata la racchetta di Ale Galán. In cinque anni è passata da un solo modello a una famiglia di nove versioni. Il nome non è mai stato spiegato ufficialmente: la lettura più probabile lo lega al carbonio "alluminizzato" che la distingue da sempre.</b></p>
+<h2>Da dove viene il nome</h2>
+<p>Abbiamo cercato una spiegazione ufficiale, ma né adidas né le riviste di settore che abbiamo consultato dicono perché si chiami Metalbone. Nemmeno l'articolo che presentò la prima versione nel 2021 lo spiega ({f["pa21"]}).</p>
+<p>La nostra interpretazione, che resta un'ipotesi: <b>"Metal"</b> richiama la fibra di carbonio trattata con alluminio sulle facce, la caratteristica tecnica presente in tutte le versioni di punta e che dà un tocco più duro; <b>"Bone"</b>, osso, richiama la struttura rigida, con il telaio ottagonale e i rinforzi in carbonio. Insieme danno l'idea di una racchetta con uno "scheletro di metallo": dura e potente, pensata per chi attacca.</p>
+<h2>La nascita, nel 2021</h2>
+<p>La Metalbone fu presentata come "la grande novità" della collezione adidas 2021: non l'aggiornamento di un modello precedente, ma una racchetta completamente nuova ({f["pa21"]}). Rispetto alle Adipower, la linea di potenza che adidas aveva già, cambiava soprattutto la gomma: EVA Soft Performance, più morbida ed elastica, al posto della EVA High Memory.</p>
+<ul><li>Forma a diamante oversize e bilanciamento alto.</li>
+<li>Costruzione 100% carbonio, con fibra alluminizzata sulle facce.</li>
+<li>Sistema Weight &amp; Balance: viti con pesi per aggiungere fino a 12 grammi.</li>
+<li>Struttura ottagonale per rigidità e potenza, superficie ruvida Spin Blade per l'effetto.</li></ul>
+<h2>Le generazioni, anno per anno</h2>{tab_g}
+<p>Dal 2023 la Metalbone smette di essere un modello solo e diventa una gamma: adidas la presenta con sette versioni, dalla HRD da 390 euro di Galán alla Youth per ragazzi ({f["pa23"]}; {f["zdp"]}). Il passaggio dalla 3.3 alla 3.4 è il più tecnico: manico più lungo, area d'impatto più piccola, più potenza e meno tolleranza ({f["kp"]}). Nel 2025 arrivano anche due edizioni speciali, la Reserve firmata da Galán ({f["parv"]}) e la Metalbone09 creata con lo youtuber Delantero09 ({f["pa09"]}).</p>
+<h2>Lo schema che non cambia</h2>
+<p>In ogni generazione ritorna la stessa struttura:</p>
+<ul><li><b>Una versione "morbida"</b>, con gomma Soft Performance: oggi la <a href="{u("adidas-metalbone-2026")}">Metalbone 2026</a>.</li>
+<li><b>Una versione dura</b>, la HRD, con gomma High Memory per chi ha un livello tecnico alto: oggi la <a href="{u("adidas-metalbone-hrd-plus-2026")}">HRD+ 2026</a>, la racchetta di Galán.</li>
+<li><b>Una rotonda di controllo</b>, la CTRL, con lo sweet spot più centrale.</li>
+<li><b>Versioni più economiche</b> in carbonio 6K (Carbon) e in fibra di vetro (Team, Team Light, Superlight).</li></ul>
+<h2>La gamma Metalbone 2026</h2>{tab_r}
+<p>Le versioni di punta usano carbonio alluminizzato 16K ({f["pu"]}); per capire cosa significa la K leggi la nostra guida al <a href="{carb}">carbonio 3K, 12K e 18K</a>. Se ti interessa la racchetta del campione, abbiamo dedicato un articolo a <a href="{gal}">Ale Galán e alla sua racchetta</a>.</p>{box}
+<p class="note">Fonti: {f["pa21"]}; {f["pa23"]}; {f["zdp"]}; {f["kp"]}; {f["afp"]}; {f["pu"]}; {f["parv"]}; {f["pa09"]}. L'origine del nome è una nostra interpretazione: adidas non l'ha mai spiegata pubblicamente.</p>''',
+              f'''<p><b>The Metalbone was born in 2021 as a brand-new racket in the adidas collection and immediately became Ale Galán's racket. In five years it has grown from a single model into a family of nine versions. The name has never been officially explained: the most likely reading links it to the "aluminised" carbon that has always set it apart.</b></p>
+<h2>Where the name comes from</h2>
+<p>We looked for an official explanation, but neither adidas nor the trade press we checked says why it is called Metalbone. Not even the article that introduced the first version in 2021 explains it ({f["pa21"]}).</p>
+<p>Our interpretation, which remains a hypothesis: <b>"Metal"</b> refers to the aluminium-treated carbon fibre on the faces, the technical feature found in every flagship version, which gives a harder feel; <b>"Bone"</b> refers to the stiff structure, with the octagonal frame and carbon reinforcements. Together they suggest a racket with a "metal skeleton": hard and powerful, built for attacking players.</p>
+<h2>The birth, in 2021</h2>
+<p>The Metalbone was presented as "the big novelty" of the adidas 2021 collection: not an update of an earlier model, but a completely new racket ({f["pa21"]}). Compared with the Adipower, adidas's existing power line, the main change was the core: EVA Soft Performance, softer and more elastic, instead of EVA High Memory.</p>
+<ul><li>Oversize diamond shape and high balance.</li>
+<li>100% carbon construction, with aluminised fibre on the faces.</li>
+<li>Weight &amp; Balance system: screw-in weights adding up to 12 grams.</li>
+<li>Octagonal structure for stiffness and power, rough Spin Blade surface for spin.</li></ul>
+<h2>The generations, year by year</h2>{tab_g}
+<p>From 2023 the Metalbone stops being a single model and becomes a range: adidas launched it with seven versions, from Galán's €390 HRD to the Youth for juniors ({f["pa23"]}; {f["zdp"]}). The step from 3.3 to 3.4 is the most technical: a longer handle, a smaller hitting area, more power and less forgiveness ({f["kp"]}). 2025 also brought two special editions, the Reserve signed by Galán ({f["parv"]}) and the Metalbone09 created with YouTuber Delantero09 ({f["pa09"]}).</p>
+<h2>The pattern that doesn't change</h2>
+<p>Every generation follows the same structure:</p>
+<ul><li><b>A "soft" version</b> with a Soft Performance core: today the <a href="{u("adidas-metalbone-2026")}">Metalbone 2026</a>.</li>
+<li><b>A hard version</b>, the HRD, with a High Memory core for technically advanced players: today the <a href="{u("adidas-metalbone-hrd-plus-2026")}">HRD+ 2026</a>, Galán's racket.</li>
+<li><b>A round control model</b>, the CTRL, with a more central sweet spot.</li>
+<li><b>Cheaper versions</b> in 6K carbon (Carbon) and fiberglass (Team, Team Light, Superlight).</li></ul>
+<h2>The 2026 Metalbone range</h2>{tab_r}
+<p>The flagship versions use 16K aluminised carbon ({f["pu"]}); to understand what the K means, read our guide to <a href="{carb}">3K, 12K and 18K carbon</a>. If you're interested in the champion's racket, we have an article on <a href="{gal}">Ale Galán and his racket</a>.</p>{box}
+<p class="note">Sources: {f["pa21"]}; {f["pa23"]}; {f["zdp"]}; {f["kp"]}; {f["afp"]}; {f["pu"]}; {f["parv"]}; {f["pa09"]}. The origin of the name is our interpretation: adidas has never explained it publicly.</p>''',
+              f'''<p><b>La Metalbone nació en 2021 como una pala totalmente nueva en la colección adidas y enseguida se convirtió en la pala de Ale Galán. En cinco años ha pasado de un solo modelo a una familia de nueve versiones. El nombre nunca se ha explicado oficialmente: la lectura más probable lo relaciona con el carbono "aluminizado" que siempre la ha distinguido.</b></p>
+<h2>De dónde viene el nombre</h2>
+<p>Hemos buscado una explicación oficial, pero ni adidas ni la prensa especializada que hemos consultado dicen por qué se llama Metalbone. Ni siquiera el artículo que presentó la primera versión en 2021 lo explica ({f["pa21"]}).</p>
+<p>Nuestra interpretación, que sigue siendo una hipótesis: <b>"Metal"</b> alude a la fibra de carbono tratada con aluminio en las caras, el rasgo técnico presente en todas las versiones top y que da un tacto más duro; <b>"Bone"</b>, hueso, alude a la estructura rígida, con el marco octogonal y los refuerzos de carbono. Juntas dan la idea de una pala con un "esqueleto de metal": dura y potente, pensada para quien ataca.</p>
+<h2>El nacimiento, en 2021</h2>
+<p>La Metalbone se presentó como "la gran novedad" de la colección adidas 2021: no la actualización de un modelo anterior, sino una pala completamente nueva ({f["pa21"]}). Frente a las Adipower, la línea de potencia que adidas ya tenía, cambiaba sobre todo la goma: EVA Soft Performance, más blanda y elástica, en lugar de EVA High Memory.</p>
+<ul><li>Forma de diamante oversize y balance alto.</li>
+<li>Construcción 100% carbono, con fibra aluminizada en las caras.</li>
+<li>Sistema Weight &amp; Balance: tornillos con pesos para añadir hasta 12 gramos.</li>
+<li>Estructura octogonal para rigidez y potencia, superficie rugosa Spin Blade para el efecto.</li></ul>
+<h2>Las generaciones, año a año</h2>{tab_g}
+<p>Desde 2023 la Metalbone deja de ser un solo modelo y se convierte en gama: adidas la presentó con siete versiones, desde la HRD de 390 euros de Galán hasta la Youth para jóvenes ({f["pa23"]}; {f["zdp"]}). El paso de la 3.3 a la 3.4 es el más técnico: mango más largo, zona de impacto más pequeña, más potencia y menos tolerancia ({f["kp"]}). En 2025 llegan también dos ediciones especiales, la Reserve firmada por Galán ({f["parv"]}) y la Metalbone09 creada con el youtuber Delantero09 ({f["pa09"]}).</p>
+<h2>El esquema que no cambia</h2>
+<p>Cada generación repite la misma estructura:</p>
+<ul><li><b>Una versión "blanda"</b>, con goma Soft Performance: hoy la <a href="{u("adidas-metalbone-2026")}">Metalbone 2026</a>.</li>
+<li><b>Una versión dura</b>, la HRD, con goma High Memory para jugadores de nivel técnico alto: hoy la <a href="{u("adidas-metalbone-hrd-plus-2026")}">HRD+ 2026</a>, la pala de Galán.</li>
+<li><b>Una redonda de control</b>, la CTRL, con el punto dulce más centrado.</li>
+<li><b>Versiones más económicas</b> en carbono 6K (Carbon) y en fibra de vidrio (Team, Team Light, Superlight).</li></ul>
+<h2>La gama Metalbone 2026</h2>{tab_r}
+<p>Las versiones top usan carbono aluminizado 16K ({f["pu"]}); para entender qué significa la K, lee nuestra guía sobre el <a href="{carb}">carbono 3K, 12K y 18K</a>. Si te interesa la pala del campeón, tenemos un artículo sobre <a href="{gal}">Ale Galán y su pala</a>.</p>{box}
+<p class="note">Fuentes: {f["pa21"]}; {f["pa23"]}; {f["zdp"]}; {f["kp"]}; {f["afp"]}; {f["pu"]}; {f["parv"]}; {f["pa09"]}. El origen del nombre es una interpretación nuestra: adidas nunca lo ha explicado públicamente.</p>''',
+              f'''<p><b>La Metalbone est née en 2021, raquette entièrement nouvelle de la collection adidas, et elle est tout de suite devenue celle d'Ale Galán. En cinq ans, elle est passée d'un seul modèle à une famille de neuf versions. Son nom n'a jamais été expliqué officiellement : la lecture la plus probable le relie au carbone « aluminisé » qui la distingue depuis toujours.</b></p>
+<h2>D'où vient le nom</h2>
+<p>Nous avons cherché une explication officielle, mais ni adidas ni la presse spécialisée consultée ne disent pourquoi elle s'appelle Metalbone. Même l'article qui a présenté la première version en 2021 ne l'explique pas ({f["pa21"]}).</p>
+<p>Notre interprétation, qui reste une hypothèse : <b>« Metal »</b> renvoie à la fibre de carbone traitée à l'aluminium sur les tamis, la caractéristique technique présente sur toutes les versions haut de gamme et qui donne un toucher plus dur ; <b>« Bone »</b>, l'os, renvoie à la structure rigide, avec le cadre octogonal et les renforts en carbone. Ensemble, ils évoquent une raquette au « squelette de métal » : dure et puissante, faite pour attaquer.</p>
+<h2>La naissance, en 2021</h2>
+<p>La Metalbone a été présentée comme « la grande nouveauté » de la collection adidas 2021 : non pas la mise à jour d'un modèle existant, mais une raquette entièrement nouvelle ({f["pa21"]}). Par rapport aux Adipower, la gamme puissance qu'adidas avait déjà, c'est surtout la gomme qui changeait : EVA Soft Performance, plus souple et plus élastique, à la place de l'EVA High Memory.</p>
+<ul><li>Forme diamant oversize et équilibre haut.</li>
+<li>Construction 100 % carbone, avec fibre aluminisée sur les tamis.</li>
+<li>Système Weight &amp; Balance : vis lestées pour ajouter jusqu'à 12 grammes.</li>
+<li>Structure octogonale pour la rigidité et la puissance, surface rugueuse Spin Blade pour l'effet.</li></ul>
+<h2>Les générations, année par année</h2>{tab_g}
+<p>À partir de 2023, la Metalbone n'est plus un modèle unique mais une gamme : adidas l'a lancée en sept versions, de la HRD à 390 euros de Galán à la Youth pour les jeunes ({f["pa23"]} ; {f["zdp"]}). Le passage de la 3.3 à la 3.4 est le plus technique : manche plus long, zone d'impact plus petite, plus de puissance et moins de tolérance ({f["kp"]}). 2025 apporte aussi deux éditions spéciales, la Reserve signée par Galán ({f["parv"]}) et la Metalbone09 créée avec le youtubeur Delantero09 ({f["pa09"]}).</p>
+<h2>Le schéma qui ne change pas</h2>
+<p>Chaque génération reprend la même structure :</p>
+<ul><li><b>Une version « souple »</b>, à gomme Soft Performance : aujourd'hui la <a href="{u("adidas-metalbone-2026")}">Metalbone 2026</a>.</li>
+<li><b>Une version dure</b>, la HRD, à gomme High Memory pour les joueurs au niveau technique élevé : aujourd'hui la <a href="{u("adidas-metalbone-hrd-plus-2026")}">HRD+ 2026</a>, la raquette de Galán.</li>
+<li><b>Une ronde de contrôle</b>, la CTRL, au sweet spot plus central.</li>
+<li><b>Des versions moins chères</b> en carbone 6K (Carbon) et en fibre de verre (Team, Team Light, Superlight).</li></ul>
+<h2>La gamme Metalbone 2026</h2>{tab_r}
+<p>Les versions haut de gamme utilisent du carbone aluminisé 16K ({f["pu"]}) ; pour comprendre ce que signifie le K, lisez notre guide du <a href="{carb}">carbone 3K, 12K et 18K</a>. Si la raquette du champion vous intéresse, nous avons consacré un article à <a href="{gal}">Ale Galán et sa raquette</a>.</p>{box}
+<p class="note">Sources : {f["pa21"]} ; {f["pa23"]} ; {f["zdp"]} ; {f["kp"]} ; {f["afp"]} ; {f["pu"]} ; {f["parv"]} ; {f["pa09"]}. L'origine du nom est notre interprétation : adidas ne l'a jamais expliquée publiquement.</p>''')
+    qa = [(L("Perché si chiama Metalbone?", "Why is it called Metalbone?", "¿Por qué se llama Metalbone?", "Pourquoi s'appelle-t-elle Metalbone ?"),
+           L("adidas non l'ha mai spiegato. L'ipotesi più probabile: \"metal\" per il carbonio alluminizzato delle facce e \"bone\" (osso) per la struttura rigida.",
+             "adidas has never explained it. The most likely hypothesis: \"metal\" for the aluminised carbon faces and \"bone\" for the stiff structure.",
+             "adidas nunca lo ha explicado. La hipótesis más probable: \"metal\" por el carbono aluminizado de las caras y \"bone\" (hueso) por la estructura rígida.",
+             "adidas ne l'a jamais expliqué. L'hypothèse la plus probable : « metal » pour le carbone aluminisé des tamis et « bone » (os) pour la structure rigide.")),
+          (L("Quando è uscita la prima Metalbone?", "When did the first Metalbone come out?", "¿Cuándo salió la primera Metalbone?", "Quand la première Metalbone est-elle sortie ?"),
+           L("Nel 2021, come novità della collezione adidas, ed è stata subito la racchetta di Ale Galán.", "In 2021, as the new model in the adidas collection, and it was Ale Galán's racket from the start.",
+             "En 2021, como novedad de la colección adidas, y desde el principio fue la pala de Ale Galán.", "En 2021, comme nouveauté de la collection adidas, et elle a tout de suite été la raquette d'Ale Galán.")),
+          (L("Che differenza c'è tra Metalbone e Metalbone HRD+?", "What's the difference between the Metalbone and the Metalbone HRD+?", "¿Qué diferencia hay entre la Metalbone y la Metalbone HRD+?", "Quelle différence entre la Metalbone et la Metalbone HRD+ ?"),
+           L("Soprattutto la gomma: la Metalbone usa la EVA Soft Performance, più morbida; la HRD+ la EVA High Memory, più dura e potente, per giocatori di livello tecnico alto.",
+             "Mainly the core: the Metalbone uses the softer EVA Soft Performance; the HRD+ uses EVA High Memory, harder and more powerful, for technically advanced players.",
+             "Sobre todo la goma: la Metalbone usa EVA Soft Performance, más blanda; la HRD+ usa EVA High Memory, más dura y potente, para jugadores de nivel técnico alto.",
+             "Surtout la gomme : la Metalbone utilise l'EVA Soft Performance, plus souple ; la HRD+ l'EVA High Memory, plus dure et plus puissante, pour les joueurs au niveau technique élevé."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("La storia della adidas Metalbone e l'origine del nome", "The history of the adidas Metalbone and where the name comes from",
+               "La historia de la adidas Metalbone y el origen del nombre", "L'histoire de l'adidas Metalbone et l'origine de son nom")
+    desc = L("Dalla prima Metalbone del 2021 alla gamma 2026: tutte le generazioni della racchetta di Ale Galán e da dove viene il nome.",
+             "From the first Metalbone in 2021 to the 2026 range: every generation of Ale Galán's racket and where the name comes from.",
+             "De la primera Metalbone de 2021 a la gama 2026: todas las generaciones de la pala de Ale Galán y de dónde viene el nombre.",
+             "De la première Metalbone de 2021 à la gamme 2026 : toutes les générations de la raquette d'Ale Galán et l'origine de son nom.")
+    scrivi_articolo(MB_SLUG, titolo + " | PadelMetrix", desc, titolo, "Metalbone", corpo + faq_htm, items=mbs, ld_extra=[faq_ld])
+    return MB_SLUG, titolo, L("Cinque anni di Metalbone, generazione per generazione, e l'enigma del nome.", "Five years of Metalbone, generation by generation, and the puzzle of the name.",
+                              "Cinco años de Metalbone, generación a generación, y el enigma del nombre.", "Cinq ans de Metalbone, génération par génération, et l'énigme du nom.")
+
 # ---------------------------------------------------------------- Tolito Aguirre, il mago (novembre 2026)
 TOLITO_SLUG = "tolito-aguirre-chi-e-colpi-racchetta"
 S.SLUG[TOLITO_SLUG] = ("tolito-aguirre-who-is-he-shots-racket", "tolito-aguirre-quien-es-golpes-pala")
@@ -2530,7 +2702,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [*regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
