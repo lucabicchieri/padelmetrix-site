@@ -189,6 +189,15 @@
 }
 },
 {
+"path": "/it/racchette/adidas-metalbone-carbon-apa-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-carbon-apa-2026/",
+"en": "/en/rackets/adidas-metalbone-carbon-apa-2026/",
+"es": "/es/palas/adidas-metalbone-carbon-apa-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-carbon-apa-2026/"
+}
+},
+{
 "path": "/it/racchette/adidas-metalbone-carbon-ctrl-2026/",
 "alt": {
 "it": "/it/racchette/adidas-metalbone-carbon-ctrl-2026/",
@@ -456,6 +465,15 @@
 "en": "/en/rackets/black-crown-gladius-force-2026/",
 "es": "/es/palas/black-crown-gladius-force-2026/",
 "fr": "/fr/raquettes/black-crown-gladius-force-2026/"
+}
+},
+{
+"path": "/it/racchette/black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/racchette/black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/rackets/black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/palas/black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/raquettes/black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -1449,6 +1467,15 @@
 }
 },
 {
+"path": "/it/racchette/joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-hard-2027/",
+"en": "/en/rackets/joma-blast-pro-hard-2027/",
+"es": "/es/palas/joma-blast-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-hard-2027/"
+}
+},
+{
 "path": "/it/racchette/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -1467,12 +1494,39 @@
 }
 },
 {
+"path": "/it/racchette/joma-blast-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-soft-2027/",
+"en": "/en/rackets/joma-blast-pro-soft-2027/",
+"es": "/es/palas/joma-blast-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-soft-2027/"
+}
+},
+{
 "path": "/it/racchette/joma-game-junior-2025/",
 "alt": {
 "it": "/it/racchette/joma-game-junior-2025/",
 "en": "/en/rackets/joma-game-junior-2025/",
 "es": "/es/palas/joma-game-junior-2025/",
 "fr": "/fr/raquettes/joma-game-junior-2025/"
+}
+},
+{
+"path": "/it/racchette/joma-gold-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-gold-evo-2027/",
+"en": "/en/rackets/joma-gold-evo-2027/",
+"es": "/es/palas/joma-gold-evo-2027/",
+"fr": "/fr/raquettes/joma-gold-evo-2027/"
+}
+},
+{
+"path": "/it/racchette/joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/racchette/joma-hyper-pro-2027/",
+"en": "/en/rackets/joma-hyper-pro-2027/",
+"es": "/es/palas/joma-hyper-pro-2027/",
+"fr": "/fr/raquettes/joma-hyper-pro-2027/"
 }
 },
 {
@@ -1512,6 +1566,24 @@
 }
 },
 {
+"path": "/it/racchette/joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-slam-pro-iconic-2027/",
+"en": "/en/rackets/joma-slam-pro-iconic-2027/",
+"es": "/es/palas/joma-slam-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-slam-pro-iconic-2027/"
+}
+},
+{
+"path": "/it/racchette/joma-tournament-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-evo-2027/",
+"en": "/en/rackets/joma-tournament-evo-2027/",
+"es": "/es/palas/joma-tournament-evo-2027/",
+"fr": "/fr/raquettes/joma-tournament-evo-2027/"
+}
+},
+{
 "path": "/it/racchette/joma-tournament-pro-iconic-2026/",
 "alt": {
 "it": "/it/racchette/joma-tournament-pro-iconic-2026/",
@@ -1521,12 +1593,30 @@
 }
 },
 {
+"path": "/it/racchette/joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-pro-iconic-2027/",
+"en": "/en/rackets/joma-tournament-pro-iconic-2027/",
+"es": "/es/palas/joma-tournament-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-tournament-pro-iconic-2027/"
+}
+},
+{
 "path": "/it/racchette/joma-valkiria-flex-2026/",
 "alt": {
 "it": "/it/racchette/joma-valkiria-flex-2026/",
 "en": "/en/rackets/joma-valkiria-flex-2026/",
 "es": "/es/palas/joma-valkiria-flex-2026/",
 "fr": "/fr/raquettes/joma-valkiria-flex-2026/"
+}
+},
+{
+"path": "/it/racchette/joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-hard-2027/",
+"en": "/en/rackets/joma-valkiria-pro-hard-2027/",
+"es": "/es/palas/joma-valkiria-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-hard-2027/"
 }
 },
 {
@@ -1545,6 +1635,15 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/it/racchette/joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-soft-2027/",
+"en": "/en/rackets/joma-valkiria-pro-soft-2027/",
+"es": "/es/palas/joma-valkiria-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-soft-2027/"
 }
 },
 {
@@ -3519,6 +3618,15 @@
 }
 },
 {
+"path": "/en/rackets/adidas-metalbone-carbon-apa-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-carbon-apa-2026/",
+"en": "/en/rackets/adidas-metalbone-carbon-apa-2026/",
+"es": "/es/palas/adidas-metalbone-carbon-apa-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-carbon-apa-2026/"
+}
+},
+{
 "path": "/en/rackets/adidas-metalbone-carbon-ctrl-2026/",
 "alt": {
 "it": "/it/racchette/adidas-metalbone-carbon-ctrl-2026/",
@@ -3786,6 +3894,15 @@
 "en": "/en/rackets/black-crown-gladius-force-2026/",
 "es": "/es/palas/black-crown-gladius-force-2026/",
 "fr": "/fr/raquettes/black-crown-gladius-force-2026/"
+}
+},
+{
+"path": "/en/rackets/black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/racchette/black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/rackets/black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/palas/black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/raquettes/black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -4779,6 +4896,15 @@
 }
 },
 {
+"path": "/en/rackets/joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-hard-2027/",
+"en": "/en/rackets/joma-blast-pro-hard-2027/",
+"es": "/es/palas/joma-blast-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-hard-2027/"
+}
+},
+{
 "path": "/en/rackets/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -4797,12 +4923,39 @@
 }
 },
 {
+"path": "/en/rackets/joma-blast-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-soft-2027/",
+"en": "/en/rackets/joma-blast-pro-soft-2027/",
+"es": "/es/palas/joma-blast-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-soft-2027/"
+}
+},
+{
 "path": "/en/rackets/joma-game-junior-2025/",
 "alt": {
 "it": "/it/racchette/joma-game-junior-2025/",
 "en": "/en/rackets/joma-game-junior-2025/",
 "es": "/es/palas/joma-game-junior-2025/",
 "fr": "/fr/raquettes/joma-game-junior-2025/"
+}
+},
+{
+"path": "/en/rackets/joma-gold-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-gold-evo-2027/",
+"en": "/en/rackets/joma-gold-evo-2027/",
+"es": "/es/palas/joma-gold-evo-2027/",
+"fr": "/fr/raquettes/joma-gold-evo-2027/"
+}
+},
+{
+"path": "/en/rackets/joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/racchette/joma-hyper-pro-2027/",
+"en": "/en/rackets/joma-hyper-pro-2027/",
+"es": "/es/palas/joma-hyper-pro-2027/",
+"fr": "/fr/raquettes/joma-hyper-pro-2027/"
 }
 },
 {
@@ -4842,6 +4995,24 @@
 }
 },
 {
+"path": "/en/rackets/joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-slam-pro-iconic-2027/",
+"en": "/en/rackets/joma-slam-pro-iconic-2027/",
+"es": "/es/palas/joma-slam-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-slam-pro-iconic-2027/"
+}
+},
+{
+"path": "/en/rackets/joma-tournament-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-evo-2027/",
+"en": "/en/rackets/joma-tournament-evo-2027/",
+"es": "/es/palas/joma-tournament-evo-2027/",
+"fr": "/fr/raquettes/joma-tournament-evo-2027/"
+}
+},
+{
 "path": "/en/rackets/joma-tournament-pro-iconic-2026/",
 "alt": {
 "it": "/it/racchette/joma-tournament-pro-iconic-2026/",
@@ -4851,12 +5022,30 @@
 }
 },
 {
+"path": "/en/rackets/joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-pro-iconic-2027/",
+"en": "/en/rackets/joma-tournament-pro-iconic-2027/",
+"es": "/es/palas/joma-tournament-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-tournament-pro-iconic-2027/"
+}
+},
+{
 "path": "/en/rackets/joma-valkiria-flex-2026/",
 "alt": {
 "it": "/it/racchette/joma-valkiria-flex-2026/",
 "en": "/en/rackets/joma-valkiria-flex-2026/",
 "es": "/es/palas/joma-valkiria-flex-2026/",
 "fr": "/fr/raquettes/joma-valkiria-flex-2026/"
+}
+},
+{
+"path": "/en/rackets/joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-hard-2027/",
+"en": "/en/rackets/joma-valkiria-pro-hard-2027/",
+"es": "/es/palas/joma-valkiria-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-hard-2027/"
 }
 },
 {
@@ -4875,6 +5064,15 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/en/rackets/joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-soft-2027/",
+"en": "/en/rackets/joma-valkiria-pro-soft-2027/",
+"es": "/es/palas/joma-valkiria-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-soft-2027/"
 }
 },
 {
@@ -6849,6 +7047,15 @@
 }
 },
 {
+"path": "/es/palas/adidas-metalbone-carbon-apa-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-carbon-apa-2026/",
+"en": "/en/rackets/adidas-metalbone-carbon-apa-2026/",
+"es": "/es/palas/adidas-metalbone-carbon-apa-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-carbon-apa-2026/"
+}
+},
+{
 "path": "/es/palas/adidas-metalbone-carbon-ctrl-2026/",
 "alt": {
 "it": "/it/racchette/adidas-metalbone-carbon-ctrl-2026/",
@@ -7116,6 +7323,15 @@
 "en": "/en/rackets/black-crown-gladius-force-2026/",
 "es": "/es/palas/black-crown-gladius-force-2026/",
 "fr": "/fr/raquettes/black-crown-gladius-force-2026/"
+}
+},
+{
+"path": "/es/palas/black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/racchette/black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/rackets/black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/palas/black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/raquettes/black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -8109,6 +8325,15 @@
 }
 },
 {
+"path": "/es/palas/joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-hard-2027/",
+"en": "/en/rackets/joma-blast-pro-hard-2027/",
+"es": "/es/palas/joma-blast-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-hard-2027/"
+}
+},
+{
 "path": "/es/palas/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -8127,12 +8352,39 @@
 }
 },
 {
+"path": "/es/palas/joma-blast-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-soft-2027/",
+"en": "/en/rackets/joma-blast-pro-soft-2027/",
+"es": "/es/palas/joma-blast-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-soft-2027/"
+}
+},
+{
 "path": "/es/palas/joma-game-junior-2025/",
 "alt": {
 "it": "/it/racchette/joma-game-junior-2025/",
 "en": "/en/rackets/joma-game-junior-2025/",
 "es": "/es/palas/joma-game-junior-2025/",
 "fr": "/fr/raquettes/joma-game-junior-2025/"
+}
+},
+{
+"path": "/es/palas/joma-gold-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-gold-evo-2027/",
+"en": "/en/rackets/joma-gold-evo-2027/",
+"es": "/es/palas/joma-gold-evo-2027/",
+"fr": "/fr/raquettes/joma-gold-evo-2027/"
+}
+},
+{
+"path": "/es/palas/joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/racchette/joma-hyper-pro-2027/",
+"en": "/en/rackets/joma-hyper-pro-2027/",
+"es": "/es/palas/joma-hyper-pro-2027/",
+"fr": "/fr/raquettes/joma-hyper-pro-2027/"
 }
 },
 {
@@ -8172,6 +8424,24 @@
 }
 },
 {
+"path": "/es/palas/joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-slam-pro-iconic-2027/",
+"en": "/en/rackets/joma-slam-pro-iconic-2027/",
+"es": "/es/palas/joma-slam-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-slam-pro-iconic-2027/"
+}
+},
+{
+"path": "/es/palas/joma-tournament-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-evo-2027/",
+"en": "/en/rackets/joma-tournament-evo-2027/",
+"es": "/es/palas/joma-tournament-evo-2027/",
+"fr": "/fr/raquettes/joma-tournament-evo-2027/"
+}
+},
+{
 "path": "/es/palas/joma-tournament-pro-iconic-2026/",
 "alt": {
 "it": "/it/racchette/joma-tournament-pro-iconic-2026/",
@@ -8181,12 +8451,30 @@
 }
 },
 {
+"path": "/es/palas/joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-pro-iconic-2027/",
+"en": "/en/rackets/joma-tournament-pro-iconic-2027/",
+"es": "/es/palas/joma-tournament-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-tournament-pro-iconic-2027/"
+}
+},
+{
 "path": "/es/palas/joma-valkiria-flex-2026/",
 "alt": {
 "it": "/it/racchette/joma-valkiria-flex-2026/",
 "en": "/en/rackets/joma-valkiria-flex-2026/",
 "es": "/es/palas/joma-valkiria-flex-2026/",
 "fr": "/fr/raquettes/joma-valkiria-flex-2026/"
+}
+},
+{
+"path": "/es/palas/joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-hard-2027/",
+"en": "/en/rackets/joma-valkiria-pro-hard-2027/",
+"es": "/es/palas/joma-valkiria-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-hard-2027/"
 }
 },
 {
@@ -8205,6 +8493,15 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/es/palas/joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-soft-2027/",
+"en": "/en/rackets/joma-valkiria-pro-soft-2027/",
+"es": "/es/palas/joma-valkiria-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-soft-2027/"
 }
 },
 {
@@ -10179,6 +10476,15 @@
 }
 },
 {
+"path": "/fr/raquettes/adidas-metalbone-carbon-apa-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-carbon-apa-2026/",
+"en": "/en/rackets/adidas-metalbone-carbon-apa-2026/",
+"es": "/es/palas/adidas-metalbone-carbon-apa-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-carbon-apa-2026/"
+}
+},
+{
 "path": "/fr/raquettes/adidas-metalbone-carbon-ctrl-2026/",
 "alt": {
 "it": "/it/racchette/adidas-metalbone-carbon-ctrl-2026/",
@@ -10446,6 +10752,15 @@
 "en": "/en/rackets/black-crown-gladius-force-2026/",
 "es": "/es/palas/black-crown-gladius-force-2026/",
 "fr": "/fr/raquettes/black-crown-gladius-force-2026/"
+}
+},
+{
+"path": "/fr/raquettes/black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/racchette/black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/rackets/black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/palas/black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/raquettes/black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -11439,6 +11754,15 @@
 }
 },
 {
+"path": "/fr/raquettes/joma-blast-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-hard-2027/",
+"en": "/en/rackets/joma-blast-pro-hard-2027/",
+"es": "/es/palas/joma-blast-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-hard-2027/"
+}
+},
+{
 "path": "/fr/raquettes/joma-blast-pro-hrd-2026/",
 "alt": {
 "it": "/it/racchette/joma-blast-pro-hrd-2026/",
@@ -11457,12 +11781,39 @@
 }
 },
 {
+"path": "/fr/raquettes/joma-blast-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-blast-pro-soft-2027/",
+"en": "/en/rackets/joma-blast-pro-soft-2027/",
+"es": "/es/palas/joma-blast-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-blast-pro-soft-2027/"
+}
+},
+{
 "path": "/fr/raquettes/joma-game-junior-2025/",
 "alt": {
 "it": "/it/racchette/joma-game-junior-2025/",
 "en": "/en/rackets/joma-game-junior-2025/",
 "es": "/es/palas/joma-game-junior-2025/",
 "fr": "/fr/raquettes/joma-game-junior-2025/"
+}
+},
+{
+"path": "/fr/raquettes/joma-gold-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-gold-evo-2027/",
+"en": "/en/rackets/joma-gold-evo-2027/",
+"es": "/es/palas/joma-gold-evo-2027/",
+"fr": "/fr/raquettes/joma-gold-evo-2027/"
+}
+},
+{
+"path": "/fr/raquettes/joma-hyper-pro-2027/",
+"alt": {
+"it": "/it/racchette/joma-hyper-pro-2027/",
+"en": "/en/rackets/joma-hyper-pro-2027/",
+"es": "/es/palas/joma-hyper-pro-2027/",
+"fr": "/fr/raquettes/joma-hyper-pro-2027/"
 }
 },
 {
@@ -11502,6 +11853,24 @@
 }
 },
 {
+"path": "/fr/raquettes/joma-slam-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-slam-pro-iconic-2027/",
+"en": "/en/rackets/joma-slam-pro-iconic-2027/",
+"es": "/es/palas/joma-slam-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-slam-pro-iconic-2027/"
+}
+},
+{
+"path": "/fr/raquettes/joma-tournament-evo-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-evo-2027/",
+"en": "/en/rackets/joma-tournament-evo-2027/",
+"es": "/es/palas/joma-tournament-evo-2027/",
+"fr": "/fr/raquettes/joma-tournament-evo-2027/"
+}
+},
+{
 "path": "/fr/raquettes/joma-tournament-pro-iconic-2026/",
 "alt": {
 "it": "/it/racchette/joma-tournament-pro-iconic-2026/",
@@ -11511,12 +11880,30 @@
 }
 },
 {
+"path": "/fr/raquettes/joma-tournament-pro-iconic-2027/",
+"alt": {
+"it": "/it/racchette/joma-tournament-pro-iconic-2027/",
+"en": "/en/rackets/joma-tournament-pro-iconic-2027/",
+"es": "/es/palas/joma-tournament-pro-iconic-2027/",
+"fr": "/fr/raquettes/joma-tournament-pro-iconic-2027/"
+}
+},
+{
 "path": "/fr/raquettes/joma-valkiria-flex-2026/",
 "alt": {
 "it": "/it/racchette/joma-valkiria-flex-2026/",
 "en": "/en/rackets/joma-valkiria-flex-2026/",
 "es": "/es/palas/joma-valkiria-flex-2026/",
 "fr": "/fr/raquettes/joma-valkiria-flex-2026/"
+}
+},
+{
+"path": "/fr/raquettes/joma-valkiria-pro-hard-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-hard-2027/",
+"en": "/en/rackets/joma-valkiria-pro-hard-2027/",
+"es": "/es/palas/joma-valkiria-pro-hard-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-hard-2027/"
 }
 },
 {
@@ -11535,6 +11922,15 @@
 "en": "/en/rackets/joma-valkiria-pro-sft-2026/",
 "es": "/es/palas/joma-valkiria-pro-sft-2026/",
 "fr": "/fr/raquettes/joma-valkiria-pro-sft-2026/"
+}
+},
+{
+"path": "/fr/raquettes/joma-valkiria-pro-soft-2027/",
+"alt": {
+"it": "/it/racchette/joma-valkiria-pro-soft-2027/",
+"en": "/en/rackets/joma-valkiria-pro-soft-2027/",
+"es": "/es/palas/joma-valkiria-pro-soft-2027/",
+"fr": "/fr/raquettes/joma-valkiria-pro-soft-2027/"
 }
 },
 {
