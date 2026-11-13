@@ -84,6 +84,26 @@
    "fonti": "https://www.babolat.com/gb/padel/racquets/adults.html | https://padelproshop.com/it/pages/babolat-2027 | https://www.babolat.com/it/padel/racchette/adulti.html"
   },
   {
+   "slug": "black-crown-hurricane-comfort-4-0-2027",
+   "marca": "Black Crown",
+   "modello": "Hurricane Comfort 4.0",
+   "anno": 2027,
+   "giocatore": "Marta Marrero",
+   "categoria": "adulto",
+   "forma": "goccia",
+   "peso": "355–370 g",
+   "bilanciamento": "",
+   "nucleo": "Super Soft White EVA",
+   "superficie": "Carbonio 12K Alucarbon, rilievo 3D e finitura 5D Extra Spin",
+   "telaio": "Carbonio tubolare con tecnologia 2TB Air",
+   "tatto": "morbido",
+   "livello": "avanzato",
+   "stile": "polivalente",
+   "prezzo_listino_eur": 210,
+   "url": "https://www.padelmetrix.com/it/racchette/black-crown-hurricane-comfort-4-0-2027/",
+   "fonti": "https://esprit-padel-shop.com/en/products/raquette-de-padel-black-crown-hurricane-comfort-4-0-2027"
+  },
+  {
    "slug": "black-crown-hurricane-pro-4-0-2027",
    "marca": "Black Crown",
    "modello": "Hurricane Pro 4.0",
@@ -1002,6 +1022,26 @@
    "prezzo_listino_eur": 349.9,
    "url": "https://www.padelmetrix.com/it/racchette/nox-ventus-hybrid-12k-xtrem-2027/",
    "fonti": "https://padelproshop.com/en/pages/nox-2027"
+  },
+  {
+   "slug": "oxdog-ultimate-pro-light-2027",
+   "marca": "Oxdog",
+   "modello": "Ultimate Pro Light",
+   "anno": 2027,
+   "giocatore": "",
+   "categoria": "adulto",
+   "forma": "diamante",
+   "peso": "350 g",
+   "bilanciamento": "alto",
+   "nucleo": "EVA Medium+ (il negozio indica anche Medium)",
+   "superficie": "Carbonio HES 8K",
+   "telaio": "Carbonio HES con rinforzi PowerRibs",
+   "tatto": "",
+   "livello": "intermedio-avanzato",
+   "stile": "offensivo",
+   "prezzo_listino_eur": 330,
+   "url": "https://www.padelmetrix.com/it/racchette/oxdog-ultimate-pro-light-2027/",
+   "fonti": "https://mypadellife.com/products/oxdog-ultimate-pro-light-2027-padel-racket"
   },
   {
    "slug": "siux-diablo-elite-2027",
