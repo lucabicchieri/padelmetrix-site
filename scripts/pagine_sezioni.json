@@ -126,21 +126,21 @@
 }
 },
 {
-"path": "/it/marche/dunlop/",
-"alt": {
-"it": "/it/marche/dunlop/",
-"en": "/en/brands/dunlop/",
-"es": "/es/marcas/dunlop/",
-"fr": "/fr/marques/dunlop/"
-}
-},
-{
 "path": "/it/marche/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/it/marche/dunlop/",
+"alt": {
+"it": "/it/marche/dunlop/",
+"en": "/en/brands/dunlop/",
+"es": "/es/marcas/dunlop/",
+"fr": "/fr/marques/dunlop/"
 }
 },
 {
@@ -771,6 +771,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/it/confronta/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/compare/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/comparar/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/comparer/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -2367,6 +2376,15 @@
 }
 },
 {
+"path": "/it/confronta/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"alt": {
+"it": "/it/confronta/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"en": "/en/compare/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"es": "/es/comparar/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"fr": "/fr/comparer/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/"
+}
+},
+{
 "path": "/it/confronta/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
 "alt": {
 "it": "/it/confronta/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
@@ -3051,21 +3069,21 @@
 }
 },
 {
-"path": "/en/brands/dunlop/",
-"alt": {
-"it": "/it/marche/dunlop/",
-"en": "/en/brands/dunlop/",
-"es": "/es/marcas/dunlop/",
-"fr": "/fr/marques/dunlop/"
-}
-},
-{
 "path": "/en/brands/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/en/brands/dunlop/",
+"alt": {
+"it": "/it/marche/dunlop/",
+"en": "/en/brands/dunlop/",
+"es": "/es/marcas/dunlop/",
+"fr": "/fr/marques/dunlop/"
 }
 },
 {
@@ -3696,6 +3714,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/en/compare/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/compare/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/comparar/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/comparer/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -5292,6 +5319,15 @@
 }
 },
 {
+"path": "/en/compare/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"alt": {
+"it": "/it/confronta/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"en": "/en/compare/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"es": "/es/comparar/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"fr": "/fr/comparer/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/"
+}
+},
+{
 "path": "/en/compare/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
 "alt": {
 "it": "/it/confronta/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
@@ -5976,21 +6012,21 @@
 }
 },
 {
-"path": "/es/marcas/dunlop/",
-"alt": {
-"it": "/it/marche/dunlop/",
-"en": "/en/brands/dunlop/",
-"es": "/es/marcas/dunlop/",
-"fr": "/fr/marques/dunlop/"
-}
-},
-{
 "path": "/es/marcas/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/es/marcas/dunlop/",
+"alt": {
+"it": "/it/marche/dunlop/",
+"en": "/en/brands/dunlop/",
+"es": "/es/marcas/dunlop/",
+"fr": "/fr/marques/dunlop/"
 }
 },
 {
@@ -6621,6 +6657,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/es/comparar/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/compare/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/comparar/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/comparer/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -8217,6 +8262,15 @@
 }
 },
 {
+"path": "/es/comparar/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"alt": {
+"it": "/it/confronta/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"en": "/en/compare/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"es": "/es/comparar/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"fr": "/fr/comparer/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/"
+}
+},
+{
 "path": "/es/comparar/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
 "alt": {
 "it": "/it/confronta/oxdog-ultimate-pro-plus-2026-vs-oxdog-ultimate-pro-smash-2026/",
@@ -8901,21 +8955,21 @@
 }
 },
 {
-"path": "/fr/marques/dunlop/",
-"alt": {
-"it": "/it/marche/dunlop/",
-"en": "/en/brands/dunlop/",
-"es": "/es/marcas/dunlop/",
-"fr": "/fr/marques/dunlop/"
-}
-},
-{
 "path": "/fr/marques/black-crown/",
 "alt": {
 "it": "/it/marche/black-crown/",
 "en": "/en/brands/black-crown/",
 "es": "/es/marcas/black-crown/",
 "fr": "/fr/marques/black-crown/"
+}
+},
+{
+"path": "/fr/marques/dunlop/",
+"alt": {
+"it": "/it/marche/dunlop/",
+"en": "/en/brands/dunlop/",
+"es": "/es/marcas/dunlop/",
+"fr": "/fr/marques/dunlop/"
 }
 },
 {
@@ -9546,6 +9600,15 @@
 "en": "/en/compare/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "es": "/es/comparar/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/",
 "fr": "/fr/comparer/black-crown-gladius-force-2026-vs-bullpadel-hack-05-comfort-2027/"
+}
+},
+{
+"path": "/fr/comparer/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"alt": {
+"it": "/it/confronta/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"en": "/en/compare/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"es": "/es/comparar/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/",
+"fr": "/fr/comparer/black-crown-hurricane-comfort-4-0-2027-vs-black-crown-hurricane-pro-4-0-2027/"
 }
 },
 {
@@ -11139,6 +11202,15 @@
 "en": "/en/compare/oxdog-ultimate-pro-2026-vs-oxdog-ultimate-pro-light-2026/",
 "es": "/es/comparar/oxdog-ultimate-pro-2026-vs-oxdog-ultimate-pro-light-2026/",
 "fr": "/fr/comparer/oxdog-ultimate-pro-2026-vs-oxdog-ultimate-pro-light-2026/"
+}
+},
+{
+"path": "/fr/comparer/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"alt": {
+"it": "/it/confronta/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"en": "/en/compare/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"es": "/es/comparar/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/",
+"fr": "/fr/comparer/oxdog-ultimate-pro-light-2026-vs-oxdog-ultimate-pro-light-2027/"
 }
 },
 {
