@@ -23,6 +23,33 @@
   }
  },
  {
+  "slug": "fernando-belasteguin-carriera-record-racchette",
+  "data": "2026-11-14",
+  "racchette": [
+   "wilson-bela-max-2027",
+   "wilson-bela-pro-v3-2026",
+   "wilson-bela-v3-2026"
+  ],
+  "titolo": {
+   "it": "Fernando Belasteguín, il Boss del padel: 16 anni da numero uno e le racchette Wilson Bela",
+   "en": "Fernando Belasteguín, padel's Boss: 16 years at number one and the Wilson Bela rackets",
+   "es": "Fernando Belasteguín, el Boss del pádel: 16 años de número uno y las palas Wilson Bela",
+   "fr": "Fernando Belasteguín, le Boss du padel : 16 ans numéro un et les raquettes Wilson Bela"
+  },
+  "desc": {
+   "it": "La leggenda dei 16 anni da numero uno, il ritiro e le racchette che portano il suo nome.",
+   "en": "The legend of 16 years at number one, his retirement and the rackets named after him.",
+   "es": "La leyenda de los 16 años de número uno, la retirada y las palas que llevan su nombre.",
+   "fr": "La légende des 16 ans numéro un, sa retraite et les raquettes qui portent son nom."
+  },
+  "url": {
+   "it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
+   "en": "/en/articles/fernando-belasteguin-career-records-rackets/",
+   "es": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
+   "fr": "/fr/articles/fernando-belasteguin-carriere-records-raquettes/"
+  }
+ },
+ {
   "slug": "adidas-metalbone-storia-origine-nome",
   "data": "2026-11-12",
   "racchette": [
