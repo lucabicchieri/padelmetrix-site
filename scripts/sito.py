@@ -390,7 +390,8 @@ def confronto_url(a, b):
 
 LOGO = '<svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="14" width="52" height="36" rx="4" fill="none" stroke="#0F3D2E" stroke-width="4"/><line x1="19" y1="14" x2="19" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="45" y1="14" x2="45" y2="50" stroke="#0F3D2E" stroke-width="2"/><line x1="19" y1="32" x2="45" y2="32" stroke="#0F3D2E" stroke-width="2"/><line x1="32" y1="9" x2="32" y2="55" stroke="#0F3D2E" stroke-width="4" stroke-linecap="round"/><circle cx="45" cy="23" r="6.5" fill="#C6F432" stroke="#0F3D2E" stroke-width="2"/></svg>'
 FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F3D2E'/%3E%3Crect x='8' y='16' width='48' height='32' rx='3' fill='none' stroke='%23EAF5EC' stroke-width='4'/%3E%3Cline x1='32' y1='11' x2='32' y2='53' stroke='%23EAF5EC' stroke-width='4'/%3E%3Ccircle cx='45' cy='25' r='7' fill='%23C6F432'/%3E%3C/svg%3E"
-CSS = (ROOT / "scripts" / "scheda.css").read_text(encoding="utf-8") + (ROOT / "scripts" / "pagine.css").read_text(encoding="utf-8")
+RESTYLING_CSS = (ROOT / "scripts" / "restyling.css").read_text(encoding="utf-8")
+CSS = (ROOT / "scripts" / "scheda.css").read_text(encoding="utf-8") + (ROOT / "scripts" / "pagine.css").read_text(encoding="utf-8") + RESTYLING_CSS
 
 
 def nav():
@@ -407,12 +408,17 @@ def header(on, alt=None):
     alt = alt or ALT("home")
     items = "\n".join(f'<a{" class=\"on\"" if k == on else ""} href="{h}">{t}</a>' for k, t, h in nav())
     langs = " · ".join(f'<a{" class=\"on\"" if x == l else ""} href="{alt.get(x, P("home", l=x))}" hreflang="{x}">{x.upper()}</a>' for x in LINGUE)
+    cerca = L("Cerca una racchetta", "Search a racket", "Busca una pala", "Chercher une raquette")
     return f'''<header class="site"><div class="wrap">
 <a class="brand" href="{P("home")}">{LOGO}<span><b>padel</b>metrix</span></a>
+<button class="burger" type="button" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('header'),o=h.classList.toggle('open');this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
+<div class="menu">
 <nav class="main" aria-label="{L("Principale", "Main", "Principal", "Principal")}">
 {items}
 </nav>
+<form class="hsearch" action="{P("racchette")}" method="get" role="search"><input type="search" name="q" placeholder="{cerca}" aria-label="{cerca}"></form>
 <div class="langs" aria-label="{L("Lingua", "Language", "Idioma", "Langue")}">{langs}</div>
+</div>
 </div></header>'''
 
 
@@ -451,7 +457,14 @@ def home_crumb():
 OG_LOCALE = {"it": "it_IT", "en": "en_GB", "es": "es_ES", "fr": "fr_FR"}
 
 
-def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None):
+def og_tags(og=None):
+    """Immagine di anteprima per i social: quella della pagina, altrimenti quella generica della lingua."""
+    u = SITO + (og or f"/og/padelmetrix-{_LANG[0]}.jpg")
+    return (f'<meta property="og:image" content="{u}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+            f'<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:image" content="{u}">')
+
+
+def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None, og=None):
     """alt = {lingua: percorso} delle versioni della stessa pagina, per hreflang e selettore lingua."""
     l = _LANG[0]
     lds = "\n".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
@@ -474,6 +487,8 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None):
 <meta property="og:url" content="{SITO}{path}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="{OG_LOCALE[l]}">
+<meta property="og:site_name" content="PadelMetrix">
+{og_tags(og)}
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">

@@ -1,6 +1,7 @@
 [
  {
   "slug": "superfici-campo-padel-erba-sintetica-tipi",
+  "cat": "guide",
   "data": "2026-11-18",
   "racchette": [],
   "titolo": {
@@ -24,6 +25,7 @@
  },
  {
   "slug": "vetri-campo-padel-tipi-temperato-stratificato",
+  "cat": "guide",
   "data": "2026-11-16",
   "racchette": [],
   "titolo": {
@@ -47,6 +49,7 @@
  },
  {
   "slug": "fernando-belasteguin-carriera-record-racchette",
+  "cat": "giocatori",
   "data": "2026-11-14",
   "racchette": [
    "wilson-bela-max-2027",
@@ -74,6 +77,7 @@
  },
  {
   "slug": "adidas-metalbone-storia-origine-nome",
+  "cat": "novita",
   "data": "2026-11-12",
   "racchette": [
    "adidas-metalbone-2026",
@@ -108,6 +112,7 @@
  },
  {
   "slug": "idee-regalo-natale-padel",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -131,6 +136,7 @@
  },
  {
   "slug": "regali-padel-sotto-20-euro",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -154,6 +160,7 @@
  },
  {
   "slug": "regali-padel-sotto-50-euro",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -177,6 +184,7 @@
  },
  {
   "slug": "regalare-scarpe-da-padel",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -200,6 +208,7 @@
  },
  {
   "slug": "borse-zaini-padel-regalo",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -223,6 +232,7 @@
  },
  {
   "slug": "pressurizzatore-palline-padel-regalo",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -246,6 +256,7 @@
  },
  {
   "slug": "abbigliamento-padel-uomo-regalo",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -269,6 +280,7 @@
  },
  {
   "slug": "abbigliamento-padel-donna-regalo",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -292,6 +304,7 @@
  },
  {
   "slug": "piccoli-regali-padel-polsini-overgrip",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -315,6 +328,7 @@
  },
  {
   "slug": "regali-padel-principianti",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [
    "nox-x-hero-2026",
@@ -343,6 +357,7 @@
  },
  {
   "slug": "regali-padel-bambini-ragazzi",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [
    "wilson-blade-jr-v4-2026",
@@ -370,6 +385,7 @@
  },
  {
   "slug": "regalare-racchetta-padel-come-scegliere",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [
    "nox-x-hero-2026",
@@ -403,6 +419,7 @@
  },
  {
   "slug": "regali-padel-compagno-maestro",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -426,6 +443,7 @@
  },
  {
   "slug": "regali-padel-per-chi-ha-tutto",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -449,6 +467,7 @@
  },
  {
   "slug": "regali-padel-last-minute",
+  "cat": "regali",
   "data": "2026-11-11",
   "racchette": [],
   "titolo": {
@@ -472,6 +491,7 @@
  },
  {
   "slug": "tolito-aguirre-chi-e-colpi-racchetta",
+  "cat": "giocatori",
   "data": "2026-11-11",
   "racchette": [
    "hirostar-alien-core-tolito-aguirre-2026",
@@ -498,6 +518,7 @@
  },
  {
   "slug": "quad-racchette-padel-portoghesi-modelli",
+  "cat": "novita",
   "data": "2026-11-09",
   "racchette": [
    "quad-chinese-new-year-edition-2026",
@@ -540,6 +561,7 @@
  },
  {
   "slug": "quanto-dura-racchetta-padel-quando-cambiarla",
+  "cat": "guide",
   "data": "2026-11-06",
   "racchette": [],
   "titolo": {
@@ -563,6 +585,7 @@
  },
  {
   "slug": "carbonio-3k-12k-18k-racchetta-padel",
+  "cat": "guide",
   "data": "2026-11-06",
   "racchette": [],
   "titolo": {
@@ -586,6 +609,7 @@
  },
  {
   "slug": "peso-racchetta-padel-quale-scegliere",
+  "cat": "guide",
   "data": "2026-11-06",
   "racchette": [
    "adidas-rx-series-light-2026",
@@ -618,6 +642,7 @@
  },
  {
   "slug": "padel-over-50-racchetta-consigli",
+  "cat": "guide",
   "data": "2026-11-06",
   "racchette": [
    "adidas-rx-series-light-2026",
@@ -650,6 +675,7 @@
  },
  {
   "slug": "scarpe-padel-come-sceglierle",
+  "cat": "guide",
   "data": "2026-11-06",
   "racchette": [],
   "titolo": {
@@ -673,6 +699,7 @@
  },
  {
   "slug": "fitp-supera-figc-tesserati-tennis-padel",
+  "cat": "novita",
   "data": "2026-11-02",
   "racchette": [],
   "titolo": {
@@ -696,6 +723,7 @@
  },
  {
   "slug": "regolamento-padel-regole-spiegate",
+  "cat": "guide",
   "data": "2026-11-01",
   "racchette": [],
   "titolo": {
@@ -719,6 +747,7 @@
  },
  {
   "slug": "regolamento-pickleball-regole-spiegate",
+  "cat": "guide",
   "data": "2026-11-01",
   "racchette": [],
   "titolo": {
@@ -742,6 +771,7 @@
  },
  {
   "slug": "migliori-racchette-padel-2026-classifiche-indipendenti",
+  "cat": "novita",
   "data": "2026-10-31",
   "racchette": [
    "bullpadel-vertex-05-2026",
@@ -784,6 +814,7 @@
  },
  {
   "slug": "racchette-padel-2027-vs-2026-cosa-cambia",
+  "cat": "novita",
   "data": "2026-10-31",
   "racchette": [
    "bullpadel-flow-legend-2026",
@@ -852,6 +883,7 @@
  },
  {
   "slug": "racchette-padel-2027-novita-per-marca",
+  "cat": "novita",
   "data": "2026-10-30",
   "racchette": [],
   "titolo": {
@@ -875,6 +907,7 @@
  },
  {
   "slug": "leandro-augsburger-chi-e-e-che-racchetta-usa",
+  "cat": "giocatori",
   "data": "2026-10-30",
   "racchette": [
    "siux-fenix-pro-2026",
@@ -901,6 +934,7 @@
  },
  {
   "slug": "juan-lebron-chi-e-e-che-racchetta-usa",
+  "cat": "giocatori",
   "data": "2026-10-30",
   "racchette": [
    "babolat-viper-juan-lebron-3-0-2026",
@@ -929,6 +963,7 @@
  },
  {
   "slug": "agustin-tapia-chi-e-e-che-racchetta-usa",
+  "cat": "giocatori",
   "data": "2026-10-30",
   "racchette": [
    "nox-at10-luxury-genius-12k-alum-xtrem-2026",
@@ -958,6 +993,7 @@
  },
  {
   "slug": "arturo-coello-chi-e-e-che-racchetta-usa",
+  "cat": "giocatori",
   "data": "2026-10-30",
   "racchette": [
    "head-coello-pro-2026",
@@ -984,6 +1020,7 @@
  },
  {
   "slug": "federico-chingotto-chi-e-e-che-racchetta-usa",
+  "cat": "giocatori",
   "data": "2026-10-30",
   "racchette": [
    "bullpadel-neuron-02-edge-2026",
@@ -1012,6 +1049,7 @@
  },
  {
   "slug": "ale-galan-chi-e-e-che-racchetta-usa",
+  "cat": "giocatori",
   "data": "2026-10-30",
   "racchette": [
    "adidas-metalbone-hrd-plus-2026",
@@ -1038,6 +1076,7 @@
  },
  {
   "slug": "siux-diablo-pro-2026-vs-2027-cosa-cambia",
+  "cat": "novita",
   "data": "2026-10-30",
   "racchette": [
    "siux-diablo-pro-2026",

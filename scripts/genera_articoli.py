@@ -42,6 +42,49 @@ def articolo_ld(titolo, desc, path, data=OGGI_ISO):
             "author": S.autore(), "publisher": S.editore(), "mainEntityOfPage": SITO + path}
 
 
+CAT_NOMI = {"giocatori": ("Giocatori", "Players", "Jugadores", "Joueurs"), "regali": ("Regali", "Gifts", "Regalos", "Cadeaux"),
+            "novita": ("Novità e confronti", "New and compared", "Novedades y comparativas", "Nouveautés et comparatifs"), "guide": ("Guide", "Guides", "Guías", "Guides")}
+_CAT_GIOC = ("tolito-", "fernando-belasteguin", "ale-galan", "chi-e-e-che-racchetta", "racchetta-usa", "con-che-racchetta")
+_CAT_NOV = ("novita", "-vs-", "cosa-cambia", "migliori-racchette", "confront", "2027", "sorpasso", "fitp-", "quad-racchette", "metalbone-storia")
+
+
+def categoria(slug):
+    """Categoria editoriale di un articolo, ricavata dallo slug italiano."""
+    if "regal" in slug or slug.startswith(("pressurizzatore-", "abbigliamento-padel", "borse-zaini", "piccoli-regali", "idee-regalo")):
+        return "regali"
+    if any(k in slug for k in _CAT_GIOC) or slug in {g["slug"] for g in GIOCATORI}:
+        return "giocatori"
+    if any(k in slug for k in _CAT_NOV):
+        return "novita"
+    return "guide"
+
+
+def cat_nome(c):
+    return L(*CAT_NOMI[c])
+
+
+def art_card(url, titolo, desc, cat, data=None):
+    dt = f'<span class="dt">{S.data_txt(data)}</span>' if data else ""
+    return (f'<a class="acard" href="{url}" data-cat="{cat}"><div class="acov c-{cat}" aria-hidden="true"></div>'
+            f'<div class="ab"><span class="acat">{e(cat_nome(cat))}</span><b>{e(titolo)}</b><span class="ad">{e(desc)}</span>{dt}</div></a>')
+
+
+def _elenco_salvato():
+    f = ROOT / "data" / "articoli.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+
+
+def leggi_anche(slug):
+    """Tre articoli da leggere dopo: prima la stessa categoria, poi i più recenti (dall'elenco dell'ultima generazione)."""
+    l, cat = S.lang(), categoria(slug)
+    altri = [a for a in _elenco_salvato() if a["slug"] != slug and l in a["url"]]
+    altri.sort(key=lambda a: (0 if categoria(a["slug"]) == cat else 1, -int(a["data"].replace("-", ""))))
+    if not altri:
+        return ""
+    cards = "".join(art_card(a["url"][l], a["titolo"][l], a["desc"][l], categoria(a["slug"]), a["data"]) for a in altri[:3])
+    return f'<section class="anche"><h2>{L("Leggi anche", "Read next", "Lee también", "À lire aussi")}</h2><div class="agrid">{cards}</div></section>'
+
+
 def scrivi_articolo(slug, title, desc, h1, crumb, corpo_html, items=None, ld_extra=()):
     path, alt = P("articoli", slug), ALT("articoli", slug)
     cr, ld = crumbs([H(), (L("Articoli", "Articles", "Artículos", "Articles"), P("articoli")), (crumb, None)])
@@ -50,8 +93,9 @@ def scrivi_articolo(slug, title, desc, h1, crumb, corpo_html, items=None, ld_ext
     corpo = f'''{cr}
 <div class="intro"><div class="eyebrow">{L("Articolo", "Article", "Artículo", "Article")}</div><h1>{e(h1)}</h1><p class="note">{L("Pubblicato il ", "Published on ", "Publicado el ", "Publié le ")}{S.data_txt(DATE_ART.get(slug, OGGI_ISO))} · {L("a cura di", "by", "por", "par")} <a href="{P("chi-siamo")}">Luca Bicchieri, PadelMetrix</a></p></div>
 <div class="prose">{corpo_html}<p class="note" style="margin:28px 0 56px">{L("Ti è stato utile? Seguici per i prossimi confronti:", "Found this useful? Follow us for the next comparisons:", "¿Te ha sido útil? Síguenos para las próximas comparativas:", "Cet article vous a été utile ? Suivez-nous pour les prochains comparatifs :")} {S.social_links()}</p></div>
+{leggi_anche(slug)}
 {lista}'''
-    S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, articolo_ld(h1, desc, path, DATE_ART.get(slug, OGGI_ISO)), *ld_extra], alt=alt), alt)
+    S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, articolo_ld(h1, desc, path, DATE_ART.get(slug, OGGI_ISO)), *ld_extra], alt=alt, og=f"/og/a/{slug}-{S.lang()}.jpg"), alt)
 
 
 def faq(qa):
@@ -3080,18 +3124,26 @@ def art_bela(db):
 def indice(arts):
     path, alt = P("articoli"), ALT("articoli")
     cr, ld = crumbs([H(), (L("Articoli", "Articles", "Artículos", "Articles"), None)])
-    lista = "".join(f'<li><a href="{P("articoli", s)}"><b>{e(t)}</b></a><br><span class="note">{e(d)}</span></li>' for s, t, d in arts)
+    ordine = sorted(arts, key=lambda x: (-int(DATE_ART.get(x[0], OGGI_ISO).replace("-", "")), categoria(x[0]) == "regali"))
+    lista = "".join(art_card(P("articoli", s), t, d, categoria(s), DATE_ART.get(s, OGGI_ISO)) for s, t, d in ordine)
+    presenti = [c for c in ("giocatori", "novita", "guide", "regali") if any(categoria(s) == c for s, _, _ in arts)]
+    chips = (f'<div class="achips" id="achips"><button type="button" class="on" data-c="">{L("Tutti", "All", "Todos", "Tous")}</button>'
+             + "".join(f'<button type="button" data-c="{c}">{e(cat_nome(c))}</button>' for c in presenti) + "</div>")
+    js = ("<script>(function(){var b=document.getElementById('achips');if(!b)return;var cs=[].slice.call(document.querySelectorAll('#agrid .acard'));"
+          "b.addEventListener('click',function(ev){var t=ev.target.closest('button');if(!t)return;[].forEach.call(b.children,function(x){x.classList.toggle('on',x===t)});"
+          "var c=t.getAttribute('data-c');cs.forEach(function(a){a.style.display=(!c||a.getAttribute('data-cat')===c)?'':'none'})})})();</script>")
     corpo = f'''{cr}
 <div class="intro"><h1>{L("Articoli", "Articles", "Artículos", "Articles")}</h1><p>{L(
         "Novità, confronti tra versioni e approfondimenti sulle racchette da padel, con i dati del database PadelMetrix e le fonti citate.",
         "New releases, comparisons between versions and in-depth articles on padel rackets, with data from the PadelMetrix database and cited sources.",
         "Novedades, comparativas entre versiones y artículos en profundidad sobre palas de pádel, con los datos de la base de PadelMetrix y las fuentes citadas.", "Nouveautés, comparatifs entre versions et articles de fond sur les raquettes de padel, avec les données de la base PadelMetrix et des sources citées.")}</p></div>
-<div class="prose"><ul class="clean lista-art">{lista}</ul></div>'''
+{chips}
+<div class="agrid" id="agrid">{lista}</div>'''
     S.scrivi(path, pagina(L("Articoli sulle racchette da padel | PadelMetrix", "Padel racket articles | PadelMetrix", "Artículos sobre palas de pádel | PadelMetrix", "Articles sur les raquettes de padel | PadelMetrix"),
                           L("Novità 2027, confronti tra versioni e approfondimenti sulle racchette da padel, con dati e fonti.",
                             "2027 releases, comparisons between versions and in-depth articles on padel rackets, with data and sources.",
                             "Novedades 2027, comparativas entre versiones y artículos sobre palas de pádel, con datos y fuentes.", "Nouveautés 2027, comparatifs entre versions et articles de fond sur les raquettes de padel, avec données et sources."),
-                          path, corpo, on="articoli", ld=[ld], alt=alt), alt)
+                          path, corpo, on="articoli", ld=[ld], alt=alt, extra_js=js), alt)
 
 
 RACCHETTE_ARTICOLO = {"siux-diablo-pro-2026-vs-2027-cosa-cambia": ["siux-diablo-pro-2026", "siux-diablo-pro-2027"],
@@ -3107,7 +3159,7 @@ def main():
         arts = [art_superfici(db), art_vetri(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
-            x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
+            x = elenco.setdefault(slug, {"slug": slug, "cat": categoria(slug), "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
             x["titolo"][l], x["desc"][l], x["url"][l] = titolo, desc, P("articoli", slug)
     (ROOT / "data" / "articoli.json").write_text(json.dumps(list(elenco.values()), ensure_ascii=False, indent=1), encoding="utf-8")
     set_lang("it")
