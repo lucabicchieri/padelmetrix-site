@@ -18,6 +18,15 @@
 }
 },
 {
+"path": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
+"alt": {
+"it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
+"en": "/en/articles/fernando-belasteguin-career-records-rackets/",
+"es": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
+"fr": "/fr/articles/fernando-belasteguin-carriere-records-raquettes/"
+}
+},
+{
 "path": "/it/articoli/adidas-metalbone-storia-origine-nome/",
 "alt": {
 "it": "/it/articoli/adidas-metalbone-storia-origine-nome/",
@@ -366,6 +375,15 @@
 "en": "/en/articles/padel-court-glass-types-tempered-laminated/",
 "es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
+"path": "/en/articles/fernando-belasteguin-career-records-rackets/",
+"alt": {
+"it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
+"en": "/en/articles/fernando-belasteguin-career-records-rackets/",
+"es": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
+"fr": "/fr/articles/fernando-belasteguin-carriere-records-raquettes/"
 }
 },
 {
@@ -720,6 +738,15 @@
 }
 },
 {
+"path": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
+"alt": {
+"it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
+"en": "/en/articles/fernando-belasteguin-career-records-rackets/",
+"es": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
+"fr": "/fr/articles/fernando-belasteguin-carriere-records-raquettes/"
+}
+},
+{
 "path": "/es/articulos/adidas-metalbone-historia-origen-nombre/",
 "alt": {
 "it": "/it/articoli/adidas-metalbone-storia-origine-nome/",
@@ -1068,6 +1095,15 @@
 "en": "/en/articles/padel-court-glass-types-tempered-laminated/",
 "es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
+"path": "/fr/articles/fernando-belasteguin-carriere-records-raquettes/",
+"alt": {
+"it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
+"en": "/en/articles/fernando-belasteguin-career-records-rackets/",
+"es": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
+"fr": "/fr/articles/fernando-belasteguin-carriere-records-raquettes/"
 }
 },
 {
