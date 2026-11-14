@@ -2673,6 +2673,140 @@ def regali(db):
     return out
 
 
+# ---------------------------------------------------------------- Fernando Belasteguín, il Boss (novembre 2026)
+BELA_SLUG = "fernando-belasteguin-carriera-record-racchette"
+S.SLUG[BELA_SLUG] = ("fernando-belasteguin-career-records-rackets", "fernando-belasteguin-carrera-records-palas")
+S.SLUG_FR[BELA_SLUG] = "fernando-belasteguin-carriere-records-raquettes"
+DATE_ART[BELA_SLUG] = "2026-11-20"
+
+
+def art_bela(db):
+    sl = ["wilson-bela-max-2027", "wilson-bela-pro-v3-2026", "wilson-bela-v3-2026"]
+    by = {r["slug"]: r for r in db}
+    rs = [by[s] for s in sl if s in by]
+    umax, upro, uv3 = (url_r(by[s]) for s in sl)
+    wiki = fonte("https://en.wikipedia.org/wiki/Fernando_Belastegu%C3%ADn", "Wikipedia")
+    ann = fonte("https://www.padeladdict.com/fernando-belasteguin-confirma-que-2024-sera-su-ultimo-ano-como-profesional/", "Padel Addict")
+    mdp = fonte("https://www.elmarplatense.com/fernando-belasteguin-parece-un-cuento-empece-en-mar-del-plata-y-termino-aca", "El Marplatense")
+    mil = fonte("https://www.padeladdict.com/fernando-belasteguin-se-despide-del-padel-profesional/", "Padel Addict")
+    bcn = fonte("https://www.beinsports.com/en-us/other-sports/articles-video/fernando-belasteguín-farewell-to-the-messi-of-pádel-2024-12-21", "beIN Sports")
+    wil = fonte("https://www.padeladdict.com/fernando-belasteguin-firma-con-wilson/", "Padel Addict")
+    box = _box5(L("Le racchette di Bela", "Bela's rackets", "Las palas de Bela", "Les raquettes de Bela"),
+                L("Bela Max 2027, Bela Pro V3 e Bela V3: dati, prezzi e alternative.", "Bela Max 2027, Bela Pro V3 and Bela V3: specs, prices and alternatives.",
+                  "Bela Max 2027, Bela Pro V3 y Bela V3: datos, precios y alternativas.", "Bela Max 2027, Bela Pro V3 et Bela V3 : données, prix et alternatives."),
+                L("Vedi la Bela Max", "See the Bela Max", "Ver la Bela Max", "Voir la Bela Max"), umax)
+    corpo = L(f'''<p><b>Per sedici anni di fila, dal 2002 al 2017, il numero uno del padel mondiale è stato sempre lui: Fernando Belasteguín, per tutti "Bela" o "El Boss". Argentino di Pehuajó, ha giocato da professionista per trent'anni, ha vinto circa 230 tornei e ha trasformato il modo di stare in campo. Nel dicembre 2024 si è ritirato. Ecco la sua storia, i numeri che nessuno ha ancora avvicinato e le racchette Wilson che portano il suo nome.</b></p>
+<h2>Da Pehuajó al numero uno</h2>
+<p>Fernando Belasteguín è nato il 19 maggio 1979 a Pehuajó, in provincia di Buenos Aires ({wiki}). Ha scoperto il padel a nove anni, nel 1989, e a quindici, nel 1995, ha debuttato tra i professionisti a Mar del Plata ({ann}; {mdp}). Nel 2002, a 22 anni, è diventato il numero uno più giovane di sempre ({wiki}).</p>
+<h2>La coppia perfetta con Juan Martín Díaz</h2>
+<p>Dal 2002 al 2014 ha giocato con Juan Martín Díaz: tredici stagioni, tutte chiuse al numero uno. Insieme hanno vinto 158 tornei e per un anno e nove mesi non hanno perso una partita, conquistando 22 tornei di fila ({ann}). Una striscia che nel padel moderno, con più coppie forti e più tornei, sembra impossibile da ripetere.</p>
+<h2>Bela in numeri</h2>
+<ul><li><b>16 anni consecutivi</b> da numero uno, dal 2002 al 2017 ({bcn}; {mil}).</li>
+<li><b>Circa 230 titoli</b> in carriera, il record del padel ({bcn}; {wiki}).</li>
+<li><b>6 volte campione del mondo</b> ({wiki}).</li>
+<li><b>41 anni:</b> l'età con cui ha vinto il Master Final 2021, il più anziano di sempre ({wiki}).</li>
+<li><b>30 anni</b> di carriera da professionista, dal 1995 al 2024 ({ann}).</li></ul>
+<h2>Sempre pronto a ricominciare</h2>
+<p>Dopo Juan Martín Díaz ha giocato con molti dei migliori: tra gli altri Pablo Lima, Sanyo Gutiérrez, Agustín Tapia e Arturo Coello ({ann}). Con Tapia, nel 2019, per la prima volta in carriera ha giocato a destra, sul lato del drive ({wiki}): un cambio raro per un campione che aveva vinto tutto a sinistra.</p>
+<h2>L'ultimo anno</h2>
+<p>Nel febbraio 2024 ha annunciato con un video che quella sarebbe stata la sua ultima stagione ({ann}). A maggio ha giocato l'ultimo torneo in Argentina proprio a Mar del Plata, dove tutto era cominciato: con Juan Tello è arrivato ai quarti, dove ha perso 6-3, 6-1 contro i numeri uno, Tapia e Coello ({mdp}). L'ultima partita da professionista è arrivata il 5 dicembre 2024 al P1 di Milano: con Tino Libaak ha perso negli ottavi 6-3, 6-4 contro Garrido e Bergamini, a 45 anni ({mil}).</p>
+<p>Il saluto vero è arrivato poco dopo, al Palau Sant Jordi di Barcellona: più di 14.500 persone, Juan Martín Díaz in campo con lui, un video con i messaggi di grandi campioni, tra cui Rafa Nadal ({bcn}).</p>
+<h2>Le racchette Wilson di Bela</h2>
+<p>Dal 2020 Belasteguín è legato a Wilson, che gli ha dedicato una linea di racchette, la Bela; prima giocava con Head ({wil}). Oggi nel nostro catalogo ci sono:</p>
+<ul><li><a href="{umax}">Wilson Bela Max 2027</a>: la novità, a goccia, 365 g, gomma morbida, per chi gioca d'attacco.</li>
+<li><a href="{upro}">Wilson Bela Pro V3</a>: la più tecnica della linea, carbonio 24K e 370 g, per giocatori avanzati.</li>
+<li><a href="{uv3}">Wilson Bela V3</a>: carbonio 3K e superficie ruvida per l'effetto, più accessibile.</li></ul>{box}
+<p class="note">Fonti: {wiki}; {ann}; {mdp}; {mil}; {bcn}; {wil}. Dati aggiornati a novembre 2026.</p>''',
+              f'''<p><b>For sixteen years in a row, from 2002 to 2017, padel's world number one was always the same man: Fernando Belasteguín, known to everyone as "Bela" or "El Boss". An Argentine from Pehuajó, he played professionally for thirty years, won around 230 tournaments and changed the way the game is played. He retired in December 2024. Here's his story, the numbers nobody has come close to, and the Wilson rackets that bear his name.</b></p>
+<h2>From Pehuajó to number one</h2>
+<p>Fernando Belasteguín was born on 19 May 1979 in Pehuajó, in Buenos Aires province ({wiki}). He discovered padel at nine, in 1989, and at fifteen, in 1995, he made his professional debut in Mar del Plata ({ann}; {mdp}). In 2002, aged 22, he became the youngest world number one ever ({wiki}).</p>
+<h2>The perfect partnership with Juan Martín Díaz</h2>
+<p>From 2002 to 2014 he played with Juan Martín Díaz: thirteen seasons, all finished at number one. Together they won 158 tournaments and went a year and nine months without losing a match, winning 22 tournaments in a row ({ann}). In modern padel, with more strong pairs and more tournaments, a streak like that looks impossible to repeat.</p>
+<h2>Bela in numbers</h2>
+<ul><li><b>16 consecutive years</b> as number one, from 2002 to 2017 ({bcn}; {mil}).</li>
+<li><b>Around 230 titles</b> in his career, padel's record ({bcn}; {wiki}).</li>
+<li><b>6-time world champion</b> ({wiki}).</li>
+<li><b>41:</b> his age when he won the 2021 Master Final, the oldest winner ever ({wiki}).</li>
+<li><b>30 years</b> as a professional, from 1995 to 2024 ({ann}).</li></ul>
+<h2>Always ready to start again</h2>
+<p>After Juan Martín Díaz he played with many of the best, among them Pablo Lima, Sanyo Gutiérrez, Agustín Tapia and Arturo Coello ({ann}). With Tapia, in 2019, he played on the right, the drive side, for the first time in his career ({wiki}): a rare switch for a champion who had won everything on the left.</p>
+<h2>The final year</h2>
+<p>In February 2024 he announced in a video that it would be his last season ({ann}). In May he played his last tournament in Argentina in Mar del Plata, where it had all begun: with Juan Tello he reached the quarter-finals, losing 6-3, 6-1 to the world number ones, Tapia and Coello ({mdp}). His last professional match came on 5 December 2024 at the Milan P1: with Tino Libaak he lost in the round of 16, 6-3, 6-4 to Garrido and Bergamini, aged 45 ({mil}).</p>
+<p>The real goodbye came soon after, at the Palau Sant Jordi in Barcelona: more than 14,500 people, Juan Martín Díaz on court with him and a video with messages from great champions, including Rafa Nadal ({bcn}).</p>
+<h2>Bela's Wilson rackets</h2>
+<p>Since 2020 Belasteguín has been with Wilson, which has dedicated a line of rackets to him, the Bela; before that he played with Head ({wil}). Our catalogue currently includes:</p>
+<ul><li><a href="{umax}">Wilson Bela Max 2027</a>: the new one, a 365 g teardrop with a soft core, for attacking players.</li>
+<li><a href="{upro}">Wilson Bela Pro V3</a>: the most technical of the line, 24K carbon and 370 g, for advanced players.</li>
+<li><a href="{uv3}">Wilson Bela V3</a>: 3K carbon and a rough surface for spin, more accessible.</li></ul>{box}
+<p class="note">Sources: {wiki}; {ann}; {mdp}; {mil}; {bcn}; {wil}. Data updated November 2026.</p>''',
+              f'''<p><b>Durante dieciséis años seguidos, de 2002 a 2017, el número uno del pádel mundial fue siempre él: Fernando Belasteguín, para todos "Bela" o "El Boss". Argentino de Pehuajó, jugó como profesional durante treinta años, ganó unos 230 torneos y cambió la forma de estar en la pista. Se retiró en diciembre de 2024. Esta es su historia, los números que nadie ha igualado y las palas Wilson que llevan su nombre.</b></p>
+<h2>De Pehuajó al número uno</h2>
+<p>Fernando Belasteguín nació el 19 de mayo de 1979 en Pehuajó, en la provincia de Buenos Aires ({wiki}). Descubrió el pádel a los nueve años, en 1989, y a los quince, en 1995, debutó como profesional en Mar del Plata ({ann}; {mdp}). En 2002, con 22 años, se convirtió en el número uno más joven de la historia ({wiki}).</p>
+<h2>La pareja perfecta con Juan Martín Díaz</h2>
+<p>De 2002 a 2014 jugó con Juan Martín Díaz: trece temporadas, todas terminadas como número uno. Juntos ganaron 158 torneos y estuvieron un año y nueve meses sin perder un partido, con 22 torneos seguidos ({ann}). En el pádel moderno, con más parejas fuertes y más torneos, una racha así parece imposible de repetir.</p>
+<h2>Bela en números</h2>
+<ul><li><b>16 años seguidos</b> como número uno, de 2002 a 2017 ({bcn}; {mil}).</li>
+<li><b>Unos 230 títulos</b> en su carrera, el récord del pádel ({bcn}; {wiki}).</li>
+<li><b>6 veces campeón del mundo</b> ({wiki}).</li>
+<li><b>41 años:</b> la edad con la que ganó el Master Final 2021, el campeón más veterano ({wiki}).</li>
+<li><b>30 años</b> de carrera profesional, de 1995 a 2024 ({ann}).</li></ul>
+<h2>Siempre listo para empezar de nuevo</h2>
+<p>Después de Juan Martín Díaz jugó con muchos de los mejores, entre ellos Pablo Lima, Sanyo Gutiérrez, Agustín Tapia y Arturo Coello ({ann}). Con Tapia, en 2019, jugó por primera vez en su carrera a la derecha, en el lado del drive ({wiki}): un cambio raro para un campeón que lo había ganado todo a la izquierda.</p>
+<h2>El último año</h2>
+<p>En febrero de 2024 anunció en un vídeo que sería su última temporada ({ann}). En mayo jugó su último torneo en Argentina precisamente en Mar del Plata, donde todo había empezado: con Juan Tello llegó a cuartos, donde perdió 6-3, 6-1 ante los números uno, Tapia y Coello ({mdp}). Su último partido como profesional llegó el 5 de diciembre de 2024 en el P1 de Milán: con Tino Libaak perdió en octavos 6-3, 6-4 ante Garrido y Bergamini, a los 45 años ({mil}).</p>
+<p>La despedida de verdad llegó poco después, en el Palau Sant Jordi de Barcelona: más de 14.500 personas, Juan Martín Díaz en la pista con él y un vídeo con mensajes de grandes campeones, entre ellos Rafa Nadal ({bcn}).</p>
+<h2>Las palas Wilson de Bela</h2>
+<p>Desde 2020 Belasteguín está ligado a Wilson, que le ha dedicado una línea de palas, la Bela; antes jugaba con Head ({wil}). Hoy en nuestro catálogo están:</p>
+<ul><li><a href="{umax}">Wilson Bela Max 2027</a>: la novedad, de lágrima, 365 g, goma blanda, para quien juega al ataque.</li>
+<li><a href="{upro}">Wilson Bela Pro V3</a>: la más técnica de la línea, carbono 24K y 370 g, para jugadores avanzados.</li>
+<li><a href="{uv3}">Wilson Bela V3</a>: carbono 3K y superficie rugosa para el efecto, más accesible.</li></ul>{box}
+<p class="note">Fuentes: {wiki}; {ann}; {mdp}; {mil}; {bcn}; {wil}. Datos actualizados en noviembre de 2026.</p>''',
+              f'''<p><b>Pendant seize ans d'affilée, de 2002 à 2017, le numéro un mondial du padel a toujours été le même : Fernando Belasteguín, « Bela » ou « El Boss » pour tout le monde. Argentin de Pehuajó, il a joué en professionnel pendant trente ans, remporté environ 230 tournois et changé la façon de jouer. Il a pris sa retraite en décembre 2024. Voici son histoire, les chiffres que personne n'a approchés et les raquettes Wilson qui portent son nom.</b></p>
+<h2>De Pehuajó au numéro un</h2>
+<p>Fernando Belasteguín est né le 19 mai 1979 à Pehuajó, dans la province de Buenos Aires ({wiki}). Il a découvert le padel à neuf ans, en 1989, et à quinze ans, en 1995, il a fait ses débuts professionnels à Mar del Plata ({ann} ; {mdp}). En 2002, à 22 ans, il est devenu le plus jeune numéro un de l'histoire ({wiki}).</p>
+<h2>La paire parfaite avec Juan Martín Díaz</h2>
+<p>De 2002 à 2014, il a joué avec Juan Martín Díaz : treize saisons, toutes terminées à la première place. Ensemble, ils ont gagné 158 tournois et sont restés un an et neuf mois sans perdre un match, avec 22 tournois d'affilée ({ann}). Dans le padel moderne, avec plus de paires fortes et plus de tournois, une telle série semble impossible à répéter.</p>
+<h2>Bela en chiffres</h2>
+<ul><li><b>16 ans d'affilée</b> numéro un, de 2002 à 2017 ({bcn} ; {mil}).</li>
+<li><b>Environ 230 titres</b> en carrière, le record du padel ({bcn} ; {wiki}).</li>
+<li><b>6 fois champion du monde</b> ({wiki}).</li>
+<li><b>41 ans :</b> son âge lors de sa victoire au Master Final 2021, le vainqueur le plus âgé ({wiki}).</li>
+<li><b>30 ans</b> de carrière professionnelle, de 1995 à 2024 ({ann}).</li></ul>
+<h2>Toujours prêt à recommencer</h2>
+<p>Après Juan Martín Díaz, il a joué avec beaucoup des meilleurs, dont Pablo Lima, Sanyo Gutiérrez, Agustín Tapia et Arturo Coello ({ann}). Avec Tapia, en 2019, il a joué pour la première fois de sa carrière à droite, côté drive ({wiki}) : un changement rare pour un champion qui avait tout gagné à gauche.</p>
+<h2>La dernière année</h2>
+<p>En février 2024, il a annoncé dans une vidéo que ce serait sa dernière saison ({ann}). En mai, il a joué son dernier tournoi en Argentine justement à Mar del Plata, là où tout avait commencé : avec Juan Tello, il a atteint les quarts, perdus 6-3, 6-1 face aux numéros un, Tapia et Coello ({mdp}). Son dernier match professionnel a eu lieu le 5 décembre 2024 au P1 de Milan : avec Tino Libaak, il s'est incliné en huitièmes 6-3, 6-4 face à Garrido et Bergamini, à 45 ans ({mil}).</p>
+<p>Les vrais adieux sont arrivés peu après, au Palau Sant Jordi de Barcelone : plus de 14 500 personnes, Juan Martín Díaz sur le court avec lui et une vidéo avec les messages de grands champions, dont Rafa Nadal ({bcn}).</p>
+<h2>Les raquettes Wilson de Bela</h2>
+<p>Depuis 2020, Belasteguín est lié à Wilson, qui lui a consacré une ligne de raquettes, la Bela ; avant, il jouait avec Head ({wil}). Notre catalogue comprend aujourd'hui :</p>
+<ul><li><a href="{umax}">Wilson Bela Max 2027</a> : la nouveauté, en goutte d'eau, 365 g, gomme souple, pour les joueurs offensifs.</li>
+<li><a href="{upro}">Wilson Bela Pro V3</a> : la plus technique de la ligne, carbone 24K et 370 g, pour joueurs avancés.</li>
+<li><a href="{uv3}">Wilson Bela V3</a> : carbone 3K et surface rugueuse pour l'effet, plus accessible.</li></ul>{box}
+<p class="note">Sources : {wiki} ; {ann} ; {mdp} ; {mil} ; {bcn} ; {wil}. Données mises à jour en novembre 2026.</p>''')
+    qa = [(L("Quanti anni è stato numero uno Belasteguín?", "How many years was Belasteguín world number one?", "¿Cuántos años fue número uno Belasteguín?", "Combien d'années Belasteguín a-t-il été numéro un ?"),
+           L("Sedici anni consecutivi, dal 2002 al 2017; tredici di questi in coppia con Juan Martín Díaz.", "Sixteen consecutive years, from 2002 to 2017; thirteen of them partnering Juan Martín Díaz.",
+             "Dieciséis años seguidos, de 2002 a 2017; trece de ellos junto a Juan Martín Díaz.", "Seize ans d'affilée, de 2002 à 2017 ; treize d'entre eux avec Juan Martín Díaz.")),
+          (L("Quando si è ritirato Belasteguín?", "When did Belasteguín retire?", "¿Cuándo se retiró Belasteguín?", "Quand Belasteguín a-t-il pris sa retraite ?"),
+           L("Ha giocato l'ultima partita da professionista il 5 dicembre 2024 al P1 di Milano, a 45 anni, e ha salutato il pubblico al Palau Sant Jordi di Barcellona.",
+             "He played his last professional match on 5 December 2024 at the Milan P1, aged 45, and said goodbye to the crowd at the Palau Sant Jordi in Barcelona.",
+             "Jugó su último partido como profesional el 5 de diciembre de 2024 en el P1 de Milán, a los 45 años, y se despidió del público en el Palau Sant Jordi de Barcelona.",
+             "Il a joué son dernier match professionnel le 5 décembre 2024 au P1 de Milan, à 45 ans, et a fait ses adieux au public au Palau Sant Jordi de Barcelone.")),
+          (L("Con che racchetta gioca Belasteguín?", "Which racket does Belasteguín use?", "¿Con qué pala juega Belasteguín?", "Avec quelle raquette joue Belasteguín ?"),
+           L("Dal 2020 con Wilson, che gli dedica la linea Bela: oggi Bela Max 2027, Bela Pro V3 e Bela V3.", "Since 2020 with Wilson, which dedicates the Bela line to him: today the Bela Max 2027, Bela Pro V3 and Bela V3.",
+             "Desde 2020 con Wilson, que le dedica la línea Bela: hoy Bela Max 2027, Bela Pro V3 y Bela V3.", "Depuis 2020 avec Wilson, qui lui consacre la ligne Bela : aujourd'hui Bela Max 2027, Bela Pro V3 et Bela V3."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("Fernando Belasteguín, il Boss del padel: 16 anni da numero uno e le racchette Wilson Bela", "Fernando Belasteguín, padel's Boss: 16 years at number one and the Wilson Bela rackets",
+               "Fernando Belasteguín, el Boss del pádel: 16 años de número uno y las palas Wilson Bela", "Fernando Belasteguín, le Boss du padel : 16 ans numéro un et les raquettes Wilson Bela")
+    desc = L("La storia di Fernando Belasteguín: 16 anni consecutivi da numero uno, circa 230 titoli, la coppia con Juan Martín Díaz, il ritiro nel 2024 e le racchette Wilson Bela.",
+             "The story of Fernando Belasteguín: 16 consecutive years at number one, around 230 titles, the partnership with Juan Martín Díaz, his 2024 retirement and the Wilson Bela rackets.",
+             "La historia de Fernando Belasteguín: 16 años seguidos de número uno, unos 230 títulos, la pareja con Juan Martín Díaz, la retirada en 2024 y las palas Wilson Bela.",
+             "L'histoire de Fernando Belasteguín : 16 ans d'affilée numéro un, environ 230 titres, la paire avec Juan Martín Díaz, la retraite en 2024 et les raquettes Wilson Bela.")
+    RACCHETTE_ARTICOLO[BELA_SLUG] = [r["slug"] for r in rs]
+    scrivi_articolo(BELA_SLUG, titolo + " | PadelMetrix", desc, titolo, "Fernando Belasteguín", corpo + faq_htm, items=rs, ld_extra=[faq_ld])
+    return BELA_SLUG, titolo, L("La leggenda dei 16 anni da numero uno, il ritiro e le racchette che portano il suo nome.", "The legend of 16 years at number one, his retirement and the rackets named after him.",
+                                "La leyenda de los 16 años de número uno, la retirada y las palas que llevan su nombre.", "La légende des 16 ans numéro un, sa retraite et les raquettes qui portent son nom.")
+
+
 # ---------------------------------------------------------------- Indice
 
 def indice(arts):
@@ -2702,7 +2836,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
