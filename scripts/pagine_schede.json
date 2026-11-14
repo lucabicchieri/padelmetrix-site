@@ -144,6 +144,15 @@
 }
 },
 {
+"path": "/it/racchette/adidas-match-3-4-2027/",
+"alt": {
+"it": "/it/racchette/adidas-match-3-4-2027/",
+"en": "/en/rackets/adidas-match-3-4-2027/",
+"es": "/es/palas/adidas-match-3-4-2027/",
+"fr": "/fr/raquettes/adidas-match-3-4-2027/"
+}
+},
+{
 "path": "/it/racchette/adidas-match-black-2026/",
 "alt": {
 "it": "/it/racchette/adidas-match-black-2026/",
@@ -3588,6 +3597,15 @@
 "en": "/en/rackets/adidas-drive-light-2026/",
 "es": "/es/palas/adidas-drive-light-2026/",
 "fr": "/fr/raquettes/adidas-drive-light-2026/"
+}
+},
+{
+"path": "/en/rackets/adidas-match-3-4-2027/",
+"alt": {
+"it": "/it/racchette/adidas-match-3-4-2027/",
+"en": "/en/rackets/adidas-match-3-4-2027/",
+"es": "/es/palas/adidas-match-3-4-2027/",
+"fr": "/fr/raquettes/adidas-match-3-4-2027/"
 }
 },
 {
@@ -7038,6 +7056,15 @@
 }
 },
 {
+"path": "/es/palas/adidas-match-3-4-2027/",
+"alt": {
+"it": "/it/racchette/adidas-match-3-4-2027/",
+"en": "/en/rackets/adidas-match-3-4-2027/",
+"es": "/es/palas/adidas-match-3-4-2027/",
+"fr": "/fr/raquettes/adidas-match-3-4-2027/"
+}
+},
+{
 "path": "/es/palas/adidas-match-black-2026/",
 "alt": {
 "it": "/it/racchette/adidas-match-black-2026/",
@@ -10482,6 +10509,15 @@
 "en": "/en/rackets/adidas-drive-light-2026/",
 "es": "/es/palas/adidas-drive-light-2026/",
 "fr": "/fr/raquettes/adidas-drive-light-2026/"
+}
+},
+{
+"path": "/fr/raquettes/adidas-match-3-4-2027/",
+"alt": {
+"it": "/it/racchette/adidas-match-3-4-2027/",
+"en": "/en/rackets/adidas-match-3-4-2027/",
+"es": "/es/palas/adidas-match-3-4-2027/",
+"fr": "/fr/raquettes/adidas-match-3-4-2027/"
 }
 },
 {
