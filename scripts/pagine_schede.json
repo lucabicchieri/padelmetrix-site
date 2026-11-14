@@ -3339,6 +3339,15 @@
 }
 },
 {
+"path": "/it/racchette/wilson-bela-max-2027/",
+"alt": {
+"it": "/it/racchette/wilson-bela-max-2027/",
+"en": "/en/rackets/wilson-bela-max-2027/",
+"es": "/es/palas/wilson-bela-max-2027/",
+"fr": "/fr/raquettes/wilson-bela-max-2027/"
+}
+},
+{
 "path": "/it/racchette/wilson-bela-pro-v3-2026/",
 "alt": {
 "it": "/it/racchette/wilson-bela-pro-v3-2026/",
@@ -6792,6 +6801,15 @@
 "en": "/en/rackets/wilson-bela-junior-v2-2023/",
 "es": "/es/palas/wilson-bela-junior-v2-2023/",
 "fr": "/fr/raquettes/wilson-bela-junior-v2-2023/"
+}
+},
+{
+"path": "/en/rackets/wilson-bela-max-2027/",
+"alt": {
+"it": "/it/racchette/wilson-bela-max-2027/",
+"en": "/en/rackets/wilson-bela-max-2027/",
+"es": "/es/palas/wilson-bela-max-2027/",
+"fr": "/fr/raquettes/wilson-bela-max-2027/"
 }
 },
 {
@@ -10251,6 +10269,15 @@
 }
 },
 {
+"path": "/es/palas/wilson-bela-max-2027/",
+"alt": {
+"it": "/it/racchette/wilson-bela-max-2027/",
+"en": "/en/rackets/wilson-bela-max-2027/",
+"es": "/es/palas/wilson-bela-max-2027/",
+"fr": "/fr/raquettes/wilson-bela-max-2027/"
+}
+},
+{
 "path": "/es/palas/wilson-bela-pro-v3-2026/",
 "alt": {
 "it": "/it/racchette/wilson-bela-pro-v3-2026/",
@@ -13704,6 +13731,15 @@
 "en": "/en/rackets/wilson-bela-junior-v2-2023/",
 "es": "/es/palas/wilson-bela-junior-v2-2023/",
 "fr": "/fr/raquettes/wilson-bela-junior-v2-2023/"
+}
+},
+{
+"path": "/fr/raquettes/wilson-bela-max-2027/",
+"alt": {
+"it": "/it/racchette/wilson-bela-max-2027/",
+"en": "/en/rackets/wilson-bela-max-2027/",
+"es": "/es/palas/wilson-bela-max-2027/",
+"fr": "/fr/raquettes/wilson-bela-max-2027/"
 }
 },
 {
