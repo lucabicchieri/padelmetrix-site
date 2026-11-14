@@ -23,11 +23,16 @@ e = html.escape
 SITO = "https://www.padelmetrix.com"
 
 IN_EVIDENZA = [
-    "adidas-metalbone-hrd-plus-2026",
-    "nox-at10-genius-12k-xtrem-2027",
+    "adidas-metalbone-2026",
+    "babolat-viper-juan-lebron-3-0-2026",
     "bullpadel-hack-05-2027",
-    "starvie-raptor-plus-2027",
+    "nox-genius-18k-alum-2027",
+    "siux-diablo-pro-2027",
+    "head-extreme-pro-2026",
+    "wilson-bela-max-2027",
+    "starvie-triton-power-plus-2027",
 ]
+NATALE = True  # riquadro delle guide regalo in home: da spegnere dopo le feste
 
 T = {
     "it": {
@@ -173,7 +178,7 @@ T = {
 }
 
 CSS = """
-:root{--g:#0F3D2E;--gd:#0B2E23;--lime:#C6F432;--ink:#1F2D27;--ink2:#3D4D45;--mut:#5B6B63;--line:#E1E5DF;--soft:#EEF2EC;--bg:#FAFAF7}
+:root{--g:#0F3D2E;--gd:#0B2E23;--lime:#C6F432;--ink:#1F2D27;--ink2:#3D4D45;--mut:#5B6B63;--line:#E1E5DF;--soft:#EEF2EC;--bg:#FAFAF7;--green:#0F3D2E;--muted:#5B6B63;--white:#fff}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55}
 h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0;letter-spacing:-.02em}
@@ -232,6 +237,25 @@ section.block{padding:56px 0 8px}
 .marche{display:flex;flex-wrap:wrap;gap:12px}
 .marche a{display:flex;flex-direction:column;gap:2px;min-width:170px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;text-decoration:none;color:var(--ink)}
 .marche b{font-family:'Space Grotesk',sans-serif;font-size:20px}.marche span{font-size:14px;color:var(--mut)}
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.rk{position:relative}.rk .ill{height:170px;background:#F1F5EE}
+.rk .ill.has-img{background:#fff;border-bottom:1px solid var(--soft)}
+.rk .ill.has-img a{display:flex;width:100%;height:100%;align-items:center;justify-content:center}
+.rk .ill.has-img img{max-width:86%;max-height:150px;object-fit:contain}
+.rk a.body{text-decoration:none;color:var(--ink)}.rk .body{padding:14px 16px 16px;gap:4px}
+.natale{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;background:var(--lime);color:var(--gd);border-radius:18px;padding:26px 28px;text-decoration:none}
+.natale b{font-family:'Space Grotesk',sans-serif;font-size:26px;line-height:1.15;display:block}
+.natale span{font-size:16px}.natale .txt{flex:1 1 320px}
+.natale .btn{background:var(--g);color:#fff;white-space:nowrap}
+@media (max-width:900px){.hero .art{display:none}.hero .wrap{padding-top:36px;padding-bottom:36px;gap:24px}.hero .txt{gap:16px}.hero p{font-size:17px}
+section.block{padding:36px 0 4px}.head{margin-bottom:16px}.head h2{font-size:26px}
+.strip{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;margin-right:-24px;padding-right:24px;padding-bottom:8px;gap:12px}
+.strip .rk{flex:0 0 62%;max-width:240px;scroll-snap-align:start}.rk .ill{height:150px}
+.grid3{grid-template-columns:1fr;gap:12px}.grid3 .card{flex-direction:row;align-items:stretch}.grid3 .ill{flex:0 0 104px;height:auto}.grid3 .ill svg{width:60px;height:auto}
+.grid3 .card .body{padding:14px 16px;gap:4px}.grid3 .card h3{font-size:20px}.grid3 .card p{font-size:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tool{padding:22px}.tool h3{font-size:22px}.come{margin-top:36px}.come .wrap{padding-top:36px;padding-bottom:36px}
+.marche{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-right:-24px;padding-right:24px;padding-bottom:8px}.marche a{flex:0 0 auto;min-width:150px;padding:12px 16px}
+.natale{padding:20px}.natale b{font-size:22px}}
 footer{background:var(--gd);color:#C9D6CF;margin-top:64px}
 footer .wrap{padding-top:48px;padding-bottom:24px;display:flex;flex-direction:column;gap:32px}
 footer .cols{display:flex;flex-wrap:wrap;gap:32px 64px}
@@ -265,18 +289,41 @@ def guide_box():
             + '<div class="marche">' + "".join(f'<a href="{u}"><b>{b}</b><span>{sp}</span></a>' for u, b, sp in voci) + "</div>")
 
 
+_CAT = {"giocatori": ("Giocatori", "Players", "Jugadores", "Joueurs"), "regali": ("Regali", "Gifts", "Regalos", "Cadeaux"),
+        "novita": ("Novità e confronti", "New and compared", "Novedades y comparativas", "Nouveautés et comparatifs"), "guide": ("Guide", "Guides", "Guías", "Guides")}
+
+
 def articoli_box():
-    """Ultimi articoli (da data/articoli.json, scritto da genera_articoli.py)."""
+    """Ultimi articoli a schede (da data/articoli.json, scritto da genera_articoli.py): al massimo due per categoria."""
     f = ROOT_A / "data" / "articoli.json"
     if not f.exists():
         return ""
-    arts = sorted(json.loads(f.read_text(encoding="utf-8")), key=lambda a: a["data"], reverse=True)[:3]
     l = S.lang()
-    voci = "".join(f'<a href="{a["url"][l]}"><b>{html.escape(a["titolo"][l])}</b><span>{html.escape(a["desc"][l])}</span></a>' for a in arts if l in a["url"])
-    if not voci:
+    tutti = sorted((a for a in json.loads(f.read_text(encoding="utf-8")) if l in a["url"]), key=lambda a: a["data"], reverse=True)
+    scelti, per_cat = [], {}
+    for a in tutti:
+        c = a.get("cat", "guide")
+        if per_cat.get(c, 0) < (1 if c == "regali" else 2):
+            per_cat[c] = per_cat.get(c, 0) + 1
+            scelti.append(a)
+        if len(scelti) == 6:
+            break
+    if not scelti:
         return ""
-    return (f'<div class="head" style="margin-top:40px"><h2>{L("Ultimi articoli", "Latest articles", "Últimos artículos", "Derniers articles")}</h2><a href="{P("articoli")}"><b>{L("Tutti gli articoli", "All articles", "Todos los artículos", "Tous les articles")} →</b></a></div>\n'
-            f'<div class="marche">{voci}</div>')
+    voci = "".join(f'<a class="acard" href="{a["url"][l]}"><div class="acov c-{a.get("cat", "guide")}" aria-hidden="true"></div><div class="ab">'
+                   f'<span class="acat">{html.escape(L(*_CAT[a.get("cat", "guide")]))}</span><b>{html.escape(a["titolo"][l])}</b>'
+                   f'<span class="ad">{html.escape(a["desc"][l])}</span></div></a>' for a in scelti)
+    return (f'<div class="head"><h2>{L("Ultimi articoli", "Latest articles", "Últimos artículos", "Derniers articles")}</h2><a href="{P("articoli")}"><b>{L("Tutti gli articoli", "All articles", "Todos los artículos", "Tous les articles")} →</b></a></div>'
+            f'<div class="agrid" style="padding-bottom:0">{voci}</div>')
+
+
+def natale_box():
+    if not NATALE:
+        return ""
+    return (f'<section class="block"><div class="wrap"><a class="natale" href="{P("articoli", "idee-regalo-natale-padel")}"><div class="txt">'
+            f'<b>{L("Idee regalo di Natale per chi gioca a padel", "Christmas gift ideas for padel players", "Ideas de regalo de Navidad para jugadores de pádel", "Idées cadeaux de Noël pour les joueurs de padel")}</b>'
+            f'<span>{L("15 guide per ogni budget, con i prezzi Amazon aggiornati.", "15 guides for every budget, with updated Amazon prices.", "15 guías para cada presupuesto, con precios de Amazon actualizados.", "15 guides pour tous les budgets, avec les prix Amazon à jour.")}</span></div>'
+            f'<span class="btn">{L("Scopri le idee", "See the ideas", "Ver las ideas", "Voir les idées")} →</span></a></div></section>')
 
 
 def carica():
@@ -306,12 +353,14 @@ def head(lang, t):
 <meta property="og:type" content="website">
 <meta property="og:url" content="{SITO}/{lang}/">
 <meta property="og:locale" content="{S.OG_LOCALE[lang]}">
+<meta property="og:site_name" content="PadelMetrix">
+{S.og_tags()}
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "PadelMetrix", "url": f"{SITO}/{lang}/", "inLanguage": lang, "description": t["desc"]}, ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "Organization", "name": "PadelMetrix", "url": SITO, "email": "info@padelmetrix.com", "sameAs": [u for _, u in S.SOCIAL]}, ensure_ascii=False)}</script>
-<style>{CSS}</style>
+<style>{CSS}{S.RESTYLING_CSS}</style>
 </head>'''
 
 
@@ -341,7 +390,13 @@ def pagina(lang, db):
         peso = peso.split(" (")[0]
         nome = d["pagina"]["titolo"].replace(d["marca"] + " ", "")
         href = P("racchette", slug)
-        evid.append(f'<a class="card rk" href="{href}"><div class="ill">{racket_svg(d["forma"], 92, d["pagina"]["titolo"])}</div><div class="body"><span class="meta">{e(d["marca"])} · {d["anno"]}</span><span class="nm">{e(nome)}</span><span class="sp">{e(t["forme"][d["forma"]])} · {e(peso)}</span></div></a>')
+        asin = next((s.get("asin") for s in d["pagina"].get("negozi", []) if isinstance(s, dict) and s.get("asin")), None)
+        corpo_c = f'<span class="meta">{e(d["marca"])} · {d["anno"]}</span><span class="nm">{e(nome)}</span><span class="sp">{e(t["forme"][d["forma"]])} · {e(peso)}</span>'
+        svg = racket_svg(d["forma"], 92, d["pagina"]["titolo"])
+        if asin:  # la foto Amazon porta ad Amazon (licenza), il testo alla scheda
+            evid.append(f'<div class="card rk"><div class="ill" data-asin="{e(asin)}" data-alt="{e(d["pagina"]["titolo"])}">{svg}</div><a class="body" href="{href}">{corpo_c}</a></div>')
+        else:
+            evid.append(f'<a class="card rk" href="{href}"><div class="ill">{svg}</div><div class="body">{corpo_c}</div></a>')
 
     mk = "".join(f'<a href="{P("marche", re.sub(r"[^a-z0-9]+", "-", m.lower()).strip("-"))}"><b>{e(m)}</b><span>{e(t["racchetta_1"] if n == 1 else t["racchette_n"].format(n=n))}</span></a>' for m, n in sorted(marche.items(), key=lambda kv: -kv[1]))
     nota = f'<p class="nota">{e(t["evid_nota"])}</p>' if t["evid_nota"] else ""
@@ -350,11 +405,7 @@ def pagina(lang, db):
 
     return head(lang, t) + f'''
 <body>
-<header class="site"><div class="wrap">
-<a class="brand" href="/{lang}/">{LOGO}<span><b>padel</b>metrix</span></a>
-<nav class="main" aria-label="Menu">{nav}</nav>
-<div class="langs" aria-label="{e(t["lingua"])}">{langs}</div>
-</div></header>
+{S.header(None, {x: f"/{x}/" for x in LINGUE})}
 
 <main>
 <section class="hero"><div class="wrap">
@@ -374,8 +425,15 @@ def pagina(lang, db):
 </div></section>
 
 <section class="block"><div class="wrap">
-<div class="head"><div><h2>{e(t["sez_titolo"])}</h2><p>{e(t["sez_sub"])}</p></div></div>
-<div class="grid3">{"".join(sez)}</div>
+<div class="head"><h2>{e(t["evid_titolo"])}</h2><a href="{url(lang, "racchette")}"><b>{e(t["evid_tutte"])} →</b></a></div>
+<div class="strip">{"".join(evid)}</div>
+{nota}
+</div></section>
+
+{natale_box()}
+
+<section class="block"><div class="wrap">
+{articoli_box()}
 </div></section>
 
 <section class="block"><div class="wrap">
@@ -385,22 +443,20 @@ def pagina(lang, db):
 </div>
 </div></section>
 
+<section class="block"><div class="wrap">
+<div class="head"><div><h2>{e(t["sez_titolo"])}</h2><p>{e(t["sez_sub"])}</p></div></div>
+<div class="grid3">{"".join(sez)}</div>
+</div></section>
+
 <section class="come"><div class="wrap">
 <h2>{e(t["come_titolo"])}</h2>
 <div class="g">{come}</div>
 </div></section>
 
 <section class="block"><div class="wrap">
-<div class="head"><h2>{e(t["evid_titolo"])}</h2><a href="{url(lang, "racchette")}"><b>{e(t["evid_tutte"])} →</b></a></div>
-<div class="grid4">{"".join(evid)}</div>
-{nota}
-</div></section>
-
-<section class="block"><div class="wrap">
 <div class="head"><h2>{e(t["marche_titolo"])}</h2></div>
 <div class="marche">{mk}</div>
 {guide_box()}
-{articoli_box()}
 </div></section>
 </main>
 
@@ -414,6 +470,7 @@ def pagina(lang, db):
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
 </div></footer>
+{S.amazon_js("data-asin")}
 {C.body(lang, url(lang, "cookie"))}
 </body>
 </html>

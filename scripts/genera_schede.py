@@ -371,7 +371,7 @@ def render(d, n, db, pair_set):
     meta = breve + L(" Dati tecnici, opinioni e confronti.", " Specs, reviews and comparisons.", " Datos técnicos, opiniones y comparaciones.", " Fiches, avis et comparaisons.")
     if len(meta) > 165:
         meta = breve
-    return pagina(f"{title} | PadelMetrix", meta, path, corpo, on="racchette", ld=ld, alt=alt)
+    return pagina(f"{title} | PadelMetrix", meta, path, corpo, on="racchette", ld=ld, alt=alt, og=f"/og/r/{slug}.jpg")
 
 
 def main():
