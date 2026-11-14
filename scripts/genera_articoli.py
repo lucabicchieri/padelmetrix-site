@@ -2677,7 +2677,7 @@ def regali(db):
 BELA_SLUG = "fernando-belasteguin-carriera-record-racchette"
 S.SLUG[BELA_SLUG] = ("fernando-belasteguin-career-records-rackets", "fernando-belasteguin-carrera-records-palas")
 S.SLUG_FR[BELA_SLUG] = "fernando-belasteguin-carriere-records-raquettes"
-DATE_ART[BELA_SLUG] = "2026-11-20"
+DATE_ART[BELA_SLUG] = "2026-11-14"
 
 
 def art_bela(db):
