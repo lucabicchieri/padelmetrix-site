@@ -23,20 +23,28 @@ def H():
 
 def filtri_js():
     uno, piu = L("racchetta", "racket", "pala", "raquette"), L("racchette", "rackets", "palas", "raquettes")
+    altre = L("Mostra altre", "Show more", "Mostrar más", "Afficher plus")
     return """<script>
 (function(){
 var q=new URLSearchParams(location.search);var f=document.getElementById('filtri');if(!f)return;
 function nz(s){return (s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase();}
 var cards=[].slice.call(document.querySelectorAll('.rgrid .rcard'));var out=document.getElementById('conta');
-['marca','forma','tatto','livello','stile','cat','prezzo','q'].forEach(function(k){var el=f.elements[k];if(el&&q.get(k))el.value=q.get(k);});
-function run(){var v={};['marca','forma','tatto','livello','stile','cat','prezzo','q'].forEach(function(k){v[k]=(f.elements[k].value||'').toLowerCase();});
+var K=['marca','forma','tatto','livello','stile','cat','prezzo','q'],PASSO=24,lim=PASSO;
+var det=document.getElementById('fdet'),nf=document.getElementById('nf'),box=document.getElementById('altre'),btn=box&&box.querySelector('button');
+K.forEach(function(k){var el=f.elements[k];if(el&&q.get(k))el.value=q.get(k);});
+if(det&&(window.innerWidth>=860||K.some(function(k){return k!=='q'&&q.get(k)})))det.open=true;
+function run(){var v={},att=0;K.forEach(function(k){v[k]=(f.elements[k].value||'').toLowerCase();if(k!=='q'&&v[k])att++;});
+if(nf)nf.textContent=att?att:'';
 var n=0;cards.forEach(function(c){var d=c.dataset,ok=true;
 if(v.marca&&d.marca!==v.marca)ok=false;if(v.forma&&d.forma!==v.forma)ok=false;if(v.tatto&&d.tatto!==v.tatto)ok=false;if(v.livello&&d.livello!==v.livello)ok=false;
 if(v.stile&&d.stile!==v.stile)ok=false;if(v.cat&&d.cat!==v.cat)ok=false;
 if(v.prezzo&&(!d.prezzo||parseFloat(d.prezzo)>parseFloat(v.prezzo)))ok=false;if(v.q&&nz(d.nome).indexOf(nz(v.q).trim())<0)ok=false;
-c.style.display=ok?'':'none';if(ok)n++;});out.textContent=n+(n===1?' %s':' %s');}
-f.addEventListener('input',run);f.addEventListener('change',run);run();})();
-</script>""" % (uno, piu)
+if(ok)n++;c.style.display=(ok&&n<=lim)?'':'none';});out.textContent=n+(n===1?' %s':' %s');
+if(box){box.hidden=n<=lim;if(btn)btn.textContent='%s ('+(n-lim)+')';}}
+function reset(){lim=PASSO;run();}
+if(btn)btn.addEventListener('click',function(){lim+=PASSO*2;run();});
+f.addEventListener('input',reset);f.addEventListener('change',reset);run();})();
+</script>""" % (uno, piu, altre)
 
 
 def opt(vals, sel_label):
@@ -48,7 +56,8 @@ def elenco(db):
     tutte, tutti = L("Tutte", "All", "Todas", "Toutes"), L("Tutti", "All", "Todos", "Tous")
     prezzi = [(str(x), L(f"fino a {x} €", f"up to €{x}", f"hasta {x} €", f"jusqu'à {x} €")) for x in (100, 150, 200, 300)]
     form = f'''<form class="filtri" id="filtri" onsubmit="return false">
-<label>{L("Cerca", "Search", "Buscar", "Rechercher")}<input name="q" type="search" placeholder="{L("Modello o giocatore", "Model or player", "Modelo o jugador", "Modèle ou joueur")}"></label>
+<label class="fq"><input name="q" type="search" placeholder="{L("Cerca modello o giocatore", "Search model or player", "Busca modelo o jugador", "Chercher un modèle ou un joueur")}" aria-label="{L("Cerca", "Search", "Buscar", "Rechercher")}"></label>
+<details class="fdet" id="fdet"><summary>{L("Filtri", "Filters", "Filtros", "Filtres")} <span class="nf" id="nf"></span></summary><div class="fsel">
 <label>{L("Marca", "Brand", "Marca", "Marque")}<select name="marca">{opt(marche, tutte)}</select></label>
 <label>{L("Forma", "Shape", "Forma", "Forme")}<select name="forma">{opt(list(S.forme_d().items()), tutte)}</select></label>
 <label>{L("Tatto", "Feel", "Tacto", "Toucher")}<select name="tatto">{opt(list(S.TATTI().items()), tutti)}</select></label>
@@ -56,19 +65,23 @@ def elenco(db):
 <label>{L("Stile", "Style", "Estilo", "Style")}<select name="stile">{opt(list(S.stili_d().items()), tutti)}</select></label>
 <label>{L("Per chi", "For", "Para quién", "Pour qui")}<select name="cat">{opt([("adulto", L("Adulto", "Adult", "Adulto", "Adulte")), ("donna", L("Modelli femminili", "Women's models", "Modelos femeninos", "Modèles femme")), ("junior", "Junior")], tutti)}</select></label>
 <label>{L("Prezzo di listino", "List price", "Precio de lista", "Prix public")}<select name="prezzo">{opt(prezzi, L("Qualsiasi", "Any", "Cualquiera", "Peu importe"))}</select></label>
+</div></details>
 </form>'''
     cr, ld = crumbs([H(), (L("Racchette", "Rackets", "Palas", "Raquettes"), None)])
     nm = len(marche)
+    # In cima le racchette più recenti che hanno la foto, alternando le marche
+    vetrina = sorted(db, key=lambda n: (-n["anno"], 0 if n.get("asin") else 1, n["nome"], n["marca"]))
     corpo = f'''{cr}
 <div class="intro"><h1>{L("Racchette da padel 2026 e 2027", "Padel rackets 2026 and 2027", "Palas de pádel 2026 y 2027", "Raquettes de padel 2026 et 2027")}</h1>
 <p>{L(f"{len(db)} racchette di {nm} marche con dati tecnici, sintesi delle recensioni e modelli simili. Filtra per marca, forma, tatto, livello, stile e prezzo, oppure fai il <a href=\"{P('selettore')}\">test in 2 minuti</a> o leggi le <a href=\"{P('guide')}\">guide alla scelta</a>.",
       f"{len(db)} rackets from {nm} brands with specs, review summaries and similar models. Filter by brand, shape, feel, level, style and price, or take the <a href=\"{P('selettore')}\">2-minute quiz</a> or read the <a href=\"{P('guide')}\">buying guides</a>.",
       f"{len(db)} palas de {nm} marcas con datos técnicos, resumen de reseñas y modelos similares. Filtra por marca, forma, tacto, nivel, estilo y precio, o haz el <a href=\"{P('selettore')}\">test de 2 minutos</a> o lee las <a href=\"{P('guide')}\">guías de compra</a>.", f"{len(db)} raquettes de {nm} marques avec fiches techniques, synthèse des avis et modèles similaires. Filtrez par marque, forme, toucher, niveau, style et prix, ou faites le <a href=\"{P('selettore')}\">test en 2 minutes</a> ou lisez les <a href=\"{P('guide')}\">guides d'achat</a>.")}</p></div>
-<div class="marche">{"".join(f'<a href="{P("marche", s)}">{e(m)}</a>' for s, m in marche)}</div>
-<p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:16px 0 24px">{L("<b>Nuovo al padel?</b> Prima di scegliere la racchetta leggi", "<b>New to padel?</b> Before choosing a racket, read", "<b>¿Nuevo en el pádel?</b> Antes de elegir la pala, lee", "<b>Nouveau au padel ?</b> Avant de choisir votre raquette, lisez")} <a href="{P("articoli", "regolamento-padel-regole-spiegate")}">{L("il regolamento del padel spiegato semplice", "the padel rules explained simply", "el reglamento del pádel explicado fácil", "les règles du padel expliquées simplement")}</a>: {L("servizio, pareti, punteggio e Star Point.", "serve, walls, scoring and Star Point.", "saque, paredes, tanteo y Star Point.", "service, vitres, score et Star Point.")}</p>
+<div class="marche scorri">{"".join(f'<a href="{P("marche", s)}">{e(m)}</a>' for s, m in marche)}</div>
 {form}
 <p class="conta" id="conta">{len(db)} {L("racchette", "rackets", "palas", "raquettes")}</p>
-{griglia(ordina(db))}'''
+{griglia(vetrina)}
+<div class="altre" id="altre" hidden><button type="button"></button></div>
+<p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:16px 0 24px">{L("<b>Nuovo al padel?</b> Prima di scegliere la racchetta leggi", "<b>New to padel?</b> Before choosing a racket, read", "<b>¿Nuevo en el pádel?</b> Antes de elegir la pala, lee", "<b>Nouveau au padel ?</b> Avant de choisir votre raquette, lisez")} <a href="{P("articoli", "regolamento-padel-regole-spiegate")}">{L("il regolamento del padel spiegato semplice", "the padel rules explained simply", "el reglamento del pádel explicado fácil", "les règles du padel expliquées simplement")}</a>: {L("servizio, pareti, punteggio e Star Point.", "serve, walls, scoring and Star Point.", "saque, paredes, tanteo y Star Point.", "service, vitres, score et Star Point.")}</p>'''
     itemlist = {"@context": "https://schema.org", "@type": "ItemList", "numberOfItems": len(db),
                 "itemListElement": [{"@type": "ListItem", "position": i, "url": SITO + url_r(n), "name": n["titolo"]} for i, n in enumerate(ordina(db), 1)]}
     path = P("racchette")
