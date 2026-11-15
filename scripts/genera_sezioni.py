@@ -354,8 +354,11 @@ def guida(slug, title, desc, h1, crumb, intro_html, corpo_html, items, on="guide
     path, alt = P("guide", slug), ALT("guide", slug)
     cr, ld = crumbs([H(), (L("Guide", "Guides", "Guías", "Guides"), P("guide")), (crumb, None)])
     lista = f'<section class="block"><h2>{L("Le racchette del database adatte", "Suitable rackets in the database", "Las palas de la base de datos adecuadas", "Raquettes adaptées dans la base de données")} ({len(items)})</h2>{griglia(ordina(items))}</section>' if items else ""
+    import illustrazioni as IL
+    k = GUIDA_ILL.get(slug)
+    banner = f'<div class="gbanner">{IL.ill(k)}</div>' if k else ""
     corpo = f'''{cr}
-<div class="intro"><h1>{e(h1)}</h1>{intro_html}{data_riga(femm=True)}</div>
+{banner}<div class="intro"><h1>{e(h1)}</h1>{intro_html}{data_riga(femm=True)}</div>
 <div class="prose">{corpo_html}</div>
 {lista}'''
     scrivi(path, pagina(title, desc, path, corpo, on=on, ld=[ld, *ld_extra], alt=alt), alt)
@@ -566,19 +569,100 @@ def guide(db):
     G.append((slug, t_pro, None))
 
     # hub guide
-    cr, ld = crumbs([H(), (L("Guide", "Guides", "Guías", "Guides"), None)])
+    guide_hub(G)
+
+
+GUIDA_ILL = {"racchetta-padel-principianti": "principianti", "racchetta-padel-epicondilite": "epicondilite", "forme-racchetta-padel": "forme",
+             "racchette-padel-donna": "donna", "racchette-padel-economiche": "economiche", "racchette-padel-controllo": "controllo",
+             "racchette-padel-potenza": "potenza", "racchette-giocatori-professionisti": "pro"}
+
+
+def guide_hub(G):
+    import illustrazioni as IL
+    arts = {a["slug"]: a for a in json.loads((ROOT / "data" / "articoli.json").read_text(encoding="utf-8"))}
+    lg = S.lang()
+    CAT = [("inizia", L("Per iniziare", "Getting started", "Para empezar", "Pour commencer")), ("stile", L("Stile di gioco", "Playing style", "Estilo de juego", "Style de jeu")),
+           ("chi", L("Per chi", "Who it's for", "Para quién", "Pour qui")), ("budget", L("Budget", "Budget", "Presupuesto", "Budget")),
+           ("tecnica", L("Materiali e tecnica", "Materials and tech", "Materiales y técnica", "Matériaux et technique"))]
+    cat_n = dict(CAT)
+    D = {"racchetta-padel-principianti": ("inizia", L("Forma, peso e materiali per la prima racchetta, senza spendere troppo.", "Shape, weight and materials for your first racket, without overspending.", "Forma, peso y materiales para tu primera pala, sin gastar de más.", "Forme, poids et matériaux pour votre première raquette, sans trop dépenser.")),
+         "racchetta-padel-epicondilite": ("chi", L("Le racchette più morbide e leggere per chi ha male al gomito.", "The softest, lightest rackets for players with elbow pain.", "Las palas más blandas y ligeras para quien tiene dolor de codo.", "Les raquettes les plus douces et légères pour ceux qui ont mal au coude.")),
+         "forme-racchetta-padel": ("inizia", L("Rotonda, goccia o diamante: cosa cambia e quale fa per te.", "Round, teardrop or diamond: what changes and which suits you.", "Redonda, lágrima o diamante: qué cambia y cuál te va.", "Ronde, goutte d'eau ou diamant : ce qui change et laquelle vous convient.")),
+         "racchette-padel-donna": ("chi", L("Modelli leggeri e maneggevoli, anche firmati dalle giocatrici pro.", "Light, manoeuvrable models, including those signed by pro players.", "Modelos ligeros y manejables, también firmados por las jugadoras pro.", "Des modèles légers et maniables, y compris ceux signés par les joueuses pro.")),
+         "racchette-padel-economiche": ("budget", L("Le migliori racchette sotto i 100 € e sotto i 150 €.", "The best rackets under €100 and under €150.", "Las mejores palas por debajo de 100 € y de 150 €.", "Les meilleures raquettes à moins de 100 € et de 150 €.")),
+         "racchette-padel-controllo": ("stile", L("Per chi costruisce il punto: forme rotonde e punto dolce centrale.", "For players who build the point: round shapes and a central sweet spot.", "Para quien construye el punto: formas redondas y punto dulce central.", "Pour ceux qui construisent le point : formes rondes et sweet spot central.")),
+         "racchette-padel-potenza": ("stile", L("Diamante e bilanciamento alto per chi chiude con lo smash.", "Diamond shape and high balance for players who finish with the smash.", "Diamante y balance alto para quien cierra con el remate.", "Forme diamant et équilibre haut pour ceux qui finissent au smash.")),
+         "racchette-giocatori-professionisti": ("stile", L("Con che racchetta giocano Tapia, Coello, Galán e gli altri.", "Which racket Tapia, Coello, Galán and the others play with.", "Con qué pala juegan Tapia, Coello, Galán y los demás.", "Avec quelle raquette jouent Tapia, Coello, Galán et les autres."))}
     n_r = L("racchette", "rackets", "palas", "raquettes")
-    voci = "".join(f'<li><a href="{pg(s)}">{e(t)}</a>{f" · {c} {n_r}" if c else ""}</li>' for s, t, c in G)
-    corpo = f'''{cr}<div class="intro"><h1>{L("Guide alla scelta della racchetta da padel", "Guides to choosing a padel racket", "Guías para elegir pala de pádel", "Guides pour choisir une raquette de padel")}</h1><p>{L("Guide pratiche per trovare la racchetta giusta in base a livello, stile di gioco, budget e problemi fisici. Ogni guida rimanda alle schede dei modelli adatti.",
-       "Practical guides to finding the right racket for your level, playing style, budget and physical issues. Each guide links to the pages of suitable models.",
-       "Guías prácticas para encontrar la pala adecuada según tu nivel, estilo de juego, presupuesto y problemas físicos. Cada guía enlaza a las fichas de los modelos adecuados.", "Des guides pratiques pour trouver la bonne raquette selon votre niveau, votre style de jeu, votre budget et vos soucis physiques. Chaque guide renvoie aux fiches des modèles adaptés.")}</p></div>
-<ul class="lista-link">{voci}<li><a href="{P("bambini")}">{L("Racchette da padel per bambini e ragazzi", "Padel rackets for kids and teenagers", "Palas de pádel para niños y jóvenes", "Raquettes de padel pour enfants et ados")}</a></li></ul>'''
+    voci = []
+    for sl, t, c in G:
+        cat, d = D.get(sl, ("inizia", ""))
+        voci.append((GUIDA_ILL.get(sl, "forme"), cat, t, d, P("guide", sl), f"{c} {n_r}" if c else "", L("Guida", "Guide", "Guía", "Guide")))
+    voci.append(("bambini", "chi", L("Racchette da padel per bambini e ragazzi", "Padel rackets for kids and teenagers", "Palas de pádel para niños y jóvenes", "Raquettes de padel pour enfants et ados"),
+                 L("Peso e misura giusti per età e altezza, e i modelli junior.", "The right weight and size by age and height, plus junior models.", "Peso y medida adecuados según edad y altura, y los modelos junior.", "Le bon poids et la bonne taille selon l'âge et la taille, et les modèles junior."),
+                 P("bambini"), "", L("Guida", "Guide", "Guía", "Guide")))
+    voci.append(("offerte", "budget", L("Le offerte di oggi su Amazon", "Today's deals on Amazon", "Las ofertas de hoy en Amazon", "Les offres du jour sur Amazon"),
+                 L("Le racchette scontate oggi, con il prezzo aggiornato due volte al giorno.", "Today's discounted rackets, with prices updated twice a day.", "Las palas rebajadas hoy, con el precio actualizado dos veces al día.", "Les raquettes remisées aujourd'hui, avec les prix mis à jour deux fois par jour."),
+                 P("offerte"), "", L("Offerte", "Deals", "Ofertas", "Offres")))
+    for sl, k, cat in (("peso-racchetta-padel-quale-scegliere", "peso", "inizia"), ("regolamento-padel-regole-spiegate", "regole", "inizia"),
+                       ("metalbone-vs-vertex-confronto-racchette", "confronto", "stile"), ("padel-over-50-racchetta-consigli", "over50", "chi"),
+                       ("carbonio-3k-12k-18k-racchetta-padel", "carbonio", "tecnica"), ("quanto-dura-racchetta-padel-quando-cambiarla", "durata", "tecnica"),
+                       ("scarpe-padel-come-sceglierle", "scarpe", "tecnica")):
+        a = arts.get(sl)
+        if a:
+            voci.append((k, cat, a["titolo"][lg], a["desc"][lg], P("articoli", sl), "", L("Articolo", "Article", "Artículo", "Article")))
+    ordine = {c: i for i, (c, _) in enumerate(CAT)}
+    voci.sort(key=lambda v: ordine[v[1]])
+    carte = "".join(f'''<a class="gcard" href="{u}" data-cat="{cat}"><div class="gill">{IL.ill(k)}</div><div class="gtx"><span class="gk">{e(cat_n[cat])} · {e(tipo)}</span><b>{e(t)}</b><p>{e(d)}</p>{f'<span class="gn">{e(n)}</span>' if n else ""}</div></a>'''
+                    for k, cat, t, d, u, n, tipo in voci)
+    tabs = f'<button type="button" class="on" data-c="">{L("Tutte", "All", "Todas", "Toutes")} <i>{len(voci)}</i></button>' + "".join(
+        f'<button type="button" data-c="{c}">{e(n)} <i>{sum(1 for v in voci if v[1] == c)}</i></button>' for c, n in CAT)
+    css = """<style>
+.ghero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;background:var(--green);color:#fff;border-radius:22px;padding:30px 32px;margin:6px 0 22px;overflow:hidden}
+.ghero h1{color:#fff;margin:0 0 12px}.ghero p{color:#EAF5EC;margin:0 0 18px;max-width:560px}.ghero .k{color:var(--lime);font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin-bottom:8px}
+.ghero svg{width:100%;height:auto;display:block}
+.gquiz{display:flex;gap:18px;align-items:center;background:var(--lime);border-radius:18px;padding:18px 22px;margin:0 0 24px;text-decoration:none;color:var(--green)}
+.gquiz .qi{flex:0 0 150px;border-radius:12px;overflow:hidden}.gquiz .qi svg{display:block;width:100%;height:auto}
+.gquiz b{font-family:'Space Grotesk',sans-serif;font-size:22px;display:block}.gquiz span{font-size:15px}.gquiz u{font-weight:700;white-space:nowrap}
+.gtabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;margin:0 0 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.gtabs::-webkit-scrollbar{display:none}
+.gtabs button{flex:0 0 auto;font:inherit;font-size:15px;font-weight:600;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink2);cursor:pointer}
+.gtabs button i{font-style:normal;opacity:.6;margin-left:4px;font-size:13px}.gtabs button.on{background:var(--green);border-color:var(--green);color:#fff}
+.ggrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;margin-bottom:30px}
+.gcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,61,46,.12)}
+.gill{aspect-ratio:16/9;overflow:hidden}.gill svg{display:block;width:100%;height:100%}
+.gtx{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.gk{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.gtx b{font-family:'Space Grotesk',sans-serif;font-size:19px;line-height:1.25;margin:6px 0 6px}
+.gtx p{font-size:15px;line-height:1.45;color:var(--ink2);margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.gn{margin-top:auto;padding-top:12px;font-size:13px;font-weight:600;color:var(--green)}
+.gcard[hidden]{display:none}
+@media (max-width:800px){.ghero{grid-template-columns:1fr;padding:24px 20px}.ghero .gart{order:-1;max-width:420px}.gquiz{flex-direction:column;align-items:flex-start}.gquiz .qi{flex-basis:auto;width:100%;max-width:260px}}
+</style>"""
+    js = """<script>(function(){var t=document.querySelector('.gtabs');if(!t)return;t.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;
+t.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});var c=b.getAttribute('data-c');
+document.querySelectorAll('.gcard').forEach(function(g){g.hidden=!!c&&g.getAttribute('data-cat')!==c})})})();</script>"""
+    cr, ld = crumbs([H(), (L("Guide", "Guides", "Guías", "Guides"), None)])
+    corpo = f'''{css}{cr}
+<div class="ghero"><div><div class="k">{L("Guide PadelMetrix", "PadelMetrix guides", "Guías PadelMetrix", "Guides PadelMetrix")}</div>
+<h1>{L("Guide alla scelta della racchetta da padel", "Guides to choosing a padel racket", "Guías para elegir pala de pádel", "Guides pour choisir une raquette de padel")}</h1>
+<p>{L(f"{len(voci)} guide pratiche per trovare la racchetta giusta in base a livello, stile di gioco, budget e problemi fisici. Ogni guida rimanda alle schede dei modelli adatti.",
+       f"{len(voci)} practical guides to finding the right racket for your level, playing style, budget and physical issues. Each guide links to the pages of suitable models.",
+       f"{len(voci)} guías prácticas para encontrar la pala adecuada según tu nivel, estilo de juego, presupuesto y problemas físicos. Cada guía enlaza a las fichas de los modelos adecuados.",
+       f"{len(voci)} guides pratiques pour trouver la bonne raquette selon votre niveau, votre style de jeu, votre budget et vos soucis physiques. Chaque guide renvoie aux fiches des modèles adaptés.")}</p></div>
+<div class="gart">{IL.eroe()}</div></div>
+<a class="gquiz" href="{P("selettore")}"><div class="qi">{IL.ill("quiz")}</div><div><b>{L("Non sai da dove partire?", "Not sure where to start?", "¿No sabes por dónde empezar?", "Vous ne savez pas par où commencer ?")}</b>
+<span>{L("Rispondi a 9 domande e ti proponiamo le 3 racchette più adatte a te.", "Answer 9 questions and we'll suggest the 3 rackets that suit you best.", "Responde a 9 preguntas y te proponemos las 3 palas que mejor te van.", "Répondez à 9 questions et nous vous proposons les 3 raquettes qui vous conviennent le mieux.")}</span>
+<u>{L("Fai il test in 2 minuti →", "Take the 2-minute quiz →", "Haz el test en 2 minutos →", "Faites le test en 2 minutes →")}</u></div></a>
+<div class="gtabs" role="tablist">{tabs}</div>
+<div class="ggrid">{carte}</div>'''
     path = P("guide")
     scrivi(path, pagina(L("Guide alla scelta della racchetta da padel | PadelMetrix", "Padel racket buying guides | PadelMetrix", "Guías para elegir pala de pádel | PadelMetrix", "Guides d'achat de raquettes de padel | PadelMetrix"),
-                        L("Come scegliere la racchetta da padel: guide per principianti, epicondilite, forme, donne, bambini, budget e racchette dei professionisti.",
-                          "How to choose a padel racket: guides for beginners, tennis elbow, shapes, women, kids, budget and pro players' rackets.",
-                          "Cómo elegir pala de pádel: guías para principiantes, epicondilitis, formas, mujeres, niños, presupuesto y palas de los profesionales.", "Comment choisir une raquette de padel : guides pour débutants, tennis elbow, formes, femmes, enfants, budget et raquettes des joueurs pro."),
-                        path, corpo, on="guide", ld=[ld], alt=ALT("guide")), ALT("guide"))
+                        L("Come scegliere la racchetta da padel: guide per principianti, epicondilite, forme, donne, bambini, over 50, budget, materiali e racchette dei professionisti.",
+                          "How to choose a padel racket: guides for beginners, tennis elbow, shapes, women, kids, over-50s, budget, materials and pro players' rackets.",
+                          "Cómo elegir pala de pádel: guías para principiantes, epicondilitis, formas, mujeres, niños, mayores de 50, presupuesto, materiales y palas de los profesionales.", "Comment choisir une raquette de padel : guides pour débutants, tennis elbow, formes, femmes, enfants, plus de 50 ans, budget, matériaux et raquettes des joueurs pro."),
+                        path, corpo, on="guide", ld=[ld], alt=ALT("guide"), extra_js=js), ALT("guide"))
 
 
 # ---------------------------------------------------------------- Bambini
