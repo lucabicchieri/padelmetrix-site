@@ -1,0 +1,38 @@
+[
+{
+"path": "/it/offerte/",
+"alt": {
+"it": "/it/offerte/",
+"en": "/en/deals/",
+"es": "/es/ofertas/",
+"fr": "/fr/offres/"
+}
+},
+{
+"path": "/en/deals/",
+"alt": {
+"it": "/it/offerte/",
+"en": "/en/deals/",
+"es": "/es/ofertas/",
+"fr": "/fr/offres/"
+}
+},
+{
+"path": "/es/ofertas/",
+"alt": {
+"it": "/it/offerte/",
+"en": "/en/deals/",
+"es": "/es/ofertas/",
+"fr": "/fr/offres/"
+}
+},
+{
+"path": "/fr/offres/",
+"alt": {
+"it": "/it/offerte/",
+"en": "/en/deals/",
+"es": "/es/ofertas/",
+"fr": "/fr/offres/"
+}
+}
+]
