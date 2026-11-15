@@ -3,43 +3,45 @@
   "marca": "Adidas",
   "modello": "Metalbone ZZ Team",
   "anno": 2026,
-  "giocatore": "Zinédine Zidane (ispirata)",
+  "giocatore": "Zinédine Zidane",
   "categoria": "adulto",
   "donna": false,
   "peso": "360–375 g",
-  "forma": "diamante",
+  "forma": "rotonda",
   "bilanciamento": "medio",
-  "nucleo": "EVA",
+  "nucleo": "EVA Soft Performance",
   "superficie": "Fibra di vetro",
-  "telaio": "Carbonio con struttura ottagonale",
+  "telaio": "Carbonio",
   "sensazione": "morbido",
-  "livello": "intermedio",
-  "stile": "offensivo",
+  "livello": "intermedio-avanzato",
+  "stile": "polivalente",
   "prezzo_listino_eur": 180,
   "simili": [
-    "babolat-technical-origin-plus-2027",
-    "dunlop-aero-star-pro-2023",
-    "oxdog-ultimate-nxt-gen-2026"
+    "drop-shot-furia-attack-2-0-2026",
+    "joma-tournament-pro-iconic-2026",
+    "joma-valkiria-pro-hrd-2026"
   ],
   "fonti_dati": [
-    "https://www.zonadepadel.com/adidas-padel/16145-adidas-metalbone-zz-team-2026.html",
-    "https://pdhsports.com/en-es/products/adidas-metalbone-zidane-team-padel-racket"
+    "https://www.padeladdict.com/adidas-zidane-capsula-zz-padel/",
+    "https://www.clusterpadel.com/en/associate-news/20261016/adidas-padel-launches-an-exclusive-collection-with-zinedine-zidane.aspx",
+    "https://www.zonadepadel.com/adidas-padel/16145-adidas-metalbone-zz-team-2026.html"
   ],
   "aggiornato": "2026-11-15",
   "pagina": {
     "titolo": "Adidas Metalbone ZZ Team 2026",
     "title_tag": "Adidas Metalbone ZZ Team 2026: scheda tecnica, caratteristiche e alternative",
-    "meta_description": "Adidas Metalbone ZZ Team 2026: forma diamante, peso 360–375 g, bilanciamento medio, fibra di vetro. Dati tecnici, a chi è adatta e racchette simili.",
+    "meta_description": "Adidas Metalbone ZZ Team 2026 (Zinédine Zidane): forma rotonda, peso 360–375 g, bilanciamento medio. Scheda tecnica e alternative.",
     "breadcrumb": "Metalbone ZZ Team 2026",
     "eyebrow": "Adidas · Collezione 2026",
     "chips": [
-      "Diamante",
+      "Rotonda",
       "360–375 g",
       "Bilanciamento medio",
       "Fibra di vetro",
-      "Intermedio"
+      "Intermedio / avanzato",
+      "Racchetta di Zinédine Zidane"
     ],
-    "lead": "La versione più accessibile della linea Metalbone dedicata a Zinédine Zidane, in colore oro: forma a diamante con il punto dolce verso l'alto per spingere, ma piatti in fibra di vetro e tocco morbido che la rendono comoda e tollerante. Superficie sabbiata Spin Blade Gritt per l'effetto e telaio in carbonio con struttura ottagonale. Indicata per giocatori intermedi.",
+    "lead": "La versione più accessibile della capsula ZZ di Zinédine Zidane: stessa forma rotonda, stesso bilanciamento medio e stesso peso della ZZ Carbon, ma con piatti in fibra di vetro e telaio in carbonio per un tocco più morbido e tollerante. Superficie sabbiata Spin Blade Gritt per l'effetto. È pensata per chi cerca comfort e scambi lunghi senza affaticare il braccio. Indicata per intermedi alti e avanzati.",
     "negozi": [
       {
         "nome": "Amazon",
@@ -52,8 +54,8 @@
     ],
     "nota_prezzi": "Prezzo di listino indicativo 180 € secondo i rivenditori consultati a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
     "confronta": {
-      "url": "/confronta/?r=adidas-metalbone-zz-team-2026,babolat-technical-origin-plus-2027",
-      "testo": "Confronta con Technical Origin+ 2027"
+      "url": "/confronta/?r=adidas-metalbone-zz-team-2026,drop-shot-furia-attack-2-0-2026",
+      "testo": "Confronta con Furia Attack 2.0 2026"
     },
     "specifiche": [
       [
@@ -70,11 +72,11 @@
       ],
       [
         "Giocatore",
-        "Zinédine Zidane (ispirata)"
+        "Zinédine Zidane"
       ],
       [
         "Forma",
-        "Diamante"
+        "Rotonda"
       ],
       [
         "Peso",
@@ -86,7 +88,7 @@
       ],
       [
         "Nucleo",
-        "EVA"
+        "EVA Soft Performance"
       ],
       [
         "Superficie",
@@ -94,7 +96,7 @@
       ],
       [
         "Telaio",
-        "Carbonio con struttura ottagonale"
+        "Carbonio"
       ],
       [
         "Tatto",
@@ -102,70 +104,71 @@
       ],
       [
         "Livello",
-        "Intermedio"
+        "Intermedio / avanzato"
       ],
       [
         "Stile di gioco",
-        "Offensivo"
+        "Polivalente"
       ],
       [
         "Colori",
-        "oro"
+        "nero con dettagli oro"
       ],
       [
         "Prezzo di listino",
         "180 €"
       ]
     ],
-    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.zonadepadel.com/adidas-padel/16145-adidas-metalbone-zz-team-2026.html\" rel=\"nofollow noopener\" target=\"_blank\">Zona de Padel</a>, <a href=\"https://pdhsports.com/en-es/products/adidas-metalbone-zidane-team-padel-racket\" rel=\"nofollow noopener\" target=\"_blank\">PDH Sports</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
-    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. Zona de Padel la descrive così: la versione più accessibile della linea Metalbone dedicata a Zinédine Zidane, in colore oro: forma a diamante con il punto dolce verso l'alto per spingere, ma piatti in fibra di vetro e tocco morbido che la rendono comoda e tollerante. Superficie sabbiata Spin Blade Gritt per l'effetto e telaio in carbonio con struttura ottagonale. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.padeladdict.com/adidas-zidane-capsula-zz-padel/\" rel=\"nofollow noopener\" target=\"_blank\">Padel Addict</a>, <a href=\"https://www.clusterpadel.com/en/associate-news/20261016/adidas-padel-launches-an-exclusive-collection-with-zinedine-zidane.aspx\" rel=\"nofollow noopener\" target=\"_blank\">Padel Cluster</a>, <a href=\"https://www.zonadepadel.com/adidas-padel/16145-adidas-metalbone-zz-team-2026.html\" rel=\"nofollow noopener\" target=\"_blank\">Zona de Padel</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. Padel Addict la descrive così: la versione più accessibile della capsula ZZ di Zinédine Zidane: stessa forma rotonda, stesso bilanciamento medio e stesso peso della ZZ Carbon, ma con piatti in fibra di vetro e telaio in carbonio per un tocco più morbido e tollerante. Superficie sabbiata Spin Blade Gritt per l'effetto. È pensata per chi cerca comfort e scambi lunghi senza affaticare il braccio. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
     "pro": [
-      "Pensata per chiudere i punti: smash e volée",
+      "Versatile tra difesa e attacco",
       "Tatto morbido, più comfort per il braccio",
-      "Fibra di vetro: tatto morbido e uscita di palla facile"
+      "Fibra di vetro: tatto morbido e uscita di palla facile",
+      "Il modello di Zinédine Zidane"
     ],
     "contro": [
-      "Meno esplosiva delle versioni più rigide",
-      "Recensioni indipendenti ancora poche"
+      "Recensioni indipendenti ancora poche",
+      "Alcuni dati tecnici non sono dichiarati dal produttore"
     ],
     "adatta": [
-      "Sei di livello intermedio",
-      "Ti piace attaccare e chiudere i punti a rete",
+      "Sei di livello intermedio / avanzato",
+      "Vuoi una racchetta sola per difesa e attacco",
       "Vuoi proteggere gomito e spalla"
     ],
     "non_adatta": [
-      "Sei avanzato e cerchi il massimo delle prestazioni",
-      "Giochi soprattutto in difesa da fondo campo"
+      "Sei principiante: meglio una racchetta più tollerante",
+      "Cerchi una racchetta specializzata in attacco o in difesa"
     ],
     "recensioni": [],
     "simili": [
       {
-        "url": "/racchette/babolat-technical-origin-plus-2027/",
-        "sopra": "Babolat · 2027",
-        "nome": "Technical Origin+ 2027",
-        "testo": "Diamante d'attacco, 345–365 g, fibra di vetro, livello intermedio."
+        "url": "/racchette/drop-shot-furia-attack-2-0-2026/",
+        "sopra": "Drop Shot · 2026",
+        "nome": "Furia Attack 2.0 2026",
+        "testo": "Rotonda polivalente, 350–370 g, carbonio 18K, livello intermedio / avanzato, listino più alto."
       },
       {
-        "url": "/racchette/dunlop-aero-star-pro-2023/",
-        "sopra": "Dunlop · 2023",
-        "nome": "Aero-Star Pro 2023",
-        "testo": "Diamante d'attacco, 365 g, livello intermedio."
+        "url": "/racchette/joma-tournament-pro-iconic-2026/",
+        "sopra": "Joma · 2026",
+        "nome": "Tournament Pro Iconic 2026",
+        "testo": "Rotonda di controllo, 355–365 g, carbonio 3K, livello intermedio / avanzato."
       },
       {
-        "url": "/racchette/oxdog-ultimate-nxt-gen-2026/",
-        "sopra": "Oxdog · 2026",
-        "nome": "Ultimate NXT-Gen 2026",
-        "testo": "Diamante d'attacco, livello intermedio."
+        "url": "/racchette/joma-valkiria-pro-hrd-2026/",
+        "sopra": "Joma · 2026",
+        "nome": "Valkiria Pro HRD 2026",
+        "testo": "Rotonda di controllo, 350–360 g, carbonio 12K, livello intermedio / avanzato."
       }
     ],
     "aggiornata": "15 novembre 2026",
     "tratti": {
       "titolo": "In sintesi",
       "voci": [
-        "Racchetta d'attacco",
-        "Livello intermedio",
+        "Polivalente",
+        "Livello intermedio / avanzato",
         "Tatto morbido",
-        "Forma diamante"
+        "Forma rotonda"
       ],
       "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
     }

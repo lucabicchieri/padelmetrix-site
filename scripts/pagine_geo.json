@@ -549,6 +549,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-zinedine-zidane/",
+"alt": {
+"it": "/it/domande/racchetta-zinedine-zidane/",
+"en": "/en/questions/zinedine-zidane-padel-racket/",
+"es": "/es/preguntas/pala-zinedine-zidane/",
+"fr": "/fr/questions/raquette-zinedine-zidane/"
+}
+},
+{
 "path": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
 "alt": {
 "it": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
@@ -1131,6 +1140,15 @@
 "en": "/en/questions/tolito-aguirre-padel-racket/",
 "es": "/es/preguntas/pala-tolito-aguirre/",
 "fr": "/fr/questions/raquette-tolito-aguirre/"
+}
+},
+{
+"path": "/en/questions/zinedine-zidane-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-zinedine-zidane/",
+"en": "/en/questions/zinedine-zidane-padel-racket/",
+"es": "/es/preguntas/pala-zinedine-zidane/",
+"fr": "/fr/questions/raquette-zinedine-zidane/"
 }
 },
 {
@@ -1719,6 +1737,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-zinedine-zidane/",
+"alt": {
+"it": "/it/domande/racchetta-zinedine-zidane/",
+"en": "/en/questions/zinedine-zidane-padel-racket/",
+"es": "/es/preguntas/pala-zinedine-zidane/",
+"fr": "/fr/questions/raquette-zinedine-zidane/"
+}
+},
+{
 "path": "/es/preguntas/cuanto-pesa-una-pala-de-padel/",
 "alt": {
 "it": "/it/domande/quanto-pesa-una-racchetta-da-padel/",
@@ -2301,6 +2328,15 @@
 "en": "/en/questions/tolito-aguirre-padel-racket/",
 "es": "/es/preguntas/pala-tolito-aguirre/",
 "fr": "/fr/questions/raquette-tolito-aguirre/"
+}
+},
+{
+"path": "/fr/questions/raquette-zinedine-zidane/",
+"alt": {
+"it": "/it/domande/racchetta-zinedine-zidane/",
+"en": "/en/questions/zinedine-zidane-padel-racket/",
+"es": "/es/preguntas/pala-zinedine-zidane/",
+"fr": "/fr/questions/raquette-zinedine-zidane/"
 }
 },
 {
