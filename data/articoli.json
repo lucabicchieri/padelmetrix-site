@@ -1,5 +1,32 @@
 [
  {
+  "slug": "zidane-racchette-padel-adidas-metalbone-zz",
+  "cat": "novita",
+  "data": "2026-11-15",
+  "racchette": [
+   "adidas-metalbone-zz-carbon-2026",
+   "adidas-metalbone-zz-team-2026"
+  ],
+  "titolo": {
+   "it": "Zidane e il padel: le racchette adidas Metalbone ZZ e la storia dietro la capsula",
+   "en": "Zidane and padel: the adidas Metalbone ZZ rackets and the story behind the capsule",
+   "es": "Zidane y el pádel: las palas adidas Metalbone ZZ y la historia detrás de la cápsula",
+   "fr": "Zidane et le padel : les raquettes adidas Metalbone ZZ et l'histoire de la capsule"
+  },
+  "desc": {
+   "it": "Il campione del mondo firma due Metalbone: la sua passione per il padel e come sono le racchette.",
+   "en": "The World Cup winner signs two Metalbones: his passion for padel and what the rackets are like.",
+   "es": "El campeón del mundo firma dos Metalbone: su pasión por el pádel y cómo son las palas.",
+   "fr": "Le champion du monde signe deux Metalbone : sa passion pour le padel et comment sont les raquettes."
+  },
+  "url": {
+   "it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+   "en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+   "es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+   "fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
+  }
+ },
+ {
   "slug": "fernando-belasteguin-carriera-record-racchette",
   "cat": "giocatori",
   "data": "2026-11-14",
