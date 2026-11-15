@@ -43,7 +43,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Nox+Nerbo++12K+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0GWMB14Z6"
       },
       {
         "nome": "PadelMarket",
