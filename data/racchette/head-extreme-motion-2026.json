@@ -43,7 +43,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Head+Extreme+Motion+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0H82F952J"
       },
       {
         "nome": "PadelPROShop",

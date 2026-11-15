@@ -33,7 +33,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Oxdog+Pure+Pro++2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0G5S4LHWV"
       },
       {
         "nome": "PadelPROShop",

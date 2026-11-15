@@ -180,6 +180,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-ale-salazar/",
+"alt": {
+"it": "/it/domande/racchetta-ale-salazar/",
+"en": "/en/questions/ale-salazar-padel-racket/",
+"es": "/es/preguntas/pala-ale-salazar/",
+"fr": "/fr/questions/raquette-ale-salazar/"
+}
+},
+{
 "path": "/it/domande/racchetta-alejandra-salazar/",
 "alt": {
 "it": "/it/domande/racchetta-alejandra-salazar/",
@@ -288,6 +297,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-fede-chingotto/",
+"alt": {
+"it": "/it/domande/racchetta-fede-chingotto/",
+"en": "/en/questions/fede-chingotto-padel-racket/",
+"es": "/es/preguntas/pala-fede-chingotto/",
+"fr": "/fr/questions/raquette-fede-chingotto/"
+}
+},
+{
 "path": "/it/domande/racchetta-federico-chingotto/",
 "alt": {
 "it": "/it/domande/racchetta-federico-chingotto/",
@@ -321,6 +339,15 @@
 "en": "/en/questions/gemma-triay-padel-racket/",
 "es": "/es/preguntas/pala-gemma-triay/",
 "fr": "/fr/questions/raquette-gemma-triay/"
+}
+},
+{
+"path": "/it/domande/racchetta-javi-ruiz/",
+"alt": {
+"it": "/it/domande/racchetta-javi-ruiz/",
+"en": "/en/questions/javi-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-javi-ruiz/",
+"fr": "/fr/questions/raquette-javi-ruiz/"
 }
 },
 {
@@ -384,6 +411,15 @@
 "en": "/en/questions/leo-augsburger-padel-racket/",
 "es": "/es/preguntas/pala-leo-augsburger/",
 "fr": "/fr/questions/raquette-leo-augsburger/"
+}
+},
+{
+"path": "/it/domande/racchetta-lucas-bergamini/",
+"alt": {
+"it": "/it/domande/racchetta-lucas-bergamini/",
+"en": "/en/questions/lucas-bergamini-padel-racket/",
+"es": "/es/preguntas/pala-lucas-bergamini/",
+"fr": "/fr/questions/raquette-lucas-bergamini/"
 }
 },
 {
@@ -495,6 +531,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-patty-llaguno/",
+"alt": {
+"it": "/it/domande/racchetta-patty-llaguno/",
+"en": "/en/questions/patty-llaguno-padel-racket/",
+"es": "/es/preguntas/pala-patty-llaguno/",
+"fr": "/fr/questions/raquette-patty-llaguno/"
+}
+},
+{
 "path": "/it/domande/racchetta-paula-josemaria/",
 "alt": {
 "it": "/it/domande/racchetta-paula-josemaria/",
@@ -504,12 +549,30 @@
 }
 },
 {
+"path": "/it/domande/racchetta-raul-marcos/",
+"alt": {
+"it": "/it/domande/racchetta-raul-marcos/",
+"en": "/en/questions/raul-marcos-padel-racket/",
+"es": "/es/preguntas/pala-raul-marcos/",
+"fr": "/fr/questions/raquette-raul-marcos/"
+}
+},
+{
 "path": "/it/domande/racchetta-sanyo-gutierrez/",
 "alt": {
 "it": "/it/domande/racchetta-sanyo-gutierrez/",
 "en": "/en/questions/sanyo-gutierrez-padel-racket/",
 "es": "/es/preguntas/pala-sanyo-gutierrez/",
 "fr": "/fr/questions/raquette-sanyo-gutierrez/"
+}
+},
+{
+"path": "/it/domande/racchetta-seba-nerone/",
+"alt": {
+"it": "/it/domande/racchetta-seba-nerone/",
+"en": "/en/questions/seba-nerone-padel-racket/",
+"es": "/es/preguntas/pala-seba-nerone/",
+"fr": "/fr/questions/raquette-seba-nerone/"
 }
 },
 {
@@ -549,12 +612,30 @@
 }
 },
 {
+"path": "/it/domande/racchetta-vero-virseda/",
+"alt": {
+"it": "/it/domande/racchetta-vero-virseda/",
+"en": "/en/questions/vero-virseda-padel-racket/",
+"es": "/es/preguntas/pala-vero-virseda/",
+"fr": "/fr/questions/raquette-vero-virseda/"
+}
+},
+{
 "path": "/it/domande/racchetta-zinedine-zidane/",
 "alt": {
 "it": "/it/domande/racchetta-zinedine-zidane/",
 "en": "/en/questions/zinedine-zidane-padel-racket/",
 "es": "/es/preguntas/pala-zinedine-zidane/",
 "fr": "/fr/questions/raquette-zinedine-zidane/"
+}
+},
+{
+"path": "/it/domande/racchetta-alex-ruiz/",
+"alt": {
+"it": "/it/domande/racchetta-alex-ruiz/",
+"en": "/en/questions/alex-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-alex-ruiz/",
+"fr": "/fr/questions/raquette-alex-ruiz/"
 }
 },
 {
@@ -774,6 +855,15 @@
 }
 },
 {
+"path": "/en/questions/ale-salazar-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-ale-salazar/",
+"en": "/en/questions/ale-salazar-padel-racket/",
+"es": "/es/preguntas/pala-ale-salazar/",
+"fr": "/fr/questions/raquette-ale-salazar/"
+}
+},
+{
 "path": "/en/questions/alejandra-salazar-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-alejandra-salazar/",
@@ -882,6 +972,15 @@
 }
 },
 {
+"path": "/en/questions/fede-chingotto-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-fede-chingotto/",
+"en": "/en/questions/fede-chingotto-padel-racket/",
+"es": "/es/preguntas/pala-fede-chingotto/",
+"fr": "/fr/questions/raquette-fede-chingotto/"
+}
+},
+{
 "path": "/en/questions/federico-chingotto-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-federico-chingotto/",
@@ -915,6 +1014,15 @@
 "en": "/en/questions/gemma-triay-padel-racket/",
 "es": "/es/preguntas/pala-gemma-triay/",
 "fr": "/fr/questions/raquette-gemma-triay/"
+}
+},
+{
+"path": "/en/questions/javi-ruiz-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-javi-ruiz/",
+"en": "/en/questions/javi-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-javi-ruiz/",
+"fr": "/fr/questions/raquette-javi-ruiz/"
 }
 },
 {
@@ -978,6 +1086,15 @@
 "en": "/en/questions/leo-augsburger-padel-racket/",
 "es": "/es/preguntas/pala-leo-augsburger/",
 "fr": "/fr/questions/raquette-leo-augsburger/"
+}
+},
+{
+"path": "/en/questions/lucas-bergamini-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-lucas-bergamini/",
+"en": "/en/questions/lucas-bergamini-padel-racket/",
+"es": "/es/preguntas/pala-lucas-bergamini/",
+"fr": "/fr/questions/raquette-lucas-bergamini/"
 }
 },
 {
@@ -1089,6 +1206,15 @@
 }
 },
 {
+"path": "/en/questions/patty-llaguno-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-patty-llaguno/",
+"en": "/en/questions/patty-llaguno-padel-racket/",
+"es": "/es/preguntas/pala-patty-llaguno/",
+"fr": "/fr/questions/raquette-patty-llaguno/"
+}
+},
+{
 "path": "/en/questions/paula-josemaria-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-paula-josemaria/",
@@ -1098,12 +1224,30 @@
 }
 },
 {
+"path": "/en/questions/raul-marcos-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-raul-marcos/",
+"en": "/en/questions/raul-marcos-padel-racket/",
+"es": "/es/preguntas/pala-raul-marcos/",
+"fr": "/fr/questions/raquette-raul-marcos/"
+}
+},
+{
 "path": "/en/questions/sanyo-gutierrez-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-sanyo-gutierrez/",
 "en": "/en/questions/sanyo-gutierrez-padel-racket/",
 "es": "/es/preguntas/pala-sanyo-gutierrez/",
 "fr": "/fr/questions/raquette-sanyo-gutierrez/"
+}
+},
+{
+"path": "/en/questions/seba-nerone-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-seba-nerone/",
+"en": "/en/questions/seba-nerone-padel-racket/",
+"es": "/es/preguntas/pala-seba-nerone/",
+"fr": "/fr/questions/raquette-seba-nerone/"
 }
 },
 {
@@ -1143,12 +1287,30 @@
 }
 },
 {
+"path": "/en/questions/vero-virseda-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-vero-virseda/",
+"en": "/en/questions/vero-virseda-padel-racket/",
+"es": "/es/preguntas/pala-vero-virseda/",
+"fr": "/fr/questions/raquette-vero-virseda/"
+}
+},
+{
 "path": "/en/questions/zinedine-zidane-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-zinedine-zidane/",
 "en": "/en/questions/zinedine-zidane-padel-racket/",
 "es": "/es/preguntas/pala-zinedine-zidane/",
 "fr": "/fr/questions/raquette-zinedine-zidane/"
+}
+},
+{
+"path": "/en/questions/alex-ruiz-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-alex-ruiz/",
+"en": "/en/questions/alex-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-alex-ruiz/",
+"fr": "/fr/questions/raquette-alex-ruiz/"
 }
 },
 {
@@ -1368,6 +1530,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-ale-salazar/",
+"alt": {
+"it": "/it/domande/racchetta-ale-salazar/",
+"en": "/en/questions/ale-salazar-padel-racket/",
+"es": "/es/preguntas/pala-ale-salazar/",
+"fr": "/fr/questions/raquette-ale-salazar/"
+}
+},
+{
 "path": "/es/preguntas/pala-alejandra-salazar/",
 "alt": {
 "it": "/it/domande/racchetta-alejandra-salazar/",
@@ -1476,6 +1647,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-fede-chingotto/",
+"alt": {
+"it": "/it/domande/racchetta-fede-chingotto/",
+"en": "/en/questions/fede-chingotto-padel-racket/",
+"es": "/es/preguntas/pala-fede-chingotto/",
+"fr": "/fr/questions/raquette-fede-chingotto/"
+}
+},
+{
 "path": "/es/preguntas/pala-federico-chingotto/",
 "alt": {
 "it": "/it/domande/racchetta-federico-chingotto/",
@@ -1509,6 +1689,15 @@
 "en": "/en/questions/gemma-triay-padel-racket/",
 "es": "/es/preguntas/pala-gemma-triay/",
 "fr": "/fr/questions/raquette-gemma-triay/"
+}
+},
+{
+"path": "/es/preguntas/pala-javi-ruiz/",
+"alt": {
+"it": "/it/domande/racchetta-javi-ruiz/",
+"en": "/en/questions/javi-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-javi-ruiz/",
+"fr": "/fr/questions/raquette-javi-ruiz/"
 }
 },
 {
@@ -1572,6 +1761,15 @@
 "en": "/en/questions/leo-augsburger-padel-racket/",
 "es": "/es/preguntas/pala-leo-augsburger/",
 "fr": "/fr/questions/raquette-leo-augsburger/"
+}
+},
+{
+"path": "/es/preguntas/pala-lucas-bergamini/",
+"alt": {
+"it": "/it/domande/racchetta-lucas-bergamini/",
+"en": "/en/questions/lucas-bergamini-padel-racket/",
+"es": "/es/preguntas/pala-lucas-bergamini/",
+"fr": "/fr/questions/raquette-lucas-bergamini/"
 }
 },
 {
@@ -1683,6 +1881,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-patty-llaguno/",
+"alt": {
+"it": "/it/domande/racchetta-patty-llaguno/",
+"en": "/en/questions/patty-llaguno-padel-racket/",
+"es": "/es/preguntas/pala-patty-llaguno/",
+"fr": "/fr/questions/raquette-patty-llaguno/"
+}
+},
+{
 "path": "/es/preguntas/pala-paula-josemaria/",
 "alt": {
 "it": "/it/domande/racchetta-paula-josemaria/",
@@ -1692,12 +1899,30 @@
 }
 },
 {
+"path": "/es/preguntas/pala-raul-marcos/",
+"alt": {
+"it": "/it/domande/racchetta-raul-marcos/",
+"en": "/en/questions/raul-marcos-padel-racket/",
+"es": "/es/preguntas/pala-raul-marcos/",
+"fr": "/fr/questions/raquette-raul-marcos/"
+}
+},
+{
 "path": "/es/preguntas/pala-sanyo-gutierrez/",
 "alt": {
 "it": "/it/domande/racchetta-sanyo-gutierrez/",
 "en": "/en/questions/sanyo-gutierrez-padel-racket/",
 "es": "/es/preguntas/pala-sanyo-gutierrez/",
 "fr": "/fr/questions/raquette-sanyo-gutierrez/"
+}
+},
+{
+"path": "/es/preguntas/pala-seba-nerone/",
+"alt": {
+"it": "/it/domande/racchetta-seba-nerone/",
+"en": "/en/questions/seba-nerone-padel-racket/",
+"es": "/es/preguntas/pala-seba-nerone/",
+"fr": "/fr/questions/raquette-seba-nerone/"
 }
 },
 {
@@ -1737,12 +1962,30 @@
 }
 },
 {
+"path": "/es/preguntas/pala-vero-virseda/",
+"alt": {
+"it": "/it/domande/racchetta-vero-virseda/",
+"en": "/en/questions/vero-virseda-padel-racket/",
+"es": "/es/preguntas/pala-vero-virseda/",
+"fr": "/fr/questions/raquette-vero-virseda/"
+}
+},
+{
 "path": "/es/preguntas/pala-zinedine-zidane/",
 "alt": {
 "it": "/it/domande/racchetta-zinedine-zidane/",
 "en": "/en/questions/zinedine-zidane-padel-racket/",
 "es": "/es/preguntas/pala-zinedine-zidane/",
 "fr": "/fr/questions/raquette-zinedine-zidane/"
+}
+},
+{
+"path": "/es/preguntas/pala-alex-ruiz/",
+"alt": {
+"it": "/it/domande/racchetta-alex-ruiz/",
+"en": "/en/questions/alex-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-alex-ruiz/",
+"fr": "/fr/questions/raquette-alex-ruiz/"
 }
 },
 {
@@ -1962,6 +2205,15 @@
 }
 },
 {
+"path": "/fr/questions/raquette-ale-salazar/",
+"alt": {
+"it": "/it/domande/racchetta-ale-salazar/",
+"en": "/en/questions/ale-salazar-padel-racket/",
+"es": "/es/preguntas/pala-ale-salazar/",
+"fr": "/fr/questions/raquette-ale-salazar/"
+}
+},
+{
 "path": "/fr/questions/raquette-alejandra-salazar/",
 "alt": {
 "it": "/it/domande/racchetta-alejandra-salazar/",
@@ -2070,6 +2322,15 @@
 }
 },
 {
+"path": "/fr/questions/raquette-fede-chingotto/",
+"alt": {
+"it": "/it/domande/racchetta-fede-chingotto/",
+"en": "/en/questions/fede-chingotto-padel-racket/",
+"es": "/es/preguntas/pala-fede-chingotto/",
+"fr": "/fr/questions/raquette-fede-chingotto/"
+}
+},
+{
 "path": "/fr/questions/raquette-federico-chingotto/",
 "alt": {
 "it": "/it/domande/racchetta-federico-chingotto/",
@@ -2103,6 +2364,15 @@
 "en": "/en/questions/gemma-triay-padel-racket/",
 "es": "/es/preguntas/pala-gemma-triay/",
 "fr": "/fr/questions/raquette-gemma-triay/"
+}
+},
+{
+"path": "/fr/questions/raquette-javi-ruiz/",
+"alt": {
+"it": "/it/domande/racchetta-javi-ruiz/",
+"en": "/en/questions/javi-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-javi-ruiz/",
+"fr": "/fr/questions/raquette-javi-ruiz/"
 }
 },
 {
@@ -2166,6 +2436,15 @@
 "en": "/en/questions/leo-augsburger-padel-racket/",
 "es": "/es/preguntas/pala-leo-augsburger/",
 "fr": "/fr/questions/raquette-leo-augsburger/"
+}
+},
+{
+"path": "/fr/questions/raquette-lucas-bergamini/",
+"alt": {
+"it": "/it/domande/racchetta-lucas-bergamini/",
+"en": "/en/questions/lucas-bergamini-padel-racket/",
+"es": "/es/preguntas/pala-lucas-bergamini/",
+"fr": "/fr/questions/raquette-lucas-bergamini/"
 }
 },
 {
@@ -2277,6 +2556,15 @@
 }
 },
 {
+"path": "/fr/questions/raquette-patty-llaguno/",
+"alt": {
+"it": "/it/domande/racchetta-patty-llaguno/",
+"en": "/en/questions/patty-llaguno-padel-racket/",
+"es": "/es/preguntas/pala-patty-llaguno/",
+"fr": "/fr/questions/raquette-patty-llaguno/"
+}
+},
+{
 "path": "/fr/questions/raquette-paula-josemaria/",
 "alt": {
 "it": "/it/domande/racchetta-paula-josemaria/",
@@ -2286,12 +2574,30 @@
 }
 },
 {
+"path": "/fr/questions/raquette-raul-marcos/",
+"alt": {
+"it": "/it/domande/racchetta-raul-marcos/",
+"en": "/en/questions/raul-marcos-padel-racket/",
+"es": "/es/preguntas/pala-raul-marcos/",
+"fr": "/fr/questions/raquette-raul-marcos/"
+}
+},
+{
 "path": "/fr/questions/raquette-sanyo-gutierrez/",
 "alt": {
 "it": "/it/domande/racchetta-sanyo-gutierrez/",
 "en": "/en/questions/sanyo-gutierrez-padel-racket/",
 "es": "/es/preguntas/pala-sanyo-gutierrez/",
 "fr": "/fr/questions/raquette-sanyo-gutierrez/"
+}
+},
+{
+"path": "/fr/questions/raquette-seba-nerone/",
+"alt": {
+"it": "/it/domande/racchetta-seba-nerone/",
+"en": "/en/questions/seba-nerone-padel-racket/",
+"es": "/es/preguntas/pala-seba-nerone/",
+"fr": "/fr/questions/raquette-seba-nerone/"
 }
 },
 {
@@ -2331,12 +2637,30 @@
 }
 },
 {
+"path": "/fr/questions/raquette-vero-virseda/",
+"alt": {
+"it": "/it/domande/racchetta-vero-virseda/",
+"en": "/en/questions/vero-virseda-padel-racket/",
+"es": "/es/preguntas/pala-vero-virseda/",
+"fr": "/fr/questions/raquette-vero-virseda/"
+}
+},
+{
 "path": "/fr/questions/raquette-zinedine-zidane/",
 "alt": {
 "it": "/it/domande/racchetta-zinedine-zidane/",
 "en": "/en/questions/zinedine-zidane-padel-racket/",
 "es": "/es/preguntas/pala-zinedine-zidane/",
 "fr": "/fr/questions/raquette-zinedine-zidane/"
+}
+},
+{
+"path": "/fr/questions/raquette-alex-ruiz/",
+"alt": {
+"it": "/it/domande/racchetta-alex-ruiz/",
+"en": "/en/questions/alex-ruiz-padel-racket/",
+"es": "/es/preguntas/pala-alex-ruiz/",
+"fr": "/fr/questions/raquette-alex-ruiz/"
 }
 },
 {
