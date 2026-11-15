@@ -2986,6 +2986,159 @@ def regali(db):
 
 
 
+
+# ---------------------------------------------------------------- Metalbone vs Vertex (novembre 2026)
+MV_SLUG = "metalbone-vs-vertex-confronto-racchette"
+S.SLUG[MV_SLUG] = ("metalbone-vs-vertex-padel-rackets-compared", "metalbone-vs-vertex-comparativa-palas")
+S.SLUG_FR[MV_SLUG] = "metalbone-vs-vertex-comparatif-raquettes"
+DATE_ART[MV_SLUG] = "2026-11-15"
+
+
+def art_metalbone_vertex(db):
+    by = {r["slug"]: r for r in db}
+    sl = ["adidas-metalbone-2026", "bullpadel-vertex-05-2026", "adidas-metalbone-hrd-plus-2026", "bullpadel-vertex-05-2027",
+          "adidas-metalbone-carbon-2026", "bullpadel-vertex-05-comfort-2026"]
+    rs = [by[s] for s in sl if s in by]
+    mb, vx, hrd, vx27, mbc, vxc = (url_r(by[s]) for s in sl)
+    vxh, vxw = url_r(by["bullpadel-vertex-05-hybrid-2027"]), url_r(by["bullpadel-vertex-05-w-2026"])
+    umb, uof = P("articoli", MB_SLUG), P("offerte")
+    ugal = P("articoli", "ale-galan-chi-e-e-che-racchetta-usa")
+    bp = fonte("https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html", "Bullpadel")
+    ps = fonte("https://padelspeak.com/es/analisis-bullpadel-vertex-05-2026/", "PadelSpeak")
+    pmk = fonte("https://padelmarket.com/products/adidas-metalbone-2026-ale-galan-pala", "Padel Market")
+    pmb = fonte("https://padelmarket.com/blogs/blog/adidas-metalbone-vs-metalbone-hrd-2026", "Padel Market")
+    pz = fonte("https://padelzoom.es/adidas-metalbone-2026-ale-galan/", "PadelZoom")
+    R = [(L("Giocatore", "Player", "Jugador", "Joueur"), "Ale Galán", "Juan Tello"),
+         (L("Forma", "Shape", "Forma", "Forme"), L("Diamante", "Diamond", "Diamante", "Diamant"), L("Diamante", "Diamond", "Diamante", "Diamant")),
+         (L("Peso", "Weight", "Peso", "Poids"), "345–360 g", "365–375 g"),
+         (L("Peso regolabile", "Adjustable weight", "Peso regulable", "Poids réglable"),
+          L("fino a +11,2 g (Weight &amp; Balance)", "up to +11.2 g (Weight &amp; Balance)", "hasta +11,2 g (Weight &amp; Balance)", "jusqu'à +11,2 g (Weight &amp; Balance)"),
+          L("fino a +12 g (Custom Weight)", "up to +12 g (Custom Weight)", "hasta +12 g (Custom Weight)", "jusqu'à +12 g (Custom Weight)")),
+         (L("Bilanciamento", "Balance", "Balance", "Équilibre"), L("alto", "high", "alto", "haut"), L("alto (circa 26 cm)", "high (about 26 cm)", "alto (unos 26 cm)", "haut (environ 26 cm)")),
+         (L("Piatti", "Faces", "Caras", "Faces"), L("carbonio alluminizzato 16K", "16K aluminised carbon", "carbono aluminizado 16K", "carbone aluminisé 16K"), L("carbonio X-Tend 12K", "X-Tend 12K carbon", "carbono X-Tend 12K", "carbone X-Tend 12K")),
+         (L("Gomma", "Core", "Goma", "Gomme"), L("EVA Soft Performance (morbida)", "EVA Soft Performance (soft)", "EVA Soft Performance (blanda)", "EVA Soft Performance (douce)"),
+          L("MultiEVA a tre strati", "three-layer MultiEVA", "MultiEVA de tres capas", "MultiEVA trois couches")),
+         (L("Tatto", "Feel", "Tacto", "Toucher"), L("medio", "medium", "medio", "moyen"), L("duro", "hard", "duro", "dur")),
+         (L("Spessore", "Thickness", "Grosor", "Épaisseur"), "38 mm", "38 mm"),
+         (L("Listino", "List price", "PVP", "Prix catalogue"), "390 €", "339,90 €")]
+    righe = "".join(f"<tr><td>{a}</td><td>{b}</td><td>{c}</td></tr>" for a, b, c in R)
+    tab = (f'<div class="tablebox"><table class="tab cmp2"><thead><tr><th></th><th><a href="{mb}">adidas Metalbone 2026</a></th>'
+           f'<th><a href="{vx}">Bullpadel Vertex 05 2026</a></th></tr></thead><tbody>{righe}</tbody></table></div>')
+    box = _box5(L("Quanto costano oggi", "What they cost today", "Cuánto cuestan hoy", "Combien elles coûtent aujourd'hui"),
+                L("I prezzi Amazon di Metalbone, Vertex e delle altre racchette, aggiornati due volte al giorno.", "Amazon prices for the Metalbone, the Vertex and other rackets, updated twice a day.",
+                  "Los precios de Amazon de Metalbone, Vertex y las demás palas, actualizados dos veces al día.", "Les prix Amazon de la Metalbone, de la Vertex et des autres raquettes, mis à jour deux fois par jour."),
+                L("Guarda le offerte", "See the deals", "Ver las ofertas", "Voir les offres"), uof)
+    corpo = L(f'''<p><b>Sono le due racchette da attacco più famose del padel: la adidas Metalbone di Ale Galán e la Bullpadel Vertex di Juan Tello. Hanno la stessa forma a diamante e lo stesso obiettivo, chiudere il punto, ma ci arrivano in modo opposto. In breve: la Metalbone è più leggera e dà potenza facile; la Vertex è più pesante, più dura e più stabile, e chiede più braccio e più tecnica.</b></p>
+<h2>I dati a confronto</h2>
+{tab}
+<p class="note">Dati: {pmk} e {pz} per la Metalbone; {bp} e {ps} per la Vertex. Listini indicativi.</p>
+<h2>Potenza e tatto</h2>
+<p>La Metalbone ha una gomma morbida sotto un carbonio rigido: la palla esce veloce anche con un gesto medio, e l'effetto «fionda» aiuta nello smash. Il rovescio della medaglia è che l'uscita di palla rende più difficile dosare i colpi delicati, come i blocchi e le volée di controllo ({pmb}).</p>
+<p>La Vertex 05 è più dura: la gomma a tre strati ha gli strati esterni rigidi e solo quello interno morbido. Restituisce quello che ci metti, quindi premia chi colpisce forte e pulito ed è molto stabile a rete; in cambio perdona poco i colpi fuori centro ({ps}).</p>
+<h2>Peso e maneggevolezza</h2>
+<p>Qui la differenza è netta. La Metalbone parte da 345–360 g e si può appesantire fino a 11,2 g con le viti del sistema Weight &amp; Balance. La Vertex parte già da 365–375 g, con il bilanciamento alto, e si può caricare di altri 12 g ({bp}). In mano la Metalbone è più rapida negli scambi veloci a rete; la Vertex ha più massa dietro la palla ma si fa sentire dopo un'ora di partita.</p>
+<h2>Comfort e braccio</h2>
+<p>Nessuna delle due è una racchetta comoda: diamante e bilanciamento alto caricano spalla e gomito. La Vertex ha più sistemi contro le vibrazioni (Ease Vibe, Vibradrive e l'impugnatura Hesacore), ma resta dura e la stessa prova la sconsiglia a chi rischia l'epicondilite ({ps}). La Metalbone è più morbida all'impatto e più leggera. Se hai il braccio delicato, guarda le versioni più tranquille delle due linee, più sotto.</p>
+<h2>Prezzo</h2>
+<p>Di listino la Metalbone costa di più (390 € contro 339,90 €), ma nei negozi è spesso lei la più scontata. I prezzi cambiano ogni giorno: quelli di oggi li trovi nelle due schede e nella pagina delle <a href="{uof}">offerte</a>.</p>{box}
+<h2>Le altre versioni</h2>
+<ul><li><b>Metalbone:</b> la <a href="{hrd}">HRD+</a> è la versione dura, quella che <a href="{ugal}">Galán</a> usa in partita, ed è la più vicina alla Vertex come sensazione; la <a href="{mbc}">Carbon</a> costa meno ed è più tollerante. La storia della linea è nel nostro <a href="{umb}">articolo sulla Metalbone</a>.</li>
+<li><b>Vertex:</b> la <a href="{vxc}">Comfort</a> è più morbida e adatta a più giocatori; la <a href="{vxw}">Woman</a> è quella di Delfi Brea, più leggera; nel 2027 sono arrivate la <a href="{vx27}">Vertex 05 2027</a> e la <a href="{vxh}">Hybrid</a>, con bilanciamento più basso.</li></ul>
+<h2>Quale scegliere</h2>
+<ul><li><b>Scegli la Metalbone</b> se vuoi potenza senza dover forzare il gesto, se giochi molto di polso e di velocità o se preferisci una racchetta più leggera da regolare a piacere.</li>
+<li><b>Scegli la Vertex</b> se hai un braccio forte e un colpo pulito, se cerchi stabilità e precisione nello smash e nelle volée, e non ti spaventano 370 g con il peso in testa.</li>
+<li><b>Lascia stare entrambe</b> se giochi da poco o hai avuto problemi al gomito: sono racchette da giocatori avanzati. Meglio una versione Carbon o Comfort, o una racchetta a goccia.</li></ul>
+<p class="note">Fonti: {bp}; {ps}; {pmk}; {pmb}; {pz}. Dati aggiornati a novembre 2026.</p>''',
+              f'''<p><b>They are the two most famous attacking rackets in padel: Ale Galán's adidas Metalbone and Juan Tello's Bullpadel Vertex. Same diamond shape, same aim (finishing the point), but they get there in opposite ways. In short: the Metalbone is lighter and gives easy power; the Vertex is heavier, harder and more stable, and asks for more arm and more technique.</b></p>
+<h2>The specs side by side</h2>
+{tab}
+<p class="note">Data: {pmk} and {pz} for the Metalbone; {bp} and {ps} for the Vertex. Indicative list prices.</p>
+<h2>Power and feel</h2>
+<p>The Metalbone has a soft core under stiff carbon: the ball comes off fast even with a medium swing, and the “catapult” effect helps on smashes. The flip side is that this ball output makes delicate shots, such as blocks and control volleys, harder to measure ({pmb}).</p>
+<p>The Vertex 05 is harder: its three-layer core has stiff outer layers and only a soft inner one. It gives back what you put in, so it rewards players who hit hard and clean and it is very stable at the net; in return it forgives off-centre hits very little ({ps}).</p>
+<h2>Weight and handling</h2>
+<p>Here the difference is clear. The Metalbone starts at 345–360 g and can be made up to 11.2 g heavier with the Weight &amp; Balance screws. The Vertex already starts at 365–375 g, with a high balance, and can take another 12 g ({bp}). In the hand the Metalbone is quicker in fast exchanges at the net; the Vertex puts more mass behind the ball but you feel it after an hour of play.</p>
+<h2>Comfort and arm</h2>
+<p>Neither is a comfortable racket: a diamond shape and high balance load the shoulder and elbow. The Vertex has more anti-vibration systems (Ease Vibe, Vibradrive and the Hesacore grip), but it is still hard, and the same review advises against it for players at risk of tennis elbow ({ps}). The Metalbone is softer on impact and lighter. If your arm is sensitive, look at the gentler versions of both lines, below.</p>
+<h2>Price</h2>
+<p>At list price the Metalbone costs more (€390 against €339.90), but in shops it is often the more heavily discounted of the two. Prices change daily: today's are on the two racket pages and on the <a href="{uof}">deals</a> page.</p>{box}
+<h2>The other versions</h2>
+<ul><li><b>Metalbone:</b> the <a href="{hrd}">HRD+</a> is the hard version, the one <a href="{ugal}">Galán</a> uses in matches, and the closest to the Vertex in feel; the <a href="{mbc}">Carbon</a> costs less and is more forgiving. The story of the line is in our <a href="{umb}">Metalbone article</a>.</li>
+<li><b>Vertex:</b> the <a href="{vxc}">Comfort</a> is softer and suits more players; the <a href="{vxw}">Woman</a> is Delfi Brea's, and lighter; 2027 brought the <a href="{vx27}">Vertex 05 2027</a> and the <a href="{vxh}">Hybrid</a>, with a lower balance.</li></ul>
+<h2>Which one to choose</h2>
+<ul><li><b>Choose the Metalbone</b> if you want power without forcing your swing, if you play with a lot of wrist and speed, or if you prefer a lighter racket you can tune to taste.</li>
+<li><b>Choose the Vertex</b> if you have a strong arm and a clean strike, if you want stability and precision on smashes and volleys, and 370 g with the weight in the head doesn't scare you.</li>
+<li><b>Skip both</b> if you haven't been playing long or have had elbow problems: these are rackets for advanced players. A Carbon or Comfort version, or a teardrop racket, is a better idea.</li></ul>
+<p class="note">Sources: {bp}; {ps}; {pmk}; {pmb}; {pz}. Data updated November 2026.</p>''',
+              f'''<p><b>Son las dos palas de ataque más famosas del pádel: la adidas Metalbone de Ale Galán y la Bullpadel Vertex de Juan Tello. Tienen la misma forma de diamante y el mismo objetivo, cerrar el punto, pero llegan a él de forma opuesta. En resumen: la Metalbone es más ligera y da potencia fácil; la Vertex es más pesada, más dura y más estable, y pide más brazo y más técnica.</b></p>
+<h2>Los datos frente a frente</h2>
+{tab}
+<p class="note">Datos: {pmk} y {pz} para la Metalbone; {bp} y {ps} para la Vertex. PVP orientativos.</p>
+<h2>Potencia y tacto</h2>
+<p>La Metalbone lleva una goma blanda bajo un carbono rígido: la bola sale rápida incluso con un gesto medio, y el efecto «catapulta» ayuda en el remate. La otra cara es que esa salida de bola hace más difícil medir los golpes delicados, como los bloqueos y las voleas de control ({pmb}).</p>
+<p>La Vertex 05 es más dura: su goma de tres capas tiene las exteriores rígidas y solo la interior blanda. Devuelve lo que le pones, así que premia a quien pega fuerte y limpio y es muy estable en la red; a cambio perdona poco los golpes descentrados ({ps}).</p>
+<h2>Peso y manejabilidad</h2>
+<p>Aquí la diferencia es clara. La Metalbone parte de 345–360 g y se puede cargar hasta 11,2 g con los tornillos del sistema Weight &amp; Balance. La Vertex parte ya de 365–375 g, con balance alto, y admite otros 12 g ({bp}). En la mano la Metalbone es más rápida en los intercambios en la red; la Vertex pone más masa detrás de la bola, pero se nota tras una hora de partido.</p>
+<h2>Comodidad y brazo</h2>
+<p>Ninguna de las dos es una pala cómoda: el diamante y el balance alto cargan hombro y codo. La Vertex tiene más sistemas antivibración (Ease Vibe, Vibradrive y el puño Hesacore), pero sigue siendo dura y el mismo análisis la desaconseja a quien tiene riesgo de epicondilitis ({ps}). La Metalbone es más blanda al impacto y más ligera. Si tienes el brazo delicado, mira las versiones más tranquilas de ambas líneas, más abajo.</p>
+<h2>Precio</h2>
+<p>De PVP la Metalbone cuesta más (390 € frente a 339,90 €), pero en las tiendas suele ser la más rebajada. Los precios cambian cada día: los de hoy están en las dos fichas y en la página de <a href="{uof}">ofertas</a>.</p>{box}
+<h2>Las otras versiones</h2>
+<ul><li><b>Metalbone:</b> la <a href="{hrd}">HRD+</a> es la versión dura, la que <a href="{ugal}">Galán</a> usa en los partidos, y la más parecida a la Vertex en sensaciones; la <a href="{mbc}">Carbon</a> cuesta menos y es más tolerante. La historia de la línea está en nuestro <a href="{umb}">artículo sobre la Metalbone</a>.</li>
+<li><b>Vertex:</b> la <a href="{vxc}">Comfort</a> es más blanda y vale para más jugadores; la <a href="{vxw}">Woman</a> es la de Delfi Brea, más ligera; en 2027 han llegado la <a href="{vx27}">Vertex 05 2027</a> y la <a href="{vxh}">Hybrid</a>, con balance más bajo.</li></ul>
+<h2>Cuál elegir</h2>
+<ul><li><b>Elige la Metalbone</b> si quieres potencia sin forzar el gesto, si juegas mucho de muñeca y velocidad o si prefieres una pala más ligera que puedas ajustar a tu gusto.</li>
+<li><b>Elige la Vertex</b> si tienes brazo fuerte y golpeo limpio, si buscas estabilidad y precisión en el remate y las voleas, y no te asustan 370 g con el peso en la cabeza.</li>
+<li><b>Descarta las dos</b> si llevas poco tiempo jugando o has tenido problemas de codo: son palas para jugadores avanzados. Mejor una versión Carbon o Comfort, o una pala de lágrima.</li></ul>
+<p class="note">Fuentes: {bp}; {ps}; {pmk}; {pmb}; {pz}. Datos actualizados a noviembre de 2026.</p>''',
+              f'''<p><b>Ce sont les deux raquettes d'attaque les plus célèbres du padel : l'adidas Metalbone d'Ale Galán et la Bullpadel Vertex de Juan Tello. Même forme diamant, même objectif (finir le point), mais elles y arrivent de façon opposée. En bref : la Metalbone est plus légère et donne de la puissance facile ; la Vertex est plus lourde, plus dure et plus stable, et demande plus de bras et plus de technique.</b></p>
+<h2>Les données face à face</h2>
+{tab}
+<p class="note">Données : {pmk} et {pz} pour la Metalbone ; {bp} et {ps} pour la Vertex. Prix catalogue indicatifs.</p>
+<h2>Puissance et toucher</h2>
+<p>La Metalbone a une gomme douce sous un carbone rigide : la balle sort vite même avec un geste moyen, et l'effet « catapulte » aide au smash. Le revers de la médaille, c'est que cette sortie de balle rend plus difficile le dosage des coups délicats, comme les blocs et les volées de contrôle ({pmb}).</p>
+<p>La Vertex 05 est plus dure : sa gomme à trois couches a des couches extérieures rigides et seulement une couche intérieure douce. Elle rend ce qu'on lui donne : elle récompense donc ceux qui frappent fort et proprement, et elle est très stable au filet ; en échange, elle pardonne peu les frappes décentrées ({ps}).</p>
+<h2>Poids et maniabilité</h2>
+<p>Ici, la différence est nette. La Metalbone part de 345–360 g et peut être alourdie jusqu'à 11,2 g avec les vis du système Weight &amp; Balance. La Vertex part déjà de 365–375 g, avec un équilibre haut, et peut recevoir 12 g de plus ({bp}). En main, la Metalbone est plus rapide dans les échanges au filet ; la Vertex met plus de masse derrière la balle, mais cela se sent après une heure de jeu.</p>
+<h2>Confort et bras</h2>
+<p>Aucune des deux n'est une raquette confortable : forme diamant et équilibre haut sollicitent l'épaule et le coude. La Vertex a plus de systèmes antivibrations (Ease Vibe, Vibradrive et le grip Hesacore), mais elle reste dure, et le même test la déconseille aux joueurs exposés au tennis elbow ({ps}). La Metalbone est plus douce à l'impact et plus légère. Si votre bras est fragile, regardez les versions plus sages des deux gammes, plus bas.</p>
+<h2>Prix</h2>
+<p>Au prix catalogue, la Metalbone coûte plus cher (390 € contre 339,90 €), mais en magasin c'est souvent elle la plus remisée. Les prix changent chaque jour : ceux du jour sont sur les deux fiches et sur la page des <a href="{uof}">offres</a>.</p>{box}
+<h2>Les autres versions</h2>
+<ul><li><b>Metalbone :</b> la <a href="{hrd}">HRD+</a> est la version dure, celle que <a href="{ugal}">Galán</a> utilise en match, et la plus proche de la Vertex en sensations ; la <a href="{mbc}">Carbon</a> coûte moins cher et pardonne davantage. L'histoire de la gamme est dans notre <a href="{umb}">article sur la Metalbone</a>.</li>
+<li><b>Vertex :</b> la <a href="{vxc}">Comfort</a> est plus douce et convient à plus de joueurs ; la <a href="{vxw}">Woman</a> est celle de Delfi Brea, plus légère ; 2027 a vu arriver la <a href="{vx27}">Vertex 05 2027</a> et la <a href="{vxh}">Hybrid</a>, à l'équilibre plus bas.</li></ul>
+<h2>Laquelle choisir</h2>
+<ul><li><b>Choisissez la Metalbone</b> si vous voulez de la puissance sans forcer le geste, si vous jouez beaucoup avec le poignet et la vitesse, ou si vous préférez une raquette plus légère à régler à votre goût.</li>
+<li><b>Choisissez la Vertex</b> si vous avez un bras solide et une frappe propre, si vous cherchez stabilité et précision au smash et à la volée, et si 370 g avec le poids en tête ne vous font pas peur.</li>
+<li><b>Laissez les deux de côté</b> si vous débutez ou si vous avez eu des problèmes de coude : ce sont des raquettes pour joueurs confirmés. Mieux vaut une version Carbon ou Comfort, ou une raquette en goutte d'eau.</li></ul>
+<p class="note">Sources : {bp} ; {ps} ; {pmk} ; {pmb} ; {pz}. Données mises à jour en novembre 2026.</p>''')
+    qa = [(L("Qual è più potente, Metalbone o Vertex?", "Which is more powerful, Metalbone or Vertex?", "¿Cuál es más potente, Metalbone o Vertex?", "Laquelle est la plus puissante, Metalbone ou Vertex ?"),
+           L("Dipende da come colpisci. La Metalbone dà più potenza con meno sforzo grazie alla gomma morbida; la Vertex, più dura e pesante, rende di più solo a chi colpisce forte e pulito.",
+             "It depends on how you hit. The Metalbone gives more power for less effort thanks to its soft core; the Vertex, harder and heavier, only pays off more for players who hit hard and clean.",
+             "Depende de cómo golpees. La Metalbone da más potencia con menos esfuerzo gracias a la goma blanda; la Vertex, más dura y pesada, solo rinde más para quien pega fuerte y limpio.",
+             "Cela dépend de votre frappe. La Metalbone donne plus de puissance avec moins d'effort grâce à sa gomme douce ; la Vertex, plus dure et plus lourde, ne rapporte davantage qu'à ceux qui frappent fort et proprement.")),
+          (L("Quale pesa di meno?", "Which one is lighter?", "¿Cuál pesa menos?", "Laquelle est la plus légère ?"),
+           L("La Metalbone: 345–360 g contro i 365–375 g della Vertex 05. Entrambe si possono appesantire con i sistemi di pesi del produttore.",
+             "The Metalbone: 345–360 g against 365–375 g for the Vertex 05. Both can be made heavier with the maker's weight systems.",
+             "La Metalbone: 345–360 g frente a los 365–375 g de la Vertex 05. Las dos se pueden cargar con los sistemas de pesos del fabricante.",
+             "La Metalbone : 345–360 g contre 365–375 g pour la Vertex 05. Les deux peuvent être alourdies avec les systèmes de poids du fabricant.")),
+          (L("Sono adatte a un giocatore intermedio?", "Are they suitable for an intermediate player?", "¿Son adecuadas para un jugador intermedio?", "Conviennent-elles à un joueur intermédiaire ?"),
+           L("In genere no: sono racchette a diamante con bilanciamento alto, pensate per giocatori avanzati. Per un intermedio vanno meglio la Metalbone Carbon o la Vertex 05 Comfort.",
+             "Generally not: they are diamond rackets with a high balance, built for advanced players. The Metalbone Carbon or the Vertex 05 Comfort suit an intermediate better.",
+             "En general no: son palas de diamante con balance alto, pensadas para jugadores avanzados. A un intermedio le van mejor la Metalbone Carbon o la Vertex 05 Comfort.",
+             "En général non : ce sont des raquettes diamant à équilibre haut, conçues pour joueurs confirmés. La Metalbone Carbon ou la Vertex 05 Comfort conviennent mieux à un intermédiaire."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("Metalbone vs Vertex: quale scegliere tra adidas e Bullpadel", "Metalbone vs Vertex: adidas or Bullpadel, which to choose",
+               "Metalbone vs Vertex: cuál elegir entre adidas y Bullpadel", "Metalbone vs Vertex : adidas ou Bullpadel, laquelle choisir")
+    desc = L("adidas Metalbone 2026 e Bullpadel Vertex 05 a confronto: peso, tatto, potenza, comfort e prezzo. Le differenze tra le racchette di Galán e Tello e quale fa per te.",
+             "adidas Metalbone 2026 and Bullpadel Vertex 05 compared: weight, feel, power, comfort and price. The differences between Galán's and Tello's rackets and which one suits you.",
+             "adidas Metalbone 2026 y Bullpadel Vertex 05 frente a frente: peso, tacto, potencia, comodidad y precio. Las diferencias entre las palas de Galán y Tello y cuál te conviene.",
+             "adidas Metalbone 2026 et Bullpadel Vertex 05 comparées : poids, toucher, puissance, confort et prix. Les différences entre les raquettes de Galán et de Tello, et laquelle vous convient.")
+    RACCHETTE_ARTICOLO[MV_SLUG] = [r["slug"] for r in rs]
+    scrivi_articolo(MV_SLUG, titolo + " | PadelMetrix", desc, titolo, L("Confronto", "Comparison", "Comparativa", "Comparatif"), corpo + faq_htm, items=rs, ld_extra=[faq_ld])
+    return MV_SLUG, titolo, L("Le racchette di Galán e Tello a confronto: peso, tatto, comfort, prezzo e quale fa per te.", "Galán's and Tello's rackets compared: weight, feel, comfort, price and which suits you.",
+                              "Las palas de Galán y Tello frente a frente: peso, tacto, comodidad, precio y cuál te conviene.", "Les raquettes de Galán et de Tello comparées : poids, toucher, confort, prix et laquelle vous convient.")
+
 # ---------------------------------------------------------------- Zidane e le adidas Metalbone ZZ (novembre 2026)
 ZZ_SLUG = "zidane-racchette-padel-adidas-metalbone-zz"
 S.SLUG[ZZ_SLUG] = ("zidane-padel-rackets-adidas-metalbone-zz", "zidane-palas-padel-adidas-metalbone-zz")
@@ -3266,7 +3419,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_vetri(db), art_zidane(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_vetri(db), art_metalbone_vertex(db), art_zidane(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "cat": categoria(slug), "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
