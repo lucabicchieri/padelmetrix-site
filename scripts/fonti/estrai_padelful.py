@@ -34,7 +34,9 @@ def estrai(u):
         for v in VOCI:
             m = re.fullmatch(re.escape(v) + r" (\d+(\.\d)?)", x)
             if m:
-                d.setdefault("punteggi", {})[v] = float(m.group(1))
+                d.setdefault("punteggi", {}).setdefault(v, float(m.group(1)))
+            elif x == v and re.fullmatch(r"\d+(\.\d)?", L[i + 1]):
+                d.setdefault("punteggi", {}).setdefault(v, float(L[i + 1]))
         if x in CAMPI and CAMPI[x] not in d and len(L[i + 1]) < 90:
             d[CAMPI[x]] = L[i + 1]
     return d
