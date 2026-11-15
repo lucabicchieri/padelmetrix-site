@@ -6,6 +6,8 @@ on:
         default: "scripts/fonti/pagine.txt"
       maxc:
         default: "6000"
+      script:
+        default: "leggi_pagine.py"
 jobs:
   leggi:
     runs-on: ubuntu-latest
@@ -15,4 +17,4 @@ jobs:
       - name: Leggi pagine
         env:
           MAXC: ${{ github.event.inputs.maxc }}
-        run: python3 scripts/fonti/leggi_pagine.py ${{ github.event.inputs.file }}
+        run: python3 scripts/fonti/${{ github.event.inputs.script }} ${{ github.event.inputs.file }}
