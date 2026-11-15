@@ -9,6 +9,15 @@
 }
 },
 {
+"path": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
+}
+},
+{
 "path": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
 "alt": {
 "it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
@@ -357,6 +366,15 @@
 "en": "/en/articles/padel-court-glass-types-tempered-laminated/",
 "es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
+"path": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
 }
 },
 {
@@ -711,6 +729,15 @@
 }
 },
 {
+"path": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
+}
+},
+{
 "path": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
 "alt": {
 "it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
@@ -1059,6 +1086,15 @@
 "en": "/en/articles/padel-court-glass-types-tempered-laminated/",
 "es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
+"path": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
 }
 },
 {
