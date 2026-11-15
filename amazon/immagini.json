@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-15T14:35Z",
+ "aggiornato": "2026-11-15T14:50Z",
  "prodotti": {
   "B0FZWVYJS8": {
    "img": "https://m.media-amazon.com/images/I/41EV0vFpWOL._SL500_.jpg",
@@ -67,8 +67,8 @@
    "h": 500,
    "titolo": "adidas Metalbone Carbon 2026 - Racchetta da paddle, 453 g, colore: Nero | Palla da tennis ufficiale US Open con feltro di alta qualità, rimbalzo uniforme della palla e qualità di gioco costante",
    "scheda": "adidas-metalbone-carbon-2026",
-   "prezzo": "175,88 €",
-   "euro": 175.88
+   "prezzo": "168,00 €",
+   "euro": 168.0
   },
   "B0FZX36DDZ": {
    "img": "https://m.media-amazon.com/images/I/41ye9oHfkWL._SL500_.jpg",
@@ -376,6 +376,48 @@
    "scheda": "bullpadel-nitro-woman-2027",
    "prezzo": "59,95 €",
    "euro": 59.95
+  },
+  "B0FPT66NNF": {
+   "img": "https://m.media-amazon.com/images/I/31gSsKjhbzL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Bullpadel Vertex 05",
+   "scheda": "bullpadel-vertex-05-2026",
+   "prezzo": "171,90 €",
+   "euro": 171.9,
+   "sconto": 7,
+   "prima": "183,90 €",
+   "tipo_prima": "WAS_PRICE"
+  },
+  "B0HJ345GDL": {
+   "img": "https://m.media-amazon.com/images/I/41shVfXYL7L._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Bullpadel Racchetta Da Padel Vertex 05 27 One Size",
+   "scheda": "bullpadel-vertex-05-2027",
+   "prezzo": "267,00 €",
+   "euro": 267.0
+  },
+  "B0FQK5LWH2": {
+   "img": "https://m.media-amazon.com/images/I/41B3Sf3cHeL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Bullpadel Vertex 05 Geo",
+   "scheda": "bullpadel-vertex-05-geo-2026",
+   "prezzo": "174,50 €",
+   "euro": 174.5,
+   "sconto": 5,
+   "prima": "182,90 €",
+   "tipo_prima": "WAS_PRICE"
+  },
+  "B0FPTL5GH8": {
+   "img": "https://m.media-amazon.com/images/I/418mFNDvMeL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Bullpadel Vertex 05 Woman",
+   "scheda": "bullpadel-vertex-05-w-2026",
+   "prezzo": "154,50 €",
+   "euro": 154.5
   },
   "B0G7XJZRG9": {
    "img": "https://m.media-amazon.com/images/I/41+tUOzrSUL._SL500_.jpg",
@@ -865,8 +907,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Black Titan Blue 2027",
    "scheda": "starvie-black-titan-2027",
-   "prezzo": "282,90 €",
-   "euro": 282.9
+   "prezzo": "276,90 €",
+   "euro": 276.9
   },
   "B0HJHP472D": {
    "img": "https://m.media-amazon.com/images/I/41y+PTLCTML._SL500_.jpg",
@@ -964,8 +1006,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Triton T-One 2027 Tamara Icardo",
    "scheda": "starvie-triton-t-one-2027",
-   "prezzo": "282,90 €",
-   "euro": 282.9
+   "prezzo": "276,90 €",
+   "euro": 276.9
   },
   "B0GZ5K4R5B": {
    "img": "https://m.media-amazon.com/images/I/41WNhxUdblL._SL500_.jpg",

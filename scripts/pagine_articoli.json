@@ -18,6 +18,15 @@
 }
 },
 {
+"path": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
+"alt": {
+"it": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
+"en": "/en/articles/metalbone-vs-vertex-padel-rackets-compared/",
+"es": "/es/articulos/metalbone-vs-vertex-comparativa-palas/",
+"fr": "/fr/articles/metalbone-vs-vertex-comparatif-raquettes/"
+}
+},
+{
 "path": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
 "alt": {
 "it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
@@ -384,6 +393,15 @@
 "en": "/en/articles/padel-court-glass-types-tempered-laminated/",
 "es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
+"path": "/en/articles/metalbone-vs-vertex-padel-rackets-compared/",
+"alt": {
+"it": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
+"en": "/en/articles/metalbone-vs-vertex-padel-rackets-compared/",
+"es": "/es/articulos/metalbone-vs-vertex-comparativa-palas/",
+"fr": "/fr/articles/metalbone-vs-vertex-comparatif-raquettes/"
 }
 },
 {
@@ -756,6 +774,15 @@
 }
 },
 {
+"path": "/es/articulos/metalbone-vs-vertex-comparativa-palas/",
+"alt": {
+"it": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
+"en": "/en/articles/metalbone-vs-vertex-padel-rackets-compared/",
+"es": "/es/articulos/metalbone-vs-vertex-comparativa-palas/",
+"fr": "/fr/articles/metalbone-vs-vertex-comparatif-raquettes/"
+}
+},
+{
 "path": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
 "alt": {
 "it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
@@ -1122,6 +1149,15 @@
 "en": "/en/articles/padel-court-glass-types-tempered-laminated/",
 "es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
+"path": "/fr/articles/metalbone-vs-vertex-comparatif-raquettes/",
+"alt": {
+"it": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
+"en": "/en/articles/metalbone-vs-vertex-padel-rackets-compared/",
+"es": "/es/articulos/metalbone-vs-vertex-comparativa-palas/",
+"fr": "/fr/articles/metalbone-vs-vertex-comparatif-raquettes/"
 }
 },
 {
