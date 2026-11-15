@@ -75,7 +75,7 @@ NON_TRADURRE = ("Marca", "Modello", "Giocatore", "Linea")
 
 
 def specs(items):
-    return "\n".join(f"<div><dt>{e(tr(k))}</dt><dd>{e(v if k in NON_TRADURRE else tr(v))}</dd></div>" for k, v in items)
+    return "\n".join(f"<div><dt>{e(tr(k))}</dt><dd>{e((tr(v) if k == "Giocatore" and str(v).endswith(" (ispirata)") else v) if k in NON_TRADURRE else tr(v))}</dd></div>" for k, v in items)
 
 
 def rev_rows(items):

@@ -270,6 +270,24 @@
 }
 },
 {
+"path": "/it/racchette/adidas-metalbone-zz-carbon-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-carbon-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-carbon-2026/",
+"es": "/es/palas/adidas-metalbone-zz-carbon-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-carbon-2026/"
+}
+},
+{
+"path": "/it/racchette/adidas-metalbone-zz-team-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-team-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-team-2026/",
+"es": "/es/palas/adidas-metalbone-zz-team-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-team-2026/"
+}
+},
+{
 "path": "/it/racchette/adidas-rx-series-2026/",
 "alt": {
 "it": "/it/racchette/adidas-rx-series-2026/",
@@ -375,6 +393,15 @@
 "en": "/en/rackets/babolat-counter-viper-2-6-2026/",
 "es": "/es/palas/babolat-counter-viper-2-6-2026/",
 "fr": "/fr/raquettes/babolat-counter-viper-2-6-2026/"
+}
+},
+{
+"path": "/it/racchette/babolat-technical-origin-plus-2027/",
+"alt": {
+"it": "/it/racchette/babolat-technical-origin-plus-2027/",
+"en": "/en/rackets/babolat-technical-origin-plus-2027/",
+"es": "/es/palas/babolat-technical-origin-plus-2027/",
+"fr": "/fr/raquettes/babolat-technical-origin-plus-2027/"
 }
 },
 {
@@ -783,12 +810,30 @@
 }
 },
 {
+"path": "/it/racchette/bullpadel-nitro-control-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-control-2027/",
+"en": "/en/rackets/bullpadel-nitro-control-2027/",
+"es": "/es/palas/bullpadel-nitro-control-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-control-2027/"
+}
+},
+{
 "path": "/it/racchette/bullpadel-nitro-power-2027/",
 "alt": {
 "it": "/it/racchette/bullpadel-nitro-power-2027/",
 "en": "/en/rackets/bullpadel-nitro-power-2027/",
 "es": "/es/palas/bullpadel-nitro-power-2027/",
 "fr": "/fr/raquettes/bullpadel-nitro-power-2027/"
+}
+},
+{
+"path": "/it/racchette/bullpadel-nitro-woman-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-woman-2027/",
+"en": "/en/rackets/bullpadel-nitro-woman-2027/",
+"es": "/es/palas/bullpadel-nitro-woman-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-woman-2027/"
 }
 },
 {
@@ -2583,6 +2628,33 @@
 }
 },
 {
+"path": "/it/racchette/siux-beat-play-control-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-control-2027/",
+"en": "/en/rackets/siux-beat-play-control-2027/",
+"es": "/es/palas/siux-beat-play-control-2027/",
+"fr": "/fr/raquettes/siux-beat-play-control-2027/"
+}
+},
+{
+"path": "/it/racchette/siux-beat-play-hybrid-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-2027/"
+}
+},
+{
+"path": "/it/racchette/siux-beat-play-hybrid-air-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-air-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-air-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-air-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-air-2027/"
+}
+},
+{
 "path": "/it/racchette/siux-diablo-elite-2027/",
 "alt": {
 "it": "/it/racchette/siux-diablo-elite-2027/",
@@ -3735,6 +3807,24 @@
 }
 },
 {
+"path": "/en/rackets/adidas-metalbone-zz-carbon-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-carbon-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-carbon-2026/",
+"es": "/es/palas/adidas-metalbone-zz-carbon-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-carbon-2026/"
+}
+},
+{
+"path": "/en/rackets/adidas-metalbone-zz-team-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-team-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-team-2026/",
+"es": "/es/palas/adidas-metalbone-zz-team-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-team-2026/"
+}
+},
+{
 "path": "/en/rackets/adidas-rx-series-2026/",
 "alt": {
 "it": "/it/racchette/adidas-rx-series-2026/",
@@ -3840,6 +3930,15 @@
 "en": "/en/rackets/babolat-counter-viper-2-6-2026/",
 "es": "/es/palas/babolat-counter-viper-2-6-2026/",
 "fr": "/fr/raquettes/babolat-counter-viper-2-6-2026/"
+}
+},
+{
+"path": "/en/rackets/babolat-technical-origin-plus-2027/",
+"alt": {
+"it": "/it/racchette/babolat-technical-origin-plus-2027/",
+"en": "/en/rackets/babolat-technical-origin-plus-2027/",
+"es": "/es/palas/babolat-technical-origin-plus-2027/",
+"fr": "/fr/raquettes/babolat-technical-origin-plus-2027/"
 }
 },
 {
@@ -4248,12 +4347,30 @@
 }
 },
 {
+"path": "/en/rackets/bullpadel-nitro-control-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-control-2027/",
+"en": "/en/rackets/bullpadel-nitro-control-2027/",
+"es": "/es/palas/bullpadel-nitro-control-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-control-2027/"
+}
+},
+{
 "path": "/en/rackets/bullpadel-nitro-power-2027/",
 "alt": {
 "it": "/it/racchette/bullpadel-nitro-power-2027/",
 "en": "/en/rackets/bullpadel-nitro-power-2027/",
 "es": "/es/palas/bullpadel-nitro-power-2027/",
 "fr": "/fr/raquettes/bullpadel-nitro-power-2027/"
+}
+},
+{
+"path": "/en/rackets/bullpadel-nitro-woman-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-woman-2027/",
+"en": "/en/rackets/bullpadel-nitro-woman-2027/",
+"es": "/es/palas/bullpadel-nitro-woman-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-woman-2027/"
 }
 },
 {
@@ -6048,6 +6165,33 @@
 }
 },
 {
+"path": "/en/rackets/siux-beat-play-control-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-control-2027/",
+"en": "/en/rackets/siux-beat-play-control-2027/",
+"es": "/es/palas/siux-beat-play-control-2027/",
+"fr": "/fr/raquettes/siux-beat-play-control-2027/"
+}
+},
+{
+"path": "/en/rackets/siux-beat-play-hybrid-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-2027/"
+}
+},
+{
+"path": "/en/rackets/siux-beat-play-hybrid-air-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-air-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-air-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-air-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-air-2027/"
+}
+},
+{
 "path": "/en/rackets/siux-diablo-elite-2027/",
 "alt": {
 "it": "/it/racchette/siux-diablo-elite-2027/",
@@ -7200,6 +7344,24 @@
 }
 },
 {
+"path": "/es/palas/adidas-metalbone-zz-carbon-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-carbon-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-carbon-2026/",
+"es": "/es/palas/adidas-metalbone-zz-carbon-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-carbon-2026/"
+}
+},
+{
+"path": "/es/palas/adidas-metalbone-zz-team-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-team-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-team-2026/",
+"es": "/es/palas/adidas-metalbone-zz-team-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-team-2026/"
+}
+},
+{
 "path": "/es/palas/adidas-rx-series-2026/",
 "alt": {
 "it": "/it/racchette/adidas-rx-series-2026/",
@@ -7305,6 +7467,15 @@
 "en": "/en/rackets/babolat-counter-viper-2-6-2026/",
 "es": "/es/palas/babolat-counter-viper-2-6-2026/",
 "fr": "/fr/raquettes/babolat-counter-viper-2-6-2026/"
+}
+},
+{
+"path": "/es/palas/babolat-technical-origin-plus-2027/",
+"alt": {
+"it": "/it/racchette/babolat-technical-origin-plus-2027/",
+"en": "/en/rackets/babolat-technical-origin-plus-2027/",
+"es": "/es/palas/babolat-technical-origin-plus-2027/",
+"fr": "/fr/raquettes/babolat-technical-origin-plus-2027/"
 }
 },
 {
@@ -7713,12 +7884,30 @@
 }
 },
 {
+"path": "/es/palas/bullpadel-nitro-control-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-control-2027/",
+"en": "/en/rackets/bullpadel-nitro-control-2027/",
+"es": "/es/palas/bullpadel-nitro-control-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-control-2027/"
+}
+},
+{
 "path": "/es/palas/bullpadel-nitro-power-2027/",
 "alt": {
 "it": "/it/racchette/bullpadel-nitro-power-2027/",
 "en": "/en/rackets/bullpadel-nitro-power-2027/",
 "es": "/es/palas/bullpadel-nitro-power-2027/",
 "fr": "/fr/raquettes/bullpadel-nitro-power-2027/"
+}
+},
+{
+"path": "/es/palas/bullpadel-nitro-woman-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-woman-2027/",
+"en": "/en/rackets/bullpadel-nitro-woman-2027/",
+"es": "/es/palas/bullpadel-nitro-woman-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-woman-2027/"
 }
 },
 {
@@ -9513,6 +9702,33 @@
 }
 },
 {
+"path": "/es/palas/siux-beat-play-control-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-control-2027/",
+"en": "/en/rackets/siux-beat-play-control-2027/",
+"es": "/es/palas/siux-beat-play-control-2027/",
+"fr": "/fr/raquettes/siux-beat-play-control-2027/"
+}
+},
+{
+"path": "/es/palas/siux-beat-play-hybrid-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-2027/"
+}
+},
+{
+"path": "/es/palas/siux-beat-play-hybrid-air-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-air-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-air-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-air-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-air-2027/"
+}
+},
+{
 "path": "/es/palas/siux-diablo-elite-2027/",
 "alt": {
 "it": "/it/racchette/siux-diablo-elite-2027/",
@@ -10665,6 +10881,24 @@
 }
 },
 {
+"path": "/fr/raquettes/adidas-metalbone-zz-carbon-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-carbon-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-carbon-2026/",
+"es": "/es/palas/adidas-metalbone-zz-carbon-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-carbon-2026/"
+}
+},
+{
+"path": "/fr/raquettes/adidas-metalbone-zz-team-2026/",
+"alt": {
+"it": "/it/racchette/adidas-metalbone-zz-team-2026/",
+"en": "/en/rackets/adidas-metalbone-zz-team-2026/",
+"es": "/es/palas/adidas-metalbone-zz-team-2026/",
+"fr": "/fr/raquettes/adidas-metalbone-zz-team-2026/"
+}
+},
+{
 "path": "/fr/raquettes/adidas-rx-series-2026/",
 "alt": {
 "it": "/it/racchette/adidas-rx-series-2026/",
@@ -10770,6 +11004,15 @@
 "en": "/en/rackets/babolat-counter-viper-2-6-2026/",
 "es": "/es/palas/babolat-counter-viper-2-6-2026/",
 "fr": "/fr/raquettes/babolat-counter-viper-2-6-2026/"
+}
+},
+{
+"path": "/fr/raquettes/babolat-technical-origin-plus-2027/",
+"alt": {
+"it": "/it/racchette/babolat-technical-origin-plus-2027/",
+"en": "/en/rackets/babolat-technical-origin-plus-2027/",
+"es": "/es/palas/babolat-technical-origin-plus-2027/",
+"fr": "/fr/raquettes/babolat-technical-origin-plus-2027/"
 }
 },
 {
@@ -11178,12 +11421,30 @@
 }
 },
 {
+"path": "/fr/raquettes/bullpadel-nitro-control-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-control-2027/",
+"en": "/en/rackets/bullpadel-nitro-control-2027/",
+"es": "/es/palas/bullpadel-nitro-control-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-control-2027/"
+}
+},
+{
 "path": "/fr/raquettes/bullpadel-nitro-power-2027/",
 "alt": {
 "it": "/it/racchette/bullpadel-nitro-power-2027/",
 "en": "/en/rackets/bullpadel-nitro-power-2027/",
 "es": "/es/palas/bullpadel-nitro-power-2027/",
 "fr": "/fr/raquettes/bullpadel-nitro-power-2027/"
+}
+},
+{
+"path": "/fr/raquettes/bullpadel-nitro-woman-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-nitro-woman-2027/",
+"en": "/en/rackets/bullpadel-nitro-woman-2027/",
+"es": "/es/palas/bullpadel-nitro-woman-2027/",
+"fr": "/fr/raquettes/bullpadel-nitro-woman-2027/"
 }
 },
 {
@@ -12975,6 +13236,33 @@
 "en": "/en/rackets/siux-beat-hybrid-3-2026/",
 "es": "/es/palas/siux-beat-hybrid-3-2026/",
 "fr": "/fr/raquettes/siux-beat-hybrid-3-2026/"
+}
+},
+{
+"path": "/fr/raquettes/siux-beat-play-control-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-control-2027/",
+"en": "/en/rackets/siux-beat-play-control-2027/",
+"es": "/es/palas/siux-beat-play-control-2027/",
+"fr": "/fr/raquettes/siux-beat-play-control-2027/"
+}
+},
+{
+"path": "/fr/raquettes/siux-beat-play-hybrid-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-2027/"
+}
+},
+{
+"path": "/fr/raquettes/siux-beat-play-hybrid-air-2027/",
+"alt": {
+"it": "/it/racchette/siux-beat-play-hybrid-air-2027/",
+"en": "/en/rackets/siux-beat-play-hybrid-air-2027/",
+"es": "/es/palas/siux-beat-play-hybrid-air-2027/",
+"fr": "/fr/raquettes/siux-beat-play-hybrid-air-2027/"
 }
 },
 {
