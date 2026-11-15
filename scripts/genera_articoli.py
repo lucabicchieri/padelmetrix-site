@@ -45,7 +45,7 @@ def articolo_ld(titolo, desc, path, data=OGGI_ISO):
 CAT_NOMI = {"giocatori": ("Giocatori", "Players", "Jugadores", "Joueurs"), "regali": ("Regali", "Gifts", "Regalos", "Cadeaux"),
             "novita": ("Novità e confronti", "New and compared", "Novedades y comparativas", "Nouveautés et comparatifs"), "guide": ("Guide", "Guides", "Guías", "Guides")}
 _CAT_GIOC = ("tolito-", "fernando-belasteguin", "ale-galan", "chi-e-e-che-racchetta", "racchetta-usa", "con-che-racchetta")
-_CAT_NOV = ("novita", "-vs-", "cosa-cambia", "migliori-racchette", "confront", "2027", "sorpasso", "fitp-", "quad-racchette", "metalbone-storia")
+_CAT_NOV = ("novita", "-vs-", "cosa-cambia", "migliori-racchette", "confront", "2027", "sorpasso", "fitp-", "quad-racchette", "metalbone-storia", "metalbone-zz")
 
 
 def categoria(slug):
@@ -2717,6 +2717,116 @@ def regali(db):
     return out
 
 
+
+# ---------------------------------------------------------------- Zidane e le adidas Metalbone ZZ (novembre 2026)
+ZZ_SLUG = "zidane-racchette-padel-adidas-metalbone-zz"
+S.SLUG[ZZ_SLUG] = ("zidane-padel-rackets-adidas-metalbone-zz", "zidane-palas-padel-adidas-metalbone-zz")
+S.SLUG_FR[ZZ_SLUG] = "zidane-raquettes-padel-adidas-metalbone-zz"
+DATE_ART[ZZ_SLUG] = "2026-11-15"
+
+
+def art_zidane(db):
+    sl = ["adidas-metalbone-zz-carbon-2026", "adidas-metalbone-zz-team-2026"]
+    by = {r["slug"]: r for r in db}
+    rs = [by[s] for s in sl if s in by]
+    uc, ut = (url_r(by[s]) for s in sl)
+    umb = P("articoli", MB_SLUG)
+    ugal = P("articoli", "ale-galan-chi-e-e-che-racchetta-usa")
+    pa = fonte("https://www.padeladdict.com/adidas-zidane-capsula-zz-padel/", "Padel Addict")
+    pm = fonte("https://padel-magazine.co.uk/zidane-et-galan-reunis-sur-la-piste-pour-lancer-la-metalbone-zz/", "Padel Magazine")
+    hp = fonte("https://hollandpadel.com/en-de/blogs/news/adidas-metalbone-zz-zidane-padelrackets-2026", "Holland Padel")
+    cl = fonte("https://www.clusterpadel.com/en/associate-news/20261016/adidas-padel-launches-an-exclusive-collection-with-zinedine-zidane.aspx", "Padel Cluster")
+    box = _box5(L("Le racchette di Zidane", "Zidane's rackets", "Las palas de Zidane", "Les raquettes de Zidane"),
+                L("Metalbone ZZ Carbon e ZZ Team: dati, prezzi e alternative.", "Metalbone ZZ Carbon and ZZ Team: specs, prices and alternatives.",
+                  "Metalbone ZZ Carbon y ZZ Team: datos, precios y alternativas.", "Metalbone ZZ Carbon et ZZ Team : données, prix et alternatives."),
+                L("Vedi la ZZ Carbon", "See the ZZ Carbon", "Ver la ZZ Carbon", "Voir la ZZ Carbon"), uc)
+    corpo = L(f'''<p><b>Campione del mondo nel 1998, Pallone d'oro, tre Champions League di fila da allenatore del Real Madrid. E da qualche anno, anche appassionato di padel. Il 9 ottobre 2026 adidas ha lanciato la capsula ZZ: due racchette Metalbone firmate da Zinédine Zidane, la prima collezione di padel adidas firmata da un calciatore ({pa}). Ecco perché proprio lui, com'è nato il progetto e come sono fatte le due racchette.</b></p>
+<h2>Zidane e il padel</h2>
+<p>Non è una semplice sponsorizzazione: Zidane il padel lo gioca da anni e ci ha anche investito. Nel 2021 ha fondato il marchio Z5 Padel, con il primo centro vicino ad Aix-en-Provence (12 campi); poi sono arrivati Istres (6 campi all'aperto) e Torino (4 campi), e sta lavorando a un club a Madrid, con il quartiere di Hortaleza come zona preferita ({hp}; {pm}). Si vede spesso con la racchetta in mano sui social e segue i grandi tornei, come il Major di Parigi al Roland-Garros ({pm}).</p>
+<h2>Trent'anni con adidas</h2>
+<p>Il legame con adidas è iniziato nel 1996 e nel 2026 compie trent'anni ({hp}): dalle Predator degli anni migliori al ruolo di icona globale del marchio ({pa}). Con la capsula ZZ questo rapporto passa per la prima volta dal calcio al padel.</p>
+<h2>Il video con Galán</h2>
+<p>Per il lancio adidas ha girato un video con Zidane in campo insieme ad <a href="{ugal}">Ale Galán</a>, il volto più noto di adidas padel. Nel finale Galán se ne va con le scarpe da calcio di Zidane: un modo per unire le due anime del marchio ({pm}). Curiosità: nel video Galán gioca con la sua Metalbone HRD+, non con una ZZ ({hp}).</p>
+<h2>Le due racchette della capsula ZZ</h2>
+<p>Le due racchette hanno la stessa base: forma rotonda, bilanciamento medio, 360–375 g, 38 mm di spessore e gomma EVA Soft Performance. Cambiano i materiali, e quindi il tocco ({pa}; {cl}).</p>
+<ul><li><a href="{uc}">Metalbone ZZ Carbon</a>, 299,95 € di listino: carbonio 3K su piatti e telaio, superficie ruvida Spin Blade Decal, colori bianco e champagne con il monogramma ZZ e una confezione dorata esclusiva. È la più precisa e diretta, per giocatori esperti ({pa}).</li>
+<li><a href="{ut}">Metalbone ZZ Team</a>, 179,95 € di listino: piatti in fibra di vetro e telaio in carbonio, superficie sabbiata Spin Blade Gritt, nera con dettagli oro opaco. Tocco più morbido e più tolleranza sui colpi decentrati ({pa}).</li></ul>
+<p>Completa la capsula una borsa, la Tour ZZ Racket Bag, bianca con dettagli oro ({cl}).</p>
+<h2>Quale scegliere</h2>
+<p>La ZZ Carbon è più ferma e precisa: ha senso se giochi partite con regolarità e costruisci il punto con il piazzamento. Non è adatta a chi inizia o a chi ha fastidi al braccio o al gomito. La ZZ Team è più comoda e perdona di più, quindi è la scelta più logica per chi gioca per divertimento o vuole scambi lunghi senza stancarsi ({hp}). Entrambe però pesano 360–375 g: per chi è alle prime armi o ha il braccio leggero sono un po' impegnative. Se invece cerchi soprattutto potenza in smash, nella stessa famiglia c'è la Metalbone HRD+, a diamante ({hp}). La storia completa della linea la trovi nel nostro <a href="{umb}">articolo sulla Metalbone</a>.</p>{box}
+<p class="note">Fonti: {pa}; {pm}; {hp}; {cl}. Dati aggiornati a novembre 2026.</p>''',
+              f'''<p><b>World champion in 1998, Ballon d'Or winner, three Champions Leagues in a row as Real Madrid coach. And for a few years now, a padel enthusiast too. On 9 October 2026 adidas launched the ZZ capsule: two Metalbone rackets signed by Zinédine Zidane, the first adidas padel collection signed by a footballer ({pa}). Here's why him, how the project came about and what the two rackets are like.</b></p>
+<h2>Zidane and padel</h2>
+<p>This is more than a sponsorship deal: Zidane has played padel for years and has invested in it too. In 2021 he founded the Z5 Padel brand, with its first centre near Aix-en-Provence (12 courts); Istres (6 outdoor courts) and Turin (4 courts) followed, and he is working on a club in Madrid, with the Hortaleza district as the preferred location ({hp}; {pm}). He often appears with a racket on social media and follows the big tournaments, such as the Paris Major at Roland-Garros ({pm}).</p>
+<h2>Thirty years with adidas</h2>
+<p>His relationship with adidas began in 1996 and turns thirty in 2026 ({hp}): from the Predator boots of his best years to his role as a global brand icon ({pa}). With the ZZ capsule, that relationship moves from football to padel for the first time.</p>
+<h2>The video with Galán</h2>
+<p>For the launch adidas shot a video of Zidane on court with <a href="{ugal}">Ale Galán</a>, the best-known face of adidas padel. At the end Galán walks off with Zidane's football boots: a way of joining the brand's two sides ({pm}). Fun fact: in the video Galán plays with his Metalbone HRD+, not a ZZ ({hp}).</p>
+<h2>The two rackets in the ZZ capsule</h2>
+<p>Both rackets share the same base: round shape, medium balance, 360–375 g, 38 mm profile and an EVA Soft Performance core. What changes is the materials, and therefore the feel ({pa}; {cl}).</p>
+<ul><li><a href="{uc}">Metalbone ZZ Carbon</a>, €299.95 list price: 3K carbon faces and frame, rough Spin Blade Decal surface, white and champagne with the ZZ monogram and exclusive gold packaging. It's the more precise and direct of the two, for experienced players ({pa}).</li>
+<li><a href="{ut}">Metalbone ZZ Team</a>, €179.95 list price: fibreglass faces and a carbon frame, sandy Spin Blade Gritt surface, black with matte gold details. A softer feel and more forgiveness on off-centre hits ({pa}).</li></ul>
+<p>The capsule is completed by a bag, the Tour ZZ Racket Bag, white with gold details ({cl}).</p>
+<h2>Which one to choose</h2>
+<p>The ZZ Carbon is firmer and more precise: it makes sense if you play matches regularly and build points through placement. It's not suited to beginners or to anyone with arm or elbow problems. The ZZ Team is more comfortable and more forgiving, so it's the more logical choice for recreational players or anyone who wants long rallies without tiring ({hp}). Both, however, weigh 360–375 g: for beginners or players with a light arm they're a little demanding. If you mainly want power on smashes, the same family includes the Metalbone HRD+, a diamond ({hp}). The full story of the line is in our <a href="{umb}">Metalbone article</a>.</p>{box}
+<p class="note">Sources: {pa}; {pm}; {hp}; {cl}. Data updated November 2026.</p>''',
+              f'''<p><b>Campeón del mundo en 1998, Balón de Oro, tres Champions seguidas como entrenador del Real Madrid. Y desde hace unos años, también apasionado del pádel. El 9 de octubre de 2026 adidas lanzó la cápsula ZZ: dos palas Metalbone firmadas por Zinédine Zidane, la primera colección de pádel de adidas firmada por un futbolista ({pa}). Por qué él, cómo nació el proyecto y cómo son las dos palas.</b></p>
+<h2>Zidane y el pádel</h2>
+<p>No es un simple patrocinio: Zidane juega al pádel desde hace años y también ha invertido en él. En 2021 fundó la marca Z5 Padel, con el primer centro cerca de Aix-en-Provence (12 pistas); después llegaron Istres (6 pistas al aire libre) y Turín (4 pistas), y trabaja en un club en Madrid, con el barrio de Hortaleza como zona preferida ({hp}; {pm}). Aparece a menudo con la pala en redes sociales y sigue los grandes torneos, como el Major de París en Roland-Garros ({pm}).</p>
+<h2>Treinta años con adidas</h2>
+<p>Su relación con adidas empezó en 1996 y en 2026 cumple treinta años ({hp}): de las Predator de sus mejores años al papel de icono global de la marca ({pa}). Con la cápsula ZZ, esta relación pasa por primera vez del fútbol al pádel.</p>
+<h2>El vídeo con Galán</h2>
+<p>Para el lanzamiento adidas grabó un vídeo de Zidane en la pista junto a <a href="{ugal}">Ale Galán</a>, la cara más conocida de adidas pádel. Al final Galán se marcha con las botas de fútbol de Zidane: una forma de unir las dos almas de la marca ({pm}). Curiosidad: en el vídeo Galán juega con su Metalbone HRD+, no con una ZZ ({hp}).</p>
+<h2>Las dos palas de la cápsula ZZ</h2>
+<p>Las dos palas comparten la misma base: forma redonda, balance medio, 360–375 g, 38 mm de perfil y goma EVA Soft Performance. Cambian los materiales y, por tanto, el tacto ({pa}; {cl}).</p>
+<ul><li><a href="{uc}">Metalbone ZZ Carbon</a>, 299,95 € de PVP: carbono 3K en caras y marco, superficie rugosa Spin Blade Decal, colores blanco y champán con el monograma ZZ y un estuche dorado exclusivo. Es la más precisa y directa, para jugadores expertos ({pa}).</li>
+<li><a href="{ut}">Metalbone ZZ Team</a>, 179,95 € de PVP: caras de fibra de vidrio y marco de carbono, superficie arenosa Spin Blade Gritt, negra con detalles dorados mate. Tacto más blando y más tolerancia en los golpes descentrados ({pa}).</li></ul>
+<p>Completa la cápsula un paletero, la Tour ZZ Racket Bag, blanca con detalles dorados ({cl}).</p>
+<h2>Cuál elegir</h2>
+<p>La ZZ Carbon es más firme y precisa: tiene sentido si juegas partidos con regularidad y construyes el punto con la colocación. No es adecuada para quien empieza ni para quien tiene molestias en el brazo o el codo. La ZZ Team es más cómoda y perdona más, así que es la opción más lógica para quien juega por diversión o quiere puntos largos sin cansarse ({hp}). Eso sí, las dos pesan 360–375 g: para principiantes o jugadores con poco brazo son algo exigentes. Si lo que buscas es sobre todo potencia en el remate, en la misma familia está la Metalbone HRD+, de diamante ({hp}). La historia completa de la línea está en nuestro <a href="{umb}">artículo sobre la Metalbone</a>.</p>{box}
+<p class="note">Fuentes: {pa}; {pm}; {hp}; {cl}. Datos actualizados a noviembre de 2026.</p>''',
+              f'''<p><b>Champion du monde en 1998, Ballon d'or, trois Ligues des champions d'affilée comme entraîneur du Real Madrid. Et depuis quelques années, passionné de padel. Le 9 octobre 2026, adidas a lancé la capsule ZZ : deux raquettes Metalbone signées Zinédine Zidane, la première collection padel d'adidas signée par un footballeur ({pa}). Pourquoi lui, comment le projet est né et comment sont faites les deux raquettes.</b></p>
+<h2>Zidane et le padel</h2>
+<p>Ce n'est pas un simple sponsoring : Zidane joue au padel depuis des années et il y a aussi investi. En 2021, il a fondé la marque Z5 Padel, avec un premier centre près d'Aix-en-Provence (12 terrains) ; sont ensuite venus Istres (6 terrains extérieurs) et Turin (4 terrains), et il travaille sur un club à Madrid, avec le quartier d'Hortaleza comme emplacement préféré ({hp} ; {pm}). On le voit souvent raquette en main sur les réseaux sociaux et il suit les grands tournois, comme le Major de Paris à Roland-Garros ({pm}).</p>
+<h2>Trente ans avec adidas</h2>
+<p>Sa relation avec adidas a commencé en 1996 et fête ses trente ans en 2026 ({hp}) : des Predator de ses meilleures années à son rôle d'icône mondiale de la marque ({pa}). Avec la capsule ZZ, cette relation passe pour la première fois du football au padel.</p>
+<h2>La vidéo avec Galán</h2>
+<p>Pour le lancement, adidas a tourné une vidéo de Zidane sur le terrain avec <a href="{ugal}">Ale Galán</a>, le visage le plus connu d'adidas padel. À la fin, Galán repart avec les chaussures de foot de Zidane : une façon d'unir les deux univers de la marque ({pm}). Détail amusant : dans la vidéo, Galán joue avec sa Metalbone HRD+, pas avec une ZZ ({hp}).</p>
+<h2>Les deux raquettes de la capsule ZZ</h2>
+<p>Les deux raquettes partagent la même base : forme ronde, équilibre moyen, 360–375 g, 38 mm d'épaisseur et gomme EVA Soft Performance. Ce sont les matériaux qui changent, et donc le toucher ({pa} ; {cl}).</p>
+<ul><li><a href="{uc}">Metalbone ZZ Carbon</a>, 299,95 € prix catalogue : carbone 3K sur les faces et le cadre, surface rugueuse Spin Blade Decal, blanc et champagne avec le monogramme ZZ et un coffret doré exclusif. C'est la plus précise et la plus directe, pour joueurs expérimentés ({pa}).</li>
+<li><a href="{ut}">Metalbone ZZ Team</a>, 179,95 € prix catalogue : faces en fibre de verre et cadre en carbone, surface sablée Spin Blade Gritt, noire avec détails or mat. Toucher plus doux et plus de tolérance sur les frappes décentrées ({pa}).</li></ul>
+<p>La capsule est complétée par un sac, le Tour ZZ Racket Bag, blanc avec détails dorés ({cl}).</p>
+<h2>Laquelle choisir</h2>
+<p>La ZZ Carbon est plus ferme et plus précise : elle a du sens si vous jouez régulièrement des matchs et construisez le point par le placement. Elle ne convient pas aux débutants ni à ceux qui ont des douleurs au bras ou au coude. La ZZ Team est plus confortable et plus tolérante : c'est le choix le plus logique pour jouer en loisir ou enchaîner de longs échanges sans se fatiguer ({hp}). Les deux pèsent toutefois 360–375 g : pour les débutants ou les joueurs au bras léger, elles restent un peu exigeantes. Si vous cherchez surtout la puissance au smash, la même famille compte la Metalbone HRD+, en forme diamant ({hp}). L'histoire complète de la ligne est dans notre <a href="{umb}">article sur la Metalbone</a>.</p>{box}
+<p class="note">Sources : {pa} ; {pm} ; {hp} ; {cl}. Données mises à jour en novembre 2026.</p>''')
+    qa = [(L("Zidane gioca davvero a padel?", "Does Zidane really play padel?", "¿Zidane juega de verdad al pádel?", "Zidane joue-t-il vraiment au padel ?"),
+           L("Sì, da anni. Nel 2021 ha fondato il marchio Z5 Padel, con centri ad Aix-en-Provence, Istres e Torino, e sta lavorando a un club a Madrid.",
+             "Yes, for years. In 2021 he founded the Z5 Padel brand, with centres in Aix-en-Provence, Istres and Turin, and he is working on a club in Madrid.",
+             "Sí, desde hace años. En 2021 fundó la marca Z5 Padel, con centros en Aix-en-Provence, Istres y Turín, y trabaja en un club en Madrid.",
+             "Oui, depuis des années. En 2021, il a fondé la marque Z5 Padel, avec des centres à Aix-en-Provence, Istres et Turin, et il travaille sur un club à Madrid.")),
+          (L("Quanto costano le racchette Zidane di adidas?", "How much do the adidas Zidane rackets cost?", "¿Cuánto cuestan las palas Zidane de adidas?", "Combien coûtent les raquettes Zidane d'adidas ?"),
+           L("Di listino 299,95 € la Metalbone ZZ Carbon e 179,95 € la Metalbone ZZ Team; nei negozi i prezzi possono essere più bassi.",
+             "List prices are €299.95 for the Metalbone ZZ Carbon and €179.95 for the Metalbone ZZ Team; shop prices can be lower.",
+             "De PVP, 299,95 € la Metalbone ZZ Carbon y 179,95 € la Metalbone ZZ Team; en las tiendas los precios pueden ser más bajos.",
+             "Prix catalogue : 299,95 € pour la Metalbone ZZ Carbon et 179,95 € pour la Metalbone ZZ Team ; en magasin, les prix peuvent être plus bas.")),
+          (L("Che differenza c'è tra ZZ Carbon e ZZ Team?", "What's the difference between the ZZ Carbon and the ZZ Team?", "¿Qué diferencia hay entre la ZZ Carbon y la ZZ Team?", "Quelle différence entre la ZZ Carbon et la ZZ Team ?"),
+           L("Hanno la stessa forma rotonda, lo stesso peso e lo stesso bilanciamento. La Carbon ha piatti in carbonio 3K ed è più precisa; la Team ha piatti in fibra di vetro, è più morbida e costa meno.",
+             "They share the same round shape, weight and balance. The Carbon has 3K carbon faces and is more precise; the Team has fibreglass faces, is softer and costs less.",
+             "Tienen la misma forma redonda, el mismo peso y el mismo balance. La Carbon tiene caras de carbono 3K y es más precisa; la Team tiene caras de fibra de vidrio, es más blanda y cuesta menos.",
+             "Elles ont la même forme ronde, le même poids et le même équilibre. La Carbon a des faces en carbone 3K et est plus précise ; la Team a des faces en fibre de verre, elle est plus douce et coûte moins cher."))]
+    faq_htm, faq_ld = faq(qa)
+    titolo = L("Zidane e il padel: le racchette adidas Metalbone ZZ e la storia dietro la capsula", "Zidane and padel: the adidas Metalbone ZZ rackets and the story behind the capsule",
+               "Zidane y el pádel: las palas adidas Metalbone ZZ y la historia detrás de la cápsula", "Zidane et le padel : les raquettes adidas Metalbone ZZ et l'histoire de la capsule")
+    desc = L("Zinédine Zidane firma due racchette adidas: Metalbone ZZ Carbon e ZZ Team. La sua passione per il padel, i club Z5, il video con Galán, prezzi e quale scegliere.",
+             "Zinédine Zidane signs two adidas rackets: the Metalbone ZZ Carbon and ZZ Team. His passion for padel, the Z5 clubs, the video with Galán, prices and which one to choose.",
+             "Zinédine Zidane firma dos palas adidas: Metalbone ZZ Carbon y ZZ Team. Su pasión por el pádel, los clubes Z5, el vídeo con Galán, precios y cuál elegir.",
+             "Zinédine Zidane signe deux raquettes adidas : Metalbone ZZ Carbon et ZZ Team. Sa passion pour le padel, les clubs Z5, la vidéo avec Galán, les prix et laquelle choisir.")
+    RACCHETTE_ARTICOLO[ZZ_SLUG] = [r["slug"] for r in rs]
+    scrivi_articolo(ZZ_SLUG, titolo + " | PadelMetrix", desc, titolo, "Zinédine Zidane", corpo + faq_htm, items=rs, ld_extra=[faq_ld])
+    return ZZ_SLUG, titolo, L("Il campione del mondo firma due Metalbone: la sua passione per il padel e come sono le racchette.", "The World Cup winner signs two Metalbones: his passion for padel and what the rackets are like.",
+                              "El campeón del mundo firma dos Metalbone: su pasión por el pádel y cómo son las palas.", "Le champion du monde signe deux Metalbone : sa passion pour le padel et comment sont les raquettes.")
+
 # ---------------------------------------------------------------- Fernando Belasteguín, il Boss (novembre 2026)
 BELA_SLUG = "fernando-belasteguin-carriera-record-racchette"
 S.SLUG[BELA_SLUG] = ("fernando-belasteguin-career-records-rackets", "fernando-belasteguin-carrera-records-palas")
@@ -2888,7 +2998,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_zidane(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "cat": categoria(slug), "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})

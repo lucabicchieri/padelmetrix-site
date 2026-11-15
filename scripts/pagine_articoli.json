@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
+}
+},
+{
 "path": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
 "alt": {
 "it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
@@ -339,6 +348,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
 }
 },
 {
@@ -684,6 +702,15 @@
 }
 },
 {
+"path": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
+}
+},
+{
 "path": "/es/articulos/fernando-belasteguin-carrera-records-palas/",
 "alt": {
 "it": "/it/articoli/fernando-belasteguin-carriera-record-racchette/",
@@ -1023,6 +1050,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/",
+"alt": {
+"it": "/it/articoli/zidane-racchette-padel-adidas-metalbone-zz/",
+"en": "/en/articles/zidane-padel-rackets-adidas-metalbone-zz/",
+"es": "/es/articulos/zidane-palas-padel-adidas-metalbone-zz/",
+"fr": "/fr/articles/zidane-raquettes-padel-adidas-metalbone-zz/"
 }
 },
 {
