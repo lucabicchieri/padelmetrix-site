@@ -126,6 +126,7 @@ SEZ = {
     "pickleball": ("pickleball", "pickleball", "pickleball", "pickleball"),
     "selettore": ("trova-la-tua-racchetta", "racket-finder", "encuentra-tu-pala", "trouve-ta-raquette"),
     "articoli": ("articoli", "articles", "articulos", "articles"),
+    "offerte": ("offerte", "deals", "ofertas", "offres"),
     "privacy": ("privacy", "privacy", "privacidad", "confidentialite"),
     "cookie": ("cookie", "cookies", "cookies", "cookies"),
 }
@@ -400,13 +401,14 @@ def nav():
             ("bambini", L("Bambini", "Kids", "Niños", "Enfants"), P("bambini")),
             ("confronta", L("Confronta", "Compare", "Comparar", "Comparer"), P("confronta")),
             ("guide", L("Guide", "Guides", "Guías", "Guides"), P("guide")),
-            ("articoli", L("Articoli", "Articles", "Artículos", "Articles"), P("articoli"))]
+            ("articoli", L("Articoli", "Articles", "Artículos", "Articles"), P("articoli")),
+            ("offerte", L("Offerte", "Deals", "Ofertas", "Offres"), P("offerte"))]
 
 
 def header(on, alt=None):
     l = _LANG[0]
     alt = alt or ALT("home")
-    items = "\n".join(f'<a{" class=\"on\"" if k == on else ""} href="{h}">{t}</a>' for k, t, h in nav())
+    items = "\n".join(f'<a class="{("hot " if k == "offerte" else "") + ("on" if k == on else "")}" href="{h}">{t}</a>' for k, t, h in nav())
     langs = " · ".join(f'<a{" class=\"on\"" if x == l else ""} href="{alt.get(x, P("home", l=x))}" hreflang="{x}">{x.upper()}</a>' for x in LINGUE)
     cerca = L("Cerca una racchetta", "Search a racket", "Busca una pala", "Chercher une raquette")
     return f'''<header class="site"><div class="wrap">
