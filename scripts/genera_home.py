@@ -15,6 +15,7 @@ import sito as S  # noqa: E402
 import consenso as C  # noqa: E402
 from genera_pickleball import paddle_svg  # noqa: E402
 from sito import L, P  # noqa: E402
+import genera_offerte as OF  # noqa: E402
 ROOT_A = pathlib.Path(__file__).resolve().parent.parent
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -403,10 +404,11 @@ def pagina(lang, db):
     come = "".join(f'<div><div class="n">{i}</div><h3>{e(a)}</h3><p>{e(b)}</p></div>' for i, (a, b) in enumerate(t["come"], 1))
     t1, t2 = t["t1"], t["t2"]
 
+    of_html, of_js = OF.blocco_home(S.ordina(S.carica()))
     return head(lang, t) + f'''
 <body>
 {S.header(None, {x: f"/{x}/" for x in LINGUE})}
-
+{OF.striscia_home()}
 <main>
 <section class="hero"><div class="wrap">
 <div class="txt">
@@ -423,6 +425,7 @@ def pagina(lang, db):
 </div>
 <div class="art">{COURT}</div>
 </div></section>
+{of_html}
 
 <section class="block"><div class="wrap">
 <div class="head"><h2>{e(t["evid_titolo"])}</h2><a href="{url(lang, "racchette")}"><b>{e(t["evid_tutte"])} →</b></a></div>
@@ -470,6 +473,7 @@ def pagina(lang, db):
 </div>
 <div class="bottom"><span style="max-width:760px">{e(t["disclosure"])}</span><span>© 2026 PadelMetrix</span></div>
 </div></footer>
+{of_js}
 {S.amazon_js("data-asin")}
 {C.body(lang, url(lang, "cookie"))}
 </body>

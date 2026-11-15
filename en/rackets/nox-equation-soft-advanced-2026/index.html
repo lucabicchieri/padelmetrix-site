@@ -218,6 +218,17 @@ header.site .langs{padding:10px 4px 0;font-size:16px}
 .anche{margin:8px 0 48px}.anche h2{font-size:24px;margin:0 0 16px}
 @media (max-width:560px){.agrid{grid-template-columns:1fr;gap:12px}.acard{flex-direction:row}.acov{flex:0 0 96px;height:auto;min-height:96px}.acard b{font-size:16px}.acard span.ad{display:none}}
 
+/* offerte */
+header.site nav.main a.hot{background:var(--lime);color:var(--green);padding:6px 14px;border-radius:999px;font-weight:700;line-height:1.2;display:inline-flex;align-items:center;border-bottom:0}
+header.site nav.main a.hot.on{border-bottom:0}
+@media (max-width:1080px){header.site nav.main a.hot{border-radius:10px;margin-top:8px;padding:12px;text-align:center;border-bottom:0}}
+.promo-bar{display:block;background:var(--lime);color:var(--green);font-weight:500;text-align:center;text-decoration:none;font-size:15px;padding:10px 16px;line-height:1.4}
+.promo-bar b{background:var(--green);color:var(--lime);border-radius:999px;padding:2px 10px;margin-right:6px;font-family:'Space Grotesk',sans-serif}
+.promo-bar [data-of-max]{font-weight:700}.promo-bar u{white-space:nowrap}
+.of-home{padding:34px 0 8px}.of-home h2{margin:0}
+.of-home .of-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.of-home .of-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
 </head>
 <body>
@@ -227,11 +238,12 @@ header.site .langs{padding:10px 4px 0;font-size:16px}
 <div class="menu">
 <nav class="main" aria-label="Main">
 <a class="on" href="/en/rackets/">Rackets</a>
-<a href="/en/pickleball/">Pickleball</a>
-<a href="/en/kids/">Kids</a>
-<a href="/en/compare/">Compare</a>
-<a href="/en/guides/">Guides</a>
-<a href="/en/articles/">Articles</a>
+<a class="" href="/en/pickleball/">Pickleball</a>
+<a class="" href="/en/kids/">Kids</a>
+<a class="" href="/en/compare/">Compare</a>
+<a class="" href="/en/guides/">Guides</a>
+<a class="" href="/en/articles/">Articles</a>
+<a class="hot " href="/en/deals/">Deals</a>
 </nav>
 <form class="hsearch" action="/en/rackets/" method="get" role="search"><input type="search" name="q" placeholder="Search a racket" aria-label="Search a racket"></form>
 <div class="langs" aria-label="Language"><a href="/it/racchette/nox-equation-soft-advanced-2026/" hreflang="it">IT</a> · <a class="on" href="/en/rackets/nox-equation-soft-advanced-2026/" hreflang="en">EN</a> · <a href="/es/palas/nox-equation-soft-advanced-2026/" hreflang="es">ES</a> · <a href="/fr/raquettes/nox-equation-soft-advanced-2026/" hreflang="fr">FR</a></div>

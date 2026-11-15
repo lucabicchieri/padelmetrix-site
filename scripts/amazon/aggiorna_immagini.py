@@ -43,7 +43,7 @@ def main():
         return
     tok, ver = creators.token()
     oggi = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
-    risultato, asins = {}, list(schede)
+    risultato, asins, visto = {}, list(schede), []
     import time
     for i in range(0, len(asins), 10):
         if i:
@@ -61,6 +61,19 @@ def main():
             soldi = (off.get("price") or {}).get("money") or {}
             if soldi.get("displayAmount"):
                 risultato[it["asin"]]["prezzo"] = soldi["displayAmount"]
+                if soldi.get("amount") is not None:
+                    risultato[it["asin"]]["euro"] = soldi["amount"]
+            # sconto dichiarato da Amazon (prezzo precedente e percentuale), per la pagina offerte
+            prezzo = off.get("price") or {}
+            risp, base = prezzo.get("savings") or {}, prezzo.get("savingBasis") or {}
+            if risp.get("percentage") and (base.get("money") or {}).get("displayAmount"):
+                risultato[it["asin"]]["sconto"] = risp["percentage"]
+                risultato[it["asin"]]["prima"] = base["money"]["displayAmount"]
+                if base.get("savingBasisType"):
+                    risultato[it["asin"]]["tipo_prima"] = base["savingBasisType"]
+            if not visto and prezzo:
+                visto.append(1)
+                print("esempio prezzo:", json.dumps(prezzo, ensure_ascii=False)[:600])
         for err in res.get("errors") or []:
             print("errore:", str(err)[:200])
     if not risultato:

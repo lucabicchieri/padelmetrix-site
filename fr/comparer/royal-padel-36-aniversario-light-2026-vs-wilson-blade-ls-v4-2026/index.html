@@ -215,6 +215,17 @@ header.site .langs{padding:10px 4px 0;font-size:16px}
 .anche{margin:8px 0 48px}.anche h2{font-size:24px;margin:0 0 16px}
 @media (max-width:560px){.agrid{grid-template-columns:1fr;gap:12px}.acard{flex-direction:row}.acov{flex:0 0 96px;height:auto;min-height:96px}.acard b{font-size:16px}.acard span.ad{display:none}}
 
+/* offerte */
+header.site nav.main a.hot{background:var(--lime);color:var(--green);padding:6px 14px;border-radius:999px;font-weight:700;line-height:1.2;display:inline-flex;align-items:center;border-bottom:0}
+header.site nav.main a.hot.on{border-bottom:0}
+@media (max-width:1080px){header.site nav.main a.hot{border-radius:10px;margin-top:8px;padding:12px;text-align:center;border-bottom:0}}
+.promo-bar{display:block;background:var(--lime);color:var(--green);font-weight:500;text-align:center;text-decoration:none;font-size:15px;padding:10px 16px;line-height:1.4}
+.promo-bar b{background:var(--green);color:var(--lime);border-radius:999px;padding:2px 10px;margin-right:6px;font-family:'Space Grotesk',sans-serif}
+.promo-bar [data-of-max]{font-weight:700}.promo-bar u{white-space:nowrap}
+.of-home{padding:34px 0 8px}.of-home h2{margin:0}
+.of-home .of-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.of-home .of-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
 </head>
 <body>
@@ -223,12 +234,13 @@ header.site .langs{padding:10px 4px 0;font-size:16px}
 <button class="burger" type="button" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('header'),o=h.classList.toggle('open');this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
 <div class="menu">
 <nav class="main" aria-label="Principal">
-<a href="/fr/raquettes/">Raquettes</a>
-<a href="/fr/pickleball/">Pickleball</a>
-<a href="/fr/enfants/">Enfants</a>
+<a class="" href="/fr/raquettes/">Raquettes</a>
+<a class="" href="/fr/pickleball/">Pickleball</a>
+<a class="" href="/fr/enfants/">Enfants</a>
 <a class="on" href="/fr/comparer/">Comparer</a>
-<a href="/fr/guides/">Guides</a>
-<a href="/fr/articles/">Articles</a>
+<a class="" href="/fr/guides/">Guides</a>
+<a class="" href="/fr/articles/">Articles</a>
+<a class="hot " href="/fr/offres/">Offres</a>
 </nav>
 <form class="hsearch" action="/fr/raquettes/" method="get" role="search"><input type="search" name="q" placeholder="Chercher une raquette" aria-label="Chercher une raquette"></form>
 <div class="langs" aria-label="Langue"><a href="/it/confronta/royal-padel-36-aniversario-light-2026-vs-wilson-blade-ls-v4-2026/" hreflang="it">IT</a> · <a href="/en/compare/royal-padel-36-aniversario-light-2026-vs-wilson-blade-ls-v4-2026/" hreflang="en">EN</a> · <a href="/es/comparar/royal-padel-36-aniversario-light-2026-vs-wilson-blade-ls-v4-2026/" hreflang="es">ES</a> · <a class="on" href="/fr/comparer/royal-padel-36-aniversario-light-2026-vs-wilson-blade-ls-v4-2026/" hreflang="fr">FR</a></div>
