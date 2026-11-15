@@ -15,9 +15,11 @@
     "bullpadel-neuron-02-edge-comfort-2027"
   ],
   "fonti_dati": [
+    "https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html",
+    "https://padelspeak.com/es/analisis-bullpadel-vertex-05-2026/",
     "https://padelproshop.com/blogs/blog/bullpadel-2026"
   ],
-  "aggiornato": "2026-10-24",
+  "aggiornato": "2026-11-15",
   "pagina": {
     "titolo": "Bullpadel Vertex 05 2026",
     "title_tag": "Bullpadel Vertex 05 2026: scheda tecnica, caratteristiche e alternative",
@@ -36,7 +38,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Bullpadel+Vertex+05+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0FPT66NNF"
       },
       {
         "nome": "PadelPROShop",
@@ -45,7 +48,7 @@
         "pulsante": "Vedi sul sito"
       }
     ],
-    "nota_prezzi": "Prezzo non ancora rilevato: verifica sul sito del negozio.",
+    "nota_prezzi": "Prezzo di listino indicativo 339,90 € secondo i rivenditori consultati a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
     "confronta": {
       "url": "/confronta/?r=bullpadel-vertex-05-2026,bullpadel-vertex-05-2027",
       "testo": "Confronta con Vertex 05 2027"
@@ -73,11 +76,27 @@
       ],
       [
         "Peso",
-        "Non dichiarato"
+        "365–375 g"
       ],
       [
         "Bilanciamento",
-        "Non dichiarato"
+        "Alto (circa 26 cm)"
+      ],
+      [
+        "Nucleo",
+        "MultiEVA (tre strati di EVA, Vertex Core)"
+      ],
+      [
+        "Superficie",
+        "Carbonio X-Tend 12K, finitura Top Spin"
+      ],
+      [
+        "Telaio",
+        "Carbonio (CarbonTube)"
+      ],
+      [
+        "Tatto",
+        "Duro"
       ],
       [
         "Livello",
@@ -88,7 +107,7 @@
         "Polivalente"
       ]
     ],
-    "nota_specifiche_html": "Dati raccolti da <a href=\"https://padelproshop.com/blogs/blog/bullpadel-2026\" rel=\"nofollow noopener\" target=\"_blank\">PadelPROShop</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://www.bullpadel.com/es/5677-pala-bullpadel-vertex-05.html\" rel=\"nofollow noopener\" target=\"_blank\">Bullpadel</a>, <a href=\"https://padelspeak.com/es/analisis-bullpadel-vertex-05-2026/\" rel=\"nofollow noopener\" target=\"_blank\">PadelSpeak</a>, <a href=\"https://padelproshop.com/blogs/blog/bullpadel-2026\" rel=\"nofollow noopener\" target=\"_blank\">PadelPROShop</a>.",
     "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. PadelPROShop la descrive così: racchetta polivalente, più tollerante in difesa rispetto alla versione 2025. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
     "pro": [
       "Versatile tra difesa e attacco",
@@ -139,5 +158,12 @@
       ],
       "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
     }
-  }
+  },
+  "peso": "365–375 g",
+  "bilanciamento": "alto (circa 26 cm)",
+  "nucleo": "MultiEVA (tre strati di EVA, Vertex Core)",
+  "superficie": "Carbonio X-Tend 12K, finitura Top Spin",
+  "telaio": "Carbonio (CarbonTube)",
+  "sensazione": "duro",
+  "prezzo_listino_eur": 339.9
 }

@@ -217,6 +217,17 @@ header.site .langs{padding:10px 4px 0;font-size:16px}
 .anche{margin:8px 0 48px}.anche h2{font-size:24px;margin:0 0 16px}
 @media (max-width:560px){.agrid{grid-template-columns:1fr;gap:12px}.acard{flex-direction:row}.acov{flex:0 0 96px;height:auto;min-height:96px}.acard b{font-size:16px}.acard span.ad{display:none}}
 
+/* offerte */
+header.site nav.main a.hot{background:var(--lime);color:var(--green);padding:6px 14px;border-radius:999px;font-weight:700;line-height:1.2;display:inline-flex;align-items:center;border-bottom:0}
+header.site nav.main a.hot.on{border-bottom:0}
+@media (max-width:1080px){header.site nav.main a.hot{border-radius:10px;margin-top:8px;padding:12px;text-align:center;border-bottom:0}}
+.promo-bar{display:block;background:var(--lime);color:var(--green);font-weight:500;text-align:center;text-decoration:none;font-size:15px;padding:10px 16px;line-height:1.4}
+.promo-bar b{background:var(--green);color:var(--lime);border-radius:999px;padding:2px 10px;margin-right:6px;font-family:'Space Grotesk',sans-serif}
+.promo-bar [data-of-max]{font-weight:700}.promo-bar u{white-space:nowrap}
+.of-home{padding:34px 0 8px}.of-home h2{margin:0}
+.of-home .of-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.of-home .of-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style>
 </head>
 <body>
@@ -225,12 +236,13 @@ header.site .langs{padding:10px 4px 0;font-size:16px}
 <button class="burger" type="button" aria-label="Menu" aria-expanded="false" onclick="var h=this.closest('header'),o=h.classList.toggle('open');this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
 <div class="menu">
 <nav class="main" aria-label="Principale">
-<a href="/it/racchette/">Racchette</a>
-<a href="/it/pickleball/">Pickleball</a>
-<a href="/it/bambini/">Bambini</a>
-<a href="/it/confronta/">Confronta</a>
-<a href="/it/guide/">Guide</a>
+<a class="" href="/it/racchette/">Racchette</a>
+<a class="" href="/it/pickleball/">Pickleball</a>
+<a class="" href="/it/bambini/">Bambini</a>
+<a class="" href="/it/confronta/">Confronta</a>
+<a class="" href="/it/guide/">Guide</a>
 <a class="on" href="/it/articoli/">Articoli</a>
+<a class="hot " href="/it/offerte/">Offerte</a>
 </nav>
 <form class="hsearch" action="/it/racchette/" method="get" role="search"><input type="search" name="q" placeholder="Cerca una racchetta" aria-label="Cerca una racchetta"></form>
 <div class="langs" aria-label="Lingua"><a class="on" href="/it/articoli/carbonio-3k-12k-18k-racchetta-padel/" hreflang="it">IT</a> · <a href="/en/articles/padel-racket-carbon-3k-12k-18k-explained/" hreflang="en">EN</a> · <a href="/es/articulos/carbono-3k-12k-18k-pala-padel/" hreflang="es">ES</a> · <a href="/fr/articles/carbone-3k-12k-18k-raquette-padel/" hreflang="fr">FR</a></div>
@@ -248,8 +260,8 @@ header.site .langs{padding:10px 4px 0;font-size:16px}
 <li><b>18K:</b> risposta più solida ed esplosiva quando acceleri, più vibrazioni fuori dal punto dolce.</li></ul>
 <p>Sono descrizioni qualitative dei negozi, senza misure di laboratorio: lo stesso articolo che le propone ricorda che "più filamenti" non significa "migliore" e che conta molto la costruzione complessiva (<a href="https://padelproshop.com/en/blogs/blog/tipos-palas-carbono-3k-12k-18k" rel="nofollow noopener" target="_blank">PadelPROShop</a>).</p>
 <h2>Cosa dicono i dati del nostro database</h2>
-<p>Abbiamo contato il tipo di carbonio dichiarato sulle 362 racchette adulte del database. Il 3K è il più diffuso (67 modelli), seguito da 12K (54) e 18K (25).</p>
-<div class="tablebox"><table class="tab"><thead><tr><th>Faccia</th><th>Modelli</th><th>Prezzo di listino mediano</th><th>Per avanzati o pro</th></tr></thead><tbody><tr><td>Carbonio 3K</td><td>67</td><td>310 €</td><td>45%</td></tr><tr><td>Carbonio 12K</td><td>54</td><td>279,95 €</td><td>61%</td></tr><tr><td>Carbonio 18K</td><td>25</td><td>263,90 €</td><td>72%</td></tr><tr><td>Carbonio 24K</td><td>14</td><td>315 €</td><td>79%</td></tr><tr><td>Fibra di vetro (senza carbonio dichiarato)</td><td>78</td><td>124,90 €</td><td>4%</td></tr></tbody></table></div>
+<p>Abbiamo contato il tipo di carbonio dichiarato sulle 362 racchette adulte del database. Il 3K è il più diffuso (67 modelli), seguito da 12K (55) e 18K (25).</p>
+<div class="tablebox"><table class="tab"><thead><tr><th>Faccia</th><th>Modelli</th><th>Prezzo di listino mediano</th><th>Per avanzati o pro</th></tr></thead><tbody><tr><td>Carbonio 3K</td><td>67</td><td>310 €</td><td>45%</td></tr><tr><td>Carbonio 12K</td><td>55</td><td>295 €</td><td>62%</td></tr><tr><td>Carbonio 18K</td><td>25</td><td>263,90 €</td><td>72%</td></tr><tr><td>Carbonio 24K</td><td>14</td><td>315 €</td><td>79%</td></tr><tr><td>Fibra di vetro (senza carbonio dichiarato)</td><td>78</td><td>124,90 €</td><td>4%</td></tr></tbody></table></div>
 <p>Due cose saltano all'occhio. Primo, i prezzi mediani di 3K, 12K e 18K sono molto vicini: il tipo di carbonio non spiega il prezzo. Secondo, la vera differenza è tra carbonio e fibra di vetro: le facce in vetro costano molto meno e sono pensate soprattutto per chi inizia.</p>
 <h2>Quale scegliere</h2>
 <ul><li><b>Inizi o hai problemi al braccio:</b> fibra di vetro o carbonio con gomma morbida; il tipo di K conta poco.</li>
