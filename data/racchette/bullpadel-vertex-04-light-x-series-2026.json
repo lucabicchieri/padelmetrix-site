@@ -42,7 +42,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Bullpadel+Vertex+04+Light+X+Series+2026",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0G4F6JK56"
       },
       {
         "nome": "PadelMarket",

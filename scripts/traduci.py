@@ -200,6 +200,10 @@ def handlers(lang):
         lambda m: X(f"Data from the {m.group(1)} page; recommended level estimated by PadelMetrix from materials and feel.",
                     f"Datos de la ficha de {m.group(1)}; nivel recomendado estimado por PadelMetrix según materiales y tacto.",
                     f"Données de la fiche {m.group(1)} ; niveau conseillé estimé par PadelMetrix d'après les matériaux et le toucher."))
+    add(r'^Dati dalla scheda di (<a [^>]+>Padelful</a>); livello consigliato e stile di gioco stimati da PadelMetrix in base a forma, materiali, tatto e punteggi\.$',
+        lambda m: X(f"Data from the {m.group(1)} page; recommended level and playing style estimated by PadelMetrix from shape, materials, feel and scores.",
+                    f"Datos de la ficha de {m.group(1)}; nivel recomendado y estilo de juego estimados por PadelMetrix según forma, materiales, tacto y puntuaciones.",
+                    f"Données de la fiche {m.group(1)} ; niveau conseillé et style de jeu estimés par PadelMetrix d'après la forme, les matériaux, le toucher et les notes."))
     # adidas: sintesi a punteggi
     add(r"^PadelZoom le assegna ([\d,]+)/10 complessivo, ma senza un'analisi scritta: per ora ci sono solo i punteggi\.$",
         lambda m: X(f"PadelZoom gives it {num(m.group(1), lang)}/10 overall, but without a written review: for now there are only the scores.",

@@ -114,16 +114,25 @@
   "cat": "novita",
   "data": "2026-11-12",
   "racchette": [
+   "adidas-metalbone-09-2025",
    "adidas-metalbone-2026",
+   "adidas-metalbone-3-4-2025",
+   "adidas-metalbone-3-4-hrd-plus-2025",
    "adidas-metalbone-carbon-2026",
+   "adidas-metalbone-carbon-3-4-2025",
    "adidas-metalbone-carbon-apa-2026",
    "adidas-metalbone-carbon-ctrl-2026",
+   "adidas-metalbone-carbon-ctrl-3-4-2025",
    "adidas-metalbone-ctrl-2026",
+   "adidas-metalbone-ctrl-3-4-2025",
    "adidas-metalbone-hrd-plus-2026",
+   "adidas-metalbone-pro-edt-2026",
    "adidas-metalbone-reserve-edt-2026",
    "adidas-metalbone-superlight-2026",
    "adidas-metalbone-team-2026",
+   "adidas-metalbone-team-3-4-2025",
    "adidas-metalbone-team-light-2026",
+   "adidas-metalbone-team-light-3-4-2025",
    "adidas-metalbone-zz-carbon-2026",
    "adidas-metalbone-zz-team-2026"
   ],
@@ -648,14 +657,14 @@
   "cat": "guide",
   "data": "2026-11-06",
   "racchette": [
+   "black-crown-win-ultralight-2025",
+   "nox-at10-genius-ultra-light-2026",
    "adidas-rx-series-light-2026",
+   "xcalion-unum-plus-h1-2026",
+   "adidas-adipower-10th-anniversary-2025",
+   "adidas-adipower-legend-2025",
    "softee-trionic-light-2026",
-   "head-radical-team-light-2026",
-   "quad-tiger-2026",
-   "babolat-air-vertuo-2-6-2026",
-   "quad-guel-do-it-2026",
-   "quad-muklay-2026",
-   "tecnifibre-curva-team-2026"
+   "head-radical-team-light-2026"
   ],
   "titolo": {
    "it": "Quanto deve pesare la racchetta da padel: il peso giusto per te",
@@ -681,14 +690,14 @@
   "cat": "guide",
   "data": "2026-11-06",
   "racchette": [
+   "black-crown-win-ultralight-2025",
+   "nox-at10-genius-ultra-light-2026",
    "adidas-rx-series-light-2026",
    "softee-trionic-light-2026",
    "head-radical-team-light-2026",
-   "tecnifibre-curva-team-2026",
-   "head-bolt-2026",
-   "head-vibe-2026",
-   "siux-tsunami-go-hybrid-air-2027",
-   "starvie-kyra-2027"
+   "pallap-velocity-team-light-2026",
+   "varlion-lw-rose-carbon-ti-2025",
+   "varlion-maxima-prisma-orquidea-2025"
   ],
   "titolo": {
    "it": "Padel dopo i 50 anni: racchetta, scarpe e consigli per non farsi male",
@@ -853,6 +862,10 @@
   "cat": "novita",
   "data": "2026-10-31",
   "racchette": [
+   "black-crown-hurricane-comfort-4-0-2026",
+   "black-crown-hurricane-comfort-4-0-2027",
+   "black-crown-hurricane-pro-4-0-2026",
+   "black-crown-hurricane-pro-4-0-2027",
    "bullpadel-flow-legend-2026",
    "bullpadel-flow-legend-2027",
    "bullpadel-icon-2026",
@@ -867,14 +880,42 @@
    "bullpadel-vertex-05-2027",
    "bullpadel-vertex-05-geo-2026",
    "bullpadel-vertex-05-geo-2027",
+   "bullpadel-vertex-05-hybrid-2026",
+   "bullpadel-vertex-05-hybrid-2027",
    "bullpadel-vertex-05-w-2026",
    "bullpadel-vertex-05-w-2027",
    "bullpadel-wonder-2026",
    "bullpadel-wonder-2027",
+   "head-extreme-motion-2026",
+   "head-extreme-motion-2027",
+   "head-extreme-pro-2026",
+   "head-extreme-pro-2027",
+   "joma-blast-pro-soft-2026",
+   "joma-blast-pro-soft-2027",
    "joma-slam-pro-iconic-2026",
    "joma-slam-pro-iconic-2027",
    "joma-tournament-pro-iconic-2026",
    "joma-tournament-pro-iconic-2027",
+   "joma-valkiria-pro-soft-2026",
+   "joma-valkiria-pro-soft-2027",
+   "nox-at10-genius-attack-12k-alum-xtrem-2026",
+   "nox-at10-genius-attack-12k-alum-xtrem-2027",
+   "nox-at10-genius-attack-18k-alum-2026",
+   "nox-at10-genius-attack-18k-alum-2027",
+   "nox-at10-luxury-genius-12k-alum-xtrem-2026",
+   "nox-at10-luxury-genius-12k-alum-xtrem-2027",
+   "nox-at10-luxury-genius-18k-alum-2026",
+   "nox-at10-luxury-genius-18k-alum-2027",
+   "nox-at10-pro-cup-hard-2026",
+   "nox-at10-pro-cup-hard-2027",
+   "nox-at10-pro-cup-soft-2026",
+   "nox-at10-pro-cup-soft-2027",
+   "nox-equation-hard-advanced-2026",
+   "nox-equation-hard-advanced-2027",
+   "nox-ml10-ventus-control-3k-2026",
+   "nox-ml10-ventus-control-3k-2027",
+   "nox-vk10-ventus-control-12k-2026",
+   "nox-vk10-ventus-control-12k-2027",
    "nox-ventus-hybrid-12k-lite-2026",
    "nox-ventus-hybrid-12k-lite-2027",
    "oxdog-ultimate-pro-light-2026",
@@ -896,7 +937,9 @@
    "starvie-black-titan-2026",
    "starvie-black-titan-2027",
    "starvie-triton-balance-plus-2026",
-   "starvie-triton-balance-plus-2027"
+   "starvie-triton-balance-plus-2027",
+   "tecnifibre-curva-soft-2026",
+   "tecnifibre-curva-soft-2027"
   ],
   "titolo": {
    "it": "Racchette padel 2027 vs 2026: cosa cambia modello per modello",
@@ -905,10 +948,10 @@
    "fr": "Raquettes de padel 2027 vs 2026 : ce qui change, modèle par modèle"
   },
   "desc": {
-   "it": "22 rinnovi confrontati voce per voce: cosa cambia davvero.",
-   "en": "22 updates compared item by item: what really changes.",
-   "es": "22 renovaciones comparadas dato por dato: qué cambia de verdad.",
-   "fr": "22 mises à jour comparées critère par critère : ce qui change vraiment."
+   "it": "39 rinnovi confrontati voce per voce: cosa cambia davvero.",
+   "en": "39 updates compared item by item: what really changes.",
+   "es": "39 renovaciones comparadas dato por dato: qué cambia de verdad.",
+   "fr": "39 mises à jour comparées critère par critère : ce qui change vraiment."
   },
   "url": {
    "it": "/it/articoli/racchette-padel-2027-vs-2026-cosa-cambia/",
@@ -929,10 +972,10 @@
    "fr": "Raquettes de padel 2027 : les nouveautés de chaque marque"
   },
   "desc": {
-   "it": "87 modelli 2027 di 10 marchi, con dati e confronti.",
-   "en": "87 2027 models from 10 brands, with data and comparisons.",
-   "es": "87 modelos 2027 de 10 marcas, con datos y comparativas.",
-   "fr": "87 modèles 2027 de 10 marques, avec données et comparatifs."
+   "it": "117 modelli 2027 di 14 marchi, con dati e confronti.",
+   "en": "117 2027 models from 14 brands, with data and comparisons.",
+   "es": "117 modelos 2027 de 14 marcas, con datos y comparativas.",
+   "fr": "117 modèles 2027 de 14 marques, avec données et comparatifs."
   },
   "url": {
    "it": "/it/articoli/racchette-padel-2027-novita-per-marca/",
