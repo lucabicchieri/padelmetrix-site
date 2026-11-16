@@ -1,0 +1,21 @@
+name: Dati report settimanale
+on:
+  workflow_dispatch:
+jobs:
+  dati:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet google-auth requests
+      - name: Search Console e Analytics
+        env:
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
+          GA4_PROPERTY_ID: "560678666"
+          GSC_SITE: "https://www.padelmetrix.com/"
+        run: python3 scripts/report/dati_report.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: report-dati
+          path: report_dati.json
+          retention-days: 30
