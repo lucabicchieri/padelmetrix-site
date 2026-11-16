@@ -222,7 +222,7 @@ GIOCATORI = [
         slug_en="leandro-augsburger-who-he-is-and-which-racket-he-uses",
         slug_es="leandro-augsburger-quien-es-y-que-pala-usa",
         nome="Leandro Augsburger", breve="Augsburger",
-        persona=dict(name="Leandro Román Augsburger", alternateName="Leo Augsburger", birthDate="2004-08-11", birthPlace="Posadas", nationality="Argentina"),
+        persona=dict(name="Leandro Román Augsburger", alternateName="Leo Augsburger", birthDate="2004-08-11", birthPlace="Posadas", nationality="Argentina", height="1.90 m"),
         racchette=["siux-fenix-pro-2026", "siux-fenix-pro-2027"],
         tabella=["siux-fenix-pro-2026", "siux-fenix-pro-2027"],
         lead=T("Leandro \"Leo\" Augsburger è un giocatore di padel argentino nato a Posadas (Misiones) l'11 agosto 2004, che gioca sul lato sinistro (revés). È uno dei giovani più forti del circuito e dal novembre 2025 fa coppia con Juan Lebrón. Gioca con Siux e usa la Fenix Pro, una diamante potente.",
@@ -252,11 +252,43 @@ GIOCATORI = [
              (T("Con chi gioca Augsburger?", "Who does Augsburger play with?", "¿Con quién juega Augsburger?", "Avec qui joue Augsburger ?"),
               T("Dal novembre 2025 gioca con lo spagnolo Juan Lebrón.", "Since November 2025 he has played with Spain's Juan Lebrón.", "Desde noviembre de 2025 juega con el español Juan Lebrón.", "Depuis novembre 2025, il joue avec l'Espagnol Juan Lebrón.")),
              (T("Quanti anni ha Leo Augsburger?", "How old is Leo Augsburger?", "¿Cuántos años tiene Leo Augsburger?", "Quel âge a Leo Augsburger ?"),
-              T("È nato l'11 agosto 2004.", "He was born on 11 August 2004.", "Nació el 11 de agosto de 2004.", "Il est né le 11 août 2004."))],
-        titolo=T("Leo Augsburger: chi è e che racchetta usa nel 2026", "Leo Augsburger: who he is and which racket he uses in 2026", "Leo Augsburger: quién es y qué pala usa en 2026", "Leo Augsburger : qui il est et quelle raquette il utilise en 2026"),
+              T("Ha {eta} anni: è nato l'11 agosto 2004 a Posadas, in Argentina.", "He is {eta}: he was born on 11 August 2004 in Posadas, Argentina.", "Tiene {eta} años: nació el 11 de agosto de 2004 en Posadas, Argentina.", "Il a {eta} ans : il est né le 11 août 2004 à Posadas, en Argentine.")),
+             (T("Quanto è alto Leo Augsburger?", "How tall is Leo Augsburger?", "¿Cuánto mide Leo Augsburger?", "Combien mesure Leo Augsburger ?"),
+              T("È alto 1,90 m.", "He is 1.90 m (6 ft 3 in) tall.", "Leo Augsburger mide 1,90 m.", "Il mesure 1,90 m.")),
+             (T("Di dove è Leo Augsburger?", "Where is Leo Augsburger from?", "¿De dónde es Leo Augsburger?", "D'où vient Leo Augsburger ?"),
+              T("È argentino, di Posadas, nella provincia di Misiones.", "He is Argentine, from Posadas in the province of Misiones.", "Es argentino, de Posadas, en la provincia de Misiones.", "Il est argentin, originaire de Posadas, dans la province de Misiones."))],
+        dati_rapidi=[(T("Altezza", "Height", "Altura", "Taille"), T("1,90 m", "1.90 m", "1,90 m", "1,90 m")),
+                     (T("Età", "Age", "Edad", "Âge"), T("{eta} anni", "{eta}", "{eta} años", "{eta} ans")),
+                     (T("Nato", "Born", "Nacido", "Né"), T("a Posadas (Argentina) l'11/08/2004", "in Posadas (Argentina) on 11/08/2004", "en Posadas (Argentina) el 11/08/2004", "à Posadas (Argentine) le 11/08/2004")),
+                     (T("Lato", "Side", "Lado", "Côté"), T("rovescio (sinistro)", "backhand (left)", "revés (izquierdo)", "revers (gauche)")),
+                     (T("Compagno", "Partner", "Pareja", "Partenaire"), T("Juan Lebrón", "Juan Lebrón", "Juan Lebrón", "Juan Lebrón")),
+                     (T("Racchetta", "Racket", "Pala", "Raquette"), T("{r:siux-fenix-pro-2026}", "{r:siux-fenix-pro-2026}", "{r:siux-fenix-pro-2026}", "{r:siux-fenix-pro-2026}"))],
+        titolo=T("Leo Augsburger: chi è e che racchetta usa nel 2026", "Leo Augsburger: who he is and which racket he uses in 2026", "Leo Augsburger: cuánto mide, edad, de dónde es y qué pala usa (2026)", "Leo Augsburger : qui il est et quelle raquette il utilise en 2026"),
         desc=T("Chi è Leandro \"Leo\" Augsburger (Posadas, 2004), compagno di Lebrón, i suoi risultati e la racchetta che usa nel 2026: Siux Fenix Pro, con dati tecnici e versione 2027.",
                "Who Leandro \"Leo\" Augsburger is (Posadas, 2004), Lebrón's partner, his results and the racket he uses in 2026: Siux Fenix Pro, with specs and the 2027 version.",
-               "Quién es Leandro \"Leo\" Augsburger (Posadas, 2004), compañero de Lebrón, sus resultados y la pala que usa en 2026: Siux Fenix Pro, con datos técnicos y versión 2027.", "Qui est Leandro « Leo » Augsburger (Posadas, 2004), partenaire de Lebrón, ses résultats et la raquette qu'il utilise en 2026 : Siux Fenix Pro, avec caractéristiques et version 2027."),
+               "Leo Augsburger mide 1,90 m, tiene {eta} años y es de Posadas (Misiones, Argentina). Juega de revés con Juan Lebrón y usa la Siux Fenix Pro: sus datos, resultados y la ficha de su pala.", "Qui est Leandro « Leo » Augsburger (Posadas, 2004), partenaire de Lebrón, ses résultats et la raquette qu'il utilise en 2026 : Siux Fenix Pro, avec caractéristiques et version 2027."),
         sommario=T("Il giovane argentino compagno di Lebrón e la sua Siux Fenix Pro.", "Lebrón's young Argentine partner and his Siux Fenix Pro.", "El joven argentino compañero de Lebrón y su Siux Fenix Pro.", "Le jeune partenaire argentin de Lebrón et sa Siux Fenix Pro."),
     ),
 ]
+
+
+def eta(G):
+    """Età di oggi dalla data di nascita della scheda (None se manca)."""
+    import datetime as _dt
+    b = G.get("persona", {}).get("birthDate")
+    if not b:
+        return None
+    y, m, d = map(int, b.split("-"))
+    t = _dt.date.today()
+    return t.year - y - ((t.month, t.day) < (m, d))
+
+
+def url_articolo(nome):
+    """Link all'articolo "chi è e che racchetta usa" del giocatore (nome come nel database), nella lingua corrente; None se non c'è."""
+    import sito as S
+    for G in GIOCATORI:
+        if G["breve"].lower() in nome.lower():
+            sl = {"it": G["slug"], "en": G["slug_en"], "es": G["slug_es"],
+                  "fr": G["slug"].replace("-chi-e-e-che-racchetta-usa", "-qui-est-il-et-quelle-raquette-utilise-t-il")}[S.lang()]
+            return S.P("articoli") + sl + "/"
+    return None

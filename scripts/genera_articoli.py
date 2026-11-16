@@ -487,8 +487,15 @@ def giocatore(db, G):
     bio = "".join(f"<li><b>{e(g(k))}:</b> {e(g(v))}</li>" for k, v in G["bio"])
     stagione = g(G["stagione"]).format(tc=g(TITOLI_TC), gc=g(TITOLI_GC))
     nome, breve = G["nome"], G["breve"]
+    from dati_giocatori import eta as _eta
+    anni = _eta(G)
+    fx = lambda t: t.replace("{eta}", str(anni)) if anni is not None else t  # noqa: E731
     pro_url = P("guide", "racchette-giocatori-professionisti")
-    corpo = f"""<p><b>{e(g(G["lead"]))}</b></p>
+    box = ""
+    if G.get("dati_rapidi"):
+        box = (f'<div class="dati-rapidi"><div class="dr-tit">{L("Dati rapidi", "Quick facts", "Datos rápidos", "En bref")}</div><dl>'
+               + "".join(f"<div><dt>{e(g(k))}</dt><dd>{_link_r(e(fx(g(v))), per)}</dd></div>" for k, v in G["dati_rapidi"]) + "</dl></div>")
+    corpo = f"""{box}<p><b>{e(g(G["lead"]))}</b></p>
 <h2>{L(f"Chi è {nome}", f"Who is {nome}", f"Quién es {nome}", f"Qui est {nome}")}</h2>
 <ul>{bio}</ul>
 <p class="note">{L("Fonte", "Source", "Fuente", "Source")}: {_fonti(G["fonti_bio"])}.</p>
@@ -504,12 +511,15 @@ def giocatore(db, G):
         f'<b>None of his tournament rackets</b> if you are a beginner or have elbow problems: look at <a href="{P("guide", "racchetta-padel-principianti")}">rackets for beginners</a> or those <a href="{P("guide", "racchetta-padel-epicondilite")}">for tennis elbow</a>.',
         f'<b>Ninguna de sus palas de torneo</b> si eres principiante o tienes molestias en el codo: mira las <a href="{P("guide", "racchetta-padel-principianti")}">palas para principiantes</a> o las <a href="{P("guide", "racchetta-padel-epicondilite")}">palas para la epicondilitis</a>.', f'<b>Aucune de ses raquettes de tournoi</b> si vous débutez ou avez des problèmes de coude : regardez les <a href="{P("guide", "racchetta-padel-principianti")}">raquettes pour débutants</a> ou celles <a href="{P("guide", "racchetta-padel-epicondilite")}">pour l\'épicondylite</a>.')}</li></ul>
 <p>{L(f'Le racchette degli altri professionisti sono nella guida <a href="{pro_url}">con che racchetta giocano i professionisti</a>.', f'The rackets of the other pros are in the guide <a href="{pro_url}">which rackets the pros use</a>.', f'Las palas de los demás profesionales están en la guía <a href="{pro_url}">con qué pala juegan los profesionales</a>.', f'Les raquettes des autres pros sont dans le guide <a href="{pro_url}">quelles raquettes utilisent les pros</a>.')}</p>"""
-    qa = [(g(q), g(a)) for q, a in G["faq"]]
+    qa = [(fx(g(q)), fx(g(a))) for q, a in G["faq"]]
     faq_htm, faq_ld = faq(qa)
-    persona = {"@context": "https://schema.org", "@type": "Person", **G["persona"]}
+    pers = dict(G["persona"])
+    if "height" in pers:
+        pers["height"] = {"@type": "QuantitativeValue", "value": float(pers["height"].split()[0]), "unitCode": "MTR"}
+    persona = {"@context": "https://schema.org", "@type": "Person", **pers}
     titolo = g(G["titolo"])
     items = [per[s] for s in G["racchette"] if s in per]
-    scrivi_articolo(G["slug"], titolo + " | PadelMetrix", g(G["desc"]), titolo, nome, corpo + faq_htm, items=items, ld_extra=[faq_ld, persona])
+    scrivi_articolo(G["slug"], titolo + " | PadelMetrix", fx(g(G["desc"])), titolo, nome, corpo + faq_htm, items=items, ld_extra=[faq_ld, persona])
     return G["slug"], titolo, g(G["sommario"])
 
 
