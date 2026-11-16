@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
+"alt": {
+"it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
+"en": "/en/articles/padel-court-glass-types-tempered-laminated/",
+"es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
+"fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
 "path": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
 "alt": {
 "it": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
@@ -357,6 +366,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/padel-court-glass-types-tempered-laminated/",
+"alt": {
+"it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
+"en": "/en/articles/padel-court-glass-types-tempered-laminated/",
+"es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
+"fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
 }
 },
 {
@@ -720,6 +738,15 @@
 }
 },
 {
+"path": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
+"alt": {
+"it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
+"en": "/en/articles/padel-court-glass-types-tempered-laminated/",
+"es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
+"fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
+}
+},
+{
 "path": "/es/articulos/metalbone-vs-vertex-comparativa-palas/",
 "alt": {
 "it": "/it/articoli/metalbone-vs-vertex-confronto-racchette/",
@@ -1077,6 +1104,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/",
+"alt": {
+"it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
+"en": "/en/articles/padel-court-glass-types-tempered-laminated/",
+"es": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
+"fr": "/fr/articles/vitres-terrain-padel-types-trempe-feuillete/"
 }
 },
 {
