@@ -12,7 +12,7 @@ import sys
 from google.oauth2 import service_account
 from google.auth.transport.requests import AuthorizedSession
 
-SITO = os.environ.get("GSC_SITE", "sc-domain:padelmetrix.com")
+SITO = os.environ.get("GSC_SITE", "https://www.padelmetrix.com/")
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly", "https://www.googleapis.com/auth/analytics.readonly"]
 
 
