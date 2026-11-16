@@ -497,10 +497,13 @@ def domande(db, stats):
                  "Los profesionales pueden usar versiones personalizadas del modelo a la venta.", "Les professionnels peuvent utiliser des versions personnalisées du modèle vendu dans le commerce.")
         cr, ld = crumbs([H(), (D, P("domande")), (g, None)])
         pro = P("guide", "racchette-giocatori-professionisti")
+        from dati_giocatori import url_articolo
+        ua = url_articolo(g)
+        art_p = (f'<p>{L(f"Chi è {g}, i risultati e la racchetta che usa: ", f"Who {g} is, his results and the racket he uses: ", f"Quién es {g}, sus resultados y la pala que usa: ", f"Qui est {g}, ses résultats et la raquette qu\'il utilise : ")}<a href="{ua}">{L("leggi l\'articolo completo", "read the full article", "lee el artículo completo", "lisez l\'article complet")}</a>.</p>') if ua else ""
         corpo = f'''{cr}
 <div class="intro"><h1>{e(q)}</h1><p><b>{e(ans)}</b> {e(nota)}</p>{data_riga()}</div>
 {griglia(its)}
-<div class="prose"><p>{L(f'Tutti i giocatori nella pagina <a href="{pro}">racchette dei professionisti</a>.', f'All players on the <a href="{pro}">pro players\' rackets</a> page.', f'Todos los jugadores en la página <a href="{pro}">palas de los profesionales</a>.', f'Tous les joueurs sur la page <a href="{pro}">raquettes des joueurs pros</a>.')}</p></div>'''
+<div class="prose">{art_p}<p>{L(f'Tutti i giocatori nella pagina <a href="{pro}">racchette dei professionisti</a>.', f'All players on the <a href="{pro}">pro players\' rackets</a> page.', f'Todos los jugadores en la página <a href="{pro}">palas de los profesionales</a>.', f'Tous les joueurs sur la page <a href="{pro}">raquettes des joueurs pros</a>.')}</p></div>'''
         scrivi(path, pagina(L(f"Con che racchetta gioca {g}? Modelli 2026 e 2027 | PadelMetrix", f"What racket does {g} use? 2026 and 2027 models | PadelMetrix",
                               f"¿Con qué pala juega {g}? Modelos 2026 y 2027 | PadelMetrix", f"Avec quelle raquette joue {g} ? Modèles 2026 et 2027 | PadelMetrix"), ans[:300], path, corpo, on="guide", ld=[ld, faq_ld(q, ans + " " + nota)], alt=alt), alt)
         voci.append((path, q))

@@ -550,7 +550,9 @@ def guide(db):
         g = n["giocatore"]
         if g and "ispirata" not in g:
             gioc.setdefault(g, []).append(n)
-    righe = "".join(f'<tr><td>{e(g)}</td><td>{", ".join(f"<a href=\"{url_r(n)}\">{e(n["titolo"])}</a>" for n in ordina(its))}</td></tr>'
+    from dati_giocatori import url_articolo
+    _nm = lambda g: f'<a href="{url_articolo(g)}">{e(g)}</a>' if url_articolo(g) else e(g)  # noqa: E731
+    righe = "".join(f'<tr><td>{_nm(g)}</td><td>{", ".join(f"<a href=\"{url_r(n)}\">{e(n["titolo"])}</a>" for n in ordina(its))}</td></tr>'
                     for g, its in sorted(gioc.items(), key=lambda kv: kv[0]))
     slug = "racchette-giocatori-professionisti"
     t_pro = L("Le racchette dei giocatori professionisti", "The rackets of professional players", "Las palas de los jugadores profesionales", "Les raquettes des joueurs professionnels")
