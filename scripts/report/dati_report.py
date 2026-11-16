@@ -4,6 +4,7 @@ Credenziali: secret GOOGLE_SA_JSON (chiave JSON di un account di servizio con ac
 a Search Console e alla proprietà GA4) e GA4_PROPERTY_ID (numero della proprietà). Confronta gli ultimi 7 giorni
 completi con i 7 precedenti (Search Console ha 2-3 giorni di ritardo, quindi la finestra finisce 3 giorni fa).
 Scrive report_dati.json e ne stampa un riassunto."""
+import base64
 import datetime as dt
 import json
 import os
@@ -108,6 +109,7 @@ def main():
     dati["errori"] = errori
     open("report_dati.json", "w").write(json.dumps(dati, ensure_ascii=False, indent=1))
     print("REPORT_JSON " + json.dumps(dati, ensure_ascii=False))
+    print("REPORT_B64 " + base64.b64encode(json.dumps(dati, ensure_ascii=False).encode()).decode())
     print("ERRORI:", errori or "nessuno")
     if errori and "gsc_totali" not in dati and "ga_totali" not in dati:
         sys.exit(1)
