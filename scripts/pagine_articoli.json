@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/giovani-talenti-italiani-padel/",
+"alt": {
+"it": "/it/articoli/giovani-talenti-italiani-padel/",
+"en": "/en/articles/young-italian-padel-talents/",
+"es": "/es/articulos/jovenes-talentos-italianos-padel/",
+"fr": "/fr/articles/jeunes-talents-italiens-padel/"
+}
+},
+{
 "path": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
 "alt": {
 "it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
@@ -366,6 +375,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/young-italian-padel-talents/",
+"alt": {
+"it": "/it/articoli/giovani-talenti-italiani-padel/",
+"en": "/en/articles/young-italian-padel-talents/",
+"es": "/es/articulos/jovenes-talentos-italianos-padel/",
+"fr": "/fr/articles/jeunes-talents-italiens-padel/"
 }
 },
 {
@@ -738,6 +756,15 @@
 }
 },
 {
+"path": "/es/articulos/jovenes-talentos-italianos-padel/",
+"alt": {
+"it": "/it/articoli/giovani-talenti-italiani-padel/",
+"en": "/en/articles/young-italian-padel-talents/",
+"es": "/es/articulos/jovenes-talentos-italianos-padel/",
+"fr": "/fr/articles/jeunes-talents-italiens-padel/"
+}
+},
+{
 "path": "/es/articulos/cristales-pista-padel-tipos-templado-laminado/",
 "alt": {
 "it": "/it/articoli/vetri-campo-padel-tipi-temperato-stratificato/",
@@ -1104,6 +1131,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/jeunes-talents-italiens-padel/",
+"alt": {
+"it": "/it/articoli/giovani-talenti-italiani-padel/",
+"en": "/en/articles/young-italian-padel-talents/",
+"es": "/es/articulos/jovenes-talentos-italianos-padel/",
+"fr": "/fr/articles/jeunes-talents-italiens-padel/"
 }
 },
 {

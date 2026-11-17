@@ -44,7 +44,7 @@ def articolo_ld(titolo, desc, path, data=OGGI_ISO):
 
 CAT_NOMI = {"giocatori": ("Giocatori", "Players", "Jugadores", "Joueurs"), "regali": ("Regali", "Gifts", "Regalos", "Cadeaux"),
             "novita": ("Novità e confronti", "New and compared", "Novedades y comparativas", "Nouveautés et comparatifs"), "guide": ("Guide", "Guides", "Guías", "Guides")}
-_CAT_GIOC = ("tolito-", "fernando-belasteguin", "ale-galan", "chi-e-e-che-racchetta", "racchetta-usa", "con-che-racchetta")
+_CAT_GIOC = ("giovani-talenti", "tolito-", "fernando-belasteguin", "ale-galan", "chi-e-e-che-racchetta", "racchetta-usa", "con-che-racchetta")
 _CAT_NOV = ("novita", "-vs-", "cosa-cambia", "migliori-racchette", "confront", "2027", "sorpasso", "fitp-", "quad-racchette", "metalbone-storia", "metalbone-zz")
 
 
@@ -3265,6 +3265,14 @@ S.SLUG_FR[BELA_SLUG] = "fernando-belasteguin-carriere-records-raquettes"
 DATE_ART[BELA_SLUG] = "2026-11-14"
 
 
+from art_giovani import GI_SLUG, art_giovani  # noqa: E402
+DATE_ART[GI_SLUG] = "2026-11-17"
+
+
+def art_giovani_w(db):
+    return art_giovani(db, fonte, faq, scrivi_articolo, _tab4)
+
+
 def art_bela(db):
     sl = ["wilson-bela-max-2027", "wilson-bela-pro-v3-2026", "wilson-bela-v3-2026"]
     by = {r["slug"]: r for r in db}
@@ -3429,7 +3437,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_vetri(db), art_metalbone_vertex(db), art_zidane(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_giovani_w(db), art_vetri(db), art_metalbone_vertex(db), art_zidane(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI)), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "cat": categoria(slug), "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})
