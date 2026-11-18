@@ -45,6 +45,15 @@
 }
 },
 {
+"path": "/it/marche/head/",
+"alt": {
+"it": "/it/marche/head/",
+"en": "/en/brands/head/",
+"es": "/es/marcas/head/",
+"fr": "/fr/marques/head/"
+}
+},
+{
 "path": "/it/marche/starvie/",
 "alt": {
 "it": "/it/marche/starvie/",
@@ -60,15 +69,6 @@
 "en": "/en/brands/drop-shot/",
 "es": "/es/marcas/drop-shot/",
 "fr": "/fr/marques/drop-shot/"
-}
-},
-{
-"path": "/it/marche/head/",
-"alt": {
-"it": "/it/marche/head/",
-"en": "/en/brands/head/",
-"es": "/es/marcas/head/",
-"fr": "/fr/marques/head/"
 }
 },
 {
@@ -429,6 +429,15 @@
 "en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/"
+}
+},
+{
+"path": "/it/confronta/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"alt": {
+"it": "/it/confronta/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/"
 }
 },
 {
@@ -3465,6 +3474,15 @@
 }
 },
 {
+"path": "/it/confronta/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"alt": {
+"it": "/it/confronta/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"en": "/en/compare/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"es": "/es/comparar/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"fr": "/fr/comparer/head-extreme-evo-2026-vs-head-gravity-team-2027/"
+}
+},
+{
 "path": "/it/confronta/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
 "alt": {
 "it": "/it/confronta/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
@@ -3498,6 +3516,15 @@
 "en": "/en/compare/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "es": "/es/comparar/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "fr": "/fr/comparer/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/"
+}
+},
+{
+"path": "/it/confronta/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"en": "/en/compare/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-head-gravity-pro-2027/"
 }
 },
 {
@@ -3543,6 +3570,15 @@
 "en": "/en/compare/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "es": "/es/comparar/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "fr": "/fr/comparer/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/"
+}
+},
+{
+"path": "/it/confronta/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"en": "/en/compare/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"es": "/es/comparar/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/"
 }
 },
 {
@@ -3636,12 +3672,30 @@
 }
 },
 {
+"path": "/it/confronta/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"en": "/en/compare/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"es": "/es/comparar/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"fr": "/fr/comparer/head-speed-motion-2025-vs-head-speed-motion-2027/"
+}
+},
+{
 "path": "/it/confronta/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "alt": {
 "it": "/it/confronta/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "en": "/en/compare/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "es": "/es/comparar/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "fr": "/fr/comparer/head-speed-one-2025-vs-head-speed-one-x-2025/"
+}
+},
+{
+"path": "/it/confronta/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"en": "/en/compare/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"es": "/es/comparar/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"fr": "/fr/comparer/head-speed-pro-2025-vs-head-speed-pro-2027/"
 }
 },
 {
@@ -3654,12 +3708,39 @@
 }
 },
 {
+"path": "/it/confronta/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"en": "/en/compare/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"es": "/es/comparar/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"fr": "/fr/comparer/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/"
+}
+},
+{
 "path": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2026/",
 "alt": {
 "it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2026/",
 "en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2026/",
 "es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2026/",
 "fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2026/"
+}
+},
+{
+"path": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2027/"
+}
+},
+{
+"path": "/it/confronta/head-speed-team-2026-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2026-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2026-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2026-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2026-vs-head-speed-team-2027/"
 }
 },
 {
@@ -6318,6 +6399,15 @@
 }
 },
 {
+"path": "/en/brands/head/",
+"alt": {
+"it": "/it/marche/head/",
+"en": "/en/brands/head/",
+"es": "/es/marcas/head/",
+"fr": "/fr/marques/head/"
+}
+},
+{
 "path": "/en/brands/starvie/",
 "alt": {
 "it": "/it/marche/starvie/",
@@ -6333,15 +6423,6 @@
 "en": "/en/brands/drop-shot/",
 "es": "/es/marcas/drop-shot/",
 "fr": "/fr/marques/drop-shot/"
-}
-},
-{
-"path": "/en/brands/head/",
-"alt": {
-"it": "/it/marche/head/",
-"en": "/en/brands/head/",
-"es": "/es/marcas/head/",
-"fr": "/fr/marques/head/"
 }
 },
 {
@@ -6702,6 +6783,15 @@
 "en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/"
+}
+},
+{
+"path": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"alt": {
+"it": "/it/confronta/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/"
 }
 },
 {
@@ -9738,6 +9828,15 @@
 }
 },
 {
+"path": "/en/compare/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"alt": {
+"it": "/it/confronta/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"en": "/en/compare/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"es": "/es/comparar/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"fr": "/fr/comparer/head-extreme-evo-2026-vs-head-gravity-team-2027/"
+}
+},
+{
 "path": "/en/compare/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
 "alt": {
 "it": "/it/confronta/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
@@ -9771,6 +9870,15 @@
 "en": "/en/compare/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "es": "/es/comparar/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "fr": "/fr/comparer/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/"
+}
+},
+{
+"path": "/en/compare/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"en": "/en/compare/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-head-gravity-pro-2027/"
 }
 },
 {
@@ -9816,6 +9924,15 @@
 "en": "/en/compare/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "es": "/es/comparar/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "fr": "/fr/comparer/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/"
+}
+},
+{
+"path": "/en/compare/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"en": "/en/compare/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"es": "/es/comparar/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/"
 }
 },
 {
@@ -9909,12 +10026,30 @@
 }
 },
 {
+"path": "/en/compare/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"en": "/en/compare/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"es": "/es/comparar/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"fr": "/fr/comparer/head-speed-motion-2025-vs-head-speed-motion-2027/"
+}
+},
+{
 "path": "/en/compare/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "alt": {
 "it": "/it/confronta/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "en": "/en/compare/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "es": "/es/comparar/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "fr": "/fr/comparer/head-speed-one-2025-vs-head-speed-one-x-2025/"
+}
+},
+{
+"path": "/en/compare/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"en": "/en/compare/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"es": "/es/comparar/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"fr": "/fr/comparer/head-speed-pro-2025-vs-head-speed-pro-2027/"
 }
 },
 {
@@ -9927,12 +10062,39 @@
 }
 },
 {
+"path": "/en/compare/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"en": "/en/compare/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"es": "/es/comparar/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"fr": "/fr/comparer/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/"
+}
+},
+{
 "path": "/en/compare/head-speed-team-2025-vs-head-speed-team-2026/",
 "alt": {
 "it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2026/",
 "en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2026/",
 "es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2026/",
 "fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2026/"
+}
+},
+{
+"path": "/en/compare/head-speed-team-2025-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2027/"
+}
+},
+{
+"path": "/en/compare/head-speed-team-2026-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2026-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2026-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2026-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2026-vs-head-speed-team-2027/"
 }
 },
 {
@@ -12591,6 +12753,15 @@
 }
 },
 {
+"path": "/es/marcas/head/",
+"alt": {
+"it": "/it/marche/head/",
+"en": "/en/brands/head/",
+"es": "/es/marcas/head/",
+"fr": "/fr/marques/head/"
+}
+},
+{
 "path": "/es/marcas/starvie/",
 "alt": {
 "it": "/it/marche/starvie/",
@@ -12606,15 +12777,6 @@
 "en": "/en/brands/drop-shot/",
 "es": "/es/marcas/drop-shot/",
 "fr": "/fr/marques/drop-shot/"
-}
-},
-{
-"path": "/es/marcas/head/",
-"alt": {
-"it": "/it/marche/head/",
-"en": "/en/brands/head/",
-"es": "/es/marcas/head/",
-"fr": "/fr/marques/head/"
 }
 },
 {
@@ -12975,6 +13137,15 @@
 "en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/"
+}
+},
+{
+"path": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"alt": {
+"it": "/it/confronta/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/"
 }
 },
 {
@@ -16011,6 +16182,15 @@
 }
 },
 {
+"path": "/es/comparar/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"alt": {
+"it": "/it/confronta/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"en": "/en/compare/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"es": "/es/comparar/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"fr": "/fr/comparer/head-extreme-evo-2026-vs-head-gravity-team-2027/"
+}
+},
+{
 "path": "/es/comparar/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
 "alt": {
 "it": "/it/confronta/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
@@ -16044,6 +16224,15 @@
 "en": "/en/compare/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "es": "/es/comparar/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "fr": "/fr/comparer/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/"
+}
+},
+{
+"path": "/es/comparar/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"en": "/en/compare/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-head-gravity-pro-2027/"
 }
 },
 {
@@ -16089,6 +16278,15 @@
 "en": "/en/compare/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "es": "/es/comparar/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "fr": "/fr/comparer/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/"
+}
+},
+{
+"path": "/es/comparar/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"en": "/en/compare/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"es": "/es/comparar/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/"
 }
 },
 {
@@ -16182,12 +16380,30 @@
 }
 },
 {
+"path": "/es/comparar/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"en": "/en/compare/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"es": "/es/comparar/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"fr": "/fr/comparer/head-speed-motion-2025-vs-head-speed-motion-2027/"
+}
+},
+{
 "path": "/es/comparar/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "alt": {
 "it": "/it/confronta/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "en": "/en/compare/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "es": "/es/comparar/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "fr": "/fr/comparer/head-speed-one-2025-vs-head-speed-one-x-2025/"
+}
+},
+{
+"path": "/es/comparar/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"en": "/en/compare/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"es": "/es/comparar/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"fr": "/fr/comparer/head-speed-pro-2025-vs-head-speed-pro-2027/"
 }
 },
 {
@@ -16200,12 +16416,39 @@
 }
 },
 {
+"path": "/es/comparar/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"en": "/en/compare/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"es": "/es/comparar/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"fr": "/fr/comparer/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/"
+}
+},
+{
 "path": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2026/",
 "alt": {
 "it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2026/",
 "en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2026/",
 "es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2026/",
 "fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2026/"
+}
+},
+{
+"path": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2027/"
+}
+},
+{
+"path": "/es/comparar/head-speed-team-2026-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2026-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2026-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2026-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2026-vs-head-speed-team-2027/"
 }
 },
 {
@@ -18864,6 +19107,15 @@
 }
 },
 {
+"path": "/fr/marques/head/",
+"alt": {
+"it": "/it/marche/head/",
+"en": "/en/brands/head/",
+"es": "/es/marcas/head/",
+"fr": "/fr/marques/head/"
+}
+},
+{
 "path": "/fr/marques/starvie/",
 "alt": {
 "it": "/it/marche/starvie/",
@@ -18879,15 +19131,6 @@
 "en": "/en/brands/drop-shot/",
 "es": "/es/marcas/drop-shot/",
 "fr": "/fr/marques/drop-shot/"
-}
-},
-{
-"path": "/fr/marques/head/",
-"alt": {
-"it": "/it/marche/head/",
-"en": "/en/brands/head/",
-"es": "/es/marcas/head/",
-"fr": "/fr/marques/head/"
 }
 },
 {
@@ -19248,6 +19491,15 @@
 "en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/",
 "fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-adidas-adipower-carbon-light-3-4-2025/"
+}
+},
+{
+"path": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"alt": {
+"it": "/it/confronta/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"en": "/en/compare/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"es": "/es/comparar/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/",
+"fr": "/fr/comparer/adidas-adipower-carbon-ctrl-3-4-2025-vs-head-gravity-motion-2027/"
 }
 },
 {
@@ -22284,6 +22536,15 @@
 }
 },
 {
+"path": "/fr/comparer/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"alt": {
+"it": "/it/confronta/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"en": "/en/compare/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"es": "/es/comparar/head-extreme-evo-2026-vs-head-gravity-team-2027/",
+"fr": "/fr/comparer/head-extreme-evo-2026-vs-head-gravity-team-2027/"
+}
+},
+{
 "path": "/fr/comparer/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
 "alt": {
 "it": "/it/confronta/head-extreme-evo-2026-vs-head-one-ultralight-2025/",
@@ -22317,6 +22578,15 @@
 "en": "/en/compare/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "es": "/es/comparar/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/",
 "fr": "/fr/comparer/head-extreme-team-2026-vs-wilson-bela-ls-v3-2025/"
+}
+},
+{
+"path": "/fr/comparer/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"en": "/en/compare/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"es": "/es/comparar/head-gravity-pro-2026-vs-head-gravity-pro-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2026-vs-head-gravity-pro-2027/"
 }
 },
 {
@@ -22362,6 +22632,15 @@
 "en": "/en/compare/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "es": "/es/comparar/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/",
 "fr": "/fr/comparer/head-gravity-pro-2026-vs-wilson-endure-pro-v1-2026/"
+}
+},
+{
+"path": "/fr/comparer/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"en": "/en/compare/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"es": "/es/comparar/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/",
+"fr": "/fr/comparer/head-gravity-pro-2027-vs-head-gravity-pro-x-2027/"
 }
 },
 {
@@ -22455,12 +22734,30 @@
 }
 },
 {
+"path": "/fr/comparer/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"en": "/en/compare/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"es": "/es/comparar/head-speed-motion-2025-vs-head-speed-motion-2027/",
+"fr": "/fr/comparer/head-speed-motion-2025-vs-head-speed-motion-2027/"
+}
+},
+{
 "path": "/fr/comparer/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "alt": {
 "it": "/it/confronta/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "en": "/en/compare/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "es": "/es/comparar/head-speed-one-2025-vs-head-speed-one-x-2025/",
 "fr": "/fr/comparer/head-speed-one-2025-vs-head-speed-one-x-2025/"
+}
+},
+{
+"path": "/fr/comparer/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"en": "/en/compare/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"es": "/es/comparar/head-speed-pro-2025-vs-head-speed-pro-2027/",
+"fr": "/fr/comparer/head-speed-pro-2025-vs-head-speed-pro-2027/"
 }
 },
 {
@@ -22473,12 +22770,39 @@
 }
 },
 {
+"path": "/fr/comparer/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"en": "/en/compare/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"es": "/es/comparar/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/",
+"fr": "/fr/comparer/head-speed-pro-x-2025-vs-head-speed-pro-x-2027/"
+}
+},
+{
 "path": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2026/",
 "alt": {
 "it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2026/",
 "en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2026/",
 "es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2026/",
 "fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2026/"
+}
+},
+{
+"path": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2025-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2025-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2025-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2025-vs-head-speed-team-2027/"
+}
+},
+{
+"path": "/fr/comparer/head-speed-team-2026-vs-head-speed-team-2027/",
+"alt": {
+"it": "/it/confronta/head-speed-team-2026-vs-head-speed-team-2027/",
+"en": "/en/compare/head-speed-team-2026-vs-head-speed-team-2027/",
+"es": "/es/comparar/head-speed-team-2026-vs-head-speed-team-2027/",
+"fr": "/fr/comparer/head-speed-team-2026-vs-head-speed-team-2027/"
 }
 },
 {

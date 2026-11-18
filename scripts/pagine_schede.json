@@ -2988,12 +2988,48 @@
 }
 },
 {
+"path": "/it/racchette/head-gravity-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-motion-2027/",
+"en": "/en/rackets/head-gravity-motion-2027/",
+"es": "/es/palas/head-gravity-motion-2027/",
+"fr": "/fr/raquettes/head-gravity-motion-2027/"
+}
+},
+{
 "path": "/it/racchette/head-gravity-pro-2026/",
 "alt": {
 "it": "/it/racchette/head-gravity-pro-2026/",
 "en": "/en/rackets/head-gravity-pro-2026/",
 "es": "/es/palas/head-gravity-pro-2026/",
 "fr": "/fr/raquettes/head-gravity-pro-2026/"
+}
+},
+{
+"path": "/it/racchette/head-gravity-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-2027/",
+"en": "/en/rackets/head-gravity-pro-2027/",
+"es": "/es/palas/head-gravity-pro-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-2027/"
+}
+},
+{
+"path": "/it/racchette/head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-x-2027/",
+"en": "/en/rackets/head-gravity-pro-x-2027/",
+"es": "/es/palas/head-gravity-pro-x-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-x-2027/"
+}
+},
+{
+"path": "/it/racchette/head-gravity-team-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-team-2027/",
+"en": "/en/rackets/head-gravity-team-2027/",
+"es": "/es/palas/head-gravity-team-2027/",
+"fr": "/fr/raquettes/head-gravity-team-2027/"
 }
 },
 {
@@ -3078,6 +3114,15 @@
 }
 },
 {
+"path": "/it/racchette/head-speed-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-motion-2027/",
+"en": "/en/rackets/head-speed-motion-2027/",
+"es": "/es/palas/head-speed-motion-2027/",
+"fr": "/fr/raquettes/head-speed-motion-2027/"
+}
+},
+{
 "path": "/it/racchette/head-speed-one-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-one-2025/",
@@ -3105,12 +3150,30 @@
 }
 },
 {
+"path": "/it/racchette/head-speed-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-2027/",
+"en": "/en/rackets/head-speed-pro-2027/",
+"es": "/es/palas/head-speed-pro-2027/",
+"fr": "/fr/raquettes/head-speed-pro-2027/"
+}
+},
+{
 "path": "/it/racchette/head-speed-pro-x-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-pro-x-2025/",
 "en": "/en/rackets/head-speed-pro-x-2025/",
 "es": "/es/palas/head-speed-pro-x-2025/",
 "fr": "/fr/raquettes/head-speed-pro-x-2025/"
+}
+},
+{
+"path": "/it/racchette/head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-x-2027/",
+"en": "/en/rackets/head-speed-pro-x-2027/",
+"es": "/es/palas/head-speed-pro-x-2027/",
+"fr": "/fr/raquettes/head-speed-pro-x-2027/"
 }
 },
 {
@@ -3129,6 +3192,15 @@
 "en": "/en/rackets/head-speed-team-2026/",
 "es": "/es/palas/head-speed-team-2026/",
 "fr": "/fr/raquettes/head-speed-team-2026/"
+}
+},
+{
+"path": "/it/racchette/head-speed-team-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-team-2027/",
+"en": "/en/rackets/head-speed-team-2027/",
+"es": "/es/palas/head-speed-team-2027/",
+"fr": "/fr/raquettes/head-speed-team-2027/"
 }
 },
 {
@@ -10503,12 +10575,48 @@
 }
 },
 {
+"path": "/en/rackets/head-gravity-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-motion-2027/",
+"en": "/en/rackets/head-gravity-motion-2027/",
+"es": "/es/palas/head-gravity-motion-2027/",
+"fr": "/fr/raquettes/head-gravity-motion-2027/"
+}
+},
+{
 "path": "/en/rackets/head-gravity-pro-2026/",
 "alt": {
 "it": "/it/racchette/head-gravity-pro-2026/",
 "en": "/en/rackets/head-gravity-pro-2026/",
 "es": "/es/palas/head-gravity-pro-2026/",
 "fr": "/fr/raquettes/head-gravity-pro-2026/"
+}
+},
+{
+"path": "/en/rackets/head-gravity-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-2027/",
+"en": "/en/rackets/head-gravity-pro-2027/",
+"es": "/es/palas/head-gravity-pro-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-2027/"
+}
+},
+{
+"path": "/en/rackets/head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-x-2027/",
+"en": "/en/rackets/head-gravity-pro-x-2027/",
+"es": "/es/palas/head-gravity-pro-x-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-x-2027/"
+}
+},
+{
+"path": "/en/rackets/head-gravity-team-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-team-2027/",
+"en": "/en/rackets/head-gravity-team-2027/",
+"es": "/es/palas/head-gravity-team-2027/",
+"fr": "/fr/raquettes/head-gravity-team-2027/"
 }
 },
 {
@@ -10593,6 +10701,15 @@
 }
 },
 {
+"path": "/en/rackets/head-speed-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-motion-2027/",
+"en": "/en/rackets/head-speed-motion-2027/",
+"es": "/es/palas/head-speed-motion-2027/",
+"fr": "/fr/raquettes/head-speed-motion-2027/"
+}
+},
+{
 "path": "/en/rackets/head-speed-one-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-one-2025/",
@@ -10620,12 +10737,30 @@
 }
 },
 {
+"path": "/en/rackets/head-speed-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-2027/",
+"en": "/en/rackets/head-speed-pro-2027/",
+"es": "/es/palas/head-speed-pro-2027/",
+"fr": "/fr/raquettes/head-speed-pro-2027/"
+}
+},
+{
 "path": "/en/rackets/head-speed-pro-x-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-pro-x-2025/",
 "en": "/en/rackets/head-speed-pro-x-2025/",
 "es": "/es/palas/head-speed-pro-x-2025/",
 "fr": "/fr/raquettes/head-speed-pro-x-2025/"
+}
+},
+{
+"path": "/en/rackets/head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-x-2027/",
+"en": "/en/rackets/head-speed-pro-x-2027/",
+"es": "/es/palas/head-speed-pro-x-2027/",
+"fr": "/fr/raquettes/head-speed-pro-x-2027/"
 }
 },
 {
@@ -10644,6 +10779,15 @@
 "en": "/en/rackets/head-speed-team-2026/",
 "es": "/es/palas/head-speed-team-2026/",
 "fr": "/fr/raquettes/head-speed-team-2026/"
+}
+},
+{
+"path": "/en/rackets/head-speed-team-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-team-2027/",
+"en": "/en/rackets/head-speed-team-2027/",
+"es": "/es/palas/head-speed-team-2027/",
+"fr": "/fr/raquettes/head-speed-team-2027/"
 }
 },
 {
@@ -18018,12 +18162,48 @@
 }
 },
 {
+"path": "/es/palas/head-gravity-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-motion-2027/",
+"en": "/en/rackets/head-gravity-motion-2027/",
+"es": "/es/palas/head-gravity-motion-2027/",
+"fr": "/fr/raquettes/head-gravity-motion-2027/"
+}
+},
+{
 "path": "/es/palas/head-gravity-pro-2026/",
 "alt": {
 "it": "/it/racchette/head-gravity-pro-2026/",
 "en": "/en/rackets/head-gravity-pro-2026/",
 "es": "/es/palas/head-gravity-pro-2026/",
 "fr": "/fr/raquettes/head-gravity-pro-2026/"
+}
+},
+{
+"path": "/es/palas/head-gravity-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-2027/",
+"en": "/en/rackets/head-gravity-pro-2027/",
+"es": "/es/palas/head-gravity-pro-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-2027/"
+}
+},
+{
+"path": "/es/palas/head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-x-2027/",
+"en": "/en/rackets/head-gravity-pro-x-2027/",
+"es": "/es/palas/head-gravity-pro-x-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-x-2027/"
+}
+},
+{
+"path": "/es/palas/head-gravity-team-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-team-2027/",
+"en": "/en/rackets/head-gravity-team-2027/",
+"es": "/es/palas/head-gravity-team-2027/",
+"fr": "/fr/raquettes/head-gravity-team-2027/"
 }
 },
 {
@@ -18108,6 +18288,15 @@
 }
 },
 {
+"path": "/es/palas/head-speed-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-motion-2027/",
+"en": "/en/rackets/head-speed-motion-2027/",
+"es": "/es/palas/head-speed-motion-2027/",
+"fr": "/fr/raquettes/head-speed-motion-2027/"
+}
+},
+{
 "path": "/es/palas/head-speed-one-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-one-2025/",
@@ -18135,12 +18324,30 @@
 }
 },
 {
+"path": "/es/palas/head-speed-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-2027/",
+"en": "/en/rackets/head-speed-pro-2027/",
+"es": "/es/palas/head-speed-pro-2027/",
+"fr": "/fr/raquettes/head-speed-pro-2027/"
+}
+},
+{
 "path": "/es/palas/head-speed-pro-x-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-pro-x-2025/",
 "en": "/en/rackets/head-speed-pro-x-2025/",
 "es": "/es/palas/head-speed-pro-x-2025/",
 "fr": "/fr/raquettes/head-speed-pro-x-2025/"
+}
+},
+{
+"path": "/es/palas/head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-x-2027/",
+"en": "/en/rackets/head-speed-pro-x-2027/",
+"es": "/es/palas/head-speed-pro-x-2027/",
+"fr": "/fr/raquettes/head-speed-pro-x-2027/"
 }
 },
 {
@@ -18159,6 +18366,15 @@
 "en": "/en/rackets/head-speed-team-2026/",
 "es": "/es/palas/head-speed-team-2026/",
 "fr": "/fr/raquettes/head-speed-team-2026/"
+}
+},
+{
+"path": "/es/palas/head-speed-team-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-team-2027/",
+"en": "/en/rackets/head-speed-team-2027/",
+"es": "/es/palas/head-speed-team-2027/",
+"fr": "/fr/raquettes/head-speed-team-2027/"
 }
 },
 {
@@ -25533,12 +25749,48 @@
 }
 },
 {
+"path": "/fr/raquettes/head-gravity-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-motion-2027/",
+"en": "/en/rackets/head-gravity-motion-2027/",
+"es": "/es/palas/head-gravity-motion-2027/",
+"fr": "/fr/raquettes/head-gravity-motion-2027/"
+}
+},
+{
 "path": "/fr/raquettes/head-gravity-pro-2026/",
 "alt": {
 "it": "/it/racchette/head-gravity-pro-2026/",
 "en": "/en/rackets/head-gravity-pro-2026/",
 "es": "/es/palas/head-gravity-pro-2026/",
 "fr": "/fr/raquettes/head-gravity-pro-2026/"
+}
+},
+{
+"path": "/fr/raquettes/head-gravity-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-2027/",
+"en": "/en/rackets/head-gravity-pro-2027/",
+"es": "/es/palas/head-gravity-pro-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-2027/"
+}
+},
+{
+"path": "/fr/raquettes/head-gravity-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-pro-x-2027/",
+"en": "/en/rackets/head-gravity-pro-x-2027/",
+"es": "/es/palas/head-gravity-pro-x-2027/",
+"fr": "/fr/raquettes/head-gravity-pro-x-2027/"
+}
+},
+{
+"path": "/fr/raquettes/head-gravity-team-2027/",
+"alt": {
+"it": "/it/racchette/head-gravity-team-2027/",
+"en": "/en/rackets/head-gravity-team-2027/",
+"es": "/es/palas/head-gravity-team-2027/",
+"fr": "/fr/raquettes/head-gravity-team-2027/"
 }
 },
 {
@@ -25623,6 +25875,15 @@
 }
 },
 {
+"path": "/fr/raquettes/head-speed-motion-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-motion-2027/",
+"en": "/en/rackets/head-speed-motion-2027/",
+"es": "/es/palas/head-speed-motion-2027/",
+"fr": "/fr/raquettes/head-speed-motion-2027/"
+}
+},
+{
 "path": "/fr/raquettes/head-speed-one-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-one-2025/",
@@ -25650,12 +25911,30 @@
 }
 },
 {
+"path": "/fr/raquettes/head-speed-pro-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-2027/",
+"en": "/en/rackets/head-speed-pro-2027/",
+"es": "/es/palas/head-speed-pro-2027/",
+"fr": "/fr/raquettes/head-speed-pro-2027/"
+}
+},
+{
 "path": "/fr/raquettes/head-speed-pro-x-2025/",
 "alt": {
 "it": "/it/racchette/head-speed-pro-x-2025/",
 "en": "/en/rackets/head-speed-pro-x-2025/",
 "es": "/es/palas/head-speed-pro-x-2025/",
 "fr": "/fr/raquettes/head-speed-pro-x-2025/"
+}
+},
+{
+"path": "/fr/raquettes/head-speed-pro-x-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-pro-x-2027/",
+"en": "/en/rackets/head-speed-pro-x-2027/",
+"es": "/es/palas/head-speed-pro-x-2027/",
+"fr": "/fr/raquettes/head-speed-pro-x-2027/"
 }
 },
 {
@@ -25674,6 +25953,15 @@
 "en": "/en/rackets/head-speed-team-2026/",
 "es": "/es/palas/head-speed-team-2026/",
 "fr": "/fr/raquettes/head-speed-team-2026/"
+}
+},
+{
+"path": "/fr/raquettes/head-speed-team-2027/",
+"alt": {
+"it": "/it/racchette/head-speed-team-2027/",
+"en": "/en/rackets/head-speed-team-2027/",
+"es": "/es/palas/head-speed-team-2027/",
+"fr": "/fr/raquettes/head-speed-team-2027/"
 }
 },
 {

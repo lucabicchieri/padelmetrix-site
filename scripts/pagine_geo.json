@@ -207,6 +207,15 @@
 }
 },
 {
+"path": "/it/domande/racchetta-andrea-ustero/",
+"alt": {
+"it": "/it/domande/racchetta-andrea-ustero/",
+"en": "/en/questions/andrea-ustero-padel-racket/",
+"es": "/es/preguntas/pala-andrea-ustero/",
+"fr": "/fr/questions/raquette-andrea-ustero/"
+}
+},
+{
 "path": "/it/domande/racchetta-aranzazu-osoro/",
 "alt": {
 "it": "/it/domande/racchetta-aranzazu-osoro/",
@@ -321,6 +330,15 @@
 "en": "/en/questions/fernando-belasteguin-padel-racket/",
 "es": "/es/preguntas/pala-fernando-belasteguin/",
 "fr": "/fr/questions/raquette-fernando-belasteguin/"
+}
+},
+{
+"path": "/it/domande/racchetta-fran-guerrero/",
+"alt": {
+"it": "/it/domande/racchetta-fran-guerrero/",
+"en": "/en/questions/fran-guerrero-padel-racket/",
+"es": "/es/preguntas/pala-fran-guerrero/",
+"fr": "/fr/questions/raquette-fran-guerrero/"
 }
 },
 {
@@ -882,6 +900,15 @@
 }
 },
 {
+"path": "/en/questions/andrea-ustero-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-andrea-ustero/",
+"en": "/en/questions/andrea-ustero-padel-racket/",
+"es": "/es/preguntas/pala-andrea-ustero/",
+"fr": "/fr/questions/raquette-andrea-ustero/"
+}
+},
+{
 "path": "/en/questions/aranzazu-osoro-padel-racket/",
 "alt": {
 "it": "/it/domande/racchetta-aranzazu-osoro/",
@@ -996,6 +1023,15 @@
 "en": "/en/questions/fernando-belasteguin-padel-racket/",
 "es": "/es/preguntas/pala-fernando-belasteguin/",
 "fr": "/fr/questions/raquette-fernando-belasteguin/"
+}
+},
+{
+"path": "/en/questions/fran-guerrero-padel-racket/",
+"alt": {
+"it": "/it/domande/racchetta-fran-guerrero/",
+"en": "/en/questions/fran-guerrero-padel-racket/",
+"es": "/es/preguntas/pala-fran-guerrero/",
+"fr": "/fr/questions/raquette-fran-guerrero/"
 }
 },
 {
@@ -1557,6 +1593,15 @@
 }
 },
 {
+"path": "/es/preguntas/pala-andrea-ustero/",
+"alt": {
+"it": "/it/domande/racchetta-andrea-ustero/",
+"en": "/en/questions/andrea-ustero-padel-racket/",
+"es": "/es/preguntas/pala-andrea-ustero/",
+"fr": "/fr/questions/raquette-andrea-ustero/"
+}
+},
+{
 "path": "/es/preguntas/pala-aranzazu-osoro/",
 "alt": {
 "it": "/it/domande/racchetta-aranzazu-osoro/",
@@ -1671,6 +1716,15 @@
 "en": "/en/questions/fernando-belasteguin-padel-racket/",
 "es": "/es/preguntas/pala-fernando-belasteguin/",
 "fr": "/fr/questions/raquette-fernando-belasteguin/"
+}
+},
+{
+"path": "/es/preguntas/pala-fran-guerrero/",
+"alt": {
+"it": "/it/domande/racchetta-fran-guerrero/",
+"en": "/en/questions/fran-guerrero-padel-racket/",
+"es": "/es/preguntas/pala-fran-guerrero/",
+"fr": "/fr/questions/raquette-fran-guerrero/"
 }
 },
 {
@@ -2232,6 +2286,15 @@
 }
 },
 {
+"path": "/fr/questions/raquette-andrea-ustero/",
+"alt": {
+"it": "/it/domande/racchetta-andrea-ustero/",
+"en": "/en/questions/andrea-ustero-padel-racket/",
+"es": "/es/preguntas/pala-andrea-ustero/",
+"fr": "/fr/questions/raquette-andrea-ustero/"
+}
+},
+{
 "path": "/fr/questions/raquette-aranzazu-osoro/",
 "alt": {
 "it": "/it/domande/racchetta-aranzazu-osoro/",
@@ -2346,6 +2409,15 @@
 "en": "/en/questions/fernando-belasteguin-padel-racket/",
 "es": "/es/preguntas/pala-fernando-belasteguin/",
 "fr": "/fr/questions/raquette-fernando-belasteguin/"
+}
+},
+{
+"path": "/fr/questions/raquette-fran-guerrero/",
+"alt": {
+"it": "/it/domande/racchetta-fran-guerrero/",
+"en": "/en/questions/fran-guerrero-padel-racket/",
+"es": "/es/preguntas/pala-fran-guerrero/",
+"fr": "/fr/questions/raquette-fran-guerrero/"
 }
 },
 {
