@@ -540,6 +540,15 @@
 }
 },
 {
+"path": "/it/racchette/adidas-raxper-2022/",
+"alt": {
+"it": "/it/racchette/adidas-raxper-2022/",
+"en": "/en/rackets/adidas-raxper-2022/",
+"es": "/es/palas/adidas-raxper-2022/",
+"fr": "/fr/raquettes/adidas-raxper-2022/"
+}
+},
+{
 "path": "/it/racchette/adidas-rx-2025/",
 "alt": {
 "it": "/it/racchette/adidas-rx-2025/",
@@ -8124,6 +8133,15 @@
 "en": "/en/rackets/adidas-metalbone-zz-team-2026/",
 "es": "/es/palas/adidas-metalbone-zz-team-2026/",
 "fr": "/fr/raquettes/adidas-metalbone-zz-team-2026/"
+}
+},
+{
+"path": "/en/rackets/adidas-raxper-2022/",
+"alt": {
+"it": "/it/racchette/adidas-raxper-2022/",
+"en": "/en/rackets/adidas-raxper-2022/",
+"es": "/es/palas/adidas-raxper-2022/",
+"fr": "/fr/raquettes/adidas-raxper-2022/"
 }
 },
 {
@@ -15714,6 +15732,15 @@
 }
 },
 {
+"path": "/es/palas/adidas-raxper-2022/",
+"alt": {
+"it": "/it/racchette/adidas-raxper-2022/",
+"en": "/en/rackets/adidas-raxper-2022/",
+"es": "/es/palas/adidas-raxper-2022/",
+"fr": "/fr/raquettes/adidas-raxper-2022/"
+}
+},
+{
 "path": "/es/palas/adidas-rx-2025/",
 "alt": {
 "it": "/it/racchette/adidas-rx-2025/",
@@ -23298,6 +23325,15 @@
 "en": "/en/rackets/adidas-metalbone-zz-team-2026/",
 "es": "/es/palas/adidas-metalbone-zz-team-2026/",
 "fr": "/fr/raquettes/adidas-metalbone-zz-team-2026/"
+}
+},
+{
+"path": "/fr/raquettes/adidas-raxper-2022/",
+"alt": {
+"it": "/it/racchette/adidas-raxper-2022/",
+"en": "/en/rackets/adidas-raxper-2022/",
+"es": "/es/palas/adidas-raxper-2022/",
+"fr": "/fr/raquettes/adidas-raxper-2022/"
 }
 },
 {
