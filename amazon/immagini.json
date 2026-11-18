@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-18T17:06Z",
+ "aggiornato": "2026-11-18T22:57Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -100,9 +100,9 @@
    "h": 500,
    "titolo": "Adidas Drive Black 2026 | Rotondo | Fibra di vetro | Bilanciato | Controllo | Principianti",
    "scheda": "adidas-drive-black-2026",
-   "prezzo": "64,02 €",
-   "euro": 64.02,
-   "sconto": 6,
+   "prezzo": "57,00 €",
+   "euro": 57.0,
+   "sconto": 16,
    "prima": "67,84 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -142,8 +142,8 @@
    "h": 500,
    "titolo": "adidas Metalbone 2026 - Racchetta da padel, 502 g, colore: Nero | Diamante | 16K Carbonio | Bilanciato | Potenza | Torneo",
    "scheda": "adidas-metalbone-2026",
-   "prezzo": "197,10 €",
-   "euro": 197.1,
+   "prezzo": "197,00 €",
+   "euro": 197.0,
    "sconto": 12,
    "prima": "224,00 €",
    "tipo_prima": "WAS_PRICE"
@@ -339,11 +339,8 @@
    "h": 500,
    "titolo": "Babolat Air Vertuo 2.6 - Racchetta da padel (blu/nero)",
    "scheda": "babolat-air-vertuo-2-6-2026",
-   "prezzo": "107,35 €",
-   "euro": 107.35,
-   "sconto": 17,
-   "prima": "128,90 €",
-   "tipo_prima": "WAS_PRICE"
+   "prezzo": "136,56 €",
+   "euro": 136.56
   },
   "B0F2HQTQJ5": {
    "img": "https://m.media-amazon.com/images/I/41ugVK68j9L._SL500_.jpg",
@@ -351,9 +348,9 @@
    "h": 500,
    "titolo": "Babolat Counter Origin 2025",
    "scheda": "babolat-counter-origin-2025",
-   "prezzo": "81,95 €",
-   "euro": 81.95,
-   "sconto": 17,
+   "prezzo": "81,55 €",
+   "euro": 81.55,
+   "sconto": 18,
    "prima": "98,95 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -363,9 +360,9 @@
    "h": 500,
    "titolo": "Babolat Counter Vertuo 2.6 - Racchetta da paddle Senior",
    "scheda": "babolat-counter-vertuo-2-6-2026",
-   "prezzo": "101,85 €",
-   "euro": 101.85,
-   "sconto": 18,
+   "prezzo": "107,98 €",
+   "euro": 107.98,
+   "sconto": 14,
    "prima": "124,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -403,8 +400,8 @@
    "h": 500,
    "titolo": "Babolat Veron Juan Lebron 3.0 - Racchetta da paddle (arancione/nero)",
    "scheda": "babolat-veron-juan-lebron-3-0-2026",
-   "prezzo": "124,40 €",
-   "euro": 124.4
+   "prezzo": "127,90 €",
+   "euro": 127.9
   },
   "B0G4XY2Q2R": {
    "img": "https://m.media-amazon.com/images/I/41MExWnyPlL._SL500_.jpg",
@@ -412,8 +409,8 @@
    "h": 500,
    "titolo": "Babolat Viper Juan Lebrón 3.0 2026– Racchetta da Padel Professionale, Massima Potenza e Precisione, Edizione Signature Juan Lebrón",
    "scheda": "babolat-viper-juan-lebron-3-0-2026",
-   "prezzo": "221,40 €",
-   "euro": 221.4
+   "prezzo": "224,90 €",
+   "euro": 224.9
   },
   "B0G4XYVXPJ": {
    "img": "https://m.media-amazon.com/images/I/41sAJQeyCqL._SL500_.jpg",
@@ -421,11 +418,8 @@
    "h": 500,
    "titolo": "Babolat Viper Soft Juan Lebrón 3.0 – Racchetta da Padel Professionale, Potenza Dinamica e Comfort, Edizione Signature Juan Lebrón 2026",
    "scheda": "babolat-viper-soft-juan-lebron-3-0-2026",
-   "prezzo": "172,40 €",
-   "euro": 172.4,
-   "sconto": 13,
-   "prima": "199,00 €",
-   "tipo_prima": "WAS_PRICE"
+   "prezzo": "199,90 €",
+   "euro": 199.9
   },
   "B0HLGBMV7S": {
    "img": "https://m.media-amazon.com/images/I/41C92T+xEkL._SL500_.jpg",
@@ -433,8 +427,8 @@
    "h": 500,
    "titolo": "Babolat Viper Soft Juan Lebron 3.1 - Racchetta da Padel",
    "scheda": "babolat-viper-soft-juan-lebron-3-1-2027",
-   "prezzo": "238,50 €",
-   "euro": 238.5
+   "prezzo": "246,00 €",
+   "euro": 246.0
   },
   "B0G6LL9HS6": {
    "img": "https://m.media-amazon.com/images/I/41z4rRajhvL._SL500_.jpg",
@@ -544,8 +538,8 @@
    "h": 500,
    "titolo": "Bullpadel Hack 04 Hybrid 26",
    "scheda": "bullpadel-hack-04-hybrid-2026",
-   "prezzo": "154,40 €",
-   "euro": 154.4
+   "prezzo": "151,40 €",
+   "euro": 151.4
   },
   "B0HJ1RMKJ7": {
    "img": "https://m.media-amazon.com/images/I/31g440okoZL._SL500_.jpg",
@@ -632,9 +626,9 @@
    "h": 500,
    "titolo": "Bullpadel Neuron 02",
    "scheda": "bullpadel-neuron-02-2026",
-   "prezzo": "151,90 €",
-   "euro": 151.9,
-   "sconto": 7,
+   "prezzo": "149,00 €",
+   "euro": 149.0,
+   "sconto": 9,
    "prima": "163,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -710,9 +704,9 @@
    "h": 500,
    "titolo": "Bullpadel Vertex 05 Geo",
    "scheda": "bullpadel-vertex-05-geo-2026",
-   "prezzo": "170,90 €",
-   "euro": 170.9,
-   "sconto": 7,
+   "prezzo": "167,90 €",
+   "euro": 167.9,
+   "sconto": 8,
    "prima": "182,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -722,9 +716,9 @@
    "h": 500,
    "titolo": "Bullpadel Vertex 05 Woman",
    "scheda": "bullpadel-vertex-05-w-2026",
-   "prezzo": "150,90 €",
-   "euro": 150.9,
-   "sconto": 6,
+   "prezzo": "147,90 €",
+   "euro": 147.9,
+   "sconto": 8,
    "prima": "159,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -743,9 +737,9 @@
    "h": 500,
    "titolo": "Bullpadel Xplo 26",
    "scheda": "bullpadel-xplo-2026",
-   "prezzo": "154,40 €",
-   "euro": 154.4,
-   "sconto": 9,
+   "prezzo": "151,40 €",
+   "euro": 151.4,
+   "sconto": 11,
    "prima": "169,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -764,9 +758,9 @@
    "h": 500,
    "titolo": "Bullpadel Xplo Comfort 26",
    "scheda": "bullpadel-xplo-comfort-2026",
-   "prezzo": "113,85 €",
-   "euro": 113.85,
-   "sconto": 12,
+   "prezzo": "110,85 €",
+   "euro": 110.85,
+   "sconto": 15,
    "prima": "129,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -857,8 +851,8 @@
    "h": 500,
    "titolo": "Drop Shot Explorer Pro Control 1.0 2025",
    "scheda": "drop-shot-explorer-pro-control-1-0-2025",
-   "prezzo": "131,42 €",
-   "euro": 131.42
+   "prezzo": "127,48 €",
+   "euro": 127.48
   },
   "B0F6T65LP4": {
    "img": "https://m.media-amazon.com/images/I/31i7S9BrcrL._SL500_.jpg",
@@ -947,8 +941,8 @@
    "h": 500,
    "titolo": "Racchetta da padel HEAD Bolt",
    "scheda": "head-bolt-2026",
-   "prezzo": "72,50 €",
-   "euro": 72.5
+   "prezzo": "80,33 €",
+   "euro": 80.33
   },
   "B0F6TK5K7Q": {
    "img": "https://m.media-amazon.com/images/I/41+lCEiEnpL._SL500_.jpg",
@@ -1071,8 +1065,8 @@
    "h": 500,
    "titolo": "HEAD Speed One Padel 2025 - Il perfetto equilibrio tra forza e controllo con la nuova tecnologia HEAD ONE",
    "scheda": "head-speed-one-2025",
-   "prezzo": "165,95 €",
-   "euro": 165.95
+   "prezzo": "150,50 €",
+   "euro": 150.5
   },
   "B0DNTRCSMH": {
    "img": "https://m.media-amazon.com/images/I/41nnNT-XYuL._SL500_.jpg",
@@ -1211,11 +1205,8 @@
    "h": 500,
    "titolo": "Nox Ea10 Ventus Hybrid 12k Xtrem By Edu Alonso 2026",
    "scheda": "nox-ea10-ventus-hybrid-12k-xtrem-2026",
-   "prezzo": "147,90 €",
-   "euro": 147.9,
-   "sconto": 10,
-   "prima": "163,90 €",
-   "tipo_prima": "WAS_PRICE"
+   "prezzo": "159,90 €",
+   "euro": 159.9
   },
   "B0HHK69XZF": {
    "img": "https://m.media-amazon.com/images/I/41dkSoRsmaL._SL500_.jpg",
@@ -1299,8 +1290,8 @@
    "h": 500,
    "titolo": "nox Quantum 12k Carbon 2025",
    "scheda": "nox-quantum-12k-carbon-2025",
-   "prezzo": "181,49 €",
-   "euro": 181.49
+   "prezzo": "169,16 €",
+   "euro": 169.16
   },
   "B0DHT7F81L": {
    "img": "https://m.media-amazon.com/images/I/41GbONpcMjL._SL500_.jpg",
@@ -1455,9 +1446,7 @@
    "w": 500,
    "h": 500,
    "titolo": "SIUX Beat Play Hybrid 2027 - Racchetta da paddle per principianti, a forma di goccia, in fibra di vetro 3K, equilibrio medio, finitura lucida, controllo, comfort e versatilità",
-   "scheda": "siux-beat-play-hybrid-2027",
-   "prezzo": "99,82 €",
-   "euro": 99.82
+   "scheda": "siux-beat-play-hybrid-2027"
   },
   "B0HPLBPV6X": {
    "img": "https://m.media-amazon.com/images/I/31iRz8s9oaL._SL500_.jpg",
@@ -1501,8 +1490,8 @@
    "h": 500,
    "titolo": "Siux Electra Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, fermezza, precisione e polivalenza",
    "scheda": "siux-electra-elite-2027",
-   "prezzo": "283,99 €",
-   "euro": 283.99
+   "prezzo": "272,24 €",
+   "euro": 272.24
   },
   "B0HPKVS5J7": {
    "img": "https://m.media-amazon.com/images/I/41MJU0AtYML._SL500_.jpg",
@@ -1510,8 +1499,8 @@
    "h": 500,
    "titolo": "Siux Electra Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K, equilibrio medio, finitura satinata e sabbiosa, controllo, potenza e precisione",
    "scheda": "siux-electra-pro-2027",
-   "prezzo": "274,00 €",
-   "euro": 274.0
+   "prezzo": "271,08 €",
+   "euro": 271.08
   },
   "B0DXDD2BZ8": {
    "img": "https://m.media-amazon.com/images/I/41HYi4YADML._SL500_.jpg",
@@ -1558,8 +1547,8 @@
    "h": 500,
    "titolo": "Siux Obsidian Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K SC Comfort ed EVA Soft, equilibrio basso, finitura satinata, controllo e comfort",
    "scheda": "siux-obsidian-elite-2027",
-   "prezzo": "235,80 €",
-   "euro": 235.8
+   "prezzo": "272,24 €",
+   "euro": 272.24
   },
   "B0HPKY5CQ1": {
    "img": "https://m.media-amazon.com/images/I/414T7xJAgJL._SL500_.jpg",
@@ -1576,8 +1565,8 @@
    "h": 500,
    "titolo": "SIUX Pegasus Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, potenza, fermezza e precisione",
    "scheda": "siux-pegasus-elite-2027",
-   "prezzo": "272,13 €",
-   "euro": 272.13
+   "prezzo": "272,24 €",
+   "euro": 272.24
   },
   "B0HPL1C77B": {
    "img": "https://m.media-amazon.com/images/I/41bb5Us+O7L._SL500_.jpg",
@@ -1585,8 +1574,8 @@
    "h": 500,
    "titolo": "SIUX Pegasus Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K, equilibrio medio, finitura satinata 3D, potenza, rigidità e precisione",
    "scheda": "siux-pegasus-pro-2027",
-   "prezzo": "359,90 €",
-   "euro": 359.9
+   "prezzo": "362,94 €",
+   "euro": 362.94
   },
   "B0DZFLSMJY": {
    "img": "https://m.media-amazon.com/images/I/41rV0PE4kWL._SL500_.jpg",
@@ -1675,8 +1664,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Drax+ 2027",
    "scheda": "starvie-drax-plus-2027",
-   "prezzo": "195,90 €",
-   "euro": 195.9
+   "prezzo": "201,90 €",
+   "euro": 201.9
   },
   "B0HJHTM2XL": {
    "img": "https://m.media-amazon.com/images/I/31JQToJQbaL._SL500_.jpg",
@@ -1810,8 +1799,8 @@
    "h": 500,
    "titolo": "Racchetta Tecnifibre Curva Speed 2026 16curspe26",
    "scheda": "tecnifibre-curva-speed-2026",
-   "prezzo": "146,90 €",
-   "euro": 146.9
+   "prezzo": "146,80 €",
+   "euro": 146.8
   },
   "B0DHD6RT64": {
    "img": "https://m.media-amazon.com/images/I/31CkUSBBIlL._SL500_.jpg",
@@ -1843,7 +1832,9 @@
    "w": 500,
    "h": 500,
    "titolo": "VIBOR-A-a King Cobra Elite 24k 2.0 2025",
-   "scheda": "vibor-a-king-cobra-elite-24k-2-0-2025"
+   "scheda": "vibor-a-king-cobra-elite-24k-2-0-2025",
+   "prezzo": "124,82 €",
+   "euro": 124.82
   },
   "B0DLHJSNN1": {
    "img": "https://m.media-amazon.com/images/I/411rTA3+DnL._SL500_.jpg",
@@ -1896,8 +1887,8 @@
    "h": 500,
    "titolo": "Wilson Blade Jr V4 Racchetta da Padel Amatoriale, Verde | Racchetta da padel a goccia per principianti e giocatori amatoriali, con potenza, controllo, stabilità e comfort",
    "scheda": "wilson-blade-jr-v4-2026",
-   "prezzo": "79,36 €",
-   "euro": 79.36
+   "prezzo": "72,50 €",
+   "euro": 72.5
   },
   "B0GZJZYM9V": {
    "img": "https://m.media-amazon.com/images/I/31fqgpQFU1L._SL500_.jpg",
@@ -1914,8 +1905,8 @@
    "h": 500,
    "titolo": "Wilson Blade V4 Racchetta da Padel, Verde | Racchetta da padel a goccia per intermedi e avanzati, con potenza esplosiva, controllo preciso e stabilità",
    "scheda": "wilson-blade-v4-2026",
-   "prezzo": "120,90 €",
-   "euro": 120.9,
+   "prezzo": "120,80 €",
+   "euro": 120.8,
    "sconto": 7,
    "prima": "129,90 €",
    "tipo_prima": "WAS_PRICE"
@@ -1926,8 +1917,11 @@
    "h": 500,
    "titolo": "Wilson Defy Pro V1 Padel Racket 2",
    "scheda": "wilson-defy-pro-v1-2026",
-   "prezzo": "173,00 €",
-   "euro": 173.0
+   "prezzo": "168,90 €",
+   "euro": 168.9,
+   "sconto": 7,
+   "prima": "181,00 €",
+   "tipo_prima": "WAS_PRICE"
   },
   "B0GF3C4TWM": {
    "img": "https://m.media-amazon.com/images/I/41lacd1ANRL._SL500_.jpg",
@@ -2618,8 +2612,8 @@
    "h": 500,
    "titolo": "Wilson CourtGlide Scarpa da Padel Uomo, Bianco/Navy/Quarry, Tg. 44 | Scarpa da padel sicura e traspirante, per stabilità fluida e aderenza affidabile su erba sintetica e superfici dure da padel",
    "scheda": "regali",
-   "prezzo": "58,50 €",
-   "euro": 58.5
+   "prezzo": "62,71 €",
+   "euro": 62.71
   },
   "B0F9RVYFCT": {
    "img": "https://m.media-amazon.com/images/I/31uNVcvzyJL._SL500_.jpg",
@@ -2719,9 +2713,7 @@
    "w": 500,
    "h": 500,
    "titolo": "Joma - Felpa Faraon Nera Mezza Zip Uomo, Unisex - Adulto, 100285.100.L, Nero - 100, XL",
-   "scheda": "regali",
-   "prezzo": "24,38 €",
-   "euro": 24.38
+   "scheda": "regali"
   },
   "B09JC9NDFN": {
    "img": "https://m.media-amazon.com/images/I/313GiHlQiSL._SL500_.jpg",
@@ -2932,9 +2924,7 @@
    "w": 303,
    "h": 500,
    "titolo": "HEAD Active - Asciugamano Microfibra con Elastico, Asciugamano Palestra, Sport, Fitness Morbido e Leggero a Rapida Asciugatura - Asciugamani Bagno Assorbente Salvaspazio da Viaggio 40x60, Uniform Blue",
-   "scheda": "regali",
-   "prezzo": "3,90 €",
-   "euro": 3.9
+   "scheda": "regali"
   },
   "B0FF78ZGYF": {
    "img": "https://m.media-amazon.com/images/I/317zuaiU7CL._SL500_.jpg",
