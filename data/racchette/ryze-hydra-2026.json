@@ -19,8 +19,7 @@
     "akkeron-black-armageddon-2025"
   ],
   "fonti_dati": [
-    "https://ryzepadel.com/products/hydra",
-    "https://www.amazon.it/dp/B0FSSVSVLD"
+    "https://ryzepadel.com/products/hydra"
   ],
   "aggiornato": "2026-11-19",
   "pagina": {
@@ -40,10 +39,9 @@
       {
         "nome": "Amazon",
         "nota": "Spedizione e resi Amazon",
-        "url": "https://www.amazon.it/s?k=RYZE+Hydra+2026",
+        "url": "https://www.amazon.it/s?k=RYZE+Hydra+padel",
         "pulsante": "Vedi su Amazon",
-        "amazon": true,
-        "asin": "B0FSSVSVLD"
+        "amazon": true
       }
     ],
     "nota_prezzi": "Prezzo di listino indicativo 139 € secondo il sito ufficiale RYZE a novembre 2026; i prezzi reali cambiano spesso, verifica sul negozio.",
@@ -101,7 +99,7 @@
         "139 €"
       ]
     ],
-    "nota_specifiche_html": "Dati raccolti da <a href=\"https://ryzepadel.com/products/hydra\" rel=\"nofollow noopener\" target=\"_blank\">RYZE Padel</a>, <a href=\"https://www.amazon.it/dp/B0FSSVSVLD\" rel=\"nofollow noopener\" target=\"_blank\">Amazon.it</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
+    "nota_specifiche_html": "Dati raccolti da <a href=\"https://ryzepadel.com/products/hydra\" rel=\"nofollow noopener\" target=\"_blank\">RYZE Padel</a>. I campi \"non dichiarato\" non sono pubblicati dalle fonti consultate; li completeremo appena disponibili.",
     "sintesi": "Le recensioni indipendenti di questo modello sono ancora poche. RYZE Padel la descrive così: la racchetta \"Hybrid Power\" di RYZE: forma a diamante con il punto dolce alto, gomma EVA-18 dura pensata per la potenza ma non al punto da perdere controllo, e superficie ruvida con disegno 3D che aiuta a dare effetto. Il peso è volutamente un po' più alto per dare più spinta alla palla. Attenzione: alcune inserzioni Amazon indicano carbonio 2K invece di 1K e un peso fino a 370 g; il produttore non dichiara bilanciamento e spessore. Aggiorneremo la sintesi appena saranno disponibili test e recensioni.",
     "pro": [
       "Pensata per chiudere i punti: smash e volée",
