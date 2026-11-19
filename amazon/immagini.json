@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T09:19Z",
+ "aggiornato": "2026-11-19T09:26Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -1010,9 +1010,9 @@
    "h": 500,
    "titolo": "HEAD Extreme Motion 2026",
    "scheda": "head-extreme-motion-2026",
-   "prezzo": "175,10 €",
-   "euro": 175.1,
-   "sconto": 5,
+   "prezzo": "174,20 €",
+   "euro": 174.2,
+   "sconto": 6,
    "prima": "184,54 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -1478,6 +1478,18 @@
    "euro": 82.6,
    "sconto": 17,
    "prima": "99,95 €",
+   "tipo_prima": "WAS_PRICE"
+  },
+  "B0BGYLHF9N": {
+   "img": "https://m.media-amazon.com/images/I/41Q+yM56PfL._SL500_.jpg",
+   "w": 400,
+   "h": 500,
+   "titolo": "RYZE IKARUS Racchetta da Padel 100% in Fibra di Carbonio - Massima Potenza + Controllo - con EVA-17 Flex - Struttura Leggera e Resistente - Padel Racchetta per Uomo e Donna - Custodia Inclusa",
+   "scheda": "ryze-ikarus-2026",
+   "prezzo": "87,20 €",
+   "euro": 87.2,
+   "sconto": 20,
+   "prima": "109,00 €",
    "tipo_prima": "WAS_PRICE"
   },
   "B0HPL4VNXK": {
