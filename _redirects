@@ -1,7 +1,2 @@
 # Vecchi indirizzi delle schede
 /racchette/*  /it/racchette/:splat  301
-# Report "in numeri" spostato dalla sezione guide alla sezione report
-/it/guide/racchette-padel-2026-2027-in-numeri/  /it/report/racchette-padel-2026-2027-in-numeri/  301
-/en/guides/padel-rackets-2026-2027-in-numbers/  /en/report/padel-rackets-2026-2027-in-numbers/  301
-/es/guias/palas-padel-2026-2027-en-cifras/  /es/informe/palas-padel-2026-2027-en-cifras/  301
-/fr/guides/raquettes-padel-2026-2027-en-chiffres/  /fr/rapport/raquettes-padel-2026-2027-en-chiffres/  301

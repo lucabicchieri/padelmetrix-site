@@ -5517,6 +5517,42 @@
 }
 },
 {
+"path": "/it/racchette/ryze-chimera-2026/",
+"alt": {
+"it": "/it/racchette/ryze-chimera-2026/",
+"en": "/en/rackets/ryze-chimera-2026/",
+"es": "/es/palas/ryze-chimera-2026/",
+"fr": "/fr/raquettes/ryze-chimera-2026/"
+}
+},
+{
+"path": "/it/racchette/ryze-ferox-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ferox-2026/",
+"en": "/en/rackets/ryze-ferox-2026/",
+"es": "/es/palas/ryze-ferox-2026/",
+"fr": "/fr/raquettes/ryze-ferox-2026/"
+}
+},
+{
+"path": "/it/racchette/ryze-hydra-2026/",
+"alt": {
+"it": "/it/racchette/ryze-hydra-2026/",
+"en": "/en/rackets/ryze-hydra-2026/",
+"es": "/es/palas/ryze-hydra-2026/",
+"fr": "/fr/raquettes/ryze-hydra-2026/"
+}
+},
+{
+"path": "/it/racchette/ryze-ikarus-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ikarus-2026/",
+"en": "/en/rackets/ryze-ikarus-2026/",
+"es": "/es/palas/ryze-ikarus-2026/",
+"fr": "/fr/raquettes/ryze-ikarus-2026/"
+}
+},
+{
 "path": "/it/racchette/sane-agressor-evolution-2026/",
 "alt": {
 "it": "/it/racchette/sane-agressor-evolution-2026/",
@@ -13110,6 +13146,42 @@
 "en": "/en/rackets/royal-padel-whip-polietileno-2026/",
 "es": "/es/palas/royal-padel-whip-polietileno-2026/",
 "fr": "/fr/raquettes/royal-padel-whip-polietileno-2026/"
+}
+},
+{
+"path": "/en/rackets/ryze-chimera-2026/",
+"alt": {
+"it": "/it/racchette/ryze-chimera-2026/",
+"en": "/en/rackets/ryze-chimera-2026/",
+"es": "/es/palas/ryze-chimera-2026/",
+"fr": "/fr/raquettes/ryze-chimera-2026/"
+}
+},
+{
+"path": "/en/rackets/ryze-ferox-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ferox-2026/",
+"en": "/en/rackets/ryze-ferox-2026/",
+"es": "/es/palas/ryze-ferox-2026/",
+"fr": "/fr/raquettes/ryze-ferox-2026/"
+}
+},
+{
+"path": "/en/rackets/ryze-hydra-2026/",
+"alt": {
+"it": "/it/racchette/ryze-hydra-2026/",
+"en": "/en/rackets/ryze-hydra-2026/",
+"es": "/es/palas/ryze-hydra-2026/",
+"fr": "/fr/raquettes/ryze-hydra-2026/"
+}
+},
+{
+"path": "/en/rackets/ryze-ikarus-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ikarus-2026/",
+"en": "/en/rackets/ryze-ikarus-2026/",
+"es": "/es/palas/ryze-ikarus-2026/",
+"fr": "/fr/raquettes/ryze-ikarus-2026/"
 }
 },
 {
@@ -20709,6 +20781,42 @@
 }
 },
 {
+"path": "/es/palas/ryze-chimera-2026/",
+"alt": {
+"it": "/it/racchette/ryze-chimera-2026/",
+"en": "/en/rackets/ryze-chimera-2026/",
+"es": "/es/palas/ryze-chimera-2026/",
+"fr": "/fr/raquettes/ryze-chimera-2026/"
+}
+},
+{
+"path": "/es/palas/ryze-ferox-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ferox-2026/",
+"en": "/en/rackets/ryze-ferox-2026/",
+"es": "/es/palas/ryze-ferox-2026/",
+"fr": "/fr/raquettes/ryze-ferox-2026/"
+}
+},
+{
+"path": "/es/palas/ryze-hydra-2026/",
+"alt": {
+"it": "/it/racchette/ryze-hydra-2026/",
+"en": "/en/rackets/ryze-hydra-2026/",
+"es": "/es/palas/ryze-hydra-2026/",
+"fr": "/fr/raquettes/ryze-hydra-2026/"
+}
+},
+{
+"path": "/es/palas/ryze-ikarus-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ikarus-2026/",
+"en": "/en/rackets/ryze-ikarus-2026/",
+"es": "/es/palas/ryze-ikarus-2026/",
+"fr": "/fr/raquettes/ryze-ikarus-2026/"
+}
+},
+{
 "path": "/es/palas/sane-agressor-evolution-2026/",
 "alt": {
 "it": "/it/racchette/sane-agressor-evolution-2026/",
@@ -28302,6 +28410,42 @@
 "en": "/en/rackets/royal-padel-whip-polietileno-2026/",
 "es": "/es/palas/royal-padel-whip-polietileno-2026/",
 "fr": "/fr/raquettes/royal-padel-whip-polietileno-2026/"
+}
+},
+{
+"path": "/fr/raquettes/ryze-chimera-2026/",
+"alt": {
+"it": "/it/racchette/ryze-chimera-2026/",
+"en": "/en/rackets/ryze-chimera-2026/",
+"es": "/es/palas/ryze-chimera-2026/",
+"fr": "/fr/raquettes/ryze-chimera-2026/"
+}
+},
+{
+"path": "/fr/raquettes/ryze-ferox-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ferox-2026/",
+"en": "/en/rackets/ryze-ferox-2026/",
+"es": "/es/palas/ryze-ferox-2026/",
+"fr": "/fr/raquettes/ryze-ferox-2026/"
+}
+},
+{
+"path": "/fr/raquettes/ryze-hydra-2026/",
+"alt": {
+"it": "/it/racchette/ryze-hydra-2026/",
+"en": "/en/rackets/ryze-hydra-2026/",
+"es": "/es/palas/ryze-hydra-2026/",
+"fr": "/fr/raquettes/ryze-hydra-2026/"
+}
+},
+{
+"path": "/fr/raquettes/ryze-ikarus-2026/",
+"alt": {
+"it": "/it/racchette/ryze-ikarus-2026/",
+"en": "/en/rackets/ryze-ikarus-2026/",
+"es": "/es/palas/ryze-ikarus-2026/",
+"fr": "/fr/raquettes/ryze-ikarus-2026/"
 }
 },
 {
