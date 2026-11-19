@@ -57,6 +57,14 @@ def ga(s, prop, a, b, dims, mets, limite=50, filtro=None, ordina=None):
     return out
 
 
+def lingua(p):
+    """Lingua dal percorso (/it/, /en/, /es/, /fr/); accetta anche URL completi."""
+    if p.startswith("http"):
+        p = "/" + p.split("/", 3)[3] if p.count("/") >= 3 else "/"
+    seg = p.split("?")[0].strip("/").split("/")[0]
+    return seg if seg in ("it", "en", "es", "fr") else ("home" if seg == "" else "altro")
+
+
 def main():
     s, email = sessione()
     dati = {"generato": dt.datetime.utcnow().isoformat() + "Z", "account_servizio": email}
@@ -80,6 +88,13 @@ def main():
         dati["gsc_pagine"] = gsc(s, sito, a, b, ["page"], 50)
         dati["gsc_paesi"] = gsc(s, sito, a, b, ["country"], 10)
         dati["gsc_dispositivi"] = gsc(s, sito, a, b, ["device"], 5)
+        for k, (x, y) in (("gsc_lingue", (a, b)), ("gsc_lingue_prec", (pa, pb))):
+            acc = {}
+            for r in gsc(s, sito, x, y, ["page"], 25000):
+                v = acc.setdefault(lingua(r["keys"][0]), {"clic": 0, "impressioni": 0})
+                v["clic"] += r["clicks"]
+                v["impressioni"] += r["impressions"]
+            dati[k] = acc
     except Exception as ex:  # noqa: BLE001
         errori.append(str(ex))
     # --- Analytics 4
@@ -98,6 +113,13 @@ def main():
             dati["ga_pagine"] = ga(s, prop, a, b, ["pagePath"], ["screenPageViews", "activeUsers"], 25, ordina="screenPageViews")
             dati["ga_paesi"] = ga(s, prop, a, b, ["country"], ["activeUsers"], 10, ordina="activeUsers")
             dati["ga_dispositivi"] = ga(s, prop, a, b, ["deviceCategory"], ["activeUsers"], 5)
+            for k, (x, y) in (("ga_lingue", (a, b)), ("ga_lingue_prec", (pa, pb))):
+                acc = {}
+                for r in ga(s, prop, x, y, ["landingPage"], ["sessions", "activeUsers"], 100000):
+                    v = acc.setdefault(lingua(r["landingPage"]), {"sessioni": 0, "utenti": 0})
+                    v["sessioni"] += r["sessions"]
+                    v["utenti"] += r["activeUsers"]
+                dati[k] = acc
             amazon = {"filter": {"fieldName": "linkDomain", "stringFilter": {"matchType": "CONTAINS", "value": "amazon"}}}
             dati["ga_clic_amazon"] = ga(s, prop, a, b, ["eventName"], ["eventCount"], 5, filtro=amazon)
             dati["ga_clic_amazon_prec"] = ga(s, prop, pa, pb, ["eventName"], ["eventCount"], 5, filtro=amazon)
