@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T09:26Z",
+ "aggiornato": "2026-11-19T13:14Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -58,8 +58,11 @@
    "h": 500,
    "titolo": "Adidas - Racchetta padel - Cross It Light - 2026 | Rotondo | 24K Carbonio | Bilanciato | Controllo | Torneo",
    "scheda": "adidas-cross-it-light-2026",
-   "prezzo": "188,49 €",
-   "euro": 188.49
+   "prezzo": "145,50 €",
+   "euro": 145.5,
+   "sconto": 23,
+   "prima": "188,90 €",
+   "tipo_prima": "WAS_PRICE"
   },
   "B0H2WG9RQT": {
    "img": "https://m.media-amazon.com/images/I/41rswDjsq8L._SL500_.jpg",
@@ -109,9 +112,9 @@
    "h": 500,
    "titolo": "Adidas Drive Light 2026 | Rotondo | Fibra di vetro | Bilanciata al manico | Controllo | Principianti",
    "scheda": "adidas-drive-light-2026",
-   "prezzo": "54,90 €",
-   "euro": 54.9,
-   "sconto": 21,
+   "prezzo": "49,90 €",
+   "euro": 49.9,
+   "sconto": 28,
    "prima": "69,12 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -170,8 +173,8 @@
    "h": 500,
    "titolo": "adidas Metalbone Carbon 2026 - Racchetta da paddle, 453 g, colore: Nero | Palla da tennis ufficiale US Open con feltro di alta qualità, rimbalzo uniforme della palla e qualità di gioco costante",
    "scheda": "adidas-metalbone-carbon-2026",
-   "prezzo": "173,70 €",
-   "euro": 173.7
+   "prezzo": "172,70 €",
+   "euro": 172.7
   },
   "B0FZX36DDZ": {
    "img": "https://m.media-amazon.com/images/I/41ye9oHfkWL._SL500_.jpg",
@@ -251,8 +254,8 @@
    "h": 500,
    "titolo": "Adidas Metalbone Team 2026 | Diamante | Ibrido – Carbonio / Fibra di vetro | Bilanciato | Potenza | Torneo",
    "scheda": "adidas-metalbone-team-2026",
-   "prezzo": "126,50 €",
-   "euro": 126.5
+   "prezzo": "116,00 €",
+   "euro": 116.0
   },
   "B0FZWWXFG9": {
    "img": "https://m.media-amazon.com/images/I/4127UdKO1BL._SL500_.jpg",
@@ -339,8 +342,8 @@
    "h": 500,
    "titolo": "Babolat Air Vertuo 2.6 - Racchetta da padel (blu/nero)",
    "scheda": "babolat-air-vertuo-2-6-2026",
-   "prezzo": "136,56 €",
-   "euro": 136.56
+   "prezzo": "136,66 €",
+   "euro": 136.66
   },
   "B0F2HQTQJ5": {
    "img": "https://m.media-amazon.com/images/I/41ugVK68j9L._SL500_.jpg",
@@ -427,8 +430,8 @@
    "h": 500,
    "titolo": "Babolat Viper Soft Juan Lebron 3.1 - Racchetta da Padel",
    "scheda": "babolat-viper-soft-juan-lebron-3-1-2027",
-   "prezzo": "246,00 €",
-   "euro": 246.0
+   "prezzo": "247,00 €",
+   "euro": 247.0
   },
   "B0G6LL9HS6": {
    "img": "https://m.media-amazon.com/images/I/41z4rRajhvL._SL500_.jpg",
@@ -559,8 +562,8 @@
    "h": 500,
    "titolo": "Bullpadel Hack 04 Hybrid 26",
    "scheda": "bullpadel-hack-04-hybrid-2026",
-   "prezzo": "150,40 €",
-   "euro": 150.4
+   "prezzo": "149,00 €",
+   "euro": 149.0
   },
   "B0HJ1RMKJ7": {
    "img": "https://m.media-amazon.com/images/I/31g440okoZL._SL500_.jpg",
@@ -712,8 +715,8 @@
    "scheda": "bullpadel-vertex-05-2026",
    "prezzo": "171,40 €",
    "euro": 171.4,
-   "sconto": 7,
-   "prima": "183,90 €",
+   "sconto": 6,
+   "prima": "182,90 €",
    "tipo_prima": "WAS_PRICE"
   },
   "B0HJ345GDL": {
@@ -722,8 +725,8 @@
    "h": 500,
    "titolo": "Bullpadel Racchetta Da Padel Vertex 05 27 One Size",
    "scheda": "bullpadel-vertex-05-2027",
-   "prezzo": "277,80 €",
-   "euro": 277.8
+   "prezzo": "276,40 €",
+   "euro": 276.4
   },
   "B0FQK5LWH2": {
    "img": "https://m.media-amazon.com/images/I/41B3Sf3cHeL._SL500_.jpg",
@@ -731,9 +734,9 @@
    "h": 500,
    "titolo": "Bullpadel Vertex 05 Geo",
    "scheda": "bullpadel-vertex-05-geo-2026",
-   "prezzo": "166,90 €",
-   "euro": 166.9,
-   "sconto": 9,
+   "prezzo": "164,90 €",
+   "euro": 164.9,
+   "sconto": 10,
    "prima": "182,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -743,9 +746,9 @@
    "h": 500,
    "titolo": "Bullpadel Vertex 05 Woman",
    "scheda": "bullpadel-vertex-05-w-2026",
-   "prezzo": "146,90 €",
-   "euro": 146.9,
-   "sconto": 8,
+   "prezzo": "144,90 €",
+   "euro": 144.9,
+   "sconto": 9,
    "prima": "159,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -764,9 +767,9 @@
    "h": 500,
    "titolo": "Bullpadel Xplo 26",
    "scheda": "bullpadel-xplo-2026",
-   "prezzo": "150,40 €",
-   "euro": 150.4,
-   "sconto": 11,
+   "prezzo": "148,40 €",
+   "euro": 148.4,
+   "sconto": 13,
    "prima": "169,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -785,9 +788,9 @@
    "h": 500,
    "titolo": "Bullpadel Xplo Comfort 26",
    "scheda": "bullpadel-xplo-comfort-2026",
-   "prezzo": "109,85 €",
-   "euro": 109.85,
-   "sconto": 15,
+   "prezzo": "107,85 €",
+   "euro": 107.85,
+   "sconto": 17,
    "prima": "129,90 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -797,8 +800,8 @@
    "h": 500,
    "titolo": "Drop Shot Axion Attack 1.0 2025",
    "scheda": "drop-shot-axion-attack-1-0-2025",
-   "prezzo": "155,00 €",
-   "euro": 155.0
+   "prezzo": "154,90 €",
+   "euro": 154.9
   },
   "B0F6TZ5B95": {
    "img": "https://m.media-amazon.com/images/I/41kHb6TXszL._SL500_.jpg",
@@ -1010,8 +1013,8 @@
    "h": 500,
    "titolo": "HEAD Extreme Motion 2026",
    "scheda": "head-extreme-motion-2026",
-   "prezzo": "174,20 €",
-   "euro": 174.2,
+   "prezzo": "173,30 €",
+   "euro": 173.3,
    "sconto": 6,
    "prima": "184,54 €",
    "tipo_prima": "WAS_PRICE"
@@ -1232,8 +1235,8 @@
    "h": 500,
    "titolo": "Nox Ea10 Ventus Hybrid 12k Xtrem By Edu Alonso 2026",
    "scheda": "nox-ea10-ventus-hybrid-12k-xtrem-2026",
-   "prezzo": "159,90 €",
-   "euro": 159.9
+   "prezzo": "169,00 €",
+   "euro": 169.0
   },
   "B0HHK69XZF": {
    "img": "https://m.media-amazon.com/images/I/41dkSoRsmaL._SL500_.jpg",
@@ -1241,15 +1244,17 @@
    "h": 500,
    "titolo": "Nox Racchetta Da Padel Genius 18k Alum By Agustin Tapia One Size",
    "scheda": "nox-genius-18k-alum-2027",
-   "prezzo": "265,00 €",
-   "euro": 265.0
+   "prezzo": "267,69 €",
+   "euro": 267.69
   },
   "B0G1864GVC": {
    "img": "https://m.media-amazon.com/images/I/41YNzNRIKRL._SL500_.jpg",
    "w": 500,
    "h": 500,
    "titolo": "NOX Racchetta da paddle ML10 Ventus Control 3K 2026 | Miguel Lamperti Racchetta Pala di forma rotonda | Fronte in fibra di carbonio 3K, nucleo in EVA colore HR3 | Agilità tunnel ES, comfort di presa",
-   "scheda": "nox-ml10-ventus-control-3k-2026"
+   "scheda": "nox-ml10-ventus-control-3k-2026",
+   "prezzo": "159,95 €",
+   "euro": 159.95
   },
   "B0GWMB14Z6": {
    "img": "https://m.media-amazon.com/images/I/41-LUkhoVoL._SL500_.jpg",
@@ -1423,8 +1428,8 @@
    "h": 500,
    "titolo": "Royal Padel 36 Aniversario Poly 2026 Padel Racket One Size",
    "scheda": "royal-padel-36-aniversario-poly-2026",
-   "prezzo": "198,50 €",
-   "euro": 198.5,
+   "prezzo": "198,40 €",
+   "euro": 198.4,
    "sconto": 10,
    "prima": "219,95 €",
    "tipo_prima": "WAS_PRICE"
@@ -1486,8 +1491,8 @@
    "h": 500,
    "titolo": "RYZE IKARUS Racchetta da Padel 100% in Fibra di Carbonio - Massima Potenza + Controllo - con EVA-17 Flex - Struttura Leggera e Resistente - Padel Racchetta per Uomo e Donna - Custodia Inclusa",
    "scheda": "ryze-ikarus-2026",
-   "prezzo": "87,20 €",
-   "euro": 87.2,
+   "prezzo": "87,19 €",
+   "euro": 87.19,
    "sconto": 20,
    "prima": "109,00 €",
    "tipo_prima": "WAS_PRICE"
@@ -1577,8 +1582,8 @@
    "h": 500,
    "titolo": "SIUX Fenix Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a diamante, carbonio 12K Honeycomb, equilibrio alto, finitura satinata 3D, massima potenza e precisione",
    "scheda": "siux-fenix-pro-2027",
-   "prezzo": "330,18 €",
-   "euro": 330.18
+   "prezzo": "329,18 €",
+   "euro": 329.18
   },
   "B0DYVSZPLV": {
    "img": "https://m.media-amazon.com/images/I/41-xYOeQJ9L._SL500_.jpg",
@@ -1787,8 +1792,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Raptor+ 2026",
    "scheda": "starvie-raptor-2026",
-   "prezzo": "169,40 €",
-   "euro": 169.4
+   "prezzo": "168,50 €",
+   "euro": 168.5
   },
   "B0HJHN3C5H": {
    "img": "https://m.media-amazon.com/images/I/414WNkmS2aL._SL500_.jpg",
@@ -1841,8 +1846,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Triton T-One 2027 Tamara Icardo",
    "scheda": "starvie-triton-t-one-2027",
-   "prezzo": "276,90 €",
-   "euro": 276.9
+   "prezzo": "282,90 €",
+   "euro": 282.9
   },
   "B0GZ5K4R5B": {
    "img": "https://m.media-amazon.com/images/I/41WNhxUdblL._SL500_.jpg",
@@ -1850,8 +1855,8 @@
    "h": 500,
    "titolo": "Racchetta Tecnifibre Curva Speed 2026 16curspe26",
    "scheda": "tecnifibre-curva-speed-2026",
-   "prezzo": "146,50 €",
-   "euro": 146.5
+   "prezzo": "146,40 €",
+   "euro": 146.4
   },
   "B0DHD6RT64": {
    "img": "https://m.media-amazon.com/images/I/31CkUSBBIlL._SL500_.jpg",
@@ -2223,8 +2228,8 @@
    "h": 500,
    "titolo": "Selkirk Sport SLK ERA Power Pickleball Paddles | Allungata Ciano | Una racchetta da pickleball per giocatori aggressivi da intermedi ad avanzati, alimentata dalla tecnologia Raw Spin per il",
    "scheda": "pickleball/slk-era-power-elongated",
-   "prezzo": "245,99 €",
-   "euro": 245.99
+   "prezzo": "199,93 €",
+   "euro": 199.93
   },
   "B0GGCDY41K": {
    "img": "https://m.media-amazon.com/images/I/21Al6a4Y3jL._SL500_.jpg",
@@ -2232,8 +2237,8 @@
    "h": 500,
    "titolo": "Selkirk Sport SLK ERA Power Pickleball Paddles | Widebody Regal | Una racchetta da pickleball per giocatori aggressivi da intermedi ad avanzati, alimentata dalla tecnologia Raw Spin per il",
    "scheda": "pickleball/slk-era-power-widebody",
-   "prezzo": "246,39 €",
-   "euro": 246.39
+   "prezzo": "200,33 €",
+   "euro": 200.33
   },
   "B0CVR1THC4": {
    "img": "https://m.media-amazon.com/images/I/417-G2tqR6L._SL500_.jpg",
@@ -2381,8 +2386,8 @@
    "scheda": "regali",
    "prezzo": "85,00 €",
    "euro": 85.0,
-   "sconto": 9,
-   "prima": "93,50 €",
+   "sconto": 7,
+   "prima": "90,95 €",
    "tipo_prima": "WAS_PRICE"
   },
   "B0C71M5GYN": {
@@ -2552,8 +2557,8 @@
    "scheda": "regali",
    "prezzo": "73,90 €",
    "euro": 73.9,
-   "sconto": 10,
-   "prima": "81,69 €",
+   "sconto": 8,
+   "prima": "80,19 €",
    "tipo_prima": "WAS_PRICE"
   },
   "B0BSNRVGWK": {
@@ -2741,9 +2746,9 @@
    "h": 500,
    "titolo": "HEAD Club Shorts, Uomo, Nero, L | facile da pulire | regolatore di umidità | asciugatura rapida | Girovita con elastico | Girovita con cordino",
    "scheda": "regali",
-   "prezzo": "27,49 €",
-   "euro": 27.49,
-   "sconto": 39,
+   "prezzo": "25,99 €",
+   "euro": 25.99,
+   "sconto": 42,
    "prima": "45,00 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -2765,8 +2770,8 @@
    "h": 500,
    "titolo": "Head Club Original - Maglietta da Uomo con Cappuccio, Marina Militare, L | facile da pulire | asciugatura rapida | regolatore di umidità | Elastico | 57% Poliestere | 38% Cotone | 5% Elastan",
    "scheda": "regali",
-   "prezzo": "39,06 €",
-   "euro": 39.06
+   "prezzo": "46,78 €",
+   "euro": 46.78
   },
   "B0107S4QDQ": {
    "img": "https://m.media-amazon.com/images/I/31LLf34ioVL._SL500_.jpg",
@@ -2804,9 +2809,9 @@
    "h": 500,
    "titolo": "HEAD Club Basic Skirts, Donna, Nero, M | regolatore di umidità | facile da pulire | asciugatura rapida | Colletto largo | Girovita con elastico",
    "scheda": "regali",
-   "prezzo": "26,09 €",
-   "euro": 26.09,
-   "sconto": 42,
+   "prezzo": "23,99 €",
+   "euro": 23.99,
+   "sconto": 47,
    "prima": "45,00 €",
    "tipo_prima": "LIST_PRICE"
   },
