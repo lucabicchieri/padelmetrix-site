@@ -9,12 +9,30 @@
 }
 },
 {
+"path": "/it/black-friday-racchette-padel/",
+"alt": {
+"it": "/it/black-friday-racchette-padel/",
+"en": "/en/black-friday-padel-rackets/",
+"es": "/es/black-friday-palas-padel/",
+"fr": "/fr/black-friday-raquettes-padel/"
+}
+},
+{
 "path": "/en/deals/",
 "alt": {
 "it": "/it/offerte/",
 "en": "/en/deals/",
 "es": "/es/ofertas/",
 "fr": "/fr/offres/"
+}
+},
+{
+"path": "/en/black-friday-padel-rackets/",
+"alt": {
+"it": "/it/black-friday-racchette-padel/",
+"en": "/en/black-friday-padel-rackets/",
+"es": "/es/black-friday-palas-padel/",
+"fr": "/fr/black-friday-raquettes-padel/"
 }
 },
 {
@@ -27,12 +45,30 @@
 }
 },
 {
+"path": "/es/black-friday-palas-padel/",
+"alt": {
+"it": "/it/black-friday-racchette-padel/",
+"en": "/en/black-friday-padel-rackets/",
+"es": "/es/black-friday-palas-padel/",
+"fr": "/fr/black-friday-raquettes-padel/"
+}
+},
+{
 "path": "/fr/offres/",
 "alt": {
 "it": "/it/offerte/",
 "en": "/en/deals/",
 "es": "/es/ofertas/",
 "fr": "/fr/offres/"
+}
+},
+{
+"path": "/fr/black-friday-raquettes-padel/",
+"alt": {
+"it": "/it/black-friday-racchette-padel/",
+"en": "/en/black-friday-padel-rackets/",
+"es": "/es/black-friday-palas-padel/",
+"fr": "/fr/black-friday-raquettes-padel/"
 }
 }
 ]

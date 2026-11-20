@@ -2975,7 +2975,12 @@ def _regali_corpo(art_, db, i):
                                    "This article contains Amazon affiliate links: if you buy, PadelMetrix earns a small commission at no cost to you. Images and prices come from Amazon and are updated twice a day.",
                                    "Este artículo contiene enlaces de afiliado de Amazon: si compras, PadelMetrix recibe una pequeña comisión sin coste para ti. Imágenes y precios vienen de Amazon y se actualizan dos veces al día.",
                                    "Cet article contient des liens affiliés Amazon : si vous achetez, PadelMetrix perçoit une petite commission sans frais pour vous. Images et prix viennent d'Amazon et sont mis à jour deux fois par jour.") + "</p>")
-    return nota + t, usate
+    bf = _box5("Black Friday 2026", L("Le 15 racchette da padel più scontate di oggi su Amazon, con prezzo prima e dopo e livello di gioco: aggiornate ogni giorno fino al 30 novembre.",
+                                        "Today's 15 most discounted padel rackets on Amazon, with before and after prices and playing level: updated daily until 30 November.",
+                                        "Las 15 palas de pádel más rebajadas de hoy en Amazon, con precio antes y después y nivel de juego: actualizadas cada día hasta el 30 de noviembre.",
+                                        "Les 15 raquettes de padel les plus remisées du jour sur Amazon, avec prix avant et après et niveau de jeu : mises à jour chaque jour jusqu'au 30 novembre."),
+               L("Vedi gli sconti", "See the discounts", "Ver los descuentos", "Voir les remises"), P("blackfriday"))
+    return nota + bf + t, usate
 
 
 def regali(db):

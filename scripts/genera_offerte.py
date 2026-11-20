@@ -24,7 +24,7 @@ CSS = """<style>
 .of .nm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;line-height:1.25;color:var(--ink);text-decoration:none}
 .of .nm:hover{text-decoration:underline}
 .of .pz{margin-top:8px;font-size:15px}.of .pz b{font-family:'Space Grotesk',sans-serif;font-size:24px;color:var(--green)}.of .pz s{color:var(--muted);margin-left:6px}
-.of small{color:var(--muted);font-size:12px;line-height:1.3;margin-top:2px}
+.of small{color:var(--muted);font-size:12px;line-height:1.3;margin-top:2px}.of small.lv{color:var(--ink2);font-weight:600}
 .of .bt{margin-top:auto;padding-top:12px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
 .of .bt .btn{font-size:14px;padding:9px 14px}.of .bt .sc{font-size:14px;color:var(--green);font-weight:600}
 .of-chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
@@ -50,7 +50,7 @@ def indice(db):
         d = json.loads((S.DATA / f'{n["slug"]}.json').read_text(encoding="utf-8"))
         asin = next((s.get("asin") for s in d["pagina"].get("negozi", []) if isinstance(s, dict) and s.get("amazon") and s.get("asin")), None)
         if asin:
-            out[asin] = {"k": "r", "t": n["titolo"], "u": url_r(n), "pl": n["prezzo"] or 0}
+            out[asin] = {"k": "r", "t": n["titolo"], "u": url_r(n), "pl": n["prezzo"] or 0, "lv": S.LIVN(n["livello"]) or "", "an": n["anno"]}
     from dati_pickleball import P as PADDLE
     for p in PADDLE:
         if p.get("asin"):
@@ -77,6 +77,7 @@ def testi_js():
             "zero": L("Oggi non ci sono sconti in questa fascia.", "No discounts in this range today.", "Hoy no hay descuentos en este rango.", "Aucune remise dans cette tranche aujourd'hui."),
             "fino": L("fino a −{n}%", "up to −{n}%", "hasta −{n}%", "jusqu'à −{n} %"),
             "more": L("Mostra tutte le {n} offerte", "Show all {n} deals", "Ver las {n} ofertas", "Voir les {n} offres"),
+            "lv": L("Livello", "Level", "Nivel", "Niveau"),
             "en": S.lang() == "en"}
 
 
@@ -88,6 +89,7 @@ function fm(x){var s=x.toFixed(2).replace('.',',').replace(/,00$/,'');s=s.replac
 function card(o){var am='https://www.amazon.it/dp/'+o.a+'?tag=padelmetrix-21',r='rel="sponsored nofollow noopener" target="_blank"';
 return '<div class="of"><span class="bd">−'+o.s+'%</span><a class="im" href="'+am+'" '+r+' title="Amazon"><img src="'+o.img+'" alt="'+esc(o.t)+'" loading="lazy"></a><div class="tx">'
 +(o.u?'<a class="nm" href="'+o.u+'">'+esc(o.t)+'</a>':'<span class="nm">'+esc(o.t)+'</span>')
++(o.lv?'<small class="lv">'+T.lv+': '+esc(o.lv)+'</small>':'')
 +'<div class="pz"><b>'+esc(o.pz)+'</b><s>'+esc(o.pr)+'</s></div><small>'+(o.src=='l'?T.pl:T.pa)+'</small>'
 +'<div class="bt"><a class="btn lime" href="'+am+'" '+r+'>'+T.am+'</a>'+(o.u?'<a class="sc" href="'+o.u+'">'+T.sc+'</a>':'')+'</div></div></div>'}
 fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){
@@ -95,7 +97,7 @@ var t=Date.parse(j.aggiornato||''),ok=t&&Date.now()-t<864e5,P=j.prodotti||{},all
 if(ok)for(var a in I){var x=P[a],i=I[a];if(!x||!x.euro||!x.img)continue;
  var s=x.sconto||0,pr=(x.prima||'').replace(/ /g,' '),src='a';
  if(!s&&i.pl&&x.euro<=i.pl*0.9){s=Math.round((1-x.euro/i.pl)*100);pr=fm(i.pl);src='l'}
- var o={a:a,k:i.k,t:i.t,u:i.u,img:x.img,e:x.euro,pz:x.prezzo.replace(/ /g,' '),s:s,pr:pr,src:src};
+ var o={a:a,k:i.k,t:i.t,u:i.u,lv:i.lv,img:x.img,e:x.euro,pz:x.prezzo.replace(/ /g,' '),s:s,pr:pr,src:src};
  if(i.k=='r')tutti.push(o);if(s>=10)all.push(o)}
 all.sort(function(p,q){return q.s-p.s||p.e-q.e});
 var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);
@@ -132,13 +134,13 @@ def blocco_home(db):
 <h2>{L("Le offerte di oggi su Amazon", "Today's deals on Amazon", "Las ofertas de hoy en Amazon", "Les offres du jour sur Amazon")}</h2>
 <p class="of-agg" data-of-agg></p>
 <div data-of="r" data-n="4"></div>
-<p style="margin-top:16px"><a class="btn lime" href="{P("offerte")}">{L("Tutte le offerte padel →", "All padel deals →", "Todas las ofertas de pádel →", "Toutes les offres padel →")}</a></p>
+<p style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn lime" href="{P("blackfriday")}">{L("Black Friday: le 15 più scontate →", "Black Friday: the 15 biggest discounts →", "Black Friday: las 15 más rebajadas →", "Black Friday : les 15 plus remisées →")}</a><a class="btn out" href="{P("offerte")}">{L("Tutte le offerte padel →", "All padel deals →", "Todas las ofertas de pádel →", "Toutes les offres padel →")}</a></p>
 </div></section>''', dati_js(db, solo="r") + JS)
 
 
 def striscia_home():
     """Barra sopra l'hero della home."""
-    return (f'<a class="promo-bar" href="{P("offerte")}"><b>Black Friday</b> '
+    return (f'<a class="promo-bar" href="{P("blackfriday")}"><b>Black Friday</b> '
             f'{L("Racchette da padel in offerta su Amazon", "Padel rackets on sale at Amazon", "Palas de pádel en oferta en Amazon", "Raquettes de padel en promo sur Amazon")} '
             f'<span data-of-max></span> · <u>{L("Guarda le offerte", "See the deals", "Ver las ofertas", "Voir les offres")} →</u></a>')
 
@@ -181,6 +183,7 @@ def pagina_offerte(db):
        f"Twice a day we check the Amazon price of {len(con_asin)} rackets in our database and show only the ones that are really discounted, best deal first. Each one links to its full spec page, so you know what you're buying.",
        f"Comprobamos dos veces al día el precio en Amazon de {len(con_asin)} palas de nuestra base de datos y te mostramos solo las que están rebajadas de verdad, de la mejor oferta en adelante. Cada pala tiene su ficha técnica, para que sepas qué compras.",
        f"Deux fois par jour, nous vérifions le prix Amazon de {len(con_asin)} raquettes de notre base et n'affichons que celles réellement remisées, de la meilleure offre à la moins forte. Chaque raquette a sa fiche technique, pour savoir ce que vous achetez.")}</p></div>
+{banner_bf()}
 <p class="of-agg" data-of-agg></p>
 <section data-of-sec><h2>{L("Racchette da padel in offerta", "Padel rackets on sale", "Palas de pádel en oferta", "Raquettes de padel en promo")}</h2>
 <div class="of-chips">{chips}</div>
@@ -230,11 +233,124 @@ def pagina_offerte(db):
     S.scrivi(path, pagina(tit, desc, path, corpo, on="offerte", ld=[ld, faq_ld], extra_js=dati_js(db) + JS, alt=alt), alt)
 
 
+def banner_bf():
+    return (f'<a class="promo-bar" style="border-radius:14px;margin:4px 0 14px" href="{P("blackfriday")}"><b>Black Friday</b> '
+            f'{L("Le 15 racchette più scontate di oggi, con livello di gioco", "Today\'s 15 most discounted rackets, with playing level", "Las 15 palas más rebajadas de hoy, con nivel de juego", "Les 15 raquettes les plus remisées du jour, avec niveau de jeu")} '
+            f'· <u>{L("Vai alla pagina", "Go to the page", "Ir a la página", "Voir la page")} →</u></a>')
+
+
+def _top_statico(db, n=15):
+    """Ordine di partenza (senza prezzi) per chi non esegue JavaScript: le racchette più scontate all'ultimo aggiornamento."""
+    import datetime as dt
+    idx = indice(db)
+    try:
+        j = json.loads((ROOT / "amazon" / "immagini.json").read_text(encoding="utf-8"))
+        t = dt.datetime.fromisoformat(j["aggiornato"].replace("Z", "+00:00"))
+        fresco = (dt.datetime.now(dt.timezone.utc) - t).total_seconds() < 86400 * 3
+        prod = j.get("prodotti", {}) if fresco else {}
+    except Exception:  # noqa: BLE001
+        prod = {}
+    righe = []
+    for a, i in idx.items():
+        x = prod.get(a)
+        if i["k"] != "r" or not x or not x.get("euro"):
+            continue
+        sc = x.get("sconto") or 0
+        if not sc and i["pl"] and x["euro"] <= i["pl"] * 0.9:
+            sc = round((1 - x["euro"] / i["pl"]) * 100)
+        if sc >= 10:
+            righe.append((sc, i))
+    righe.sort(key=lambda r: -r[0])
+    return [i for _, i in righe[:n]]
+
+
+def pagina_bf(db):
+    path, alt = P("blackfriday"), ALT("blackfriday")
+    tit_h = L("Black Friday racchette padel 2026: i veri sconti su Amazon", "Black Friday padel rackets 2026: the real Amazon discounts",
+              "Black Friday palas de pádel 2026: los descuentos reales en Amazon", "Black Friday raquettes de padel 2026 : les vraies remises sur Amazon")
+    cr, ld = crumbs([S.home_crumb(), (L("Offerte", "Deals", "Ofertas", "Offres"), P("offerte")), ("Black Friday", None)])
+    stat = _top_statico(db)
+    fallback = ('<ol class="of-tutti">' + "".join(f'<li><a href="{i["u"]}">{e(i["t"])}</a><span>{e(i["lv"])}</span></li>' for i in stat) + "</ol>") if stat else ""
+    regali = P("articoli", "idee-regalo-natale-padel")
+    qa = [(L("Quando inizia il Black Friday 2026 su Amazon?", "When does Black Friday 2026 start on Amazon?", "¿Cuándo empieza el Black Friday 2026 en Amazon?", "Quand commence le Black Friday 2026 sur Amazon ?"),
+           L("Su Amazon.it le offerte del Black Friday 2026 sono iniziate giovedì 19 novembre e durano fino a lunedì 30 novembre, il Cyber Monday. Il Black Friday vero e proprio è venerdì 27 novembre. Per gli acquisti dal 1° novembre al 25 dicembre il reso è possibile fino al 31 gennaio 2027.",
+             "On Amazon.it the Black Friday 2026 deals started on Thursday 19 November and run until Monday 30 November, Cyber Monday. Black Friday itself is Friday 27 November. Purchases made from 1 November to 25 December can be returned until 31 January 2027.",
+             "En Amazon.it las ofertas del Black Friday 2026 empezaron el jueves 19 de noviembre y duran hasta el lunes 30 de noviembre, el Cyber Monday. El Black Friday propiamente dicho es el viernes 27 de noviembre. Las compras del 1 de noviembre al 25 de diciembre se pueden devolver hasta el 31 de enero de 2027.",
+             "Sur Amazon.it, les offres du Black Friday 2026 ont commencé le jeudi 19 novembre et durent jusqu'au lundi 30 novembre, le Cyber Monday. Le Black Friday proprement dit tombe le vendredi 27 novembre. Les achats faits du 1er novembre au 25 décembre peuvent être retournés jusqu'au 31 janvier 2027.")),
+          (L("Conviene comprare la racchetta 2026 o la 2027?", "Should I buy the 2026 or the 2027 racket?", "¿Conviene comprar la pala 2026 o la 2027?", "Vaut-il mieux acheter la raquette 2026 ou la 2027 ?"),
+           L("Per la maggior parte dei giocatori conviene la 2026 in offerta. Tra un anno e l'altro cambiano soprattutto grafica e piccoli dettagli di materiali o bilanciamento, mentre la 2026 adesso costa spesso il 20–40% in meno. La 2027 ha senso se cerchi proprio una novità tecnica di quel modello o se la 2026 non si trova più nella tua misura di peso. Nelle schede trovi il confronto tra le due versioni.",
+             "For most players the discounted 2026 is the better buy. From one year to the next it's mostly the graphics and small details of materials or balance that change, while the 2026 now often costs 20–40% less. The 2027 makes sense if you want a specific technical change in that model or if the 2026 is no longer available in your weight. Our spec pages compare the two versions.",
+             "Para la mayoría de jugadores conviene la 2026 en oferta. De un año a otro cambian sobre todo el diseño y pequeños detalles de materiales o balance, mientras que la 2026 ahora suele costar un 20–40 % menos. La 2027 tiene sentido si buscas justo una novedad técnica de ese modelo o si la 2026 ya no está en tu peso. En las fichas encuentras la comparación entre las dos versiones.",
+             "Pour la plupart des joueurs, la 2026 en promo est le meilleur choix. D'une année à l'autre, ce sont surtout le design et de petits détails de matériaux ou d'équilibre qui changent, alors que la 2026 coûte souvent 20 à 40 % de moins. La 2027 a du sens si vous voulez précisément une nouveauté technique de ce modèle ou si la 2026 n'existe plus dans votre poids. Nos fiches comparent les deux versions.")),
+          (L("Gli sconti sono veri?", "Are the discounts real?", "¿Los descuentos son reales?", "Les remises sont-elles réelles ?"),
+           L("Mostriamo lo sconto e il prezzo precedente dichiarati da Amazon; quando Amazon non li indica confrontiamo il prezzo con il listino del produttore e lo scriviamo sotto il prezzo. Teniamo solo sconti di almeno il 10% e aggiorniamo i prezzi due volte al giorno.",
+             "We show the discount and previous price stated by Amazon; when Amazon doesn't give them we compare the price with the maker's list price and say so under the price. We keep only discounts of at least 10% and update prices twice a day.",
+             "Mostramos el descuento y el precio anterior que indica Amazon; cuando Amazon no los da, comparamos el precio con el PVP del fabricante y lo indicamos bajo el precio. Solo incluimos descuentos de al menos el 10 % y actualizamos los precios dos veces al día.",
+             "Nous affichons la remise et le prix précédent indiqués par Amazon ; quand Amazon ne les donne pas, nous comparons le prix au prix catalogue du fabricant et le précisons sous le prix. Nous ne gardons que les remises d'au moins 10 % et mettons les prix à jour deux fois par jour.")),
+          (L("Quale livello di gioco scegliere?", "Which playing level should I choose?", "¿Qué nivel de juego elegir?", "Quel niveau de jeu choisir ?"),
+           L("Se giochi da meno di un anno o una volta a settimana scegli una racchetta da principiante o intermedio: perdona di più gli errori e affatica meno il braccio. Le racchette da avanzato sono più rigide e precise, ma vanno bene solo se colpisci già con buona tecnica.",
+             "If you've played for less than a year or once a week, pick a beginner or intermediate racket: it forgives mistakes more and is easier on the arm. Advanced rackets are stiffer and more precise, but only suit players who already hit with good technique.",
+             "Si juegas desde hace menos de un año o una vez por semana, elige una pala de principiante o intermedio: perdona más los errores y cansa menos el brazo. Las palas de avanzado son más rígidas y precisas, pero solo van bien si ya golpeas con buena técnica.",
+             "Si vous jouez depuis moins d'un an ou une fois par semaine, choisissez une raquette débutant ou intermédiaire : elle pardonne davantage et fatigue moins le bras. Les raquettes confirmé sont plus rigides et précises, mais ne conviennent qu'aux joueurs ayant déjà une bonne technique."))]
+    faq_h = "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in qa)
+    faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": S.lang(),
+              "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
+    corpo = f'''{CSS}{cr}
+<div class="of-hero"><div class="k">Black Friday 2026 · {L("19–30 novembre", "19–30 November", "19–30 de noviembre", "19–30 novembre")} · {L("aggiornato ogni giorno", "updated daily", "actualizado cada día", "mis à jour chaque jour")}</div>
+<h1>{tit_h}</h1>
+<p>{L("Le 15 racchette da padel più scontate di oggi su Amazon, scelte tra le centinaia del nostro database: per ognuna trovi prezzo prima e dopo, percentuale di sconto, livello di gioco consigliato e la scheda tecnica completa.",
+       "Today's 15 most discounted padel rackets on Amazon, picked from the hundreds in our database: for each one you get the before and after price, the discount, the recommended playing level and the full spec page.",
+       "Las 15 palas de pádel más rebajadas de hoy en Amazon, elegidas entre los cientos de nuestra base de datos: para cada una tienes el precio antes y después, el porcentaje de descuento, el nivel de juego recomendado y la ficha técnica completa.",
+       "Les 15 raquettes de padel les plus remisées du jour sur Amazon, choisies parmi les centaines de notre base : pour chacune, le prix avant et après, la remise, le niveau de jeu conseillé et la fiche technique complète.")}</p></div>
+<p class="of-agg" data-of-agg></p>
+<section data-of-sec><h2>{L("Le 15 racchette più scontate di oggi", "Today's 15 most discounted rackets", "Las 15 palas más rebajadas de hoy", "Les 15 raquettes les plus remisées du jour")}</h2>
+<div data-of="r" data-n="15" data-msg>{fallback or '<p class="of-vuoto">' + L("Carico i prezzi di oggi…", "Loading today's prices…", "Cargando los precios de hoy…", "Chargement des prix du jour…") + '</p>'}</div>
+<p style="margin-top:14px"><a class="btn out" href="{P("offerte")}">{L("Tutte le offerte, anche accessori e pickleball →", "All deals, including accessories and pickleball →", "Todas las ofertas, también accesorios y pickleball →", "Toutes les offres, accessoires et pickleball compris →")}</a></p></section>
+<div class="prose" style="margin-top:30px">
+<h2>{L("Le date del Black Friday 2026 su Amazon", "Black Friday 2026 dates on Amazon", "Las fechas del Black Friday 2026 en Amazon", "Les dates du Black Friday 2026 sur Amazon")}</h2>
+<ul><li>{L("<b>Inizio offerte:</b> giovedì 19 novembre", "<b>Deals start:</b> Thursday 19 November", "<b>Inicio de las ofertas:</b> jueves 19 de noviembre", "<b>Début des offres :</b> jeudi 19 novembre")}</li>
+<li>{L("<b>Black Friday:</b> venerdì 27 novembre", "<b>Black Friday:</b> Friday 27 November", "<b>Black Friday:</b> viernes 27 de noviembre", "<b>Black Friday :</b> vendredi 27 novembre")}</li>
+<li>{L("<b>Fine offerte (Cyber Monday):</b> lunedì 30 novembre", "<b>Deals end (Cyber Monday):</b> Monday 30 November", "<b>Fin de las ofertas (Cyber Monday):</b> lunes 30 de noviembre", "<b>Fin des offres (Cyber Monday) :</b> lundi 30 novembre")}</li>
+<li>{L("<b>Reso esteso:</b> per gli acquisti fino al 25 dicembre, fino al 31 gennaio 2027", "<b>Extended returns:</b> for purchases up to 25 December, until 31 January 2027", "<b>Devolución ampliada:</b> para compras hasta el 25 de diciembre, hasta el 31 de enero de 2027", "<b>Retour prolongé :</b> pour les achats jusqu'au 25 décembre, jusqu'au 31 janvier 2027")}</li></ul>
+<h2>{L("Come scegliere bene durante il Black Friday", "How to choose well during Black Friday", "Cómo elegir bien durante el Black Friday", "Bien choisir pendant le Black Friday")}</h2>
+<ul>
+<li>{L(f'<b>Prima il livello, poi lo sconto.</b> Una racchetta da avanzato a metà prezzo resta difficile da usare per chi inizia. Se hai dubbi fai il <a href="{P("selettore")}">test in 2 minuti</a>.',
+       f'<b>Level first, discount second.</b> An advanced racket at half price is still hard to use for a beginner. If in doubt, take the <a href="{P("selettore")}">2-minute quiz</a>.',
+       f'<b>Primero el nivel, luego el descuento.</b> Una pala de avanzado a mitad de precio sigue siendo difícil para quien empieza. Si dudas, haz el <a href="{P("selettore")}">test de 2 minutos</a>.',
+       f'<b>D\'abord le niveau, ensuite la remise.</b> Une raquette confirmé à moitié prix reste difficile pour un débutant. En cas de doute, faites le <a href="{P("selettore")}">quiz de 2 minutes</a>.')}</li>
+<li>{L("<b>Guarda il prezzo finale.</b> Il prezzo «prima» a volte è un listino che nessuno ha mai pagato: per questo sotto ogni prezzo indichiamo da dove viene il confronto.",
+       "<b>Look at the final price.</b> The “before” price is sometimes a list price nobody ever paid: that's why under each price we say where the comparison comes from.",
+       "<b>Mira el precio final.</b> El precio «antes» a veces es un PVP que nadie ha pagado nunca: por eso bajo cada precio indicamos de dónde sale la comparación.",
+       "<b>Regardez le prix final.</b> Le prix « avant » est parfois un prix catalogue que personne n'a payé : c'est pourquoi nous indiquons sous chaque prix d'où vient la comparaison.")}</li>
+<li>{L(f'<b>Pensi a un regalo?</b> Con il reso esteso fino al 31 gennaio puoi comprare adesso. Altre idee nella nostra <a href="{regali}">guida ai regali di Natale per chi gioca a padel</a>.',
+       f'<b>Buying a gift?</b> With returns extended to 31 January you can buy now. More ideas in our <a href="{regali}">Christmas gift guide for padel players</a>.',
+       f'<b>¿Es un regalo?</b> Con la devolución ampliada hasta el 31 de enero puedes comprar ya. Más ideas en nuestra <a href="{regali}">guía de regalos de Navidad para jugadores de pádel</a>.',
+       f'<b>C\'est un cadeau ?</b> Avec le retour prolongé jusqu\'au 31 janvier, vous pouvez acheter dès maintenant. D\'autres idées dans notre <a href="{regali}">guide des cadeaux de Noël pour joueurs de padel</a>.')}</li>
+</ul>
+<h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes", "Questions fréquentes")}</h2>
+{faq_h}
+<p class="note">{L("In qualità di Affiliato Amazon, PadelMetrix riceve un guadagno dagli acquisti idonei. Questo non cambia il prezzo che paghi né l'ordine delle racchette, che dipende solo dallo sconto. I prezzi arrivano da Amazon.it e non vengono mostrati se hanno più di 24 ore.",
+                    "As an Amazon Associate, PadelMetrix earns from qualifying purchases. This doesn't change the price you pay or the order of the rackets, which depends only on the discount. Prices come from Amazon.it and are not shown if they are more than 24 hours old.",
+                    "Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no cambia el precio que pagas ni el orden de las palas, que depende solo del descuento. Los precios vienen de Amazon.it y no se muestran si tienen más de 24 horas.",
+                    "En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Cela ne change ni le prix que vous payez ni l'ordre des raquettes, qui dépend uniquement de la remise. Les prix viennent d'Amazon.it et ne sont pas affichés s'ils datent de plus de 24 heures.")}</p>
+</div>'''
+    tit = L("Black Friday racchette padel 2026: i veri sconti su Amazon (aggiornati ogni giorno)",
+            "Black Friday padel rackets 2026: the real Amazon discounts (updated daily)",
+            "Black Friday palas de pádel 2026: los descuentos reales en Amazon (actualizados cada día)",
+            "Black Friday raquettes de padel 2026 : les vraies remises sur Amazon (mises à jour chaque jour)")
+    desc = L("Le 15 racchette da padel più scontate su Amazon per il Black Friday 2026 (19–30 novembre): prezzo prima e dopo, % di sconto e livello di gioco, aggiornati due volte al giorno.",
+             "The 15 most discounted padel rackets on Amazon for Black Friday 2026 (19–30 November): before and after price, % off and playing level, updated twice a day.",
+             "Las 15 palas de pádel más rebajadas en Amazon por el Black Friday 2026 (19–30 de noviembre): precio antes y después, % de descuento y nivel de juego, actualizados dos veces al día.",
+             "Les 15 raquettes de padel les plus remisées sur Amazon pour le Black Friday 2026 (19–30 novembre) : prix avant et après, % de remise et niveau de jeu, mis à jour deux fois par jour.")
+    S.scrivi(path, pagina(tit, desc, path, corpo, on="offerte", ld=[ld, faq_ld], extra_js=dati_js(db, solo="r") + JS, alt=alt), alt)
+
+
 def main():
     db = ordina(S.carica())
     for l in LINGUE:
         set_lang(l)
         pagina_offerte(db)
+        pagina_bf(db)
     set_lang("it")
     (ROOT / "scripts" / "pagine_offerte.json").write_text(json.dumps(S.PAGINE, indent=0), encoding="utf-8")
     print(len(S.PAGINE), "pagine offerte generate")
