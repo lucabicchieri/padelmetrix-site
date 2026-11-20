@@ -127,6 +127,7 @@ SEZ = {
     "selettore": ("trova-la-tua-racchetta", "racket-finder", "encuentra-tu-pala", "trouve-ta-raquette"),
     "articoli": ("articoli", "articles", "articulos", "articles"),
     "offerte": ("offerte", "deals", "ofertas", "offres"),
+    "blackfriday": ("black-friday-racchette-padel", "black-friday-padel-rackets", "black-friday-palas-padel", "black-friday-raquettes-padel"),
     "privacy": ("privacy", "privacy", "privacidad", "confidentialite"),
     "cookie": ("cookie", "cookies", "cookies", "cookies"),
 }
