@@ -1548,6 +1548,15 @@
 }
 },
 {
+"path": "/it/racchette/bullpadel-indiga-boy-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2027/",
+"en": "/en/rackets/bullpadel-indiga-boy-2027/",
+"es": "/es/palas/bullpadel-indiga-boy-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2027/"
+}
+},
+{
 "path": "/it/racchette/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
@@ -1581,6 +1590,15 @@
 "en": "/en/rackets/bullpadel-indiga-girl-2026/",
 "es": "/es/palas/bullpadel-indiga-girl-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
+}
+},
+{
+"path": "/it/racchette/bullpadel-indiga-girl-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2027/",
+"en": "/en/rackets/bullpadel-indiga-girl-2027/",
+"es": "/es/palas/bullpadel-indiga-girl-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2027/"
 }
 },
 {
@@ -9180,6 +9198,15 @@
 }
 },
 {
+"path": "/en/rackets/bullpadel-indiga-boy-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2027/",
+"en": "/en/rackets/bullpadel-indiga-boy-2027/",
+"es": "/es/palas/bullpadel-indiga-boy-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2027/"
+}
+},
+{
 "path": "/en/rackets/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
@@ -9213,6 +9240,15 @@
 "en": "/en/rackets/bullpadel-indiga-girl-2026/",
 "es": "/es/palas/bullpadel-indiga-girl-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
+}
+},
+{
+"path": "/en/rackets/bullpadel-indiga-girl-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2027/",
+"en": "/en/rackets/bullpadel-indiga-girl-2027/",
+"es": "/es/palas/bullpadel-indiga-girl-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2027/"
 }
 },
 {
@@ -16812,6 +16848,15 @@
 }
 },
 {
+"path": "/es/palas/bullpadel-indiga-boy-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2027/",
+"en": "/en/rackets/bullpadel-indiga-boy-2027/",
+"es": "/es/palas/bullpadel-indiga-boy-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2027/"
+}
+},
+{
 "path": "/es/palas/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
@@ -16845,6 +16890,15 @@
 "en": "/en/rackets/bullpadel-indiga-girl-2026/",
 "es": "/es/palas/bullpadel-indiga-girl-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
+}
+},
+{
+"path": "/es/palas/bullpadel-indiga-girl-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2027/",
+"en": "/en/rackets/bullpadel-indiga-girl-2027/",
+"es": "/es/palas/bullpadel-indiga-girl-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2027/"
 }
 },
 {
@@ -24444,6 +24498,15 @@
 }
 },
 {
+"path": "/fr/raquettes/bullpadel-indiga-boy-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-boy-2027/",
+"en": "/en/rackets/bullpadel-indiga-boy-2027/",
+"es": "/es/palas/bullpadel-indiga-boy-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-boy-2027/"
+}
+},
+{
 "path": "/fr/raquettes/bullpadel-indiga-control-2026/",
 "alt": {
 "it": "/it/racchette/bullpadel-indiga-control-2026/",
@@ -24477,6 +24540,15 @@
 "en": "/en/rackets/bullpadel-indiga-girl-2026/",
 "es": "/es/palas/bullpadel-indiga-girl-2026/",
 "fr": "/fr/raquettes/bullpadel-indiga-girl-2026/"
+}
+},
+{
+"path": "/fr/raquettes/bullpadel-indiga-girl-2027/",
+"alt": {
+"it": "/it/racchette/bullpadel-indiga-girl-2027/",
+"en": "/en/rackets/bullpadel-indiga-girl-2027/",
+"es": "/es/palas/bullpadel-indiga-girl-2027/",
+"fr": "/fr/raquettes/bullpadel-indiga-girl-2027/"
 }
 },
 {
