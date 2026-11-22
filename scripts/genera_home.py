@@ -518,7 +518,9 @@ def main():
         dest.write_text(S.tipo_fr(pagina(lang, db)) if lang == "fr" else pagina(lang, db), encoding="utf-8")
         print("ok", f"/{lang}/")
     (ROOT / "index.html").write_text(ROOT_INDEX, encoding="utf-8")
-    (ROOT / "_redirects").write_text(REDIRECTS, encoding="utf-8")
+    manuali = ROOT / "scripts" / "redirects_manuali.txt"
+    extra = manuali.read_text(encoding="utf-8") if manuali.exists() else ""
+    (ROOT / "_redirects").write_text(REDIRECTS.rstrip("\n") + "\n" + extra, encoding="utf-8")
     print("ok / e _redirects")
 
 

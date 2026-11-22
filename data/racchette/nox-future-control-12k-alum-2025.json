@@ -25,7 +25,7 @@
     ]
   },
   "simili": [
-    "nox-ml10-ventus-control-3k-2027",
+    "nox-ventus-control-3k-2027",
     "adidas-adipower-carbon-ctrl-3-4-2025",
     "adidas-adipower-carbon-light-3-4-2025"
   ],
@@ -139,7 +139,7 @@
     ],
     "simili": [
       {
-        "url": "/racchette/nox-ml10-ventus-control-3k-2027/",
+        "url": "/racchette/nox-ventus-control-3k-2027/",
         "sopra": "Nox · 2027",
         "nome": "ML10 Ventus Control 3K 2027",
         "testo": "Rotonda di controllo, 360–375 g, carbonio 3K, livello intermedio / avanzato."
