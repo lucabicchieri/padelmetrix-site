@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-22T14:22Z",
+ "aggiornato": "2026-11-22T14:34Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -336,8 +336,11 @@
    "h": 500,
    "titolo": "Babolat Air Vertuo 2.6 - Racchetta da padel (blu/nero)",
    "scheda": "babolat-air-vertuo-2-6-2026",
-   "prezzo": "140,16 €",
-   "euro": 140.16
+   "prezzo": "117,60 €",
+   "euro": 117.6,
+   "sconto": 9,
+   "prima": "128,90 €",
+   "tipo_prima": "WAS_PRICE"
   },
   "B0F2HQTQJ5": {
    "img": "https://m.media-amazon.com/images/I/41ugVK68j9L._SL500_.jpg",
@@ -356,9 +359,7 @@
    "w": 500,
    "h": 500,
    "titolo": "Babolat Counter Vertuo 2.6 - Racchetta da paddle Senior",
-   "scheda": "babolat-counter-vertuo-2-6-2026",
-   "prezzo": "115,98 €",
-   "euro": 115.98
+   "scheda": "babolat-counter-vertuo-2-6-2026"
   },
   "B0F3P2DWHL": {
    "img": "https://m.media-amazon.com/images/I/413sl4xCeIL._SL500_.jpg",
@@ -1192,8 +1193,8 @@
    "h": 500,
    "titolo": "Nox At10 Genius 18k Alum by Agustin Tapia 2026",
    "scheda": "nox-at10-genius-18k-alum-2026",
-   "prezzo": "208,94 €",
-   "euro": 208.94
+   "prezzo": "209,00 €",
+   "euro": 209.0
   },
   "B0DHT12YC4": {
    "img": "https://m.media-amazon.com/images/I/41jW1zvYXmL._SL500_.jpg",
