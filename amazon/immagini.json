@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-22T12:38Z",
+ "aggiornato": "2026-11-22T14:22Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -47,10 +47,7 @@
    "titolo": "adidas Racchetta da Padel Cross It Carbon Control 2026 | Rotondo | 6K Carbonio | Bilanciato | Controllo | Torneo",
    "scheda": "adidas-cross-it-carbon-ctrl-2026",
    "prezzo": "135,00 €",
-   "euro": 135.0,
-   "sconto": 6,
-   "prima": "143,00 €",
-   "tipo_prima": "WAS_PRICE"
+   "euro": 135.0
   },
   "B0FZX2FFFX": {
    "img": "https://m.media-amazon.com/images/I/41hwf8GUZOL._SL500_.jpg",
@@ -252,10 +249,7 @@
    "titolo": "Adidas Metalbone Team 2026 | Diamante | Ibrido – Carbonio / Fibra di vetro | Bilanciato | Potenza | Torneo",
    "scheda": "adidas-metalbone-team-2026",
    "prezzo": "111,00 €",
-   "euro": 111.0,
-   "sconto": 5,
-   "prima": "116,24 €",
-   "tipo_prima": "WAS_PRICE"
+   "euro": 111.0
   },
   "B0FZWWXFG9": {
    "img": "https://m.media-amazon.com/images/I/4127UdKO1BL._SL500_.jpg",
@@ -296,8 +290,8 @@
    "h": 500,
    "titolo": "Adidas Racchetta Da Padel Metalbone Zz Team One Size | Rotondo | Fibra di vetro | Bilanciato | Tutt'attorno | Avanzato",
    "scheda": "adidas-metalbone-zz-team-2026",
-   "prezzo": "132,94 €",
-   "euro": 132.94
+   "prezzo": "131,94 €",
+   "euro": 131.94
   },
   "B0DDXWRXZ5": {
    "img": "https://m.media-amazon.com/images/I/415mipjMt5L._SL500_.jpg",
@@ -316,8 +310,8 @@
    "scheda": "adidas-rx-series-2026",
    "prezzo": "74,63 €",
    "euro": 74.63,
-   "sconto": 22,
-   "prima": "96,04 €",
+   "sconto": 12,
+   "prima": "84,95 €",
    "tipo_prima": "WAS_PRICE"
   },
   "B0FZX6Q474": {
@@ -362,7 +356,9 @@
    "w": 500,
    "h": 500,
    "titolo": "Babolat Counter Vertuo 2.6 - Racchetta da paddle Senior",
-   "scheda": "babolat-counter-vertuo-2-6-2026"
+   "scheda": "babolat-counter-vertuo-2-6-2026",
+   "prezzo": "115,98 €",
+   "euro": 115.98
   },
   "B0F3P2DWHL": {
    "img": "https://m.media-amazon.com/images/I/413sl4xCeIL._SL500_.jpg",
@@ -569,6 +565,15 @@
    "prezzo": "299,00 €",
    "euro": 299.0
   },
+  "B0HJX5KXW9": {
+   "img": "https://m.media-amazon.com/images/I/41BN3iJHe-L._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "Bullpadel Racchetta Da Padel Hack 05 Cmf 27 One Size",
+   "scheda": "bullpadel-hack-05-comfort-2027",
+   "prezzo": "216,46 €",
+   "euro": 216.46
+  },
   "B0HJ1G3TP9": {
    "img": "https://m.media-amazon.com/images/I/413L+XPi1CL._SL500_.jpg",
    "w": 500,
@@ -729,8 +734,17 @@
    "prezzo": "157,50 €",
    "euro": 157.5,
    "sconto": 14,
-   "prima": "182,90 €",
+   "prima": "183,85 €",
    "tipo_prima": "WAS_PRICE"
+  },
+  "B0HHQMXHHW": {
+   "img": "https://m.media-amazon.com/images/I/31EIYTavQvL._SL500_.jpg",
+   "w": 500,
+   "h": 500,
+   "titolo": "BULLPADEL Vertex 05 Hybrid 27",
+   "scheda": "bullpadel-vertex-05-hybrid-2027",
+   "prezzo": "291,46 €",
+   "euro": 291.46
   },
   "B0FPTL5GH8": {
    "img": "https://m.media-amazon.com/images/I/418mFNDvMeL._SL500_.jpg",
@@ -782,8 +796,8 @@
    "scheda": "bullpadel-xplo-comfort-2026",
    "prezzo": "87,35 €",
    "euro": 87.35,
-   "sconto": 29,
-   "prima": "122,35 €",
+   "sconto": 28,
+   "prima": "122,00 €",
    "tipo_prima": "WAS_PRICE"
   },
   "B0F6T53YFV": {
@@ -1636,8 +1650,8 @@
    "h": 500,
    "titolo": "Siux Valkiria Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, comfort, precisione e versatilità",
    "scheda": "siux-valkiria-elite-2027",
-   "prezzo": "242,10 €",
-   "euro": 242.1
+   "prezzo": "249,52 €",
+   "euro": 249.52
   },
   "B0HPL2WY7M": {
    "img": "https://m.media-amazon.com/images/I/31TP3CSfX4L._SL500_.jpg",
@@ -1645,8 +1659,8 @@
    "h": 500,
    "titolo": "Siux Valkiria Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K ed EVA Soft, equilibrio medio, finitura satinata 3D, leggerezza e precisione",
    "scheda": "siux-valkiria-pro-2027",
-   "prezzo": "360,42 €",
-   "euro": 360.42
+   "prezzo": "353,00 €",
+   "euro": 353.0
   },
   "B0FVCM3T39": {
    "img": "https://m.media-amazon.com/images/I/41A9ObFCZxL._SL500_.jpg",
@@ -1708,8 +1722,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Drax+ 2027",
    "scheda": "starvie-drax-plus-2027",
-   "prezzo": "195,90 €",
-   "euro": 195.9
+   "prezzo": "201,90 €",
+   "euro": 201.9
   },
   "B0HJHTM2XL": {
    "img": "https://m.media-amazon.com/images/I/31JQToJQbaL._SL500_.jpg",
@@ -2378,10 +2392,7 @@
    "titolo": "Wilson Padel X3 Box (24 tubi da 3 palle)",
    "scheda": "regali",
    "prezzo": "85,00 €",
-   "euro": 85.0,
-   "sconto": 6,
-   "prima": "90,00 €",
-   "tipo_prima": "WAS_PRICE"
+   "euro": 85.0
   },
   "B0C71M5GYN": {
    "img": "https://m.media-amazon.com/images/I/41wR4y0B-wL._SL500_.jpg",
