@@ -241,6 +241,24 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t .bb-n{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 14px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:15px;font-weight:600;color:var(--green);background:#fff;border:1.5px solid var(--green);border-radius:12px;padding:10px 14px;white-space:nowrap;text-decoration:none}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
+@media (max-width:400px){.buybar{gap:6px;padding-left:12px;padding-right:12px}.bb-t{flex:0 0 auto}.bb-t .bb-n{display:none}.bb-t:not(:has(.bb-pz:not(:empty))){display:none}.buybar .btn{flex:1;text-align:center;padding:11px 10px}.bb-c{padding:10px 12px}}
+.bb-pz{display:flex;flex-direction:column;line-height:1.2}.bb-pz s{font-weight:400;color:var(--muted);font-size:12px}.bb-pz span{display:flex;align-items:center;white-space:nowrap}.bb-pz b{color:var(--ink);font-size:15px}.bb-pz em{font-style:normal;font-weight:700;color:#0F3D2E;background:var(--lime);border-radius:6px;padding:1px 5px;margin-left:5px;font-size:12px}
+@media (max-width:360px){.bb-v{display:none}.bb-pz b{font-size:14px}}
 
 </style>
 </head>
@@ -281,10 +299,10 @@ header.site nav.main a.hot.on{border-bottom:0}
 <div class="card">
 <h2>En bref</h2>
 <div class="chips"><span>Raquette d&#x27;attaque</span><span>Niveau intermédiaire / confirmé</span><span>Toucher sec</span></div>
-<p class="note">Caractéristiques déclarées par le fabricant et les revendeurs. Évaluations indépendantes à venir : la note PadelMetrix arrivera avec notre propre méthode d'évaluation.</p>
+<p class="note">Caractéristiques déclarées par le fabricant et les revendeurs.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Où acheter la Power Carbon 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Livraison et retours Amazon</small></div><a class="btn lime" href="https://www.amazon.fr/s?k=Kuikma+Power+Carbon+2026" rel="sponsored nofollow noopener" target="_blank">Voir sur Amazon</a></div>
@@ -341,10 +359,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/fr/raquettes/siux-fenix-elite-2026/"><small>Siux · 2026</small><b>Fenix Elite 2026</b><small>Raquette diamant d&#x27;attaque, 355–375 g, niveau intermédiaire / confirmé.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparaisons avec la Power Carbon 2026</h3><ul class="clean"><li><a href="/fr/comparer/bullpadel-hack-05-comfort-2027-vs-kuikma-power-carbon-2026/">Power Carbon 2026 vs Hack 05 Comfort 2027</a></li></ul></div>
+
 </section>
 
 <section class="block faq"><h2>Questions fréquentes sur la Power Carbon 2026</h2><details><summary>Pour quel niveau est la Power Carbon 2026 ?</summary><p>Elle est pensée pour un niveau intermédiaire / confirmé. Style de jeu : attaque.</p></details></section>
 <p class="note" style="padding-bottom:24px">Page mise à jour le 24 octobre 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b class="bb-n">Power Carbon 2026</b></div><a class="btn lime" href="https://www.amazon.fr/s?k=Kuikma+Power+Carbon+2026" rel="sponsored nofollow noopener" target="_blank"><span class="bb-v">Voir sur </span>Amazon</a><a class="bb-c" href="/fr/comparer/bullpadel-hack-05-comfort-2027-vs-kuikma-power-carbon-2026/">Comparer</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix est un site indépendant de Luca Bicchieri. En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Certains liens vers d'autres boutiques sont des liens d'affiliation.</span>

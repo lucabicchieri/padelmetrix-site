@@ -241,6 +241,24 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t .bb-n{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 14px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:15px;font-weight:600;color:var(--green);background:#fff;border:1.5px solid var(--green);border-radius:12px;padding:10px 14px;white-space:nowrap;text-decoration:none}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
+@media (max-width:400px){.buybar{gap:6px;padding-left:12px;padding-right:12px}.bb-t{flex:0 0 auto}.bb-t .bb-n{display:none}.bb-t:not(:has(.bb-pz:not(:empty))){display:none}.buybar .btn{flex:1;text-align:center;padding:11px 10px}.bb-c{padding:10px 12px}}
+.bb-pz{display:flex;flex-direction:column;line-height:1.2}.bb-pz s{font-weight:400;color:var(--muted);font-size:12px}.bb-pz span{display:flex;align-items:center;white-space:nowrap}.bb-pz b{color:var(--ink);font-size:15px}.bb-pz em{font-style:normal;font-weight:700;color:#0F3D2E;background:var(--lime);border-radius:6px;padding:1px 5px;margin-left:5px;font-size:12px}
+@media (max-width:360px){.bb-v{display:none}.bb-pz b{font-size:14px}}
 
 </style>
 </head>
@@ -290,7 +308,7 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="note">Punteggi su 10 pubblicati da <a href="https://www.padelful.com/en/rackets/tactical-katana-2026" rel="nofollow noopener" target="_blank">Padelful</a>, voto complessivo 8,3/10. Il punteggio PadelMetrix arriverà con il nostro metodo di valutazione.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Dove comprare la Katana 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Spedizione e resi Amazon</small></div><a class="btn lime" href="https://www.amazon.it/s?k=Tactical+Padel+Katana+2026&amp;tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank">Vedi su Amazon</a></div>
@@ -354,10 +372,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/it/racchette/alkemia-tenebris-2025/"><small>Alkemia · 2025</small><b>Tenebris 2025</b><small>Goccia polivalente, 345–375 g, livello intermedio / avanzato.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Confronti con la Katana 2026</h3><ul class="clean"><li><a href="/it/confronta/tactical-padel-el-toro-2026-vs-tactical-padel-katana-2026/">Katana 2026 vs El Toro 2026</a></li></ul></div>
+
 </section>
 
 <section class="block faq"><h2>Domande frequenti sulla Katana 2026</h2><details><summary>Quanto pesa la Katana 2026?</summary><p>La Tactical Padel Katana 2026 pesa 355–365 g, secondo i dati dichiarati.</p></details><details><summary>Per che livello è la Katana 2026?</summary><p>È pensata per un livello intermedio / avanzato. Stile di gioco: polivalente.</p></details><details><summary>Che forma ha la Katana 2026?</summary><p>Ha forma goccia. La forma a goccia sta a metà tra rotonda e diamante: un compromesso tra controllo e potenza.</p></details></section>
 <p class="note" style="padding-bottom:24px">Scheda aggiornata il 15 novembre 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b class="bb-n">Katana 2026</b></div><a class="btn lime" href="https://www.amazon.it/s?k=Tactical+Padel+Katana+2026&amp;tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank"><span class="bb-v">Vedi su </span>Amazon</a><a class="bb-c" href="/it/confronta/tactical-padel-el-toro-2026-vs-tactical-padel-katana-2026/">Confronta</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix è un sito indipendente di Luca Bicchieri. In qualità di Affiliato Amazon, PadelMetrix riceve un guadagno dagli acquisti idonei. Alcuni link verso altri negozi sono link di affiliazione.</span>

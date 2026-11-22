@@ -534,6 +534,7 @@ def amazon_js(corpo):
             "<img src=\"'+x.img+'\" alt=\"'+alt+'\" loading=\"lazy\"></a>'+(big?'<small>" + cred + "</small>':'');"
             "el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}});"
             "var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);"
+            "document.querySelectorAll('[data-pzb]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pzb')];if(!x||!x.prezzo)return;var f=function(v){return String(v).replace(/\\u00a0/g,' ').replace(/[<>&]/g,'')};el.innerHTML=(x.sconto>=10&&x.prima?'<span><s>'+f(x.prima)+'</s><em>−'+(+x.sconto)+'%</em></span>':'')+'<b>'+f(x.prezzo)+'</b>'});"
             "document.querySelectorAll('[data-pz]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pz')];if(!x||!x.prezzo)return;"
             "el.textContent='" + L("Prezzo su Amazon: ", "Price on Amazon: ", "Precio en Amazon: ", "Prix sur Amazon : ") + "'+x.prezzo.replace(/\\u00a0/g,' ')+' (" + L("aggiornato il ", "updated ", "actualizado el ", "mis à jour le ") + "'+gg+' " + L("alle", "at", "a las", "à") + " '+hh+')'})"
             "}).catch(function(){})})();</script>")
