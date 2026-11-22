@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-22T14:34Z",
+ "aggiornato": "2026-11-22T21:48Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -167,8 +167,8 @@
    "h": 500,
    "titolo": "adidas Metalbone Carbon 2026 - Racchetta da paddle, 453 g, colore: Nero | Palla da tennis ufficiale US Open con feltro di alta qualità, rimbalzo uniforme della palla e qualità di gioco costante",
    "scheda": "adidas-metalbone-carbon-2026",
-   "prezzo": "176,30 €",
-   "euro": 176.3
+   "prezzo": "177,20 €",
+   "euro": 177.2
   },
   "B0FZX36DDZ": {
    "img": "https://m.media-amazon.com/images/I/41ye9oHfkWL._SL500_.jpg",
@@ -359,7 +359,9 @@
    "w": 500,
    "h": 500,
    "titolo": "Babolat Counter Vertuo 2.6 - Racchetta da paddle Senior",
-   "scheda": "babolat-counter-vertuo-2-6-2026"
+   "scheda": "babolat-counter-vertuo-2-6-2026",
+   "prezzo": "115,98 €",
+   "euro": 115.98
   },
   "B0F3P2DWHL": {
    "img": "https://m.media-amazon.com/images/I/413sl4xCeIL._SL500_.jpg",
@@ -723,8 +725,8 @@
    "h": 500,
    "titolo": "Bullpadel Racchetta Da Padel Vertex 05 27 One Size",
    "scheda": "bullpadel-vertex-05-2027",
-   "prezzo": "276,40 €",
-   "euro": 276.4
+   "prezzo": "275,00 €",
+   "euro": 275.0
   },
   "B0FQK5LWH2": {
    "img": "https://m.media-amazon.com/images/I/41B3Sf3cHeL._SL500_.jpg",
@@ -753,8 +755,8 @@
    "h": 500,
    "titolo": "Bullpadel Vertex 05 Woman",
    "scheda": "bullpadel-vertex-05-w-2026",
-   "prezzo": "132,14 €",
-   "euro": 132.14,
+   "prezzo": "132,00 €",
+   "euro": 132.0,
    "sconto": 17,
    "prima": "159,90 €",
    "tipo_prima": "WAS_PRICE"
@@ -1246,8 +1248,8 @@
    "h": 500,
    "titolo": "Nox Racchetta Da Padel Genius 18k Alum By Agustin Tapia One Size",
    "scheda": "nox-genius-18k-alum-2027",
-   "prezzo": "266,69 €",
-   "euro": 266.69
+   "prezzo": "265,00 €",
+   "euro": 265.0
   },
   "B0G1864GVC": {
    "img": "https://m.media-amazon.com/images/I/41YNzNRIKRL._SL500_.jpg",
@@ -1322,11 +1324,8 @@
    "h": 500,
    "titolo": "nox Quantum 12k Carbon 2025",
    "scheda": "nox-quantum-12k-carbon-2025",
-   "prezzo": "153,99 €",
-   "euro": 153.99,
-   "sconto": 9,
-   "prima": "169,16 €",
-   "tipo_prima": "WAS_PRICE"
+   "prezzo": "181,49 €",
+   "euro": 181.49
   },
   "B0DHT7F81L": {
    "img": "https://m.media-amazon.com/images/I/41GbONpcMjL._SL500_.jpg",
@@ -1472,9 +1471,7 @@
    "w": 500,
    "h": 500,
    "titolo": "Royal Padel Rp 779 Whip Light 2026",
-   "scheda": "royal-padel-whip-light-2026",
-   "prezzo": "175,99 €",
-   "euro": 175.99
+   "scheda": "royal-padel-whip-light-2026"
   },
   "B0D5WSHYSG": {
    "img": "https://m.media-amazon.com/images/I/415Vac+DUUL._SL500_.jpg",
@@ -1522,8 +1519,8 @@
    "h": 500,
    "titolo": "SIUX Diablo Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, controllo, potenza e comfort",
    "scheda": "siux-diablo-elite-2027",
-   "prezzo": "271,24 €",
-   "euro": 271.24
+   "prezzo": "150,95 €",
+   "euro": 150.95
   },
   "B0FV8KDN8X": {
    "img": "https://m.media-amazon.com/images/I/41BzHrr1x8L._SL500_.jpg",
@@ -1540,8 +1537,8 @@
    "h": 500,
    "titolo": "SIUX Diablo Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 24K Textreme, equilibrio medio, finitura satinata 3D, controllo, potenza e precisione",
    "scheda": "siux-diablo-pro-2027",
-   "prezzo": "361,94 €",
-   "euro": 361.94
+   "prezzo": "200,95 €",
+   "euro": 200.95
   },
   "B0HPL2ZGBR": {
    "img": "https://m.media-amazon.com/images/I/41wLxPnL9zL._SL500_.jpg",
@@ -1549,8 +1546,8 @@
    "h": 500,
    "titolo": "Siux Electra Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, fermezza, precisione e polivalenza",
    "scheda": "siux-electra-elite-2027",
-   "prezzo": "272,24 €",
-   "euro": 272.24
+   "prezzo": "201,90 €",
+   "euro": 201.9
   },
   "B0HPKVS5J7": {
    "img": "https://m.media-amazon.com/images/I/41MJU0AtYML._SL500_.jpg",
@@ -1558,8 +1555,8 @@
    "h": 500,
    "titolo": "Siux Electra Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K, equilibrio medio, finitura satinata e sabbiosa, controllo, potenza e precisione",
    "scheda": "siux-electra-pro-2027",
-   "prezzo": "270,08 €",
-   "euro": 270.08
+   "prezzo": "200,95 €",
+   "euro": 200.95
   },
   "B0DXDD2BZ8": {
    "img": "https://m.media-amazon.com/images/I/41HYi4YADML._SL500_.jpg",
@@ -1576,8 +1573,8 @@
    "h": 500,
    "titolo": "SIUX Fenix Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a diamante, carbonio 3K, equilibrio alto, finitura opaca e sabbiosa, potenza, durezza e precisione",
    "scheda": "siux-fenix-elite-2027",
-   "prezzo": "291,32 €",
-   "euro": 291.32
+   "prezzo": "201,90 €",
+   "euro": 201.9
   },
   "B0HPKS5QRJ": {
    "img": "https://m.media-amazon.com/images/I/31l2BBc416L._SL500_.jpg",
@@ -1585,8 +1582,8 @@
    "h": 500,
    "titolo": "SIUX Fenix Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a diamante, carbonio 12K Honeycomb, equilibrio alto, finitura satinata 3D, massima potenza e precisione",
    "scheda": "siux-fenix-pro-2027",
-   "prezzo": "272,00 €",
-   "euro": 272.0
+   "prezzo": "200,95 €",
+   "euro": 200.95
   },
   "B0DYVSZPLV": {
    "img": "https://m.media-amazon.com/images/I/41-xYOeQJ9L._SL500_.jpg",
@@ -1606,8 +1603,8 @@
    "h": 500,
    "titolo": "Siux Obsidian Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K SC Comfort ed EVA Soft, equilibrio basso, finitura satinata, controllo e comfort",
    "scheda": "siux-obsidian-elite-2027",
-   "prezzo": "272,24 €",
-   "euro": 272.24
+   "prezzo": "150,95 €",
+   "euro": 150.95
   },
   "B0HPKY5CQ1": {
    "img": "https://m.media-amazon.com/images/I/414T7xJAgJL._SL500_.jpg",
@@ -1615,8 +1612,8 @@
    "h": 500,
    "titolo": "SIUX Obsidian Pro 2027 Black - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 16K ed EVA Soft, bilanciamento basso, finitura satinata 3D, controllo e precisione",
    "scheda": "siux-obsidian-pro-2027",
-   "prezzo": "361,94 €",
-   "euro": 361.94
+   "prezzo": "200,95 €",
+   "euro": 200.95
   },
   "B0HPKPJS1Y": {
    "img": "https://m.media-amazon.com/images/I/31sxoNzbNRL._SL500_.jpg",
@@ -1624,8 +1621,8 @@
    "h": 500,
    "titolo": "SIUX Pegasus Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, potenza, fermezza e precisione",
    "scheda": "siux-pegasus-elite-2027",
-   "prezzo": "272,24 €",
-   "euro": 272.24
+   "prezzo": "150,95 €",
+   "euro": 150.95
   },
   "B0HPL1C77B": {
    "img": "https://m.media-amazon.com/images/I/41bb5Us+O7L._SL500_.jpg",
@@ -1633,8 +1630,8 @@
    "h": 500,
    "titolo": "SIUX Pegasus Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K, equilibrio medio, finitura satinata 3D, potenza, rigidità e precisione",
    "scheda": "siux-pegasus-pro-2027",
-   "prezzo": "362,94 €",
-   "euro": 362.94
+   "prezzo": "200,95 €",
+   "euro": 200.95
   },
   "B0DZFLSMJY": {
    "img": "https://m.media-amazon.com/images/I/41rV0PE4kWL._SL500_.jpg",
@@ -1651,8 +1648,8 @@
    "h": 500,
    "titolo": "Siux Valkiria Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, comfort, precisione e versatilità",
    "scheda": "siux-valkiria-elite-2027",
-   "prezzo": "249,52 €",
-   "euro": 249.52
+   "prezzo": "150,95 €",
+   "euro": 150.95
   },
   "B0HPL2WY7M": {
    "img": "https://m.media-amazon.com/images/I/31TP3CSfX4L._SL500_.jpg",
@@ -1660,8 +1657,8 @@
    "h": 500,
    "titolo": "Siux Valkiria Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K ed EVA Soft, equilibrio medio, finitura satinata 3D, leggerezza e precisione",
    "scheda": "siux-valkiria-pro-2027",
-   "prezzo": "353,00 €",
-   "euro": 353.0
+   "prezzo": "200,95 €",
+   "euro": 200.95
   },
   "B0FVCM3T39": {
    "img": "https://m.media-amazon.com/images/I/41A9ObFCZxL._SL500_.jpg",
@@ -2362,8 +2359,8 @@
    "h": 500,
    "titolo": "Bullpadel Fip Next Af42000000 Set Di 3 Palline Af42000000",
    "scheda": "regali",
-   "prezzo": "5,95 €",
-   "euro": 5.95
+   "prezzo": "13,11 €",
+   "euro": 13.11
   },
   "B0DJT5NTPW": {
    "img": "https://m.media-amazon.com/images/I/41OIshZIv9L._SL500_.jpg",
@@ -2383,8 +2380,8 @@
    "h": 500,
    "titolo": "HEAD Padel Pro S + Scatola da 24 Tubi da 3 Palline",
    "scheda": "regali",
-   "prezzo": "113,05 €",
-   "euro": 113.05
+   "prezzo": "108,90 €",
+   "euro": 108.9
   },
   "B09FF6BXQB": {
    "img": "https://m.media-amazon.com/images/I/41BFNApmleL._SL500_.jpg",
@@ -2605,8 +2602,8 @@
    "h": 500,
    "titolo": "Head Zaino da Tennis Base Backpack, Nero/Arancio, 17L",
    "scheda": "regali",
-   "prezzo": "33,94 €",
-   "euro": 33.94
+   "prezzo": "32,65 €",
+   "euro": 32.65
   },
   "B0D894FN7P": {
    "img": "https://m.media-amazon.com/images/I/41o06rJ0j7L._SL500_.jpg",
@@ -2644,8 +2641,8 @@
    "h": 264,
    "titolo": "Asics Gel-Dedicate 9 Padel Scarpe da Padel",
    "scheda": "regali",
-   "prezzo": "74,99 €",
-   "euro": 74.99
+   "prezzo": "75,00 €",
+   "euro": 75.0
   },
   "B0GK7Z6GND": {
    "img": "https://m.media-amazon.com/images/I/31xl39gsybL._SL500_.jpg",
@@ -2750,9 +2747,9 @@
    "h": 500,
    "titolo": "HEAD Club Shorts, Uomo, Nero, L | facile da pulire | regolatore di umidità | asciugatura rapida | Girovita con elastico | Girovita con cordino",
    "scheda": "regali",
-   "prezzo": "25,99 €",
-   "euro": 25.99,
-   "sconto": 42,
+   "prezzo": "25,49 €",
+   "euro": 25.49,
+   "sconto": 43,
    "prima": "45,00 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -2782,7 +2779,9 @@
    "w": 500,
    "h": 500,
    "titolo": "Joma - Felpa Faraon Nera Mezza Zip Uomo, Unisex - Adulto, 100285.100.L, Nero - 100, XL",
-   "scheda": "regali"
+   "scheda": "regali",
+   "prezzo": "21,99 €",
+   "euro": 21.99
   },
   "B09JC9NDFN": {
    "img": "https://m.media-amazon.com/images/I/313GiHlQiSL._SL500_.jpg",
@@ -2922,8 +2921,8 @@
    "h": 500,
    "titolo": "DUNLOP RACCHETTA DA PADEL FX JUNIOR – Forma ibrida, telaio in grafite, bilanciamento medio, nucleo EVA morbida – Per junior",
    "scheda": "regali",
-   "prezzo": "50,49 €",
-   "euro": 50.49
+   "prezzo": "50,99 €",
+   "euro": 50.99
   },
   "B0FZX2F2JS": {
    "img": "https://m.media-amazon.com/images/I/41KtEYi6+qL._SL500_.jpg",
