@@ -238,6 +238,24 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t .bb-n{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 14px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:15px;font-weight:600;color:var(--green);background:#fff;border:1.5px solid var(--green);border-radius:12px;padding:10px 14px;white-space:nowrap;text-decoration:none}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
+@media (max-width:400px){.buybar{gap:6px;padding-left:12px;padding-right:12px}.bb-t{flex:0 0 auto}.bb-t .bb-n{display:none}.bb-t:not(:has(.bb-pz:not(:empty))){display:none}.buybar .btn{flex:1;text-align:center;padding:11px 10px}.bb-c{padding:10px 12px}}
+.bb-pz{display:flex;flex-direction:column;line-height:1.2}.bb-pz s{font-weight:400;color:var(--muted);font-size:12px}.bb-pz span{display:flex;align-items:center;white-space:nowrap}.bb-pz b{color:var(--ink);font-size:15px}.bb-pz em{font-style:normal;font-weight:700;color:#0F3D2E;background:var(--lime);border-radius:6px;padding:1px 5px;margin-left:5px;font-size:12px}
+@media (max-width:360px){.bb-v{display:none}.bb-pz b{font-size:14px}}
 
 </style>
 </head>
@@ -346,7 +364,7 @@ header.site nav.main a.hot.on{border-bottom:0}
 <span><a href="/es/palas/">Palas</a> · <a href="/es/guias/">Guías</a> · <a href="/es/articulos/">Artículos</a> · <a href="/es/preguntas/">Preguntas</a> · <a href="/es/glosario/">Glosario</a> · <a href="/es/datos/">Datos abiertos</a> · <a href="/es/quienes-somos/">Quiénes somos y método</a> · <a href="/es/contacto/">Contacto</a> · <a href="/es/privacidad/">Privacidad</a> · <a href="/es/cookies/">Cookies</a> · <a href="#" onclick="return pmApriCookie()">Preferencias de cookies</a> · © 2026 PadelMetrix</span>
 </div></footer>
 
-<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/"/g,'&quot;');el.classList.add('has-img');el.innerHTML='<a href="https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank" title="Amazon"><img src="'+x.img+'" alt="'+alt+'" loading="lazy"></a>'+(big?'<small>Imagen: Amazon</small>':'');el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}});var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);document.querySelectorAll('[data-pz]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pz')];if(!x||!x.prezzo)return;el.textContent='Precio en Amazon: '+x.prezzo.replace(/\u00a0/g,' ')+' (actualizado el '+gg+' a las '+hh+')'})}).catch(function(){})})();</script>
+<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/"/g,'&quot;');el.classList.add('has-img');el.innerHTML='<a href="https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank" title="Amazon"><img src="'+x.img+'" alt="'+alt+'" loading="lazy"></a>'+(big?'<small>Imagen: Amazon</small>':'');el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}});var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);document.querySelectorAll('[data-pzb]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pzb')];if(!x||!x.prezzo)return;var f=function(v){return String(v).replace(/\u00a0/g,' ').replace(/[<>&]/g,'')};el.innerHTML=(x.sconto>=10&&x.prima?'<span><s>'+f(x.prima)+'</s><em>−'+(+x.sconto)+'%</em></span>':'')+'<b>'+f(x.prezzo)+'</b>'});document.querySelectorAll('[data-pz]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pz')];if(!x||!x.prezzo)return;el.textContent='Precio en Amazon: '+x.prezzo.replace(/\u00a0/g,' ')+' (actualizado el '+gg+' a las '+hh+')'})}).catch(function(){})})();</script>
 <style>
 #pm-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;background:#fff;color:#1F2D27;border:1px solid #E1E5DF;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.15);padding:16px 18px;display:none;font:15px/1.5 'IBM Plex Sans',system-ui,sans-serif}
 #pm-cc p{margin:0 0 12px}#pm-cc .b{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
