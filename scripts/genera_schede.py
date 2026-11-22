@@ -303,11 +303,12 @@ def render(d, n, db, pair_set):
     primo_neg = next((x for x in p["negozi"] if isinstance(x, dict) and x.get("amazon")), None) or next((x for x in p["negozi"] if isinstance(x, dict)), None)
     if primo_neg:
         bb_btn = re.search(r"<a [^>]*>.*?</a>", store(primo_neg), re.S).group(0)
+        bb_btn = re.sub(r">([^<]*?)(Amazon)</a>$", lambda m: f'><span class="bb-v">{m.group(1)}</span>{m.group(2)}</a>', bb_btn)
         bb_conf = re.search(r'href="([^"]+)"', conf_btn).group(1)
         prezzo_bb = (f'<span class="bb-pz" data-pzb="{e(asin)}"></span>' if asin else "")
         bb_js = ('<script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;'
                  'new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>')
-        buybar = (f'<div class="buybar" id="buybar"><div class="bb-t"><b>{e(sh)}</b>{prezzo_bb}</div>{bb_btn}'
+        buybar = (f'<div class="buybar" id="buybar"><div class="bb-t"><b class="bb-n">{e(sh)}</b>{prezzo_bb}</div>{bb_btn}'
                   f'<a class="bb-c" href="{bb_conf}">{L("Confronta", "Compare", "Comparar", "Comparer")}</a></div>' + bb_js)
     else:
         buybar = ""

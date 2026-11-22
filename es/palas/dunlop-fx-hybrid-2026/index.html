@@ -249,14 +249,16 @@ header.site nav.main a.hot.on{border-bottom:0}
 .buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
 .buybar.off{transform:translateY(120%)}
 .bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
-.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-t .bb-n{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
 .bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
 .buybar .btn{padding:11px 14px;font-size:15px;white-space:nowrap}
 .bb-c{font-size:15px;font-weight:600;color:var(--green);background:#fff;border:1.5px solid var(--green);border-radius:12px;padding:10px 14px;white-space:nowrap;text-decoration:none}
 body:has(.buybar){padding-bottom:78px}
 }
 @media (prefers-reduced-motion:reduce){.buybar{transition:none}}
-@media (max-width:400px){.buybar{gap:6px;padding-left:12px;padding-right:12px}.bb-t{flex:0 0 auto}.bb-t b{display:none}.bb-t:not(:has(.bb-pz:not(:empty))){display:none}.buybar .btn{flex:1;text-align:center;padding:11px 10px}.bb-c{padding:10px 12px}}
+@media (max-width:400px){.buybar{gap:6px;padding-left:12px;padding-right:12px}.bb-t{flex:0 0 auto}.bb-t .bb-n{display:none}.bb-t:not(:has(.bb-pz:not(:empty))){display:none}.buybar .btn{flex:1;text-align:center;padding:11px 10px}.bb-c{padding:10px 12px}}
+.bb-pz{display:flex;flex-direction:column;line-height:1.2}.bb-pz s{font-weight:400;color:var(--muted);font-size:12px}.bb-pz span{display:flex;align-items:center;white-space:nowrap}.bb-pz b{color:var(--ink);font-size:15px}.bb-pz em{font-style:normal;font-weight:700;color:#0F3D2E;background:var(--lime);border-radius:6px;padding:1px 5px;margin-left:5px;font-size:12px}
+@media (max-width:360px){.bb-v{display:none}.bb-pz b{font-size:14px}}
 
 </style>
 </head>
@@ -376,7 +378,7 @@ body:has(.buybar){padding-bottom:78px}
 
 <section class="block faq"><h2>Preguntas frecuentes sobre la FX Hybrid 2026</h2><details><summary>¿Cuánto pesa la FX Hybrid 2026?</summary><p>La Dunlop FX Hybrid 2026 pesa 360–375 g, según los datos declarados.</p></details><details><summary>¿Para qué nivel es la FX Hybrid 2026?</summary><p>Está pensada para un nivel intermedio / avanzado. Estilo de juego: polivalente.</p></details><details><summary>¿Qué forma tiene la FX Hybrid 2026?</summary><p>Tiene forma lágrima. La forma de lágrima está a medio camino entre redonda y diamante: un compromiso entre control y potencia.</p></details></section>
 <p class="note" style="padding-bottom:24px">Ficha actualizada el 15 de noviembre de 2026.</p>
-<div class="buybar" id="buybar"><div class="bb-t"><b>FX Hybrid 2026</b></div><a class="btn lime" href="https://www.amazon.es/s?k=Dunlop+FX+Hybrid+2026" rel="sponsored nofollow noopener" target="_blank">Ver en Amazon</a><a class="bb-c" href="/es/comparar/akkeron-diablo-2025-vs-dunlop-fx-hybrid-2026/">Comparar</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
+<div class="buybar" id="buybar"><div class="bb-t"><b class="bb-n">FX Hybrid 2026</b></div><a class="btn lime" href="https://www.amazon.es/s?k=Dunlop+FX+Hybrid+2026" rel="sponsored nofollow noopener" target="_blank"><span class="bb-v">Ver en </span>Amazon</a><a class="bb-c" href="/es/comparar/akkeron-diablo-2025-vs-dunlop-fx-hybrid-2026/">Comparar</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix es una web independiente de Luca Bicchieri. Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.</span>
