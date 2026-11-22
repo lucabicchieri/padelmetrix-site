@@ -7,7 +7,7 @@ import json
 import pathlib
 import re
 
-from comune import racket_svg
+from comune import racket_svg, racket_sprite, racket_use
 import traduci as T
 import consenso as C
 
@@ -501,6 +501,7 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None, og=
 </style>
 </head>
 <body>
+{racket_sprite()}
 {header(on, alt)}
 <main class="wrap">
 {corpo}
@@ -568,14 +569,21 @@ def card(n, extra=""):
     testo = f'<small>{e(n["marca"])} · {n["anno"]}</small><b>{e(n["nome"])}</b><small>{e(" · ".join(bits))}</small>{extra}'
     if n.get("asin"):
         # Con immagine Amazon: l'immagine porta ad Amazon (obbligo della licenza), il testo alla scheda
-        return (f'<div class="rcard has-asin" {attrs}><div class="ill" data-asin="{e(n["asin"])}" data-alt="{e(n["titolo"])}">{racket_svg(n["forma"], 64, n["titolo"])}</div>'
+        return (f'<div class="rcard has-asin" {attrs}><div class="ill" data-asin="{e(n["asin"])}" data-alt="{e(n["titolo"])}">{racket_use(n["forma"], 64, n["titolo"])}</div>'
                 f'<a class="rtxt" href="{url_r(n)}">{testo}</a></div>')
-    return (f'<a class="rcard" href="{url_r(n)}" {attrs}><div class="ill">{racket_svg(n["forma"], 64, n["titolo"])}</div>'
+    return (f'<a class="rcard" href="{url_r(n)}" {attrs}><div class="ill">{racket_use(n["forma"], 64, n["titolo"])}</div>'
             f'<div>{testo}</div></a>')
 
 
-def griglia(items):
-    return '<div class="rgrid">' + "\n".join(card(n) for n in items) + "</div>"
+def griglia(items, visibili=None):
+    """visibili = quante card mostrare subito; le altre partono nascoste (le mostra lo script dei filtri)."""
+    out = []
+    for i, n in enumerate(items):
+        c = card(n)
+        if visibili is not None and i >= visibili:
+            c = c.replace('class="rcard', 'hidden class="rcard', 1)
+        out.append(c)
+    return '<div class="rgrid">' + "\n".join(out) + "</div>"
 
 
 def ordina(items):

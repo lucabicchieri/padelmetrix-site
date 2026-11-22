@@ -18,8 +18,8 @@ CSS = """<style>
 .of-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin:18px 0 10px}
 .of{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .of .bd{position:absolute;left:10px;top:10px;z-index:2;background:var(--lime);color:var(--green);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;padding:4px 10px;border-radius:999px}
-.of .im{height:190px;display:flex;align-items:center;justify-content:center;background:#fff;border-bottom:1px solid var(--line)}
-.of .im img{max-width:86%;max-height:170px;object-fit:contain}
+[data-of="r"]:not(.ok){min-height:640px}[data-of]:not(.ok){min-height:330px}.of .im{height:190px;display:flex;align-items:center;justify-content:center;background:#fff;border-bottom:1px solid var(--line)}
+.of .im img{max-width:86%;max-height:170px;width:auto;height:auto;object-fit:contain}
 .of .tx{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
 .of .nm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;line-height:1.25;color:var(--ink);text-decoration:none}
 .of .nm:hover{text-decoration:underline}
@@ -87,7 +87,7 @@ var I=window.OF_IDX||{},T=window.OF_TX||{};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function fm(x){var s=x.toFixed(2).replace('.',',').replace(/,00$/,'');s=s.replace(/\B(?=(\d{3})+(?!\d))/g,'.');return T.en?'€'+x.toFixed(2).replace(/\.00$/,''):s+' €'}
 function card(o){var am='https://www.amazon.it/dp/'+o.a+'?tag=padelmetrix-21',r='rel="sponsored nofollow noopener" target="_blank"';
-return '<div class="of"><span class="bd">−'+o.s+'%</span><a class="im" href="'+am+'" '+r+' title="Amazon"><img src="'+o.img+'" alt="'+esc(o.t)+'" loading="lazy"></a><div class="tx">'
+return '<div class="of"><span class="bd">−'+o.s+'%</span><a class="im" href="'+am+'" '+r+' title="Amazon"><img src="'+o.img+'" alt="'+esc(o.t)+'" width="500" height="500" loading="lazy"></a><div class="tx">'
 +(o.u?'<a class="nm" href="'+o.u+'">'+esc(o.t)+'</a>':'<span class="nm">'+esc(o.t)+'</span>')
 +(o.lv?'<small class="lv">'+T.lv+': '+esc(o.lv)+'</small>':'')
 +'<div class="pz"><b>'+esc(o.pz)+'</b><s>'+esc(o.pr)+'</s></div><small>'+(o.src=='l'?T.pl:T.pa)+'</small>'
@@ -108,7 +108,7 @@ document.querySelectorAll('[data-of]').forEach(function(box){
  var k=box.getAttribute('data-of'),n=+box.getAttribute('data-n')||999,sec=box.closest('[data-of-sec]');
  var more=box.hasAttribute('data-more');
  function draw(lo,hi){var f=all.filter(function(o){return o.k==k&&o.e>=lo&&o.e<hi}),v=f.slice(0,n);
-  box.innerHTML=v.length?v.map(card).join(''):'';box.className=v.length?'of-grid':'';
+  box.innerHTML=v.length?v.map(card).join(''):'';box.className=(v.length?'of-grid':'')+' ok';
   var nx=box.nextElementSibling;if(nx&&nx.classList.contains('of-more'))nx.remove();
   if(more&&f.length>v.length){var b=document.createElement('button');b.type='button';b.className='btn out of-more';b.textContent=T.more.replace('{n}',f.length);
    b.onclick=function(){n=999;draw(lo,hi)};box.after(b)}
@@ -118,7 +118,7 @@ document.querySelectorAll('[data-of]').forEach(function(box){
   ch.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});draw(+b.getAttribute('data-lo'),+b.getAttribute('data-hi'))})});
 var ul=document.querySelector('[data-of-tutti]');if(ul&&ok){tutti.sort(function(p,q){return p.e-q.e});
  ul.innerHTML=tutti.map(function(o){return '<li><a href="'+o.u+'">'+esc(o.t)+'</a><span>'+esc(o.pz)+'</span></li>'}).join('')}
-}).catch(function(){document.querySelectorAll('[data-of][data-msg]').forEach(function(b){b.innerHTML='<p class="of-vuoto">'+T.no+'</p>'})})})();</script>"""
+}).catch(function(){document.querySelectorAll('[data-of][data-msg]').forEach(function(b){b.innerHTML='<p class="of-vuoto">'+T.no+'</p>'});document.querySelectorAll('[data-of]').forEach(function(b){b.classList.add('ok')})})})();</script>"""
 
 
 def dati_js(db, solo=None):
@@ -134,7 +134,7 @@ def blocco_home(db):
 <h2>{L("Le offerte di oggi su Amazon", "Today's deals on Amazon", "Las ofertas de hoy en Amazon", "Les offres du jour sur Amazon")}</h2>
 <p class="of-agg" data-of-agg></p>
 <div data-of="r" data-n="4"></div>
-<p style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn lime" href="{P("blackfriday")}">{L("Black Friday: le 15 più scontate →", "Black Friday: the 15 biggest discounts →", "Black Friday: las 15 más rebajadas →", "Black Friday : les 15 plus remisées →")}</a><a class="btn out" href="{P("offerte")}">{L("Tutte le offerte padel →", "All padel deals →", "Todas las ofertas de pádel →", "Toutes les offres padel →")}</a></p>
+<p style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn lime" href="{P("blackfriday")}">{L("Black Friday: le 15 più scontate →", "Black Friday: the 15 biggest discounts →", "Black Friday: las 15 más rebajadas →", "Black Friday : les 15 plus remisées →")}</a><a class="btn ln" href="{P("offerte")}">{L("Tutte le offerte padel →", "All padel deals →", "Todas las ofertas de pádel →", "Toutes les offres padel →")}</a></p>
 </div></section>''', dati_js(db, solo="r") + JS)
 
 
@@ -305,7 +305,7 @@ def pagina_bf(db):
 <p class="of-agg" data-of-agg></p>
 <section data-of-sec><h2>{L("Le 15 racchette più scontate di oggi", "Today's 15 most discounted rackets", "Las 15 palas más rebajadas de hoy", "Les 15 raquettes les plus remisées du jour")}</h2>
 <div data-of="r" data-n="15" data-msg>{fallback or '<p class="of-vuoto">' + L("Carico i prezzi di oggi…", "Loading today's prices…", "Cargando los precios de hoy…", "Chargement des prix du jour…") + '</p>'}</div>
-<p style="margin-top:14px"><a class="btn out" href="{P("offerte")}">{L("Tutte le offerte, anche accessori e pickleball →", "All deals, including accessories and pickleball →", "Todas las ofertas, también accesorios y pickleball →", "Toutes les offres, accessoires et pickleball compris →")}</a></p></section>
+<p style="margin-top:14px"><a class="btn ln" href="{P("offerte")}">{L("Tutte le offerte, anche accessori e pickleball →", "All deals, including accessories and pickleball →", "Todas las ofertas, también accesorios y pickleball →", "Toutes les offres, accessoires et pickleball compris →")}</a></p></section>
 <div class="prose" style="margin-top:30px">
 <h2>{L("Le date del Black Friday 2026 su Amazon", "Black Friday 2026 dates on Amazon", "Las fechas del Black Friday 2026 en Amazon", "Les dates du Black Friday 2026 sur Amazon")}</h2>
 <ul><li>{L("<b>Inizio offerte:</b> giovedì 19 novembre", "<b>Deals start:</b> Thursday 19 November", "<b>Inicio de las ofertas:</b> jueves 19 de noviembre", "<b>Début des offres :</b> jeudi 19 novembre")}</li>

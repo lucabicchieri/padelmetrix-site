@@ -39,7 +39,7 @@ var n=0;cards.forEach(function(c){var d=c.dataset,ok=true;
 if(v.marca&&d.marca!==v.marca)ok=false;if(v.forma&&d.forma!==v.forma)ok=false;if(v.tatto&&d.tatto!==v.tatto)ok=false;if(v.livello&&d.livello!==v.livello)ok=false;
 if(v.stile&&d.stile!==v.stile)ok=false;if(v.cat&&d.cat!==v.cat)ok=false;
 if(v.prezzo&&(!d.prezzo||parseFloat(d.prezzo)>parseFloat(v.prezzo)))ok=false;if(v.q&&nz(d.nome).indexOf(nz(v.q).trim())<0)ok=false;
-if(ok)n++;c.style.display=(ok&&n<=lim)?'':'none';});out.textContent=n+(n===1?' %s':' %s');
+if(ok)n++;c.hidden=!(ok&&n<=lim);c.style.display='';});out.textContent=n+(n===1?' %s':' %s');
 if(box){box.hidden=n<=lim;if(btn)btn.textContent='%s ('+(n-lim)+')';}}
 function reset(){lim=PASSO;run();}
 if(btn)btn.addEventListener('click',function(){lim+=PASSO*2;run();});
@@ -79,7 +79,7 @@ def elenco(db):
 <div class="marche scorri">{"".join(f'<a href="{P("marche", s)}">{e(m)}</a>' for s, m in marche)}</div>
 {form}
 <p class="conta" id="conta">{len(db)} {L("racchette", "rackets", "palas", "raquettes")}</p>
-{griglia(vetrina)}
+{griglia(vetrina, 24)}
 <div class="altre" id="altre" hidden><button type="button"></button></div>
 <p style="border:2px solid #C6F432;border-radius:12px;padding:16px 20px;background:#F4FBE3;margin:16px 0 24px">{L("<b>Nuovo al padel?</b> Prima di scegliere la racchetta leggi", "<b>New to padel?</b> Before choosing a racket, read", "<b>¿Nuevo en el pádel?</b> Antes de elegir la pala, lee", "<b>Nouveau au padel ?</b> Avant de choisir votre raquette, lisez")} <a href="{P("articoli", "regolamento-padel-regole-spiegate")}">{L("il regolamento del padel spiegato semplice", "the padel rules explained simply", "el reglamento del pádel explicado fácil", "les règles du padel expliquées simplement")}</a>: {L("servizio, pareti, punteggio e Star Point.", "serve, walls, scoring and Star Point.", "saque, paredes, tanteo y Star Point.", "service, vitres, score et Star Point.")}</p>'''
     itemlist = {"@context": "https://schema.org", "@type": "ItemList", "numberOfItems": len(db),
@@ -617,8 +617,8 @@ def guide_hub(G):
     voci.sort(key=lambda v: ordine[v[1]])
     carte = "".join(f'''<a class="gcard" href="{u}" data-cat="{cat}"><div class="gill">{IL.ill(k)}</div><div class="gtx"><span class="gk">{e(cat_n[cat])} · {e(tipo)}</span><b>{e(t)}</b><p>{e(d)}</p>{f'<span class="gn">{e(n)}</span>' if n else ""}</div></a>'''
                     for k, cat, t, d, u, n, tipo in voci)
-    tabs = f'<button type="button" class="on" data-c="">{L("Tutte", "All", "Todas", "Toutes")} <i>{len(voci)}</i></button>' + "".join(
-        f'<button type="button" data-c="{c}">{e(n)} <i>{sum(1 for v in voci if v[1] == c)}</i></button>' for c, n in CAT)
+    tabs = f'<button type="button" role="tab" aria-selected="true" class="on" data-c="">{L("Tutte", "All", "Todas", "Toutes")} <i>{len(voci)}</i></button>' + "".join(
+        f'<button type="button" role="tab" aria-selected="false" data-c="{c}">{e(n)} <i>{sum(1 for v in voci if v[1] == c)}</i></button>' for c, n in CAT)
     css = """<style>
 .ghero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;background:var(--green);color:#fff;border-radius:22px;padding:30px 32px;margin:6px 0 22px;overflow:hidden}
 .ghero h1{color:#fff;margin:0 0 12px}.ghero p{color:#EAF5EC;margin:0 0 18px;max-width:560px}.ghero .k{color:var(--lime);font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin-bottom:8px}
@@ -643,7 +643,7 @@ def guide_hub(G):
 @media (max-width:800px){.ghero{grid-template-columns:1fr;padding:24px 20px}.ghero .gart{order:-1;max-width:420px}.gquiz{flex-direction:column;align-items:flex-start}.gquiz .qi{flex-basis:auto;width:100%;max-width:260px}}
 </style>"""
     js = """<script>(function(){var t=document.querySelector('.gtabs');if(!t)return;t.addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;
-t.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});var c=b.getAttribute('data-c');
+t.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-selected',x===b?'true':'false')});var c=b.getAttribute('data-c');
 document.querySelectorAll('.gcard').forEach(function(g){g.hidden=!!c&&g.getAttribute('data-cat')!==c})})})();</script>"""
     cr, ld = crumbs([H(), (L("Guide", "Guides", "Guías", "Guides"), None)])
     corpo = f'''{css}{cr}

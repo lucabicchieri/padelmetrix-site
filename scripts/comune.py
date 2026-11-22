@@ -16,6 +16,29 @@ def url(lang, sezione, slug=None):
     return base + (f"{slug}/" if slug else "")
 
 
+def _teste():
+    return {
+        "rotonda": "M100 18 C150 18 178 52 178 104 C178 156 146 188 100 196 C54 188 22 156 22 104 C22 52 50 18 100 18 Z",
+        "goccia": "M100 14 C146 14 176 44 178 92 C180 140 150 182 100 198 C50 182 20 140 22 92 C24 44 54 14 100 14 Z",
+        "diamante": "M100 14 C128 14 156 30 170 58 C182 82 178 116 162 146 C146 174 122 190 100 198 C78 190 54 174 38 146 C22 116 18 82 30 58 C44 30 72 14 100 14 Z",
+    }
+
+
+def racket_sprite():
+    """Le tre racchette disegnate una volta sola per pagina: le card le richiamano con <use> (molti meno elementi nella pagina)."""
+    simboli = []
+    for k, d in _teste().items():
+        interno = racket_svg(k).split(">", 1)[1].rsplit("</svg>", 1)[0]
+        simboli.append(f'<symbol id="rk-{k}" viewBox="0 0 200 300">{interno}</symbol>')
+    return '<svg width="0" height="0" style="position:absolute" aria-hidden="true">' + "".join(simboli) + "</svg>"
+
+
+def racket_use(forma, width=64, label=None):
+    k = forma if forma in ("rotonda", "goccia", "diamante") else "goccia"
+    return (f'<svg viewBox="0 0 200 300" width="{width}" height="{width * 3 // 2}" role="img" aria-label="{label or "Illustrazione racchetta"}">'
+            f'<use href="#rk-{k}"/></svg>')
+
+
 def racket_svg(forma, width=150, label=None):
     """Illustrazione di una racchetta in base alla forma: diamante, rotonda, goccia."""
     teste = {
