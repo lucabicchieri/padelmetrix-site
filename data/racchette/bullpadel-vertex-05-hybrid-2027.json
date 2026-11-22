@@ -43,7 +43,8 @@
         "nota": "Spedizione e resi Amazon",
         "url": "https://www.amazon.it/s?k=Bullpadel+Vertex+05+Hybrid+2027",
         "pulsante": "Vedi su Amazon",
-        "amazon": true
+        "amazon": true,
+        "asin": "B0HHQMXHHW"
       },
       {
         "nome": "Padelshop",
