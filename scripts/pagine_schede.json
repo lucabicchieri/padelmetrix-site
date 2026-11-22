@@ -4041,15 +4041,6 @@
 }
 },
 {
-"path": "/it/racchette/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/it/racchette/nox-at10-genius-attack-18k-alum-2025/",
 "alt": {
 "it": "/it/racchette/nox-at10-genius-attack-18k-alum-2025/",
@@ -4065,15 +4056,6 @@
 "en": "/en/rackets/nox-at10-genius-attack-18k-alum-2026/",
 "es": "/es/palas/nox-at10-genius-attack-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2026/"
-}
-},
-{
-"path": "/it/racchette/nox-at10-genius-attack-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-18k-alum-2027/",
-"es": "/es/palas/nox-at10-genius-attack-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2027/"
 }
 },
 {
@@ -4122,30 +4104,12 @@
 }
 },
 {
-"path": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/it/racchette/nox-at10-luxury-genius-18k-alum-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2026/",
 "en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2026/",
 "es": "/es/palas/nox-at10-luxury-genius-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2026/"
-}
-},
-{
-"path": "/it/racchette/nox-at10-luxury-genius-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2027/"
 }
 },
 {
@@ -4176,30 +4140,12 @@
 }
 },
 {
-"path": "/it/racchette/nox-at10-pro-cup-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-hard-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-hard-2027/",
-"es": "/es/palas/nox-at10-pro-cup-hard-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-hard-2027/"
-}
-},
-{
 "path": "/it/racchette/nox-at10-pro-cup-soft-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-pro-cup-soft-2026/",
 "en": "/en/rackets/nox-at10-pro-cup-soft-2026/",
 "es": "/es/palas/nox-at10-pro-cup-soft-2026/",
 "fr": "/fr/raquettes/nox-at10-pro-cup-soft-2026/"
-}
-},
-{
-"path": "/it/racchette/nox-at10-pro-cup-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-soft-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-soft-2027/",
-"es": "/es/palas/nox-at10-pro-cup-soft-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-soft-2027/"
 }
 },
 {
@@ -4239,15 +4185,6 @@
 }
 },
 {
-"path": "/it/racchette/nox-equation-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-hard-2027/",
-"en": "/en/rackets/nox-equation-hard-2027/",
-"es": "/es/palas/nox-equation-hard-2027/",
-"fr": "/fr/raquettes/nox-equation-hard-2027/"
-}
-},
-{
 "path": "/it/racchette/nox-equation-hard-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-hard-advanced-2026/",
@@ -4275,21 +4212,21 @@
 }
 },
 {
-"path": "/it/racchette/nox-equation-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-soft-2027/",
-"en": "/en/rackets/nox-equation-soft-2027/",
-"es": "/es/palas/nox-equation-soft-2027/",
-"fr": "/fr/raquettes/nox-equation-soft-2027/"
-}
-},
-{
 "path": "/it/racchette/nox-equation-soft-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-soft-advanced-2026/",
 "en": "/en/rackets/nox-equation-soft-advanced-2026/",
 "es": "/es/palas/nox-equation-soft-advanced-2026/",
 "fr": "/fr/raquettes/nox-equation-soft-advanced-2026/"
+}
+},
+{
+"path": "/it/racchette/nox-equation-soft-advanced-2027/",
+"alt": {
+"it": "/it/racchette/nox-equation-soft-advanced-2027/",
+"en": "/en/rackets/nox-equation-soft-advanced-2027/",
+"es": "/es/palas/nox-equation-soft-advanced-2027/",
+"fr": "/fr/raquettes/nox-equation-soft-advanced-2027/"
 }
 },
 {
@@ -4434,15 +4371,6 @@
 "en": "/en/rackets/nox-ml10-ventus-control-3k-2026/",
 "es": "/es/palas/nox-ml10-ventus-control-3k-2026/",
 "fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2026/"
-}
-},
-{
-"path": "/it/racchette/nox-ml10-ventus-control-3k-2027/",
-"alt": {
-"it": "/it/racchette/nox-ml10-ventus-control-3k-2027/",
-"en": "/en/rackets/nox-ml10-ventus-control-3k-2027/",
-"es": "/es/palas/nox-ml10-ventus-control-3k-2027/",
-"fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2027/"
 }
 },
 {
@@ -4605,15 +4533,6 @@
 "en": "/en/rackets/nox-vk10-ventus-control-12k-2026/",
 "es": "/es/palas/nox-vk10-ventus-control-12k-2026/",
 "fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2026/"
-}
-},
-{
-"path": "/it/racchette/nox-vk10-ventus-control-12k-2027/",
-"alt": {
-"it": "/it/racchette/nox-vk10-ventus-control-12k-2027/",
-"en": "/en/rackets/nox-vk10-ventus-control-12k-2027/",
-"es": "/es/palas/nox-vk10-ventus-control-12k-2027/",
-"fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2027/"
 }
 },
 {
@@ -11691,15 +11610,6 @@
 }
 },
 {
-"path": "/en/rackets/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/en/rackets/nox-at10-genius-attack-18k-alum-2025/",
 "alt": {
 "it": "/it/racchette/nox-at10-genius-attack-18k-alum-2025/",
@@ -11715,15 +11625,6 @@
 "en": "/en/rackets/nox-at10-genius-attack-18k-alum-2026/",
 "es": "/es/palas/nox-at10-genius-attack-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2026/"
-}
-},
-{
-"path": "/en/rackets/nox-at10-genius-attack-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-18k-alum-2027/",
-"es": "/es/palas/nox-at10-genius-attack-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2027/"
 }
 },
 {
@@ -11772,30 +11673,12 @@
 }
 },
 {
-"path": "/en/rackets/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/en/rackets/nox-at10-luxury-genius-18k-alum-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2026/",
 "en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2026/",
 "es": "/es/palas/nox-at10-luxury-genius-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2026/"
-}
-},
-{
-"path": "/en/rackets/nox-at10-luxury-genius-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2027/"
 }
 },
 {
@@ -11826,30 +11709,12 @@
 }
 },
 {
-"path": "/en/rackets/nox-at10-pro-cup-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-hard-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-hard-2027/",
-"es": "/es/palas/nox-at10-pro-cup-hard-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-hard-2027/"
-}
-},
-{
 "path": "/en/rackets/nox-at10-pro-cup-soft-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-pro-cup-soft-2026/",
 "en": "/en/rackets/nox-at10-pro-cup-soft-2026/",
 "es": "/es/palas/nox-at10-pro-cup-soft-2026/",
 "fr": "/fr/raquettes/nox-at10-pro-cup-soft-2026/"
-}
-},
-{
-"path": "/en/rackets/nox-at10-pro-cup-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-soft-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-soft-2027/",
-"es": "/es/palas/nox-at10-pro-cup-soft-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-soft-2027/"
 }
 },
 {
@@ -11889,15 +11754,6 @@
 }
 },
 {
-"path": "/en/rackets/nox-equation-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-hard-2027/",
-"en": "/en/rackets/nox-equation-hard-2027/",
-"es": "/es/palas/nox-equation-hard-2027/",
-"fr": "/fr/raquettes/nox-equation-hard-2027/"
-}
-},
-{
 "path": "/en/rackets/nox-equation-hard-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-hard-advanced-2026/",
@@ -11925,21 +11781,21 @@
 }
 },
 {
-"path": "/en/rackets/nox-equation-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-soft-2027/",
-"en": "/en/rackets/nox-equation-soft-2027/",
-"es": "/es/palas/nox-equation-soft-2027/",
-"fr": "/fr/raquettes/nox-equation-soft-2027/"
-}
-},
-{
 "path": "/en/rackets/nox-equation-soft-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-soft-advanced-2026/",
 "en": "/en/rackets/nox-equation-soft-advanced-2026/",
 "es": "/es/palas/nox-equation-soft-advanced-2026/",
 "fr": "/fr/raquettes/nox-equation-soft-advanced-2026/"
+}
+},
+{
+"path": "/en/rackets/nox-equation-soft-advanced-2027/",
+"alt": {
+"it": "/it/racchette/nox-equation-soft-advanced-2027/",
+"en": "/en/rackets/nox-equation-soft-advanced-2027/",
+"es": "/es/palas/nox-equation-soft-advanced-2027/",
+"fr": "/fr/raquettes/nox-equation-soft-advanced-2027/"
 }
 },
 {
@@ -12084,15 +11940,6 @@
 "en": "/en/rackets/nox-ml10-ventus-control-3k-2026/",
 "es": "/es/palas/nox-ml10-ventus-control-3k-2026/",
 "fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2026/"
-}
-},
-{
-"path": "/en/rackets/nox-ml10-ventus-control-3k-2027/",
-"alt": {
-"it": "/it/racchette/nox-ml10-ventus-control-3k-2027/",
-"en": "/en/rackets/nox-ml10-ventus-control-3k-2027/",
-"es": "/es/palas/nox-ml10-ventus-control-3k-2027/",
-"fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2027/"
 }
 },
 {
@@ -12255,15 +12102,6 @@
 "en": "/en/rackets/nox-vk10-ventus-control-12k-2026/",
 "es": "/es/palas/nox-vk10-ventus-control-12k-2026/",
 "fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2026/"
-}
-},
-{
-"path": "/en/rackets/nox-vk10-ventus-control-12k-2027/",
-"alt": {
-"it": "/it/racchette/nox-vk10-ventus-control-12k-2027/",
-"en": "/en/rackets/nox-vk10-ventus-control-12k-2027/",
-"es": "/es/palas/nox-vk10-ventus-control-12k-2027/",
-"fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2027/"
 }
 },
 {
@@ -19341,15 +19179,6 @@
 }
 },
 {
-"path": "/es/palas/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/es/palas/nox-at10-genius-attack-18k-alum-2025/",
 "alt": {
 "it": "/it/racchette/nox-at10-genius-attack-18k-alum-2025/",
@@ -19365,15 +19194,6 @@
 "en": "/en/rackets/nox-at10-genius-attack-18k-alum-2026/",
 "es": "/es/palas/nox-at10-genius-attack-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2026/"
-}
-},
-{
-"path": "/es/palas/nox-at10-genius-attack-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-18k-alum-2027/",
-"es": "/es/palas/nox-at10-genius-attack-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2027/"
 }
 },
 {
@@ -19422,30 +19242,12 @@
 }
 },
 {
-"path": "/es/palas/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/es/palas/nox-at10-luxury-genius-18k-alum-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2026/",
 "en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2026/",
 "es": "/es/palas/nox-at10-luxury-genius-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2026/"
-}
-},
-{
-"path": "/es/palas/nox-at10-luxury-genius-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2027/"
 }
 },
 {
@@ -19476,30 +19278,12 @@
 }
 },
 {
-"path": "/es/palas/nox-at10-pro-cup-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-hard-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-hard-2027/",
-"es": "/es/palas/nox-at10-pro-cup-hard-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-hard-2027/"
-}
-},
-{
 "path": "/es/palas/nox-at10-pro-cup-soft-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-pro-cup-soft-2026/",
 "en": "/en/rackets/nox-at10-pro-cup-soft-2026/",
 "es": "/es/palas/nox-at10-pro-cup-soft-2026/",
 "fr": "/fr/raquettes/nox-at10-pro-cup-soft-2026/"
-}
-},
-{
-"path": "/es/palas/nox-at10-pro-cup-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-soft-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-soft-2027/",
-"es": "/es/palas/nox-at10-pro-cup-soft-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-soft-2027/"
 }
 },
 {
@@ -19539,15 +19323,6 @@
 }
 },
 {
-"path": "/es/palas/nox-equation-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-hard-2027/",
-"en": "/en/rackets/nox-equation-hard-2027/",
-"es": "/es/palas/nox-equation-hard-2027/",
-"fr": "/fr/raquettes/nox-equation-hard-2027/"
-}
-},
-{
 "path": "/es/palas/nox-equation-hard-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-hard-advanced-2026/",
@@ -19575,21 +19350,21 @@
 }
 },
 {
-"path": "/es/palas/nox-equation-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-soft-2027/",
-"en": "/en/rackets/nox-equation-soft-2027/",
-"es": "/es/palas/nox-equation-soft-2027/",
-"fr": "/fr/raquettes/nox-equation-soft-2027/"
-}
-},
-{
 "path": "/es/palas/nox-equation-soft-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-soft-advanced-2026/",
 "en": "/en/rackets/nox-equation-soft-advanced-2026/",
 "es": "/es/palas/nox-equation-soft-advanced-2026/",
 "fr": "/fr/raquettes/nox-equation-soft-advanced-2026/"
+}
+},
+{
+"path": "/es/palas/nox-equation-soft-advanced-2027/",
+"alt": {
+"it": "/it/racchette/nox-equation-soft-advanced-2027/",
+"en": "/en/rackets/nox-equation-soft-advanced-2027/",
+"es": "/es/palas/nox-equation-soft-advanced-2027/",
+"fr": "/fr/raquettes/nox-equation-soft-advanced-2027/"
 }
 },
 {
@@ -19734,15 +19509,6 @@
 "en": "/en/rackets/nox-ml10-ventus-control-3k-2026/",
 "es": "/es/palas/nox-ml10-ventus-control-3k-2026/",
 "fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2026/"
-}
-},
-{
-"path": "/es/palas/nox-ml10-ventus-control-3k-2027/",
-"alt": {
-"it": "/it/racchette/nox-ml10-ventus-control-3k-2027/",
-"en": "/en/rackets/nox-ml10-ventus-control-3k-2027/",
-"es": "/es/palas/nox-ml10-ventus-control-3k-2027/",
-"fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2027/"
 }
 },
 {
@@ -19905,15 +19671,6 @@
 "en": "/en/rackets/nox-vk10-ventus-control-12k-2026/",
 "es": "/es/palas/nox-vk10-ventus-control-12k-2026/",
 "fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2026/"
-}
-},
-{
-"path": "/es/palas/nox-vk10-ventus-control-12k-2027/",
-"alt": {
-"it": "/it/racchette/nox-vk10-ventus-control-12k-2027/",
-"en": "/en/rackets/nox-vk10-ventus-control-12k-2027/",
-"es": "/es/palas/nox-vk10-ventus-control-12k-2027/",
-"fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2027/"
 }
 },
 {
@@ -26991,15 +26748,6 @@
 }
 },
 {
-"path": "/fr/raquettes/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-genius-attack-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2025/",
 "alt": {
 "it": "/it/racchette/nox-at10-genius-attack-18k-alum-2025/",
@@ -27015,15 +26763,6 @@
 "en": "/en/rackets/nox-at10-genius-attack-18k-alum-2026/",
 "es": "/es/palas/nox-at10-genius-attack-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2026/"
-}
-},
-{
-"path": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-genius-attack-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-genius-attack-18k-alum-2027/",
-"es": "/es/palas/nox-at10-genius-attack-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-genius-attack-18k-alum-2027/"
 }
 },
 {
@@ -27072,30 +26811,12 @@
 }
 },
 {
-"path": "/fr/raquettes/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-12k-alum-xtrem-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-12k-alum-xtrem-2027/"
-}
-},
-{
 "path": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2026/",
 "en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2026/",
 "es": "/es/palas/nox-at10-luxury-genius-18k-alum-2026/",
 "fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2026/"
-}
-},
-{
-"path": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-luxury-genius-18k-alum-2027/",
-"en": "/en/rackets/nox-at10-luxury-genius-18k-alum-2027/",
-"es": "/es/palas/nox-at10-luxury-genius-18k-alum-2027/",
-"fr": "/fr/raquettes/nox-at10-luxury-genius-18k-alum-2027/"
 }
 },
 {
@@ -27126,30 +26847,12 @@
 }
 },
 {
-"path": "/fr/raquettes/nox-at10-pro-cup-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-hard-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-hard-2027/",
-"es": "/es/palas/nox-at10-pro-cup-hard-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-hard-2027/"
-}
-},
-{
 "path": "/fr/raquettes/nox-at10-pro-cup-soft-2026/",
 "alt": {
 "it": "/it/racchette/nox-at10-pro-cup-soft-2026/",
 "en": "/en/rackets/nox-at10-pro-cup-soft-2026/",
 "es": "/es/palas/nox-at10-pro-cup-soft-2026/",
 "fr": "/fr/raquettes/nox-at10-pro-cup-soft-2026/"
-}
-},
-{
-"path": "/fr/raquettes/nox-at10-pro-cup-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-at10-pro-cup-soft-2027/",
-"en": "/en/rackets/nox-at10-pro-cup-soft-2027/",
-"es": "/es/palas/nox-at10-pro-cup-soft-2027/",
-"fr": "/fr/raquettes/nox-at10-pro-cup-soft-2027/"
 }
 },
 {
@@ -27189,15 +26892,6 @@
 }
 },
 {
-"path": "/fr/raquettes/nox-equation-hard-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-hard-2027/",
-"en": "/en/rackets/nox-equation-hard-2027/",
-"es": "/es/palas/nox-equation-hard-2027/",
-"fr": "/fr/raquettes/nox-equation-hard-2027/"
-}
-},
-{
 "path": "/fr/raquettes/nox-equation-hard-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-hard-advanced-2026/",
@@ -27225,21 +26919,21 @@
 }
 },
 {
-"path": "/fr/raquettes/nox-equation-soft-2027/",
-"alt": {
-"it": "/it/racchette/nox-equation-soft-2027/",
-"en": "/en/rackets/nox-equation-soft-2027/",
-"es": "/es/palas/nox-equation-soft-2027/",
-"fr": "/fr/raquettes/nox-equation-soft-2027/"
-}
-},
-{
 "path": "/fr/raquettes/nox-equation-soft-advanced-2026/",
 "alt": {
 "it": "/it/racchette/nox-equation-soft-advanced-2026/",
 "en": "/en/rackets/nox-equation-soft-advanced-2026/",
 "es": "/es/palas/nox-equation-soft-advanced-2026/",
 "fr": "/fr/raquettes/nox-equation-soft-advanced-2026/"
+}
+},
+{
+"path": "/fr/raquettes/nox-equation-soft-advanced-2027/",
+"alt": {
+"it": "/it/racchette/nox-equation-soft-advanced-2027/",
+"en": "/en/rackets/nox-equation-soft-advanced-2027/",
+"es": "/es/palas/nox-equation-soft-advanced-2027/",
+"fr": "/fr/raquettes/nox-equation-soft-advanced-2027/"
 }
 },
 {
@@ -27384,15 +27078,6 @@
 "en": "/en/rackets/nox-ml10-ventus-control-3k-2026/",
 "es": "/es/palas/nox-ml10-ventus-control-3k-2026/",
 "fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2026/"
-}
-},
-{
-"path": "/fr/raquettes/nox-ml10-ventus-control-3k-2027/",
-"alt": {
-"it": "/it/racchette/nox-ml10-ventus-control-3k-2027/",
-"en": "/en/rackets/nox-ml10-ventus-control-3k-2027/",
-"es": "/es/palas/nox-ml10-ventus-control-3k-2027/",
-"fr": "/fr/raquettes/nox-ml10-ventus-control-3k-2027/"
 }
 },
 {
@@ -27555,15 +27240,6 @@
 "en": "/en/rackets/nox-vk10-ventus-control-12k-2026/",
 "es": "/es/palas/nox-vk10-ventus-control-12k-2026/",
 "fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2026/"
-}
-},
-{
-"path": "/fr/raquettes/nox-vk10-ventus-control-12k-2027/",
-"alt": {
-"it": "/it/racchette/nox-vk10-ventus-control-12k-2027/",
-"en": "/en/rackets/nox-vk10-ventus-control-12k-2027/",
-"es": "/es/palas/nox-vk10-ventus-control-12k-2027/",
-"fr": "/fr/raquettes/nox-vk10-ventus-control-12k-2027/"
 }
 },
 {
