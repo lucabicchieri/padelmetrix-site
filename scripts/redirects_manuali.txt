@@ -1,10 +1,10 @@
-# Redirect aggiunti a mano: questo file viene accodato a _redirects da genera_home.py, non modificare _redirects direttamente
-# Report "in numeri" spostato dalla sezione guide alla sezione report
+# Redirect manuali (accodati da genera_home.py)
+# Report in numeri spostato da guide a report
 /it/guide/racchette-padel-2026-2027-in-numeri/  /it/report/racchette-padel-2026-2027-in-numeri/  301
 /en/guides/padel-rackets-2026-2027-in-numbers/  /en/report/padel-rackets-2026-2027-in-numbers/  301
 /es/guias/palas-padel-2026-2027-en-cifras/  /es/informe/palas-padel-2026-2027-en-cifras/  301
 /fr/guides/raquettes-padel-2026-2027-en-chiffres/  /fr/rapport/raquettes-padel-2026-2027-en-chiffres/  301
-# Pagine rimaste da vecchie generazioni (varianti Siux unite, pagina Galán errata)
+# Pagine rimaste da vecchie generazioni (varianti Siux unite, pagina Galan errata)
 /en/compare/adidas-metalbone-superlight-2026-vs-bullpadel-hack-junior-2026/  /en/rackets/adidas-metalbone-superlight-2026/  301
 /en/compare/adidas-metalbone-zz-team-2026-vs-babolat-technical-origin-plus-2027/  /en/rackets/adidas-metalbone-zz-team-2026/  301
 /en/compare/siux-diablo-pro-4-2025-vs-siux-diablo-pro-night-2026/  /en/rackets/siux-diablo-pro-2026/  301
