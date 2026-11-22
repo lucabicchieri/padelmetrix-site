@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -290,7 +305,7 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="note">Notes sur 10 de <a href="https://padelzoom.es/adidas-cross-it-ctrl-2026/" rel="nofollow noopener" target="_blank">PadelZoom</a>, note globale 8,6/10. La note PadelMetrix arrivera avec notre propre méthode d'évaluation.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Où acheter la Cross It CTRL 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Livraison et retours Amazon</small></div><a class="btn lime" href="https://www.amazon.fr/s?k=Adidas+Cross+It+CTRL+2026" rel="sponsored nofollow noopener" target="_blank">Voir sur Amazon</a></div>
@@ -354,10 +369,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/fr/raquettes/adidas-arrow-hit-ctrl-2026/"><small>Adidas · 2026</small><b>Arrow Hit CTRL 2026</b><small>Différences : surface en carbone ASC (adidas Signature Carbon), gomme EVA Soft Performance, toucher moyen, gamme Arrow Hit. Prix public 400 €.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparaisons avec la Cross It CTRL 2026</h3><ul class="clean"><li><a href="/fr/comparer/adidas-cross-it-ctrl-2026-vs-adidas-cross-it-light-2026/">Cross It CTRL 2026 vs Cross It Light 2026</a></li></ul></div>
+
 </section>
 
 <section class="block faq"><h2>Questions fréquentes sur la Cross It CTRL 2026</h2><details><summary>Combien pèse la Cross It CTRL 2026 ?</summary><p>La Adidas Cross It CTRL 2026 pèse 360–375 g, selon les données déclarées.</p></details><details><summary>Pour quel niveau est la Cross It CTRL 2026 ?</summary><p>Elle est pensée pour un niveau confirmé. Style de jeu : contrôle.</p></details><details><summary>Quelle forme a la Cross It CTRL 2026 ?</summary><p>Elle a une forme ronde. Les raquettes rondes ont le sweet spot au centre et le poids vers le manche : plus de contrôle et de maniabilité.</p></details><details><summary>Combien coûte la Cross It CTRL 2026 ?</summary><p>Le prix public indicatif est de 350 € ; les boutiques en ligne la proposent souvent en promotion.</p></details></section>
 <p class="note" style="padding-bottom:24px">Page mise à jour le 19 octobre 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>Cross It CTRL 2026</b></div><a class="btn lime" href="https://www.amazon.fr/s?k=Adidas+Cross+It+CTRL+2026" rel="sponsored nofollow noopener" target="_blank">Voir sur Amazon</a><a class="bb-c" href="/fr/comparer/adidas-cross-it-ctrl-2026-vs-adidas-cross-it-light-2026/">Comparer</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix est un site indépendant de Luca Bicchieri. En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Certains liens vers d'autres boutiques sont des liens d'affiliation.</span>

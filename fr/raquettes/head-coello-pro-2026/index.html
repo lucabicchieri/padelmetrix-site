@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -277,7 +292,7 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="lead" style="font-weight:600;color:var(--ink)">La Head Coello Pro 2026 est une raquette diamant d&#x27;attaque de 370 g pour joueurs confirmés, signée par Arturo Coello.</p>
 <div class="chips"><span>Diamant</span><span>370 g</span><span>Équilibre haut</span><span>Confirmé</span><span>Raquette d&#x27;Arturo Coello</span></div>
 <p class="lead">La diamant de tournoi d&#x27;Arturo Coello, 5 g plus légère que la génération précédente ; elle récompense ceux qui ont déjà un bon timing. Conseillée pour les joueurs confirmés.</p>
-<div class="card avviso"><p>Pour aller plus loin : <a href="/fr/articles/meilleures-raquettes-padel-2026-classements-independants/"><b>Les meilleures raquettes de padel de 2026 selon les classements indépendants</b></a></p></div><div class="card avviso"><p>Pour aller plus loin : <a href="/fr/articles/arturo-coello-qui-est-il-et-quelle-raquette-utilise-t-il/"><b>Arturo Coello : qui il est et quelle raquette il utilise en 2026</b></a></p></div>
+
 <div class="card">
 <h2>Notes de Padelful</h2>
 <div class="bars">
@@ -290,7 +305,7 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="note">Notes sur 10 publiées par <a href="https://www.padelful.com/en/rackets/head-coello-pro-2026" rel="nofollow noopener" target="_blank">Padelful</a>, note globale 8,6/10. La note PadelMetrix arrivera avec notre propre méthode d'évaluation.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Où acheter la Coello Pro 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Livraison et retours Amazon</small></div><a class="btn lime" href="https://www.amazon.fr/s?k=Head+Coello+Pro+2026" rel="sponsored nofollow noopener" target="_blank">Voir sur Amazon</a></div>
@@ -358,10 +373,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/fr/raquettes/bullpadel-vertex-05-geo-2027/"><small>Bullpadel · 2027</small><b>Vertex 05 Geo 2027</b><small>Raquette diamant d&#x27;attaque, 365–375 g, niveau confirmé.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparaisons avec la Coello Pro 2026</h3><ul class="clean"><li><a href="/fr/comparer/head-coello-pro-2025-vs-head-coello-pro-2026/">Coello Pro 2026 vs Coello Pro 2025</a></li><li><a href="/fr/comparer/head-coello-pro-2026-vs-head-extreme-pro-2026/">Coello Pro 2026 vs Extreme Pro 2026</a></li></ul></div>
+<div class="card"><h3 style="font-size:17px">À lire aussi</h3><ul class="clean"><li><a href="/fr/articles/meilleures-raquettes-padel-2026-classements-independants/">Les meilleures raquettes de padel de 2026 selon les classements indépendants</a></li><li><a href="/fr/articles/arturo-coello-qui-est-il-et-quelle-raquette-utilise-t-il/">Arturo Coello : qui il est et quelle raquette il utilise en 2026</a></li></ul></div>
 </section>
 
 <section class="block faq"><h2>Questions fréquentes sur la Coello Pro 2026</h2><details><summary>Combien pèse la Coello Pro 2026 ?</summary><p>La Head Coello Pro 2026 pèse 370 g avec un équilibre haut, selon les données déclarées.</p></details><details><summary>Pour quel niveau est la Coello Pro 2026 ?</summary><p>Elle est pensée pour un niveau confirmé. Style de jeu : attaque.</p></details><details><summary>Quelle forme a la Coello Pro 2026 ?</summary><p>Elle a une forme diamant. Les raquettes diamant concentrent le poids dans la tête : plus de puissance au smash, moins de tolérance en défense.</p></details><details><summary>Quelle différence entre la Coello Pro 2026 et la Coello Pro 2025 ?</summary><p>Différences déclarées : surface Carbone sur la 2025 contre Carbone hybride sur la 2026; noyau Mousse sur la 2025 contre Power Foam sur la 2026. Comparaison complète sur la page dédiée.</p></details><details><summary>Combien coûte la Coello Pro 2026 ?</summary><p>Le prix public indicatif est de 296,95 € ; les boutiques en ligne la proposent souvent en promotion.</p></details></section>
 <p class="note" style="padding-bottom:24px">Page mise à jour le 24 octobre 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>Coello Pro 2026</b></div><a class="btn lime" href="https://www.amazon.fr/s?k=Head+Coello+Pro+2026" rel="sponsored nofollow noopener" target="_blank">Voir sur Amazon</a><a class="bb-c" href="/fr/comparer/head-coello-pro-2025-vs-head-coello-pro-2026/">Comparer</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix est un site indépendant de Luca Bicchieri. En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Certains liens vers d'autres boutiques sont des liens d'affiliation.</span>

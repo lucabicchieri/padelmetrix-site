@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -277,14 +292,14 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="lead" style="font-weight:600;color:var(--ink)">The Nox AT10 Genius Attack 12K Alum Xtrem 2026 is an attacking diamond racket for advanced players, signed by Agustín Tapia.</p>
 <div class="chips"><span>Diamond</span><span>High balance</span><span>12K carbon</span><span>Advanced</span><span>Agustín Tapia&#x27;s racket</span></div>
 <p class="lead">Diamond with high balance, instant ball output and boosted power. suited to advanced players. shape</p>
-<div class="card avviso"><p>In depth: <a href="/en/articles/padel-rackets-2027-vs-2026-what-changes/"><b>Padel rackets 2027 vs 2026: what changes, model by model</b></a></p></div>
+
 <div class="card">
 <h2>At a glance</h2>
 <div class="chips"><span>Attacking racket</span><span>Advanced level</span><span>Crisp and firm feel</span><span>Diamond shape</span></div>
-<p class="note">Specifications as declared by the manufacturer and retailers. Independent ratings coming soon: the PadelMetrix score will follow with our own rating method.</p>
+<p class="note">Features stated by the manufacturer and retailers.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Where to buy the AT10 Genius Attack 12K Alum Xtrem 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Amazon shipping and returns</small></div><a class="btn lime" href="https://www.amazon.co.uk/s?k=Nox+AT10+Genius+Attack+12K+Alum+Xtrem+2026" rel="sponsored nofollow noopener" target="_blank">View on Amazon</a></div>
@@ -343,10 +358,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/en/rackets/bullpadel-vertex-05-geo-2027/"><small>Bullpadel · 2027</small><b>Vertex 05 Geo 2027</b><small>Attacking diamond racket, 365–375 g, advanced level.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparisons with the AT10 Genius Attack 12K Alum Xtrem 2026</h3><ul class="clean"><li><a href="/en/compare/nox-at10-genius-attack-12k-alum-xtrem-2026-vs-nox-at10-genius-attack-12k-alum-xtrem-2027/">AT10 Genius Attack 12K Alum Xtrem 2026 vs AT10 Genius Attack 12K Alum Xtrem 2027</a></li><li><a href="/en/compare/nox-at10-genius-attack-12k-alum-xtrem-2026-vs-nox-at10-genius-attack-18k-alum-2026/">AT10 Genius Attack 12K Alum Xtrem 2026 vs AT10 Genius Attack 18K Alum 2026</a></li><li><a href="/en/compare/nox-at10-genius-attack-12k-alum-xtrem-2026-vs-nox-ea10-ventus-attack-12k-xtrem-2026/">AT10 Genius Attack 12K Alum Xtrem 2026 vs EA10 Ventus Attack 12K Xtrem 2026</a></li><li><a href="/en/compare/nox-at10-genius-attack-12k-alum-xtrem-2026-vs-nox-nerbo-plus-12k-2026/">AT10 Genius Attack 12K Alum Xtrem 2026 vs Nerbo+ 12K 2026</a></li><li><a href="/en/compare/nox-at10-genius-attack-12k-alum-xtrem-2026-vs-nox-nextgen-pro-attack-12k-nfa-series-2026/">AT10 Genius Attack 12K Alum Xtrem 2026 vs NextGen Pro Attack 12K NFA Series 2026</a></li></ul></div>
+<div class="card"><h3 style="font-size:17px">Read next</h3><ul class="clean"><li><a href="/en/articles/padel-rackets-2027-vs-2026-what-changes/">Padel rackets 2027 vs 2026: what changes, model by model</a></li></ul></div>
 </section>
 
 <section class="block faq"><h2>Frequently asked questions about the AT10 Genius Attack 12K Alum Xtrem 2026</h2><details><summary>What level is the AT10 Genius Attack 12K Alum Xtrem 2026 for?</summary><p>It is designed for advanced players. Playing style: attack.</p></details><details><summary>What shape is the AT10 Genius Attack 12K Alum Xtrem 2026?</summary><p>It has a diamond shape. Diamond rackets concentrate the weight in the head: more power on the smash, less forgiveness in defence.</p></details><details><summary>What is the difference between the AT10 Genius Attack 12K Alum Xtrem 2026 and the AT10 Genius Attack 12K Alum Xtrem 2027?</summary><p>Declared differences: face 12K aluminised carbon on the 2027 versus 12K Xtrem carbon, Dual Spin on the 2026; core EVA on the 2027 versus same as the Genius (HR3 Black EVA) on the 2026. Full comparison on the dedicated page.</p></details></section>
 <p class="note" style="padding-bottom:24px">Page updated on 24 October 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>AT10 Genius Attack 12K Alum Xtrem 2026</b></div><a class="btn lime" href="https://www.amazon.co.uk/s?k=Nox+AT10+Genius+Attack+12K+Alum+Xtrem+2026" rel="sponsored nofollow noopener" target="_blank">View on Amazon</a><a class="bb-c" href="/en/compare/nox-at10-genius-attack-12k-alum-xtrem-2026-vs-nox-at10-genius-attack-12k-alum-xtrem-2027/">Compare</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix is an independent website by Luca Bicchieri. As an Amazon Associate, PadelMetrix earns from qualifying purchases. Some links to other shops are affiliate links.</span>

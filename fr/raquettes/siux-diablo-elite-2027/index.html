@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -281,10 +296,10 @@ header.site nav.main a.hot.on{border-bottom:0}
 <div class="card">
 <h2>En bref</h2>
 <div class="chips"><span>Polyvalent</span><span>Niveau confirmé</span><span>Forme goutte d&#x27;eau</span><span>Puissance 6,5/10 selon PadelPROShop</span></div>
-<p class="note">Caractéristiques et indice de puissance publiés par <a href="https://padelproshop.com/pages/siux-2027" rel="nofollow noopener" target="_blank">PadelPROShop</a>. Évaluations indépendantes à venir : la note PadelMetrix arrivera avec notre propre méthode d'évaluation.</p>
+<p class="note">Caractéristiques et indice de puissance tels que publiés par <a href="https://padelproshop.com/pages/siux-2027" rel="nofollow noopener" target="_blank">PadelPROShop</a>.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Où acheter la Diablo Elite 2027</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Livraison et retours Amazon</small></div><a class="btn lime" href="https://www.amazon.fr/s?k=Siux+Diablo+Elite+2027" rel="sponsored nofollow noopener" target="_blank">Voir sur Amazon</a></div>
@@ -345,10 +360,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/fr/raquettes/nox-ea10-ventus-hybrid-12k-xtrem-2026/"><small>Nox · 2026</small><b>EA10 Ventus Hybrid 12K Xtrem 2026</b><small>Raquette en goutte d&#x27;eau polyvalente, carbone 12K, niveau confirmé.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparaisons avec la Diablo Elite 2027</h3><ul class="clean"><li><a href="/fr/comparer/siux-diablo-elite-2027-vs-siux-diablo-pro-se-2026/">Diablo Elite 2027 vs Diablo Pro SE 2026</a></li><li><a href="/fr/comparer/siux-diablo-elite-2027-vs-siux-valkiria-elite-2027/">Diablo Elite 2027 vs Valkiria Elite 2027</a></li></ul></div>
+
 </section>
 
 <section class="block faq"><h2>Questions fréquentes sur la Diablo Elite 2027</h2><details><summary>Combien pèse la Diablo Elite 2027 ?</summary><p>La Siux Diablo Elite 2027 pèse 355–375 g avec un équilibre moyen, selon les données déclarées.</p></details><details><summary>Pour quel niveau est la Diablo Elite 2027 ?</summary><p>Elle est pensée pour un niveau confirmé. Style de jeu : polyvalente.</p></details><details><summary>Quelle forme a la Diablo Elite 2027 ?</summary><p>Elle a une forme goutte d&#x27;eau. La forme goutte d&#x27;eau se situe entre la ronde et la diamant : un compromis entre contrôle et puissance.</p></details><details><summary>Combien coûte la Diablo Elite 2027 ?</summary><p>Le prix public indicatif est de 269,95 € ; les boutiques en ligne la proposent souvent en promotion.</p></details></section>
 <p class="note" style="padding-bottom:24px">Page mise à jour le 24 octobre 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>Diablo Elite 2027</b><span class="bb-pz" data-pzb="B0HPKWSYKT"></span></div><a class="btn lime" href="https://www.amazon.fr/s?k=Siux+Diablo+Elite+2027" rel="sponsored nofollow noopener" target="_blank">Voir sur Amazon</a><a class="bb-c" href="/fr/comparer/siux-diablo-elite-2027-vs-siux-diablo-pro-se-2026/">Comparer</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix est un site indépendant de Luca Bicchieri. En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Certains liens vers d'autres boutiques sont des liens d'affiliation.</span>
@@ -356,7 +373,7 @@ header.site nav.main a.hot.on{border-bottom:0}
 <span><a href="/fr/raquettes/">Raquettes</a> · <a href="/fr/guides/">Guides</a> · <a href="/fr/articles/">Articles</a> · <a href="/fr/questions/">Questions</a> · <a href="/fr/glossaire/">Glossaire</a> · <a href="/fr/donnees/">Données ouvertes</a> · <a href="/fr/a-propos/">À propos et méthode</a> · <a href="/fr/contact/">Contact</a> · <a href="/fr/confidentialite/">Confidentialité</a> · <a href="/fr/cookies/">Cookies</a> · <a href="#" onclick="return pmApriCookie()">Préférences cookies</a> · © 2026 PadelMetrix</span>
 </div></footer>
 
-<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/"/g,'&quot;');el.classList.add('has-img');el.innerHTML='<a href="https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank" title="Amazon"><img src="'+x.img+'" alt="'+alt+'" loading="lazy"></a>'+(big?'<small>Image : Amazon</small>':'');el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}});var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);document.querySelectorAll('[data-pz]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pz')];if(!x||!x.prezzo)return;el.textContent='Prix sur Amazon : '+x.prezzo.replace(/\u00a0/g,' ')+' (mis à jour le '+gg+' à '+hh+')'})}).catch(function(){})})();</script>
+<script>(function(){var els=document.querySelectorAll('[data-asin]');if(!els.length)return;fetch('/amazon/immagini.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){var t=Date.parse(j.aggiornato||'');if(!t||Date.now()-t>864e5)return;els.forEach(function(el){var a=el.getAttribute('data-asin'),x=(j.prodotti||{})[a];if(!x)return;var o=el.innerHTML,big=el.classList.contains('photo'),alt=(el.getAttribute('data-alt')||'').replace(/"/g,'&quot;');el.classList.add('has-img');el.innerHTML='<a href="https://www.amazon.it/dp/'+a+'?tag=padelmetrix-21" rel="sponsored nofollow noopener" target="_blank" title="Amazon"><img src="'+x.img+'" alt="'+alt+'" loading="lazy"></a>'+(big?'<small>Image : Amazon</small>':'');el.querySelector('img').onerror=function(){el.innerHTML=o;el.classList.remove('has-img')}});var d=new Date(t),hh=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),gg=d.getDate()+'/'+(d.getMonth()+1);document.querySelectorAll('[data-pzb]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pzb')];if(x&&x.prezzo)el.textContent=x.prezzo.replace(/\u00a0/g,' ')});document.querySelectorAll('[data-pz]').forEach(function(el){var x=(j.prodotti||{})[el.getAttribute('data-pz')];if(!x||!x.prezzo)return;el.textContent='Prix sur Amazon : '+x.prezzo.replace(/\u00a0/g,' ')+' (mis à jour le '+gg+' à '+hh+')'})}).catch(function(){})})();</script>
 <style>
 #pm-cc{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;background:#fff;color:#1F2D27;border:1px solid #E1E5DF;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.15);padding:16px 18px;display:none;font:15px/1.5 'IBM Plex Sans',system-ui,sans-serif}
 #pm-cc p{margin:0 0 12px}#pm-cc .b{display:flex;flex-wrap:wrap;gap:10px;align-items:center}

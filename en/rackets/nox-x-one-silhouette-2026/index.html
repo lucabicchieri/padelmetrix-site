@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -281,10 +296,10 @@ header.site nav.main a.hot.on{border-bottom:0}
 <div class="card">
 <h2>At a glance</h2>
 <div class="chips"><span>All-round</span><span>Beginner / intermediate level</span><span>Rough feel</span><span>Round shape</span></div>
-<p class="note">Specifications as declared by the manufacturer and retailers. Independent ratings coming soon: the PadelMetrix score will follow with our own rating method.</p>
+<p class="note">Features stated by the manufacturer and retailers.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Where to buy the X-One Silhouette 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Amazon shipping and returns</small></div><a class="btn lime" href="https://www.amazon.co.uk/s?k=Nox+X-One+Silhouette+2026" rel="sponsored nofollow noopener" target="_blank">View on Amazon</a></div>
@@ -343,10 +358,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/en/rackets/drop-shot-explorer-pro-comfort-2-0-2026/"><small>Drop Shot · 2026</small><b>Explorer Pro Comfort 2.0 2026</b><small>All-round round racket, 350–370 g, 3K carbon, intermediate level.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparisons with the X-One Silhouette 2026</h3><ul class="clean"><li><a href="/en/compare/adidas-raxper-2022-vs-nox-x-one-silhouette-2026/">X-One Silhouette 2026 vs Raxper 2022</a></li><li><a href="/en/compare/head-evo-extreme-2026-vs-nox-x-one-silhouette-2026/">X-One Silhouette 2026 vs Evo Extreme 2026</a></li><li><a href="/en/compare/nox-x-one-silhouette-2025-vs-nox-x-one-silhouette-2026/">X-One Silhouette 2026 vs X-One Silhouette 2025</a></li></ul></div>
+
 </section>
 
 <section class="block faq"><h2>Frequently asked questions about the X-One Silhouette 2026</h2><details><summary>How much does the X-One Silhouette 2026 weigh?</summary><p>The Nox X-One Silhouette 2026 weighs 350–365 g, according to the declared specs.</p></details><details><summary>What level is the X-One Silhouette 2026 for?</summary><p>It is designed for beginner / intermediate players. Playing style: all-round.</p></details><details><summary>What shape is the X-One Silhouette 2026?</summary><p>It has a round shape. Round rackets have the sweet spot in the centre and the weight towards the handle: more control and maneuverability.</p></details><details><summary>What is the difference between the X-One Silhouette 2026 and the X-One Silhouette 2025?</summary><p>Declared differences: weight 360–375 g on the 2025 versus 350–365 g on the 2026; shape Teardrop on the 2025 versus Round on the 2026; face Carbon and fiberglass on the 2025 versus Fiberglass on the 2026; core EVA on the 2025 versus HR3 EVA on the 2026. Full comparison on the dedicated page.</p></details></section>
 <p class="note" style="padding-bottom:24px">Page updated on 24 October 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>X-One Silhouette 2026</b></div><a class="btn lime" href="https://www.amazon.co.uk/s?k=Nox+X-One+Silhouette+2026" rel="sponsored nofollow noopener" target="_blank">View on Amazon</a><a class="bb-c" href="/en/compare/adidas-raxper-2022-vs-nox-x-one-silhouette-2026/">Compare</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix is an independent website by Luca Bicchieri. As an Amazon Associate, PadelMetrix earns from qualifying purchases. Some links to other shops are affiliate links.</span>

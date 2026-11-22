@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -277,14 +292,14 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="lead" style="font-weight:600;color:var(--ink)">La Joma Valkiria Pro Soft 2027 es una pala híbrida de control para jugadores avanzados, firmada por Carolina Navarro.</p>
 <div class="chips"><span>Híbrida</span><span>Balance medio</span><span>Carbono 12K</span><span>Avanzado</span><span>Pala de Carolina Navarro</span></div>
 <p class="lead">La Valkiria de Carolina Navarro con goma blanda: misma forma redonda híbrida, más confort y salida de bola. Joma aún no ha publicado peso y precio: los añadiremos en cuanto estén disponibles. Indicada para jugadores avanzados.</p>
-<div class="card avviso"><p>En profundidad: <a href="/es/articulos/palas-padel-2027-vs-2026-que-cambia/"><b>Palas de pádel 2027 vs 2026: qué cambia modelo por modelo</b></a></p></div>
+
 <div class="card">
 <h2>En resumen</h2>
 <div class="chips"><span>Pala de control</span><span>Nivel avanzado</span><span>Tacto blando</span><span>Forma redonda híbrida</span></div>
-<p class="note">Características declaradas por el fabricante y las tiendas. Valoraciones independientes en camino: la puntuación PadelMetrix llegará con nuestro método de valoración.</p>
+<p class="note">Características declaradas por el fabricante y los distribuidores.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Dónde comprar la Valkiria Pro Soft 2027</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Envío y devoluciones de Amazon</small></div><a class="btn lime" href="https://www.amazon.es/s?k=Joma+Valkiria+Pro+Soft+2027" rel="sponsored nofollow noopener" target="_blank">Ver en Amazon</a></div>
@@ -343,10 +358,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/es/palas/joma-tournament-pro-iconic-2027/"><small>Joma · 2027</small><b>Tournament Pro Iconic 2027</b><small>Pala híbrida de control, carbono 3K, nivel intermedio / avanzado.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparaciones con la Valkiria Pro Soft 2027</h3><ul class="clean"><li><a href="/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/">Valkiria Pro Soft 2027 vs Tournament Evo 2027</a></li><li><a href="/es/comparar/joma-valkiria-pro-soft-2026-vs-joma-valkiria-pro-soft-2027/">Valkiria Pro Soft 2027 vs Valkiria Pro Soft 2026</a></li></ul></div>
+<div class="card"><h3 style="font-size:17px">Lee también</h3><ul class="clean"><li><a href="/es/articulos/palas-padel-2027-vs-2026-que-cambia/">Palas de pádel 2027 vs 2026: qué cambia modelo por modelo</a></li></ul></div>
 </section>
 
 <section class="block faq"><h2>Preguntas frecuentes sobre la Valkiria Pro Soft 2027</h2><details><summary>¿Para qué nivel es la Valkiria Pro Soft 2027?</summary><p>Está pensada para un nivel avanzado. Estilo de juego: control.</p></details><details><summary>¿Qué forma tiene la Valkiria Pro Soft 2027?</summary><p>Tiene forma híbrida. La forma híbrida combina características de lágrima y diamante, para un juego versátil.</p></details><details><summary>¿Qué diferencia hay entre la Valkiria Pro Soft 2027 y la Valkiria Pro Soft 2026?</summary><p>Diferencias declaradas: forma Redonda en la 2026 frente a Híbrida en la 2027; cara Carbono y fibra de vidrio en la 2026 frente a Carbono 12K en la 2027; núcleo EVA en la 2026 frente a Black EVA Soft en la 2027. Comparación completa en la página dedicada.</p></details></section>
 <p class="note" style="padding-bottom:24px">Ficha actualizada el 12 de noviembre de 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>Valkiria Pro Soft 2027</b></div><a class="btn lime" href="https://www.amazon.es/s?k=Joma+Valkiria+Pro+Soft+2027" rel="sponsored nofollow noopener" target="_blank">Ver en Amazon</a><a class="bb-c" href="/es/comparar/joma-tournament-evo-2027-vs-joma-valkiria-pro-soft-2027/">Comparar</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix es una web independiente de Luca Bicchieri. Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.</span>

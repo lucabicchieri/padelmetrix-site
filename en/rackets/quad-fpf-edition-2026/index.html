@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -277,14 +292,14 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="lead" style="font-weight:600;color:var(--ink)">The QUAD FPF Edition 2026 is a 360 g circa attacking racket.</p>
 <div class="chips"><span>about 360 g</span><span>High balance</span><span>3K carbon</span></div>
 <p class="lead">A limited edition with the Portuguese Football Federation: 500 numbered pieces, an exclusive mould, a frame inspired by the FPF crest and holes that echo the five Portuguese shields. Matte black finish with gold details, a collector&#x27;s box and a certificate. QUAD does not state the shape.</p>
-<div class="card avviso"><p>In depth: <a href="/en/articles/quad-portuguese-padel-rackets-models/"><b>QUAD, the padel rackets made in Portugal: every model</b></a></p></div>
+
 <div class="card">
 <h2>At a glance</h2>
 <div class="chips"><span>Attacking racket</span></div>
-<p class="note">Specifications as declared by the manufacturer and retailers. Independent ratings coming soon: the PadelMetrix score will follow with our own rating method.</p>
+<p class="note">Features stated by the manufacturer and retailers.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Where to buy the FPF Edition 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Amazon shipping and returns</small></div><a class="btn lime" href="https://www.amazon.co.uk/s?k=QUAD+FPF+Edition+2026" rel="sponsored nofollow noopener" target="_blank">View on Amazon</a></div>
@@ -342,10 +357,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/en/rackets/babolat-technical-veron-3-0-2026/"><small>Babolat · 2026</small><b>Technical Veron 3.0 2026</b><small>Attacking diamond racket, 350–370 g, intermediate level.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparisons with the FPF Edition 2026</h3><ul class="clean"><li><a href="/en/compare/quad-fpf-edition-2026-vs-quad-garuda-2025/">FPF Edition 2026 vs Garuda 2025</a></li></ul></div>
+<div class="card"><h3 style="font-size:17px">Read next</h3><ul class="clean"><li><a href="/en/articles/quad-portuguese-padel-rackets-models/">QUAD, the padel rackets made in Portugal: every model</a></li></ul></div>
 </section>
 
 <section class="block faq"><h2>Frequently asked questions about the FPF Edition 2026</h2><details><summary>How much does the FPF Edition 2026 weigh?</summary><p>The QUAD FPF Edition 2026 weighs 360 g circa with high balance, according to the declared specs.</p></details><details><summary>How much does the FPF Edition 2026 cost?</summary><p>The indicative list price is €750; online shops often sell it at a discount.</p></details></section>
 <p class="note" style="padding-bottom:24px">Page updated on 7 November 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>FPF Edition 2026</b></div><a class="btn lime" href="https://www.amazon.co.uk/s?k=QUAD+FPF+Edition+2026" rel="sponsored nofollow noopener" target="_blank">View on Amazon</a><a class="bb-c" href="/en/compare/quad-fpf-edition-2026-vs-quad-garuda-2025/">Compare</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix is an independent website by Luca Bicchieri. As an Amazon Associate, PadelMetrix earns from qualifying purchases. Some links to other shops are affiliate links.</span>

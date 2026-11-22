@@ -241,6 +241,21 @@ header.site nav.main a.hot.on{border-bottom:0}
 .tab.gtab th:first-child{width:auto}.tab.gtab th:nth-child(2),.tab.gtab th:nth-child(3){width:22%}
 .rcard[hidden]{display:none!important}
 .btn.ln{background:transparent;border:1.5px solid var(--green);color:var(--green)}.btn.ln:hover{background:var(--green);color:#fff}
+/* scheda racchetta su telefono: foto più bassa e barra d'acquisto fissa */
+.buybar{display:none}
+@media (max-width:860px){
+.top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
+.top .photo svg{height:200px;width:auto}
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
+.buybar.off{transform:translateY(120%)}
+.bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.bb-t b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+.bb-pz{font-size:14px;color:var(--ink2);font-weight:600;white-space:nowrap}
+.buybar .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.bb-c{font-size:14px;font-weight:600;color:var(--green);white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
+body:has(.buybar){padding-bottom:78px}
+}
+@media (prefers-reduced-motion:reduce){.buybar{transition:none}}
 
 </style>
 </head>
@@ -277,14 +292,14 @@ header.site nav.main a.hot.on{border-bottom:0}
 <p class="lead" style="font-weight:600;color:var(--ink)">La QUAD Chinese New Year Edition 2026 es una pala híbrida de 355 g circa.</p>
 <div class="chips"><span>Híbrida</span><span>unos 355 g</span><span>Carbono 3K</span></div>
 <p class="lead">Edición limitada para el Año del Caballo con motivos tradicionales chinos, perforación exclusiva de un solo agujero y certificado de autenticidad. En la web el número de unidades no está claro (pone tanto 50 online como 500 en total).</p>
-<div class="card avviso"><p>En profundidad: <a href="/es/articulos/quad-palas-padel-portuguesas-modelos/"><b>QUAD, las palas de pádel hechas en Portugal: todos los modelos</b></a></p></div>
+
 <div class="card">
 <h2>En resumen</h2>
 <div class="chips"><span>Forma híbrida</span></div>
-<p class="note">Características declaradas por el fabricante y las tiendas. Valoraciones independientes en camino: la puntuación PadelMetrix llegará con nuestro método de valoración.</p>
+<p class="note">Características declaradas por el fabricante y los distribuidores.</p>
 </div>
 
-<div class="card">
+<div class="card" id="dove">
 <h2>Dónde comprar la Chinese New Year Edition 2026</h2>
 <div class="stores">
 <div class="store"><div><strong>Amazon</strong><small>Envío y devoluciones de Amazon</small></div><a class="btn lime" href="https://www.amazon.es/s?k=QUAD+Chinese+New+Year+Edition+2026" rel="sponsored nofollow noopener" target="_blank">Ver en Amazon</a></div>
@@ -340,10 +355,12 @@ header.site nav.main a.hot.on{border-bottom:0}
 <a href="/es/palas/dunlop-nanomax-pro-2026/"><small>Dunlop · 2026</small><b>Nanomax Pro 2026</b><small>Pala híbrida polivalente, unos 365 g, fibra de vidrio, nivel principiante / intermedio.</small></a>
 </div>
 <div class="card"><h3 style="font-size:17px">Comparaciones con la Chinese New Year Edition 2026</h3><ul class="clean"><li><a href="/es/comparar/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/">Chinese New Year Edition 2026 vs Elite W 02 2027</a></li></ul></div>
+<div class="card"><h3 style="font-size:17px">Lee también</h3><ul class="clean"><li><a href="/es/articulos/quad-palas-padel-portuguesas-modelos/">QUAD, las palas de pádel hechas en Portugal: todos los modelos</a></li></ul></div>
 </section>
 
 <section class="block faq"><h2>Preguntas frecuentes sobre la Chinese New Year Edition 2026</h2><details><summary>¿Cuánto pesa la Chinese New Year Edition 2026?</summary><p>La QUAD Chinese New Year Edition 2026 pesa 355 g circa, según los datos declarados.</p></details><details><summary>¿Qué forma tiene la Chinese New Year Edition 2026?</summary><p>Tiene forma híbrida. La forma híbrida combina características de lágrima y diamante, para un juego versátil.</p></details><details><summary>¿Cuánto cuesta la Chinese New Year Edition 2026?</summary><p>El precio de lista orientativo es 530 €; en las tiendas online suele encontrarse rebajada.</p></details></section>
 <p class="note" style="padding-bottom:24px">Ficha actualizada el 7 de noviembre de 2026.</p>
+<div class="buybar" id="buybar"><div class="bb-t"><b>Chinese New Year Edition 2026</b></div><a class="btn lime" href="https://www.amazon.es/s?k=QUAD+Chinese+New+Year+Edition+2026" rel="sponsored nofollow noopener" target="_blank">Ver en Amazon</a><a class="bb-c" href="/es/comparar/bullpadel-elite-w-02-2027-vs-quad-chinese-new-year-edition-2026/">Comparar</a></div><script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>
 </main>
 <footer><div class="wrap">
 <span style="max-width:760px">PadelMetrix es una web independiente de Luca Bicchieri. Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas son enlaces de afiliado.</span>

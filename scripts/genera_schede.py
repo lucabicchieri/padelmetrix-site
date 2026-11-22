@@ -6,6 +6,7 @@ Ogni JSON contiene i dati tecnici e un blocco "pagina" con i testi editoriali in
 le versioni inglese e spagnola passano dalla memoria di traduzione (scripts/traduci.py).
 """
 import json
+import re
 import pathlib
 import sys
 
@@ -50,10 +51,11 @@ def bars(val):
 
 
 def tratti(t):
+    nota = re.sub(r"\s*Valutazioni indipendenti in arrivo.*$", "", t["nota_html"], flags=re.S)
     return f'''<div class="card">
 <h2>{e(tr(t["titolo"]))}</h2>
 <div class="chips">{chips(t["voci"])}</div>
-<p class="note">{loc_html(tr(t["nota_html"]))}</p>
+<p class="note">{loc_html(tr(nota))}</p>
 </div>'''
 
 
@@ -265,10 +267,9 @@ def render(d, n, db, pair_set):
         ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]})
     avviso = f'<div class="card avviso">{loc_html(tr(p["avviso_html"]))}</div>' if p.get("avviso_html") else ""
-    for a in ARTICOLI:
-        if d["slug"] in a["racchette"] and S.lang() in a["url"]:
-            avviso += (f'<div class="card avviso"><p>{L("Approfondimento", "In depth", "En profundidad", "Pour aller plus loin")}: '
-                       f'<a href="{a["url"][S.lang()]}"><b>{e(a["titolo"][S.lang()])}</b></a></p></div>')
+    arts = [a for a in ARTICOLI if d["slug"] in a["racchette"] and S.lang() in a["url"]]
+    leggi = (f'<div class="card"><h3 style="font-size:17px">{L("Leggi anche", "Read next", "Lee también", "À lire aussi")}</h3><ul class="clean">'
+             + "".join(f'<li><a href="{a["url"][S.lang()]}">{e(a["titolo"][S.lang()])}</a></li>' for a in arts) + "</ul></div>") if arts else ""
     blocco_val = bars(p["valutazioni"]) if p.get("valutazioni") else tratti(p["tratti"])
     recensioni = ""
     if p.get("recensioni"):
@@ -299,6 +300,17 @@ def render(d, n, db, pair_set):
                  "Los enlaces a las tiendas pueden ser enlaces de afiliado: si compras, PadelMetrix puede recibir una comisión sin coste para ti.", "Les liens vers les boutiques peuvent être des liens d'affiliation : si vous achetez, PadelMetrix peut toucher une commission sans frais pour vous.")
     asin = next((x.get("asin") for x in p["negozi"] if isinstance(x, dict) and x.get("amazon") and x.get("asin")), None)
     foto_attr = f' data-asin="{e(asin)}" data-alt="{e(nome_completo)}"' if asin else ""
+    primo_neg = next((x for x in p["negozi"] if isinstance(x, dict) and x.get("amazon")), None) or next((x for x in p["negozi"] if isinstance(x, dict)), None)
+    if primo_neg:
+        bb_btn = re.search(r"<a [^>]*>.*?</a>", store(primo_neg), re.S).group(0)
+        bb_conf = re.search(r'href="([^"]+)"', conf_btn).group(1)
+        prezzo_bb = (f'<span class="bb-pz" data-pzb="{e(asin)}"></span>' if asin else "")
+        bb_js = ('<script>(function(){var b=document.getElementById("buybar"),d=document.getElementById("dove");if(!b||!d||!window.IntersectionObserver)return;'
+                 'new IntersectionObserver(function(e){b.classList.toggle("off",e[0].isIntersecting)}).observe(d)})();</script>')
+        buybar = (f'<div class="buybar" id="buybar"><div class="bb-t"><b>{e(sh)}</b>{prezzo_bb}</div>{bb_btn}'
+                  f'<a class="bb-c" href="{bb_conf}">{L("Confronta", "Compare", "Comparar", "Comparer")}</a></div>' + bb_js)
+    else:
+        buybar = ""
     tatto_row = ""
     if n.get("tatto") and not any(str(k).lower() in ("tatto", "sensazione") for k, _ in p["specifiche"]):
         stima = L(" (stimato dalla gomma)", " (estimated from the core)", " (estimado por la goma)", " (estimé d'après la gomme)") if n.get("tatto_stima") else ""
@@ -319,7 +331,7 @@ def render(d, n, db, pair_set):
 {avviso}
 {blocco_val}
 
-<div class="card">
+<div class="card" id="dove">
 <h2>{L("Dove comprare la", "Where to buy the", "Dónde comprar la", "Où acheter la")} {e(sh)}</h2>
 <div class="stores">
 {chr(10).join(store(s) for s in p["negozi"])}
@@ -364,10 +376,12 @@ def render(d, n, db, pair_set):
 {sim_cards(p["simili"])}
 </div>
 {conf_sec}
+{leggi}
 </section>
 
 {faq_html}
-<p class="note" style="padding-bottom:24px">{L("Scheda aggiornata il", "Page updated on", "Ficha actualizada el", "Page mise à jour le")} {e(agg)}.</p>"""
+<p class="note" style="padding-bottom:24px">{L("Scheda aggiornata il", "Page updated on", "Ficha actualizada el", "Page mise à jour le")} {e(agg)}.</p>
+{buybar}"""
     meta = breve + L(" Dati tecnici, opinioni e confronti.", " Specs, reviews and comparisons.", " Datos técnicos, opiniones y comparaciones.", " Fiches, avis et comparaisons.")
     if len(meta) > 165:
         meta = breve
