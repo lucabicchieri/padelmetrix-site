@@ -4,6 +4,7 @@
 Uso:  python3 scripts/genera_home.py
 """
 import html
+from font_locali import FONT_HEAD
 import json
 import re
 import pathlib
@@ -357,8 +358,7 @@ def head(lang, t):
 <meta property="og:site_name" content="PadelMetrix">
 {S.og_tags()}
 <link rel="icon" href="{FAVICON}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+{FONT_HEAD}
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "PadelMetrix", "url": f"{SITO}/{lang}/", "inLanguage": lang, "description": t["desc"]}, ensure_ascii=False)}</script>
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "Organization", "name": "PadelMetrix", "url": SITO, "email": "info@padelmetrix.com", "sameAs": [u for _, u in S.SOCIAL]}, ensure_ascii=False)}</script>
 <style>{CSS}{S.RESTYLING_CSS}</style>

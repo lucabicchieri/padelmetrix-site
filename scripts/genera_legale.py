@@ -2,7 +2,7 @@
 """Genera le pagine Privacy e Cookie in it/en/es.
 
 Descrivono il sito com'è oggi: nessun cookie proprio, nessun analytics, nessun modulo;
-servizi esterni caricati: Google Fonts (caratteri) e Cloudflare (hosting).
+servizi esterni caricati: Cloudflare (hosting); i caratteri sono ospitati sul sito.
 Se si aggiungono analytics, pubblicità, newsletter o moduli, queste pagine vanno aggiornate.
 """
 import json
@@ -37,7 +37,6 @@ def privacy():
 <h2>Servizi di terze parti</h2>
 <ul>
 <li><b>Cloudflare</b> (Cloudflare, Inc.) ospita il sito e ne protegge la sicurezza: tratta i dati di navigazione per conto del titolare. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Privacy di Cloudflare</a>.</li>
-<li><b>Google Fonts</b> (Google Ireland Ltd / Google LLC) fornisce i caratteri tipografici: quando apri una pagina, il tuo browser li scarica dai server di Google, che ricevono il tuo indirizzo IP. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Privacy di Google</a>.</li>
 </ul>
 <p>Cloudflare e Google possono trattare dati anche negli Stati Uniti; entrambe aderiscono all'EU-U.S. Data Privacy Framework.</p>
 <h2>Link ai negozi e link di affiliazione</h2>
@@ -66,7 +65,6 @@ def privacy():
 <h2>Third-party services</h2>
 <ul>
 <li><b>Cloudflare</b> (Cloudflare, Inc.) hosts the site and protects its security, processing browsing data on behalf of the controller. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Cloudflare privacy policy</a>.</li>
-<li><b>Google Fonts</b> (Google Ireland Ltd / Google LLC) provides the typefaces: when you open a page, your browser downloads them from Google's servers, which receive your IP address. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google privacy policy</a>.</li>
 </ul>
 <p>Cloudflare and Google may also process data in the United States; both participate in the EU-U.S. Data Privacy Framework.</p>
 <h2>Shop links and affiliate links</h2>
@@ -95,7 +93,6 @@ def privacy():
 <h2>Servicios de terceros</h2>
 <ul>
 <li><b>Cloudflare</b> (Cloudflare, Inc.) aloja la web y protege su seguridad: trata los datos de navegación por cuenta del responsable. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Privacidad de Cloudflare</a>.</li>
-<li><b>Google Fonts</b> (Google Ireland Ltd / Google LLC) proporciona las tipografías: al abrir una página, tu navegador las descarga de los servidores de Google, que reciben tu dirección IP. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Privacidad de Google</a>.</li>
 </ul>
 <p>Cloudflare y Google pueden tratar datos también en Estados Unidos; ambas están adheridas al EU-U.S. Data Privacy Framework.</p>
 <h2>Enlaces a tiendas y enlaces de afiliado</h2>
@@ -124,7 +121,6 @@ def privacy():
 <h2>Services tiers</h2>
 <ul>
 <li><b>Cloudflare</b> (Cloudflare, Inc.) héberge le site et assure sa sécurité, en traitant les données de navigation pour le compte du responsable. <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Politique de confidentialité de Cloudflare</a>.</li>
-<li><b>Google Fonts</b> (Google Ireland Ltd / Google LLC) fournit les polices de caractères : quand vous ouvrez une page, votre navigateur les télécharge depuis les serveurs de Google, qui reçoivent votre adresse IP. <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Politique de confidentialité de Google</a>.</li>
 </ul>
 <p>Cloudflare et Google peuvent aussi traiter des données aux États-Unis ; tous deux adhèrent au EU-U.S. Data Privacy Framework.</p>
 <h2>Liens vers les boutiques et liens affiliés</h2>
@@ -167,8 +163,8 @@ def cookie():
 </tbody></table>
 <p>Cloudflare, che ospita il sito, può impostare cookie tecnici di sicurezza (per esempio <code>__cf_bm</code>) per distinguere i visitatori reali dai bot. Sono necessari al funzionamento sicuro del sito e non richiedono consenso. <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" rel="noopener" target="_blank">Elenco dei cookie di Cloudflare</a>.</p>
 <p>Il sito non usa nemmeno altre forme di memorizzazione nel browser (come localStorage).</p>
-<h2>Caratteri tipografici di Google</h2>
-<p>I caratteri del sito sono caricati da Google Fonts. Google Fonts non imposta cookie, ma il tuo browser contatta i server di Google, che ricevono il tuo indirizzo IP. Dettagli nell'<a href="{P("privacy")}">informativa sulla privacy</a>.</p>
+<h2>Caratteri tipografici</h2>
+<p>I caratteri del sito (Space Grotesk e IBM Plex Sans, con licenza libera SIL OFL) sono ospitati direttamente su padelmetrix.com: per caricarli il tuo browser non contatta servizi esterni e nessuno riceve dati.</p>
 <h2>Siti esterni</h2>
 <p>Quando clicchi su un link verso un negozio (per esempio Amazon) o verso un'altra fonte, lasci PadelMetrix: quel sito può usare i propri cookie, regolati dalla sua cookie policy. È così che i negozi riconoscono gli acquisti arrivati tramite link di affiliazione.</p>
 <h2>Come gestire i cookie</h2>
@@ -191,8 +187,8 @@ def cookie():
 </tbody></table>
 <p>Cloudflare, which hosts the site, may set security cookies (for example <code>__cf_bm</code>) to tell real visitors from bots. They are necessary for the site to run securely and do not require consent. <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" rel="noopener" target="_blank">List of Cloudflare cookies</a>.</p>
 <p>The site does not use other forms of browser storage either (such as localStorage).</p>
-<h2>Google typefaces</h2>
-<p>The site's typefaces are loaded from Google Fonts. Google Fonts does not set cookies, but your browser contacts Google's servers, which receive your IP address. Details in the <a href="{P("privacy")}">privacy policy</a>.</p>
+<h2>Typefaces</h2>
+<p>The site's typefaces (Space Grotesk and IBM Plex Sans, under the free SIL OFL licence) are hosted directly on padelmetrix.com: loading them does not contact any external service and no one receives your data.</p>
 <h2>External sites</h2>
 <p>When you click a link to a shop (for example Amazon) or to another source, you leave PadelMetrix: that site may use its own cookies, governed by its cookie policy. This is how shops recognise purchases that came through affiliate links.</p>
 <h2>Managing cookies</h2>
@@ -215,8 +211,8 @@ def cookie():
 </tbody></table>
 <p>Cloudflare, que aloja la web, puede instalar cookies técnicas de seguridad (por ejemplo <code>__cf_bm</code>) para distinguir a los visitantes reales de los bots. Son necesarias para el funcionamiento seguro de la web y no requieren consentimiento. <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" rel="noopener" target="_blank">Lista de cookies de Cloudflare</a>.</p>
 <p>La web tampoco usa otras formas de almacenamiento en el navegador (como localStorage).</p>
-<h2>Tipografías de Google</h2>
-<p>Las tipografías de la web se cargan desde Google Fonts. Google Fonts no instala cookies, pero tu navegador contacta con los servidores de Google, que reciben tu dirección IP. Detalles en la <a href="{P("privacy")}">política de privacidad</a>.</p>
+<h2>Tipografías</h2>
+<p>Las tipografías de la web (Space Grotesk e IBM Plex Sans, con licencia libre SIL OFL) se alojan directamente en padelmetrix.com: para cargarlas tu navegador no contacta servicios externos y nadie recibe datos.</p>
 <h2>Webs externas</h2>
 <p>Al hacer clic en un enlace a una tienda (por ejemplo Amazon) o a otra fuente, sales de PadelMetrix: esa web puede usar sus propias cookies, reguladas por su política de cookies. Así es como las tiendas reconocen las compras que llegan a través de enlaces de afiliado.</p>
 <h2>Cómo gestionar las cookies</h2>
@@ -239,8 +235,8 @@ def cookie():
 </tbody></table>
 <p>Cloudflare, qui héberge le site, peut déposer des cookies de sécurité (par exemple <code>__cf_bm</code>) pour distinguer les vrais visiteurs des robots. Ils sont nécessaires au fonctionnement sécurisé du site et ne requièrent pas de consentement. <a href="https://developers.cloudflare.com/fundamentals/reference/policies-compliances/cloudflare-cookies/" rel="noopener" target="_blank">Liste des cookies Cloudflare</a>.</p>
 <p>Le site n'utilise pas non plus d'autres formes de stockage dans le navigateur (comme le localStorage).</p>
-<h2>Polices Google</h2>
-<p>Les polices du site sont chargées depuis Google Fonts. Google Fonts ne dépose pas de cookies, mais votre navigateur contacte les serveurs de Google, qui reçoivent votre adresse IP. Détails dans la <a href="{P("privacy")}">politique de confidentialité</a>.</p>
+<h2>Polices de caractères</h2>
+<p>Les polices du site (Space Grotesk et IBM Plex Sans, sous licence libre SIL OFL) sont hébergées directement sur padelmetrix.com : pour les charger, votre navigateur ne contacte aucun service externe et personne ne reçoit de données.</p>
 <h2>Sites externes</h2>
 <p>Quand vous cliquez sur un lien vers une boutique (par exemple Amazon) ou vers une autre source, vous quittez PadelMetrix : ce site peut utiliser ses propres cookies, régis par sa politique relative aux cookies. C'est ainsi que les boutiques reconnaissent les achats arrivés par des liens affiliés.</p>
 <h2>Gérer les cookies</h2>
@@ -286,32 +282,32 @@ GA_COOKIE = {
            "usa cookie di analisi (Google Analytics) solo se li accetti dal banner, e non usa mai cookie di profilazione o pubblicitari.</b>",
            "<tr><td>Cookie di analisi (statistiche)</td><td>No</td></tr>",
            "<tr><td>Cookie di analisi (Google Analytics: <code>_ga</code>, <code>_ga_*</code>)</td><td>Sì, solo con il tuo consenso; durata fino a 2 anni</td></tr>",
-           "<h2>Caratteri tipografici di Google</h2>",
-           "<h2>Google Analytics e consenso</h2><p>Google Analytics 4, caricato tramite Google Tag Manager, si attiva solo dopo che clicchi «Accetta» nel banner. Se rifiuti, Tag Manager non viene nemmeno caricato. La tua scelta viene salvata nel browser (voce tecnica <code>pm_consenso</code>, senza dati personali) e puoi cambiarla in ogni momento dal link «Preferenze cookie» in fondo alla pagina. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Come Google usa i cookie</a>.</p>\n<h2>Caratteri tipografici di Google</h2>",
+           "<h2>Caratteri tipografici</h2>",
+           "<h2>Google Analytics e consenso</h2><p>Google Analytics 4, caricato tramite Google Tag Manager, si attiva solo dopo che clicchi «Accetta» nel banner. Se rifiuti, Tag Manager non viene nemmeno caricato. La tua scelta viene salvata nel browser (voce tecnica <code>pm_consenso</code>, senza dati personali) e puoi cambiarla in ogni momento dal link «Preferenze cookie» in fondo alla pagina. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Come Google usa i cookie</a>.</p>\n<h2>Caratteri tipografici</h2>",
            "<p>Il sito non usa nemmeno altre forme di memorizzazione nel browser (come localStorage).</p>", "",
            "Se in futuro aggiungeremo statistiche o pubblicità", "Se in futuro aggiungeremo pubblicità"),
     "en": ("does not set its own cookies and uses no analytics, profiling or advertising cookies.</b> That is why the site shows no consent banner.",
            "uses analytics cookies (Google Analytics) only if you accept them in the banner, and never uses profiling or advertising cookies.</b>",
            "<tr><td>Analytics cookies (statistics)</td><td>No</td></tr>",
            "<tr><td>Analytics cookies (Google Analytics: <code>_ga</code>, <code>_ga_*</code>)</td><td>Yes, only with your consent; lasting up to 2 years</td></tr>",
-           "<h2>Google typefaces</h2>",
-           "<h2>Google Analytics and consent</h2><p>Google Analytics 4, loaded through Google Tag Manager, is only activated after you click \"Accept\" in the banner. If you reject, Tag Manager is not even loaded. Your choice is saved in your browser (a technical entry, <code>pm_consenso</code>, with no personal data) and you can change it at any time via the \"Cookie preferences\" link at the bottom of the page. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">How Google uses cookies</a>.</p>\n<h2>Google typefaces</h2>",
+           "<h2>Typefaces</h2>",
+           "<h2>Google Analytics and consent</h2><p>Google Analytics 4, loaded through Google Tag Manager, is only activated after you click \"Accept\" in the banner. If you reject, Tag Manager is not even loaded. Your choice is saved in your browser (a technical entry, <code>pm_consenso</code>, with no personal data) and you can change it at any time via the \"Cookie preferences\" link at the bottom of the page. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">How Google uses cookies</a>.</p>\n<h2>Typefaces</h2>",
            "<p>The site does not use other forms of browser storage either (such as localStorage).</p>", "",
            "If we add statistics or advertising in the future", "If we add advertising in the future"),
     "es": ("no instala cookies propias ni usa cookies de análisis, de perfilado ni publicitarias.</b> Por eso la web no muestra un banner de consentimiento.",
            "usa cookies de análisis (Google Analytics) solo si las aceptas en el banner, y nunca usa cookies de perfilado ni publicitarias.</b>",
            "<tr><td>Cookies de análisis (estadísticas)</td><td>No</td></tr>",
            "<tr><td>Cookies de análisis (Google Analytics: <code>_ga</code>, <code>_ga_*</code>)</td><td>Sí, solo con tu consentimiento; duración de hasta 2 años</td></tr>",
-           "<h2>Tipografías de Google</h2>",
-           "<h2>Google Analytics y consentimiento</h2><p>Google Analytics 4, cargado mediante Google Tag Manager, solo se activa después de que hagas clic en «Aceptar» en el banner. Si rechazas, Tag Manager ni siquiera se carga. Tu elección se guarda en el navegador (una entrada técnica, <code>pm_consenso</code>, sin datos personales) y puedes cambiarla en cualquier momento desde el enlace «Preferencias de cookies» al pie de la página. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Cómo usa Google las cookies</a>.</p>\n<h2>Tipografías de Google</h2>",
+           "<h2>Tipografías</h2>",
+           "<h2>Google Analytics y consentimiento</h2><p>Google Analytics 4, cargado mediante Google Tag Manager, solo se activa después de que hagas clic en «Aceptar» en el banner. Si rechazas, Tag Manager ni siquiera se carga. Tu elección se guarda en el navegador (una entrada técnica, <code>pm_consenso</code>, sin datos personales) y puedes cambiarla en cualquier momento desde el enlace «Preferencias de cookies» al pie de la página. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Cómo usa Google las cookies</a>.</p>\n<h2>Tipografías</h2>",
            "<p>La web tampoco usa otras formas de almacenamiento en el navegador (como localStorage).</p>", "",
            "Si en el futuro añadimos estadísticas o publicidad", "Si en el futuro añadimos publicidad"),
     "fr": ("ne dépose pas ses propres cookies et n'utilise aucun cookie de statistiques, de profilage ou publicitaire.</b> C'est pourquoi le site n'affiche pas de bandeau de consentement.",
            "n'utilise des cookies de statistiques (Google Analytics) que si vous les acceptez dans le bandeau, et n'utilise jamais de cookies de profilage ou publicitaires.</b>",
            "<tr><td>Cookies de statistiques</td><td>Non</td></tr>",
            "<tr><td>Cookies de statistiques (Google Analytics : <code>_ga</code>, <code>_ga_*</code>)</td><td>Oui, uniquement avec votre consentement ; durée jusqu'à 2 ans</td></tr>",
-           "<h2>Polices Google</h2>",
-           "<h2>Google Analytics et consentement</h2><p>Google Analytics 4, chargé via Google Tag Manager, ne s'active qu'après que vous avez cliqué sur « Accepter » dans le bandeau. Si vous refusez, Tag Manager n'est même pas chargé. Votre choix est enregistré dans le navigateur (une entrée technique, <code>pm_consenso</code>, sans données personnelles) et vous pouvez le modifier à tout moment via le lien « Préférences cookies » en bas de la page. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Comment Google utilise les cookies</a>.</p>\n<h2>Polices Google</h2>",
+           "<h2>Polices de caractères</h2>",
+           "<h2>Google Analytics et consentement</h2><p>Google Analytics 4, chargé via Google Tag Manager, ne s'active qu'après que vous avez cliqué sur « Accepter » dans le bandeau. Si vous refusez, Tag Manager n'est même pas chargé. Votre choix est enregistré dans le navigateur (une entrée technique, <code>pm_consenso</code>, sans données personnelles) et vous pouvez le modifier à tout moment via le lien « Préférences cookies » en bas de la page. <a href=\"https://policies.google.com/technologies/cookies\" rel=\"noopener\" target=\"_blank\">Comment Google utilise les cookies</a>.</p>\n<h2>Polices de caractères</h2>",
            "<p>Le site n'utilise pas non plus d'autres formes de stockage dans le navigateur (comme le localStorage).</p>", "",
            "Si nous ajoutons à l'avenir des statistiques ou de la publicité", "Si nous ajoutons à l'avenir de la publicité"),
 }
