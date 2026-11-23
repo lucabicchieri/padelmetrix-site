@@ -1,5 +1,32 @@
 [
  {
+  "slug": "aimar-goni-chi-e-e-che-racchetta-usa",
+  "cat": "giocatori",
+  "data": "2026-11-23",
+  "racchette": [
+   "nox-ventus-attack-12k-xtrem-2027",
+   "nox-ea10-ventus-attack-12k-xtrem-2026"
+  ],
+  "titolo": {
+   "it": "Aimar Goñi: chi è e che racchetta usa (2026)",
+   "en": "Aimar Goñi: who he is and which racket he uses (2026)",
+   "es": "Aimar Goñi: quién es, cuánto mide, de dónde es y qué pala usa (2026)",
+   "fr": "Aimar Goñi : qui il est et quelle raquette il utilise (2026)"
+  },
+  "desc": {
+   "it": "La rivelazione spagnola dall'A1 alla top 50 e la sua Nox Ventus Attack.",
+   "en": "The Spanish revelation from A1 to the top 50 and his Nox Ventus Attack.",
+   "es": "La revelación española del A1 al top 50 y su Nox Ventus Attack.",
+   "fr": "La révélation espagnole de l'A1 au top 50 et sa Nox Ventus Attack."
+  },
+  "url": {
+   "it": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
+   "en": "/en/articles/aimar-goni-who-he-is-and-which-racket-he-uses/",
+   "es": "/es/articulos/aimar-goni-quien-es-y-que-pala-usa/",
+   "fr": "/fr/articles/aimar-goni-qui-est-il-et-quelle-raquette-utilise-t-il/"
+  }
+ },
+ {
   "slug": "superfici-campo-padel-erba-sintetica-tipi",
   "cat": "guide",
   "data": "2026-11-18",

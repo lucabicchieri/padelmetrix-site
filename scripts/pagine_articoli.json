@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
+"alt": {
+"it": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/aimar-goni-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/aimar-goni-quien-es-y-que-pala-usa/",
+"fr": "/fr/articles/aimar-goni-qui-est-il-et-quelle-raquette-utilise-t-il/"
+}
+},
+{
 "path": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
 "alt": {
 "it": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
@@ -384,6 +393,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/aimar-goni-who-he-is-and-which-racket-he-uses/",
+"alt": {
+"it": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/aimar-goni-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/aimar-goni-quien-es-y-que-pala-usa/",
+"fr": "/fr/articles/aimar-goni-qui-est-il-et-quelle-raquette-utilise-t-il/"
 }
 },
 {
@@ -774,6 +792,15 @@
 }
 },
 {
+"path": "/es/articulos/aimar-goni-quien-es-y-que-pala-usa/",
+"alt": {
+"it": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/aimar-goni-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/aimar-goni-quien-es-y-que-pala-usa/",
+"fr": "/fr/articles/aimar-goni-qui-est-il-et-quelle-raquette-utilise-t-il/"
+}
+},
+{
 "path": "/es/articulos/superficies-pista-padel-cesped-artificial-tipos/",
 "alt": {
 "it": "/it/articoli/superfici-campo-padel-erba-sintetica-tipi/",
@@ -1158,6 +1185,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/aimar-goni-qui-est-il-et-quelle-raquette-utilise-t-il/",
+"alt": {
+"it": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
+"en": "/en/articles/aimar-goni-who-he-is-and-which-racket-he-uses/",
+"es": "/es/articulos/aimar-goni-quien-es-y-que-pala-usa/",
+"fr": "/fr/articles/aimar-goni-qui-est-il-et-quelle-raquette-utilise-t-il/"
 }
 },
 {
