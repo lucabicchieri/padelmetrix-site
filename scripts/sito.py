@@ -3,6 +3,7 @@
 La lingua corrente si imposta con set_lang("it"|"en"|"es"); L(it, en, es) sceglie il testo, P(sezione, slug) il percorso.
 """
 import html
+from font_locali import FONT_HEAD
 import json
 import pathlib
 import re
@@ -493,8 +494,7 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None, og=
 <meta property="og:site_name" content="PadelMetrix">
 {og_tags(og)}
 <link rel="icon" href="{FAVICON}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+{FONT_HEAD}
 {lds}
 <style>
 {CSS}
