@@ -21,7 +21,7 @@ ARTICOLI = json.loads(_AF.read_text(encoding="utf-8")) if _AF.exists() else []
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-AMAZON = {"it": "www.amazon.it", "en": "www.amazon.co.uk", "es": "www.amazon.es", "fr": "www.amazon.fr"}
+AMAZON = {"it": "www.amazon.it", "en": "www.amazon.com", "es": "www.amazon.es", "fr": "www.amazon.fr"}
 # Tracking ID del Programma Affiliazione Amazon per paese (None = programma non ancora attivo)
 AMAZON_TAG = {"it": "padelmetrix-21", "en": None, "es": None, "fr": None}
 

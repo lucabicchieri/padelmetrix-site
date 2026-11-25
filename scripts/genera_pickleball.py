@@ -11,7 +11,7 @@ import sito as S  # noqa: E402
 from sito import ROOT, SITO, e, L, P, ALT, crumbs, pagina, LINGUE, set_lang, LIVN, STILEN, euro, data_txt, OGGI  # noqa: E402
 from dati_pickleball import P as PADDLE, F, FORME  # noqa: E402
 
-AMAZON = {"it": "www.amazon.it", "en": "www.amazon.co.uk", "es": "www.amazon.es", "fr": "www.amazon.fr"}
+AMAZON = {"it": "www.amazon.it", "en": "www.amazon.com", "es": "www.amazon.es", "fr": "www.amazon.fr"}
 AMAZON_TAG = {"it": "padelmetrix-21", "en": None, "es": None, "fr": None}
 OZ, IN = 28.3495, 2.54
 

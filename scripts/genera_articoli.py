@@ -8,7 +8,7 @@ import json
 import sys
 import pathlib
 from collections import Counter
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote_plus
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import sito as S  # noqa: E402
@@ -2936,14 +2936,22 @@ _REGALO_SVG = ('<svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="tru
 
 
 def _amz(a):
+    # Pagine in inglese: ricerca su amazon.com per nome (gli ASIN di amazon.it spesso non esistono lì), senza tag
+    # finché non c'è un codice di affiliazione per quel mercato.
+    if S.lang() == "en":
+        return "https://www.amazon.com/s?k=" + quote_plus(_RP[a]["n"])
     return f"https://www.amazon.it/dp/{a}?tag=padelmetrix-21"
+
+
+def _amz_rel():
+    return "nofollow noopener" if S.lang() == "en" else "sponsored nofollow noopener"
 
 
 def _regalo_card(a, i):
     p = _RP[a]
     return (f'<div class="regalo"><div class="rimg" data-asin="{a}" data-alt="{e(p["n"])}">{_REGALO_SVG}</div>'
             f'<div class="rtx"><b>{e(p["n"])}</b><p>{e(p["d"][i])}</p><p class="rpz" data-pz="{a}"></p>'
-            f'<a class="btn" href="{_amz(a)}" rel="sponsored nofollow noopener" target="_blank">{L("Vedi su Amazon", "See on Amazon", "Ver en Amazon", "Voir sur Amazon")}</a></div></div>')
+            f'<a class="btn" href="{_amz(a)}" rel="{_amz_rel()}" target="_blank">{L("Vedi su Amazon", "See on Amazon", "Ver en Amazon", "Voir sur Amazon")}</a></div></div>')
 
 
 def _regali_corpo(art_, db, i):
@@ -2956,7 +2964,7 @@ def _regali_corpo(art_, db, i):
         if tipo == "P":
             return '<div class="regali">' + "".join(_regalo_card(a.strip(), i) for a in arg.split(",")) + "</div>"
         if tipo == "P1":
-            return f'<a href="{_amz(arg)}" rel="sponsored nofollow noopener" target="_blank">{e(_RP[arg]["n"])}</a>'
+            return f'<a href="{_amz(arg)}" rel="{_amz_rel()}" target="_blank">{e(_RP[arg]["n"])}</a>'
         if tipo == "R":
             rs = [by[s.strip()] for s in arg.split(",")]
             usate.extend(rs)
