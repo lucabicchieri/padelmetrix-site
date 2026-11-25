@@ -187,7 +187,10 @@ art(k="sotto50",
 <p>Una pallina perde rimbalzo già dopo poche partite: il pressurizzatore la mantiene in pressione tra un incontro e l'altro. Più dettagli in [[A:pressurizzatori]].</p>
 [[P:B0786KK4TG,B002JOYYKW,B0F1F2KX6J]]
 <h2>Borse e zaini</h2>
-[[P:B095V7MC8Z,B0G15YKT2D,B0BSNRVGWK,B0G7J2S6WT,B0FSDS33M5,B0D894FN7P]]
+[[P:B0G15YKT2D,B0BSNRVGWK,B0FSDS33M5]]
+<h2>Se puoi salire un po' oltre i 50 €</h2>
+<p>Queste borse sono state a lungo sotto i 50 €, ma i prezzi cambiano spesso: oggi possono costare qualcosa in più. Controlla il prezzo aggiornato sulla scheda.</p>
+[[P:B095V7MC8Z,B0G7J2S6WT,B0D894FN7P]]
 <h2>Abbigliamento e calze</h2>
 <p>Per l'abbigliamento serve la taglia: se non la conosci, scegli le calze tecniche, che hanno taglie più larghe.</p>
 [[P:B0DRPRPSGY,B07HVKYZ2N,B0FHQNDQ49]]
@@ -200,7 +203,10 @@ art(k="sotto50",
 <p>A ball loses bounce after just a few matches: a pressuriser keeps it under pressure between games. More details in [[A:pressurizzatori]].</p>
 [[P:B0786KK4TG,B002JOYYKW,B0F1F2KX6J]]
 <h2>Bags and backpacks</h2>
-[[P:B095V7MC8Z,B0G15YKT2D,B0BSNRVGWK,B0G7J2S6WT,B0FSDS33M5,B0D894FN7P]]
+[[P:B0G15YKT2D,B0BSNRVGWK,B0FSDS33M5]]
+<h2>If you can go a little over 50 euros</h2>
+<p>These bags have often been under 50 euros, but prices change frequently and today they may cost a bit more. Check the updated price on the card.</p>
+[[P:B095V7MC8Z,B0G7J2S6WT,B0D894FN7P]]
 <h2>Clothing and socks</h2>
 <p>For clothing you need the size: if you don't know it, choose technical socks, which have broader sizes.</p>
 [[P:B0DRPRPSGY,B07HVKYZ2N,B0FHQNDQ49]]
@@ -213,7 +219,10 @@ art(k="sotto50",
 <p>Una pelota pierde bote tras pocos partidos: el presurizador la mantiene con presión entre un partido y otro. Más detalles en [[A:pressurizzatori]].</p>
 [[P:B0786KK4TG,B002JOYYKW,B0F1F2KX6J]]
 <h2>Paleteros y mochilas</h2>
-[[P:B095V7MC8Z,B0G15YKT2D,B0BSNRVGWK,B0G7J2S6WT,B0FSDS33M5,B0D894FN7P]]
+[[P:B0G15YKT2D,B0BSNRVGWK,B0FSDS33M5]]
+<h2>Si puedes pasar un poco de los 50 €</h2>
+<p>Estos paleteros han estado a menudo por debajo de 50 €, pero los precios cambian con frecuencia y hoy pueden costar algo más. Comprueba el precio actualizado en la ficha.</p>
+[[P:B095V7MC8Z,B0G7J2S6WT,B0D894FN7P]]
 <h2>Ropa y calcetines</h2>
 <p>Para la ropa hace falta la talla: si no la sabes, elige los calcetines técnicos, que tienen tallas más amplias.</p>
 [[P:B0DRPRPSGY,B07HVKYZ2N,B0FHQNDQ49]]
@@ -226,7 +235,10 @@ art(k="sotto50",
 <p>Une balle perd du rebond après quelques matchs seulement : le pressuriseur la garde sous pression entre deux rencontres. Plus de détails dans [[A:pressurizzatori]].</p>
 [[P:B0786KK4TG,B002JOYYKW,B0F1F2KX6J]]
 <h2>Sacs et sacs à dos</h2>
-[[P:B095V7MC8Z,B0G15YKT2D,B0BSNRVGWK,B0G7J2S6WT,B0FSDS33M5,B0D894FN7P]]
+[[P:B0G15YKT2D,B0BSNRVGWK,B0FSDS33M5]]
+<h2>Si vous pouvez dépasser un peu les 50 €</h2>
+<p>Ces sacs ont souvent été sous les 50 €, mais les prix changent souvent et ils peuvent aujourd'hui coûter un peu plus. Vérifiez le prix à jour sur la fiche.</p>
+[[P:B095V7MC8Z,B0G7J2S6WT,B0D894FN7P]]
 <h2>Vêtements et chaussettes</h2>
 <p>Pour les vêtements, il faut la taille : si vous ne la connaissez pas, choisissez des chaussettes techniques, aux tailles plus larges.</p>
 [[P:B0DRPRPSGY,B07HVKYZ2N,B0FHQNDQ49]]
