@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-25T09:42Z",
+ "aggiornato": "2026-11-25T14:27Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -661,8 +661,8 @@
    "h": 500,
    "titolo": "Bullpadel Neuron 02 Edge",
    "scheda": "bullpadel-neuron-02-edge-2026",
-   "prezzo": "149,50 €",
-   "euro": 149.5
+   "prezzo": "149,54 €",
+   "euro": 149.54
   },
   "B0HG1L21LR": {
    "img": "https://m.media-amazon.com/images/I/41sLE4y88jL._SL500_.jpg",
@@ -976,8 +976,8 @@
    "h": 500,
    "titolo": "Racchetta da padel HEAD Bolt",
    "scheda": "head-bolt-2026",
-   "prezzo": "78,56 €",
-   "euro": 78.56
+   "prezzo": "78,24 €",
+   "euro": 78.24
   },
   "B0F6TK5K7Q": {
    "img": "https://m.media-amazon.com/images/I/41+lCEiEnpL._SL500_.jpg",
@@ -1076,9 +1076,9 @@
    "h": 500,
    "titolo": "HEAD Speed Junior 2025",
    "scheda": "head-speed-junior-2025",
-   "prezzo": "61,59 €",
-   "euro": 61.59,
-   "sconto": 38,
+   "prezzo": "70,00 €",
+   "euro": 70.0,
+   "sconto": 30,
    "prima": "100,00 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -1087,9 +1087,7 @@
    "w": 500,
    "h": 500,
    "titolo": "HEAD Racchetta a padel Speed Motion 2025 - Perfetto equilibrio tra potenza e controllo, facilmente manovrabile, Teardrop",
-   "scheda": "head-speed-motion-2025",
-   "prezzo": "150,00 €",
-   "euro": 150.0
+   "scheda": "head-speed-motion-2025"
   },
   "B0DNTQTRND": {
    "img": "https://m.media-amazon.com/images/I/31RqxJY2+TL._SL500_.jpg",
@@ -1118,8 +1116,8 @@
    "h": 500,
    "titolo": "Racchetta Joma Blast PRO Hard 2027 Beige",
    "scheda": "joma-blast-pro-hard-2027",
-   "prezzo": "116,95 €",
-   "euro": 116.95
+   "prezzo": "133,46 €",
+   "euro": 133.46
   },
   "B0HQK7NXWN": {
    "img": "https://m.media-amazon.com/images/I/41AOvaFrkJL._SL500_.jpg",
@@ -1127,8 +1125,8 @@
    "h": 500,
    "titolo": "Racchetta Joma Blast Pro Soft 2027 Bordeaux Beige",
    "scheda": "joma-blast-pro-soft-2027",
-   "prezzo": "116,95 €",
-   "euro": 116.95
+   "prezzo": "133,46 €",
+   "euro": 133.46
   },
   "B0HRZCWNC3": {
    "img": "https://m.media-amazon.com/images/I/416pExxs5tL._SL500_.jpg",
@@ -1161,8 +1159,8 @@
    "h": 500,
    "titolo": "Racchetta Joma Tournament Evo 2027 Nero Grigio Chiaro",
    "scheda": "joma-tournament-evo-2027",
-   "prezzo": "122,95 €",
-   "euro": 122.95
+   "prezzo": "140,91 €",
+   "euro": 140.91
   },
   "B0H3C9GW2L": {
    "img": "https://m.media-amazon.com/images/I/41zMKFTlcAL._SL500_.jpg",
@@ -1206,8 +1204,11 @@
    "h": 500,
    "titolo": "Nox At10 Genius 18k Alum by Agustin Tapia 2026",
    "scheda": "nox-at10-genius-18k-alum-2026",
-   "prezzo": "209,00 €",
-   "euro": 209.0
+   "prezzo": "192,90 €",
+   "euro": 192.9,
+   "sconto": 8,
+   "prima": "209,90 €",
+   "tipo_prima": "WAS_PRICE"
   },
   "B0DHT12YC4": {
    "img": "https://m.media-amazon.com/images/I/41jW1zvYXmL._SL500_.jpg",
@@ -1246,7 +1247,12 @@
    "w": 500,
    "h": 500,
    "titolo": "Nox Ea10 Ventus Hybrid 12k Xtrem By Edu Alonso 2026",
-   "scheda": "nox-ea10-ventus-hybrid-12k-xtrem-2026"
+   "scheda": "nox-ea10-ventus-hybrid-12k-xtrem-2026",
+   "prezzo": "147,90 €",
+   "euro": 147.9,
+   "sconto": 10,
+   "prima": "163,90 €",
+   "tipo_prima": "WAS_PRICE"
   },
   "B0HHK69XZF": {
    "img": "https://m.media-amazon.com/images/I/41dkSoRsmaL._SL500_.jpg",
@@ -1455,8 +1461,8 @@
    "h": 500,
    "titolo": "Royal Padel M27 Light 2026 Padel Racket One Size",
    "scheda": "royal-padel-m27-light-2026",
-   "prezzo": "215,90 €",
-   "euro": 215.9
+   "prezzo": "215,00 €",
+   "euro": 215.0
   },
   "B0GQBN3CY1": {
    "img": "https://m.media-amazon.com/images/I/41M9nuDIaPL._SL500_.jpg",
@@ -1534,8 +1540,8 @@
    "h": 500,
    "titolo": "SIUX Diablo Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, controllo, potenza e comfort",
    "scheda": "siux-diablo-elite-2027",
-   "prezzo": "150,95 €",
-   "euro": 150.95
+   "prezzo": "201,40 €",
+   "euro": 201.4
   },
   "B0FV8KDN8X": {
    "img": "https://m.media-amazon.com/images/I/41BzHrr1x8L._SL500_.jpg",
@@ -1570,8 +1576,8 @@
    "h": 500,
    "titolo": "Siux Electra Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K, equilibrio medio, finitura satinata e sabbiosa, controllo, potenza e precisione",
    "scheda": "siux-electra-pro-2027",
-   "prezzo": "200,95 €",
-   "euro": 200.95
+   "prezzo": "264,50 €",
+   "euro": 264.5
   },
   "B0DXDD2BZ8": {
    "img": "https://m.media-amazon.com/images/I/41HYi4YADML._SL500_.jpg",
@@ -1588,8 +1594,8 @@
    "h": 500,
    "titolo": "SIUX Fenix Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a diamante, carbonio 3K, equilibrio alto, finitura opaca e sabbiosa, potenza, durezza e precisione",
    "scheda": "siux-fenix-elite-2027",
-   "prezzo": "205,57 €",
-   "euro": 205.57
+   "prezzo": "201,90 €",
+   "euro": 201.9
   },
   "B0HPKS5QRJ": {
    "img": "https://m.media-amazon.com/images/I/31l2BBc416L._SL500_.jpg",
@@ -1597,8 +1603,8 @@
    "h": 500,
    "titolo": "SIUX Fenix Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a diamante, carbonio 12K Honeycomb, equilibrio alto, finitura satinata 3D, massima potenza e precisione",
    "scheda": "siux-fenix-pro-2027",
-   "prezzo": "200,95 €",
-   "euro": 200.95
+   "prezzo": "254,50 €",
+   "euro": 254.5
   },
   "B0DYVSZPLV": {
    "img": "https://m.media-amazon.com/images/I/41-xYOeQJ9L._SL500_.jpg",
@@ -1618,8 +1624,8 @@
    "h": 500,
    "titolo": "Siux Obsidian Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K SC Comfort ed EVA Soft, equilibrio basso, finitura satinata, controllo e comfort",
    "scheda": "siux-obsidian-elite-2027",
-   "prezzo": "150,95 €",
-   "euro": 150.95
+   "prezzo": "201,40 €",
+   "euro": 201.4
   },
   "B0HPKY5CQ1": {
    "img": "https://m.media-amazon.com/images/I/414T7xJAgJL._SL500_.jpg",
@@ -1627,8 +1633,8 @@
    "h": 500,
    "titolo": "SIUX Obsidian Pro 2027 Black - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 16K ed EVA Soft, bilanciamento basso, finitura satinata 3D, controllo e precisione",
    "scheda": "siux-obsidian-pro-2027",
-   "prezzo": "200,95 €",
-   "euro": 200.95
+   "prezzo": "268,40 €",
+   "euro": 268.4
   },
   "B0HPKPJS1Y": {
    "img": "https://m.media-amazon.com/images/I/31sxoNzbNRL._SL500_.jpg",
@@ -1636,8 +1642,8 @@
    "h": 500,
    "titolo": "SIUX Pegasus Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, potenza, fermezza e precisione",
    "scheda": "siux-pegasus-elite-2027",
-   "prezzo": "150,95 €",
-   "euro": 150.95
+   "prezzo": "201,40 €",
+   "euro": 201.4
   },
   "B0HPL1C77B": {
    "img": "https://m.media-amazon.com/images/I/41bb5Us+O7L._SL500_.jpg",
@@ -1645,8 +1651,8 @@
    "h": 500,
    "titolo": "SIUX Pegasus Pro 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 12K, equilibrio medio, finitura satinata 3D, potenza, rigidità e precisione",
    "scheda": "siux-pegasus-pro-2027",
-   "prezzo": "200,95 €",
-   "euro": 200.95
+   "prezzo": "268,40 €",
+   "euro": 268.4
   },
   "B0DZFLSMJY": {
    "img": "https://m.media-amazon.com/images/I/41rV0PE4kWL._SL500_.jpg",
@@ -1663,8 +1669,8 @@
    "h": 500,
    "titolo": "Siux Valkiria Elite 2027 - Racchetta da paddle per giocatori avanzati e professionisti, forma a goccia, carbonio 3K, equilibrio medio, finitura opaca e sabbiosa, comfort, precisione e versatilità",
    "scheda": "siux-valkiria-elite-2027",
-   "prezzo": "150,95 €",
-   "euro": 150.95
+   "prezzo": "201,40 €",
+   "euro": 201.4
   },
   "B0HPL2WY7M": {
    "img": "https://m.media-amazon.com/images/I/31TP3CSfX4L._SL500_.jpg",
@@ -1699,8 +1705,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Astrum+ Black 2027",
    "scheda": "starvie-astrum-plus-2027",
-   "prezzo": "248,90 €",
-   "euro": 248.9
+   "prezzo": "254,90 €",
+   "euro": 254.9
   },
   "B0FVD3Q8QZ": {
    "img": "https://m.media-amazon.com/images/I/41yWOP-Z5jL._SL500_.jpg",
@@ -1861,8 +1867,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Triton Power+ 2027",
    "scheda": "starvie-triton-power-plus-2027",
-   "prezzo": "262,90 €",
-   "euro": 262.9
+   "prezzo": "268,90 €",
+   "euro": 268.9
   },
   "B0HJHDMMPF": {
    "img": "https://m.media-amazon.com/images/I/41rHdAlv9rL._SL500_.jpg",
@@ -2216,11 +2222,8 @@
    "h": 500,
    "titolo": "HEAD Pale unisex per adulti Radical Elite 2024 Pickleball Paddle, arancione, taglia unica",
    "scheda": "pickleball/head-radical-elite-2024",
-   "prezzo": "56,59 €",
-   "euro": 56.59,
-   "sconto": 5,
-   "prima": "59,83 €",
-   "tipo_prima": "WAS_PRICE"
+   "prezzo": "61,31 €",
+   "euro": 61.31
   },
   "B0BSS87MK3": {
    "img": "https://m.media-amazon.com/images/I/41x2rH7ViwL._SL500_.jpg",
@@ -2361,8 +2364,8 @@
    "h": 500,
    "titolo": "Bullpadel Palline Paddle Tennis Premium PRO Pack 9 (3x3)",
    "scheda": "regali",
-   "prezzo": "22,80 €",
-   "euro": 22.8
+   "prezzo": "22,81 €",
+   "euro": 22.81
   },
   "B0CKY23K4Q": {
    "img": "https://m.media-amazon.com/images/I/31ojAVousBL._SL500_.jpg",
@@ -2397,11 +2400,8 @@
    "h": 500,
    "titolo": "HEAD Padel Radical Balls, Esclusiva Amazon, 3 x 3 Lattine di Palline (9 Palline)",
    "scheda": "regali",
-   "prezzo": "14,49 €",
-   "euro": 14.49,
-   "sconto": 9,
-   "prima": "15,87 €",
-   "tipo_prima": "WAS_PRICE"
+   "prezzo": "16,08 €",
+   "euro": 16.08
   },
   "B0DKJSNYTS": {
    "img": "https://m.media-amazon.com/images/I/51q0aRjXEdL._SL500_.jpg",
@@ -2409,8 +2409,8 @@
    "h": 500,
    "titolo": "HEAD Padel Pro S + Scatola da 24 Tubi da 3 Palline",
    "scheda": "regali",
-   "prezzo": "113,05 €",
-   "euro": 113.05
+   "prezzo": "108,90 €",
+   "euro": 108.9
   },
   "B09FF6BXQB": {
    "img": "https://m.media-amazon.com/images/I/41BFNApmleL._SL500_.jpg",
@@ -2451,11 +2451,8 @@
    "h": 500,
    "titolo": "Wilson Pro Overgrip Grip da Tennis, Unisex, Bianco, Confezione da 3 | In feltro elastico ultra sottile ed assorbente, overgrip da tennis per avvolgere il manico per una presa e feeling superiori",
    "scheda": "regali",
-   "prezzo": "6,99 €",
-   "euro": 6.99,
-   "sconto": 26,
-   "prima": "9,50 €",
-   "tipo_prima": "LIST_PRICE"
+   "prezzo": "9,97 €",
+   "euro": 9.97
   },
   "B0C268P2G9": {
    "img": "https://m.media-amazon.com/images/I/419N0GEWZxL._SL500_.jpg",
@@ -2554,8 +2551,8 @@
    "h": 500,
    "titolo": "Bullpadel Borsa Da Padel Avant S Gold Carbon 461174",
    "scheda": "regali",
-   "prezzo": "39,90 €",
-   "euro": 39.9
+   "prezzo": "62,29 €",
+   "euro": 62.29
   },
   "B0FSDS33M5": {
    "img": "https://m.media-amazon.com/images/I/41I4T5zR3RL._SL500_.jpg",
@@ -2634,9 +2631,7 @@
    "w": 500,
    "h": 500,
    "titolo": "NOX Zaino Luxury Open Series Nero/Marrone",
-   "scheda": "regali",
-   "prezzo": "50,20 €",
-   "euro": 50.2
+   "scheda": "regali"
   },
   "B0HHRPTN9L": {
    "img": "https://m.media-amazon.com/images/I/41MuXR0wPGL._SL500_.jpg",
@@ -2730,8 +2725,8 @@
    "h": 279,
    "titolo": "Asics Game FF Padel Sneaker | Synthetic | Tessuto | Rubber | EVA",
    "scheda": "regali",
-   "prezzo": "63,75 €",
-   "euro": 63.75
+   "prezzo": "89,54 €",
+   "euro": 89.54
   },
   "B0FZLTW8KC": {
    "img": "https://m.media-amazon.com/images/I/31FaU5lZ2mL._SL500_.jpg",
@@ -2769,9 +2764,9 @@
    "h": 500,
    "titolo": "HEAD Club Shorts, Uomo, Nero, L | facile da pulire | regolatore di umidità | asciugatura rapida | Girovita con elastico | Girovita con cordino",
    "scheda": "regali",
-   "prezzo": "25,49 €",
-   "euro": 25.49,
-   "sconto": 43,
+   "prezzo": "25,99 €",
+   "euro": 25.99,
+   "sconto": 42,
    "prima": "45,00 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -2781,9 +2776,9 @@
    "h": 500,
    "titolo": "Joma 100438.700.xl Bermuda Tennis Sports Bermudes Uomo Drive, Royal, XL",
    "scheda": "regali",
-   "prezzo": "9,49 €",
-   "euro": 9.49,
-   "sconto": 35,
+   "prezzo": "8,99 €",
+   "euro": 8.99,
+   "sconto": 38,
    "prima": "14,50 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -2835,9 +2830,9 @@
    "h": 500,
    "titolo": "HEAD Club Basic Skirts, Donna, Nero, M | regolatore di umidità | facile da pulire | asciugatura rapida | Colletto largo | Girovita con elastico",
    "scheda": "regali",
-   "prezzo": "23,99 €",
-   "euro": 23.99,
-   "sconto": 47,
+   "prezzo": "25,49 €",
+   "euro": 25.49,
+   "sconto": 43,
    "prima": "45,00 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -2847,9 +2842,9 @@
    "h": 500,
    "titolo": "Joma Open, Gonna da Tennis Donna, Nero, M",
    "scheda": "regali",
-   "prezzo": "14,75 €",
-   "euro": 14.75,
-   "sconto": 45,
+   "prezzo": "15,95 €",
+   "euro": 15.95,
+   "sconto": 41,
    "prima": "26,99 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -3020,9 +3015,7 @@
    "w": 303,
    "h": 500,
    "titolo": "HEAD Active - Asciugamano Microfibra con Elastico, Asciugamano Palestra, Sport, Fitness Morbido e Leggero a Rapida Asciugatura - Asciugamani Bagno Assorbente Salvaspazio da Viaggio 40x60, Uniform Blue",
-   "scheda": "regali",
-   "prezzo": "3,90 €",
-   "euro": 3.9
+   "scheda": "regali"
   },
   "B0FF78ZGYF": {
    "img": "https://m.media-amazon.com/images/I/317zuaiU7CL._SL500_.jpg",
