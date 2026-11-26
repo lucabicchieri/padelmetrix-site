@@ -8,13 +8,13 @@ on:
   workflow_dispatch:
     inputs:
       tutte:
-        description: Invia tutti gli URL della sitemap
+        description: Invia tutte le pagine del sito (anche quelle in noindex)
         type: boolean
         default: true
 jobs:
   invia:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,7 +28,8 @@ jobs:
           import os, re, subprocess
           sito = "https://www.padelmetrix.com"
           if os.environ.get("TUTTE") == "true" or not os.environ.get("PRIMA") or set(os.environ["PRIMA"]) == {"0"}:
-              urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml", encoding="utf-8").read())
+              import glob
+              urls = [sito + "/" + f[: -len("index.html")] for l in ("it", "en", "es", "fr") for f in glob.glob(f"{l}/**/index.html", recursive=True)]
           else:
               out = subprocess.run(["git", "diff", "--name-only", os.environ["PRIMA"], "HEAD", "--", "*index.html"],
                                    capture_output=True, text=True, check=True).stdout.split()
@@ -52,9 +53,15 @@ jobs:
                              "keyLocation": f"https://www.padelmetrix.com/{key}.txt", "urlList": urls}).encode()
           req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
                                        headers={"Content-Type": "application/json; charset=utf-8"})
-          try:
-              r = urllib.request.urlopen(req, timeout=60)
-              print("IndexNow", r.status, len(urls), "URL")
-          except urllib.error.HTTPError as e:
-              print("IndexNow errore", e.code, e.read()[:300]); raise
+          import time
+          for tentativo in range(6):
+              try:
+                  r = urllib.request.urlopen(req, timeout=60)
+                  print("IndexNow", r.status, len(urls), "URL"); break
+              except urllib.error.HTTPError as e:
+                  testo = e.read()[:300]
+                  print("IndexNow errore", e.code, testo)
+                  if e.code == 403 and b"SiteVerificationNotCompleted" in testo and tentativo < 5:
+                      time.sleep(300); continue
+                  raise
           PY
