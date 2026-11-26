@@ -6,7 +6,7 @@ e non entrano in sitemap.xml. Regole (uguali per le 4 lingue):
   oppure che hanno già avuto impressioni su Google;
 - confronti: stesso modello anno su anno (es. X 2026 vs X 2027) oppure con impressioni;
 - pagine domanda: solo quelle con impressioni (in almeno una lingua);
-- pickleball: nessuna (fuori tema);
+- pickleball: tutte (nicchia con pochi concorrenti, scelta di Luca);
 - tutto il resto (home, sezioni, articoli, guide, marchi, glossario, offerte, legali): indicizzato.
 """
 import json
@@ -47,8 +47,6 @@ def indicizzabile(path, alt=None):
     if len(parti) < 2:
         return True
     sez, ultimo = parti[1], parti[-1]
-    if sez == "pickleball":
-        return False
     if len(parti) < 3:
         return True  # pagine indice delle sezioni
     d = _dati()
