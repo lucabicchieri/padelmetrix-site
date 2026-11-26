@@ -482,6 +482,7 @@ def pagina(titolo, desc, path, corpo, on=None, ld=(), extra_js="", alt=None, og=
 <meta charset="utf-8">
 {C.head(l)}
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
 <title>{e(titolo)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{SITO}{path}">

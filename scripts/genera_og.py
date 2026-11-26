@@ -67,6 +67,17 @@ def racchetta_html(n):
                   f'<div class="k">{html.escape(n["marca"])} · {n["anno"]}</div><h1 style="font-size:{fs}px;max-width:640px">{html.escape(nome)}</h1><div>{chip}</div>{wm()}</div>')
 
 
+def quadrata_html(n):
+    """Immagine quadrata 1200x1200 per la scheda: disegno della forma su fondo chiaro, nome in basso."""
+    svg = racket_svg(n["forma"], 560, n["titolo"])
+    return pagina(f'<div class="c" style="width:1200px;height:1200px;padding:0;background:radial-gradient(circle at 50% 42%,#EEF3EA,#DDE6D8)">'
+                  f'<div style="position:absolute;left:0;right:0;top:120px;display:flex;justify-content:center">{svg}</div>'
+                  f'<div style="position:absolute;left:70px;right:70px;bottom:64px;display:flex;justify-content:space-between;align-items:flex-end">'
+                  f'<div style="font-size:40px;line-height:1.15;color:#0F3D2E;font-weight:700;max-width:760px">{html.escape(n["marca"])}<br>'
+                  f'<span style="font-weight:400">{html.escape(n["nome"])}</span></div>'
+                  f'<div style="font-size:30px;color:#0F3D2E;opacity:.7"><b>padel</b>metrix</div></div></div>')
+
+
 def generica_html(l):
     cls, deco = DECO["guide"]
     return pagina(f'<div class="c {cls}">{deco}<div class="k">{html.escape(CLAIM[l])}</div>'
@@ -85,6 +96,7 @@ def lavori():
     S.set_lang("it")
     for n in S.carica():
         out[f"r/{n['slug']}.jpg"] = racchetta_html(n)
+        out[f"q/{n['slug']}.jpg"] = quadrata_html(n)
     return out
 
 
@@ -105,6 +117,8 @@ def main():
             for rel, htm in fare:
                 dest = OUT / rel
                 dest.parent.mkdir(parents=True, exist_ok=True)
+                q = rel.startswith("q/")
+                pg.set_viewport_size({"width": 1200, "height": 1200 if q else 630})
                 pg.set_content(htm)
                 pg.evaluate("document.fonts.ready")
                 pg.screenshot(path=str(dest), type="jpeg", quality=80)

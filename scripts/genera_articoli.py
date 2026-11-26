@@ -95,7 +95,7 @@ def scrivi_articolo(slug, title, desc, h1, crumb, corpo_html, items=None, ld_ext
 <div class="prose">{corpo_html}<p class="note" style="margin:28px 0 56px">{L("Ti è stato utile? Seguici per i prossimi confronti:", "Found this useful? Follow us for the next comparisons:", "¿Te ha sido útil? Síguenos para las próximas comparativas:", "Cet article vous a été utile ? Suivez-nous pour les prochains comparatifs :")} {S.social_links()}</p></div>
 {leggi_anche(slug)}
 {lista}'''
-    S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, articolo_ld(h1, desc, path, DATE_ART.get(slug, OGGI_ISO)), *ld_extra], alt=alt, og=f"/og/a/{slug}-{S.lang()}.jpg"), alt)
+    S.scrivi(path, pagina(title, desc, path, corpo, on="articoli", ld=[ld, {**articolo_ld(h1, desc, path, DATE_ART.get(slug, OGGI_ISO)), "image": f"{SITO}/og/a/{slug}-{S.lang()}.jpg"}, *ld_extra], alt=alt, og=f"/og/a/{slug}-{S.lang()}.jpg"), alt)
 
 
 def faq(qa):

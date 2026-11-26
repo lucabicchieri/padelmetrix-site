@@ -346,6 +346,7 @@ def head(lang, t):
 {C.head(lang)}
 <meta name="google-site-verification" content="YOZjYrzmsYf124nh3pU5CI8TWTqcxvjquUEk5URY6sA" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
 <title>{e(t["title"])}</title>
 <meta name="description" content="{e(t["desc"])}">
 <link rel="canonical" href="{SITO}/{lang}/">
@@ -486,6 +487,7 @@ ROOT_INDEX = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
 <title>PadelMetrix</title>
 <meta name="google-site-verification" content="YOZjYrzmsYf124nh3pU5CI8TWTqcxvjquUEk5URY6sA" />
 <meta http-equiv="refresh" content="0; url=/it/">

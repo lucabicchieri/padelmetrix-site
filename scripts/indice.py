@@ -67,10 +67,13 @@ def indicizzabile(path, alt=None):
 
 
 META = '<meta name="robots" content="noindex, follow">'
+DISCOVER = '<meta name="robots" content="max-image-preview:large">'
 
 
 def applica(html_txt, path, alt=None):
     """Aggiunge il meta noindex se la pagina non va indicizzata."""
     if indicizzabile(path, alt) or META in html_txt:
         return html_txt
+    if DISCOVER in html_txt:
+        return html_txt.replace(DISCOVER, META, 1)
     return html_txt.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + META, 1)

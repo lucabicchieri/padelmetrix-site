@@ -252,7 +252,7 @@ def render(d, n, db, pair_set):
     prod = {"@context": "https://schema.org", "@type": "Product", "name": nome_completo, "model": d["modello"],
             "brand": {"@type": "Brand", "name": d["marca"]}, "category": L("Racchetta da padel", "Padel racket", "Pala de pádel", "Raquette de padel"),
             "description": p["meta_description"] if S.lang() == "it" else breve,
-            "url": SITO + path}
+            "url": SITO + path, "image": [f"{SITO}/og/q/{d['slug']}.jpg", f"{SITO}/og/r/{d['slug']}.jpg"]}
     props = [{"@type": "PropertyValue", "name": k, "value": v} for k, v in
              ((L("Peso", "Weight", "Peso", "Poids"), n["peso"]), (L("Forma", "Shape", "Forma", "Forme"), FORMA(n["forma"])), (L("Collezione", "Collection", "Colección", "Collection"), str(d["anno"]))) if v]
     if props:
@@ -319,7 +319,7 @@ def render(d, n, db, pair_set):
     corpo = f"""{cr_html}
 
 <div class="top">
-<div class="photo"{foto_attr}>{racket_svg(d.get("forma", "goccia"), 220, nome_completo)}</div>
+<div class="photo"{foto_attr}><img class="illq" src="/og/q/{d["slug"]}.jpg" width="1200" height="1200" alt="{e(nome_completo)}: {e(L("racchetta da padel, forma", "padel racket, shape", "pala de pádel, forma", "raquette de padel, forme"))} {e(FORMA(d.get("forma", "goccia")).lower())}"></div>
 <div class="info">
 <div>
 <div class="eyebrow">{e(tr(p["eyebrow"]))}</div>
