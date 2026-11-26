@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-25T14:27Z",
+ "aggiornato": "2026-11-26T00:23Z",
  "prodotti": {
   "B0GGTGYQK4": {
    "img": "https://m.media-amazon.com/images/I/41KUCucBGfL._SL500_.jpg",
@@ -79,9 +79,9 @@
    "h": 500,
    "titolo": "Adidas – Racchetta padel – Cross It Team Light - 2026 | Rotondo | Fibra di vetro | Bilanciata al manico | Controllo | Avanzato",
    "scheda": "adidas-cross-it-team-light-2026",
-   "prezzo": "90,22 €",
-   "euro": 90.22,
-   "sconto": 5,
+   "prezzo": "85,00 €",
+   "euro": 85.0,
+   "sconto": 10,
    "prima": "94,80 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -100,8 +100,11 @@
    "h": 500,
    "titolo": "Adidas Drive Black 2026 | Rotondo | Fibra di vetro | Bilanciato | Controllo | Principianti",
    "scheda": "adidas-drive-black-2026",
-   "prezzo": "70,90 €",
-   "euro": 70.9
+   "prezzo": "64,02 €",
+   "euro": 64.02,
+   "sconto": 6,
+   "prima": "67,84 €",
+   "tipo_prima": "WAS_PRICE"
   },
   "B0FZX1KS17": {
    "img": "https://m.media-amazon.com/images/I/41GqpjXsyNL._SL500_.jpg",
@@ -176,8 +179,8 @@
    "h": 500,
    "titolo": "Adidas – Racchetta padel – Metalbone Carbon CTRL - 2026",
    "scheda": "adidas-metalbone-carbon-ctrl-2026",
-   "prezzo": "196,90 €",
-   "euro": 196.9
+   "prezzo": "197,80 €",
+   "euro": 197.8
   },
   "B0DMD7VHH7": {
    "img": "https://m.media-amazon.com/images/I/41DKV-d+5jL._SL500_.jpg",
@@ -242,8 +245,8 @@
    "h": 500,
    "titolo": "Adidas - Racchetta padel - Metalbone Superlight - 2026 | Diamante | Fibra di vetro | Bilanciata al manico | Potenza | Principianti",
    "scheda": "adidas-metalbone-superlight-2026",
-   "prezzo": "138,90 €",
-   "euro": 138.9
+   "prezzo": "146,13 €",
+   "euro": 146.13
   },
   "B0FZWZWQQD": {
    "img": "https://m.media-amazon.com/images/I/31jTa2vWuQL._SL500_.jpg",
@@ -376,8 +379,8 @@
    "h": 500,
    "titolo": "Babolat Technical Veron 3.0 Padel Hit Senior",
    "scheda": "babolat-technical-veron-3-0-2026",
-   "prezzo": "148,95 €",
-   "euro": 148.95
+   "prezzo": "148,90 €",
+   "euro": 148.9
   },
   "B0DTTK6P18": {
    "img": "https://m.media-amazon.com/images/I/41VrFwFNgBL._SL500_.jpg",
@@ -410,8 +413,8 @@
    "h": 500,
    "titolo": "Babolat Viper Soft Juan Lebrón 3.0 – Racchetta da Padel Professionale, Potenza Dinamica e Comfort, Edizione Signature Juan Lebrón 2026",
    "scheda": "babolat-viper-soft-juan-lebron-3-0-2026",
-   "prezzo": "159,90 €",
-   "euro": 159.9,
+   "prezzo": "160,00 €",
+   "euro": 160.0,
    "sconto": 20,
    "prima": "199,00 €",
    "tipo_prima": "WAS_PRICE"
@@ -661,8 +664,8 @@
    "h": 500,
    "titolo": "Bullpadel Neuron 02 Edge",
    "scheda": "bullpadel-neuron-02-edge-2026",
-   "prezzo": "149,54 €",
-   "euro": 149.54
+   "prezzo": "188,00 €",
+   "euro": 188.0
   },
   "B0HG1L21LR": {
    "img": "https://m.media-amazon.com/images/I/41sLE4y88jL._SL500_.jpg",
@@ -1095,8 +1098,8 @@
    "h": 500,
    "titolo": "HEAD Speed One Padel 2025 - Il perfetto equilibrio tra forza e controllo con la nuova tecnologia HEAD ONE",
    "scheda": "head-speed-one-2025",
-   "prezzo": "148,00 €",
-   "euro": 148.0
+   "prezzo": "121,09 €",
+   "euro": 121.09
   },
   "B0DNTRCSMH": {
    "img": "https://m.media-amazon.com/images/I/41nnNT-XYuL._SL500_.jpg",
@@ -1260,8 +1263,8 @@
    "h": 500,
    "titolo": "Nox Racchetta Da Padel Genius 18k Alum By Agustin Tapia One Size",
    "scheda": "nox-genius-18k-alum-2027",
-   "prezzo": "266,69 €",
-   "euro": 266.69
+   "prezzo": "268,69 €",
+   "euro": 268.69
   },
   "B0G1864GVC": {
    "img": "https://m.media-amazon.com/images/I/41YNzNRIKRL._SL500_.jpg",
@@ -1461,8 +1464,8 @@
    "h": 500,
    "titolo": "Royal Padel M27 Light 2026 Padel Racket One Size",
    "scheda": "royal-padel-m27-light-2026",
-   "prezzo": "215,00 €",
-   "euro": 215.0
+   "prezzo": "215,06 €",
+   "euro": 215.06
   },
   "B0GQBN3CY1": {
    "img": "https://m.media-amazon.com/images/I/41M9nuDIaPL._SL500_.jpg",
@@ -1876,8 +1879,8 @@
    "h": 500,
    "titolo": "Racchetta StarVie Triton T-One 2027 Tamara Icardo",
    "scheda": "starvie-triton-t-one-2027",
-   "prezzo": "282,90 €",
-   "euro": 282.9
+   "prezzo": "276,90 €",
+   "euro": 276.9
   },
   "B0GZ5K4R5B": {
    "img": "https://m.media-amazon.com/images/I/41WNhxUdblL._SL500_.jpg",
@@ -1957,8 +1960,8 @@
    "h": 500,
    "titolo": "Wilson Bela Junior V2 Racchetta da Padel, Bambini, Rosso e Nero | In fibra di carbonio 3K con foratura DuoGrid e texture Spin2, racchetta da padel a goccia per massimo spin e potenza",
    "scheda": "wilson-bela-junior-v2-2023",
-   "prezzo": "110,36 €",
-   "euro": 110.36
+   "prezzo": "109,29 €",
+   "euro": 109.29
   },
   "B0HR9N4CWR": {
    "img": "https://m.media-amazon.com/images/I/51rV-nPhbZL._SL500_.jpg",
@@ -1984,8 +1987,8 @@
    "h": 500,
    "titolo": "Wilson Blade LS V4 Racchetta da Padel Leggera, Rosa | Racchetta da padel per giocatori intermedi, leggera e maneggevole, con potenza, spin e comfort",
    "scheda": "wilson-blade-ls-v4-2026",
-   "prezzo": "125,00 €",
-   "euro": 125.0,
+   "prezzo": "124,00 €",
+   "euro": 124.0,
    "sconto": 7,
    "prima": "133,78 €",
    "tipo_prima": "WAS_PRICE"
@@ -2008,9 +2011,9 @@
    "h": 500,
    "titolo": "Wilson Defy Pro V1 Padel Racket 2",
    "scheda": "wilson-defy-pro-v1-2026",
-   "prezzo": "165,60 €",
-   "euro": 165.6,
-   "sconto": 9,
+   "prezzo": "162,50 €",
+   "euro": 162.5,
+   "sconto": 10,
    "prima": "181,00 €",
    "tipo_prima": "WAS_PRICE"
   },
@@ -2188,8 +2191,8 @@
    "h": 500,
    "titolo": "HEAD Radical TOUR15 2026 pagaia per pickleball",
    "scheda": "pickleball/head-radical-tour15-2026",
-   "prezzo": "140,43 €",
-   "euro": 140.43
+   "prezzo": "141,04 €",
+   "euro": 141.04
   },
   "B0G7J29BXG": {
    "img": "https://m.media-amazon.com/images/I/41J1EPeNylL._SL500_.jpg",
@@ -2222,8 +2225,8 @@
    "h": 500,
    "titolo": "HEAD Pale unisex per adulti Radical Elite 2024 Pickleball Paddle, arancione, taglia unica",
    "scheda": "pickleball/head-radical-elite-2024",
-   "prezzo": "61,31 €",
-   "euro": 61.31
+   "prezzo": "59,10 €",
+   "euro": 59.1
   },
   "B0BSS87MK3": {
    "img": "https://m.media-amazon.com/images/I/41x2rH7ViwL._SL500_.jpg",
@@ -2292,8 +2295,8 @@
    "h": 500,
    "titolo": "Selkirk Sport SLK Geo Pickleball Paddles | Fibra di carbonio | Widebody | Una racchetta da pickleball perdonante con un enorme punto dolce, costruita per il controllo su tutti i campi. Quadrante in",
    "scheda": "pickleball/slk-geo-widebody",
-   "prezzo": "127,27 €",
-   "euro": 127.27
+   "prezzo": "126,65 €",
+   "euro": 126.65
   },
   "B0786KK4TG": {
    "img": "https://m.media-amazon.com/images/I/31LLgMIgAtL._SL500_.jpg",
@@ -2451,8 +2454,8 @@
    "h": 500,
    "titolo": "Wilson Pro Overgrip Grip da Tennis, Unisex, Bianco, Confezione da 3 | In feltro elastico ultra sottile ed assorbente, overgrip da tennis per avvolgere il manico per una presa e feeling superiori",
    "scheda": "regali",
-   "prezzo": "9,97 €",
-   "euro": 9.97
+   "prezzo": "9,98 €",
+   "euro": 9.98
   },
   "B0C268P2G9": {
    "img": "https://m.media-amazon.com/images/I/419N0GEWZxL._SL500_.jpg",
@@ -2581,8 +2584,8 @@
    "h": 500,
    "titolo": "adidas Multigame 2026 Borsa per racchetta da padel Padel Unisex nero",
    "scheda": "regali",
-   "prezzo": "73,90 €",
-   "euro": 73.9,
+   "prezzo": "73,80 €",
+   "euro": 73.8,
    "sconto": 8,
    "prima": "80,19 €",
    "tipo_prima": "WAS_PRICE"
@@ -2601,9 +2604,7 @@
    "w": 375,
    "h": 500,
    "titolo": "HEAD Coello Tour Padel Taschen L | Scomparto separato per le scarpe",
-   "scheda": "regali",
-   "prezzo": "79,00 €",
-   "euro": 79.0
+   "scheda": "regali"
   },
   "B0FSDRR152": {
    "img": "https://m.media-amazon.com/images/I/31Ho914XvDL._SL500_.jpg",
@@ -2673,12 +2674,7 @@
    "w": 346,
    "h": 500,
    "titolo": "adidas Uomo Courtquick Mens Padel Shoes, Ftwr White/Core Black/Lucid Orange, 44 EU",
-   "scheda": "regali",
-   "prezzo": "54,99 €",
-   "euro": 54.99,
-   "sconto": 31,
-   "prima": "80,00 €",
-   "tipo_prima": "LIST_PRICE"
+   "scheda": "regali"
   },
   "B0GJ372JTH": {
    "img": "https://m.media-amazon.com/images/I/41kB1g5IyxL._SL500_.jpg",
@@ -2797,9 +2793,9 @@
    "h": 500,
    "titolo": "Joma - Felpa Faraon Nera Mezza Zip Uomo, Unisex - Adulto, 100285.100.L, Nero - 100, XL",
    "scheda": "regali",
-   "prezzo": "24,38 €",
-   "euro": 24.38,
-   "sconto": 6,
+   "prezzo": "12,72 €",
+   "euro": 12.72,
+   "sconto": 51,
    "prima": "25,99 €",
    "tipo_prima": "LIST_PRICE"
   },
@@ -2998,8 +2994,8 @@
    "h": 500,
    "titolo": "Wilson Ball Pick Up Cestino Raccogli Palline, Nero, 75 Palline | In materiali sportivi ad alta resistenza, accessori da campo per allenamento, protezione della racchetta e zavorratura",
    "scheda": "regali",
-   "prezzo": "49,05 €",
-   "euro": 49.05
+   "prezzo": "50,05 €",
+   "euro": 50.05
   },
   "B0GS3G4WBD": {
    "img": "https://m.media-amazon.com/images/I/31CmZwUodnL._SL500_.jpg",
@@ -3015,7 +3011,9 @@
    "w": 303,
    "h": 500,
    "titolo": "HEAD Active - Asciugamano Microfibra con Elastico, Asciugamano Palestra, Sport, Fitness Morbido e Leggero a Rapida Asciugatura - Asciugamani Bagno Assorbente Salvaspazio da Viaggio 40x60, Uniform Blue",
-   "scheda": "regali"
+   "scheda": "regali",
+   "prezzo": "3,90 €",
+   "euro": 3.9
   },
   "B0FF78ZGYF": {
    "img": "https://m.media-amazon.com/images/I/317zuaiU7CL._SL500_.jpg",
