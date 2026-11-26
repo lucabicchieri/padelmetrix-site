@@ -2,6 +2,10 @@
 """Genera sitemap.xml (con le versioni linguistiche di ogni pagina) e robots.txt."""
 import json
 import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import indice  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITO = "https://www.padelmetrix.com"
@@ -24,6 +28,8 @@ def main():
         if p in visti:
             continue
         visti.add(p)
+        if not indice.indicizzabile(p, v.get("alt")):
+            continue
         slug = p.strip("/").split("/")[-1]
         mod = agg.get(slug, OGGI)
         alt = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{SITO}{u}"/>' for l, u in v.get("alt", {}).items())

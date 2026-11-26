@@ -1,50 +1,60 @@
-# Segnala a Bing (e agli altri motori IndexNow) le pagine cambiate a ogni push su main.
-# Aspetta qualche minuto che Cloudflare pubblichi la nuova versione prima di inviare gli URL.
 name: IndexNow
+# Avvisa Bing (e gli altri motori IndexNow) delle pagine cambiate a ogni pubblicazione su main.
+# Avvio manuale con "tutte" = invia tutti gli URL della sitemap.
 on:
   push:
     branches: [main]
-    paths: ["**/index.html"]
-  workflow_dispatch: {}   # avvio manuale: invia tutti gli URL della sitemap
+    paths: ["**/index.html", "sitemap.xml"]
+  workflow_dispatch:
+    inputs:
+      tutte:
+        description: Invia tutti gli URL della sitemap
+        type: boolean
+        default: true
 jobs:
-  ping:
+  invia:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 2
-      - name: Attendi la pubblicazione su Cloudflare
+          fetch-depth: 0
+      - name: Elenco URL
+        env:
+          PRIMA: ${{ github.event.before }}
+          TUTTE: ${{ inputs.tutte }}
+        run: |
+          python3 - <<'PY'
+          import os, re, subprocess
+          sito = "https://www.padelmetrix.com"
+          if os.environ.get("TUTTE") == "true" or not os.environ.get("PRIMA") or set(os.environ["PRIMA"]) == {"0"}:
+              urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml", encoding="utf-8").read())
+          else:
+              out = subprocess.run(["git", "diff", "--name-only", os.environ["PRIMA"], "HEAD", "--", "*index.html"],
+                                   capture_output=True, text=True, check=True).stdout.split()
+              urls = [sito + "/" + f[: -len("index.html")] for f in out if os.path.exists(f)]
+          urls = [u for u in urls if "/en/" in u or "/it/" in u or "/es/" in u or "/fr/" in u or u.rstrip("/") == sito][:10000]
+          open("urls.txt", "w").write("\n".join(urls))
+          print(len(urls), "URL")
+          PY
+      - name: Attesa pubblicazione Cloudflare
         if: github.event_name == 'push'
         run: sleep 240
-      - name: Invia gli URL cambiati a IndexNow
-        env:
-          KEY: 79d435cdf50f2a87a7e0ea10bff78649
+      - name: Invio a IndexNow
         run: |
-          git diff --name-only HEAD~1 HEAD -- '*index.html' | grep -v '^\.' > changed.txt || true
           python3 - <<'PY'
-          import json, os, urllib.request, urllib.error
-          host = "www.padelmetrix.com"
-          import re
-          if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
-              urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml").read())
-          else:
-              urls = [f"https://{host}/" + p[:-len("index.html")] for p in open("changed.txt").read().split()]
-          urls = urls[:10000]
-          print(len(urls), "URL da segnalare")
+          import json, urllib.request
+          urls = [u for u in open("urls.txt").read().split("\n") if u]
           if not urls:
-              raise SystemExit(0)
+              print("Nessun URL"); raise SystemExit
+          key = "3081f419d1e629b20c91752767c7bba3"
+          body = json.dumps({"host": "www.padelmetrix.com", "key": key,
+                             "keyLocation": f"https://www.padelmetrix.com/{key}.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
           try:
-              key_url = f"https://{host}/{os.environ['KEY']}.txt"
-              print("Chiave:", urllib.request.urlopen(key_url).read().decode())
-          except Exception as ex:
-              print("Chiave non raggiungibile:", ex)
-          for i in range(0, len(urls), 1000):
-              body = json.dumps({"host": host, "key": os.environ["KEY"], "keyLocation": f"https://{host}/{os.environ['KEY']}.txt", "urlList": urls[i:i + 1000]}).encode()
-              req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
-              try:
-                  with urllib.request.urlopen(req) as r:
-                      print("IndexNow:", r.status, "per", len(urls[i:i + 1000]), "URL")
-              except urllib.error.HTTPError as ex:
-                  print("IndexNow errore:", ex.code, ex.read().decode()[:500])
-                  raise
+              r = urllib.request.urlopen(req, timeout=60)
+              print("IndexNow", r.status, len(urls), "URL")
+          except urllib.error.HTTPError as e:
+              print("IndexNow errore", e.code, e.read()[:300]); raise
           PY

@@ -637,6 +637,8 @@ def tipo_fr(html_txt):
 
 
 def scrivi(path, html_txt, alt=None):
+    import indice
+    html_txt = indice.applica(html_txt, path, alt)
     if path.startswith("/fr/"):
         html_txt = tipo_fr(html_txt)
     dest = ROOT / path.strip("/") / "index.html"
