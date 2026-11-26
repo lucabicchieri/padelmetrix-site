@@ -96,6 +96,7 @@ header.site nav.main a.hot.on{border-bottom:0}
 @media (max-width:860px){
 .top .photo{aspect-ratio:auto;height:240px;flex-basis:auto;padding:14px}
 .top .photo svg{height:200px;width:auto}
+.top .photo:has(img.illq){padding:0;width:240px;flex:0 0 240px}.top .photo img.illq{height:240px;width:240px}
 .buybar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:8px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(15,61,46,.10);transition:transform .2s ease}
 .buybar.off{transform:translateY(120%)}
 .bb-t{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
