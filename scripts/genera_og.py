@@ -122,6 +122,11 @@ def main():
                 pg.set_content(htm)
                 pg.evaluate("document.fonts.ready")
                 pg.screenshot(path=str(dest), type="jpeg", quality=80)
+                if q:  # versione leggera 600 px in WebP per la pagina
+                    from PIL import Image
+                    w = OUT / "q6" / (dest.stem + ".webp")
+                    w.parent.mkdir(parents=True, exist_ok=True)
+                    Image.open(dest).resize((600, 600), Image.LANCZOS).save(w, "WEBP", quality=80)
             b.close()
     for rel in set(man) - set(nuovo):  # immagini di pagine che non esistono più
         (OUT / rel).unlink(missing_ok=True)

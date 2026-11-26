@@ -90,7 +90,9 @@ def rev_rows(items):
 
 
 def sim_cards(items):
+    import indice
     out = []
+    items = sorted(items, key=lambda s: 0 if s["url"].startswith("http") or indice.indicizzabile(loc(s["url"])) else 1)
     for s in items:
         u = loc(s["url"]) if not s["url"].startswith("http") else s["url"]
         if u.startswith("/it/") and S.lang() == "it":
@@ -244,7 +246,14 @@ def render(d, n, db, pair_set):
     path = P("racchette", slug)
     alt = ALT("racchette", slug)
     title = L(f"{nome_completo}: scheda tecnica, opinioni e prezzo", f"{nome_completo}: specs, reviews and price", f"{nome_completo}: ficha técnica, opiniones y precio", f"{nome_completo} : fiche technique, avis et prix")
-    if len(title) > 68:
+    # Titolo con i dati che si cercano (peso e forma): più clic dai risultati di Google
+    _pz, _fo = (n.get("peso") or "").split(" (")[0], (FORMA(d.get("forma")) or "").lower()
+    if _pz and _fo:
+        t2 = L(f"{nome_completo}: {_fo} da {_pz}, scheda e prezzo", f"{nome_completo}: {_pz} {_fo} racket, specs & price",
+               f"{nome_completo}: pala {_fo} de {_pz}, ficha y precio", f"{nome_completo} : {_pz}, forme {_fo}, fiche et prix")
+        if len(t2) <= 70:
+            title = t2
+    if len(title) > 70:
         title = L(f"{nome_completo}: scheda e opinioni", f"{nome_completo}: specs and reviews", f"{nome_completo}: ficha y opiniones", f"{nome_completo} : fiche et avis")
     qa = faq(d, n, db)
     cr_html, cr_ld = crumbs([S.home_crumb(), (L("Racchette", "Rackets", "Palas", "Raquettes"), P("racchette")), (d["marca"], P("marche", n["marca_slug"])), (p["breadcrumb"], None)])
@@ -283,6 +292,10 @@ def render(d, n, db, pair_set):
 </div>"""
     per = {x["slug"]: x for x in db}
     mie = [(a if b == slug else b) for a, b in pair_set if slug in (a, b)]
+    # Prima i confronti che restano indicizzati; nell'elenco solo quelli (al massimo 3 degli altri se non ce n'è nessuno)
+    import indice
+    buoni = [o for o in mie if indice.indicizzabile(confronto_url(slug, o))]
+    mie = buoni + [o for o in mie if o not in buoni][: 0 if buoni else 3]
     if mie:
         primo = mie[0]
         conf_btn = f'<a class="btn out" href="{confronto_url(slug, primo)}">{L("Confronta con", "Compare with", "Comparar con", "Comparer avec")} {e(per[primo]["nome"])}</a>'
@@ -319,7 +332,7 @@ def render(d, n, db, pair_set):
     corpo = f"""{cr_html}
 
 <div class="top">
-<div class="photo"{foto_attr}><img class="illq" src="/og/q/{d["slug"]}.jpg" width="1200" height="1200" alt="{e(nome_completo)}: {e(L("racchetta da padel, forma", "padel racket, shape", "pala de pádel, forma", "raquette de padel, forme"))} {e(FORMA(d.get("forma", "goccia")).lower())}"></div>
+<div class="photo"{foto_attr}><img class="illq" src="/og/q/{d["slug"]}.jpg" srcset="/og/q6/{d["slug"]}.webp 600w, /og/q/{d["slug"]}.jpg 1200w" sizes="(max-width: 760px) 240px, 540px" width="1200" height="1200" fetchpriority="high" alt="{e(nome_completo)}: {e(L("racchetta da padel, forma", "padel racket, shape", "pala de pádel, forma", "raquette de padel, forme"))} {e(FORMA(d.get("forma", "goccia")).lower())}"></div>
 <div class="info">
 <div>
 <div class="eyebrow">{e(tr(p["eyebrow"]))}</div>

@@ -340,7 +340,11 @@ def scheda(p):
 
 <section class="block faq"><h2>{L("Domande frequenti", "Frequently asked questions", "Preguntas frecuentes", "Questions fréquentes")}</h2>{"".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in qa)}</section>
 <p class="note" style="padding-bottom:24px">{L("Scheda aggiornata il", "Page updated on", "Ficha actualizada el", "Fiche mise à jour le")} {data_txt()}.</p>"""
-    title = L(f"{t}: scheda tecnica e opinioni (pickleball)", f"{t}: specs and reviews (pickleball)", f"{t}: ficha técnica y opiniones (pickleball)", f"{t} : caractéristiques et avis (pickleball)")
+    title = L(f"{t}: racchetta da pickleball, scheda e opinioni", f"{t} pickleball paddle: specs, weight and review", f"{t}: pala de pickleball, ficha y opiniones", f"{t} : raquette de pickleball, fiche et avis")
+    if p.get("giocatore") and p["giocatore"].split()[-1] not in t:
+        # Il nome del giocatore è parte delle ricerche reali ("joola ben johns hyperion cfs 16")
+        title = L(f"{t} ({p['giocatore']}): racchetta da pickleball, scheda", f"{t} ({p['giocatore']}) pickleball paddle: specs and review",
+                  f"{t} ({p['giocatore']}): pala de pickleball, ficha", f"{t} ({p['giocatore']}) : raquette de pickleball, fiche")
     prod = {"@context": "https://schema.org", "@type": "Product", "name": t, "brand": {"@type": "Brand", "name": p["marca"]},
             "category": L("Racchetta da pickleball", "Pickleball paddle", "Pala de pickleball", "Raquette de pickleball"), "description": breve, "url": SITO + path}
     web = {"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": SITO + path, "dateModified": OGGI, "inLanguage": S.lang(),

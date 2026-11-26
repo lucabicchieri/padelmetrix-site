@@ -2,7 +2,7 @@
 
 Le pagine escluse restano online e raggiungibili, ma ricevono <meta name="robots" content="noindex, follow">
 e non entrano in sitemap.xml. Regole (uguali per le 4 lingue):
-- schede racchetta: 2026-2027 con dati completi o valutazioni esterne, oppure 2026-2027 con prodotto Amazon collegato,
+- schede racchetta: 2026-2027 con forma, peso, gomma e superficie dichiarati o con valutazioni/recensioni, oppure 2026-2027 con prodotto Amazon collegato,
   oppure che hanno già avuto impressioni su Google;
 - confronti: stesso modello anno su anno (es. X 2026 vs X 2027) oppure con impressioni;
 - pagine domanda: solo quelle con impressioni (in almeno una lingua);
@@ -32,7 +32,11 @@ def _dati():
     schede = {}
     for f in (ROOT / "data" / "racchette").glob("*.json"):
         d = json.loads(f.read_text(encoding="utf-8"))
-        completa = all(d.get(k) for k in CAMPI) or bool(d.get("valutazioni_esterne"))
+        d = {**d, "peso": d.get("peso") or d.get("peso_g") or d.get("peso_nominale_g"),
+             "nucleo": d.get("nucleo") or d.get("gomma")}
+        valutata = any(d.get(k) for k in ("valutazioni_esterne", "valutazioni_padelzoom", "recensioni", "valutazioni_produttore_su5"))
+        # completa: forma, peso, gomma e superficie dichiarati (il telaio spesso non è dichiarato dai marchi)
+        completa = all(d.get(k) for k in ("forma", "peso", "nucleo", "superficie")) or valutata
         schede[d["slug"]] = str(d.get("anno")) in ("2026", "2027") and completa
     _cache["schede"] = schede
     return _cache

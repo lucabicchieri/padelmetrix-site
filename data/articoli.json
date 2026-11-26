@@ -1,5 +1,53 @@
 [
  {
+  "slug": "tendenze-racchette-padel-2027",
+  "cat": "novita",
+  "data": "2026-11-26",
+  "racchette": [],
+  "titolo": {
+   "it": "Racchette da padel 2027: le tendenze rispetto al 2026 (forme, carbonio, prezzi)",
+   "en": "Padel racket trends for 2027: what changes from 2026 (shapes, carbon, prices)",
+   "es": "Tendencias de las palas de pádel 2027 frente a 2026 (formas, carbono, precios)",
+   "fr": "Tendances des raquettes de padel 2027 face à 2026 (formes, carbone, prix)"
+  },
+  "desc": {
+   "it": "Forme, carbonio, peso e prezzi: le racchette 2027 contro le 2026, con i dati del nostro catalogo.",
+   "en": "Shapes, carbon, weight and prices: 2027 rackets against 2026, from our catalogue data.",
+   "es": "Formas, carbono, peso y precios: las palas 2027 frente a las 2026, con los datos de nuestro catálogo.",
+   "fr": "Formes, carbone, poids et prix : les raquettes 2027 face aux 2026, d'après notre catalogue."
+  },
+  "url": {
+   "it": "/it/articoli/tendenze-racchette-padel-2027/",
+   "en": "/en/articles/padel-racket-trends-2027/",
+   "es": "/es/articulos/tendencias-palas-padel-2027/",
+   "fr": "/fr/articles/tendances-raquettes-padel-2027/"
+  }
+ },
+ {
+  "slug": "racchette-pickleball-principianti",
+  "cat": "guide",
+  "data": "2026-11-26",
+  "racchette": [],
+  "titolo": {
+   "it": "Racchette da pickleball per principianti: come sceglierle e i modelli consigliati",
+   "en": "Pickleball paddles for beginners: how to choose and recommended models",
+   "es": "Palas de pickleball para principiantes: cómo elegirlas y modelos recomendados",
+   "fr": "Raquettes de pickleball pour débutants : bien choisir et modèles conseillés"
+  },
+  "desc": {
+   "it": "Materiale, spessore, peso e forma: come scegliere la prima racchetta da pickleball.",
+   "en": "Material, thickness, weight and shape: how to choose your first pickleball paddle.",
+   "es": "Material, grosor, peso y forma: cómo elegir tu primera pala de pickleball.",
+   "fr": "Matériau, épaisseur, poids et forme : comment choisir sa première raquette de pickleball."
+  },
+  "url": {
+   "it": "/it/articoli/racchette-pickleball-principianti/",
+   "en": "/en/articles/pickleball-paddles-for-beginners/",
+   "es": "/es/articulos/palas-pickleball-principiantes/",
+   "fr": "/fr/articles/raquettes-pickleball-debutants/"
+  }
+ },
+ {
   "slug": "pickleball-per-chi-gioca-a-padel",
   "cat": "guide",
   "data": "2026-11-26",

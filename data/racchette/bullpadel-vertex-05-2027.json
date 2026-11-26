@@ -22,9 +22,12 @@
   ],
   "fonti_dati": [
     "https://pdhsports.com/en-at/blogs/padel/bullpadel-2027-pro-line-padel-rackets",
-    "https://padelshop.com/collections/bullpadel-padel-rackets?page=3"
+    "https://padelshop.com/collections/bullpadel-padel-rackets?page=3",
+    "https://vibrandopadel.com/bullpadel-presenta-su-nueva-pro-line-2027-asi-queda-su-coleccion-de-palas/",
+    "https://mrhsport.com/blogs/the-clubhouse-blog/bullpadel-hack-vs-vertex-vs-xplo-vs-neuron-which-2027-racket-is-right-for-you",
+    "https://www.zonadepadel.it/blog/2026/09/guida-alla-collezione-bullpadel-2027-differenze-tra-hack-vertex-xplo-e-neuron/"
   ],
-  "aggiornato": "2026-10-24",
+  "aggiornato": "2026-11-26",
   "pagina": {
     "titolo": "Bullpadel Vertex 05 2027",
     "title_tag": "Bullpadel Vertex 05 2027: scheda tecnica, caratteristiche e alternative",
@@ -158,5 +161,7 @@
       ],
       "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Durezza e swingweight misurati da <a href=\"https://padelshop.com/collections/bullpadel-padel-rackets?page=3\" rel=\"nofollow noopener\" target=\"_blank\">Padelshop</a>. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
     }
-  }
+  },
+  "nucleo": "MultiEVA",
+  "superficie": "X-Tend Carbon 12K"
 }

@@ -3291,6 +3291,20 @@ def art_pickleball_padel_w(db):
     return art_pickleball_padel(db, fonte, faq, scrivi_articolo, _tab4)
 
 
+from art_numeri_2027 import NU_SLUG, art_numeri_2027  # noqa: E402
+from art_pickleball_principianti import PB_SLUG, art_pickleball_principianti  # noqa: E402
+DATE_ART[NU_SLUG] = "2026-11-26"
+DATE_ART[PB_SLUG] = "2026-11-26"
+
+
+def art_numeri_2027_w(db):
+    return art_numeri_2027(db, fonte, faq, scrivi_articolo, _tab4)
+
+
+def art_pickleball_principianti_w(db):
+    return art_pickleball_principianti(db, fonte, faq, scrivi_articolo, _tab4)
+
+
 def art_giovani_w(db):
     return art_giovani(db, fonte, faq, scrivi_articolo, _tab4)
 
@@ -3459,7 +3473,7 @@ def main():
     elenco = {}
     for l in LINGUE:
         set_lang(l)
-        arts = [art_pickleball_padel_w(db), giocatore(db, GIOCATORI[-1]), art_superfici(db), art_giovani_w(db), art_vetri(db), art_metalbone_vertex(db), art_zidane(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI[:-1])), galan(db), diablo(db)]  # più recenti in alto
+        arts = [art_numeri_2027_w(db), art_pickleball_principianti_w(db), art_pickleball_padel_w(db), giocatore(db, GIOCATORI[-1]), art_superfici(db), art_giovani_w(db), art_vetri(db), art_metalbone_vertex(db), art_zidane(db), art_bela(db), art_metalbone(db), *regali(db), art_tolito(db), art_quad(db), art_durata(db), art_carbonio(db), art_peso(db), art_over50(db), art_scarpe(db), fitp_sorpasso(db), padel_regole(db), pickleball_regole(db), migliori_2026(db), confronti_2027(db), novita_2027(db), *(giocatore(db, G) for G in reversed(GIOCATORI[:-1])), galan(db), diablo(db)]  # più recenti in alto
         indice(arts)
         for slug, titolo, desc in arts:
             x = elenco.setdefault(slug, {"slug": slug, "cat": categoria(slug), "data": DATE_ART.get(slug, OGGI_ISO), "racchette": RACCHETTE_ARTICOLO.get(slug, []), "titolo": {}, "desc": {}, "url": {}})

@@ -218,6 +218,26 @@ def _slug(s, l):
     return s
 
 
+def _carica_slug_articoli():
+    """Slug tradotti degli articoli, salvati da genera_articoli in data/articoli.json: così anche home,
+    guide e offerte linkano gli articoli con l'indirizzo giusto in ogni lingua."""
+    import json as _json
+    f = ROOT / "data" / "articoli.json"
+    if not f.exists():
+        return
+    try:
+        for a in _json.loads(f.read_text(encoding="utf-8")):
+            u = a.get("url", {})
+            if all(k in u for k in ("en", "es", "fr")) and a["slug"] not in SLUG:
+                SLUG[a["slug"]] = (u["en"].rstrip("/").split("/")[-1], u["es"].rstrip("/").split("/")[-1])
+                SLUG_FR.setdefault(a["slug"], u["fr"].rstrip("/").split("/")[-1])
+    except (ValueError, KeyError):
+        pass
+
+
+_carica_slug_articoli()
+
+
 def P(sez, slug=None, l=None):
     """Percorso di una pagina nella lingua indicata (o in quella corrente)."""
     l = l or _LANG[0]

@@ -1,5 +1,23 @@
 [
 {
+"path": "/it/articoli/tendenze-racchette-padel-2027/",
+"alt": {
+"it": "/it/articoli/tendenze-racchette-padel-2027/",
+"en": "/en/articles/padel-racket-trends-2027/",
+"es": "/es/articulos/tendencias-palas-padel-2027/",
+"fr": "/fr/articles/tendances-raquettes-padel-2027/"
+}
+},
+{
+"path": "/it/articoli/racchette-pickleball-principianti/",
+"alt": {
+"it": "/it/articoli/racchette-pickleball-principianti/",
+"en": "/en/articles/pickleball-paddles-for-beginners/",
+"es": "/es/articulos/palas-pickleball-principiantes/",
+"fr": "/fr/articles/raquettes-pickleball-debutants/"
+}
+},
+{
 "path": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
 "alt": {
 "it": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
@@ -402,6 +420,24 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/padel-racket-trends-2027/",
+"alt": {
+"it": "/it/articoli/tendenze-racchette-padel-2027/",
+"en": "/en/articles/padel-racket-trends-2027/",
+"es": "/es/articulos/tendencias-palas-padel-2027/",
+"fr": "/fr/articles/tendances-raquettes-padel-2027/"
+}
+},
+{
+"path": "/en/articles/pickleball-paddles-for-beginners/",
+"alt": {
+"it": "/it/articoli/racchette-pickleball-principianti/",
+"en": "/en/articles/pickleball-paddles-for-beginners/",
+"es": "/es/articulos/palas-pickleball-principiantes/",
+"fr": "/fr/articles/raquettes-pickleball-debutants/"
 }
 },
 {
@@ -810,6 +846,24 @@
 }
 },
 {
+"path": "/es/articulos/tendencias-palas-padel-2027/",
+"alt": {
+"it": "/it/articoli/tendenze-racchette-padel-2027/",
+"en": "/en/articles/padel-racket-trends-2027/",
+"es": "/es/articulos/tendencias-palas-padel-2027/",
+"fr": "/fr/articles/tendances-raquettes-padel-2027/"
+}
+},
+{
+"path": "/es/articulos/palas-pickleball-principiantes/",
+"alt": {
+"it": "/it/articoli/racchette-pickleball-principianti/",
+"en": "/en/articles/pickleball-paddles-for-beginners/",
+"es": "/es/articulos/palas-pickleball-principiantes/",
+"fr": "/fr/articles/raquettes-pickleball-debutants/"
+}
+},
+{
 "path": "/es/articulos/pickleball-para-jugadores-de-padel/",
 "alt": {
 "it": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
@@ -1212,6 +1266,24 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/tendances-raquettes-padel-2027/",
+"alt": {
+"it": "/it/articoli/tendenze-racchette-padel-2027/",
+"en": "/en/articles/padel-racket-trends-2027/",
+"es": "/es/articulos/tendencias-palas-padel-2027/",
+"fr": "/fr/articles/tendances-raquettes-padel-2027/"
+}
+},
+{
+"path": "/fr/articles/raquettes-pickleball-debutants/",
+"alt": {
+"it": "/it/articoli/racchette-pickleball-principianti/",
+"en": "/en/articles/pickleball-paddles-for-beginners/",
+"es": "/es/articulos/palas-pickleball-principiantes/",
+"fr": "/fr/articles/raquettes-pickleball-debutants/"
 }
 },
 {

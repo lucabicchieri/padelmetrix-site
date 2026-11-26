@@ -36,7 +36,7 @@ def art_pickleball_padel(db, fonte, faq, scrivi_articolo, tab):
         (L("Punteggio", "Scoring", "Puntuación", "Score"), L("come il tennis: 15, 30, 40, set a 6", "like tennis: 15, 30, 40, sets to 6", "como el tenis: 15, 30, 40, sets a 6", "comme le tennis : 15, 30, 40, sets à 6"), L("a 11 con 2 di scarto; fa punto solo chi serve", "to 11, win by 2; only the server scores", "a 11 con 2 de diferencia; solo puntúa quien saca", "à 11 avec 2 d'écart ; seul le serveur marque")),
         (L("Regola speciale", "Special rule", "Regla especial", "Règle spéciale"), L("si può giocare la palla dopo la parete", "you can play the ball off the wall", "se juega la bola tras la pared", "on joue la balle après la vitre"), L("niente volée nella kitchen; due rimbalzi a inizio scambio", "no volleys in the kitchen; two bounces to start the rally", "nada de voleas en la cocina; dos botes al inicio", "pas de volée dans la cuisine ; deux rebonds en début d'échange")),
     ]
-    t = tab([L("", "", "", ""), "Padel", "Pickleball"], righe).replace('class="tab"', 'class="tab cmp2"')
+    t = tab([L("Caratteristica", "Feature", "Característica", "Caractéristique"), "Padel", "Pickleball"], righe).replace('class="tab"', 'class="tab cmp2"')
 
     corpo = L(f'''<p><b>Se giochi a padel, il pickleball lo impari in un pomeriggio: si gioca soprattutto in doppio, il servizio è dal basso e la rete è alta quasi uguale (86 cm contro 88). Cambiano tre cose: non ci sono pareti, la racchetta pesa circa un terzo in meno e a rete c'è la "kitchen", una zona in cui non si può colpire al volo.</b> Qui trovi le differenze, cosa ti porti dietro dal padel, le abitudini che ti costano punti e come iniziare in Italia.</p>
 <h2>Padel e pickleball a confronto</h2>{t}

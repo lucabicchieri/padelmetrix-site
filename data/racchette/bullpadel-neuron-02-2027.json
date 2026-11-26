@@ -22,9 +22,11 @@
   ],
   "fonti_dati": [
     "https://pdhsports.com/en-at/blogs/padel/bullpadel-2027-pro-line-padel-rackets",
-    "https://padelshop.com/collections/bullpadel-padel-rackets?page=3"
+    "https://padelshop.com/collections/bullpadel-padel-rackets?page=3",
+    "https://www.zonadepadel.it/blog/2026/09/guida-alla-collezione-bullpadel-2027-differenze-tra-hack-vertex-xplo-e-neuron/",
+    "https://vibrandopadel.com/bullpadel-presenta-su-nueva-pro-line-2027-asi-queda-su-coleccion-de-palas/"
   ],
-  "aggiornato": "2026-10-24",
+  "aggiornato": "2026-11-26",
   "pagina": {
     "titolo": "Bullpadel Neuron 02 2027",
     "title_tag": "Bullpadel Neuron 02 2027: scheda tecnica, caratteristiche e alternative",
@@ -156,5 +158,7 @@
       ],
       "nota_html": "Caratteristiche dichiarate dal produttore e dai rivenditori. Durezza e swingweight misurati da <a href=\"https://padelshop.com/collections/bullpadel-padel-rackets?page=3\" rel=\"nofollow noopener\" target=\"_blank\">Padelshop</a>. Valutazioni indipendenti in arrivo: il punteggio PadelMetrix arriverà con il nostro metodo di valutazione."
     }
-  }
+  },
+  "nucleo": "HardEVA",
+  "superficie": "X-Tend Carbon 3K"
 }
