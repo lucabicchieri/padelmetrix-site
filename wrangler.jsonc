@@ -6,6 +6,6 @@
     "directory": ".",
     "not_found_handling": "404-page"
   },
-  "workers_dev": false,
+  "workers_dev": true,
   "preview_urls": true
 }
