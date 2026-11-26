@@ -1,5 +1,29 @@
 [
  {
+  "slug": "pickleball-per-chi-gioca-a-padel",
+  "cat": "guide",
+  "data": "2026-11-26",
+  "racchette": [],
+  "titolo": {
+   "it": "Pickleball per chi gioca a padel: differenze, errori da evitare e come iniziare",
+   "en": "Pickleball for padel players: differences, mistakes to avoid and how to start",
+   "es": "Pickleball para jugadores de pádel: diferencias, errores a evitar y cómo empezar",
+   "fr": "Pickleball pour joueurs de padel : différences, erreurs à éviter et comment commencer"
+  },
+  "desc": {
+   "it": "Differenze, abitudini da cambiare e come iniziare: il pickleball visto da chi gioca a padel.",
+   "en": "Differences, habits to change and how to start: pickleball seen by a padel player.",
+   "es": "Diferencias, hábitos a cambiar y cómo empezar: el pickleball visto desde el pádel.",
+   "fr": "Différences, habitudes à changer et comment commencer : le pickleball vu par un joueur de padel."
+  },
+  "url": {
+   "it": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
+   "en": "/en/articles/pickleball-for-padel-players/",
+   "es": "/es/articulos/pickleball-para-jugadores-de-padel/",
+   "fr": "/fr/articles/pickleball-pour-joueurs-de-padel/"
+  }
+ },
+ {
   "slug": "aimar-goni-chi-e-e-che-racchetta-usa",
   "cat": "giocatori",
   "data": "2026-11-23",

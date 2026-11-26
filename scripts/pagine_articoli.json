@@ -1,5 +1,14 @@
 [
 {
+"path": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
+"alt": {
+"it": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
+"en": "/en/articles/pickleball-for-padel-players/",
+"es": "/es/articulos/pickleball-para-jugadores-de-padel/",
+"fr": "/fr/articles/pickleball-pour-joueurs-de-padel/"
+}
+},
+{
 "path": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
 "alt": {
 "it": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
@@ -393,6 +402,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/en/articles/pickleball-for-padel-players/",
+"alt": {
+"it": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
+"en": "/en/articles/pickleball-for-padel-players/",
+"es": "/es/articulos/pickleball-para-jugadores-de-padel/",
+"fr": "/fr/articles/pickleball-pour-joueurs-de-padel/"
 }
 },
 {
@@ -792,6 +810,15 @@
 }
 },
 {
+"path": "/es/articulos/pickleball-para-jugadores-de-padel/",
+"alt": {
+"it": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
+"en": "/en/articles/pickleball-for-padel-players/",
+"es": "/es/articulos/pickleball-para-jugadores-de-padel/",
+"fr": "/fr/articles/pickleball-pour-joueurs-de-padel/"
+}
+},
+{
 "path": "/es/articulos/aimar-goni-quien-es-y-que-pala-usa/",
 "alt": {
 "it": "/it/articoli/aimar-goni-chi-e-e-che-racchetta-usa/",
@@ -1185,6 +1212,15 @@
 "en": "/en/articles/",
 "es": "/es/articulos/",
 "fr": "/fr/articles/"
+}
+},
+{
+"path": "/fr/articles/pickleball-pour-joueurs-de-padel/",
+"alt": {
+"it": "/it/articoli/pickleball-per-chi-gioca-a-padel/",
+"en": "/en/articles/pickleball-for-padel-players/",
+"es": "/es/articulos/pickleball-para-jugadores-de-padel/",
+"fr": "/fr/articles/pickleball-pour-joueurs-de-padel/"
 }
 },
 {
