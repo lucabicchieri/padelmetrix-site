@@ -12,15 +12,15 @@ def art(**kw):
 
 art(k="guida",
     slug=("idee-regalo-natale-padel", "padel-christmas-gift-ideas", "ideas-regalo-navidad-padel", "idees-cadeaux-noel-padel"),
-    t=("Idee regalo di Natale per chi gioca a padel: la guida 2026", "Christmas gift ideas for padel players: the 2026 guide",
+    t=("Regali per chi gioca a padel: idee per Natale 2026", "Christmas gift ideas for padel players: the 2026 guide",
        "Ideas de regalo de Navidad para quien juega al pádel: la guía 2026", "Idées cadeaux de Noël pour les joueurs de padel : le guide 2026"),
-    d=("Cosa regalare a Natale a chi gioca a padel: idee per ogni budget, dalle palline alle scarpe, con i link ai prodotti su Amazon.",
+    d=("Regali per chi gioca a padel e per gli amanti del padel: idee a tema per Natale 2026 sotto 20 e 50 €, per bambini e per chi ha già tutto, con link Amazon.",
        "What to give a padel player for Christmas: ideas for every budget, from balls to shoes, with links to the products on Amazon.",
        "Qué regalar en Navidad a quien juega al pádel: ideas para cada presupuesto, de las pelotas a las zapatillas, con enlaces a Amazon.",
        "Que offrir à Noël à un joueur de padel : des idées pour tous les budgets, des balles aux chaussures, avec les liens Amazon."),
     c=("Tutte le idee regalo per chi gioca a padel, divise per budget e per persona.", "Every gift idea for padel players, by budget and by person.",
        "Todas las ideas de regalo para quien juega al pádel, por presupuesto y por persona.", "Toutes les idées cadeaux pour les joueurs de padel, par budget et par personne."),
-    b=("""<p><b>Regalare qualcosa a chi gioca a padel è facile solo in apparenza: la racchetta è un acquisto molto personale, le scarpe dipendono dal piede, e di palline ne ha già un cassetto pieno. In questa guida trovi le idee che funzionano davvero, divise per budget e per tipo di persona, con il link diretto al prodotto su Amazon.</b></p>
+    b=("""<p><b>Cercare regali per chi gioca a padel sembra facile, ma non lo è: la racchetta è un acquisto molto personale, le scarpe dipendono dal piede, e di palline ne ha già un cassetto pieno. In questa guida trovi le idee regalo per amanti del padel che funzionano davvero, divise per budget e per persona (anche per i bambini), più i regali a tema padel da ridere, con il link diretto al prodotto su Amazon.</b></p>
 <h2>Per budget</h2>
 <ul><li><b>Sotto i 20 €:</b> palline da torneo, overgrip, polsini, calze tecniche, un libro ironico. Tutte le idee in [[A:sotto20]].</li>
 <li><b>Sotto i 50 €:</b> un pressurizzatore per le palline, una borsa porta racchette, una felpa tecnica. Vedi [[A:sotto50]].</li>
@@ -33,6 +33,12 @@ art(k="guida",
 <li>Per bambini e ragazzi: [[A:bambini]].</li>
 <li>Per il compagno di doppio o il maestro: [[A:compagno]].</li>
 <li>Per chi ha già tutto: [[A:tutto]].</li></ul>
+<h2>Regali a tema padel</h2>
+<p>Per l'amante del padel che sa stare allo scherzo: libri e magliette ironiche in italiano e un portachiavi a forma di racchetta. Costano poco e fanno ridere tutto il gruppo del giovedì.</p>
+[[P:B0CYBNDQ23,B0HLQ9FDNK,B0CPJCC6PC,B0GNTPCX5C]]
+<h2>Regali per bambini che giocano a padel</h2>
+<p>Per un bambino il regalo più utile è una racchetta junior della misura giusta: più corta e leggera di quella da adulto. Prima di comprarla guarda la <a href="/it/bambini/">tabella delle misure per età e altezza</a>; altre idee, dalle palline agli zaini, in [[A:bambini]].</p>
+[[P:B0CR1F8KXJ,B0GLZ7H8KP,B0BTM7Z2NM,B0H7H6ZJMN]]
 <h2>Abbigliamento, scarpe e borse</h2>
 <p>Qui serve conoscere la taglia. Se non la sai, punta su borse e zaini, che vanno bene a tutti.</p>
 [[P:B0G15YKT2D,B0FSDRR152,B0DRPRPSGY,B0FHQNDQ49]]
@@ -105,7 +111,17 @@ art(k="guida",
         ("Si trovano buone idee già sotto i 20 €; tra 20 e 50 € ci sono pressurizzatori e borse; scarpe e racchette partono in genere da 60–70 €.",
          "You can find good ideas under €20; between €20 and €50 there are pressurisers and bags; shoes and rackets usually start at around €60–70.",
          "Hay buenas ideas por menos de 20 €; entre 20 y 50 € hay presurizadores y paleteros; zapatillas y palas suelen empezar en unos 60–70 €.",
-         "On trouve de bonnes idées sous les 20 € ; entre 20 et 50 €, des pressuriseurs et des sacs ; chaussures et raquettes commencent en général vers 60–70 €."))])
+         "On trouve de bonnes idées sous les 20 € ; entre 20 et 50 €, des pressuriseurs et des sacs ; chaussures et raquettes commencent en général vers 60–70 €.")),
+       (("Cosa regalare a un bambino che gioca a padel?", "What should I give a child who plays padel?", "¿Qué regalar a un niño que juega al pádel?", "Que offrir à un enfant qui joue au padel ?"),
+        ("Una racchetta junior della misura giusta per la sua altezza, oppure palline, uno zaino o un kit con overgrip e polsini se ha già la racchetta.",
+         "A junior racket in the right size for their height, or balls, a backpack or a kit with overgrips and wristbands if they already have a racket.",
+         "Una pala junior de la medida adecuada para su altura, o pelotas, una mochila o un kit con overgrips y muñequeras si ya tiene pala.",
+         "Une raquette junior adaptée à sa taille, ou des balles, un sac à dos ou un kit avec surgrips et poignets s'il a déjà une raquette.")),
+       (("Quali sono i regali a tema padel più divertenti?", "What are the funniest padel-themed gifts?", "¿Cuáles son los regalos temáticos de pádel más divertidos?", "Quels sont les cadeaux padel les plus drôles ?"),
+        ("Libri e magliette ironiche sul padel e portachiavi a forma di racchetta: costano meno di 20 € e piacciono a chi gioca in gruppo.",
+         "Tongue-in-cheek padel books and T-shirts and racket-shaped keyrings: they cost under €20 and go down well with people who play in a group.",
+         "Libros y camisetas con humor sobre el pádel y llaveros con forma de pala: cuestan menos de 20 € y gustan a quien juega en grupo.",
+         "Des livres et t-shirts humoristiques sur le padel et des porte-clés en forme de raquette : moins de 20 € et parfaits pour ceux qui jouent en groupe."))])
 
 art(k="sotto20",
     slug=("regali-padel-sotto-20-euro", "padel-gifts-under-20-euros", "regalos-padel-menos-de-20-euros", "cadeaux-padel-moins-de-20-euros"),
