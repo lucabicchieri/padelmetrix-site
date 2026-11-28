@@ -128,18 +128,38 @@ def dati_js(db, solo=None):
     return "<script>window.OF_IDX=" + json.dumps(idx, ensure_ascii=False) + ";window.OF_TX=" + json.dumps(testi_js(), ensure_ascii=False) + ";</script>"
 
 
+def FASE():
+    """'cyber' fino a lunedì 30 novembre 2026 (ora di Roma), poi 'dopo': la pagina Black Friday resta online
+    con lo stesso indirizzo (si riusa ogni anno) ma cambia messaggio e spariscono i banner."""
+    import datetime as dt
+    import zoneinfo
+    oggi = dt.datetime.now(zoneinfo.ZoneInfo("Europe/Rome")).date()
+    return "cyber" if oggi <= dt.date(2026, 11, 30) else "dopo"
+
+
 def blocco_home(db):
     """Sezione per la home: le 4 racchette più scontate oggi. Resta nascosta se non ci sono dati aggiornati."""
     return (CSS + f'''<section class="of-home" data-of-sec style="display:none"><div class="wrap">
 <h2>{L("Le offerte di oggi su Amazon", "Today's deals on Amazon", "Las ofertas de hoy en Amazon", "Les offres du jour sur Amazon")}</h2>
 <p class="of-agg" data-of-agg></p>
 <div data-of="r" data-n="4"></div>
-<p style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn lime" href="{P("blackfriday")}">{L("Black Friday: le 15 più scontate →", "Black Friday: the 15 biggest discounts →", "Black Friday: las 15 más rebajadas →", "Black Friday : les 15 plus remisées →")}</a><a class="btn ln" href="{P("offerte")}">{L("Tutte le offerte padel →", "All padel deals →", "Todas las ofertas de pádel →", "Toutes les offres padel →")}</a></p>
+<p style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px">{_bottone_home()}<a class="btn ln" href="{P("offerte")}">{L("Tutte le offerte padel →", "All padel deals →", "Todas las ofertas de pádel →", "Toutes les offres padel →")}</a></p>
 </div></section>''', dati_js(db, solo="r") + JS)
 
 
+def _bottone_home():
+    if FASE() == "dopo":
+        return ""
+    return f'<a class="btn lime" href="{P("blackfriday")}">{L("Cyber Monday: le 15 più scontate →", "Cyber Monday: the 15 biggest discounts →", "Cyber Monday: las 15 más rebajadas →", "Cyber Monday : les 15 plus remisées →")}</a>'
+
+
 def striscia_home():
-    """Barra sopra l'hero della home."""
+    """Barra sopra l'hero della home (solo fino al Cyber Monday)."""
+    if FASE() == "dopo":
+        return ""
+    return (f'<a class="promo-bar" href="{P("blackfriday")}"><b>Cyber Monday</b> '
+            f'{L("Ultimi giorni di offerte sulle racchette da padel", "Last days of padel racket deals", "Últimos días de ofertas en palas de pádel", "Derniers jours de promos sur les raquettes de padel")} '
+            f'<span data-of-max></span> · <u>{L("Guarda le offerte", "See the deals", "Ver las ofertas", "Voir les offres")} →</u></a>')
     return (f'<a class="promo-bar" href="{P("blackfriday")}"><b>Black Friday</b> '
             f'{L("Racchette da padel in offerta su Amazon", "Padel rackets on sale at Amazon", "Palas de pádel en oferta en Amazon", "Raquettes de padel en promo sur Amazon")} '
             f'<span data-of-max></span> · <u>{L("Guarda le offerte", "See the deals", "Ver las ofertas", "Voir les offres")} →</u></a>')
@@ -152,11 +172,15 @@ def pagina_offerte(db):
         (0, 1000000000, L("Tutte", "All", "Todas", "Toutes")), (0, 100, L("Fino a 100 €", "Up to €100", "Hasta 100 €", "Jusqu'à 100 €")),
         (100, 200, L("Da 100 a 200 €", "€100 to €200", "De 100 a 200 €", "De 100 à 200 €")), (200, 1000000000, L("Oltre 200 €", "Over €200", "Más de 200 €", "Plus de 200 €"))]))
     con_asin = [n for n in db if n["slug"] in {v["u"].strip("/").split("/")[-1] for v in indice(db).values() if v["k"] == "r"}]
-    qa = [(L("Quando è il Black Friday 2026?", "When is Black Friday 2026?", "¿Cuándo es el Black Friday 2026?", "Quand a lieu le Black Friday 2026 ?"),
+    qa = [((L("Quando sarà il Black Friday 2027?", "When is Black Friday 2027?", "¿Cuándo será el Black Friday 2027?", "Quand aura lieu le Black Friday 2027 ?"),
+           L("Venerdì 26 novembre 2027, con il Cyber Monday lunedì 29 novembre. Su Amazon le offerte di solito iniziano già nei giorni precedenti: questa pagina tornerà con gli sconti del 2027.",
+             "Friday 26 November 2027, with Cyber Monday on Monday 29 November. Amazon deals usually start in the days before: this page will come back with the 2027 discounts.",
+             "El viernes 26 de noviembre de 2027, con el Cyber Monday el lunes 29 de noviembre. Las ofertas de Amazon suelen empezar unos días antes: esta página volverá con los descuentos de 2027.",
+             "Le vendredi 26 novembre 2027, avec le Cyber Monday le lundi 29 novembre. Les offres Amazon commencent généralement quelques jours avant : cette page reviendra avec les remises 2027.")) if FASE() == "dopo" else (L("Quando è il Black Friday 2026?", "When is Black Friday 2026?", "¿Cuándo es el Black Friday 2026?", "Quand a lieu le Black Friday 2026 ?"),
            L("Venerdì 27 novembre 2026. Le offerte su Amazon di solito iniziano già nei giorni precedenti e proseguono fino al Cyber Monday, lunedì 30 novembre.",
              "Friday 27 November 2026. Amazon deals usually start in the days before and run until Cyber Monday, 30 November.",
              "El viernes 27 de noviembre de 2026. Las ofertas de Amazon suelen empezar unos días antes y siguen hasta el Cyber Monday, el lunes 30 de noviembre.",
-             "Le vendredi 27 novembre 2026. Les offres Amazon commencent généralement quelques jours avant et durent jusqu'au Cyber Monday, le lundi 30 novembre.")),
+             "Le vendredi 27 novembre 2026. Les offres Amazon commencent généralement quelques jours avant et durent jusqu'au Cyber Monday, le lundi 30 novembre."))),
           (L("Ogni quanto aggiornate i prezzi?", "How often do you update prices?", "¿Cada cuánto actualizáis los precios?", "À quelle fréquence mettez-vous les prix à jour ?"),
            L("Due volte al giorno, direttamente da Amazon. In pagina trovi sempre il giorno e l'ora dell'ultimo aggiornamento. Il prezzo può cambiare in qualsiasi momento: fa fede quello che vedi su Amazon.",
              "Twice a day, straight from Amazon. The page always shows the day and time of the last update. Prices can change at any time: the one you see on Amazon is the one that counts.",
@@ -177,7 +201,7 @@ def pagina_offerte(db):
               "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
     elenco = "".join(f'<li><a href="{url_r(n)}">{e(n["titolo"])}</a><span></span></li>' for n in con_asin)
     corpo = f'''{CSS}{cr}
-<div class="of-hero"><div class="k">Black Friday 2026 · {L("aggiornate ogni giorno", "updated daily", "actualizadas cada día", "mises à jour chaque jour")}</div>
+<div class="of-hero"><div class="k">{"Black Friday & Cyber Monday 2026 · " if FASE() == "cyber" else ""}{L("aggiornate ogni giorno", "updated daily", "actualizadas cada día", "mises à jour chaque jour")}</div>
 <h1>{L("Offerte padel su Amazon: le racchette in sconto oggi", "Padel deals on Amazon: rackets on sale today", "Ofertas de pádel en Amazon: las palas rebajadas hoy", "Offres padel sur Amazon : les raquettes en promo aujourd'hui")}</h1>
 <p>{L(f"Controlliamo due volte al giorno il prezzo Amazon di {len(con_asin)} racchette del nostro database e ti mostriamo solo quelle davvero scontate, dalla più conveniente. Per ogni racchetta trovi anche la scheda tecnica, così sai cosa stai comprando.",
        f"Twice a day we check the Amazon price of {len(con_asin)} rackets in our database and show only the ones that are really discounted, best deal first. Each one links to its full spec page, so you know what you're buying.",
@@ -224,18 +248,24 @@ def pagina_offerte(db):
                     "Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no cambia el precio que pagas ni el orden de las ofertas, que depende solo del descuento.",
                     "En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Cela ne change ni le prix que vous payez ni l'ordre des offres, qui dépend uniquement de la remise.")}</p>
 </div>'''
-    tit = L("Offerte padel Amazon oggi: racchette in sconto e Black Friday 2026 | PadelMetrix", "Padel deals on Amazon today: rackets on sale and Black Friday 2026 | PadelMetrix",
-            "Ofertas de pádel en Amazon hoy: palas rebajadas y Black Friday 2026 | PadelMetrix", "Offres padel Amazon aujourd'hui : raquettes en promo et Black Friday 2026 | PadelMetrix")
-    desc = L(f"Le racchette da padel oggi in offerta su Amazon, ordinate per sconto: prezzi di {len(con_asin)} modelli controllati due volte al giorno, con scheda tecnica. Pronti per il Black Friday 2026.",
-             f"Padel rackets on sale at Amazon today, sorted by discount: prices of {len(con_asin)} models checked twice a day, each with full specs. Ready for Black Friday 2026.",
-             f"Las palas de pádel hoy en oferta en Amazon, ordenadas por descuento: precios de {len(con_asin)} modelos comprobados dos veces al día, con ficha técnica. Listos para el Black Friday 2026.",
-             f"Les raquettes de padel en promo sur Amazon aujourd'hui, classées par remise : prix de {len(con_asin)} modèles vérifiés deux fois par jour, avec fiche technique. Prêts pour le Black Friday 2026.")
+    if FASE() == "cyber":
+        tit = L("Offerte padel Amazon oggi: racchette in sconto per Black Friday e Cyber Monday | PadelMetrix", "Padel deals on Amazon today: rackets on sale for Black Friday and Cyber Monday | PadelMetrix",
+                "Ofertas de pádel en Amazon hoy: palas rebajadas por Black Friday y Cyber Monday | PadelMetrix", "Offres padel Amazon aujourd'hui : raquettes en promo pour le Black Friday et le Cyber Monday | PadelMetrix")
+    else:
+        tit = L("Offerte padel Amazon oggi: racchette in sconto | PadelMetrix", "Padel deals on Amazon today: rackets on sale | PadelMetrix",
+                "Ofertas de pádel en Amazon hoy: palas rebajadas | PadelMetrix", "Offres padel Amazon aujourd'hui : raquettes en promo | PadelMetrix")
+    desc = L(f"Le racchette da padel oggi in offerta su Amazon, ordinate per sconto: prezzi di {len(con_asin)} modelli controllati due volte al giorno, con scheda tecnica.",
+             f"Padel rackets on sale at Amazon today, sorted by discount: prices of {len(con_asin)} models checked twice a day, each with full specs.",
+             f"Las palas de pádel hoy en oferta en Amazon, ordenadas por descuento: precios de {len(con_asin)} modelos comprobados dos veces al día, con ficha técnica.",
+             f"Les raquettes de padel en promo sur Amazon aujourd'hui, classées par remise : prix de {len(con_asin)} modèles vérifiés deux fois par jour, avec fiche technique.")
     S.scrivi(path, pagina(tit, desc, path, corpo, on="offerte", ld=[ld, faq_ld], extra_js=dati_js(db) + JS, alt=alt), alt)
 
 
 def banner_bf():
-    return (f'<a class="promo-bar" style="border-radius:14px;margin:4px 0 14px" href="{P("blackfriday")}"><b>Black Friday</b> '
-            f'{L("Le 15 racchette più scontate di oggi, con livello di gioco", "Today\'s 15 most discounted rackets, with playing level", "Las 15 palas más rebajadas de hoy, con nivel de juego", "Les 15 raquettes les plus remisées du jour, avec niveau de jeu")} '
+    if FASE() == "dopo":
+        return ""
+    return (f'<a class="promo-bar" style="border-radius:14px;margin:4px 0 14px" href="{P("blackfriday")}"><b>Cyber Monday</b> '
+            f'{L("Ultimi giorni: le 15 racchette più scontate di oggi, con livello di gioco", "Last days: today\'s 15 most discounted rackets, with playing level", "Últimos días: las 15 palas más rebajadas de hoy, con nivel de juego", "Derniers jours : les 15 raquettes les plus remisées du jour, avec niveau de jeu")} '
             f'· <u>{L("Vai alla pagina", "Go to the page", "Ir a la página", "Voir la page")} →</u></a>')
 
 
@@ -264,19 +294,41 @@ def _top_statico(db, n=15):
     return [i for _, i in righe[:n]]
 
 
+def _intro_bf(dopo):
+    regali = P("articoli", "idee-regalo-natale-padel")
+    if dopo:
+        return "<p><b>" + L(f'Le offerte del Black Friday e del Cyber Monday 2026 su Amazon si sono chiuse lunedì 30 novembre. Qui sotto trovi le racchette che oggi sono ancora scontate di almeno il 10%. Più in basso trovi anche le idee per i regali di Natale.',
+                            f'The Black Friday and Cyber Monday 2026 deals on Amazon ended on Monday 30 November. Below are the rackets still at least 10% off today. Further down you will also find Christmas gift ideas.',
+                            f'Las ofertas del Black Friday y del Cyber Monday 2026 en Amazon terminaron el lunes 30 de noviembre. Aquí abajo tienes las palas que hoy siguen con al menos un 10 % de descuento. Más abajo encontrarás también ideas de regalo de Navidad.',
+                            f'Les offres du Black Friday et du Cyber Monday 2026 sur Amazon se sont terminées le lundi 30 novembre. Ci-dessous, les raquettes encore remisées d\'au moins 10 % aujourd\'hui. Plus bas, vous trouverez aussi des idées cadeaux de Noël.') + "</b></p>"
+    return "<p><b>" + L("Il Cyber Monday, lunedì 30 novembre, è l'ultimo giorno delle offerte Black Friday su Amazon.it: dopo, molti prezzi tornano su. Se hai una racchetta in mente, è il momento di controllare.",
+                        "Cyber Monday, Monday 30 November, is the last day of the Black Friday deals on Amazon.it: after that, many prices go back up. If you have a racket in mind, now is the time to check.",
+                        "El Cyber Monday, lunes 30 de noviembre, es el último día de las ofertas del Black Friday en Amazon.it: después, muchos precios vuelven a subir. Si tienes una pala en mente, es el momento de mirarla.",
+                        "Le Cyber Monday, lundi 30 novembre, est le dernier jour des offres Black Friday sur Amazon.it : ensuite, beaucoup de prix remontent. Si vous avez une raquette en tête, c'est le moment de vérifier.") + "</b></p>"
+
+
 def pagina_bf(db):
     path, alt = P("blackfriday"), ALT("blackfriday")
-    tit_h = L("Black Friday racchette padel 2026: i veri sconti su Amazon", "Black Friday padel rackets 2026: the real Amazon discounts",
-              "Black Friday palas de pádel 2026: los descuentos reales en Amazon", "Black Friday raquettes de padel 2026 : les vraies remises sur Amazon")
+    dopo = FASE() == "dopo"
+    if dopo:
+        tit_h = L("Black Friday racchette padel: il 2026 è finito, ecco cosa resta in offerta", "Black Friday padel rackets: 2026 is over, here's what is still on sale",
+                  "Black Friday palas de pádel: el de 2026 terminó, esto sigue en oferta", "Black Friday raquettes de padel : l'édition 2026 est finie, voici ce qui reste en promo")
+    else:
+        tit_h = L("Black Friday e Cyber Monday racchette padel 2026: i veri sconti su Amazon", "Black Friday and Cyber Monday padel rackets 2026: the real Amazon discounts",
+                  "Black Friday y Cyber Monday palas de pádel 2026: los descuentos reales en Amazon", "Black Friday et Cyber Monday raquettes de padel 2026 : les vraies remises sur Amazon")
     cr, ld = crumbs([S.home_crumb(), (L("Offerte", "Deals", "Ofertas", "Offres"), P("offerte")), ("Black Friday", None)])
     stat = _top_statico(db)
     fallback = ('<ol class="of-tutti">' + "".join(f'<li><a href="{i["u"]}">{e(i["t"])}</a><span>{e(i["lv"])}</span></li>' for i in stat) + "</ol>") if stat else ""
     regali = P("articoli", "idee-regalo-natale-padel")
-    qa = [(L("Quando inizia il Black Friday 2026 su Amazon?", "When does Black Friday 2026 start on Amazon?", "¿Cuándo empieza el Black Friday 2026 en Amazon?", "Quand commence le Black Friday 2026 sur Amazon ?"),
+    qa = [((L("Quando sarà il Black Friday 2027?", "When is Black Friday 2027?", "¿Cuándo será el Black Friday 2027?", "Quand aura lieu le Black Friday 2027 ?"),
+           L("Venerdì 26 novembre 2027, con il Cyber Monday lunedì 29 novembre. Su Amazon le offerte di solito iniziano già nei giorni precedenti: questa pagina tornerà con gli sconti del 2027.",
+             "Friday 26 November 2027, with Cyber Monday on Monday 29 November. Amazon deals usually start in the days before: this page will come back with the 2027 discounts.",
+             "El viernes 26 de noviembre de 2027, con el Cyber Monday el lunes 29 de noviembre. Las ofertas de Amazon suelen empezar unos días antes: esta página volverá con los descuentos de 2027.",
+             "Le vendredi 26 novembre 2027, avec le Cyber Monday le lundi 29 novembre. Les offres Amazon commencent généralement quelques jours avant : cette page reviendra avec les remises 2027.")) if dopo else (L("Quando inizia il Black Friday 2026 su Amazon?", "When does Black Friday 2026 start on Amazon?", "¿Cuándo empieza el Black Friday 2026 en Amazon?", "Quand commence le Black Friday 2026 sur Amazon ?"),
            L("Su Amazon.it le offerte del Black Friday 2026 sono iniziate giovedì 19 novembre e durano fino a lunedì 30 novembre, il Cyber Monday. Il Black Friday vero e proprio è venerdì 27 novembre. Per gli acquisti dal 1° novembre al 25 dicembre il reso è possibile fino al 31 gennaio 2027.",
              "On Amazon.it the Black Friday 2026 deals started on Thursday 19 November and run until Monday 30 November, Cyber Monday. Black Friday itself is Friday 27 November. Purchases made from 1 November to 25 December can be returned until 31 January 2027.",
              "En Amazon.it las ofertas del Black Friday 2026 empezaron el jueves 19 de noviembre y duran hasta el lunes 30 de noviembre, el Cyber Monday. El Black Friday propiamente dicho es el viernes 27 de noviembre. Las compras del 1 de noviembre al 25 de diciembre se pueden devolver hasta el 31 de enero de 2027.",
-             "Sur Amazon.it, les offres du Black Friday 2026 ont commencé le jeudi 19 novembre et durent jusqu'au lundi 30 novembre, le Cyber Monday. Le Black Friday proprement dit tombe le vendredi 27 novembre. Les achats faits du 1er novembre au 25 décembre peuvent être retournés jusqu'au 31 janvier 2027.")),
+             "Sur Amazon.it, les offres du Black Friday 2026 ont commencé le jeudi 19 novembre et durent jusqu'au lundi 30 novembre, le Cyber Monday. Le Black Friday proprement dit tombe le vendredi 27 novembre. Les achats faits du 1er novembre au 25 décembre peuvent être retournés jusqu'au 31 janvier 2027."))),
           (L("Conviene comprare la racchetta 2026 o la 2027?", "Should I buy the 2026 or the 2027 racket?", "¿Conviene comprar la pala 2026 o la 2027?", "Vaut-il mieux acheter la raquette 2026 ou la 2027 ?"),
            L("Per la maggior parte dei giocatori conviene la 2026 in offerta. Tra un anno e l'altro cambiano soprattutto grafica e piccoli dettagli di materiali o bilanciamento, mentre la 2026 adesso costa spesso il 20–40% in meno. La 2027 ha senso se cerchi proprio una novità tecnica di quel modello o se la 2026 non si trova più nella tua misura di peso. Nelle schede trovi il confronto tra le due versioni.",
              "For most players the discounted 2026 is the better buy. From one year to the next it's mostly the graphics and small details of materials or balance that change, while the 2026 now often costs 20–40% less. The 2027 makes sense if you want a specific technical change in that model or if the 2026 is no longer available in your weight. Our spec pages compare the two versions.",
@@ -296,8 +348,9 @@ def pagina_bf(db):
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": S.lang(),
               "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
     corpo = f'''{CSS}{cr}
-<div class="of-hero"><div class="k">Black Friday 2026 · {L("19–30 novembre", "19–30 November", "19–30 de noviembre", "19–30 novembre")} · {L("aggiornato ogni giorno", "updated daily", "actualizado cada día", "mis à jour chaque jour")}</div>
+<div class="of-hero"><div class="k">{L("Black Friday 2026 concluso · il prossimo: 26 novembre 2027", "Black Friday 2026 is over · next one: 26 November 2027", "Black Friday 2026 terminado · el próximo: 26 de noviembre de 2027", "Black Friday 2026 terminé · le prochain : 26 novembre 2027") if dopo else "Black Friday & Cyber Monday 2026 · " + L("19–30 novembre", "19–30 November", "19–30 de noviembre", "19–30 novembre") + " · " + L("aggiornato ogni giorno", "updated daily", "actualizado cada día", "mis à jour chaque jour")}</div>
 <h1>{tit_h}</h1>
+{_intro_bf(dopo)}
 <p>{L("Le 15 racchette da padel più scontate di oggi su Amazon, scelte tra le centinaia del nostro database: per ognuna trovi prezzo prima e dopo, percentuale di sconto, livello di gioco consigliato e la scheda tecnica completa.",
        "Today's 15 most discounted padel rackets on Amazon, picked from the hundreds in our database: for each one you get the before and after price, the discount, the recommended playing level and the full spec page.",
        "Las 15 palas de pádel más rebajadas de hoy en Amazon, elegidas entre los cientos de nuestra base de datos: para cada una tienes el precio antes y después, el porcentaje de descuento, el nivel de juego recomendado y la ficha técnica completa.",
@@ -312,7 +365,7 @@ def pagina_bf(db):
 <li>{L("<b>Black Friday:</b> venerdì 27 novembre", "<b>Black Friday:</b> Friday 27 November", "<b>Black Friday:</b> viernes 27 de noviembre", "<b>Black Friday :</b> vendredi 27 novembre")}</li>
 <li>{L("<b>Fine offerte (Cyber Monday):</b> lunedì 30 novembre", "<b>Deals end (Cyber Monday):</b> Monday 30 November", "<b>Fin de las ofertas (Cyber Monday):</b> lunes 30 de noviembre", "<b>Fin des offres (Cyber Monday) :</b> lundi 30 novembre")}</li>
 <li>{L("<b>Reso esteso:</b> per gli acquisti fino al 25 dicembre, fino al 31 gennaio 2027", "<b>Extended returns:</b> for purchases up to 25 December, until 31 January 2027", "<b>Devolución ampliada:</b> para compras hasta el 25 de diciembre, hasta el 31 de enero de 2027", "<b>Retour prolongé :</b> pour les achats jusqu'au 25 décembre, jusqu'au 31 janvier 2027")}</li></ul>
-<h2>{L("Come scegliere bene durante il Black Friday", "How to choose well during Black Friday", "Cómo elegir bien durante el Black Friday", "Bien choisir pendant le Black Friday")}</h2>
+<h2>{L("Come scegliere bene una racchetta in offerta", "How to choose a discounted racket well", "Cómo elegir bien una pala en oferta", "Bien choisir une raquette en promo") if dopo else L("Come scegliere bene durante il Black Friday", "How to choose well during Black Friday", "Cómo elegir bien durante el Black Friday", "Bien choisir pendant le Black Friday")}</h2>
 <ul>
 <li>{L(f'<b>Prima il livello, poi lo sconto.</b> Una racchetta da avanzato a metà prezzo resta difficile da usare per chi inizia. Se hai dubbi fai il <a href="{P("selettore")}">test in 2 minuti</a>.',
        f'<b>Level first, discount second.</b> An advanced racket at half price is still hard to use for a beginner. If in doubt, take the <a href="{P("selettore")}">2-minute quiz</a>.',
@@ -334,15 +387,21 @@ def pagina_bf(db):
                     "Como Afiliado de Amazon, PadelMetrix obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no cambia el precio que pagas ni el orden de las palas, que depende solo del descuento. Los precios vienen de Amazon.it y no se muestran si tienen más de 24 horas.",
                     "En tant que Partenaire Amazon, PadelMetrix est rémunéré pour les achats éligibles. Cela ne change ni le prix que vous payez ni l'ordre des raquettes, qui dépend uniquement de la remise. Les prix viennent d'Amazon.it et ne sont pas affichés s'ils datent de plus de 24 heures.")}</p>
 </div>'''
-    tit = L("Black Friday racchette padel 2026: i veri sconti su Amazon (aggiornati ogni giorno)",
-            "Black Friday padel rackets 2026: the real Amazon discounts (updated daily)",
-            "Black Friday palas de pádel 2026: los descuentos reales en Amazon (actualizados cada día)",
-            "Black Friday raquettes de padel 2026 : les vraies remises sur Amazon (mises à jour chaque jour)")
-    desc = L("Le 15 racchette da padel più scontate su Amazon per il Black Friday 2026 (19–30 novembre): prezzo prima e dopo, % di sconto e livello di gioco, aggiornati due volte al giorno.",
-             "The 15 most discounted padel rackets on Amazon for Black Friday 2026 (19–30 November): before and after price, % off and playing level, updated twice a day.",
-             "Las 15 palas de pádel más rebajadas en Amazon por el Black Friday 2026 (19–30 de noviembre): precio antes y después, % de descuento y nivel de juego, actualizados dos veces al día.",
-             "Les 15 raquettes de padel les plus remisées sur Amazon pour le Black Friday 2026 (19–30 novembre) : prix avant et après, % de remise et niveau de jeu, mis à jour deux fois par jour.")
-    S.scrivi(path, pagina(tit, desc, path, corpo, on="offerte", ld=[ld, faq_ld], extra_js=dati_js(db, solo="r") + JS, alt=alt), alt)
+    if dopo:
+        tit = L("Black Friday racchette padel: le offerte ancora attive e la data del 2027", "Black Friday padel rackets: deals still running and the 2027 date",
+                "Black Friday palas de pádel: ofertas que siguen activas y la fecha de 2027", "Black Friday raquettes de padel : les promos encore actives et la date 2027")
+    else:
+        tit = L("Black Friday e Cyber Monday racchette padel 2026: i veri sconti su Amazon", "Black Friday & Cyber Monday padel rackets 2026: the real Amazon discounts",
+                "Black Friday y Cyber Monday palas de pádel 2026: descuentos reales en Amazon", "Black Friday et Cyber Monday raquettes de padel 2026 : les vraies remises Amazon")
+    desc_dopo = L("Il Black Friday 2026 è finito: le racchette da padel ancora scontate di almeno il 10% su Amazon, con prezzo e livello di gioco, e le date del Black Friday 2027.",
+                  "Black Friday 2026 is over: the padel rackets still at least 10% off on Amazon, with price and playing level, plus the Black Friday 2027 dates.",
+                  "El Black Friday 2026 terminó: las palas de pádel que siguen con al menos un 10 % de descuento en Amazon, con precio y nivel, y las fechas del Black Friday 2027.",
+                  "Le Black Friday 2026 est terminé : les raquettes de padel encore remisées d'au moins 10 % sur Amazon, avec prix et niveau, et les dates du Black Friday 2027.")
+    desc = L("Le 15 racchette da padel più scontate su Amazon per il Black Friday e il Cyber Monday 2026 (19–30 novembre): prezzo prima e dopo, % di sconto e livello di gioco, aggiornati due volte al giorno.",
+             "The 15 most discounted padel rackets on Amazon for Black Friday and Cyber Monday 2026 (19–30 November): before and after price, % off and playing level, updated twice a day.",
+             "Las 15 palas de pádel más rebajadas en Amazon por el Black Friday y el Cyber Monday 2026 (19–30 de noviembre): precio antes y después, % de descuento y nivel de juego, actualizados dos veces al día.",
+             "Les 15 raquettes de padel les plus remisées sur Amazon pour le Black Friday et le Cyber Monday 2026 (19–30 novembre) : prix avant et après, % de remise et niveau de jeu, mis à jour deux fois par jour.")
+    S.scrivi(path, pagina(tit, desc_dopo if dopo else desc, path, corpo, on="offerte", ld=[ld, faq_ld], extra_js=dati_js(db, solo="r") + JS, alt=alt), alt)
 
 
 def main():
